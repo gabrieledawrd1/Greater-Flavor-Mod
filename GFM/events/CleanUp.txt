@@ -3588,3 +3588,522 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = 4778740
+	title = "Dismantling a Nation"
+	desc = "Our country will be in the dismantlement conference if we win this war, and so will our GP allies! This event may fire multiple times to update countries in conference."
+	picture = "greatwar"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		war = yes
+		has_country_flag = dismantlement_leader
+		any_greater_power = {
+			alliance_with = THIS
+			war = yes
+			NOT = { has_country_flag = part_of_conference }
+			war_countries = {
+				has_country_flag = target_of_dismantlement
+			}
+		}
+		war_countries = {
+			has_country_flag = target_of_dismantlement
+		}
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = "Cool beans."
+		any_greater_power = {
+			limit = {
+				alliance_with = THIS
+				war = yes
+				NOT = { has_country_flag = part_of_conference }
+				war_countries = {
+					has_country_flag = target_of_dismantlement
+				}
+			}
+			country_event = 4778741
+		}
+	}
+}
+
+country_event = {
+	id = 4778741
+	title = "Dismnantling a Nation"
+	desc = "Our country will be part of the dismantlement conference if we win this war!"
+	picture = "greatwar"
+	
+	allow_multiple_instances = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "Cool beans."
+		set_country_flag = part_of_conference
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_leader
+			}
+			change_variable = {
+				which = VictorCount
+				value = 1
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Second_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Second_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Third_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Third_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					any_country = {
+						has_country_flag = Third_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Fourth_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Fourth_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					any_country = {
+						has_country_flag = Third_Victor
+					}
+					any_country = {
+						has_country_flag = Fourth_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Fifth_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Fifth_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					any_country = {
+						has_country_flag = Third_Victor
+					}
+					any_country = {
+						has_country_flag = Fourth_Victor
+					}
+					any_country = {
+						has_country_flag = Fifth_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Sixth_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Sixth_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					any_country = {
+						has_country_flag = Third_Victor
+					}
+					any_country = {
+						has_country_flag = Fourth_Victor
+					}
+					any_country = {
+						has_country_flag = Fifth_Victor
+					}
+					any_country = {
+						has_country_flag = Sixth_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Seventh_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Seventh_Victor }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_country = {
+						has_country_flag = Second_Victor
+					}
+					any_country = {
+						has_country_flag = Third_Victor
+					}
+					any_country = {
+						has_country_flag = Fourth_Victor
+					}
+					any_country = {
+						has_country_flag = Fifth_Victor
+					}
+					any_country = {
+						has_country_flag = Sixth_Victor
+					}
+					any_country = {
+						has_country_flag = Seventh_Victor
+					}
+					NOT = {
+						has_country_flag = Second_Victor
+						has_country_flag = Third_Victor
+						has_country_flag = Fourth_Victor
+						has_country_flag = Fifth_Victor
+						has_country_flag = Sixth_Victor
+						has_country_flag = Seventh_Victor
+						has_country_flag = Eighth_Victor
+						any_country = {
+							has_country_flag = Eighth_Victor
+						}
+					}
+				}
+			}
+			owner = { set_country_flag = Eighth_Victor }
+		}
+	}
+}
+
+country_event = {
+	id = 4778742
+	title = "Removed from Conference"
+	desc = "As we no longer participate in the dismantlement war, we will not be invited to the conference."
+	picture = "greatwar"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		has_country_flag = part_of_conference
+		NOT = { has_global_flag = Dismantlement_Underway }
+		OR = {
+			is_greater_power = no
+			war = no
+			war_countries = {
+				NOT = { has_global_flag = target_of_dismantlement }
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = "Dang"
+		clr_country_flag = part_of_conference
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_leader
+			}
+			change_variable = {
+				which = VictorCount
+				value = -1
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Second_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Second_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Third_Victor
+					}
+					clr_country_flag = Third_Victor
+					set_country_flag = Second_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Fourth_Victor
+					}
+					clr_country_flag = Fourth_Victor
+					set_country_flag = Third_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Fifth_Victor
+					}
+					clr_country_flag = Fifth_Victor
+					set_country_flag = Fourth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Sixth_Victor
+					}
+					clr_country_flag = Sixth_Victor
+					set_country_flag = Fifth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Seventh_Victor
+					}
+					clr_country_flag = Seventh_Victor
+					set_country_flag = Sixth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Third_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Third_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Fourth_Victor
+					}
+					clr_country_flag = Fourth_Victor
+					set_country_flag = Third_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Fifth_Victor
+					}
+					clr_country_flag = Fifth_Victor
+					set_country_flag = Fourth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Sixth_Victor
+					}
+					clr_country_flag = Sixth_Victor
+					set_country_flag = Fifth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Seventh_Victor
+					}
+					clr_country_flag = Seventh_Victor
+					set_country_flag = Sixth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Fourth_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Fourth_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Fifth_Victor
+					}
+					clr_country_flag = Fifth_Victor
+					set_country_flag = Fourth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Sixth_Victor
+					}
+					clr_country_flag = Sixth_Victor
+					set_country_flag = Fifth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Seventh_Victor
+					}
+					clr_country_flag = Seventh_Victor
+					set_country_flag = Sixth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Fifth_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Fifth_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Sixth_Victor
+					}
+					clr_country_flag = Sixth_Victor
+					set_country_flag = Fifth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Seventh_Victor
+					}
+					clr_country_flag = Seventh_Victor
+					set_country_flag = Sixth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Sixth_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Sixth_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Seventh_Victor
+					}
+					clr_country_flag = Seventh_Victor
+					set_country_flag = Sixth_Victor
+				}
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Seventh_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Seventh_Victor
+				any_country = {
+					limit = {
+						has_country_flag = Eighth_Victor
+					}
+					clr_country_flag = Eighth_Victor
+					set_country_flag = Seventh_Victor
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = Eighth_Victor
+				}
+			}
+			owner = {
+				clr_country_flag = Eighth_Victor
+			}
+		}
+	}
+}
+
