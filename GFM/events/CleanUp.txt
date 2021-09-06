@@ -3601,6 +3601,7 @@ country_event = {
 		war = yes
 		has_country_flag = dismantlement_leader
 		any_greater_power = {
+			NOT = { has_country_flag = waiting_for_victor_flag }
 			alliance_with = THIS
 			war = yes
 			NOT = { has_country_flag = part_of_conference }
@@ -3611,6 +3612,7 @@ country_event = {
 		war_countries = {
 			has_country_flag = target_of_dismantlement
 		}
+		NOT = { has_global_flag = waiting_for_victor_update }
 	}
 	
 	mean_time_to_happen = { days = 7 }
@@ -3619,6 +3621,7 @@ country_event = {
 		name = "Cool beans."
 		any_greater_power = {
 			limit = {
+				NOT = { has_country_flag = waiting_for_victor_flag }
 				alliance_with = THIS
 				war = yes
 				NOT = { has_country_flag = part_of_conference }
@@ -3637,11 +3640,13 @@ country_event = {
 	desc = "Our country will be part of the dismantlement conference if we win this war!"
 	picture = "greatwar"
 	
-	allow_multiple_instances = no
 	is_triggered_only = yes
+	
+	immediate = { set_country_flag = waiting_for_victor_flag }
 	
 	option = {
 		name = "Cool beans."
+		clr_country_flag = waiting_for_victor_flag
 		set_country_flag = part_of_conference
 		random_country = {
 			limit = {
@@ -3664,7 +3669,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Second_Victor
 						}
 					}
@@ -3675,7 +3680,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
 					NOT = {
@@ -3686,7 +3691,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Third_Victor
 						}
 					}
@@ -3697,10 +3702,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Third_Victor
 					}
 					NOT = {
@@ -3711,7 +3716,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Fourth_Victor
 						}
 					}
@@ -3722,13 +3727,13 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Third_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fourth_Victor
 					}
 					NOT = {
@@ -3739,7 +3744,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Fifth_Victor
 						}
 					}
@@ -3750,16 +3755,16 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Third_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fourth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fifth_Victor
 					}
 					NOT = {
@@ -3770,7 +3775,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Sixth_Victor
 						}
 					}
@@ -3781,19 +3786,19 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Third_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fourth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fifth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Sixth_Victor
 					}
 					NOT = {
@@ -3804,7 +3809,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Seventh_Victor
 						}
 					}
@@ -3815,22 +3820,22 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Second_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Third_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fourth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Fifth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Sixth_Victor
 					}
-					any_country = {
+					any_greater_power = {
 						has_country_flag = Seventh_Victor
 					}
 					NOT = {
@@ -3841,7 +3846,7 @@ country_event = {
 						has_country_flag = Sixth_Victor
 						has_country_flag = Seventh_Victor
 						has_country_flag = Eighth_Victor
-						any_country = {
+						any_greater_power = {
 							has_country_flag = Eighth_Victor
 						}
 					}
@@ -3855,14 +3860,17 @@ country_event = {
 country_event = {
 	id = 4778742
 	title = "Removed from Conference"
-	desc = "As we no longer participate in the dismantlement war, we will not be invited to the conference."
+	desc = "As we no longer participate in the dismantlement war as a Great Power, we will not be invited to the conference."
 	picture = "greatwar"
 	
 	allow_multiple_instances = no
 	
 	trigger = {
 		has_country_flag = part_of_conference
-		NOT = { has_global_flag = Dismantlement_Underway }
+		NOT = {
+			has_global_flag = Dismantlement_Underway
+			has_global_flag = waiting_for_victor_update
+		}
 		OR = {
 			is_greater_power = no
 			war = no
@@ -3874,11 +3882,17 @@ country_event = {
 	
 	mean_time_to_happen = { days = 7 }
 	
+	immediate = {
+		set_global_flag = waiting_for_victor_update
+	}
+	
 	option = {
 		name = "Dang"
+		clr_global_flag = waiting_for_victor_update
 		clr_country_flag = part_of_conference
 		random_country = {
 			limit = {
+				NOT = { has_global_flag = Dismantlement_Underway }
 				exists = yes
 				has_country_flag = dismantlement_leader
 			}
@@ -3890,6 +3904,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Second_Victor
 				}
 			}
@@ -3942,6 +3957,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Third_Victor
 				}
 			}
@@ -3987,6 +4003,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Fourth_Victor
 				}
 			}
@@ -4025,6 +4042,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Fifth_Victor
 				}
 			}
@@ -4056,6 +4074,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Sixth_Victor
 				}
 			}
@@ -4080,6 +4099,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Seventh_Victor
 				}
 			}
@@ -4097,6 +4117,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = Dismantlement_Underway }
 					has_country_flag = Eighth_Victor
 				}
 			}
