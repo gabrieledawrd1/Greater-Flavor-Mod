@@ -1526,7 +1526,32 @@ country_event = {
             any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
 			FROM = { set_country_flag = Dismantle_Released }
         }
-        any_owned = { limit = { is_core = UTI } secede_province = FROM remove_core = UTI }
+		random_owned = {
+			limit = { owner = { FROM = { civilized = yes } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = yes }
+			}
+		}
+		random_owned = {
+			limit = { owner = { FROM = { civilized = no } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = no }
+			}
+		}
         random_country = {
 			limit = {
 				has_country_flag = Secondary_Claim
