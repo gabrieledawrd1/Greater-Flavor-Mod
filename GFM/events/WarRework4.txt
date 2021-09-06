@@ -185,12 +185,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 0.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 1.99
 						}
 					}
@@ -203,12 +203,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 1.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 2.99
 						}
 					}
@@ -221,12 +221,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 2.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 3.99
 						}
 					}
@@ -239,12 +239,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 3.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 4.99
 						}
 					}
@@ -257,12 +257,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 4.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 5.99
 						}
 					}
@@ -275,12 +275,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 5.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 6.99
 						}
 					}
@@ -293,12 +293,12 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 6.99
 					}
 					NOT = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 7.99
 						}
 					}
@@ -311,7 +311,7 @@ country_event = {
 				owner = {
 					has_country_flag = dismantlement_leader
 					check_variable = {
-						which = Victor_Count
+						which = VictorCount
 						value = 7.99
 					}
 				}
@@ -326,12 +326,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 0.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 1.99
 							}
 						}
@@ -343,12 +343,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 1.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 2.99
 							}
 						}
@@ -360,12 +360,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 2.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 3.99
 							}
 						}
@@ -377,12 +377,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 3.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 4.99
 							}
 						}
@@ -394,12 +394,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 4.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 5.99
 							}
 						}
@@ -411,12 +411,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 5.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 6.99
 							}
 						}
@@ -428,12 +428,12 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 6.99
 						}
 						NOT = {
 							check_variable = {
-								which = Victor_Count
+								which = VictorCount
 								value = 7.99
 							}
 						}
@@ -445,7 +445,7 @@ country_event = {
 				limit = {
 					owner = {
 						check_variable = {
-							which = Victor_Count
+							which = VictorCount
 							value = 7.99
 						}
 					}
@@ -1459,11 +1459,24 @@ country_event = {
 					has_country_flag = Rewritable_State
 				}
                 exists = yes
-                FROM = { exists = no }
+                FROM = { exists = no civilized = yes }
 				FROM = { has_country_flag = Freedom_Overwrite }
             }
             release = FROM
-			FROM = { set_country_flag = Dismantle_Released }
+			FROM = { set_country_flag = Dismantle_Released civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					has_country_flag = Major_Defeated
+					has_country_flag = Rewritable_State
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { has_country_flag = Freedom_Overwrite }
+            }
+            release = FROM
+			FROM = { set_country_flag = Dismantle_Released civilized = no }
         }
         any_country = {
 			limit = {
@@ -1483,11 +1496,24 @@ country_event = {
 					has_country_flag = Rewritable_State
 				}
                 exists = yes
-                FROM = { exists = no }
+                FROM = { exists = no civilized = yes }
 				FROM = { has_country_flag = Freedom_NonOverwrite }
             }
             release = FROM
-			FROM = { set_country_flag = Dismantle_Released }
+			FROM = { set_country_flag = Dismantle_Released civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					has_country_flag = Major_Defeated
+					has_country_flag = Rewritable_State
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+            }
+            release = FROM
+			FROM = { set_country_flag = Dismantle_Released civilized = no }
         }
         any_country = {
 			limit = {

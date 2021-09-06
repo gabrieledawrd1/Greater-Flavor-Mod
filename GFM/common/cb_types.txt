@@ -159,8 +159,10 @@ dismantle_cb = {
     is_triggered_only = yes
     months = 12
     crisis = no
-
-    construction_speed = 0.25
+	
+	constructing_cb = no
+	always = yes
+    #construction_speed = 0.25
 
     badboy_factor = 2
     prestige_factor = 10
@@ -177,31 +179,32 @@ dismantle_cb = {
     good_relation_militancy_factor = 0
 
     can_use = {
-        OR = {
-            is_greater_power = yes
-            is_secondary_power = yes
-            colonial_nation = yes
-            any_owned_province = { is_overseas = yes }
-        }
-        is_disarmed = no
-        is_vassal = no
-        NOT = { is_our_vassal = THIS }
-        NOT = { has_country_flag = target_of_dismantlement }
-        OR = {
-            NOT = { relation = { who = THIS value = -100 } }
-            war_with = THIS
-        }
-        THIS = {
-            is_greater_power = yes
-            is_disarmed = no
-            mass_politics = 1
-            NOT = {
-                has_country_flag = in_great_war
-                has_country_modifier = no_more_war
-                has_country_modifier = neutrality_modifier
-            }
-        }
-        NOT = { has_country_modifier = neutrality_modifier }
+        #OR = {
+        #    is_greater_power = yes
+        #    is_secondary_power = yes
+        #    colonial_nation = yes
+        #    any_owned_province = { is_overseas = yes }
+        #}
+        #is_disarmed = no
+        #is_vassal = no
+        #NOT = { is_our_vassal = THIS }
+        #NOT = { has_country_flag = target_of_dismantlement }
+        #OR = {
+        #    NOT = { relation = { who = THIS value = -100 } }
+        #    war_with = THIS
+        #}
+        #THIS = {
+        #    is_greater_power = yes
+        #    is_disarmed = no
+        #    mass_politics = 1
+        #    NOT = {
+        #        has_country_flag = in_great_war
+        #        has_country_modifier = no_more_war
+        #        has_country_modifier = neutrality_modifier
+        #    }
+        #}
+        #NOT = { has_country_modifier = neutrality_modifier }
+		THIS = { ai = no }
     }
 
     po_disarmament = yes
@@ -229,10 +232,9 @@ dismantle_cb = {
     }
 
     on_po_accepted = {
-		FROM = { set_country_flag = Major_Defeated }
-		THIS = { set_country_flag = Dismantlement_Chair }
+		set_country_flag = Major_Defeated
+		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
 		set_global_flag = Dismantlement_Underway
-		country_event = 777770403
     }
 }
 
@@ -308,10 +310,9 @@ dismantle_cb_add = {
     }
 
     on_po_accepted = {
-		FROM = { set_country_flag = Major_Defeated }
-		THIS = { set_country_flag = Dismantlement_Chair }
-        set_global_flag = Dismantlement_Underway
-		country_event = 777770403
+		set_country_flag = Major_Defeated
+		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
+		set_global_flag = Dismantlement_Underway
     }
 }
 
@@ -381,10 +382,9 @@ dismantle_cb_add_new = {
     }
 
     on_po_accepted = {
-		FROM = { set_country_flag = Major_Defeated }
-		THIS = { set_country_flag = Dismantlement_Chair }
-        set_global_flag = Dismantlement_Underway
-		country_event = 777770403
+		set_country_flag = Major_Defeated
+		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
+		set_global_flag = Dismantlement_Underway
     }
 }
 
