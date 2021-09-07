@@ -3874,8 +3874,10 @@ country_event = {
 		OR = {
 			is_greater_power = no
 			war = no
-			war_countries = {
-				NOT = { has_global_flag = target_of_dismantlement }
+			NOT = {
+				war_countries = {
+					has_global_flag = target_of_dismantlement
+				}
 			}
 		}
 	}
