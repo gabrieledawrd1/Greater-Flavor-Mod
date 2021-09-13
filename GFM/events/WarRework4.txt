@@ -963,6 +963,175 @@ country_event = {
 			}
 			country_event = 777770431
 		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Second_Victor_Complete } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Third_Victor_Complete } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Fourth_Victor_Complete } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Fifth_Victor_Complete } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Sixth_Victor_Complete } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Seventh_Victor_Complete } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy has_country_flag = Eighth_Victor_Complete } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770450
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Second_Victor
+				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Third_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { NOT = { has_country_flag = Third_Victor_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Fourth_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { has_country_flag = Third_Victor_Complete }
+				FROM = { NOT = { has_country_flag = Fourth_Victor_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Fifth_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { has_country_flag = Third_Victor_Complete }
+				FROM = { has_country_flag = Fourth_Victor_Complete }
+				FROM = { NOT = { has_country_flag = Fifth_Victor_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Sixth_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { has_country_flag = Third_Victor_Complete }
+				FROM = { has_country_flag = Fourth_Victor_Complete }
+				FROM = { has_country_flag = Fifth_Victor_Complete }
+				FROM = { NOT = { has_country_flag = Sixth_Victor_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Seventh_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { has_country_flag = Third_Victor_Complete }
+				FROM = { has_country_flag = Fourth_Victor_Complete }
+				FROM = { has_country_flag = Fifth_Victor_Complete }
+				FROM = { has_country_flag = Sixth_Victor_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } }
+			}
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_Apathy }
+				has_country_flag = Eighth_Victor
+				FROM = { has_country_flag = Second_Victor_Complete }
+				FROM = { has_country_flag = Third_Victor_Complete }
+				FROM = { has_country_flag = Fourth_Victor_Complete }
+				FROM = { has_country_flag = Fifth_Victor_Complete }
+				FROM = { has_country_flag = Sixth_Victor_Complete }
+				FROM = { has_country_flag = Seventh_Victor_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } }
+			}
+			country_event = 777770431
+		}
     }
 }
 
@@ -1051,7 +1220,7 @@ country_event = {
 			}
 			relation = {
 				who = THIS
-				value = -20
+				value = -50
 			}
 		}
 		random_country = {
@@ -1060,7 +1229,7 @@ country_event = {
 			}
 			relation = {
 				who = THIS
-				value = -20
+				value = -50
 			}
 		}
 		badboy = 0.1
@@ -1122,84 +1291,6 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
     }
-#    option = {
-#        name = "We disagree, $FROMCOUNTRY$ Should not exist tho!"
-#		random_country = {
-#			limit = {
-#				has_country_flag = Dismantlement_Chair
-#			}
-#			relation = {
-#				who = THIS
-#				value = -20
-#			}
-#		}
-#		badboy = 0.1
-#		create_alliance = FROM
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } has_country_flag = Seventh_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Eighth_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } has_country_flag = Sixth_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Seventh_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Sixth_Victor_Complete } has_country_flag = Fifth_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Sixth_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Fifth_Victor_Complete } has_country_flag = Fourth_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Fifth_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Fourth_Victor_Complete } has_country_flag = Third_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Fourth_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Third_Victor_Complete } has_country_flag = Second_Victor_Complete }
-#				tag = FROM
-#			}
-#			set_country_flag = Third_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		any_country = {
-#			limit = {
-#				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
-#				tag = FROM
-#			}
-#			set_country_flag = Second_Victor_Complete
-#			set_country_flag = Secondary_Claim
-#			country_event = 777770422
-#		}
-#		ai_chance = { factor = 0 }
-#    }
 }
 
 country_event = {
@@ -1701,6 +1792,232 @@ country_event = {
 			set_country_flag = Second_Victor_Complete
 			country_event = 777770424
 		}
+    }
+    option = {
+        name = "We disagree, $FROMCOUNTRY$ Should exist!"
+		random_country = {
+			limit = {
+				has_country_flag = Dismantlement_Chair
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } has_country_flag = Seventh_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Eighth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } has_country_flag = Sixth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Seventh_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Sixth_Victor_Complete } has_country_flag = Fifth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Sixth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fifth_Victor_Complete } has_country_flag = Fourth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fifth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fourth_Victor_Complete } has_country_flag = Third_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fourth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Third_Victor_Complete } has_country_flag = Second_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Third_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
+				tag = FROM
+			}
+			set_country_flag = Second_Victor_Complete
+			country_event = 777770424
+		}
+    }
+}
+
+country_event = {
+    id = 777770433
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "The Conference Chair does not care about $FROMCOUNTRY$. Should we propose our own plans?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "No, We also dont care about $FROMCOUNTRY$!"
+		random_country = {
+			limit = {
+				has_country_flag = Dismantlement_Chair
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } has_country_flag = Seventh_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Eighth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } has_country_flag = Sixth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Seventh_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Sixth_Victor_Complete } has_country_flag = Fifth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Sixth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fifth_Victor_Complete } has_country_flag = Fourth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fifth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fourth_Victor_Complete } has_country_flag = Third_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fourth_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Third_Victor_Complete } has_country_flag = Second_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Third_Victor_Complete
+			country_event = 777770424
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
+				tag = FROM
+			}
+			set_country_flag = Second_Victor_Complete
+			country_event = 777770424
+		}
+    }
+    option = {
+		name = "We disagree, $FROMCOUNTRY$ Should not exist tho!"
+		random_country = {
+			limit = {
+				has_country_flag = Dismantlement_Chair
+			}
+			relation = {
+				who = THIS
+				value = -20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } has_country_flag = Seventh_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Eighth_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } has_country_flag = Sixth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Seventh_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Sixth_Victor_Complete } has_country_flag = Fifth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Sixth_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fifth_Victor_Complete } has_country_flag = Fourth_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fifth_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fourth_Victor_Complete } has_country_flag = Third_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fourth_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Third_Victor_Complete } has_country_flag = Second_Victor_Complete }
+				tag = FROM
+			}
+			set_country_flag = Third_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
+				tag = FROM
+			}
+			set_country_flag = Second_Victor_Complete
+			set_country_flag = Secondary_Claim
+			country_event = 777770422
+		}
+		ai_chance = { factor = 0 }
     }
 }
 
