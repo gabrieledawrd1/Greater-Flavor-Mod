@@ -2143,6 +2143,342 @@ country_event = {
 			}
 			country_event = 777770430
 		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Second_Secondary_Complete } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Third_Secondary_Complete } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Fourth_Secondary_Complete } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Fifth_Secondary_Complete } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Sixth_Secondary_Complete } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Seventh_Secondary_Complete } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite has_country_flag = Eighth_Secondary_Complete } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			FROM = { set_country_flag = Dismantle_Released }
+			country_event = 777770450
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Eighth_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { has_country_flag = Sixth_Secondary_Complete }
+				FROM = { has_country_flag = Seventh_Secondary_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { has_country_flag = Eighth_Secondary_Complete } }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Eighth }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Seventh_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { has_country_flag = Sixth_Secondary_Complete }
+				FROM = { has_country_flag = Seventh_Secondary_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { has_country_flag = Eighth_Secondary_Complete } }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Eighth } }
+			}
+			FROM = { set_country_flag = Eighth_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Seventh_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { has_country_flag = Sixth_Secondary_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { has_country_flag = Seventh_Secondary_Complete } }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Seventh }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Seventh_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { has_country_flag = Sixth_Secondary_Complete }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { has_country_flag = Seventh_Secondary_Complete } }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Seventh } }
+			}
+			FROM = { set_country_flag = Seventh_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Sixth_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Sixth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Sixth }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Sixth_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { has_country_flag = Fifth_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Sixth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Sixth } }
+			}
+			FROM = { set_country_flag = Sixth_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Fifth_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Fifth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Fifth }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Fifth_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { has_country_flag = Fourth_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Fifth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Fifth } }
+			}
+			FROM = { set_country_flag = Fifth_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Fourth_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Fourth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Fourth }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Fourth_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { has_country_flag = Third_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Fourth_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Fourth } }
+			}
+			FROM = { set_country_flag = Fourth_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Third_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Third_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Third }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Third_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { has_country_flag = Second_Secondary_Complete }
+				FROM = { NOT = { has_country_flag = Third_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Third } }
+			}
+			FROM = { set_country_flag = Third_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				FROM = { has_country_flag = First_Secondary_Complete }
+				has_country_flag = Second_Victor 
+				FROM = { NOT = { has_country_flag = Secondary_Claim } }
+				FROM = { NOT = { has_country_flag = Second_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			FROM = { set_country_flag = Natural_Secondary_Second }
+			country_event = 777770432
+		}
+		random_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				FROM = { has_country_flag = First_Secondary_Complete }
+				has_country_flag = Second_Victor 
+				FROM = { has_country_flag = Secondary_Claim }
+				FROM = { NOT = { has_country_flag = Second_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+				FROM = { NOT = { has_country_flag = Natural_Secondary_Second } }
+			}
+			FROM = { set_country_flag = Second_Secondary_Complete }
+		}
+		any_country = {
+			limit = {
+				FROM = { has_country_flag = Freedom_NonOverwrite }
+				has_country_flag = Dismantlement_Chair
+				FROM = { NOT = { has_country_flag = First_Secondary_Complete } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { has_country_flag = Dismantle_Released } }
+			}
+			country_event = 777770432
+		}
     }
 }
 
@@ -2368,6 +2704,84 @@ country_event = {
 			}
 			set_country_flag = Second_Victor_Complete
 			country_event = 777770424
+		}
+    }
+}
+
+country_event = {
+    id = 777770432
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "A Secondary Conference Member wishes to create a $FROMCOUNTRY$. The proposal will not overwrites current plans, How do we respond?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "We agree, $FROMCOUNTRY$ Should exist!"
+		random_country = {
+			limit = {
+				has_country_flag = Dismantlement_Chair
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Eighth_Secondary_Complete } has_country_flag = Seventh_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Eighth_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Seventh_Secondary_Complete } has_country_flag = Sixth_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Seventh_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Sixth_Secondary_Complete } has_country_flag = Fifth_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Sixth_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fifth_Secondary_Complete } has_country_flag = Fourth_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fifth_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Fourth_Secondary_Complete } has_country_flag = Third_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Fourth_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Third_Secondary_Complete } has_country_flag = Second_Secondary_Complete }
+				tag = FROM
+			}
+			set_country_flag = Third_Secondary_Complete
+			country_event = 777770425
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = Second_Secondary_Complete } }
+				tag = FROM
+			}
+			set_country_flag = Second_Secondary_Complete
+			country_event = 777770425
 		}
     }
 }
