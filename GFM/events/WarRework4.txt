@@ -865,7 +865,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = Second_Victor_Complete } }
 				NOT = { has_global_flag = Total_One_Victor }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -876,7 +876,7 @@ country_event = {
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -889,7 +889,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -904,7 +904,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Three_Victor }
 				NOT = { has_global_flag = Total_Four_Victor }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -921,7 +921,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Four_Victor }
 				NOT = { has_global_flag = Total_Five_Victor }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -940,7 +940,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Six_Victor }
 				FROM = { NOT = { has_country_flag = Seventh_Victor_Complete } }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
 		any_country = {
 			limit = {
@@ -961,7 +961,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Seven_Victor }
 				FROM = { NOT = { has_country_flag = Eighth_Victor_Complete } }
 			}
-			country_event = 777770428
+			country_event = 777770431
 		}
     }
 }
@@ -1769,7 +1769,6 @@ country_event = {
             limit = {
 				OR = {
 					has_country_flag = Major_Defeated
-					has_country_flag = Rewritable_State
 				}
                 exists = yes
                 FROM = { exists = no civilized = yes }
