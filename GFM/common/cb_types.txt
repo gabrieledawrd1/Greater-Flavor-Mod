@@ -179,31 +179,32 @@ dismantle_cb = {
     good_relation_militancy_factor = 0
 
     can_use = {
-        #OR = {
-        #    is_greater_power = yes
-        #    is_secondary_power = yes
-        #    colonial_nation = yes
-        #    any_owned_province = { is_overseas = yes }
-        #}
-        #is_disarmed = no
-        #is_vassal = no
-        #NOT = { is_our_vassal = THIS }
+        OR = {
+            is_greater_power = yes
+            is_secondary_power = yes
+            colonial_nation = yes
+            any_owned_province = { is_overseas = yes }
+        }
+        is_disarmed = no
+        is_vassal = no
+        NOT = { is_our_vassal = THIS }
+		NOT = { has_country_flag = target_of_dismantlement }
         NOT = { check_variable = { which = target_of_dismantlement value = 0.99 } }
-        #OR = {
-        #    NOT = { relation = { who = THIS value = -100 } }
-        #    war_with = THIS
-        #}
-        #THIS = {
-        #    is_greater_power = yes
-        #    is_disarmed = no
-        #    mass_politics = 1
-        #    NOT = {
-        #        has_country_flag = in_great_war
-        #        has_country_modifier = no_more_war
-        #        has_country_modifier = neutrality_modifier
-        #    }
-        #}
-        #NOT = { has_country_modifier = neutrality_modifier }
+        OR = {
+            NOT = { relation = { who = THIS value = -100 } }
+            war_with = THIS
+        }
+        THIS = {
+            is_greater_power = yes
+            is_disarmed = no
+            mass_politics = 1
+            NOT = {
+                has_country_flag = in_great_war
+                has_country_modifier = no_more_war
+                has_country_modifier = neutrality_modifier
+            }
+        }
+        NOT = { has_country_modifier = neutrality_modifier }
 		THIS = { ai = no }
     }
 
@@ -261,6 +262,7 @@ dismantle_cb_add = {
         NOT = { is_our_vassal = THIS }
         NOT = { has_country_modifier = neutrality_modifier }
         NOT = { has_country_flag = target_of_dismantlement }
+		NOT = { check_variable = { which = target_of_dismantlement value = 0.99 } }
         has_country_flag = in_great_war
         OR = {
             is_greater_power = yes
@@ -292,11 +294,7 @@ dismantle_cb_add = {
             set_country_flag = target_of_dismantlement
         }
 		THIS = {
-			set_country_flag = dismantlement_leader
-			set_variable = {
-				which = VictorCount
-				value = 1
-			}
+			country_event = 4778743
 		}
         move_issue_percentage = {
             from = pro_military
@@ -338,6 +336,7 @@ dismantle_cb_add_new = {
     can_use = {
         NOT = { is_our_vassal = THIS }
         NOT = { has_country_flag = target_of_dismantlement }
+		NOT = { check_variable = { which = target_of_dismantlement value = 0.99 } }
         NOT = { has_country_modifier = neutrality_modifier }
         is_greater_power = yes
         is_disarmed = no
@@ -363,11 +362,7 @@ dismantle_cb_add_new = {
             set_country_flag = target_of_dismantlement
         }
 		THIS = {
-			set_country_flag = dismantlement_leader
-			set_variable = {
-				which = VictorCount
-				value = 1
-			}
+			country_event = 4778743
 		}
         move_issue_percentage = {
             from = pro_military
