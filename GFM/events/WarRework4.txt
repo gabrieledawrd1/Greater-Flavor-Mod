@@ -178,273 +178,259 @@ country_event = {
     desc = "This decision is to inform you the following events will allow you do to dismantle recent enemies."
 	major = yes
     is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = Major_Defeated
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 0.99 } NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 1 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 1.99 } NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 2 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 2.99 } NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 3 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 3.99 } NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 4 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 4.99 } NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 5 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 5.99 } NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 6 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 6.99 } NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 7 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = target_of_dismantlement value = 7.99 } NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } } } }
+				owner = { set_variable = { which = Major_Defeated value = 8 } set_variable = { which = target_of_dismantlement value = 0 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 0.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 1.99
-						}
-					}
+					check_variable = { which = part_of_conference value = 0.99 }
+					NOT = { check_variable = { which = part_of_conference value = 1.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 0.99 } NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_One_Victor }
+			owner = {
+				set_variable = { which = conference value = 1 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 1.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 2.99
-						}
-					}
+					check_variable = { which = part_of_conference_overflow = 0.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 1.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 0.99 } NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Two_Victor }
+			owner = {
+				set_variable = { which = conference value = 1 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 2.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 3.99
-						}
-					}
+					check_variable = { which = part_of_conference value = 1.99 }
+					NOT = { check_variable = { which = part_of_conference value = 2.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 1.99 } NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Three_Victor }
+			owner = {
+				set_variable = { which = conference value = 2 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 3.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 4.99
-						}
-					}
+					check_variable = { which = part_of_conference_overflow = 1.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 2.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 1.99 } NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Four_Victor }
+			owner = {
+				set_variable = { which = conference value = 2 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 4.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 5.99
-						}
-					}
+					check_variable = { which = part_of_conference value = 2.99 }
+					NOT = { check_variable = { which = part_of_conference value = 3.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 2.99 } NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Five_Victor }
+			owner = {
+				set_variable = { which = conference value = 3 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 5.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 6.99
-						}
-					}
+					check_variable = { which = part_of_conference_overflow = 2.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 3.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 2.99 } NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Six_Victor }
+			owner = {
+				set_variable = { which = conference value = 3 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 6.99
-					}
-					NOT = {
-						check_variable = {
-							which = VictorCount
-							value = 7.99
-						}
-					}
+					check_variable = { which = part_of_conference value = 3.99 }
+					NOT = { check_variable = { which = part_of_conference value = 4.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 3.99 } NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Seven_Victor }
+			owner = {
+				set_variable = { which = conference value = 4 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = {
-						which = VictorCount
-						value = 7.99
-					}
+					check_variable = { which = part_of_conference_overflow = 3.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 4.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 3.99 } NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } } } }
 				}
 			}
-			owner = { set_global_flag = Total_Eight_Victor }
+			owner = {
+				set_variable = { which = conference value = 4 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
 		}
-		random_country = {
+		random_owned = {
 			limit = {
-				check_variable = { which = dismantlement_leader value = 1 }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 0.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 1.99
-							}
-						}
-					}
+				owner = {
+					check_variable = { which = part_of_conference value = 4.99 }
+					NOT = { check_variable = { which = part_of_conference value = 5.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 4.99 } NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } } } }
 				}
-				owner = { set_global_flag = Total_One_Victor }
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 1.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 2.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Two_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 2.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 3.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Three_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 3.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 4.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Four_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 4.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 5.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Five_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 5.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 6.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Six_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 6.99
-						}
-						NOT = {
-							check_variable = {
-								which = VictorCount
-								value = 7.99
-							}
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Seven_Victor }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = {
-							which = VictorCount
-							value = 7.99
-						}
-					}
-				}
-				owner = { set_global_flag = Total_Eight_Victor }
+			owner = {
+				set_variable = { which = conference value = 5 }
+				set_variable = { which = part_of_conference value = 0 }
 			}
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference_overflow = 4.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 5.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 4.99 } NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 5 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference value = 5.99 }
+					NOT = { check_variable = { which = part_of_conference value = 6.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 5.99 } NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 6 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference_overflow = 5.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 6.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 5.99 } NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 6 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference value = 6.99 }
+					NOT = { check_variable = { which = part_of_conference value = 7.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 6.99 } NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 7 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference_overflow = 6.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 7.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 6.99 } NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 7 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference value = 7.99 }
+					NOT = { check_variable = { which = part_of_conference value = 8.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 7.99 } NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 8 }
+				set_variable = { which = part_of_conference value = 0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = part_of_conference_overflow = 7.99 }
+					NOT = { check_variable = { which = part_of_conference_overflow value = 8.99 } }
+					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 7.99 } NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } } } }
+				}
+			}
+			owner = {
+				set_variable = { which = conference value = 8 }
+				set_variable = { which = part_of_conference_overflow value = 0 }
+			}
+		}
+		
         random_country = {
 			any_country = {
 				limit = {

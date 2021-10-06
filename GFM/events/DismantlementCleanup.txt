@@ -572,7 +572,7 @@ country_event = {
 		}
 		random_owned = {
 			limit = { owner = { NOT = { check_variable = { which = dismantlement_leader value = 0.99 } has_global_flag = conference_6 has_country_flag = dismantlement_number_chosen } } }
-			owner = { set_variable = { check_variable = { which = dismantlement_leader value = 0.99 } which = dismantlement_leader value = 6 } set_country_flag = dismantlement_number_chosen set_global_flag = conference_6 UTI = { set_variable = { which = VictorCount6 value = 1 } } }
+			owner = { set_variable = { which = dismantlement_leader value = 6 } set_country_flag = dismantlement_number_chosen set_global_flag = conference_6 UTI = { set_variable = { which = VictorCount6 value = 1 } } }
 		}
 		random_owned = {
 			limit = { owner = { NOT = { check_variable = { which = dismantlement_leader value = 0.99 } has_global_flag = conference_7 has_country_flag = dismantlement_number_chosen } } }

@@ -195,6 +195,7 @@ dismantle_cb = {
             war_with = THIS
         }
         THIS = {
+			NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
             is_greater_power = yes
             is_disarmed = no
             mass_politics = 1
@@ -230,8 +231,7 @@ dismantle_cb = {
 
     on_po_accepted = {
 		set_country_flag = Major_Defeated
-		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
-		set_global_flag = Dismantlement_Underway
+		THIS = { country_event = 777770403 }
     }
 }
 
@@ -275,6 +275,7 @@ dismantle_cb_add = {
         is_vassal = no
         war_with = THIS
         THIS = {
+			NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
             NOT = { has_country_modifier = neutrality_modifier }
             has_country_flag = in_great_war
             is_greater_power = yes
@@ -305,8 +306,7 @@ dismantle_cb_add = {
 
     on_po_accepted = {
 		set_country_flag = Major_Defeated
-		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
-		set_global_flag = Dismantlement_Underway
+		THIS = { country_event = 777770403 }
     }
 }
 
@@ -343,6 +343,7 @@ dismantle_cb_add_new = {
         is_vassal = no
         war_with = THIS
         THIS = {
+			NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
             NOT = { has_country_modifier = neutrality_modifier }
             NOT = { has_country_flag = in_great_war }
             is_greater_power = yes
@@ -374,8 +375,7 @@ dismantle_cb_add_new = {
 
     on_po_accepted = {
 		set_country_flag = Major_Defeated
-		THIS = { set_country_flag = Dismantlement_Chair country_event = 777770403 }
-		set_global_flag = Dismantlement_Underway
+		THIS = { country_event = 777770403 }
     }
 }
 
