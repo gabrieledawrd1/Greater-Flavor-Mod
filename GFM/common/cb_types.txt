@@ -188,7 +188,7 @@ dismantle_cb = {
         #is_disarmed = no
         #is_vassal = no
         #NOT = { is_our_vassal = THIS }
-        #NOT = { has_country_flag = target_of_dismantlement }
+        NOT = { check_variable = { which = target_of_dismantlement value = 0.99 } }
         #OR = {
         #    NOT = { relation = { who = THIS value = -100 } }
         #    war_with = THIS
@@ -217,11 +217,7 @@ dismantle_cb = {
             set_country_flag = target_of_dismantlement
         }
 		THIS = {
-			set_country_flag = dismantlement_leader
-			set_variable = {
-				which = VictorCount
-				value = 1
-			}
+			country_event = 4778743
 		}
         move_issue_percentage = {
             from = pro_military
