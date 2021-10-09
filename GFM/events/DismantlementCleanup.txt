@@ -1032,6 +1032,7 @@ country_event = {
 				}
 			}
 			clr_country_flag = conference_sanity_check
+			clr_country_flag = waiting_for_dismantlement
 			country_event = 777770403
 		}
 		
