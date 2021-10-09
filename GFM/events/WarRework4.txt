@@ -8492,7 +8492,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = dismantlement_leader value = 0.99 }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
 			}
 			create_vassal = FROM
@@ -8589,7 +8589,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = dismantlement_leader value = 0.99 }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } }
 			}
 			inherit = FROM
