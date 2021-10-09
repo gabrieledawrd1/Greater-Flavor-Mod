@@ -5450,6 +5450,7 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
+		set_variable = { which = Outcome_Required value = 1 }
 		any_country = {
 			limit = {
 				any_core = {
@@ -5517,6 +5518,7 @@ country_event = {
         name = "$FROMCOUNTRY$ shall stay as it is"
 		FROM = {
 			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0.99 }
 			country_event = 777770424	
 		}
     }
@@ -10096,6 +10098,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
+		set_variable = { which = Outcome_Required value = 0.99 }
     }
 }
 
@@ -10180,6 +10183,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
+		set_variable = { which = Outcome_Required value = 0.99 }
     }
 }
 
