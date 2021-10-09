@@ -1,0 +1,10 @@
+Notes to go over:
+
+Identify Secondary in events:
+Needs bounce events for secondary victor suggestions
+Needs seperation of effects events
+Cleanup
+
+Other todo:
+Loc & Pictures
+Ai Modifiers 
