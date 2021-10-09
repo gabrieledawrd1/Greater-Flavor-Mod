@@ -245,7 +245,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 0.99 }
+					check_variable = { which = part_of_conference_overflow value = 0.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 1.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 0.99 } NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } } } }
 				}
@@ -275,7 +275,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 1.99 }
+					check_variable = { which = part_of_conference_overflow value = 1.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 2.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 1.99 } NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } } } }
 				}
@@ -305,7 +305,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 2.99 }
+					check_variable = { which = part_of_conference_overflow value = 2.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 3.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 2.99 } NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } } } }
 				}
@@ -335,7 +335,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 3.99 }
+					check_variable = { which = part_of_conference_overflow value = 3.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 4.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 3.99 } NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } } } }
 				}
@@ -365,7 +365,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 4.99 }
+					check_variable = { which = part_of_conference_overflow value = 4.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 5.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 4.99 } NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } } } }
 				}
@@ -395,7 +395,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 5.99 }
+					check_variable = { which = part_of_conference_overflow value = 5.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 6.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 5.99 } NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } } } }
 				}
@@ -425,7 +425,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 6.99 }
+					check_variable = { which = part_of_conference_overflow value = 6.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 7.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 6.99 } NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } } } }
 				}
@@ -455,7 +455,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = part_of_conference_overflow = 7.99 }
+					check_variable = { which = part_of_conference_overflow value = 7.99 }
 					NOT = { check_variable = { which = part_of_conference_overflow value = 8.99 } }
 					NOT = { war_countries = { check_variable = { which = target_of_dismantlement value = 7.99 } NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } } } }
 				}
@@ -5500,7 +5500,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_Overwrite value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_Overwrite value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -5508,7 +5508,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_Overwrite value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_Overwrite value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -5570,7 +5570,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5585,8 +5585,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5602,8 +5602,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5621,8 +5621,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -5669,7 +5669,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_NonOverwrite value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_NonOverwrite value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -5677,7 +5677,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_NonOverwrite value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_NonOverwrite value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -5739,7 +5739,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5754,8 +5754,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5771,8 +5771,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5790,8 +5790,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -5838,7 +5838,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_Apathy value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_Apathy value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -5846,7 +5846,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_Apathy value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_Apathy value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -5908,7 +5908,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5923,8 +5923,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5940,8 +5940,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -5959,8 +5959,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -6007,7 +6007,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_NonFreedom value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_NonFreedom value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -6015,7 +6015,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_NonFreedom value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_NonFreedom value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -6077,7 +6077,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6092,8 +6092,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6109,8 +6109,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6128,8 +6128,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -6176,7 +6176,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -6184,7 +6184,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -6246,7 +6246,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6261,8 +6261,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6278,8 +6278,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6297,8 +6297,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -6345,7 +6345,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } has_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -6353,7 +6353,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } has_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -6415,7 +6415,7 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6430,8 +6430,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6447,8 +6447,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
@@ -6466,8 +6466,8 @@ country_event = {
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
-				FROM = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
@@ -6512,7 +6512,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -6520,7 +6520,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -6528,7 +6528,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -6591,7 +6591,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -6599,7 +6599,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -6607,7 +6607,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -6764,7 +6764,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Seven_Victor }
 				FROM = { NOT = { check_variable = { which = Eighth_Secondary_Complete value = 0.99 } } }
 				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
-				FROM = { NOT = { has_variable = { which = Natural_Secondary_Eighth value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Eighth value = 0.99 } } }
 			}
 			FROM = { set_variable = { which = Eighth_Secondary_Complete value = 1 } }
 		}
@@ -7100,7 +7100,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Seven_Victor }
 				FROM = { NOT = { check_variable = { which = Eighth_Secondary_Complete value = 0.99 } } }
 				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
-				FROM = { NOT = { has_variable = { which = Natural_Secondary_Eighth value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Eighth value = 0.99 } } }
 			}
 			FROM = { set_variable = { which = Eighth_Secondary_Complete value = 1 } }
 		}
@@ -7430,7 +7430,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7438,7 +7438,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7446,7 +7446,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7500,7 +7500,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7508,7 +7508,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7516,7 +7516,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7656,7 +7656,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7664,7 +7664,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7672,7 +7672,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7727,7 +7727,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7736,7 +7736,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7745,7 +7745,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7812,7 +7812,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7820,7 +7820,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7828,7 +7828,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7882,7 +7882,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7890,7 +7890,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7898,7 +7898,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -7960,7 +7960,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -7968,7 +7968,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -7976,7 +7976,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -8030,7 +8030,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -8038,7 +8038,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -8046,7 +8046,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -8108,7 +8108,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -8116,7 +8116,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -8124,7 +8124,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
@@ -8178,7 +8178,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } has_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
@@ -8186,7 +8186,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Sixth_Victor_Complete value = 0.99 } } has_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
@@ -8194,7 +8194,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { NOT = { has_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
