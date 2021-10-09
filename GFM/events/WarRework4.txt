@@ -5469,6 +5469,21 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				any_core = {
+					owner = {
+						check_variable = { which = Major_Defeated value = 0.99 }
+					}
+				}
+				exists = yes
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+			}
+			country_event = 777770409
+			set_variable = { which = Freedom_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 1 }
+		}
+		any_country = {
+			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				exists = yes
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
@@ -5591,7 +5606,7 @@ country_event = {
 }
 
 country_event = {
-    id = 777770411
+    id = 777770412
     title = "What would you like to do with $FROMCOUNTRY$ cores?"
     desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
 	allow_multiple_instances = yes
@@ -5643,7 +5658,7 @@ country_event = {
 }
 
 country_event = {
-    id = 777770412
+    id = 777770413
     title = "What would you like to do with $FROMCOUNTRY$ cores?"
     desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
 	allow_multiple_instances = yes
@@ -5710,6 +5725,23 @@ country_event = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 			}
 			country_event = 777770410
+		}
+    }
+}
+
+country_event = {
+    id = 777770409
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Rewritable_State value = 1 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777770412
 		}
     }
 }
