@@ -403,93 +403,147 @@ country_event = {
 			has_global_flag = waiting_for_victor_update
 		}
 		OR = {
-			is_greater_power = no
-			war = no
 			AND = {
 				check_variable = { which = part_of_conference value = 0.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_1
 					has_global_flag = Dismantlement_Underway_1
 					check_variable = { which = part_of_conference value = 1.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 0.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 0.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 1.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_2
 					has_global_flag = Dismantlement_Underway_2
 					check_variable = { which = part_of_conference value = 2.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 1.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 1.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 2.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_3
 					has_global_flag = Dismantlement_Underway_3
 					check_variable = { which = part_of_conference value = 3.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 2.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 2.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 3.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_4
 					has_global_flag = Dismantlement_Underway_4
 					check_variable = { which = part_of_conference value = 4.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 3.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 3.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 4.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_5
 					has_global_flag = Dismantlement_Underway_5
 					check_variable = { which = part_of_conference value = 5.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 4.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 4.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 5.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_6
 					has_global_flag = Dismantlement_Underway_6
 					check_variable = { which = part_of_conference value = 6.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 5.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 5.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 6.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_7
 					has_global_flag = Dismantlement_Underway_7
 					check_variable = { which = part_of_conference value = 7.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 6.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 6.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference value = 7.99 }
 				NOT = {
+					has_country_flag = dismantlement_buffer_8
 					has_global_flag = Dismantlement_Underway_8
 					check_variable = { which = part_of_conference value = 8.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 7.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 7.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+						}
 					}
 				}
 			}
@@ -750,96 +804,150 @@ country_event = {
 	trigger = {
 		check_variable = { which = part_of_conference_overflow value = 0.99 }
 		NOT = {
-			has_country_flag = waiting_for_victor_update
+			has_global_flag = waiting_for_victor_update
 		}
 		OR = {
-			is_greater_power = no
-			war = no
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 0.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_1
 					check_variable = { which = part_of_conference_overflow value = 1.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 0.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+					has_country_flag = dismantlement_buffer_1
+					has_global_flag = Dismantlement_Underway_1
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 0.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 1.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_2
 					check_variable = { which = part_of_conference_overflow value = 2.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 1.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+					has_country_flag = dismantlement_buffer_2
+					has_global_flag = Dismantlement_Underway_2
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 1.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 2.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_3
 					check_variable = { which = part_of_conference_overflow value = 3.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 2.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+					has_country_flag = dismantlement_buffer_3
+					has_global_flag = Dismantlement_Underway_3
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 2.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 3.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_4
 					check_variable = { which = part_of_conference_overflow value = 4.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 3.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+					has_country_flag = dismantlement_buffer_4
+					has_global_flag = Dismantlement_Underway_4
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 3.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 4.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_5
 					check_variable = { which = part_of_conference_overflow value = 5.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 4.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+					has_country_flag = dismantlement_buffer_5
+					has_global_flag = Dismantlement_Underway_5
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 4.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 5.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_6
 					check_variable = { which = part_of_conference_overflow value = 6.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 5.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+					has_country_flag = dismantlement_buffer_6
+					has_global_flag = Dismantlement_Underway_6
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 5.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 6.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_7
 					check_variable = { which = part_of_conference_overflow value = 7.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 6.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+					has_country_flag = dismantlement_buffer_7
+					has_global_flag = Dismantlement_Underway_7
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 6.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+						}
 					}
 				}
 			}
 			AND = {
 				check_variable = { which = part_of_conference_overflow value = 7.99 }
 				NOT = {
-					has_global_flag = Dismantlement_Underway_8
 					check_variable = { which = part_of_conference_overflow value = 8.99 }
-					war_countries = {
-						check_variable = { which = target_of_dismantlement value = 7.99 }
-						NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+					has_country_flag = dismantlement_buffer_8
+					has_global_flag = Dismantlement_Underway_8
+				}
+				OR = {
+					is_greater_power = no
+					war = no
+					NOT = {
+						war_countries = {
+							check_variable = { which = target_of_dismantlement value = 7.99 }
+							NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+						}
 					}
 				}
 			}
@@ -849,12 +957,12 @@ country_event = {
 	mean_time_to_happen = { days = 7 }
 	
 	immediate = {
-		set_country_flag = waiting_for_victor_update
+		set_global_flag = waiting_for_victor_update
 	}
 	
 	option = {
 		name = "Dang"
-		clr_country_flag = waiting_for_victor_update
+		clr_global_flag = waiting_for_victor_update
 		random_owned = {
 			limit = { owner = { check_variable = { which = part_of_conference_overflow value = 0.99 } NOT = { check_variable = { which = part_of_conference_overflow value = 1.99 } } } }
 			owner = { set_variable = { which = part_of_conference_overflow value = 0 } UTI = { change_variable = { which = VictorCount1 value = -1 } } }
@@ -887,6 +995,611 @@ country_event = {
 			limit = { owner = { check_variable = { which = part_of_conference_overflow value = 7.99 } NOT = { check_variable = { which = part_of_conference_overflow value = 8.99 } } } }
 			owner = { set_variable = { which = part_of_conference_overflow value = 0 } UTI = { change_variable = { which = VictorCount8 value = -1 } } }
 		}
+	}
+}
+
+country_event = {
+	id = 4778746
+	title = "AI: Dismantlement Buffer Event"
+	desc = "AI: Dismantlement Buffer Event"
+	picture = "greatwar"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		random_country = {
+			limit = {
+				exists = yes
+				OR = {
+					has_country_flag = conference_sanity_check
+					AND = {
+						NOT = { has_country_flag = conference_sanity_check }
+						has_country_flag = waiting_for_dismantlement
+					}
+				}
+				NOT = {
+					has_global_flag = waiting_for_victor_update
+					has_global_flag = Dismantlement_Underway_1
+					has_global_flag = Dismantlement_Underway_2
+					has_global_flag = Dismantlement_Underway_3
+					has_global_flag = Dismantlement_Underway_4
+					has_global_flag = Dismantlement_Underway_5
+					has_global_flag = Dismantlement_Underway_6
+					has_global_flag = Dismantlement_Underway_7
+					has_global_flag = Dismantlement_Underway_8
+				}
+			}
+			clr_country_flag = conference_sanity_check
+			country_event = 777770403
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = conference_sanity_check
+				OR = {
+					has_global_flag = waiting_for_victor_update
+					has_global_flag = Dismantlement_Underway_1
+					has_global_flag = Dismantlement_Underway_2
+					has_global_flag = Dismantlement_Underway_3
+					has_global_flag = Dismantlement_Underway_4
+					has_global_flag = Dismantlement_Underway_5
+					has_global_flag = Dismantlement_Underway_6
+					has_global_flag = Dismantlement_Underway_7
+					has_global_flag = Dismantlement_Underway_8
+				}
+			}
+			clr_country_flag = conference_sanity_check
+			set_country_flag = waiting_for_dismantlement
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 0.99 }
+								NOT = { check_variable = { which = part_of_conference value = 1.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 0.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 0.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 1.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 0.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 0.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 1.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 0.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_1
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 1.99 }
+								NOT = { check_variable = { which = part_of_conference value = 2.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 1.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 1.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 2.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 1.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 1.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 2.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 1.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 2.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_2
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 2.99 }
+								NOT = { check_variable = { which = part_of_conference value = 3.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 2.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 2.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 3.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 2.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 2.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 3.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 2.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 3.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_3
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 3.99 }
+								NOT = { check_variable = { which = part_of_conference value = 4.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 3.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 3.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 4.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 3.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 3.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 4.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 3.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 4.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_4
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 4.99 }
+								NOT = { check_variable = { which = part_of_conference value = 5.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 4.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 4.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 5.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 4.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 4.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 5.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 4.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 5.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 5.99 }
+								NOT = { check_variable = { which = part_of_conference value = 6.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 5.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 5.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 6.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 5.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 5.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 6.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 5.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 6.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_6
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 6.99 }
+								NOT = { check_variable = { which = part_of_conference value = 7.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 6.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 6.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 7.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 6.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 6.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 7.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 6.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 7.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_7
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								check_variable = { which = part_of_conference value = 7.99 }
+								NOT = { check_variable = { which = part_of_conference value = 8.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 7.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = part_of_conference_overflow value = 7.99 }
+								NOT = { check_variable = { which = part_of_conference_overflow value = 8.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 7.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+									}
+								}
+							}
+							AND = {
+								check_variable = { which = dismantlement_leader value = 7.99 }
+								NOT = { check_variable = { which = dismantlement_leader value = 8.99 } }
+								NOT = {
+									war_countries = {
+										check_variable = { which = target_of_dismantlement value = 7.99 }
+										NOT = { check_variable = { which = target_of_dismantlement value = 8.99 } }
+									}
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					set_country_flag = dismantlement_buffer_8
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_1
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 0.99 }
+							NOT = { check_variable = { which = part_of_conference value = 1.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 0.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 1.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 0.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 1.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_1
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_2
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 1.99 }
+							NOT = { check_variable = { which = part_of_conference value = 2.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 1.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 2.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 1.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 2.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_2
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_3
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 2.99 }
+							NOT = { check_variable = { which = part_of_conference value = 3.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 2.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 3.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 2.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 3.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_3
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_4
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 3.99 }
+							NOT = { check_variable = { which = part_of_conference value = 4.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 3.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 4.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 3.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 4.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_4
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_5
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 4.99 }
+							NOT = { check_variable = { which = part_of_conference value = 5.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 4.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 5.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 4.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 5.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_5
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_6
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 5.99 }
+							NOT = { check_variable = { which = part_of_conference value = 6.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 5.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 6.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 5.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 6.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_6
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_7
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 6.99 }
+							NOT = { check_variable = { which = part_of_conference value = 7.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 6.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 7.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 6.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 7.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_7
+			}
+		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dismantlement_buffer_8
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						AND = {
+							check_variable = { which = part_of_conference value = 7.99 }
+							NOT = { check_variable = { which = part_of_conference value = 8.99 } }
+						}
+						AND = {
+							check_variable = { which = part_of_conference_overflow value = 7.99 }
+							NOT = { check_variable = { which = part_of_conference_overflow value = 8.99 } }
+						}
+						AND = {
+							check_variable = { which = dismantlement_leader value = 7.99 }
+							NOT = { check_variable = { which = dismantlement_leader value = 8.99 } }
+						}
+					}
+				}
+				set_country_flag = dismantlement_buffer_8
+			}
+		}
+		
+		UTI = { country_event = { id = 4778746 days = 5 } }
 	}
 }
 

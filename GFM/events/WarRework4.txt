@@ -175,12 +175,13 @@ country_event = {
 country_event = {
     id = 777770403
     title = "The $CAPITAL$ Conference has been called!"
-    desc = "This decision is to inform you the following events will allow you do to dismantle recent enemies."
+    desc = "This decision is to inform you the following events will allow you to dismantle recent enemies."
 	major = yes
     is_triggered_only = yes
 	
 	immediate = {
 		#sets defeated value for newly defeated countries
+		set_global_flag = waiting_for_victor_update
 		any_country = {
 			limit = {
 				exists = yes
@@ -223,6 +224,7 @@ country_event = {
 	
     option = {
         name = "Very Well"
+		clr_global_flag = waiting_for_victor_update
 		
 		#sets conference value for current country
 		random_owned = {
