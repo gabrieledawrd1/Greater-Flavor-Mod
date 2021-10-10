@@ -5612,47 +5612,40 @@ country_event = {
 	allow_multiple_instances = yes
     is_triggered_only = yes
     option = {
-        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Freedom_Overwrite value = 1 }
+			set_variable = { which = Existing_Overwrite value = 1 }
 			country_event = 777770424
 		}
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall exist"
+        name = "$FROMCOUNTRY$ shall cores from remaining lands"
 		FROM = {
-			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			set_variable = { which = Existing_NonOverwrite value = 1 }
 			country_event = 777770424	
 		}
 		create_alliance = FROM
     }
     option = {
-        name = "Other Victors can say on $FROMCOUNTRY$"
+        name = "We do not care about $FROMCOUNTRY$"
 		FROM = {
-			set_variable = { which = Freedom_Apathy value = 1 }
+			set_variable = { which = Existing_Apathy value = 1 }
 			country_event = 777770424	
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall stay as it is"
+        name = "$FROMCOUNTRY$ shall not grow larger"
 		FROM = {
-			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Existing_As_Is value = 1 }
 			country_event = 777770424	
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
 		FROM = {
-			set_variable = { which = Freedom_OurFreedom value = 1 }
+			set_variable = { which = Existing_Chomp value = 1 }
 			country_event = 777770424	
-		}
-    }
-    option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
-		FROM = {
-			set_variable = { which = Freedom_OurVassal value = 1 }
-			country_event = 777770424
 		}
     }
 }
@@ -5664,47 +5657,40 @@ country_event = {
 	allow_multiple_instances = yes
     is_triggered_only = yes
     option = {
-        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Freedom_Overwrite value = 1 }
-			country_event = 777770425
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770424
 		}
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall exist"
+        name = "$FROMCOUNTRY$ shall cores from remaining lands"
 		FROM = {
-			set_variable = { which = Freedom_NonOverwrite value = 1 }
-			country_event = 777770425	
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770424	
 		}
 		create_alliance = FROM
     }
     option = {
-        name = "Other Victors can say on $FROMCOUNTRY$"
+        name = "We do not care about $FROMCOUNTRY$"
 		FROM = {
-			set_variable = { which = Freedom_Apathy value = 1 }
-			country_event = 777770425	
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770424
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall stay as it is"
+        name = "$FROMCOUNTRY$ shall not grow larger"
 		FROM = {
-			set_variable = { which = Freedom_NonFreedom value = 1 }
-			country_event = 777770425	
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770424	
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
 		FROM = {
-			set_variable = { which = Freedom_OurFreedom value = 1 }
-			country_event = 777770425	
-		}
-    }
-    option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
-		FROM = {
-			set_variable = { which = Freedom_OurVassal value = 1 }
-			country_event = 777770425	
+			set_variable = { which = Existing_Chomp value = 1 }
+			country_event = 777770424	
 		}
     }
 }
