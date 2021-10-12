@@ -501,6 +501,7 @@ country_event = {
     id = 44820
     title = "EVTNAME44820" #Republic of the Rio Grande
     desc = "EVTDESC44820"
+	major = yes
     picture = "mexico_soldiers"
 
     fire_only_once = yes
@@ -1517,6 +1518,10 @@ country_event = {
         tag = MEX
         year = 1855
 		has_country_modifier = santa_ana_rule
+		NOT = {
+			owns = 2662
+			owns = 102
+		}
     }
 
     mean_time_to_happen = { months = 3 }
@@ -1745,7 +1750,7 @@ country_event = {
     }
 	
 	option = {
-        name = "Mexico will be subjugated!"
+        name = "Mexico will be subjugated! §RGain 8 infamy§W"
 		badboy = 8
 		set_country_flag = installing_max
 		any_owned = {

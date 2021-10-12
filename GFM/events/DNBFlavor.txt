@@ -2310,6 +2310,7 @@ country_event = {
     id = 98720
     title = "EVTNAME98720" #End of the Federation
     desc = "EVTDESC98720"
+	picture = "collapse_dnb"
     major = yes
 
     trigger = {
@@ -2401,6 +2402,13 @@ country_event = {
             }
             country_event = 96015
         }
+		any_country = {
+			limit = {
+				tag = AUS
+				exists = yes
+			}
+			annex_to = THIS
+		}
         change_tag = AUS
         clr_country_flag = dual_monarchy
         any_pop = {
@@ -2491,6 +2499,7 @@ country_event = {
     id = 98721
     title = "EVTNAME98720" #End of the Federation - Totalitarian
     desc = "EVTDESC98721"
+	picture = "collapse_dnb"
     major = yes
 
     trigger = {
@@ -2581,6 +2590,13 @@ country_event = {
             }
             country_event = 96015
         }
+		any_country = {
+			limit = {
+				tag = AUS
+				exists = yes
+			}
+			annex_to = THIS
+		}
         change_tag = AUS
         clr_country_flag = dual_monarchy
         any_pop = {

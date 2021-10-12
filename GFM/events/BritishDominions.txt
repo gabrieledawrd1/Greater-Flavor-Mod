@@ -6,7 +6,7 @@ country_event = {
 
     title = "EVTNAME44330"
     desc = "EVTDESC44330"
-    picture = "danishgovernment"
+    picture = "newfoundland_colony"
 
     major = yes
 
@@ -51,7 +51,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT44330OPTA"
+        name = "This can only be good for the empire. §GLose 3 infamy§W"
         clr_country_flag = NEW_independence_refused
         prestige = -10
         badboy = -3
@@ -223,7 +223,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all!"
+		name = "Never! Suppress them all! §RGain 5 infamy§W"
 		set_country_flag = NEW_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -243,7 +243,7 @@ country_event = {
 
     title = "EVTNAME44331"
     desc = "EVTDESC44331"
-    picture = "danishgovernment"
+    picture = "rejoin_uk"
     major = yes
 
     trigger = {
@@ -286,7 +286,7 @@ country_event = {
 
     title = "EVTNAME44332"
     desc = "EVTDESC44332"
-    picture = "danishgovernment"
+    picture = "australia_colony"
 
     major = yes
 
@@ -497,7 +497,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all!"
+		name = "Never! Suppress them all! §RGain 5 infamy§W"
 		set_country_flag = AST_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -518,7 +518,7 @@ country_event = {
 
     title = "EVTNAME44333"
     desc = "EVTDESC44333"
-    picture = "danishgovernment"
+    picture = "new_zealand_colony"
 
     major = yes
 
@@ -559,7 +559,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT44330OPTA"
+        name = "This can only be good for the empire. §GLose 3 infamy§W"
         clr_country_flag = NZL_independence_refused
         prestige = -15
         badboy = -3
@@ -737,7 +737,7 @@ country_event = {
         }
     }
 	option = {
-		name = "Never! Suppress them all!"
+		name = "Never! Suppress them all! §RGain 5 infamy§W"
 		set_country_flag = NZL_independence_resoundly_refused
 		prestige = 10
 		badboy = 5
@@ -758,7 +758,7 @@ country_event = {
 
     title = "EVTNAME44334"
     desc = "EVTDESC44334"
-    picture = "danishgovernment"
+    picture = "cape_colony"
 
     major = yes
 
@@ -1464,7 +1464,7 @@ country_event = {
 
     title = "EVTNAME44341"
     desc = "EVTDESC44341"
-    picture = "danishgovernment"
+    picture = "rhodesia_colony"
 
     major = yes
 

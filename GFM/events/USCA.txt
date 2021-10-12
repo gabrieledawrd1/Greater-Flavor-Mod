@@ -58,6 +58,7 @@ country_event = {
         exists = yes
         war = no
         owns = 2201
+		NOT = { has_country_flag = usca_wins }
         NOT = {
             has_country_flag = costa_rica_independence
             exists = COS
@@ -114,6 +115,7 @@ country_event = {
         exists = yes
         war = no
         owns = 2197
+		NOT = { has_country_flag = usca_wins }
         NOT = {
             has_country_flag = nicaragua_independence
             exists = NIC
@@ -169,13 +171,14 @@ country_event = {
         tag = UCA
         exists = yes
         war = no
-        owns = 2193
+        owns = 3363
+		NOT = { has_country_flag = usca_wins }
         NOT = {
             has_country_flag = honduras_independence
             exists = HON
         }
         any_owned_province = {
-            province_id = 2193
+            province_id = 3363
             controlled_by_rebels = yes
             province_control_days = 60
             NOT = { country_units_in_province = UCA }
@@ -198,14 +201,13 @@ country_event = {
             limit = { is_core = HON }
             secede_province = HON
         }
-        2193 = { change_province_name = "Tegucigalpa" }
         HON = {
             casus_belli = {
                 target = UCA
                 type = free_peoples
                 months = 30
             }
-            capital = 2193
+            capital = 3363
             add_country_modifier = { name = unrecognized_country duration = 3650 }
         }
     }
@@ -224,6 +226,7 @@ country_event = {
         exists = yes
         war = no
         owns = 2191
+		NOT = { has_country_flag = usca_wins }
         NOT = {
             has_country_flag = el_salvador_independence
             exists = ELS
@@ -326,6 +329,12 @@ country_event = {
             controlled_by = THIS
             NOT = { average_militancy = 2 }
         }
+		3363 = {
+            NOT = { is_core = UCA }
+            owned_by = THIS
+            controlled_by = THIS
+            NOT = { average_militancy = 2 }
+        }
         2195 = {
             NOT = { is_core = UCA }
             owned_by = THIS
@@ -343,6 +352,7 @@ country_event = {
         prestige = 5
         2193 = { add_core = UCA }
         2194 = { add_core = UCA }
+		3363 = { add_core = UCA }
         2195 = { add_core = UCA }
         2196 = { add_core = UCA }
     }
@@ -848,7 +858,7 @@ country_event = {
     news_desc_long = "EVTDESC97560_NEWS_LONG"
     news_desc_medium = "EVTDESC97560_NEWS_MEDIUM"
     news_desc_short = "EVTDESC97560_NEWS_SHORT"
-    picture = "mexico_soldiers"
+    picture = "collapse_frca"
     major = yes
 
     trigger = {
@@ -915,11 +925,11 @@ country_event = {
         }
         random_owned = {
             limit = {
-                province_id = 2193
+                province_id = 3363
                 HON = { exists = no }
             }
             owner = { release = HON }
-            HON = { capital = 2193 add_country_modifier = { name = unrecognized_country duration = 3650 } }
+            HON = { capital = 3363 add_country_modifier = { name = unrecognized_country duration = 3650 } }
         }
         random_owned = {
             limit = {
@@ -1058,11 +1068,11 @@ country_event = {
         }
         random_owned = {
             limit = {
-                province_id = 2193
+                province_id = 3363
                 HON = { exists = no }
             }
             owner = { release = HON }
-            HON = { capital = 2193 add_country_modifier = { name = unrecognized_country duration = 3650 } }
+            HON = { capital = 3363 add_country_modifier = { name = unrecognized_country duration = 3650 } }
         }
         random_owned = {
             limit = {
@@ -1223,7 +1233,7 @@ country_event = {
     news_desc_long = "EVTDESC16401_NEWS_LONG"
     news_desc_medium = "EVTDESC16401_NEWS_MEDIUM"
     news_desc_short = "EVTDESC16401_NEWS_SHORT"
-    picture = "deliberation"
+    picture = "annexation"
 
     is_triggered_only = yes
     major = yes
@@ -1519,7 +1529,7 @@ country_event = {
         }
         random_country = {
             limit = { tag = LOS NOT = { number_of_states = 2 } }
-            war = { target = GUA attacker_goal = { casus_belli = humiliate } defender_goal = { casus_belli = annex_core_country } }
+            war = { target = GUA attacker_goal = { casus_belli = humiliate_no_infamy } defender_goal = { casus_belli = annex_core_country } }
         }
     }
 }

@@ -92,7 +92,7 @@ country_event = {
 
 
     option = {
-        name = "Ok."
+        name = "Ok. §GLose 5 infamy§W"
         release_vassal = NEN
         badboy = -5
         NEN = {
@@ -114,6 +114,7 @@ country_event = {
     title = "Treaty of Ottawa"
     desc = EVTDESC72748
     major = yes
+	picture = "treaty_of_ottawa"
     is_triggered_only = yes
 
     option = {
@@ -188,6 +189,7 @@ country_event = {
     title = "Treaty of Philadelphia"
     desc = EVTDESC72740
     major = yes
+	picture = "treaty_of_philadelphia"
     is_triggered_only = yes
 
     option = {
@@ -365,7 +367,7 @@ country_event = {
         }
     }
     option = {
-        name = "How dare the Americans! This calls for war!"
+        name = "How dare the Americans! This calls for war! §RGain 7 infamy§W"
         badboy = 7
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
@@ -441,7 +443,7 @@ country_event = {
         }
     }
     option = {
-        name = "How dare the Americans! This calls for war!"
+        name = "How dare the Americans! This calls for war! §RGain 7 infamy§W"
         badboy = 7
         CAN_60 = { add_core = QUE }
         2625 = { add_core = QUE }
@@ -585,7 +587,7 @@ country_event = {
         }
     }
     option = {
-        name = "Quebec deserves to be the master of its destiny."
+        name = "Quebec deserves to be the master of its destiny. §GLose 5 infamy§W"
         badboy = -5
         set_country_flag = USA_QUE_agree
         CAN_60 = { add_core = QUE }
@@ -715,7 +717,7 @@ country_event = {
 
 country_event = {
     id = 3309812
-    title = "The United States Secures Hegemony Over the America's"
+    title = "The United States Secures Hegemony Over the Americas"
     desc = "The United States has declared hegemony over the New World and there is not much the rest of the international community can do."
     picture = exemplar_colony
     is_triggered_only = yes
@@ -1057,7 +1059,7 @@ country_event = {
     }
 
     option = {
-        name = "Send the Son's of Democracy down south."
+        name = "Send the Son's of Democracy down south. §RGain 2 infamy§W"
         badboy = 2
         set_country_flag = USA_demcoup
         release_vassal = MEX
@@ -1238,7 +1240,7 @@ country_event = {
         }
     }
     option = {
-        name = "The pilgrims started small too."
+        name = "The pilgrims started small too. §GLose 3 infamy§W"
         prestige = 5
         badboy = -3
         LSK = { set_country_flag = LSK_form }
@@ -1586,7 +1588,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Another War for Liberty"
+        name = "Another War for Liberty §RGain 4 infamy§W"
         badboy = 4
         any_pop = {
             limit = {
@@ -1786,7 +1788,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "We must accept"
+        name = "We must accept. §GLose 5 infamy§W"
         badboy = -5
         prestige = -20
         diplomatic_influence = {
@@ -1803,7 +1805,7 @@ country_event = {
     }
 
     option = {
-        name = "It was not an offer to be refused."
+        name = "It was not an offer to be refused. §RGain 5 infamy§W"
         badboy = 5
         CHL = {
             all_core = { add_core = PBC }
@@ -2242,7 +2244,7 @@ country_event = {
     }
 
     option = {
-        name = "Bring Brazil Democracy"
+        name = "Bring Brazil Democracy! §RGain 2 infamy§W"
         badboy = 2
         release_vassal = BRZ
         relation = {
@@ -2300,6 +2302,7 @@ country_event = {
     id = 7680756
     title = "End of American Hegemony"
     desc = EVTDESC7680756
+	picture = "uss_defeat_usa"
     major = yes
 
     fire_only_once = yes

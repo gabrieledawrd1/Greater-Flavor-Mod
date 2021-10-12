@@ -5,28 +5,8 @@ country_event = {
     desc = "EVTDESC99949"
     picture = "henri_riviere"
 
-    trigger = {
-        primary_culture = french
-            is_greater_power = yes
-            capital = 425
-        exists = DAI
-        has_country_flag = tonkin_campaign
-        NOT = { has_country_flag = tonkin_campaign_started }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-        modifier = {
-            factor = 0.5
-            year = 1881
-        }
-
-        modifier = {
-            factor = 0.1
-            year = 1883
-        }
-    }
+    is_triggered_only = yes
+	fire_only_once = yes
 
     option = {
         name = "EVT99949OPTA"
@@ -122,7 +102,7 @@ country_event = {
     id = 99984
     title = "EVTNAME99984"
     desc = "EVTDESC99984"
-
+	picture = "french_wallonia"
     is_triggered_only = yes
     major = yes
 
@@ -166,7 +146,7 @@ country_event = {
     id = 99985
     title = "EVTNAME99985"
     desc = "EVTDESC99985"
-    picture = "german_rhine"
+    picture = "french_wallonia"
 
     is_triggered_only = yes
     major = yes
@@ -384,7 +364,7 @@ country_event = {
     title = "EVTNAME99992"
     desc = "EVTDESC99992"
     major = yes
-
+	picture = "mtq_n_glp"
     is_triggered_only = yes
 
     option = {
@@ -412,6 +392,7 @@ country_event = {
     id = 99993
     title = "EVTNAME99993"
     desc = "EVTDESC99993"
+	picture = "french_defeat"
     major = yes
 
     is_triggered_only = yes
@@ -429,12 +410,13 @@ country_event = {
     id = 99994
     title = "EVTNAME99994"
     desc = "EVTDESC99994"
+	picture = "french_triumph"
     major = yes
 
     is_triggered_only = yes
 
     option = {
-        name = "Vive la France!"
+        name = "Vive la France! §RGain 5 infamy§W"
         prestige = 5
         set_global_flag = left_bank_french_victory
         badboy = 5
@@ -469,6 +451,7 @@ country_event = {
     id = 99995
     title = "EVTNAME99995"
     desc = "EVTDESC99995"
+	picture = "french_triumph"
     major = yes
 
     is_triggered_only = yes
@@ -615,7 +598,12 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-		have_country_flag = patagonia_master
+		has_country_flag = patagonia_master
+	    primary_culture = french
+		capital = 425
+		NOT = { 
+		    exists = PTG 
+		}
         AND = {
 			CHL_2327 = { owned_by = THIS }
 			CHL_2332 = { owned_by = THIS }

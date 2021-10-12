@@ -1,5 +1,24 @@
-political_decisions = {
-    
+political_decisions = { ##rework, these can probably be merged/removed, some are useless
+    unciv_balance_qng = {
+        picture = reichstag
+        potential = {
+            ai = yes
+            tag = QNG
+            civilized = no
+            NOT = { has_country_flag = unciv_balance_flag }
+        }
+
+        allow = { }
+
+        effect = {
+            add_country_modifier = {
+                name = unciv_balance_qng
+                duration = 3650
+            }
+            set_country_flag = unciv_balance_flag
+        }
+    }
+
     viet_remove_sphere = {
         picture = reichstag
         potential = {
@@ -46,6 +65,7 @@ political_decisions = {
                 tag = TKG
                 tag = JAP
             }
+			NOT = { has_country_flag = ghost_country }
             civilized = no
             NOT = { has_global_flag = japan_ai_dye }
 			JAP = { ai = yes }
@@ -65,29 +85,6 @@ political_decisions = {
         effect = {
             1652 = { trade_goods = dye }
             set_global_flag = japan_ai_dye
-        }
-    }
-
-    disable_microstates = {
-        picture = starting_options
-        potential = {
-            ai = no
-			NOT = { has_global_flag = sw_set }
-            has_global_flag = looking_through_options
-            NOT = { has_global_flag = disable_microstates }
-            NOT = { year = 1837 }
-        }
-        allow = { }
-        effect = {
-            set_global_flag = disable_microstates
-            3251 = { remove_core = MNC add_core = SAR add_core = ITA }
-            SAR = { inherit = MNC }
-            3252 = { remove_core = ADO remove_core = CAT add_core = SPA }
-            SPA = { inherit = ADO }
-            3253 = { remove_core = LIE add_core = AUS }
-            AUS = { inherit = LIE }
-            3266 = { remove_core = SMR add_core = PAP add_core = ITA }
-            PAP = { inherit = SMR }
         }
     }
 

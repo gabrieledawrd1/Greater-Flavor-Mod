@@ -252,6 +252,7 @@ From;To;Type;Through;Data;Comment
 721;3272;impassable;0;0;Lucerne-Novara
 465;3434;impassable;0;0;Lucerne-Novara
 472;3434;impassable;0;0;Lucerne-Novara
+472;720;impassable;0;0;Lucerne-Novara
 611;614;impassable;0;0;Lucerne-Novara
 613;615;impassable;0;0;Lucerne-Novara
 613;618;impassable;0;0;Lucerne-Novara
@@ -302,8 +303,8 @@ From;To;Type;Through;Data;Comment
 493;460;impassable;0;0;Pyrennees
 460;496;impassable;0;0;Pyrennees
 496;457;impassable;0;0;Pyrennees
-457;3433;impassable;0;0;Pyrennees
 457;500;impassable;0;0;Pyrennees
+3252;500;impassable;0;0;Pyrennees
 ;;;;;
 ;;;;;
 #Carpathians;;;;;
@@ -314,6 +315,8 @@ From;To;Type;Through;Data;Comment
 663;661;impassable;0;0;Carpathians
 953;661;impassable;0;0;Carpathians
 950;953;impassable;0;0;Carpathians
+950;951;impassable;0;0;Carpathians
+3324;638;impassable;0;0;Carpathians
 704;638;impassable;0;0;Carpathians
 704;636;impassable;0;0;Carpathians
 689;634;impassable;0;0;Carpathians

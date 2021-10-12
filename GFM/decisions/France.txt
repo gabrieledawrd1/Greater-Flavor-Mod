@@ -579,18 +579,6 @@ political_decisions = {
             }
             random_owned = {
                 limit = {
-                    PIC = { exists = no }
-                }
-                PIC = { all_core = { remove_core = PIC } }
-            }
-            random_owned = {
-                limit = {
-                    NRM = { exists = no }
-                }
-                NRM = { all_core = { remove_core = NRM } }
-            }
-            random_owned = {
-                limit = {
                     WLL = { exists = no }
                 }
                 owner = {
@@ -607,12 +595,6 @@ political_decisions = {
                     BRG = { exists = no }
                 }
                 BRG = { all_core = { remove_core = BRG } }
-            }
-			random_owned = {
-                limit = {
-                    LIE = { exists = no }
-                }
-                LIE = { all_core = { remove_core = LIG } }
             }
             random_owned = {
                 limit = {

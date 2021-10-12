@@ -154,6 +154,7 @@ country_event = {
     id = 72754
     title = "The Question of the Italian Crown"
     desc = EVTDESC72754
+	picture = "corona_incisa"
     major = yes
     fire_only_once = yes
 
@@ -287,7 +288,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "There it goes"
+        name = "There's nothing we can do."
         any_country = {
             limit = {
                 any_core = {
@@ -319,7 +320,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Ok"
+        name = "Alright."
         FROM = {
             any_owned = {
                 limit = {
@@ -337,6 +338,7 @@ country_event = {
     title = "The Unification of Iberia"
     desc = EVTDESC72751
     major = yes
+	picture = "iberia_map"
     is_triggered_only = yes
 
 
@@ -352,6 +354,7 @@ country_event = {
                 }
                 ai = yes
                 in_sphere = THIS
+				exists = yes
             }
             annex_to = THIS
         }
@@ -375,6 +378,7 @@ country_event = {
                     in_sphere = THIS
                     vassal_of = THIS
                 }
+				exists = yes
                 NOT = { tag = IBR }
                 any_owned_province = { is_core = IBR }
                 war = no
@@ -400,7 +404,9 @@ country_event = {
                     tag = SPA
                     tag = POR
                     tag = SPC
+                    tag = UPB
                 }
+				exists = yes
                 ai = yes
                 in_sphere = THIS
             }
@@ -426,6 +432,7 @@ country_event = {
                     in_sphere = THIS
                     vassal_of = THIS
                 }
+				exists = yes
                 NOT = { tag = IBR }
                 any_owned_province = { is_core = IBR }
                 war = no
@@ -451,7 +458,9 @@ country_event = {
                     tag = SPA
                     tag = POR
                     tag = SPC
+                    tag = UPB
                 }
+				exists = yes
                 ai = yes
                 in_sphere = THIS
             }
@@ -477,6 +486,7 @@ country_event = {
                     in_sphere = THIS
                     vassal_of = THIS
                 }
+				exists = yes
                 NOT = { tag = IBR }
                 any_owned_province = { is_core = IBR }
                 war = no
@@ -502,7 +512,9 @@ country_event = {
                     tag = SPA
                     tag = POR
                     tag = SPC
+                    tag = UPB
                 }
+				exists = yes
                 ai = yes
                 in_sphere = THIS
             }
@@ -528,6 +540,7 @@ country_event = {
                     in_sphere = THIS
                     vassal_of = THIS
                 }
+				exists = yes
                 NOT = { tag = IBR }
                 any_owned_province = { is_core = IBR }
                 war = no
@@ -553,7 +566,9 @@ country_event = {
                     tag = SPA
                     tag = POR
                     tag = SPC
+                    tag = UPB
                 }
+				exists = yes
                 ai = yes
                 in_sphere = THIS
             }
@@ -579,6 +594,7 @@ country_event = {
                     in_sphere = THIS
                     vassal_of = THIS
                 }
+				exists = yes
                 NOT = { tag = IBR }
                 any_owned_province = { is_core = IBR }
                 war = no
@@ -615,6 +631,7 @@ country_event = {
     title = "The Unification of Scandinavia"
     desc = EVTDESC72750
     major = yes
+	picture = "scandinavia_map"
     is_triggered_only = yes
 
     option = {
@@ -624,7 +641,7 @@ country_event = {
         }
     }
     option = {
-        name = "Something about the Swedes Suggests Success"
+        name = "Something about the Swedes suggests success."
         SCA = {
             capital = 322
             primary_culture = swedish
@@ -862,7 +879,7 @@ country_event = {
         }
     }
     option = {
-        name = "Peace is the only way."
+        name = "Peace is the only way. §GLose 5 infamy§W"
         badboy = -5
         any_pop = {
             scaled_militancy= {
@@ -940,6 +957,7 @@ country_event = {
     title = "The Treaty of Elsass-Lorraine is Ratified"
     desc = EVTDESC7686768
     major = yes
+	picture = "alsace_lorraine_map"
     is_triggered_only = yes
 
     option = {
@@ -986,6 +1004,7 @@ country_event = {
     title = "$FROMCOUNTRY$ Nullifies Treaty of Elsass-Lorraine"
     desc = EVTDESC2317187
     major = yes
+	picture = "alsace_lorraine_map"
     is_triggered_only = yes
 
     option = {
@@ -1040,6 +1059,7 @@ country_event = {
     id = 7142973
     title = "The Sacking of Monaco"
     desc = EVTDESC7142973
+	picture = "monaco_sack"
     major = yes
     fire_only_once = yes
 
@@ -1060,7 +1080,7 @@ country_event = {
     }
 
     option = {
-        name = "The bourgeois swine got they deserved."
+        name = "The bourgeois swine got they deserved. §RGain 2 infamy§W"
         set_global_flag = sack_monaco
         badboy = 2
         money = 5000
@@ -1112,7 +1132,7 @@ country_event = { ####Start####
     picture = translyvania
 
     option = {
-        name = "A ceremonial friendship treaty."
+        name = "A ceremonial friendship treaty. §GLose 5 infamy§W"
         badboy = -5
         HUN = {
             relation  = {
@@ -1335,7 +1355,7 @@ country_event = { ####Romania hears support for Hungary####
     }
 
     option = {
-        name = "Agree to the treaty."
+        name = "Agree to the treaty. §GLose 4 infamy§W"
         prestige = -5
         badboy = -4
         any_pop = {
@@ -1406,7 +1426,7 @@ country_event = { ####Romania's rebuttal####
     }
 
     option = {
-        name = "The treaty will be enforced!"
+        name = "The treaty will be enforced! §RGain 3 infamy§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -1531,7 +1551,7 @@ country_event = { ####Romania hears request for money approved####
     picture = translyvania
 
     option = {
-        name = "Sign the Treaty."
+        name = "Sign the Treaty. §GLose 2 infamy§W"
         money = 100000
         any_pop = {
             limit = {
@@ -1560,6 +1580,7 @@ country_event = { ####Hungary favored treaty of Transvana signed###
     id = 71429745
     title = "Treaty of Transylvania Signed"
     desc = EVTDESC71429745
+	picture = "transylvania"
     is_triggered_only = yes
     major = yes
 
@@ -1677,7 +1698,7 @@ country_event = { #Hungary hears support for Romania
     }
 
     option = {
-        name = "Agree to the treaty."
+        name = "Agree to the treaty. §GLose 4 infamy§W"
         prestige = -5
         badboy = -4
         any_pop = {
@@ -1765,7 +1786,7 @@ country_event = { ####Hungary's rebuttal####
     }
 
     option = {
-        name = "The treaty will be enforced!"
+        name = "The treaty will be enforced! §RGain 3 infamy§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = HUN
@@ -1890,7 +1911,7 @@ country_event = { ####Hungary hears request for money approved####
     picture = translyvania
 
     option = {
-        name = "Sign the Treaty."
+        name = "Sign the Treaty. §GLose 2 infamy§W"
         money = 100000
         any_pop = {
             limit = {
@@ -1919,6 +1940,7 @@ country_event = { ####Romania favored treaty of Transvana signed###
     id = 714297451
     title = "Treaty of Transylvania Signed"
     desc = EVTDESC714297451
+	picture = "transylvania"
     is_triggered_only = yes
     major = yes
 
@@ -1972,7 +1994,7 @@ country_event = { ####countries hear of Partition####
     picture = translyvania
 
     option = {
-        name = "For the sake of peace, we agree."
+        name = "For the sake of peace, we agree. §GLose 2 infamy§W"
         set_country_flag = yes_transvana
         badboy = -2
         prestige = -5
@@ -2077,7 +2099,7 @@ country_event = { ####result of HUN no/Rom yes
     }
 
     option = {
-        name = "The treaty will be enforced!"
+        name = "The treaty will be enforced! §RGain 3 infamy§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = HUN
@@ -2155,7 +2177,7 @@ country_event = { ####result of ROM no/Hun yes
     }
 
     option = {
-        name = "The treaty will be enforced!"
+        name = "The treaty will be enforced! §RGain 3 infamy§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -2239,7 +2261,7 @@ country_event = { ####result of ROM no/Hun no
     }
 
     option = {
-        name = "They will accept our help!"
+        name = "They will accept our help! §RGain 3 infamy§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -2312,6 +2334,7 @@ country_event = { ####Treaty partition success
     id = 714297392
     title = "Translyvania Treaty Successful"
     desc = EVTDESC714297392
+	picture = "transylvania"
     fire_only_once = yes
     major = yes
 

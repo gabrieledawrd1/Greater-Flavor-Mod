@@ -100,7 +100,7 @@ political_decisions = {
                     change_province_name = "Olavarría" 
                     add_province_modifier = {
                         name = recently_built_city
-                        duration = 365
+                        duration = 730
                     }
                 }
             }
@@ -249,6 +249,10 @@ political_decisions = {
                     add_core = THIS
                     life_rating = 20
                     any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
+					add_province_modifier = {
+                        name = recently_built_city
+                        duration = 365
+                    }
                 }
             }
         }
@@ -360,7 +364,6 @@ political_decisions = {
             }
             owns = 2348
             2348 = { is_capital = no }
-            year = 1860
             ENT = { exists = no }
             CRT = { exists = no }
             SBA = { exists = no }
@@ -798,15 +801,14 @@ political_decisions = {
     carmen_harbor = {
         picture = map_patagonia
             potential = {
-                NOT = { has_country_flag = conquest_of_the_desert }
 				NOT = { has_country_flag = carmen_harbor }
                 OR = {
-				tag = ARC
-				tag = ARG
-				tag = LPL
-				}
+				    tag = ARC
+				    tag = ARG
+				    tag = LPL
+			    }
                 owns = 2355
-        }
+            }
 
         allow = {
 		    battleship_column_doctrine = 1
@@ -879,23 +881,39 @@ political_decisions = {
             OR = {
 				market_regulations = 1
 				year = 1879
-				}
 			}
+		}
 
         effect = {
             set_country_flag = chaco_cotton
-			any_pop = { limit = { culture = guarani } consciousness = 2 militancy = 3 }
-            2367 = { trade_goods = cotton }
-            2366 = { trade_goods = cotton }
-            2365 = { trade_goods = cotton }
-            2364 = { trade_goods = cotton }
-			2372 = { trade_goods = cotton }
-			2367 = { add_province_modifier = { name = king_cotton duration = 3650 } }
-			2366 = { add_province_modifier = { name = king_cotton duration = 3650 } }
-			2365 = { add_province_modifier = { name = king_cotton duration = 3650 } }
-			2364 = { add_province_modifier = { name = king_cotton duration = 3650 } }
-			2372 = { add_province_modifier = { name = king_cotton duration = 3650 } }
-            }
+			any_pop = { 
+			    limit = { 
+				    culture = guarani 
+				} 
+				consciousness = 3 
+				militancy = 3 
+			}
+            2367 = { 
+			    trade_goods = cotton
+                add_province_modifier = { name = cotton_boom duration = 3650 }					
+			}
+            2366 = {
+ 				trade_goods = cotton
+                add_province_modifier = { name = cotton_boom duration = 3650 }
+			}
+            2365 = { 
+			    trade_goods = cotton 
+			    add_province_modifier = { name = cotton_boom duration = 3650 }
+			}
+            2364 = { 
+			    trade_goods = cotton 
+			    add_province_modifier = { name = cotton_boom duration = 3650 }
+			}
+			2372 = { 
+			    trade_goods = cotton 
+				add_province_modifier = { name = cotton_boom duration = 3650 }
+			}
+        }
         ai_will_do = { factor = 1 }
 	}
 
@@ -939,6 +957,7 @@ political_decisions = {
             }
             2383 = {
                 add_province_modifier = { name = embalse duration = -1 }
+				life_rating = 1
             }
         }
     }
@@ -950,12 +969,12 @@ political_decisions = {
                 tag = ARG
                 tag = ARC
                 tag = LPL
-				}
+			}
 			owns = 2379
-           OR = {
+            OR = {
                 year = 1888
                 phenomenology_n_hermeneutic = 1
-				}
+			}
             NOT = { has_country_flag = san_roque_built }
         }
         allow = {
@@ -969,7 +988,7 @@ political_decisions = {
         }
         effect = {
             set_country_flag = san_roque_built
-			prestige = 15
+			prestige = 20
             random_owned = {
                 limit = { owner = { ai = yes } }
                 owner = { treasury = -25000 }
@@ -1001,7 +1020,7 @@ political_decisions = {
             NOT = {
                 has_country_modifier = caja_conversion
             }
-                year = 1890
+            year = 1890
         }
 
         allow = {
@@ -1017,5 +1036,226 @@ political_decisions = {
                 duration = -1
             }
         }
+    }
+
+    colon_theatre = {
+        picture = colon_theatre
+        potential = {
+            OR = {
+                tag = ARC
+                tag = ARG
+                tag = VLP
+				tag = LPL
+            }
+            owns = 2348
+			year = 1908
+			NOT = { has_country_flag = colon_theatre_built }
+        }
+
+        allow = {
+            war = no
+            money = 100000
+        }
+
+        effect = {
+			set_country_flag = colon_theatre_built
+            prestige = 25
+			treasury = -100000
+            2348 = {
+            any_pop = { limit = { is_primary_culture = yes } literacy = 0.10 }
+			rich_strata = { militancy = -5 }
+			middle_strata = { consciousness = 3 }
+			poor_strata = { consciousness = 3 }
+            add_province_modifier = {
+                name = opera_house
+                duration = -1
+				}
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    la_mazorca = {
+		picture = guard_dude
+        potential = {
+			tag = ARC
+            NOT = { has_country_flag = mazorca_established }
+        }
+
+        allow = {
+            NOT = { num_of_revolts = 1 }
+        }
+	
+        effect = {
+            any_pop = {
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 5
+                }
+            }
+			soldiers = { consciousness = -1 }
+            add_country_modifier = { name = mazorca duration = 7300 }
+            set_country_flag = mazorca_established
+        }
+    }
+
+    abolish_la_mazorca = {
+		picture = guard_dude
+        potential = {
+            OR = {
+                tag = ARG
+                tag = VLP
+				tag = LPL
+            }
+			has_country_modifier = mazorca
+            NOT = { has_country_flag = rosas_victory_new_regime }
+        }
+
+        allow = {
+            NOT = { num_of_revolts = 1 }
+        }
+	
+        effect = {
+		    badboy = -0.10
+            any_pop = {
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = -1
+                }
+            }
+            remove_country_modifier = mazorca
+        }
+    }
+
+	buenos_aires_conquest = {
+		picture = bahia_blanca_fort
+		potential = {
+			OR = {
+				tag = ARG
+				tag = ARC
+				tag = LPL
+				tag = SBA
+			}
+			OR = {
+				2352 = { empty = yes }
+				2355 = { empty = yes }
+			}
+			owns = 2351
+			NOT = { has_country_flag = buenos_aires_conquered }
+		}
+
+		allow = {
+			war = no
+			OR = {
+			    is_secondary_power = yes
+				is_greater_power = yes
+				nationalism_n_imperialism = 1
+				year = 1851
+			}
+		}
+
+		effect = {
+			set_country_flag = buenos_aires_conquered
+			prestige = 3
+			random_owned = {
+				limit = { 2352 = { empty = yes } }
+				2352 = {
+					secede_province = THIS
+					add_core = THIS
+					add_core = SBA
+					life_rating = 15
+					any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
+				}
+			}
+			2354 = {
+				change_province_name = "Bahía Blanca"
+				add_province_modifier = { name = small_immigration_boom duration = 730 }
+			}
+			random_owned = {
+				limit = { 2355 = { empty = yes } }
+				2355 = {
+					secede_province = THIS
+					add_core = THIS
+					add_core = SBA
+					life_rating = 15
+					any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+    rename_south_atlantic = {
+        picture = sthelena
+        potential = {
+            OR = {
+                AND = {
+                    primary_culture = platinean
+                    NOT = { has_global_flag = renamed_south_atlantic }
+                }
+                AND = {
+                    primary_culture = brazilian
+                    NOT = { has_global_flag = renamed_south_atlantic }
+                }
+                AND = {
+                    primary_culture = british
+                    has_global_flag = renamed_south_atlantic
+                }
+            }
+            owns = 2130
+			owns = 2129
+			owns = 2132
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            random_owned = {
+                limit = { owner = { primary_culture = platinean } }
+                owner = {
+				    prestige = 3
+                    set_global_flag = renamed_south_atlantic
+                    2129 = { change_province_name = "Santa Elena" }
+					2130 = { change_province_name = "Ascensión" }
+					2132 = { change_province_name = "Tristán de Acuña" }
+					3058 = { change_province_name = "Coast of Tristán de Acuña" }
+					3203 = { change_province_name = "Coast of Santa Elena" }
+					3054 = { change_province_name = "East Coast of Ascensión" }
+					3053 = { change_province_name = "West Coast of Ascensión" }
+                }
+            }
+            random_owned = {
+                limit = { owner = { primary_culture = brazilian } }
+                owner = {
+				    prestige = 3
+                    set_global_flag = renamed_south_atlantic
+                    2129 = { change_province_name = "Santa Helena" }
+					2130 = { change_province_name = "Ascensão" }
+					2132 = { change_province_name = "Tristão da Cunha" }
+					3058 = { change_province_name = "Coast of Tristão da Cunha" }
+					3203 = { change_province_name = "Coast of Santa Helena" }
+					3054 = { change_province_name = "East Coast of Ascensão" }
+					3053 = { change_province_name = "West Coast of Ascensão" }
+                }
+            }
+            random_owned = {
+                limit = { owner = { primary_culture = british } }
+                owner = {
+				    prestige = 3
+                    clr_global_flag = renamed_south_atlantic
+                    2129 = { change_province_name = "Saint Helena" }
+					2130 = { change_province_name = "Ascension" }
+					2132 = { change_province_name = "Tristan da Cunha" }
+					3058 = { change_province_name = "Coast of Tristan da Cunha" }
+					3203 = { change_province_name = "Coast of Saint Helena" }
+					3054 = { change_province_name = "East Coast of Ascension" }
+					3053 = { change_province_name = "West Coast of Ascension" }
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
     }
 }

@@ -349,6 +349,13 @@ political_decisions = {
                 limit = { has_pop_culture = hungarian }
                 militancy = 4
             }
+			any_country = {
+				limit = {
+					tag = AUS
+					exists = yes
+				}
+				annex_to = THIS
+			}
             remove_accepted_culture = hungarian
             clr_country_flag = dual_monarchy
             change_tag = AUS
@@ -490,37 +497,8 @@ political_decisions = {
 					}
 				}
 			}
-			any_owned = {
-				limit = {
-					OR = {
-						province_id = 2538
-						province_id = 792
-						province_id = 791
-						province_id = 793
-					}
-				}
-				secede_province = SRR
-			}
-			any_country = {
-				limit = {
-					tag = SRR
-					exists = yes
-				}
-				HUN = {
-					war = {
-						target = SRR
-						attacker_goal = { casus_belli = conquest_any }
-						defender_goal = { casus_belli = status_quo }
-					}
-				}
-				AUS = {
-					war = {
-						target = SRR
-						attacker_goal = { casus_belli = conquest_any }
-						defender_goal = { casus_belli = status_quo }
-					}
-				}
-			}
+			set_country_flag = slovaks_are_mad
+			set_country_flag = serbs_are_mad
 		}
 
         ai_will_do = {
@@ -544,11 +522,11 @@ political_decisions = {
             OR = {
                 AND = {
                     capital_scope = { controlled_by = THIS }
-                    national_provinces_occupied = .75
+                    national_provinces_occupied = .50
                 }
                 AND = {
                     capital_scope = { NOT = { controlled_by = THIS } }
-                    national_provinces_occupied = .50
+                    national_provinces_occupied = .25
                 }
             }
         }
@@ -1004,6 +982,13 @@ political_decisions = {
             AUS_619 = { add_core = AUS }
             AUS_734 = { add_core = AUS }
             all_core = { remove_core = DNB }
+			any_country = {
+				limit = {
+					tag = AUS
+					exists = yes
+				}
+				annex_to = THIS
+			}
             change_tag = AUS
             nationalvalue = nv_autocracy
             add_country_modifier = {
@@ -1027,7 +1012,10 @@ political_decisions = {
     embrace_czech_minority = {
         picture = embrace_minority
         potential = {
-            tag = DNB
+			      OR = {
+				      tag = DNB
+				      tag = KUK
+			      }
             any_owned_province = { is_core = BOH }
             NOT = {
                 OR = {

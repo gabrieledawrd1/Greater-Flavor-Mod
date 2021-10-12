@@ -211,6 +211,7 @@ political_decisions = {
             6 = { add_core = CAL }
             13 = { add_core = CAL }
             14 = { add_core = CAL }
+			368 = { add_core = CAL }
             15 = { add_core = CAL }
             16 = { add_core = CAL }
             17 = { add_core = CAL }
@@ -291,8 +292,6 @@ political_decisions = {
                 remove_core = SON
                 remove_core = UNM
                 remove_core = UIL
-                remove_core = SIO
-                remove_core = PAW
                 remove_core = MTC
             }
 

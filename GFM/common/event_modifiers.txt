@@ -427,6 +427,11 @@ preparing_for_war = {
     icon = 15
 }
 
+mckinley_tariffs = {
+    tariff_efficiency_modifier = 0.15
+    min_tariff = 0.5
+    icon = 15
+}
 
 state_of_emergency_modifier = {
     war_exhaustion = -0.1
@@ -780,7 +785,7 @@ assegai = {
     land_defense_modifier = 0.3
     land_attack_modifier = 0.3
     land_organisation = 0.3
-    mobilisation_size = 0.35
+    mobilisation_size = 0.15
     mobilisation_economy_impact = -0.7
     war_exhaustion = -0.05
     supply_consumption = -0.1
@@ -1020,7 +1025,7 @@ academic_confusion = {
 liberal_agitation = {
     pop_consciousness_modifier = 0.2
     pop_militancy_modifier = 0.05
-	immigrant_push = 0.25
+	immigrant_push = 0.05
     icon = 4
 }
 
@@ -1043,6 +1048,14 @@ potato_blight = {
     pop_consciousness_modifier = 0.1
     immigrant_push = 0.25
     population_growth = -0.001
+    icon = 20
+}
+
+potatoes_introduced = {
+    farm_RGO_eff = 0.15
+	farm_RGO_size = 0.2
+    pop_militancy_modifier = 0.05
+    pop_consciousness_modifier = 0.05
     icon = 20
 }
 
@@ -1231,7 +1244,7 @@ loyal_askaris = {
 
 muhammad_alis_reforms = {
     land_organisation = 0.1
-    mobilisation_size = 0.25
+    mobilisation_size = 0.05
     war_exhaustion = -0.2
     tax_efficiency = 0.05
     mobilisation_economy_impact = -0.25
@@ -1547,7 +1560,7 @@ the_bonnie_blue_flag = {
     land_organisation = 0.2
     land_unit_start_experience = 5
     mobilisation_economy_impact = -0.3
-    mobilisation_size = 0.1
+    mobilisation_size = 0.05
     mobilization_impact = 2
     icon = 15
 }
@@ -2072,7 +2085,7 @@ small_country_draft = {
 nationalist_agitation = {
     pop_consciousness_modifier = 0.2
     pop_militancy_modifier = 0.25
-    immigrant_push = -0.15
+    immigrant_push = -0.25
     icon = 4
 }
 
@@ -2136,6 +2149,7 @@ irish_oppression = {
     local_factory_output = -0.5
     local_artisan_output = -0.75
     population_growth = 0.001
+	immigrant_push = 0.15
     icon = 8
 }
 
@@ -2143,7 +2157,7 @@ irish_potato_blight = {
     immigrant_attract = -2
     pop_militancy_modifier = 0.4
     pop_consciousness_modifier = 0.3
-    immigrant_push = 0.75
+    immigrant_push = 0.50
     local_factory_throughput = -0.25
     local_factory_output = -0.5
     local_artisan_output = -0.5
@@ -2173,7 +2187,7 @@ irish_integration  = {
 ### Arabia ###
 
 rally_tribesmen = {
-    mobilisation_size = 0.76
+    mobilisation_size = 0.56
     mobilisation_economy_impact = -0.7
     core_pop_militancy_modifier = -0.1
     war_exhaustion = -0.03
@@ -2181,7 +2195,7 @@ rally_tribesmen = {
 }
 
 the_ikhwan = {
-    mobilisation_size = 0.35
+    mobilisation_size = 0.15
     mobilisation_economy_impact = -0.25
     core_pop_militancy_modifier = -0.1
     war_exhaustion = -0.03
@@ -2275,7 +2289,7 @@ anti_manchu_sentiment = {
 taiping_draft = {
     land_organisation = -0.1
     org_regain = -0.1
-    mobilisation_size = 0.15
+    mobilisation_size = 0.05
     prestige = -0.02
     icon = 18
 }
@@ -2339,7 +2353,7 @@ no_line_of_advantage = {
 }
 
 daimyo_draft = {
-    mobilisation_size = 0.15
+    mobilisation_size = 0.05
     war_exhaustion = -0.03
     icon = 18
 }
@@ -2361,7 +2375,7 @@ exploiting_the_land = {
 }
 
 tewodros_reforms = {
-    mobilisation_size = 0.1
+    mobilisation_size = 0.05
     land_organisation = 0.15
     supply_consumption = -0.25
     land_unit_start_experience = 10
@@ -2388,7 +2402,7 @@ austria_nerf = {
 }
 
 tewodros_ii = {
-    mobilisation_size = 0.1
+    mobilisation_size = 0.05
     land_unit_start_experience = 10
     org_regain = 0.05
     global_pop_militancy_modifier = 0.01
@@ -2614,9 +2628,19 @@ end_the_war = {
 
 international_pariah = {
     import_cost = 0.5
-    diplomatic_points_modifier = -0.25
+	loan_interest = 4
+    diplomatic_points_modifier = -0.6
+    factory_owner_cost = 1
+    global_immigrant_attract = -4.0
+    org_regain = -0.3
     non_accepted_pop_militancy_modifier = 0.2
+	war_exhaustion = 0.5
+    mobilisation_economy_impact = 2
     prestige = -0.2
+    cb_generation_speed_modifier = -0.5
+    research_points_modifier = -0.1
+    land_organisation = -0.25
+    naval_organisation = -0.25
     icon = 4
 }
 
@@ -3203,7 +3227,7 @@ the_eight_banners = {
     max_social_spending = 0.50
     research_points_modifier = -0.15
     cb_generation_speed_modifier = -0.75
-    war_exhaustion = -5
+    war_exhaustion = -1
     supply_consumption = -0.1
     research_points_on_conquer = -0.5
     tax_efficiency = -0.05
@@ -3687,7 +3711,7 @@ isolationist_jihadism = {
     min_tariff = 1.00
     min_military_spending = 0.50
     mobilization_economy_impact = -0.50
-    mobilisation_size = 0.30
+    mobilisation_size = 0.10
     naval_organisation = -0.50
     non_accepted_pop_militancy_modifier = 0.10
     non_accepted_pop_consciousness_modifier = 0.10
@@ -3727,7 +3751,7 @@ shastar_vidya = {
     land_organisation = 0.5
     land_unit_start_experience = 5
     supply_consumption = -0.1
-    mobilisation_size = 0.12
+    mobilisation_size = 0.05
     icon = 11
 }
 
@@ -3758,7 +3782,7 @@ jewish_diaspora = {
 
 ### Ethiopia ###
 zemene_mesafint = {
-    mobilisation_size = 0.12
+    mobilisation_size = 0.05
     mobilisation_economy_impact = -0.3
     supply_consumption = -0.3
     war_exhaustion = -0.5
@@ -4700,21 +4724,21 @@ serfdom_emigration_cooldown = {
 
 ypf_oil = {
     local_RGO_output = 0.05
-    farm_rgo_size = 0.5
+    mine_rgo_size = 0.5
     immigrant_attract = 0.05
-    icon = 1
+    icon = 13
 }
 
 embalse = {
-    immigrant_attract = 0.02
-    population_growth = 0.0005
+    immigrant_attract = 0.05
     local_RGO_output = 0.20
+    prestige = 0.01
     icon = 13
 }
 
 mar_chiquita_tourism = {
-    immigrant_attract = 0.2
-    population_growth = 0.0005
+    immigrant_attract = 0.3
+    farm_rgo_eff = 0.10
     icon = 11
 }
 
@@ -4723,3 +4747,60 @@ radio_argentina = {
     suppression_points_modifier = -0.05
     core_pop_consciousness_modifier = 0.01
 }
+
+opera_house = {
+    rich_income_modifier = 0.10
+    local_artisan_output = 0.10
+    immigrant_attract = 0.05
+    icon = 5
+}
+
+magellan_strait_owner = {
+    tariff_efficiency_modifier = 0.15
+    import_cost = -0.20
+    prestige = 0.01
+    icon = 7
+}
+
+magellan_strait = {
+    immigrant_attract = 0.05
+    local_repair = 0.10
+    local_ship_build = -0.10
+    icon = 11
+}
+
+rhode_island_voting = {
+	local_ruling_party_support = -2
+	pop_consciousness_modifier = 0.05
+	pop_militancy_modifier = 0.05
+    icon = 18
+}
+
+godeken_colonies = {
+    farm_rgo_size = 0.50
+    population_growth = 0.0025
+    icon = 19
+}
+
+mazorca = {
+    core_pop_militancy_modifier = -0.01
+    administrative_efficiency_modifier = 0.005
+    suppression_points_modifier = 0.5
+    icon = 16
+}
+andean_military_reforms = {
+    supply_consumption = -0.03
+    army_tech_research_bonus = 0.05
+	navy_tech_research_bonus = 0.05
+    land_organisation = 0.02
+    org_regain = 0.03
+    icon = 15
+}
+
+kisilevs_reforms = {
+    tax_efficiency = 0.05
+    administrative_efficiency_modifier = 0.2
+    global_pop_consciousness_modifier = 0.05
+    icon = 5
+}
+

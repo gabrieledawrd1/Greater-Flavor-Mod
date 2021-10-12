@@ -138,6 +138,7 @@ country_event = {
     id = 99103
     title = "EVTNAME99103"
     desc = "EVTDESC99103"
+	picture = "eng_rus_convention_afg"
     major = yes
     is_triggered_only = yes
 
@@ -361,6 +362,7 @@ country_event = {
     desc = "herat_expedition_desc"
     picture = "siege_of_herat"
     fire_only_once = yes
+	major = yes
 
     trigger = {
         tag = PER
@@ -506,7 +508,7 @@ country_event = {
     
 
     option = {
-        name = "EVTOPTA99200" #UK backs Herat
+        name = "Dispatch a punitive expedition. §RGain 2 infamy§W" #UK backs Herat
         set_global_flag = anglo_persian_war
         badboy = 2
         casus_belli = { target = PER type = cut_down_to_size months = 12 }
@@ -625,6 +627,7 @@ country_event = {
     desc = "EVTDESC99204"
     picture = "treaty"
     is_triggered_only = yes
+	major = yes
 
     option = {
         name = "EVTOPTA99204"
@@ -736,6 +739,7 @@ country_event = {
     id = 99104
     title = "EVTNAME99104"
     desc = "EVTDESC99104"
+	picture = "eng_rus_convention_per"
     major = yes
     is_triggered_only = yes
 
@@ -909,7 +913,7 @@ country_event = {
     id = 123689
 	picture = "kalat_collapse"
     title = "The collapse of Kalat"
-    desc = "Our puppet ruler, Shah Nawaz Khan has been deposed by Mir Nasir Khan II, throwing the country into turmoil."
+    desc = "Our puppet ruler, Shah Nawaz Khan has been deposed by Mir Nasir Khan II, throwing the country into turmoil. The already tenuously controlled vassal rulers in Las Bela, Makran and Dozdab have broken free while Kharan has gained much autonomy."
 	fire_only_once = yes
 
     trigger = {
@@ -924,6 +928,13 @@ country_event = {
     option = {
         name = "We will be back."
 		release_vassal = KAL
+		any_owned = { 
+			limit = { 
+				is_core = KAL 
+				owner = { ai = yes } 
+			} 
+			secede_province = KAL 
+		}
 		prestige = -5
 		KAL = { country_event = 123690 }
     }
@@ -933,6 +944,7 @@ country_event = {
 	picture = "kalat_collapse"
     title = "The collapse of Kalat"
     desc = "The British puppet Shah Nawaz Khan has been deposed by Mir Nasir Khan II, but the country has fallen into turmoil."
+	major = yes
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1446,7 +1458,7 @@ country_event = {
     mean_time_to_happen = { months = 3 }
 
     option = {
-		name = "Crush them!"
+		name = "Crush them! §RGain 1 infamy§W"
 		badboy = 1
 	    relation = { who = CRL value = -400 }
         diplomatic_influence = { who = CRL value = -400 }
@@ -1620,15 +1632,16 @@ country_event = {
 		}
 		is_vassal = no
 		KHR = { exists = no }
+		OR = {
+			SHD = { exists = no }
+			SHD = { vassal_of = THIS }
+		}
     }
 
     mean_time_to_happen = { months = 3 }
 
     option = {
 		name = "Crush them!"
-	    relation = { who = SHD value = -400 }
-        SHD = { leave_alliance = THIS }
-		release_vassal = SHD
 		set_country_flag = inherit_zaf
         any_country = {
 			limit = {
@@ -1636,6 +1649,9 @@ country_event = {
 				exists = yes
 				vassal_of = PER
 			}
+			relation = { who = THIS value = -400 }
+			leave_alliance = THIS
+			THIS = { release_vassal = SHD }
 			war = {
 				target = PER
 				attacker_goal = { casus_belli = humiliate_no_infamy }
@@ -1783,7 +1799,7 @@ country_event = {
 		ai_chance = { factor = 0 }
     }
 	option = {
-		name = "Afghanistan must be secured!"
+		name = "Afghanistan must be secured! §RGain 2 infamy§W"
 		prestige = 10
 		badboy = 2
         leave_alliance = AFG
@@ -2107,7 +2123,7 @@ country_event = {
     mean_time_to_happen = { months = 1 }
 
     option = {
-		name = "Bring Persia back under our heel!"
+		name = "Bring Persia back under our heel! §RGain 6 infamy§W"
 		prestige = 5
 		badboy = 6
 		casus_belli = { target = PER type = make_puppet months = 40 }
@@ -2335,7 +2351,7 @@ country_event = {
 	is_triggered_only = yes
 
     option = {
-		name = "Splendid! Seize Herat!"
+		name = "Splendid! Seize Herat! §RGain 2.5 infamy§W"
 		AFG = { country_event = 123734 }
 		badboy = 2.5
 		relation = { who = AFG value = -400 }
@@ -2343,7 +2359,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "Leave Herat to the Afghans."
+		name = "Leave Herat to the Afghans. §GLose 1 infamy§W"
 		AFG = { country_event = 123735 }
 		relation = { who = AFG value = 150 }
 		diplomatic_influence = { who = AFG value = 150 }
@@ -2390,7 +2406,7 @@ country_event = {
 	is_triggered_only = yes
 
     option = {
-		name = "Perfidious Albion! Seize Herat!"
+		name = "Perfidious Albion! Seize Herat! §RGain 2.5 infamy§W"
 		leave_alliance = AFG
 		leave_alliance = ENG
 		relation = { who = ENG value = -400 }
@@ -2409,7 +2425,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 	option = {
-		name = "Leave Herat to the Afghans."
+		name = "Leave Herat to the Afghans. §GLose 1 infamy§W"
 		AFG = { country_event = 123736 }
 		relation = { who = AFG value = 150 }
 		diplomatic_influence = { who = AFG value = 150 }
@@ -2439,7 +2455,7 @@ country_event = {
 	is_triggered_only = yes
 
     option = {
-		name = "We will make no step back!"
+		name = "We will make no step back! §RGain 2.5 infamy§W"
 		leave_alliance = AFG
 		leave_alliance = ENG
 		relation = { who = ENG value = -400 }
@@ -2458,7 +2474,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "This isn't worth a war."
+		name = "This isn't worth a war. §GLose 1 infamy§W"
 		relation = { who = AFG value = 150 }
 		relation = { who = ENG value = 150 }
 		diplomatic_influence = { who = AFG value = 150 }

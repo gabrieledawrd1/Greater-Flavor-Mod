@@ -423,7 +423,7 @@ country_event = {
     id = 202004
     title = "EVTNAME202004"
     desc = "EVTDESC202004"
-    picture = "italian_war_of_independence_lost"
+    picture = "aus_sar_victory" #unique pic
     major = yes
 
     is_triggered_only = yes
@@ -458,7 +458,7 @@ country_event = {
     }
 
     option = {
-        name = "We are not satisfied, we shall punish the Italian aggressors."
+        name = "We are not satisfied, we shall punish the Italian aggressors. §RGain 5 infamy§W"
                 prestige = -10
                 badboy = 5
         any_pop = {
@@ -650,7 +650,7 @@ country_event = {
         }
     }
     option = {
-        name = "Dissolve the Kingdom of Lombardy-Venetia."
+        name = "Dissolve the Kingdom of Lombardy-Venetia. §GLose 10 infamy§W"
         badboy = -10
         prestige = -50
         release_vassal = LOM
@@ -737,7 +737,7 @@ country_event = {
     id = 202006
     title = "EVTNAME202006"
     desc = "EVTDESC202006"
-    picture = "repubblica_san_marco"
+    picture = "repubblica_san_marco" #unique pic
     major = yes
     news = yes
     news_title = "EVTNAME202006"
@@ -781,6 +781,7 @@ country_event = {
             limit = {
                 is_core = VEN
                 NOT = { is_core = AUS }
+				NOT = { is_core = DLM }
             }
             secede_province = VEN
         }
@@ -799,11 +800,11 @@ country_event = {
                     casus_belli = status_quo
                 }
             }
-        define_general = {
+			define_general = {
                 name = "Julius von Haynau"
                 personality = coolminded
                 background = war_college
-        }
+			}
         ai_chance = {
             factor = 99
         }
@@ -1040,7 +1041,7 @@ country_event = {
     }
 
     option = {
-        name = "Mazzini is our guest. No one has the right to blackmail our proud country!"
+        name = "Mazzini is our guest. No one has the right to blackmail our proud country! §RGain 1 infamy§W"
         set_global_flag = mazzini_in_exile
         prestige = 5
         badboy = 1
@@ -1072,7 +1073,7 @@ country_event = {
         }
     }
     option = {
-        name = "Very well, arrest and extradite him."
+        name = "Very well, arrest and extradite him. §GLose 1 infamy§W"
         set_global_flag = mazzini_arrested
         prestige = -2
         badboy = -1
@@ -1177,8 +1178,7 @@ country_event = {
     id = 202012
     title = "EVTNAME202012"
     desc = "EVTDESC202012"
-    picture = "Mazzini"
-        major = yes
+    picture = "mazzini_arrest" #unique pic
 
     fire_only_once = yes
 
@@ -1423,7 +1423,7 @@ country_event = {
     }
 
     option = {
-        name = "The Swiss Guard will solve that problem!"
+        name = "The Swiss Guard will solve that problem! §RGain 3 infamy§W"
         prestige = -20
         badboy = 3
         any_pop = {
@@ -1580,8 +1580,8 @@ country_event = {
     id = 202019
     title = "EVTNAME202019"
     desc = "EVTDESC202019"
-    picture = "italian_war_of_independence_won"
-        major = yes
+    picture = "italian_war_of_independence_won" #unique pic
+    major = yes
 
     fire_only_once = yes
     trigger = {
@@ -1703,7 +1703,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Milan is austrian territory."
+        name = "Milan is Austrian territory. §GLose 1 infamy§W"
         prestige = 5
         badboy = -1
         FROM = { country_event = 202023 }
@@ -1711,7 +1711,7 @@ country_event = {
     }
 
     option = {
-        name = "Milan is sardinian territory."
+        name = "Milan is sardinian territory. §RGain 5 infamy§W"
         prestige = -5
         badboy = 5
         relation = { who = FROM value = -200  }
@@ -1754,7 +1754,7 @@ country_event = {
     id = 202023
     title = "EVTNAME202004"
     desc = "EVTDESC202004"
-    picture = "italian_war_of_independence_lost"
+    picture = "aus_sar_victory" #unique pic
     major = yes
 
     is_triggered_only = yes
@@ -2590,7 +2590,7 @@ country_event = {
     }
 
     option = {
-        name = "I don't know this Fosco-guy, but he will stay here."
+        name = "I don't know this Fosco-guy, but he will stay here. §RGain 1 infamy§W"
         set_global_flag = Foscolo_denied
         prestige = 2
         badboy = 1
@@ -3549,7 +3549,7 @@ country_event = {
 
     title = "EVTNAME202065"
     desc = "EVTDESC202065"
-    picture = "Restaurazione"
+    picture = "Restaurazione" #unique
 
     option = {
         name = "EVTOPT202065"

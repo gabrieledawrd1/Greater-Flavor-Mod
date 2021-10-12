@@ -102,6 +102,7 @@ country_event = {
     id = 36971
     title = "EVTNAME36971"
     desc = "EVTDESC36971"
+	major = yes
     picture = "suez_canal_built"
 
     fire_only_once = yes
@@ -311,27 +312,22 @@ country_event = {
                 tag = EGY
                 civilized = no
                 has_global_flag = berlin_conference
+				NOT = { vassal_of = THIS }
             }
             add_casus_belli = {
                 target = THIS
-                type = establish_protectorate_BC_casus_belli
+                type = establish_protectorate_casus_belli_no_infamy
                 months = 60
             }
         }
-        random_country = {
-            limit = {
-                tag = EGY
-                OR = {
-                    civilized = yes
-                    NOT = { has_global_flag = berlin_conference }
-                }
-            }
-            add_casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 60
-            }
-        }
+        random_owned = {
+			limit = {
+				owner = { EGY = { vassal_of = THIS } }
+			}
+			owner = {
+				inherit = EGY
+			}
+		}
         ai_chance = {
             factor = 90
             modifier = {
@@ -425,6 +421,7 @@ country_event = {
 country_event = {
     id = 36977
     title = "EVTNAME36977"
+	major = yes
     desc = "EVTDESC36977"
     picture = "kiel_canal_finished"
 
@@ -557,6 +554,7 @@ country_event = {
     id = 36979
     title = "EVTNAME36979"
     desc = "EVTDESC36979"
+	major = yes
     picture = "panama_canal_finished"
 
     fire_only_once = yes

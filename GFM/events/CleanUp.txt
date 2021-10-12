@@ -84,7 +84,7 @@ country_event = {
         civilized = yes
 		OR = {
 			government = democracy
-			has_country_flag = Government_Democracy	
+			has_country_flag = Government_Democracy
 		}
         ruling_party_ideology = reactionary
         average_militancy = 3
@@ -166,7 +166,7 @@ country_event = {
     news_desc_long = "EVTDESC60020_NEWS_LONG"
     news_desc_medium = "EVTDESC60020_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60020_NEWS_SHORT"
-    picture = "election"
+    picture = "radical_takeover"
 
     trigger = {
         is_vassal = no
@@ -232,7 +232,7 @@ country_event = {
     news_desc_long = "EVTDESC60030_NEWS_LONG"
     news_desc_medium = "EVTDESC60030_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60030_NEWS_SHORT"
-    picture = "Fascist"
+    picture = "fascist_group"
 
     trigger = {
         is_vassal = no
@@ -292,7 +292,7 @@ country_event = {
     news_desc_long = "EVTDESC60050_NEWS_LONG"
     news_desc_medium = "EVTDESC60050_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60050_NEWS_SHORT"
-    picture = "senate_debate"
+    picture = "the_thaw"
 
     trigger = {
         OR = {
@@ -460,7 +460,7 @@ country_event = {
     trigger = {
 		OR = {
 			government = democracy
-			has_country_flag = Government_Democracy	
+			has_country_flag = Government_Democracy
 		}
         vote_franschise = none_voting
         OR = {
@@ -500,12 +500,12 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "communist_crowd"
+    picture = "bourgeouis_takeover"
 
     trigger = {
 		OR = {
 			government = democracy
-			has_country_flag = Government_Democracy	
+			has_country_flag = Government_Democracy
 		}
         vote_franschise = none_voting
         ruling_party_ideology = radical
@@ -540,12 +540,12 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "communist_crowd"
+    picture = "commie_kick"
 
     trigger = {
 		OR = {
 			government = democracy
-			has_country_flag = Government_Democracy	
+			has_country_flag = Government_Democracy
 		}
         vote_franschise = none_voting
         ruling_party_ideology = communist
@@ -580,12 +580,12 @@ country_event = {
     news_desc_long = "EVTDESC60080_NEWS_LONG"
     news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
     news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "communist_crowd"
+    picture = "military_coup_major"
 
     trigger = {
 		OR = {
 			government = democracy
-			has_country_flag = Government_Democracy	
+			has_country_flag = Government_Democracy
 		}
         vote_franschise = none_voting
         ruling_party_ideology = fascist
@@ -2831,7 +2831,7 @@ country_event = {
     id = 6016815
     title = "EVTNAME6016815"
     desc = "EVTDESC6016815"
-    picture = "abraham_speech"
+    picture = "splendid_isolation_evt"
     major = yes
 
     trigger = {
@@ -2867,13 +2867,12 @@ country_event = {
     id = 60168151
     title = "EVTNAME60168151"
     desc = "EVTDESC60168151"
-    picture = "abraham_speech"
+    picture = "gettysburg_address"
     major = yes
     fire_only_once = yes
 
     trigger = {
         ai = no
-        NOT = { has_global_flag = credits }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -2884,7 +2883,84 @@ country_event = {
 
     option = {
         name = "EVT60168151OPTA"
-        set_global_flag = credits
+		country_event = 60168153
+    }
+}
+#Speed
+country_event = {
+    id = 60168153
+    title = "Speed"
+    desc = "SPEEDEXPLAINED"
+    picture = "speedy_train"
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Hm, I'll consider it."
+		prestige = 0.1
+    }
+}
+#France explained
+country_event = {
+    id = 60168150
+    title = "How to get Napoleon III"
+    desc = "NAPOLEONEXPLAINED"
+    picture = "napoleon_explanation"
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        ai = no
+		tag = FRA
+		NOT = { year = 1837 }
+        NOT = { has_global_flag = france_explained }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    immediate = {
+        set_global_flag = france_explained
+	}
+	
+	option = {
+        name = "Thank you for explaining!"
+		treasury = 1
+    }
+}
+#MP or SP
+country_event = {
+    id = 60168152
+    title = "Are you playing SP or MP?"
+    desc = "Please select whether you are playing a singleplayer or multiplayer game. This will impact multiplayer balancing and remove some exploitable singleplayer features."
+    picture = "abraham_speech"
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        ai = no
+        NOT = { has_country_flag = mp_or_sp }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    immediate = {
+        set_country_flag = mp_or_sp
+    }
+
+	option = {
+        name = "I'm a sigma, I play alone."
+		treasury = 1
+    }
+
+    option = {
+        name = "I have friends to game with."
+        set_global_flag = you_are_playing_mp
+		clr_country_flag = show_the_build_decisions
+		any_country = {
+			clr_country_flag = show_the_build_decisions
+			add_country_modifier = { name = lower_infamy duration = -1 }
+		}
+		add_country_modifier = { name = lower_infamy duration = -1 }
     }
 }
 #End war with non-existent nations
@@ -3096,9 +3172,9 @@ country_event = {
 	title = "EVTNAME6016855"
 	desc = "EVTDESC6016855"
 	picture = "danishgovernment"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVT6016855OPTA"
 		FROM = { country_event = 6016856 }
@@ -3111,10 +3187,10 @@ country_event = {
 	title = "EVTNAME6016856"
 	desc = "EVTDESC6016856"
 	picture = "danishgovernment"
-	
+
 	allow_multiple_instances = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVT6016856OPTA"
 		random_owned = {
@@ -3122,7 +3198,7 @@ country_event = {
 			owner = { set_country_flag = picked_steal_target FROM = { set_country_flag = transfer_to_new_overlord } }
 		}
 	}
-	
+
 	option = {
 		name = "EVT6016856OPTB"
 	}
@@ -3136,7 +3212,7 @@ country_event = {
     picture = "danishgovernment"
 
     is_triggered_only = yes
-	
+
     option = {
         name = "EVT6016823OPTA"
         FROM = {
@@ -3186,9 +3262,9 @@ country_event = {
 	title = "EVTNAME6016826"
 	desc = "EVTDESC6016826"
 	picture = "danishgovernment"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVT6016826OPTA"
 		any_country = {
@@ -3209,17 +3285,17 @@ country_event = {
 	title = "Modifier Cleanup"
 	desc = "If you're seeing this, something went wrong. This event should fix that!"
 	picture = "danishgovernment"
-	
+
 	trigger = {
 		ai = no
 		war = no
 		has_country_modifier = disable_conquest_cb
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "Nice!"
 		remove_country_modifier = disable_conquest_cb
@@ -3230,7 +3306,7 @@ country_event = {
 	id = 4778774
 	title = "State Cleanup"
 	desc = "You are uncivilized, you shouldn't have colonies!"
-	
+
 	trigger = {
 		civilized = no
 		any_state = { is_colonial = yes }
@@ -3241,11 +3317,11 @@ country_event = {
 		NOT = { has_country_flag = ghost_country }
 		NOT = { UTI = { exists = yes } }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "CLICK THIS"
 		any_state = {
@@ -3277,18 +3353,18 @@ country_event = {
 	id = 4778775
 	title = "Slave State Cleanup"
 	desc = "You outlawed slavery, you shouldn't have slave states!"
-	
+
 	trigger = {
 		any_state = { is_slave = yes }
 		slavery = no_slavery
 		NOT = { tag = TMT }
 		NOT = { has_country_flag = ghost_country }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "CLICK THIS"
 		any_state = {
@@ -3304,7 +3380,7 @@ country_event = {
 	id = 4778776
 	title = "Non-Existent Overlord"
 	desc = "You aren't a vassal anymore, let's fix that!"
-	
+
 	trigger = {
 		NOT = { tag = TMT }
 		NOT = { has_country_flag = ghost_country }
@@ -3313,11 +3389,11 @@ country_event = {
 			exists = no
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "CLICK THIS"
 		release_vassal = THIS
@@ -3328,9 +3404,9 @@ country_event = {
 	id = 4778821
 	title = "AI: French Rev Sanity Check"
 	desc = "This decision for AI. If you got this...something is wrong."
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Sanity Check"
 		FROM = { clr_country_flag = french_rev_sanity_check }
@@ -3342,9 +3418,9 @@ country_event = {
 	title = "Change of Government"
 	desc = "This event exists to update missing flags for your country. As a player, this should be rarely seen."
 	picture = "danishgovernment"
-	
+
 	allow_multiple_instances = no
-	
+
 	trigger = {
 		NOT = { tag = TMT }
 		NOT = { has_country_flag = ghost_country }
@@ -3403,9 +3479,9 @@ country_event = {
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = { months = 1 }
-	
+
 	option = {
 		name = "Okay."
 		clr_country_flag = theocratic_government
@@ -3514,9 +3590,9 @@ country_event = {
 	title = "Government Flag Cleanup"
 	desc = "This event fires in case an incorrect government flag exists on your country, and exists to prevent bugs. If this event fires for you, please report it!"
 	picture = "danishgovernment"
-	
+
 	allow_multiple_instances = no
-	
+
 	trigger = {
 		NOT = { tag = TMT }
 		NOT = { has_country_flag = ghost_country }
@@ -3559,14 +3635,14 @@ country_event = {
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = { days = 1 }
-	
+
 	immediate = {
 		clr_country_flag = Government_Democracy
 		clr_country_flag = Government_Dominion
 	}
-	
+
 	option = {
 		name = "Good thing the modders added this event..."
 		random_owned = {

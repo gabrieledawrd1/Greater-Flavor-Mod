@@ -44,7 +44,7 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                badboy = 17
+                badboy = 0.6
             }
         }
     }
@@ -75,7 +75,7 @@ country_event = {
             }
             modifier = {
                 factor = 10
-                badboy = 17
+                badboy = 0.6
             }
         }
     }
@@ -593,6 +593,7 @@ country_event = {
     title = "EVTNAME89000"
     desc = "EVTDESC89000"
     is_triggered_only = yes
+	picture = "treaty_of_erzurum"
     major = yes
 
     option = {
@@ -702,6 +703,8 @@ country_event = {
 	
 	option = {
 		name = "This bodes ill."
+		1132 = { add_core = THIS }
+		3352 = { add_core = THIS }
 	}
 }
 
@@ -710,7 +713,7 @@ country_event = {
     title = "The Dawud Pasha Demand" #The Dawud Pasha Demand
     desc = "With Ali Pasha having defeated us resulting in the loss of the Levant, the Iraqi people are rallying around Dawud Pasha in an attempt to gain freedom."
     news = no
-    picture = "arab_revolt"
+    picture = "dawud_pasha"
     major = yes
 
     trigger = {

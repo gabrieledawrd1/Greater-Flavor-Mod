@@ -1,4 +1,1497 @@
 country_event = {
+    id = 123915
+    title = "The Last of the Great Auks"
+    desc = "POORBIRD"
+    picture = "last_of_the_great_awks"
+    major = yes
+    fire_only_once = yes
+        
+    trigger = {
+        owns = 252
+        year = 1844
+    }
+    
+    mean_time_to_happen = { months = 1 }
+
+    option = {
+        name = "Does anyone really care about a bird that much?"
+        years_of_research = -0.05
+        any_pop = {
+            consciousness = 0.1
+        }
+    }
+}
+country_event = {
+	id = 123914
+	title = "The Serb Uprising"
+	desc = "SERBUPRISING"
+	picture = "serb_uprising"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_country_flag = serbian_revolt
+		VOJ = { exists = no }
+		SRR = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = "Crush them!"
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 2538
+					province_id = 792
+					province_id = 791
+					province_id = 793
+				}
+			}
+			secede_province = SRR
+		}
+		any_country = {
+			limit = {
+				tag = SRR
+				exists = yes
+			}
+			HUN = {
+				war = {
+					target = SRR
+					attacker_goal = { casus_belli = conquest_any }
+					defender_goal = { casus_belli = status_quo }
+				}
+			}
+			AUS = {
+				war = {
+					target = SRR
+					attacker_goal = { casus_belli = conquest_any }
+					defender_goal = { casus_belli = status_quo }
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 123913
+	title = "The May Assembly"
+	desc = "MAYASSEMBLY"
+	picture = "may_assembly"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_country_flag = serbs_are_mad
+		VOJ = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "Let them go."
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 653
+					province_id = 652
+					province_id = 792
+					province_id = 791
+					province_id = 3330
+					province_id = 3331
+					province_id = 2538
+					province_id = 793
+					province_id = 3283
+					province_id = 779
+				}
+			}
+			secede_province = VOJ
+			add_core = VOJ
+		}
+		relation = { who = VOJ value = 400 }
+		relation = { who = SER value = 400 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "We will make no concessions to the Serbs."
+		set_country_flag = serbian_revolt
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 123912
+	title = "The Burning of the Canadian Parliament"
+	desc = "MONTREALPARLIAMENTBURN"
+	major = yes
+	picture = "montreal_parliament_fire"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Shocking!"
+		any_pop = {
+			limit = { location = { is_core = CAN } }
+			scaled_militancy = { factor = 5 ideology = conservative }
+		}
+	}
+}
+country_event = {
+	id = 123911
+	title = "The General Strike of 1893"
+	desc = "BELGIANSTRIKETWO"
+	picture = "belgian_strike_two"
+	fire_only_once = yes
+	trigger = {
+		tag = BEL
+		trade_unions = all_trade_unions
+		NOT = { vote_franschise = universal_voting }
+		year = 1893
+		NOT = { year = 1894 }
+		is_greater_power = no
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = radical
+			ruling_party_ideology = communist
+			ruling_party_ideology = reactionary
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "We won't bend to the will of the riff-raff!"
+		any_pop = {
+			scaled_consciousness = { factor = 3 issue = universal_voting }
+			scaled_militancy = { factor = 1 issue = universal_voting }
+			scaled_militancy = { factor = 5 ideology = socialist }
+		}
+	}
+	option = {
+		name = "Grant them universal suffrage..."
+		vote_franschise = universal_voting
+		any_pop = {
+			militancy = -3
+		}
+	}
+}
+country_event = {
+	id = 123910
+	title = "The Social Revolt of 1886"
+	desc = "BELGIANSTRIKEONE"
+	picture = "belgian_strike_one"
+	fire_only_once = yes
+	trigger = {
+		tag = BEL
+		trade_unions = all_trade_unions
+		NOT = { vote_franschise = universal_voting }
+		year = 1886
+		NOT = { year = 1887 }
+		is_greater_power = no
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = radical
+			ruling_party_ideology = communist
+			ruling_party_ideology = reactionary
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "What a mess!"
+		any_pop = {
+			scaled_consciousness = { factor = 3 issue = universal_voting }
+			scaled_militancy = { factor = 1 issue = universal_voting }
+			scaled_militancy = { factor = 5 ideology = socialist }
+		}
+	}
+}
+country_event = {
+	id = 123909
+	title = "The Gavazzi Riots"
+	desc = "GAVAZZIRIOT"
+	picture = "gavazzi_riot"
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			exists = ITA
+		}
+		NOT = {
+			exists = ITS
+		}
+		tag = ENG
+		year = 1853
+		NOT = { year = 1854 }
+		owns = 58
+		owns = 65
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = radical
+			ruling_party_ideology = communist
+			ruling_party_ideology = reactionary
+		}
+		CAN = { all_core = { owned_by = THIS } }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "How horrible!"
+		any_pop = {
+			limit = {
+				location = {
+					OR = {
+						province_id = 58
+						province_id = 65
+					}
+				}
+			}
+			militancy = 4
+			consciousness = 7
+		}
+		any_pop = {
+			limit = {
+				location = {
+					is_core = CAN
+				}
+				has_pop_religion = catholic
+			}
+			militancy = 3
+			consciousness = 5
+		}
+	}
+}
+country_event = {
+	id = 123908
+	title = "Bloody Sunday"
+	desc = "BLOODYSUNDAY"
+	picture = "bloody_sunday"
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		year = 1887
+		NOT = { year = 1888 }
+		owns = 300
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = radical
+			ruling_party_ideology = communist
+			ruling_party_ideology = reactionary
+		}
+		IRE = { all_core = { owned_by = THIS } }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Tragic!"
+		any_pop = {
+			limit = {
+				location = {
+					province_id = 300
+				}
+			}
+			militancy = 4
+			consciousness = 7
+		}
+	}
+}
+country_event = {
+	id = 123907
+	title = "The Astor Place Riot"
+	desc = "ASTORPLACE"
+	picture = "astor_place"
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		year = 1849
+		NOT = { year = 1850 }
+		owns = 232
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "What chaos!"
+		any_pop = {
+			limit = {
+				location = {
+					province_id = 232
+				}
+			}
+			militancy = 4
+			consciousness = 7
+		}
+	}
+}
+country_event = {
+	id = 123906
+	title = "The Crusenstolpeskravallerna"
+	desc = "CRUSENSTOLP"
+	picture = "crusenstolpeskravallerna"
+	fire_only_once = yes
+	trigger = {
+		tag = SWE
+		year = 1838
+		NOT = { year = 1839 }
+		owns = 322
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Keep him locked up!"
+		any_pop = {
+			limit = {
+				location = {
+					province_id = 322
+				}
+			}
+			militancy = 4
+			consciousness = 7
+		}
+	}
+}
+country_event = {
+	id = 123905
+	title = "The Orsini Assassination"
+	desc = "ORSINIATTACK"
+	major = yes
+	picture = "orsini_attack"
+	fire_only_once = yes
+	trigger = {
+		tag = FRA
+		year = 1858
+		NOT = { year = 1859 }
+		has_country_flag = 2nd_empire
+		has_country_modifier = louis_napoleon_iii
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Sacré bleu!"
+		any_pop = {
+			consciousness = 1
+		}
+	}
+}
+country_event = {
+	id = 123904
+	title = "Coal mine exhausted"
+	desc = "After extensive use, one of our coal mining regions has been depleted of coal. Perhaps one day when technology makes deeper deposits accessible, the mines will return to life. Until then, they shall slumber in wait."
+	picture = "coal_exhausted"
+	fire_only_once = yes
+	trigger = {
+		owns = 406
+		year = 1846
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "What a shame."
+		406 = { trade_goods = grain }
+	}
+}
+country_event = {
+	id = 123903
+	title = "The Potato Riots"
+	desc = "POTATOANGER"
+	picture = "potato_riot"
+	fire_only_once = yes
+	trigger = {
+		tag = RUS
+		has_country_flag = potatoes_forced
+	}
+
+	mean_time_to_happen = {
+		months = 7
+	}
+
+	option = {
+		name = "Double down on potatoes and crush the rioters."
+		any_pop = {
+			limit = {
+				location = {
+					OR = {
+						province_id = 1028
+						province_id = 1030
+						province_id = 1034
+						province_id = 1035
+						province_id = 1037
+						province_id = 1038
+						province_id = 1021
+						province_id = 1025
+					}
+				}
+			}
+			militancy = 8
+			consciousness = 10
+			reduce_pop = 0.95
+		}
+	}
+	option = {
+		name = "End the potato system, no blood shall be spilled."
+		any_pop = {
+			limit = {
+				location = {
+					OR = {
+						province_id = 1028
+						province_id = 1030
+						province_id = 1034
+						province_id = 1035
+						province_id = 1037
+						province_id = 1038
+						province_id = 1021
+						province_id = 1025
+					}
+				}
+			}
+			militancy = -3
+			consciousness = -5
+		}
+		any_owned = {
+			limit = {
+				has_province_modifier = potatoes_introduced
+			}
+			remove_province_modifier = potatoes_introduced
+		}
+	}
+}
+country_event = {
+	id = 123902
+	title = "The Slovak Uprising"
+	desc = "Slovaks, resentful of magyar rule, have begun gathering in regiments and ambushing Hungarian armies. Their independence has been proclaimed, making this a fight for Slovakia being put on the map."
+	picture = "slovak_revolt"
+	fire_only_once = yes
+	trigger = {
+		tag = AUS
+		has_global_flag = slovak_uprising
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "Put them down!"
+		war = {
+			target = SLV
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+	}
+}
+country_event = {
+	id = 123901
+	title = "The Slovak Uprising"
+	desc = "Slovaks have begun gathering in regiments and ambushing our armies stationed in the North. Slovakia has officially proclaimed itself independent, we are now officially at war."
+	picture = "slovak_revolt"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_global_flag = slovak_uprising
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "Put them down!"
+		war = {
+			target = SLV
+			attacker_goal = { casus_belli = conquest_any }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+	}
+}
+country_event = {
+	id = 123900
+	title = "The Slovak National Congress"
+	desc = "A Slovak secessionist get-together has declared itself the national congress of Slovakia and begun the first steps of an uprising against our rule. This is our last chance to meet their demands."
+	picture = "slovak_congress"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_country_flag = slovakia_will_revolt
+		SLV = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	option = {
+		name = "Crush them!"
+		set_global_flag = slovak_uprising
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 633
+					province_id = 634
+					province_id = 636
+					province_id = 638
+					province_id = 3318
+				}
+			}
+			secede_province = SLV
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Slovakia will be free!"
+		set_global_flag = slovak_uprising
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 633
+					province_id = 634
+					province_id = 636
+					province_id = 638
+					province_id = 3318
+				}
+			}
+			secede_province = SLV
+		}
+		change_tag_no_core_switch = SLV
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "We are left with no choice. §GLose 5 infamy§W"
+		release_vassal = SLV
+		create_alliance = SLV
+		create_vassal = SLV
+		war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+		add_accepted_culture = slovak
+		political_reform = bankruptcy
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = universal_voting
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 123899
+	title = "The Demands of the Slovak Nation"
+	desc = "SLOVAKMANIFESTO"
+	picture = "slovak_manifesto"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_country_flag = slovak_troubles
+		SLV = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "Never!"
+		set_country_flag = slovakia_will_revolt
+		any_pop = {
+			limit = { has_pop_culture = slovak }
+			militancy = 3
+			consciousness = 5
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "We cannot afford to begin infighting. §GLose 5 infamy§W"
+		release_vassal = SLV
+		create_alliance = SLV
+		create_vassal = SLV
+		war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+		add_accepted_culture = slovak
+		political_reform = bankruptcy
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = universal_voting
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 123898
+	title = "The Janko Král Incident"
+	desc = "KRALINCIDENT"
+	picture = "kral_incident"
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		has_country_flag = slovaks_are_mad
+		SLV = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "This is quite worrisome."
+		set_country_flag = slovak_troubles
+		any_pop = {
+			limit = {
+				has_pop_culture = slovak
+			}
+			consciousness = 5
+			militancy = 3
+		}
+	}
+}
+country_event = {
+	id = 123897
+	title = "The War of the Canudos"
+	desc = "Tensions have boiled over in the village of Canudos, Bahia, whose monarchist sympathies have escalated into open revolt against the republic."
+	picture = "canudos_rebels"
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRZ
+		government = democracy
+		owns = 2437
+		year = 1895
+		NOT = { year = 1899 }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Flatten the village to make an example."
+		any_owned = {
+			limit = {
+				province_id = 2437
+			}
+			any_pop = {
+				militancy = 10
+				consciousness = 10
+				reduce_pop = 0.5
+			}
+		}
+	}
+	option = {
+		name = "De-escalate the situation and wait them out."
+		any_pop = {
+			consciousness = 1
+		}
+	}
+}
+country_event = {
+    id = 123896
+    title = "The Rebecca Riots"
+    desc = "REBRIOT"
+    picture = "rebecca_riots"
+    fire_only_once = yes
+    trigger = {
+		tag = ENG
+		year = 1839
+		NOT = { year = 1843 }
+		owns = 275
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+	option = {
+		name = "How silly."
+		any_pop = {
+			limit = {
+				has_pop_culture = welsh
+				location = { OR = { province_id = 275 province_id = 274 } }
+			}
+			militancy = 3
+			consciousness = 5
+		}
+    }
+}
+country_event = {
+    id = 123895
+    title = "The Gwalior Campaign"
+    desc = "GWALIORCAMPAIGN"
+	major = yes
+    picture = "gwalior_campaign"
+    fire_only_once = yes
+    trigger = {
+		tag = ENG
+		has_global_flag = graveyard_of_empires
+		exists = GWA
+		GWA = { vassal_of = THIS }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+	option = {
+		name = "Put them down."
+		casus_belli = { target = GWA type = make_puppet months = 36 }
+		release_vassal = GWA
+		war = {
+			target = GWA
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+			call_ally = yes
+		}
+    }
+}
+country_event = {
+    id = 123894
+    title = "Max and Moritz: A Story of Seven Boyish Pranks"
+    desc = "MAXNMORITZ"
+    picture = "max_n_moritz"
+    fire_only_once = yes
+    trigger = {
+		OR = {
+			tag = PRU
+			tag = NGF
+			tag = GER
+		}
+		year = 1865
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+	option = {
+		name = "Und die Moral von der Geschicht..."
+		any_pop = {
+			consciousness = -0.1
+		}
+    }
+}
+country_event = {
+    id = 123893
+    title = "Louis-Napoleon attempts a coup"
+    desc = "NAPOLEONEPICFAIL"
+	major = yes
+    picture = "napoleon_coup_fail"
+    fire_only_once = yes
+    trigger = {
+		tag = FRA
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		owns = 409
+		year = 1836
+		month = 10
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+	option = {
+		name = "What a clown..."
+		any_pop = {
+			consciousness = 0.1
+		}
+    }
+}
+country_event = {
+    id = 123892
+    title = "The Palatine Uprising"
+    desc = "Amid the general chaos of the revolutions of 1848, the Palatinate has risen up against our rule. Unlike the other Freischar, they are demanding to be given independence from Bavaria."
+    picture = "palatine_uprising"
+    fire_only_once = yes
+    trigger = {
+		tag = BAV
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		owns = 571
+		year = 1848
+    }
+
+    mean_time_to_happen = {
+        days = 5
+    }
+
+	option = {
+		name = "Suppress this now!"
+		571 = { secede_province = PAL }
+		create_alliance = PRU
+        war = {
+            target = PAL
+            attacker_goal = { casus_belli = conquest_any }
+			call_ally = yes
+        }
+    }
+}
+country_event = {
+    id = 123891
+    title = "The March Revolution"
+    desc = "MARCHREVLOC"
+    picture = "march_revolution"
+    fire_only_once = yes
+	major = yes
+    trigger = {
+		tag = DEN
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		has_country_flag = christian_deceased
+		year = 1848
+    }
+
+    mean_time_to_happen = {
+        days = 5
+    }
+
+	option = {
+		name = "What chaos!"
+		set_country_flag = danish_chaos
+    }
+}
+country_event = {
+    id = 123890
+    title = "The Death of Christian VIII"
+    desc = "CHRISTIANDEATH"
+    picture = "christian_eight_death"
+    fire_only_once = yes
+	major = yes
+    trigger = {
+		tag = DEN
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		year = 1848
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+	option = {
+		name = "He will be missed."
+		any_pop = {
+			limit = {
+				has_pop_culture = danish
+			}
+			consciousness = 1
+        }
+		set_country_flag = christian_deceased
+    }
+}
+province_event = {
+    id = 123875
+    title = "The Juliana Republic"
+    desc = "The forces of the Riograndense Republic, led by Italian revolutionary Giuseppe Garibaldi, with help from the local population, conquered parts of Santa Catarina, establishing a new republic."
+    trigger = {
+		owner = { tag = BRZ war_with = RGS }
+		controlled_by = RGS
+		is_core = SAC
+    }
+
+    mean_time_to_happen = {
+        days = 3
+    }
+
+	option = {
+		name = "Crush them!"
+		secede_province = SAC
+		any_country = {
+			limit = {
+				tag = BRZ
+				NOT = { war_with = SAC }
+			}
+			war = {
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = status_quo }
+			}
+		}
+		SAC = {
+			government = democracy
+			set_country_flag = Government_Democracy
+			capital = 2459
+		}
+    }
+}
+country_event = {
+    id = 123874
+    title = "The Battle of Liberty Place"
+    desc = "A coup d'etat was attempted in New Orleans by the five thouseand White League members to overthrow the republican governor, citing electoral fraud. At least 32 people died and the revolt was crushed."
+    picture = "liberty_place"
+    fire_only_once = yes
+    trigger = {
+		OR = {
+			tag = USA
+			tag = US2
+		}
+		OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
+		owns = 139
+		139 = { has_province_modifier = reconstruction }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+		name = "Worrying."
+		any_pop = {
+			limit = {
+				location = {
+					province_id = 139
+				}
+			}
+			reduce_pop = 0.99
+			consciousness = 3
+			militancy = 5
+        }
+    }
+}
+country_event = {
+    id = 123873
+    title = "The Dorr Rebellion"
+    desc = "The Rhode Island Constitution, a colonial charter from 1663, required 134$ of property to vote. Thomas Wilson Dorr lead a revolt to free the disenfranchised and topple the governor, leading to the constitution being rewritten." 
+    picture = "dorr_rebellion"
+    fire_only_once = yes
+    trigger = {
+		year = 1841
+		OR = {
+			tag = USA
+			tag = US2
+		}
+		OR = {
+			government = democracy
+			has_country_flag = Government_Democracy
+		}
+		owns = 242
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+		name = "A victory for democracy!"
+        242 = { remove_province_modifier = rhode_island_voting }
+		any_pop = {
+			limit = {
+				location = {
+					province_id = 242
+				}
+			}
+			consciousness = -3
+			militancy = -5
+        }
+    }
+}
+country_event = {
+    id = 123866
+    title = "The May Coup"
+    desc = "King Alexander Obrenovic, Queen Draga, prime minister Dimitrije Cincar-Markovic and Army Minister Milovan Pavlovic were killed last night by army conspirators. The national assembly has voted Peter Karadordevic to be the new king."
+    picture = "may_overthrow"
+    fire_only_once = yes
+    trigger = {
+		year = 1903
+		tag = SER
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+        name = "Out with Obrenovic, in with Karadordevic."
+        AUS = { diplomatic_influence = { who = SER value = -300 } }
+		relation = { who = AUS value = -150 }
+		RUS = { diplomatic_influence = { who = SER value = 300 } }
+		relation = { who = RUS value = 150 }
+    }
+}
+country_event = {
+    id = 123865
+    title = "The Great Thessaloniki Fire"
+    desc = "It began at roughly 15:00, by accident at a small house of refugees in the Mevlane district when a spark from the kitchen fire fell in a pile of straw and ignited it. It destroyed one third of the city, leaving 74.000 homeless."
+    picture = "salonika_fire"
+    fire_only_once = yes
+    trigger = {
+		year = 1917
+		owns = 805
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+        name = "EVTOPTA530001"
+        treasury = -35000
+        805 = { infrastructure = 1 }
+        random_list = {
+            50 = {
+                805 = {
+                    add_province_modifier = {
+                        name = rebuilding_city
+                        duration = 90
+                    }
+                }
+            }
+            50 = {
+                805 = {
+                    add_province_modifier = {
+                        name = rebuilding_city
+                        duration = 60
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0
+                NOT = { money = 50100 }
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB530001"
+        treasury = -20000
+        random_list = {
+            33 = { 805 = {
+                add_province_modifier = {
+                    name = rebuilding_city
+                    duration = 60
+                        }
+                    }
+                }
+            33 = { 805 = {
+                add_province_modifier = {
+                    name = rebuilding_city
+                    duration = 45
+                        }
+                    }
+                }
+            33 = { 805 = {
+                add_province_modifier = {
+                    name = rebuilding_city
+                    duration = 30
+                        }
+                    }
+                }
+            }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                NOT = { money = 20100 }
+                }
+            }
+        }
+
+    option = {
+        name = "EVTOPTC530001"
+        prestige = -15
+        805 = {
+            any_pop = {
+                consciousness = 1.5
+            }
+        }
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 100
+                NOT = { money = 10000 }
+            }
+        }
+    }
+}
+country_event = {
+    id = 123864
+    title = "The Venezuelan ultimatum"
+    desc = "With yankee support, Venezuela has decided to send an ultimatum demanding Essequibo. If we do not accept, it will surely lead to war."
+    picture = "usa_support_vnz"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We aren't ready for war. §GLose 3 infamy§W"
+		badboy = -3
+		prestige = -15
+		2242 = { secede_province = VNZ }
+		2243 = { secede_province = VNZ }
+		ai_chance = { factor = 20 }
+    }
+    option = {
+        name = "If it's a war they want..."
+		war = {
+			target = VNZ
+			attacker_goal = { casus_belli = humiliate_no_infamy }
+			defender_goal = { casus_belli = acquire_core_state state_province_id = 2243 }
+		}
+		ai_chance = { factor = 80 }
+    }
+}
+country_event = {
+    id = 123863
+    title = "The USA has our back"
+    desc = "The yankees have sent us a blank cheque guaranteeing support against Britain in any eventuality. The choice is ours, how do we proceed?"
+    picture = "usa_support_vnz"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We will press our demands."
+		create_alliance = USA
+		ENG = { country_event = 123864 }
+		ai_chance = { factor = 1 }
+    }
+    option = {
+        name = "We aren't ready for war."
+		2243 = { remove_core = VNZ }
+		2242 = { remove_core = VNZ }
+		prestige = -15
+		ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 123862
+    title = "The arbitration concludes"
+    desc = "The Americans have decided to cede Essequibo to Venezuela in its entirety, a clear betrayal of our mutual 'understanding' as great powers."
+    picture = "usa_support_vnz"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We won't forget this. §GLose 3 infamy§W"
+		relation = { who = USA value = -120 }
+		badboy = -3
+		prestige = -15
+		2242 = { secede_province = VNZ }
+		2243 = { secede_province = VNZ }
+		ai_chance = { factor = 20 }
+    }
+    option = {
+        name = "This is unacceptable!"
+		FROM = { country_event = 123859 }
+		ai_chance = { factor = 80 }
+    }
+}
+country_event = {
+    id = 123861
+    title = "The arbitration concludes"
+    desc = "As expected, the yankees have decided to award us Essequibo aside from minor border strip, forcing Venezuela to rescind its claims."
+    picture = "uk_agrees"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Huzzah!"
+		2243 = { remove_core = VNZ }
+		2242 = { remove_core = VNZ }
+    }
+}
+country_event = {
+    id = 123860
+    title = "Britain agrees"
+    desc = "The British have decided to enter a neutral arbitration, however they may not accept giving up land and expect us to back them."
+    picture = "uk_agrees"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Let Britain keep Essequibo."
+		diplomatic_influence = { who = VNZ value = -300 }
+		relation = { who = VNZ value = -150 }
+		end_alliance = VNZ
+		relation = { who = ENG value = 50 }
+		set_country_flag = great_rapproachment
+		ENG = { country_event = 123861 }
+		ai_chance = { factor = 80 }
+    }
+	option = {
+		name = "Give Essequibo to Venezuela."
+		ENG = { country_event = 123862 }
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123859
+    title = "Britain refuses"
+    desc = "The British have decided to decline participating in an arbitration to settle the Essequibo dispute. Should we continue backing Venezuela and risk war?"
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We tried."
+		prestige = -35
+		diplomatic_influence = { who = VNZ value = -300 }
+		relation = { who = VNZ value = -150 }
+		end_alliance = VNZ
+		VNZ = { country_event = 123855 }
+		ai_chance = { factor = 80 }
+    }
+	option = {
+		name = "We will back Venezuela by force if necessary!"
+		VNZ = { country_event = 123863 }
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123858
+    title = "The Essequibo Arbitration"
+    desc = "With the border conflict over Essequibo with Venezuela escalating continually, the United States of America have proposed an arbitration to settle it once and for all."
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Let's give it a shot."
+		FROM = { country_event = 123860 }
+		ai_chance = { factor = 80 }
+    }
+	option = {
+		name = "No way!"
+		FROM = { country_event = 123859 }
+		relation = { who = FROM value = -120 }
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123857
+    title = "Britain refuses"
+    desc = "Without US backing, Britain has not been intimidated into giving up Essequibo, in fact they threatened to burn Caracas to the ground if we dare invade."
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "We must back down."
+		2243 = { remove_core = VNZ }
+		2242 = { remove_core = VNZ }
+		prestige = -15
+		ai_chance = { factor = 80 }
+    }
+	option = {
+		name = "To war it is!"
+		war = {
+			target = ENG
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 2243 }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123856
+    title = "Venezuela demands Essequibo"
+    desc = "Despite not having US backing, Venezuela has sent us an ultimatum to cede Essequibo to them or face an invasion."
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Give it to them. §GLose 3 infamy§W"
+		badboy = -3
+		prestige = -15
+		2243 = { secede_province = VNZ }
+		2242 = { secede_province = VNZ }
+		ai_chance = { factor = 0 }
+    }
+	option = {
+		name = "No way, Jose."
+		VNZ = { country_event = 123857 }
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123855
+    title = "The USA abandons us"
+    desc = "The yankees have decided that Essequibo is not worth endangering their relations with the UK."
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "There's nothing we can do."
+		2243 = { remove_core = VNZ }
+		2242 = { remove_core = VNZ }
+		prestige = -15
+		ai_chance = { factor = 80 }
+    }
+	option = {
+		name = "Essequibo will be ours, with or without yankee support!"
+		ENG = { country_event = 123856 }
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123854
+    title = "The Venezuela Crisis"
+    desc = "For decades, Venezuela has claimed the West bank of the Essequibo river as their eastern border while it was under the control of the UK. In recent years, the conflict has escalated considerably."
+    picture = "vnz_map"
+	fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = "Let's propose an arbitration."
+		ENG = { country_event = 123858 }
+		ai_chance = { factor = 80 }
+    }
+	option = {
+        name = "We are not harming relations with Britain over this."
+		prestige = -35
+		diplomatic_influence = { who = VNZ value = -300 }
+		relation = { who = VNZ value = -150 }
+		end_alliance = VNZ
+		VNZ = { country_event = 123855 }
+		ai_chance = { factor = 20 }
+    }
+}
+country_event = {
+    id = 123853
+    title = "The New York Times"
+    desc = "Founded by journalist and politician Henry Jarvis Raymond and former banker George Jones, the Times is published by Raymond, Jones & Company. Only costing a penny per issue, it truly is a common man's paper."
+    picture = "mayerling"
+	fire_only_once = yes
+	trigger = {
+		year = 1851
+		press_rights = free_press
+		OR = {
+			tag = US2
+			tag = USA
+		}
+		exists = yes
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+    option = {
+        name = "All the news that's fit to print!"
+		any_pop = {
+			consciousness = -0.5
+		}
+		prestige = 5
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+    id = 123852
+    title = "The Mayerling Incident"
+    desc = "Rudolf, Crown Prince of Austria and Mary Freiin von Vetsera were found dead in an imperial hunting lodge in Mayerling in an apparent murder-suicide pact, passing succession to Karl Ludwig, Franz Joseph's brother and his son Franz Ferdinand."
+    picture = "mayerling"
+	fire_only_once = yes
+	trigger = {
+		year = 1889
+		OR = {
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		OR = {
+			tag = AUS
+			tag = AUB
+			tag = DNB
+			tag = KUK
+		}
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+    option = {
+        name = "Truly tragic!"
+		any_pop = {
+			consciousness = 1
+		}
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
     id = 123851
     title = "The Samoan Compromise"
     desc = "Germany has agreed to the proposed settlement to the Samoan Crisis, ceding the Solomon and Santa Cruz Islands to the United Kingdom while receiving the two main islands of Samoa and leaving the rest to the United States."
@@ -184,7 +1677,7 @@ country_event = {
     picture = "samoan_storm_two"
 	fire_only_once = yes
 	trigger = {
-       owns = 1898
+       owns = 2454
 	   tag = ENG
 	   has_country_flag = samoa_claimant
 	   OR = {
@@ -504,6 +1997,7 @@ country_event = {
        owns = 1871
 	   tag = MAJ
 	   NOT = { exists = HBY }
+	   year = 1878
     }
     mean_time_to_happen = {
         months = 2
@@ -721,7 +2215,8 @@ country_event = {
 country_event = {
     id = 123829
     title = "The Hecker uprising"
-    desc = "Revolutionary leaders Friedrich Hecker, Gustav von Struve, and others tried to overthrow the monarchy and begin a republic. Setting out to march on Freiburg from Konstanz, he didn't get enough recruits and was crushed."
+    desc = "HECKER"
+	major = yes
     picture = "kandern"
 	fire_only_once = yes
 	trigger = {
@@ -785,7 +2280,7 @@ country_event = {
     option = {
         name = "They can take it from our cold, dead hands!"
         prestige = 5
-		country_event = 123817
+		FROM = { country_event = 123817 }
 		relation = { who = FROM value = -50 }
 		ai_chance = { factor = 85 }
     }
@@ -798,7 +2293,6 @@ country_event = {
 			prestige = 10
 			country_event = 123816
 		}
-		set_variable = { which = china_destablization value = 1 }
 		relation = { who = FROM value = 50 }
 		ai_chance = { factor = 15 }
     }
@@ -857,6 +2351,11 @@ country_event = {
     option = {
         name = "We agree!"
         FROM = { country_event = 123814 }
+		629 = { remove_core = THIS }
+		627 = { remove_core = THIS }
+		628 = { remove_core = THIS }
+		632 = { remove_core = THIS }
+		688 = { remove_core = THIS }
 		ai_chance = { factor = 100 }
     }
 	option = {
@@ -1463,7 +2962,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
     option = {
-        name = "Forgive them."
+        name = "Forgive them. §GLose 0.5 infamy§W"
 		prestige = -20
 		badboy = -0.5
 		ai_chance = { factor = 0 }
@@ -1593,6 +3092,7 @@ country_event = {
     title = "The death of Bismarck"
     desc = "Otto von Bismarck passed away today at the age of 83. Distraught after the death of his wife in 1894, he was forced to use a wheelchair in his last years and suffered from gangrene which ultimately killed him."
 	picture = "bismarckdeath"
+	major = yes
 	fire_only_once = yes
 	trigger = {
 		OR = {
@@ -1624,8 +3124,9 @@ country_event = {
 country_event = {
     id = 123774
     title = "The assassination of Umberto I"
-    desc = "During a visit to Monza, our monarch was shot three times by anarchist Gaetano Bresci, dying instantly. He ruled for 32 years, dying at age 56."
+    desc = "During a visit to Monza, king Umberto I was shot three times by anarchist Gaetano Bresci, dying instantly. He ruled for 32 years, dying at age 56."
 	picture = "umbertodeath"
+	major = yes
 	fire_only_once = yes
 	trigger = {
 		OR = {
@@ -1656,8 +3157,9 @@ country_event = {
 country_event = {
     id = 123773
     title = "The death of Vittorio Emanuele II"
-    desc = "After hunting in the marshy areas of Lazio, our monarch has passed away due to malarial fevers at the age of 57 and after ruling for 28 years."
+    desc = "After hunting in the marshy areas of Lazio, his excellency Vittorio Emanuele II has passed away due to malarial fevers at the age of 57 and after ruling for 28 years."
 	picture = "vethreedeath"
+	major = yes
 	fire_only_once = yes
 	trigger = {
 		OR = {
@@ -1721,6 +3223,7 @@ country_event = {
     title = "The Assassination of Abraham Lincoln"
     desc = "ABEISDEAD"
 	picture = "abedeath"
+	major = yes
 	fire_only_once = yes
 	trigger = {
        OR = {
@@ -1910,6 +3413,7 @@ country_event = {
     title = "The assassination of President Carnot"
     desc = "After delivering a speech at a public banquet in Lyon in which he appeared to imply that he would not seek re-election, he was stabbed by an Italian anarchist named Sante Geronimo Caserio. Carnot died shortly after midnight on 25 June."
 	picture = "carnotdeath"
+	major = yes
 	fire_only_once = yes
 	trigger = {
        tag = FRA
@@ -2008,6 +3512,7 @@ country_event = {
     id = 123760
     title = "The Death of Frederick III"
     desc = "FTHREEDEATHLOC"
+	major = yes
 	picture = "frederickthreedeath"
 	trigger = {
        OR = {
@@ -2039,6 +3544,7 @@ country_event = {
 country_event = {
     id = 123759
     title = "The Death of William I"
+	major = yes
     desc = "WILONEDEATHLOC"
 	picture = "wilhelmonedeath"
 	trigger = {
@@ -2071,6 +3577,7 @@ country_event = {
     id = 123758
     title = "The Death of Frederick William IV"
     desc = "FWFOURDEATHLOC"
+	major = yes
 	picture = "fwfourdeath"
 	trigger = {
 	   OR = {
@@ -2102,6 +3609,7 @@ country_event = {
 country_event = {
     id = 123757
     title = "The Death of Frederick William III"
+	major = yes
     desc = "FWTHREEDEATHLOC"
 	picture = "fwthreedeath"
 	trigger = {
@@ -2681,7 +4189,6 @@ country_event = {
     title = "The White Fleet Returns"
     desc = "After its glorious circumnavigation, the White Fleet has returned to its home port in Hampton Roads, Virginia."
     picture = "white_fleet_visit" 
-    fire_only_once = yes
 	is_triggered_only = yes
     option = {
 		name = "Welcome home!"
@@ -2693,7 +4200,6 @@ country_event = {
     title = "A visit of the White Fleet"
     desc = "The USA have sent a grand, white-painted fleet on a world tour as a show of force. They are now arriving in one of our harbors."
     picture = "white_fleet_visit" 
-    fire_only_once = yes
 	is_triggered_only = yes
     option = {
 		name = "Dazzling!"
@@ -2817,7 +4323,7 @@ country_event = {
     mean_time_to_happen = { months = 3 }
 
     option = {
-		name = "Crush them!"
+		name = "Crush them! §RGain 0.5 infamy§W"
 		badboy = 0.5
 	    relation = { who = HNZ value = -400 }
         diplomatic_influence = { who = HNZ value = -400 }
@@ -3196,232 +4702,6 @@ country_event = {
     }
 }
 country_event = {
-    id = 123457
-    title = "Intervention in Xinjiang"
-    desc = "The Dungans have revolted in Xinjiang to try to gain independance while the Qing are preoccupied with the Taiping rebellion. We can use this opportunity to annex the lands in western Xinjiang under the pretext of protecting Russian interests there."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    trigger = {
-        XIN = {
-            is_vassal = no
-        }
-        tag = RUS
-        NOT = { has_global_flag = sw_set }
-    }
-
-    mean_time_to_happen = {
-        days = 5
-    }
-    option = {
-        name = "Occupy Kuldscha and western Xinjiang immediately!"
-        1595 = {
-            secede_province = RUS
-        }
-        1188 = {
-            secede_province = RUS
-        }
-        1186 = {
-            secede_province = RUS
-        }
-        1190 = {
-            secede_province = RUS
-        }
-        badboy = 2
-        prestige = 10
-    }
-}
-country_event = {
-    id = 123458
-    title = "The Chinese demands"
-    desc = "During the Dungan revolt we took land in western Xinjiang from China under the pretext of protecting Russian interests. Now that peace has been restored the Chinese are demanding we return the land."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-        name = "Give them back all the land. We can't afford going to war right now."
-        1595 = {
-            secede_province = FROM
-        }
-        1188 = {
-            secede_province = FROM
-        }
-        1186 = {
-            secede_province = FROM
-        }
-        1190 = {
-            secede_province = FROM
-        }
-        badboy = -2
-        prestige = -10
-        FROM = { country_event = 123459 }
-        ai_chance = { factor = 0 }
-    }
-    option = {
-        name = "Give them back Kuldscha but keep the rest of the land."
-        1595 = { secede_province = FROM }
-        badboy = -1
-        prestige = -5
-        FROM = { country_event = 123460 }
-        ai_chance = { factor = 95 }
-    }
-    option = {
-        name = "We aren't giving up any land to the Chinese and we're ready for war if necessary!"
-        prestige = 10
-        FROM = { country_event = 123461 }
-        ai_chance = { factor = 5 }
-    }
-}
-country_event = {
-    id = 123459
-    title = "The Russians accept"
-    desc = "Russia has given back our rightful land as per our demand."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-        name = "How nice of them!"
-        prestige = 10
-    }
-
-}
-
-country_event = {
-    id = 123460
-    title = "The Russians have tried a compromise"
-    desc = "After we demanded to receive our rightful lands in Xinjiang back, Russia decided to return Kultscha but not the rest of the area."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-        name = "That is acceptable."
-        FROM = { country_event = 123462 }
-        ai_chance = { factor = 95 }
-    }
-    option = {
-        name = "We deserve all of Xinjiang! Invade the Russians now!"
-        FROM = { country_event = 123463 }
-        prestige = 10
-        THIS = { add_core = 1595 }
-        THIS = { add_core = 1188 }
-        THIS = { add_core = 1186 }
-        THIS = { add_core = 1190 }
-        THIS = { add_core = 1596 }
-        THIS = { add_core = 1600 }
-        THIS = { add_core = 3322 }
-        THIS = { add_core = 2607 }
-        THIS = { add_core = 1598 }
-        THIS = { add_core = 1597 }
-        THIS = { add_core = 1594 }
-        THIS = { add_core = 3321 }
-        war = {
-            target = RUS
-            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1185 }
-        }
-        ai_chance = { factor = 5 }
-    }
-}
-country_event = {
-    id = 123461
-    title = "The Russians refuse"
-    desc = "After we demanded to receive our rightful lands in Xinjiang back, Russia refused to return the entirety of the area."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-
-    option = {
-        name = "We must back down. The Russians are vastly superior to us militarily."
-        FROM = { country_event = 123462 }
-        prestige = -10
-        ai_chance = { factor = 5 }
-    }
-    option = {
-        name = "We deserve all of Xinjiang! Invade the Russians now!"
-        THIS = { country_event = 123463 }
-        THIS = { add_core = 1595 }
-        THIS = { add_core = 1188 }
-        THIS = { add_core = 1186 }
-        THIS = { add_core = 1190 }
-        THIS = { add_core = 1596 }
-        THIS = { add_core = 1600 }
-        THIS = { add_core = 3322 }
-        THIS = { add_core = 2607 }
-        THIS = { add_core = 1598 }
-        THIS = { add_core = 1597 }
-        THIS = { add_core = 1594 }
-        THIS = { add_core = 3321 }
-        war = {
-            target = RUS
-            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1600 }
-        }
-        ai_chance = { factor = 95 }
-    }
-}
-country_event = {
-    id = 123462
-    title = "The Chinese begrudgingly accept our decision"
-    desc = "After China demanded to have our lands in Xinjiang returned to them, and we refused to give them the entirety of it, they decided not to escalate the conflict and instead leave the borders as they are."
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-
-    option = {
-        name = "Good."
-    }
-}
-country_event = {
-    id = 123463
-    title = "The Chinese are invading!"
-    desc = "After we refused to return our occupation zone in Xinjiang back the Chinese, they decided to attempt to conquer it back. This means war!"
-    picture = "Kuldscha_district"
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-        name = "Blast!"
-    }
-}
-country_event = {
-    id = 123464
-    title = "We have regained Xinjiang!"
-	desc = "Add a desc, abe!!!"
-    fire_only_once = yes
-    picture = "Kuldscha_district"
-    mean_time_to_happen = { days = 5 }
-    trigger = {
-        OR = {
-            tag = TPG
-            tag = QNG
-        }
-        owns = 1595
-        owns = 1188
-        owns = 1186
-        owns = 1190
-        owns = 1596
-        owns = 1600
-        owns = 3322
-        owns = 2607
-        owns = 1598
-        owns = 1597
-        owns = 1594
-        owns = 3321
-    }
-    option = {
-        name = "Great!"
-        1595 = { remove_core = THIS }
-        1188 = { remove_core = THIS }
-        1186 = { remove_core = THIS }
-        1190 = { remove_core = THIS }
-        1596 = { remove_core = THIS }
-        1600 = { remove_core = THIS }
-        3322 = { remove_core = THIS }
-        2607 = { remove_core = THIS }
-        1598 = { remove_core = THIS }
-        1597 = { remove_core = THIS }
-        1594 = { remove_core = THIS }
-        3321 = { remove_core = THIS }
-        prestige = 30
-    }
-}
-country_event = {
     id = 123465
     title = "Bulgarian Revolts in Berkovitsa, Pirot and Belogradchik"
     desc = "The Bulgarians are revolting against our rule."
@@ -3715,6 +4995,7 @@ country_event = {
         owns = 852
         owns = 849
         owns = 803
+		war_with = EGY
         year = 1839
         NOT = { year = 1842 }
         NOT = { exists = ALB }
@@ -4021,9 +5302,10 @@ country_event = {
         2569 = {
             secede_province = BOS
         }
+		casus_belli = { target = BOS type = conquest months = 36 }
         war = {
             target = BOS
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 788 }
         }
     }
@@ -4042,9 +5324,10 @@ country_event = {
         2569 = {
             secede_province = BOS
         }
+        casus_belli = { target = BOS type = conquest months = 36 }
         war = {
             target = BOS
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 788 }
         }
         change_tag_no_core_switch = BOS
@@ -4056,12 +5339,19 @@ country_event = {
     desc = "The Macedonians are revolting against our rule."
     fire_only_once = yes
     picture = "MCD_revolt"
-    mean_time_to_happen = { months = 5 }
+    mean_time_to_happen = { days = 1 }
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
+		OR = {
+			war_with = RUS
+			truce_with = RUS
+			war_with = FRA
+			truce_with = FRA
+			war_with = BOR
+			truce_with = BOR
+		}
         tag = TUR
         owns = 822
-        owns = 805
         owns = 3342
         owns = 821
         owns = 820
@@ -4086,9 +5376,6 @@ country_event = {
             militancy = 1
         }
         822 = {
-            secede_province = MCD
-        }
-        805 = {
             secede_province = MCD
         }
         3342 = {
@@ -4124,9 +5411,6 @@ country_event = {
             militancy = 1
         }
         822 = {
-            secede_province = MCD
-        }
-        805 = {
             secede_province = MCD
         }
         3342 = {
@@ -4331,7 +5615,7 @@ country_event = {
 }
 country_event = {
     id = 123478
-    title = "Sasun revolt"
+    title = "The Sasun Rebellion"
     desc = "The Armenians are revolting against our rule."
     fire_only_once = yes
     picture = "ARM_revolt_2"
@@ -4341,6 +5625,7 @@ country_event = {
         tag = TUR
         owns = 891
         owns = 887
+		owns = 3537
         year = 1894
         NOT = { exists = ARM }
         NOT = { year = 1897 }
@@ -4357,9 +5642,13 @@ country_event = {
         891 = {
             secede_province = ARM
         }
+		3537 = {
+			secede_province = ARM
+		}
+		casus_belli = { target = ARM type = conquest months = 36 }
         war = {
             target = ARM
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 887 }
         }
     }
@@ -4375,9 +5664,13 @@ country_event = {
         891 = {
             secede_province = ARM
         }
+		3537 = {
+			secede_province = ARM
+		}
+        casus_belli = { target = ARM type = conquest months = 36 }
         war = {
             target = ARM
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = acquire_core_state state_province_id = 887 }
         }
         change_tag_no_core_switch = ARM
@@ -4385,7 +5678,7 @@ country_event = {
 }
 country_event = {
     id = 123479
-    title = "Zeitun revolt"
+    title = "The Zeitun Rebellion"
     desc = "The Cilicians are revolting against our rule."
     fire_only_once = yes
     picture = "ARM_revolt_2"
@@ -4501,7 +5794,7 @@ country_event = {
 }
 country_event = {
     id = 123481
-    title = "Epirus revolt"
+    title = "The Epirus revolt"
     desc = "The Greeks are revolting against our rule."
     fire_only_once = yes
     picture = "Epirus_revolt"
@@ -4744,7 +6037,7 @@ country_event = {
     desc = "The Greeks are revolting against our rule."
     fire_only_once = yes
     picture = "MCD_revolt_GRE"
-    mean_time_to_happen = { months = 5 }
+    mean_time_to_happen = { days = 1 }
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
@@ -5215,55 +6508,6 @@ country_event = {
     }
 }
 country_event = {
-    id = 123491
-    title = "The Ten Year's War"
-    desc = "On October 10, 1868 sugar mill owner Carlos Manuel de Céspedes and his followers proclaimed independence, beginning the conflict in an attempt to achieve independence from Spain."
-    fire_only_once = yes
-    picture = "CUB_revolt_1"
-    mean_time_to_happen = { months = 5 }
-    trigger = {
-        tag = SPA
-        owns = 2212
-        owns = 44
-        owns = 2211
-        owns = 2210
-        owns = 2209
-        year = 1868
-        NOT = { exists = CUB }
-    }
-    option = {
-        name = "Crush them!"
-        2211 = {
-            secede_province = CUB
-        }
-        2210 = {
-            secede_province = CUB
-        }
-        2212 = {
-            remove_core = SPA
-        }
-        44 = {
-            remove_core = SPA
-        }
-        2211 = {
-            remove_core = SPA
-        }
-        2210  = {
-            remove_core = SPA
-        }
-        2209 = {
-            remove_core = SPA
-        }
-		casus_belli = { target = CUB type = conquest_low months = 36 }
-        war = {
-            target = CUB
-            attacker_goal = { casus_belli = conquest_low }
-            defender_goal = { casus_belli = acquire_core_state state_province_id = 2209 }
-        }
-    }
-
-}
-country_event = {
     id = 123492
     title = "The Cuban War of Independence"
     desc = "In an all-out revolt against Spanish rule the Cubans have begun their largest revolt yet, dubbed the Cuban war of independence."
@@ -5433,7 +6677,7 @@ country_event = {
         }
     }
     option = {
-        name = "Forgive them."
+        name = "Forgive them. §GLose 1 infamy§W"
         prestige = -5
         badboy = -1
     }
@@ -5462,7 +6706,7 @@ country_event = {
         }
     }
     option = {
-        name = "Forgive them."
+        name = "Forgive them. §GLose 1 infamy§W"
         prestige = -5
         badboy = -1
     }
@@ -5491,7 +6735,7 @@ country_event = {
         }
     }
     option = {
-        name = "Forgive them."
+        name = "Forgive them. §GLose 1 infamy§W"
         prestige = -5
         badboy = -1
     }
@@ -6047,16 +7291,12 @@ country_event = {
         owns = 92
         owns = 114
         owns = 3467
-        owns = 3475
-        owns = 3476
         year = 1858
     }
     option = {
         name = "Good riddance."
         92 = { remove_province_modifier = indian_lands }
         3467 = { remove_province_modifier = indian_lands }
-        3475 = { remove_province_modifier = indian_lands }
-        3476 = { remove_province_modifier = indian_lands }
         114 = { remove_province_modifier = indian_lands }
             any_pop = {
                 limit = {
@@ -6815,7 +8055,8 @@ country_event = {
 country_event = {
     id = 123532
     title = "The White Sea Canal is complete!"
-    desc = "The seemingly endless construction of the White Sea Canal has finally come to a close. It has now opened to shipping."
+    desc = "WSCANALDONE"
+	major = yes
     fire_only_once = yes
     picture = "white_sea_canal_event"
     mean_time_to_happen = { years = 8 }
@@ -6889,7 +8130,7 @@ country_event = {
         }
     }
     option = {
-        name = "Let it go."
+        name = "Let it go. §GLose 1 infamy§W"
         badboy = -1
         prestige = -3
     }
@@ -7073,10 +8314,18 @@ country_event = {
     picture = "channel_bore"
     option = {
         name = "Commence construction immediately!"
-        treasury = -3000000
-		treasury = -3000000
-		treasury = -3000000
-		treasury = -3000000
+        treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
+		treasury = -1000000
     }
 }
 country_event = {
@@ -7129,6 +8378,7 @@ country_event = {
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
+		is_greater_power = no
         owns = 849
         owns = 850
         owns = 3420
@@ -7218,6 +8468,7 @@ country_event = {
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
+		is_greater_power = no
         owns = 850
         owns = 3420
         owns = 849
@@ -7279,6 +8530,7 @@ country_event = {
     trigger = {
 		NOT = { has_global_flag = cleaning_up_ghosts }
         tag = TUR
+		is_greater_power = no
         owns = 849
         year = 1912
         NOT = { year = 1915 }
@@ -7364,9 +8616,10 @@ country_event = {
             secede_province = CHR
 			add_core = CHR
         }
+		casus_belli = { target = CHR type = conquest months = 36 }
         war = {
             target = CHR
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = conquest_any }
         }
 		CHR = { ruling_party_ideology = liberal }
@@ -7385,10 +8638,11 @@ country_event = {
             secede_province = CHR
 			add_core = CHR
         }
+		casus_belli = { target = CHR type = conquest months = 36 }
         war = {
             target = CHR
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
+            defender_goal = { casus_belli = civil_war }
         }
         change_tag_no_core_switch = CHR
 		CHR = { ruling_party_ideology = liberal }
@@ -7436,8 +8690,8 @@ country_event = {
         }
         war = {
             target = CHR
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
         }
 		CHR = { ruling_party_ideology = conservative }
     }
@@ -7460,8 +8714,8 @@ country_event = {
         }
         war = {
             target = CHR
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
         }
         change_tag_no_core_switch = CHR
 		CHR = { ruling_party_ideology = conservative }
@@ -7769,7 +9023,7 @@ country_event = {
         year = 1845
     }
     option = {
-        name = "Advance into Central Asia!"
+        name = "Advance into Central Asia! §RGain 3 infamy§W"
         inherit = BKY
         badboy = 3
         2702 = { secede_province = THIS }
@@ -7790,6 +9044,12 @@ country_event = {
                 defender_goal = { casus_belli = conquest_any }
             }
         }
+		ai_chance = { factor = 1 }
+    }
+	option = {
+        name = "Only integrate the Bukeys."
+        inherit = BKY
+		ai_chance = { factor = 0 }
     }
 }
 country_event = {
@@ -7805,7 +9065,7 @@ country_event = {
         SRI = { government = absolute_monarchy }
         SRI = {
 			war = {
-				target = ENG
+				target = EIC
 				attacker_goal = { casus_belli = acquire_core_state state_province_id = 1321 }
 				defender_goal = { casus_belli = conquest_any }
 				call_ally = yes
@@ -7827,7 +9087,7 @@ country_event = {
         NOT = { year = 1841 }
     }
     option = {
-        name = "Who cares?"
+        name = "Who cares? §GLose 1 infamy§W"
         prestige = -5
         badboy = -1
 		ai_chance = { factor = 20 }
@@ -7901,7 +9161,7 @@ country_event = {
     fire_only_once = yes
     is_triggered_only = yes
     option = {
-        name = "We will make them pay!"
+        name = "We will make them pay! §RGain 1 infamy§W"
 		casus_belli = { target = MEX type = war_reparations months = 12 }
 		badboy = 1
         war = {
@@ -7921,8 +9181,9 @@ country_event = {
 country_event = {
     id = 123550
     title = "The eruption of Santa Maria"
-    desc = "The Santa Maria volcano, located close to Quetzaltenango erupted. The government, ignorung the disaster, focused on the president's propaganda festivities, causing many deaths."
+    desc = "The Santa Maria volcano, located close to Quetzaltenango, erupted. The government, ignoring the disaster, focused instead on the president's propaganda festivities, causing many avoidable deaths."
     fire_only_once = yes
+	major = yes
     picture = "maria_eruption"
     mean_time_to_happen = { months = 10 }
     trigger = {
@@ -7945,6 +9206,7 @@ country_event = {
     id = 123551
     title = "The eruption of Mount Pelee"
     desc = "The long-dormant volcano on the caribbean island of Martinique, Mont Pelee has erupted, killing almost the entire population of the island."
+	major = yes
     fire_only_once = yes
     picture = "pelee_eruption"
     mean_time_to_happen = { months = 10 }
@@ -7969,6 +9231,7 @@ country_event = {
     title = "The eruption of Mount Tarawera"
     desc = "Mount Tarawera, a volcano in New Zealand, just erupted, burying several villages and killing many."
     fire_only_once = yes
+	major = yes
     picture = "tarawera_eruption"
     mean_time_to_happen = { months = 10 }
     trigger = {
@@ -8042,7 +9305,7 @@ country_event = {
 	is_triggered_only = yes
 	
     option = {
-        name = "Only take the land North of the 37th parallel and East of the Rio Grande."
+        name = "Only take the land North of the 37th parallel and East of the Rio Grande. §GLose 7 infamy§W"
         badboy = -7
         set_country_flag = alternate_history_us_mexico_war
             MEX_85_1 = { add_core = THIS } #Northern California
@@ -8086,7 +9349,7 @@ country_event = {
             ai_chance = { factor = 1 }
     }
     option = {
-        name = "We need a buffer South of the Rio Grande."
+        name = "We need a buffer South of the Rio Grande. §RGain 13 infamy§W"
         badboy = 13
         set_country_flag = alternate_history_us_mexico_war
             MEX_85_1 = { add_core = THIS } #Northern California
@@ -8113,7 +9376,7 @@ country_event = {
             ai_chance = { factor = 0 }
     }
     option = {
-        name = "Follow Sam Houston's proposal and take land further South."
+        name = "Follow Sam Houston's proposal and take land further South. §RGain 20 infamy§W"
         badboy =  20
         set_country_flag = alternate_history_us_mexico_war
         MEX_85_1 = { add_core = THIS } #Northern California
@@ -8140,7 +9403,7 @@ country_event = {
             ai_chance = { factor = 0 }
     }
     option = {
-        name = "All of Mexico is ours!"
+        name = "All of Mexico is ours! §RGain 40 infamy§W"
         badboy = 40
         set_country_flag = alternate_history_us_mexico_war
             MEX_85_1 = { add_core = THIS } #Northern California
@@ -8603,7 +9866,7 @@ country_event = {
     fire_only_once = yes
     is_triggered_only = yes
     option = {
-        name = "We don't need more land."
+        name = "We don't need more land. §GLose 10 infamy§W"
         prestige = 50
         badboy = -10
         random_owned = {
@@ -8616,7 +9879,7 @@ country_event = {
 		}
     }
     option = {
-        name = "Take the Oregon territory."
+        name = "Take the Oregon territory. §RGain 5 infamy§W"
         prestige = 30
 		any_owned = {
 			limit = {
@@ -8646,7 +9909,7 @@ country_event = {
 		set_country_flag = has_taken_oregon_or_more
     }
     option = {
-        name = "All land West of the Mississippi is Mexican."
+        name = "All land West of the Mississippi is Mexican. §RGain 15 infamy§W"
         prestige = 40
         random_owned = {
 			limit = { owner = { USA = { exists = yes } } }
@@ -8688,7 +9951,7 @@ country_event = {
 		set_country_flag = has_taken_oregon_or_more
     }
     option = {
-        name = "All lands West of the Mississippi and Florida are Mexican."
+        name = "All lands West of the Mississippi and Florida are Mexican. §RGain 20 infamy§W"
         prestige = 50
 		    any_owned = {
                 limit = {
@@ -8906,7 +10169,7 @@ country_event = {
         }
     }
     option = {
-        name = "The Russian Empire will not bow."
+        name = "The Russian Empire will not bow. §RGain 1 infamy§W"
         prestige = 15
         badboy = 1
         relation = {
@@ -9086,7 +10349,6 @@ country_event = {
             tag = ENG
             tag = FRA
             tag = PER
-            tag = QAJ
             tag = HND
             tag = NET
             tag = SPA
@@ -9184,7 +10446,6 @@ country_event = {
             tag = ENG
             tag = FRA
             tag = PER
-            tag = QAJ
             tag = HND
             tag = NET
             tag = SPA
@@ -9282,7 +10543,6 @@ country_event = {
             tag = ENG
             tag = FRA
             tag = PER
-            tag = QAJ
             tag = HND
             tag = NET
             tag = SPA
@@ -10092,7 +11352,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = ASH } }
+                THIS = { any_owned_province = { is_core = GHN } }
                 has_country_flag = ghana_master
             }
             country_event = 961000
@@ -10382,7 +11642,8 @@ country_event = {
 country_event = {
     id = 123596
     title = "The Ava earthquake"
-    desc = "The quakes began suddenly and without warning. Within minutes the capital was in ruins."
+    desc = "AVAEARTHQUAKE"
+	major = yes
     picture = "ava_quake"
     fire_only_once = yes
     trigger = {
@@ -10405,7 +11666,8 @@ country_event = {
 country_event = {
     id = 123597
     title = "The Avezzano earthquake"
-    desc = "A large earthquake with the epicenter in the village of Avezzano has struck the province of L'Avila."
+    desc = "AVEZZANOQUAKE"
+	major = yes
     picture = "avezzano_quake"
     fire_only_once = yes
     trigger = {
@@ -10424,11 +11686,12 @@ country_event = {
         treasury = -50000
     }
 }
-# Ava Earthquake
+# Haiyuan Earthquake
 country_event = {
     id = 123598
     title = "The Haiyuan earthquake"
-    desc = "In the most devastating earthquake in recorded history, hundreds of thousands have died around the epicenter in Haiyuan."
+    desc = "HAIYUANQUAKE"
+	major = yes
     picture = "haiyuan_quake"
     fire_only_once = yes
     trigger = {
@@ -10966,7 +12229,7 @@ country_event = {
     }
 	
 	option = {
-        name = "Let's not cause conflict over a patch of jungle."
+        name = "Let's not cause conflict over a patch of jungle. §GLose 1 infamy§W"
         prestige = -3
 		badboy = -1
 		BRZ = { country_event = 123620 }
@@ -11143,7 +12406,7 @@ country_event = {
     }
 
     option = {
-        name = "Reject the arbitration!"
+        name = "Reject the arbitration! §RGain 1 infamy§W"
         prestige = 3
 		badboy = 1
 		BRZ = { country_event = 123622 }
@@ -11155,7 +12418,7 @@ country_event = {
     }
 	
 	option = {
-        name = "Agree to the arbitration."
+        name = "Agree to the arbitration. §GLose 1 infamy§W"
         prestige = -3
 		badboy = -1
 		BRZ = { country_event = 123623 }
@@ -11476,15 +12739,6 @@ country_event = {
                 }
             }
         }
-        478 = { add_core = ATR }
-        475 = { add_core = ATR }
-        any_owned = {
-            limit = {
-                is_core = ATR
-            }
-            remove_core = IBR
-            secede_province = ATR
-        }
         any_owned = {
             limit = {
                 is_core = CAT
@@ -11762,7 +13016,7 @@ country_event = {
         random_country = {
             limit = {
                 NOT = { tag = THIS }
-                THIS = { any_owned_province = { is_core = ASH } }
+                THIS = { any_owned_province = { is_core = GHN } }
                 has_country_flag = ghana_master
             }
             country_event = 961000

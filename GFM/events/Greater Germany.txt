@@ -538,6 +538,7 @@ country_event = {
     id = 31515
     title = "EVTNAME31515" #The Greater Germany Question
     desc = "EVTDESC31515"
+	picture = "german_destiny"
     major = yes
 
     trigger = {
@@ -1132,7 +1133,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "EVT31518OPTA"
+        name = "Greater Germany is our destiny. §RGain 20 infamy§W"
         badboy = 20
         set_global_flag = austrian_refused_unification
         diplomatic_influence = { who = FROM value = -400 }
@@ -1256,6 +1257,7 @@ country_event = {
     id = 31519
     title = "EVTNAME31516" #Austria Petitions to Join Germany
     desc = "EVTDESC31519"
+	picture = "annexation"
     major = yes
 
     is_triggered_only = yes
@@ -1440,7 +1442,7 @@ country_event = {
     news_desc_medium = "EVTDESC31521_NEWS_MEDIUM"
     news_desc_short = "EVTDESC31521_NEWS_SHORT"
     major = yes
-    picture = "unite"
+    picture = "austria_is_no_more"
 
     trigger = {
         OR = {

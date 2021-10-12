@@ -4,7 +4,7 @@ country_event = {
 
     title = "EVTNAME99802"
     desc = "EVTDESC99802"
-    picture = "danishgovernment"
+    picture = "acadie_colony"
 
     major = yes
 
@@ -208,7 +208,7 @@ country_event = {
 
     title = "EVTNAME99803"
     desc = "EVTDESC99803"
-    picture = "danishgovernment"
+    picture = "new_zealand_colony"
 
     major = yes
 
@@ -251,7 +251,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT99802OPTA"
+        name = "EVT99803OPTA"
         clr_country_flag = NZF_independence_refused
         prestige = -20
         badboy = -5
@@ -423,7 +423,7 @@ country_event = {
 
     title = "EVTNAME99804"
     desc = "EVTDESC99804"
-    picture = "danishgovernment"
+    picture = "louisiana_colony"
 
     major = yes
 
@@ -480,7 +480,7 @@ country_event = {
     }
 
     option = {
-        name = "EVT99802OPTA"
+        name = "EVT99803OPTA"
         clr_country_flag = ULA_independence_refused
         prestige = -20
         badboy = -5
