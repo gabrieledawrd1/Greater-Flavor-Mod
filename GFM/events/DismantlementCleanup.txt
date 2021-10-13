@@ -1600,7 +1600,7 @@ country_event = {
 			}
 		}
 		
-		UTI = { country_event = { id = 4778746 days = 5 } }
+		CLN = { country_event = { id = 4778746 days = 5 } }
 	}
 }
 

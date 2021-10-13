@@ -232,7 +232,7 @@ dismantle_cb = {
     on_po_accepted = {
 		set_country_flag = Major_Defeated
 		THIS = { set_country_flag = conference_sanity_check }
-		UTI = { country_event = 4778746 }
+		CLN = { country_event = 4778746 }
     }
 }
 
@@ -308,7 +308,7 @@ dismantle_cb_add = {
     on_po_accepted = {
 		set_country_flag = Major_Defeated
 		THIS = { set_country_flag = conference_sanity_check }
-		UTI = { country_event = 4778746 }
+		CLN = { country_event = 4778746 }
     }
 }
 
@@ -378,7 +378,7 @@ dismantle_cb_add_new = {
     on_po_accepted = {
 		set_country_flag = Major_Defeated
 		THIS = { set_country_flag = conference_sanity_check }
-		UTI = { country_event = 4778746 }
+		CLN = { country_event = 4778746 }
     }
 }
 
