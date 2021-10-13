@@ -1,10 +1,34 @@
 political_decisions = {
+	vuk_karadzic_reform = {
+		picture = vuk_karadzic
+		potential = {
+			tag = SER
+			NOT = { has_country_flag = vuk_karadzic_reforms_enacted	}
+		}
+
+		allow = {
+			prestige = 15
+			biologism = 1
+		}
+
+		effect = {
+			set_country_flag = vuk_karadzic_reforms_enacted
+			add_country_modifier = {
+				name = karadzic_reforms
+				duration = 7300
+			}
+			years_of_research = 1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
 	rebellion_losses_bill = {
 		picture = rebellion_losses
         potential = {
             tag = ENG
 			CAN = { all_core = { owned_by = THIS } }
 			NOT = { has_country_flag = no_canadian_act_of_union }
+			NOT = { has_country_flag = parliament_burned_already }
 			NOT = { year = 1850 }
         }
         allow = {
@@ -19,6 +43,7 @@ political_decisions = {
 			money = 50000
 		}
         effect = {
+			set_country_flag = parliament_burned_already
 			any_pop = {
 				limit = { location = { is_core = CAN } }
 				scaled_militancy = { factor = -3 ideology = liberal }
@@ -6036,7 +6061,8 @@ political_decisions = {
             }
         }
         effect = {
-            2049 = { secede_province = AUS }
+            2049 = { trade_goods = precious_goods }
+			2049 = { secede_province = AUS }
             set_global_flag = dela_gone
             badboy = 1
             POR = { country_event = 123499 }
