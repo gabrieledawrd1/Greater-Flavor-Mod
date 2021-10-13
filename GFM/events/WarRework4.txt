@@ -5483,7 +5483,7 @@ country_event = {
 			country_event = 777770409
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
-			set_variable = { which = Rewritable_State value = 1 }
+			set_variable = { which = Rewritable_State value = 0 }
 		}
 		any_country = {
 			limit = {
