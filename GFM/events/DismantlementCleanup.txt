@@ -1031,6 +1031,190 @@ country_event = {
 					has_global_flag = Dismantlement_Underway_8
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_1
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_1
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_1
+						}
+						clr_country_flag = dismantlement_buffer_1
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_1
+						}
+						clr_country_flag = dismantled_buffer_1
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_2
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_2
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_2
+						}
+						clr_country_flag = dismantlement_buffer_2
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_2
+						}
+						clr_country_flag = dismantled_buffer_2
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_3
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_3
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_3
+						}
+						clr_country_flag = dismantlement_buffer_3
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_3
+						}
+						clr_country_flag = dismantled_buffer_3
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_4
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_4
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_4
+						}
+						clr_country_flag = dismantlement_buffer_4
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_4
+						}
+						clr_country_flag = dismantled_buffer_4
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_5
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_5
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_5
+						}
+						clr_country_flag = dismantlement_buffer_5
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_5
+						}
+						clr_country_flag = dismantled_buffer_5
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_6
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_6
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_6
+						}
+						clr_country_flag = dismantlement_buffer_6
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_6
+						}
+						clr_country_flag = dismantled_buffer_6
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_7
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_7
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_7
+						}
+						clr_country_flag = dismantlement_buffer_7
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_7
+						}
+						clr_country_flag = dismantled_buffer_7
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = dismantlement_buffer_8
+					}
+				}
+				owner = {
+					clr_country_flag = dismantlement_buffer_8
+					any_country = {
+						limit = {
+							has_country_flag = dismantlement_buffer_8
+						}
+						clr_country_flag = dismantlement_buffer_8
+					}
+					any_country = {
+						limit = {
+							has_country_flag = dismantled_buffer_8
+						}
+						clr_country_flag = dismantled_buffer_8
+						set_country_flag = Major_Defeated
+					}
+				}
+			}
 			clr_country_flag = conference_sanity_check
 			clr_country_flag = waiting_for_dismantlement
 			country_event = 777770403
@@ -1093,6 +1277,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_1
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_1
+					}
 				}
 			}
 			random_owned = {
@@ -1134,6 +1325,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_2
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_2
+					}
 				}
 			}
 			random_owned = {
@@ -1175,6 +1373,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_3
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_3
+					}
 				}
 			}
 			random_owned = {
@@ -1216,6 +1421,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_4
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_4
+					}
 				}
 			}
 			random_owned = {
@@ -1257,6 +1469,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_5
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_5
+					}
 				}
 			}
 			random_owned = {
@@ -1298,6 +1517,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_6
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_6
+					}
 				}
 			}
 			random_owned = {
@@ -1339,6 +1565,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_7
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_7
+					}
 				}
 			}
 			random_owned = {
@@ -1380,6 +1613,13 @@ country_event = {
 				}
 				owner = {
 					set_country_flag = dismantlement_buffer_8
+					any_country = {
+						limit = {
+							has_country_flag = Major_Defeated
+						}
+						clr_country_flag = Major_Defeated
+						set_country_flag = dismantled_buffer_8
+					}
 				}
 			}
 		}
@@ -1601,6 +1841,129 @@ country_event = {
 		}
 		
 		CLN = { country_event = { id = 4778746 days = 5 } }
+	}
+}
+
+#dismantlement end cleanup buffer
+country_event = {
+	id = 4778747
+	title = "AI: Dismantlement Cleanup Check"
+	desc = "AI: Dismantlement Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		set_variable = { which = dismantlement_cleanup_buffer value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			CLN = { change_variable = { which = dismantlement_cleanup_buffer value = 1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dismantlement_cleanup_buffer value = 0.99 }
+				}
+			}
+			owner = {
+				CLN = { country_event = { id = 4778747 days = 1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = dismantlement_cleanup_buffer value = 0.99 } }
+				}
+			}
+			owner = {
+				clr_global_flag = Dismantlement_Underway_1
+				clr_global_flag = Dismantlement_Underway_2
+				clr_global_flag = Dismantlement_Underway_3
+				clr_global_flag = Dismantlement_Underway_4
+				clr_global_flag = Dismantlement_Underway_5
+				clr_global_flag = Dismantlement_Underway_6
+				clr_global_flag = Dismantlement_Underway_7
+				clr_global_flag = Dismantlement_Underway_8
+				clr_global_flag = Total_Once_Victor
+				clr_global_flag = Total_Two_Victor
+				clr_global_flag = Total_Three_Victor
+				clr_global_flag = Total_Four_Victor
+				clr_global_flag = Total_Five_Victor
+				clr_global_flag = Total_Six_Victor
+				clr_global_flag = Total_Seven_Victor
+				clr_global_flag = Total_Eight_Victor
+				any_country = {
+					limit = {
+						NOT = {
+							has_country_flag = dismantlement_buffer_1
+							has_country_flag = dismantlement_buffer_2
+							has_country_flag = dismantlement_buffer_3
+							has_country_flag = dismantlement_buffer_4
+							has_country_flag = dismantlement_buffer_5
+							has_country_flag = dismantlement_buffer_6
+							has_country_flag = dismantlement_buffer_7
+							has_country_flag = dismantlement_buffer_8
+							has_country_flag = dismantled_buffer_1
+							has_country_flag = dismantled_buffer_2
+							has_country_flag = dismantled_buffer_3
+							has_country_flag = dismantled_buffer_4
+							has_country_flag = dismantled_buffer_5
+							has_country_flag = dismantled_buffer_6
+							has_country_flag = dismantled_buffer_7
+							has_country_flag = dismantled_buffer_8
+						}
+					}
+					set_variable = { which = Major_Defeated value = 0 }
+					set_variable = { which = conference value = 0 }
+					set_variable = { which = Dismantlement_Chair value = 0 }
+					set_variable = { which = Second_Victor value = 0 }
+					set_variable = { which = Third_Victor value = 0 }
+					set_variable = { which = Fourth_Victor value = 0 }
+					set_variable = { which = Fifth_Victor value = 0 }
+					set_variable = { which = Sixth_Victor value = 0 }
+					set_variable = { which = Seventh_Victor value = 0 }
+					set_variable = { which = Eighth_Victor value = 0 }
+					set_variable = { which = conference_victors value = 0 }
+					set_variable = { which = Freedom_Event_Sent value = 0 }
+					set_variable = { which = Rewritable_State value = 0 }
+					set_variable = { which = Freedom_Overwrite value = 0 }
+					set_variable = { which = Freedom_NonOverwrite value = 0 }
+					set_variable = { which = Freedom_Apathy value = 0 }
+					set_variable = { which = Freedom_NonFreedom value = 0 }
+					set_variable = { which = Freedom_OurFreedom value = 0 }
+					set_variable = { which = Freedom_OurVassal value = 0 }
+					set_variable = { which = Existing_Overwrite value = 0 }
+					set_variable = { which = Existing_NonOverwrite value = 0 }
+					set_variable = { which = Existing_Apathy value = 0 }
+					set_variable = { which = Existing_As_Is value = 0 }
+					set_variable = { which = Existing_Chomp value = 0 }
+					set_variable = { which = Second_Victor_Complete value = 0 }
+					set_variable = { which = Third_Victor_Complete value = 0 }
+					set_variable = { which = Fourth_Victor_Complete value = 0 }
+					set_variable = { which = Fifth_Victor_Complete value = 0 }
+					set_variable = { which = Sixth_Victor_Complete value = 0 }
+					set_variable = { which = Seventh_Victor_Complete value = 0 }
+					set_variable = { which = Eighth_Victor_Complete value = 0 }
+					set_variable = { which = Dismantle_Released value = 0 }
+					set_variable = { which = Second_Secondary_Complete value = 0 }
+					set_variable = { which = Third_Secondary_Complete value = 0 }
+					set_variable = { which = Fourth_Secondary_Complete value = 0 }
+					set_variable = { which = Fifth_Secondary_Complete value = 0 }
+					set_variable = { which = Sixth_Secondary_Complete value = 0 }
+					set_variable = { which = Seventh_Secondary_Complete value = 0 }
+					set_variable = { which = Eighth_Secondary_Complete value = 0 }
+					set_variable = { which = Secondary_Claim value = 0 }
+					set_variable = { which = Natural_Secondary_Second value = 0 }
+					set_variable = { which = Natural_Secondary_Third value = 0 }
+					set_variable = { which = Natural_Secondary_Fourth value = 0 }
+					set_variable = { which = Natural_Secondary_Fifth value = 0 }
+					set_variable = { which = Natural_Secondary_Sixth value = 0 }
+					set_variable = { which = Natural_Secondary_Seventh value = 0 }
+					set_variable = { which = Natural_Secondary_Eighth value = 0 }
+				}
+			}
+		}
 	}
 }
 

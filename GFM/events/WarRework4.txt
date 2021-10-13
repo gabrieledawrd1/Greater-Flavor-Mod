@@ -192,6 +192,7 @@ country_event = {
 				exists = yes
 				has_country_flag = Major_Defeated
 			}
+			clr_country_flag = Major_Defeated
 			random_owned = {
 				limit = { owner = { check_variable = { which = target_of_dismantlement value = 0.99 } NOT = { check_variable = { which = target_of_dismantlement value = 1.99 } } } }
 				owner = { set_variable = { which = Major_Defeated value = 1 } set_variable = { which = target_of_dismantlement value = 0 } }
@@ -5450,7 +5451,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = { which = Outcome_Required value = 1 }
 		any_country = {
 			limit = {
 				any_core = {
@@ -5464,8 +5464,10 @@ country_event = {
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
 			country_event = 777770408
+			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
+			CLN = { country_event = 4778747 }
 		}
 		any_country = {
 			limit = {
@@ -5479,6 +5481,7 @@ country_event = {
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
 			country_event = 777770409
+			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
@@ -5533,7 +5536,7 @@ country_event = {
         name = "$FROMCOUNTRY$ shall stay as it is"
 		FROM = {
 			set_variable = { which = Freedom_NonFreedom value = 1 }
-			set_variable = { which = Outcome_Required value = 0.99 }
+			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770424	
 		}
     }
@@ -12506,7 +12509,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
-		set_variable = { which = Outcome_Required value = 0.99 }
+		set_variable = { which = Outcome_Required value = 0 }
     }
 }
 
@@ -12591,7 +12594,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
-		set_variable = { which = Outcome_Required value = 0.99 }
+		set_variable = { which = Outcome_Required value = 0 }
     }
 }
 
