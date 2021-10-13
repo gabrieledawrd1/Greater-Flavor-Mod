@@ -1215,6 +1215,7 @@ country_event = {
 					}
 				}
 			}
+			THIS = { clr_country_flag = buffer_enabled }
 			clr_country_flag = conference_sanity_check
 			clr_country_flag = waiting_for_dismantlement
 			country_event = 777770403
@@ -1236,6 +1237,7 @@ country_event = {
 					has_global_flag = Dismantlement_Underway_8
 				}
 			}
+			THIS = { set_country_flag = buffer_enabled }
 			clr_country_flag = conference_sanity_check
 			set_country_flag = waiting_for_dismantlement
 			random_owned = {
@@ -1839,8 +1841,10 @@ country_event = {
 				set_country_flag = dismantlement_buffer_8
 			}
 		}
-		
-		CLN = { country_event = { id = 4778746 days = 5 } }
+		random_owned = {
+			limit = { owner = { has_country_flag = buffer_enabled } }
+			owner = { country_event = { id = 4778746 days = 5 } }
+		}
 	}
 }
 
