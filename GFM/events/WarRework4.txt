@@ -5725,7 +5725,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = { which = Rewritable_State value = 1 }
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
