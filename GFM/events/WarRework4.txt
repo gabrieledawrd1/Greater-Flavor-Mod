@@ -5618,7 +5618,7 @@ country_event = {
         name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
 		FROM = {
 			set_variable = { which = Existing_Overwrite value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		create_alliance = FROM
     }
@@ -5626,7 +5626,7 @@ country_event = {
         name = "$FROMCOUNTRY$ shall cores from remaining lands"
 		FROM = {
 			set_variable = { which = Existing_NonOverwrite value = 1 }
-			country_event = 777770459	
+			country_event = 777770423	
 		}
 		create_alliance = FROM
     }
@@ -5634,21 +5634,21 @@ country_event = {
         name = "We do not care about $FROMCOUNTRY$"
 		FROM = {
 			set_variable = { which = Existing_Apathy value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
     option = {
         name = "$FROMCOUNTRY$ shall not grow larger"
 		FROM = {
 			set_variable = { which = Existing_As_Is value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
     option = {
         name = "The lands of $FROMCOUNTRY$ shall be ours"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
 }
@@ -5743,6 +5743,19 @@ country_event = {
         name = "Very Well"
 		FROM = {
 			country_event = 777770411
+		}
+    }
+}
+
+country_event = {
+    id = 777770423
+    title = "$FROMCOUNTRY$ has made a decision!."
+    desc = "Our coes are now being discused by the Victors"
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		FROM = {
+			country_event = 777770459
 		}
     }
 }
