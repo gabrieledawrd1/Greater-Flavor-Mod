@@ -5458,6 +5458,22 @@ country_event = {
 						check_variable = { which = Major_Defeated value = 0.99 }
 					}
 				}
+				exists = yes
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+			}
+			country_event = 777770409
+			set_variable = { which = Outcome_Required value = 1 }
+			set_variable = { which = Freedom_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 0 }
+		}
+		any_country = {
+			limit = {
+				any_core = {
+					owner = {
+						check_variable = { which = Major_Defeated value = 0.99 }
+					}
+				}
 				exists = no
 				NOT = { tag = UBD }
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
@@ -5467,22 +5483,6 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
-		}
-		any_country = {
-			limit = {
-				any_core = {
-					owner = {
-						check_variable = { which = Major_Defeated value = 0.99 }
-					}
-				}
-				exists = yes
-				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-			}
-			country_event = 777770409
-			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Freedom_Event_Sent value = 1 }
-			set_variable = { which = Rewritable_State value = 0 }
 		}
 		any_country = {
 			limit = {
