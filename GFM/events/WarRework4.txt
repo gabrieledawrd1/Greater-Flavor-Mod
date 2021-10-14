@@ -12509,7 +12509,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
-		set_variable = { which = Outcome_Required value = 0 }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
 
@@ -12594,7 +12594,7 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Claim value = 0 }
         }
-		set_variable = { which = Outcome_Required value = 0 }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
 
