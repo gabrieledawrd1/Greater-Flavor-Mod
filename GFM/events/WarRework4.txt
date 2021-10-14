@@ -12372,6 +12372,77 @@ country_event = {
 				}
                 exists = yes
                 FROM = { exists = no civilized = yes }
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
+        }
+        any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }			
+				}
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = yes }
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
+        }
+        any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }	
+				}
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = yes }
 				FROM = { check_variable = { which = Freedom_Overwrite value = 0.99 } }
             }
             release = FROM
