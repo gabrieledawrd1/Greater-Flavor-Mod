@@ -12741,7 +12741,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12749,7 +12749,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12757,7 +12757,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12765,7 +12765,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12773,7 +12773,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12781,7 +12781,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12789,7 +12789,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		ai_chance = { factor = 1 }
     }
@@ -12820,7 +12820,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12828,7 +12828,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12836,7 +12836,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12844,7 +12844,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12852,7 +12852,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12860,7 +12860,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -12868,7 +12868,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		ai_chance = { factor = 1 }
     }
@@ -13055,7 +13055,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13063,7 +13063,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13071,7 +13071,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13079,7 +13079,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13087,7 +13087,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13095,7 +13095,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13103,7 +13103,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
     option = {
@@ -13125,7 +13125,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13133,7 +13133,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13141,7 +13141,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13149,7 +13149,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13157,7 +13157,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13165,7 +13165,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13173,7 +13173,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
 }
@@ -13351,7 +13351,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13359,7 +13359,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13367,7 +13367,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13375,7 +13375,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13383,7 +13383,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13391,7 +13391,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13399,7 +13399,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
     option = {
@@ -13422,7 +13422,7 @@ country_event = {
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13431,7 +13431,7 @@ country_event = {
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13440,7 +13440,7 @@ country_event = {
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13449,7 +13449,7 @@ country_event = {
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13458,7 +13458,7 @@ country_event = {
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13467,7 +13467,7 @@ country_event = {
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13476,7 +13476,7 @@ country_event = {
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			set_variable = { which = Secondary_Claim value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		ai_chance = { factor = 0 }
     }
@@ -13803,7 +13803,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13811,7 +13811,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13819,7 +13819,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13827,7 +13827,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13835,7 +13835,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13843,7 +13843,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13851,7 +13851,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
     option = {
@@ -13873,7 +13873,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13881,7 +13881,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13889,7 +13889,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13897,7 +13897,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13905,7 +13905,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13913,7 +13913,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
 		any_country = {
 			limit = {
@@ -13921,7 +13921,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770459
+			country_event = 777770423
 		}
     }
 } 
