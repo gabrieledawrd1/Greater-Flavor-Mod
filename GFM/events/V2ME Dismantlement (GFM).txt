@@ -16,8 +16,7 @@
 #	0510-0519	Secondary Effect Bouncing Evenets
 #	0520-0549	Secondary Victor Response Events
 #	0550-0559	Effect Events
-#	0559-0599	Reserved (Colonial Events)
-#	0600-0699	Reserved (Misc)
+#	0560-0699	Reserved (Colonial Events)
 #	0700-0799	Reserved (Cleanup Events)
 
 ##### Initalizing Conference 0400-0409 #####
@@ -5288,7 +5287,7 @@ country_event = {
     }
 }
 
-### Trigger Event ###
+### Trigger Event 406 ###
 
 country_event = {
     id = 777770406
@@ -5302,48 +5301,57 @@ country_event = {
 			limit = {
 				any_core = {
 					owner = {
-						check_variable = { which = Major_Defeated value = 0.99 }
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
 					}
 				}
 				exists = yes
-				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
-			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Freedom_Event_Sent value = 1 }
-			set_variable = { which = Rewritable_State value = 0 }
 			country_event = 777770412
+			set_variable = { which = Outcome_Required value = 1 }
+			set_variable = { which = Core_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 0 }
 		}
 		any_country = {
 			limit = {
 				OR = {
 					is_vassal = yes
 					is_substate = yes
+					is_our_vassal = THIS
 				}
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 				}
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
-			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Freedom_Event_Sent value = 1 }
-			set_variable = { which = Rewritable_State value = 1 }
 			country_event = 777770411
+			set_variable = { which = Outcome_Required value = 1 }
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 1 }
 		}
 		any_country = {
 			limit = {
 				any_core = {
 					owner = {
-						check_variable = { which = Major_Defeated value = 0.99 }
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
 					}
 				}
 				exists = no
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
+			country_event = 777770410
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
-			country_event = 777770410
 		}
 		any_country = {
 			limit = {
@@ -5405,7 +5413,7 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = { which = Non_Rewritable_State value = 1 }
+		set_variable = { which = Non_Rewritable_State value = 0 }
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
@@ -5503,6 +5511,7 @@ country_event = {
         name = "$FROMCOUNTRY$ shall remain as it is"
 		FROM = {
 			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770431
 		}
     }
@@ -6804,7 +6813,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6812,7 +6821,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6820,7 +6829,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6828,7 +6837,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6836,7 +6845,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6844,7 +6853,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6852,7 +6861,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -6860,7 +6869,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770552
+			country_event = 777770553
 		}
 		any_country = {
 			limit = {
@@ -18180,6 +18189,24 @@ country_event = {
 			}
 			inherit = FROM
 		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = proletarian_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = proletarian_dictatorship
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = fascist_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = fascist_dictatorship
+			
+		}
         random_country = {
 			limit = {
 				check_variable = { which = Secondary_Claim value = 0.99 }
@@ -18203,8 +18230,7 @@ country_event = {
 				OR = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 				}
-                exists = yes
-				FROM = { check_variable = { which = Vassal_TrueFreedom value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
             }
             release_vassal = FROM
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
@@ -18214,8 +18240,7 @@ country_event = {
 				OR = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 				}
-                exists = yes
-				FROM = { check_variable = { which = Vassal_TrueFreedom value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
             }
             release_vassal = FROM
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
@@ -18237,6 +18262,25 @@ country_event = {
 				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
 			}
 			create_vassal = FROM
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = proletarian_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = proletarian_dictatorship
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = fascist_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = fascist_dictatorship
+			
 		}
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
