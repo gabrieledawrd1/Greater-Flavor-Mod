@@ -5354,17 +5354,19 @@ country_event = {
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
+#		
+#	##### Colony Events - Fixed Borders System ##### 
+#		
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				exists = yes
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				OR = {
-					1729 = { owner = { tag = THIS } }
-					1730 = { owner = { tag = THIS } }
-				}
+				NOT = { exists = TUN }
+#				OR = {
+#					1729 = { owner = { tag = THIS } }
+#					1730 = { owner = { tag = THIS } }
+#				}
 			}
-			country_event = 777770600
+			TUN = { set_variable = { which = Tunisia_Colony value = 1 } country_event = 777770610 }
 		}
 		CLN = { country_event = 4778747 }
     }

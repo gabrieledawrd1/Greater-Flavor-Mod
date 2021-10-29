@@ -15,8 +15,6 @@
 #	0510-0519	Secondary Effect Bouncing Evenets
 #	0520-0549	Secondary Victor Response Events
 #	0550-0559	Effect Events
-#	0560-0699	Reserved (Colonial Events)
-#	0700-0799	Reserved (Cleanup Events)
 
 #####		Colonial First Wave Bounce Events (Ai)	610-619		#####
 
@@ -31,7 +29,7 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 			}
-			country_event = 777770610
+			country_event = 777770620
 		}
     }
 }
@@ -47,9 +45,9 @@ country_event = {
         name = "We shall take them for ourselves."
         any_country = {
 			limit = {
-				FROM = { check_variable = { which = Annex_Colony = 0.99 } }
 				tag = FROM
 			}
+			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -81,8 +79,8 @@ country_event = {
 
 country_event = {
     id = 777770640
-    title = "Our freedom is being considered?"
-    desc = "Our freedom is being considered by the Conference Chair!"
+    title = "Our colony is being considered?"
+    desc = "Our colony is being considered by the Conference Chair!"
     is_triggered_only = yes
     option = {
         name = "Very Well"
@@ -92,7 +90,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -100,7 +98,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -108,7 +106,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -116,7 +114,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -124,7 +122,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -132,7 +130,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -140,7 +138,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
@@ -148,7 +146,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		any_country = {
 			limit = {
@@ -260,6 +258,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -268,6 +267,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -276,6 +276,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -284,6 +285,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -292,6 +294,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -300,6 +303,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -308,6 +312,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -316,6 +321,7 @@ country_event = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -429,6 +435,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -437,6 +444,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -445,6 +453,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -453,6 +462,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -461,6 +471,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -469,6 +480,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -477,6 +489,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -485,6 +498,7 @@ country_event = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770751
 		}
@@ -598,6 +612,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -606,6 +621,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -614,6 +630,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -622,6 +639,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -630,6 +648,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -638,6 +657,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -646,6 +666,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -654,6 +675,7 @@ country_event = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
+				tag = FROM
 			}
 			country_event = 777770750
 		}
@@ -1398,7 +1420,7 @@ country_event = {
 
 country_event = {
     id = 777770750
-    title = "We are being transfered!"
+    title = "Succesful transfer!"
     desc = "Colony Transfer Event!"
     is_triggered_only = yes
     option = {
@@ -1412,7 +1434,12 @@ country_event = {
 			}
 			any_owned = { 
 				limit = {
-					province_id = 1
+					province_id = 1725
+					province_id = 1726
+					province_id = 1727
+					province_id = 1728
+					province_id = 1729
+					province_id = 1730
 				}
 			}
 			secede_province = FROM
@@ -1426,7 +1453,12 @@ country_event = {
 			}
 			any_owned = { 
 				limit = {
-					province_id = 1
+					province_id = 1725
+					province_id = 1726
+					province_id = 1727
+					province_id = 1728
+					province_id = 1729
+					province_id = 1730
 				}
 			}
 			secede_province = THIS
