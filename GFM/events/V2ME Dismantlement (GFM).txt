@@ -5307,6 +5307,7 @@ country_event = {
 						}
 					}
 				}
+				NOT = { overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				exists = yes
 				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
