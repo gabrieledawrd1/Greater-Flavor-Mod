@@ -1427,41 +1427,56 @@ country_event = {
         name = "Huh"
 		any_country = {
 			limit = {
-				check_variable = { which = Major_Defeated value = 0.99 }
-				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-				THIS = { check_variable = { which = Tunisia_Colony value = 0.99 } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
 			any_owned = { 
 				limit = {
-					province_id = 1725
-					province_id = 1726
-					province_id = 1727
-					province_id = 1728
-					province_id = 1729
-					province_id = 1730
+					OR = {
+						province_id = 1725
+						province_id = 1726
+						province_id = 1727
+						province_id = 1728
+						province_id = 1729
+						province_id = 1730
+					}
 				}
+				secede_province = UTI
 			}
-			secede_province = FROM
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
+			}
+			inherit = UTI
 		}
 		any_country = {
 			limit = {
-				check_variable = { which = Major_Defeated value = 0.99 }
-				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-				THIS = { check_variable = { which = Tunisia_Colony value = 0.99 } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
 			}
 			any_owned = { 
 				limit = {
-					province_id = 1725
-					province_id = 1726
-					province_id = 1727
-					province_id = 1728
-					province_id = 1729
-					province_id = 1730
+					OR = {
+						province_id = 1725
+						province_id = 1726
+						province_id = 1727
+						province_id = 1728
+						province_id = 1729
+						province_id = 1730
+					}
 				}
 			}
-			secede_province = THIS
+			secede_province = TUN
 		}
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }

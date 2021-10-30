@@ -5297,6 +5297,9 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
+#
+#		Base Event for existing cores	
+#
 		any_country = {
 			limit = {
 				any_core = {
@@ -5307,7 +5310,7 @@ country_event = {
 						}
 					}
 				}
-				NOT = { overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				NOT = { overlord = { check_variable = { which = Major_Defeated value = 0.99 } } }
 				exists = yes
 				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
@@ -5317,6 +5320,9 @@ country_event = {
 			set_variable = { which = Core_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 0 }
 		}
+#
+#		Base Event for puppets
+#
 		any_country = {
 			limit = {
 				OR = {
@@ -5335,6 +5341,28 @@ country_event = {
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
+#		FAR EASTERN REPUBLIC PUPPET EVENT
+		any_country = {
+			limit = {
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+					is_our_vassal = THIS
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+			}
+			country_event = 777771200
+			set_variable = { which = Outcome_Required value = 1 }
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 1 }
+		}
+#
+#		Base Event for non-existing cores	
+#
 		any_country = {
 			limit = {
 				any_core = {
@@ -5348,8 +5376,40 @@ country_event = {
 				exists = no
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				NOT = {
+					OR = {
+						tag = YAK
+						tag = BRY
+						tag = KAM
+					}
+				}
 			}
 			country_event = 777770410
+			set_variable = { which = Outcome_Required value = 1 }
+			set_variable = { which = Freedom_Event_Sent value = 1 }
+			set_variable = { which = Rewritable_State value = 1 }
+		}
+#		FAR EASTERN REPUBLIC CORE EVENT
+		any_country = {
+			limit = {
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
+				}
+				exists = no
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				OR = {
+					tag = YAK
+					tag = BRY
+					tag = KAM
+				}
+			}
+			country_event = 777771100
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
@@ -5360,7 +5420,10 @@ country_event = {
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { exists = TUN }
+				OR = {
+					NOT = { exists = TUN }
+					AND = { TUN = { ai = yes exists = TUN } }
+				}
 #				OR = {
 #					1729 = { owner = { tag = THIS } }
 #					1730 = { owner = { tag = THIS } }
@@ -5368,6 +5431,9 @@ country_event = {
 			}
 			TUN = { set_variable = { which = Tunisia_Colony value = 1 } country_event = 777770610 }
 		}
+#
+#	##### Cleanup Chain Trigger #####
+#
 		CLN = { country_event = 4778747 }
     }
 }
@@ -5386,8 +5452,16 @@ country_event = {
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 			}
 			country_event = 777770420
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+			}
+			country_event = 777770423
 		}
     }
 }
@@ -5403,8 +5477,16 @@ country_event = {
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 			}
 			country_event = 777770421
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+			}
+			country_event = 777770424
 		}
     }
 }
@@ -5420,8 +5502,16 @@ country_event = {
 		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 			}
 			country_event = 777770422
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+			}
+			country_event = 777770425
 		}
     }
 }
@@ -5571,6 +5661,147 @@ country_event = {
 		}
     }
 }
+
+#		No option to ask other victors if 1 victor
+
+country_event = {
+    id = 777770423
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+}
+
+country_event = {
+    id = 777770424
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777770425
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770432
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770432
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Existing_Chomp value = 1 }
+			country_event = 77777032
+		}
+    }
+}
+
+
 
 ##### Second Wave Bounce Events (Ai) 0430-0439 #####
 
@@ -6631,6 +6862,175 @@ country_event = {
 			}
 			country_event = 777770455
 		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770456
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770456
+		}
     }
 }
 
@@ -7485,6 +7885,175 @@ country_event = {
 				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
 			}
 			country_event = 777770464
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770557
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770465
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770465
 		}
     }
 }
@@ -9252,6 +9821,154 @@ country_event = {
 }
 
 country_event = {
+    id = 777770456
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "The Conference Chair wishes to intergrate $FROMCOUNTRY$ into a larger union!"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "We agree, $FROMCOUNTRY$ should be intergrate!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+    }
+    option = {
+        name = "We disagree, this could be to strong!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770430
+		}
+    }
+}
+
+country_event = {
     id = 777770460
     title = "What is our stance on $FROMCOUNTRY$?"
     desc = "The Conference Chair wishes to free $FROMCOUNTRY$ from puppethood. How do we respond?"
@@ -9958,6 +10675,163 @@ country_event = {
     }
     option = {
         name = "We disagree, $FROMCOUNTRY$ Should have been free!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777770465
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "The Conference Chair wishes to intergrate $FROMCOUNTRY$ to a larger state!"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "We agree, $FROMCOUNTRY$ Should be intergrated!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770431
+		}
+		ai_chance = { factor = 1 }
+    }
+    option = {
+        name = "We disagree, $FROMCOUNTRY$ Should have not been intergrated!"
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
@@ -17910,58 +18784,11 @@ country_event = {
 
 country_event = {
     id = 777770550
-    title = "Dismantlement Successful!"
-    desc = "We have gained new land from the recent dismantlement!"
+    title = "Released from Dismantlement!"
+    desc = "We have been released by the recent dismantlement!"
     is_triggered_only = yes
     option = {
         name = "Yes!"
-		set_global_flag = Whoop_Whoop_Chungus
-        any_country = {
-			limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-					check_variable = { which = Rewritable_State value = 0.99 }
-					check_variable = { which = Non_Rewritable_State value = 0.99 }					
-				}
-				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
-			}
-            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
-			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-        }
-        any_country = {
-            limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-				}
-                exists = yes
-                FROM = { exists = no civilized = yes }
-				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
-            }
-            release = FROM
-			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
-        }
-		any_country = {
-            limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-				}
-                exists = yes
-                FROM = { exists = no civilized = no }
-				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
-            }
-            release = FROM
-			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
-        }
-        any_country = {
-			limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }	
-				}
-				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
-			}
-            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
-			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-        }
         any_country = {
             limit = {
 				OR = {
@@ -18029,6 +18856,181 @@ country_event = {
 					check_variable = { which = Major_Defeated value = 0.99 }	
 				}
 				FROM = { check_variable = { which = Freedom_NonOverwrite value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+		random_owned = {
+			limit = { owner = { FROM = { civilized = yes } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = yes }
+			}
+		}
+		random_owned = {
+			limit = { owner = { FROM = { civilized = no } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = no }
+			}
+		}
+        random_country = {
+			limit = {
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				tag = THIS
+			}
+			set_variable = { which = Secondary_Claim value = 0 }
+        }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+
+country_event = {
+    id = 777770551
+    title = "Nothing from Dismantlement"
+    desc = "We have been given nothing from dismantlement!"
+    is_triggered_only = yes
+    option = {
+        name = "whoop whoop not chungus"
+        random_country = {
+			limit = {
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				tag = THIS
+			}
+			set_variable = { which = Secondary_Claim value = 0 }
+        }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+
+country_event = {
+    id = 777770552
+    title = "Independent from Dismantlement"
+    desc = "We have been freed by the recent dismantlement!"
+    is_triggered_only = yes
+    option = {
+        name = "Heroic Victory"
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
+            }
+            release_vassal = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
+            }
+            release_vassal = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+
+country_event = {
+    id = 777770553
+    title = "We are still a puppet!"
+    desc = "Our status has not changed!"
+    is_triggered_only = yes
+    option = {
+        name = "Damn"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
+			}
+			create_vassal = FROM
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = proletarian_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = proletarian_dictatorship
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = fascist_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = fascist_dictatorship
+			
+		}
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+country_event = {
+    id = 777770554
+    title = "New lands from Dismantlement!"
+    desc = "We have been given new lands by the recent dismantlement!"
+    is_triggered_only = yes
+    option = {
+        name = "Yes!"
+        any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }
+					check_variable = { which = Non_Rewritable_State value = 0.99 }					
+				}
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = yes }
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
+        }
+        any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }	
+				}
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
 			}
             any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
@@ -18112,9 +19114,94 @@ country_event = {
 }
 
 country_event = {
-    id = 777770551
-    title = "Dismantlement Failure"
-    desc = "We have been given nothing from dismantlement!"
+    id = 777770555
+    title = "Puppeted from Dismantlement!"
+    desc = "We have been puppeted by the recent dismantlement!"
+    is_triggered_only = yes
+    option = {
+        name = "Yes!"
+        any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = yes }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
+        }
+        any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }	
+				}
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+		random_owned = {
+			limit = { owner = { FROM = { civilized = yes } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = yes }
+			}
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
+			}
+			create_vassal = FROM
+		}
+		random_owned = {
+			limit = { owner = { FROM = { civilized = no } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = no }
+			}
+		}
+        random_country = {
+			limit = {
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				tag = THIS
+			}
+			set_variable = { which = Secondary_Claim value = 0 }
+        }
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+
+country_event = {
+    id = 777770556
+    title = "Annexation from Dismantlement"
+    desc = "We have been annexed from dismantlement!"
     is_triggered_only = yes
     option = {
         name = "whoop whoop not chungus"
@@ -18192,24 +19279,6 @@ country_event = {
 			}
 			inherit = FROM
 		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = proletarian_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = proletarian_dictatorship
-			
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = fascist_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = fascist_dictatorship
-			
-		}
         random_country = {
 			limit = {
 				check_variable = { which = Secondary_Claim value = 0.99 }
@@ -18222,69 +19291,245 @@ country_event = {
 }
 
 country_event = {
-    id = 777770552
-    title = "We have regained our independence"
-    desc = "We have been freed by the recent dismantlement!"
+    id = 777770557
+    title = "Intergration from Dismantlement"
+    desc = "We are to form a larger state!"
     is_triggered_only = yes
     option = {
-        name = "Heroic Victory"
+        name = "whoop whoop not chungus"
         any_country = {
             limit = {
 				OR = {
 					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }
 				}
-				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
+                exists = yes
+                FROM = { exists = no civilized = yes }
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
             }
-            release_vassal = FROM
-			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = yes }
+        }
+		any_country = {
+            limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+                exists = yes
+                FROM = { exists = no civilized = no }
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+            }
+            release = FROM
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } civilized = no }
         }
         any_country = {
-            limit = {
+			limit = {
 				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Major_Defeated value = 0.99 }	
+					check_variable = { which = Rewritable_State value = 0.99 }					
 				}
-				FROM = { check_variable = { which = Puppet_Freedom value = 0.99 } }
-            }
-            release_vassal = FROM
+				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+			}
+            any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+        }
+		random_owned = {
+			limit = { owner = { FROM = { civilized = yes } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = yes }
+			}
+		}
+		random_owned = {
+			limit = { owner = { FROM = { civilized = no } } }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = FROM
+					remove_core = UTI
+				}
+				FROM = { civilized = no }
+			}
+		}
+		random_country = {
+			limit = {
+				FROM = { 
+					OR = {
+						tag = YAK
+						tag = BRY
+						tag = KAM
+					}
+				}
+			}
+			FSA = { set_variable = { which = Rewritable_State value = 1 } }
+			FSA = { inherit = FROM }
+		}
+        random_country = {
+			limit = {
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				tag = THIS
+			}
+			set_variable = { which = Secondary_Claim value = 0 }
         }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
 
+##### Custom Formables Bounce Events 1100-1199, Puppet Custom Formables Bounce Events 1200-1299, Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 ####
+
 country_event = {
-    id = 777770553
-    title = "We are still a puppet!"
-    desc = "Our status has not changed!"
+    id = 777771100
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
     is_triggered_only = yes
     option = {
-        name = "Damn"
-		random_country = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
 			}
-			create_vassal = FROM
-			
+			country_event = 777771300
 		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = proletarian_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = proletarian_dictatorship
-			
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = fascist_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = fascist_dictatorship
-			
-		}
-		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
+
+country_event = {
+    id = 777771200
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771400
+		}
+    }
+}
+
+country_event = {
+    id = 777771300
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join the Far Eastern Republic (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+}
+
+country_event = {
+    id = 777771400
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join the Far Eastern Republic"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+
