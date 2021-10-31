@@ -53,12 +53,26 @@ country_event = {
     }
     option = {
         name = "We shall offer Tunisia to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
     }
     option = {
         name = "They shall remain with the defeated."
     }
     option = {
         name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
     }
 }
 
