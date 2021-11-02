@@ -979,7 +979,7 @@ country_event = {
 		}
 		badboy = 0.1
 		create_alliance = FROM
-		set_variable = { which = Annex_Colony value = 1 }
+		FROM = { set_variable = { which = Annex_Colony value = 1 } }
 		any_country = {
 			limit = {
 				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
