@@ -1491,6 +1491,7 @@ country_event = {
 				check_variable = { which = Secondary_Colonial value = 0.99 }
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
 			}
+			set_variable = { which = Secondary_Colonial value = 0 }
 			inherit = UTI
 		}
 		any_country = {
