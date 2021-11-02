@@ -12,6 +12,7 @@ political_decisions = {
         }
 
         effect = {
+			inherit = TUN
             set_country_flag = country_looking_through_options
         }
     }

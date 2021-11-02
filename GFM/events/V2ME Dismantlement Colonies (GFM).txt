@@ -1448,7 +1448,7 @@ country_event = {
 				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
-			any_owned = { 
+			any_owned = {
 				limit = {
 					OR = {
 						province_id = 1725
@@ -1459,7 +1459,20 @@ country_event = {
 						province_id = 1730
 					}
 				}
-				secede_province = UTI
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } } }
+			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
+		}
+		random_owned = {
+			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } } }
+			owner = {
+				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
+				release = UTI
+				UTI = { annex_to = UTI any_owned = { limit = { is_core = CLN } add_core = THIS remove_core = CLN } all_core = { remove_core = UTI } }
 			}
 		}
 		random_country = {
@@ -1478,7 +1491,7 @@ country_event = {
 				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
 			}
-			any_owned = { 
+			any_owned = {
 				limit = {
 					OR = {
 						province_id = 1725
@@ -1489,8 +1502,8 @@ country_event = {
 						province_id = 1730
 					}
 				}
+				secede_province = THIS
 			}
-			secede_province = TUN
 		}
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }

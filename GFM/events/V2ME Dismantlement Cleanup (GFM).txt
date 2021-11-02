@@ -1857,6 +1857,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
+		name = "Whatever"
 		set_variable = { which = dismantlement_cleanup_buffer value = 0 }
 		any_country = {
 			limit = {
