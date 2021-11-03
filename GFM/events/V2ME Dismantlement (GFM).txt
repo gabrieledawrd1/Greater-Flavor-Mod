@@ -5676,6 +5676,7 @@ country_event = {
     id = 777770423
     title = "What would you like to do with $FROMCOUNTRY$?"
     desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "Dismantle 13"
 	allow_multiple_instances = yes
     is_triggered_only = yes
     option = {
