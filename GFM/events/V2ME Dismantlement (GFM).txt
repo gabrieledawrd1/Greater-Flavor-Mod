@@ -6675,7 +6675,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6683,7 +6683,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6691,7 +6691,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6699,7 +6699,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6707,7 +6707,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6715,7 +6715,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6723,7 +6723,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -6731,7 +6731,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		any_country = {
 			limit = {
@@ -6844,7 +6844,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6852,7 +6852,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6860,7 +6860,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6868,7 +6868,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6876,7 +6876,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6884,7 +6884,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6892,7 +6892,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		random_country = {
 			limit = {
@@ -6900,7 +6900,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770555
 		}
 		any_country = {
 			limit = {
@@ -7531,7 +7531,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7539,7 +7539,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7547,7 +7547,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7555,7 +7555,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7563,7 +7563,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7571,7 +7571,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7579,7 +7579,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7587,7 +7587,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		any_country = {
 			limit = {
@@ -7700,7 +7700,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7708,7 +7708,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7716,7 +7716,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7724,7 +7724,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7732,7 +7732,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7740,7 +7740,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7748,7 +7748,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		random_country = {
 			limit = {
@@ -7756,7 +7756,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770553
 		}
 		any_country = {
 			limit = {
@@ -7869,7 +7869,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7877,7 +7877,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7885,7 +7885,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7893,7 +7893,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7901,7 +7901,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7909,7 +7909,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7917,7 +7917,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -7925,7 +7925,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		any_country = {
 			limit = {
@@ -8218,7 +8218,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8226,7 +8226,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8234,7 +8234,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8242,7 +8242,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8250,7 +8250,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8258,7 +8258,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8266,7 +8266,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8274,7 +8274,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		any_country = {
 			limit = {
@@ -8387,7 +8387,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8395,7 +8395,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8403,7 +8403,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8411,7 +8411,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8419,7 +8419,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8427,7 +8427,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8435,7 +8435,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		random_country = {
 			limit = {
@@ -8443,7 +8443,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770550
+			country_event = 777770554
 		}
 		any_country = {
 			limit = {
@@ -8894,7 +8894,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8902,7 +8902,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8910,7 +8910,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8918,7 +8918,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8926,7 +8926,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8934,7 +8934,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8942,7 +8942,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -8950,7 +8950,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770551
+			country_event = 777770556
 		}
 		any_country = {
 			limit = {
@@ -9455,6 +9455,8 @@ country_event = {
     option = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
 		badboy = 0.1
+		FROM = { set_variable = { which = Secondary_Claim_NonExisting value = 1 } }
+		set_variable = { which = Secondary_NonExisting value = 1 }
 		create_alliance = FROM
 		any_country = {
 			limit = {
@@ -10526,6 +10528,8 @@ country_event = {
 				value = -50
 			}
 		}
+		FROM = { set_variable = { which = Secondary_Claim_Puppet value = 1 } }
+		set_variable = { which = Secondary_Puppet value = 1 }
 		badboy = 0.1
 		any_country = {
 			limit = {
@@ -11441,6 +11445,8 @@ country_event = {
     }
     option = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
+		FROM = { set_variable = { which = Secondary_Claim_Existing value = 1 } }
+		set_variable = { which = Secondary_Existing value = 1 }
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
@@ -19100,33 +19106,33 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Damn"
-		random_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
-			}
-			create_vassal = FROM
-			
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = proletarian_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = proletarian_dictatorship
-			
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				overlord = { government = fascist_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-			}
-			government = fascist_dictatorship
-			
-		}
-		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+#		random_country = {
+#			limit = {
+#				check_variable = { which = Dismantlement_Chair value = 0.99 }
+#				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
+#			}
+#			create_vassal = FROM
+#			
+#		}
+#		random_country = {
+#			limit = {
+#				tag = FROM
+#				overlord = { government = proletarian_dictatorship }
+#				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+#			}
+#			government = proletarian_dictatorship
+#			
+#		}
+#		random_country = {
+#			limit = {
+#				tag = FROM
+#				overlord = { government = fascist_dictatorship }
+#				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+#			}
+#			government = fascist_dictatorship
+#			
+#		}
+#		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
 country_event = {
@@ -19317,7 +19323,14 @@ country_event = {
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } NOT = { check_variable = { which = Secondary_Claim_Puppet value = 0.99 } } }
+			}
+			create_vassal = FROM
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Secondary_NonExisting value = 0.99 }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } check_variable = { which = Secondary_Claim_Puppet value = 0.99 } }
 			}
 			create_vassal = FROM
 		}
@@ -19334,12 +19347,18 @@ country_event = {
 				FROM = { civilized = no }
 			}
 		}
+        any_country = {
+			limit = {
+				check_variable = { which = Secondary_Puppet value = 0.99 }
+			}
+			set_variable = { which = Secondary_Puppet value = 0 }
+        }
         random_country = {
 			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
+				check_variable = { which = Secondary_Claim_Puppet value = 0.99 }
 				tag = THIS
 			}
-			set_variable = { which = Secondary_Claim value = 0 }
+			set_variable = { which = Secondary_Claim_Puppet value = 0 }
         }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
@@ -19414,24 +19433,30 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } check_variable = { which = Secondary_Claim value = 0.99 } }
+				check_variable = { which = Secondary_NonExisting value = 0.99 }
+				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } }
 			}
 			inherit = FROM
 		}
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 }  }
+				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } NOT = { check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } } }
 			}
 			inherit = FROM
 		}
+        any_country = {
+			limit = {
+				check_variable = { which = Secondary_NonExisting value = 0.99 }
+			}
+			set_variable = { which = Secondary_NonExisting value = 0 }
+        }
         random_country = {
 			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
+				check_variable = { which = Secondary_Claim_NonExisting value = 0.99 }
 				tag = THIS
 			}
-			set_variable = { which = Secondary_Claim value = 0 }
+			set_variable = { which = Secondary_Claim_NonExisting value = 0 }
         }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
