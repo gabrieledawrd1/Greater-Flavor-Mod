@@ -5325,15 +5325,12 @@ country_event = {
 
 country_event = {
 	id = 777770407
-	title = "AI: Dismantlement Event Trigger"
-	desc = "AI: Dismantlement Event Trigger"
+	title = "AI: Dismantlement Setup"
+	desc = "AI: Dismantlement Setup"
 	
 	is_triggered_only = yes
 	
 	immediate = {
-#
-#		Base Event for existing cores	
-#
 		any_country = {
 			limit = {
 				any_core = {
@@ -5352,9 +5349,7 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 0 }
 		}
-#
-#		Base Event for puppets
-#
+
 		any_country = {
 			limit = {
 				exists = yes
@@ -5371,7 +5366,6 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
-#		FAR EASTERN REPUBLIC PUPPET EVENT
 		any_country = {
 			limit = {
 				exists = yes
@@ -5388,9 +5382,7 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
-#
-#		Base Event for non-existing cores	
-#
+
 		any_country = {
 			limit = {
 				any_core = {
@@ -5415,7 +5407,6 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
-#		FAR EASTERN REPUBLIC CORE EVENT
 		any_country = {
 			limit = {
 				any_core = {
@@ -5439,6 +5430,19 @@ country_event = {
 			set_variable = { which = Rewritable_State value = 1 }
 		}
 	}
+	
+	option = {
+		name = "GG go next"
+		CLN = { country_event = 777770408 }
+	}
+}
+
+country_event = {
+	id = 777770408
+	title = "AI: Dismantlement Event Trigger"
+	desc = "AI: Dismantlement Event Trigger"
+	
+	is_triggered_only = yes
 	
 	option = {
 		name = "Trigger Events"
@@ -5566,8 +5570,10 @@ country_event = {
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
-		CLN = { country_event = { id = 777770407 days = 1 } }
+		CLN = { country_event = { id = 777770408 days = 1 } }
 	}
+	
+	#cleanup trigger will go here later
 }
 
 ##### First Wave Bounce Events (Ai) 0410-0419 #####
