@@ -5299,6 +5299,38 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
+#		
+#	##### Colony Events - Fixed Borders System ##### 
+#		
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = TUN }
+					AND = { TUN = { ai = yes exists = TUN } }
+				}
+#				OR = {
+#					1729 = { owner = { tag = THIS } }
+#					1730 = { owner = { tag = THIS } }
+#				}
+			}
+			TUN = { set_variable = { which = Tunisia_Colony value = 1 } country_event = 777770610 }
+		}
+#
+#	##### Cleanup Chain Trigger #####
+#
+		CLN = { country_event = 777770407 } #country_event = 4778747 possible to be removed now?
+    }
+}
+
+country_event = {
+	id = 777770407
+	title = "AI: Dismantlement Event Trigger"
+	desc = "AI: Dismantlement Event Trigger"
+	
+	is_triggered_only = yes
+	
+	immediate = {
 #
 #		Base Event for existing cores	
 #
@@ -5317,9 +5349,7 @@ country_event = {
 				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
-			country_event = 777770412
 			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Core_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 0 }
 		}
 #
@@ -5327,10 +5357,10 @@ country_event = {
 #
 		any_country = {
 			limit = {
+				exists = yes
 				OR = {
 					is_vassal = yes
 					is_substate = yes
-					is_our_vassal = THIS
 				}
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
@@ -5338,18 +5368,16 @@ country_event = {
 				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
-			country_event = 777770411
 			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Puppet_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
 #		FAR EASTERN REPUBLIC PUPPET EVENT
 		any_country = {
 			limit = {
+				exists = yes
 				OR = {
 					is_vassal = yes
 					is_substate = yes
-					is_our_vassal = THIS
 				}
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
@@ -5357,9 +5385,7 @@ country_event = {
 				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 			}
-			country_event = 777771200
 			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Puppet_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
 #
@@ -5386,9 +5412,7 @@ country_event = {
 					}
 				}
 			}
-			country_event = 777770410
 			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
 #		FAR EASTERN REPUBLIC CORE EVENT
@@ -5411,33 +5435,139 @@ country_event = {
 					tag = KAM
 				}
 			}
-			country_event = 777771100
 			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Freedom_Event_Sent value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
-#		
-#	##### Colony Events - Fixed Borders System ##### 
-#		
-		any_country = {
+	}
+	
+	option = {
+		name = "Trigger Events"
+		clr_country_flag = mail_delivery_ready_for_pickup
+		clr_country_flag = too_many_deliveries
+#
+#		existing cores
+#
+		random_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = TUN }
-					AND = { TUN = { ai = yes exists = TUN } }
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
 				}
-#				OR = {
-#					1729 = { owner = { tag = THIS } }
-#					1730 = { owner = { tag = THIS } }
-#				}
+				NOT = { overlord = { check_variable = { which = Major_Defeated value = 0.99 } } }
+				exists = yes
+				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
 			}
-			TUN = { set_variable = { which = Tunisia_Colony value = 1 } country_event = 777770610 }
+			country_event = 777770412
+			set_variable = { which = Core_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #
-#	##### Cleanup Chain Trigger #####
+#		Base Event for puppets
 #
-		CLN = { country_event = 4778747 }
-    }
+		random_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777770411
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		FAR EASTERN REPUBLIC PUPPET EVENT
+		random_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771200
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#
+#		Base Event for non-existing cores	
+#
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
+				}
+				exists = no
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+				NOT = {
+					OR = {
+						tag = YAK
+						tag = BRY
+						tag = KAM
+					}
+				}
+			}
+			country_event = 777770410
+			set_variable = { which = Freedom_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		FAR EASTERN REPUBLIC CORE EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
+				}
+				exists = no
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+				OR = {
+					tag = YAK
+					tag = BRY
+					tag = KAM
+				}
+			}
+			country_event = 777771100
+			set_variable = { which = Freedom_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+		CLN = { country_event = { id = 777770407 days = 1 } }
+	}
 }
 
 ##### First Wave Bounce Events (Ai) 0410-0419 #####
@@ -5449,21 +5579,26 @@ country_event = {
     title = "Is this what freedom feels like?"
     desc = "Our freedom is being considered."
     is_triggered_only = yes
+	
     option = {
         name = "Very Well"
 		set_variable = { which = Rewritable_State value = 1 }
 		any_country = {
 			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { has_global_flag = Total_One_Victor }
 			}
+			FROM = { set_country_flag = too_many_deliveries }
 			country_event = 777770420
 		}
 		any_country = {
 			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				has_global_flag = Total_One_Victor
 			}
+			FROM = { set_country_flag = too_many_deliveries }
 			country_event = 777770423
 		}
     }
