@@ -5447,7 +5447,14 @@ country_event = {
 	
 	option = {
 		name = "Trigger Events"
-		clr_country_flag = mail_delivery_ready_for_pickup
+		any_country = {
+			limit = {
+				has_country_flag = mail_delivery_opened
+				NOT = { check_variable = { which = Outcome_Required value = 0.99 } }
+			}
+			THIS = { clr_country_flag = mail_delivery_ready_for_pickup }
+			clr_country_flag = mail_delivery_opened
+		}
 		clr_country_flag = too_many_deliveries
 #
 #		existing cores
@@ -5470,6 +5477,7 @@ country_event = {
 				check_variable = { which = Outcome_Required value = 0.99 }
 			}
 			country_event = 777770412
+			set_country_flag = mail_delivery_opened
 			set_variable = { which = Core_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -5492,6 +5500,7 @@ country_event = {
 				check_variable = { which = Outcome_Required value = 0.99 }
 			}
 			country_event = 777770411
+			set_country_flag = mail_delivery_opened
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -5512,6 +5521,7 @@ country_event = {
 				check_variable = { which = Outcome_Required value = 0.99 }
 			}
 			country_event = 777771200
+			set_country_flag = mail_delivery_opened
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -5542,6 +5552,7 @@ country_event = {
 				}
 			}
 			country_event = 777770410
+			set_country_flag = mail_delivery_opened
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -5568,6 +5579,7 @@ country_event = {
 				}
 			}
 			country_event = 777771100
+			set_country_flag = mail_delivery_opened
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
