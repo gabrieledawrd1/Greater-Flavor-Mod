@@ -1441,6 +1441,13 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Huh"
+#
+#		Annexation of Colony
+#
+
+#
+#		Tunisia 
+#
 		any_country = {
 			limit = {
 				OR = {
@@ -1465,6 +1472,58 @@ country_event = {
 				add_core = UTI
 			}
 		}
+#
+#		Algeria
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Algeria_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1694
+						province_id = 1699
+						province_id = 1698
+						province_id = 1695
+						province_id = 1700
+						province_id = 1706
+						province_id = 1703
+						province_id = 1813
+						province_id = 1704
+						province_id = 1705
+						province_id = 1707
+						province_id = 1708
+						province_id = 1702
+						province_id = 1701
+						province_id = 1709
+						province_id = 1721
+						province_id = 1717
+						province_id = 1713
+						province_id = 1715
+						province_id = 1712
+						province_id = 1710
+						province_id = 1720
+						province_id = 1718
+						province_id = 1719
+						province_id = 1716
+						province_id = 1711
+						province_id = 1722
+						province_id = 3430
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#		
+#		Universal Effects		
+#
 		random_owned = {
 			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } } }
 			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
@@ -1493,7 +1552,14 @@ country_event = {
 			}
 			set_variable = { which = Secondary_Colonial value = 0 }
 			inherit = UTI
-		}
+		}	
+#		
+#		Indepdence of Colony
+#
+
+#
+#		Tunisia 
+#
 		any_country = {
 			limit = {
 				OR = {
@@ -1517,6 +1583,115 @@ country_event = {
 				secede_province = THIS
 			}
 		}
+#
+#		Algeria
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Algeria_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1694
+						province_id = 1699
+						province_id = 1698
+						province_id = 1695
+						province_id = 1700
+						province_id = 1706
+						province_id = 1703
+						province_id = 1813
+						province_id = 1704
+						province_id = 1705
+						province_id = 1707
+						province_id = 1708
+						province_id = 1702
+						province_id = 1701
+						province_id = 1709
+						province_id = 1721
+						province_id = 1717
+						province_id = 1713
+						province_id = 1715
+						province_id = 1712
+						province_id = 1710
+						province_id = 1720
+						province_id = 1718
+						province_id = 1719
+						province_id = 1716
+						province_id = 1711
+						province_id = 1722
+						province_id = 3430
+					}
+				}
+				secede_province = THIS
+			}
+		}
+#
+#		Morocco
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Morocco_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1690
+						province_id = 1693
+						province_id = 1691
+						province_id = 2563
+						province_id = 1692
+						province_id = 1685
+						province_id = 1681
+						province_id = 1682
+						province_id = 1680
+						province_id = 1686
+						province_id = 1688
+						province_id = 1689
+						province_id = 1687
+						province_id = 2590
+						province_id = 1683
+						province_id = 1684
+						province_id = 1697
+					}
+				}
+				secede_province = THIS
+			}
+		}
+#
+#		Western Sahara 
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Morocco_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1696
+						province_id = 1773
+						province_id = 1774
+					}
+				}
+				secede_province = THIS
+			}
+		}
+#
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
