@@ -5912,7 +5912,7 @@ country_event = {
         name = "The lands of $FROMCOUNTRY$ shall be ours"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
-			country_event = 77777032
+			country_event = 777770432
 		}
     }
 }
@@ -6052,7 +6052,7 @@ country_event = {
         name = "The lands of $FROMCOUNTRY$ shall be ours"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
-			country_event = 77777032
+			country_event = 777770432
 		}
     }
 }
@@ -9006,7 +9006,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9014,7 +9014,7 @@ country_event = {
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9022,7 +9022,7 @@ country_event = {
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9030,7 +9030,7 @@ country_event = {
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9038,7 +9038,7 @@ country_event = {
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9046,7 +9046,7 @@ country_event = {
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9054,7 +9054,7 @@ country_event = {
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		random_country = {
 			limit = {
@@ -9062,7 +9062,7 @@ country_event = {
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
-			country_event = 777770556
+			country_event = 777770550
 		}
 		any_country = {
 			limit = {
@@ -15390,6 +15390,1028 @@ country_event = {
 }
 
 country_event = {
+    id = 777770512
+    title = "Our cores are being considered?"
+    desc = "Our cores are being considered by a Secondary Victor!"
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Second_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Third_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Fourth_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Fifth_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Sixth_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Seventh_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } check_variable = { which = Eighth_Secondary_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			country_event = 777770554
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Secondary_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Secondary_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Eighth value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Secondary_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Secondary_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Eighth value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Eighth_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Secondary_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Seventh value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 } 
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Secondary_Complete value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Seventh value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Seventh_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Sixth value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = {check_variable = { which = Natural_Secondary_Sixth value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Sixth_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Fifth value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Fifth value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Fifth_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Fourth value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Fourth value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Fourth_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 } 
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Third value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 } 
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { check_variable = { which = Second_Secondary_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Third value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Third_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				FROM = { check_variable = { which = First_Secondary_Complete value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Second_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Natural_Secondary_Second value = 1 } }
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				FROM = { check_variable = { which = First_Secondary_Complete value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Second_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+				FROM = { NOT = { check_variable = { which = Natural_Secondary_Second value = 0.99 } } }
+			}
+			FROM = { set_variable = { which = Second_Secondary_Complete value = 1 } }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Overwrite value = 0.99 } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { NOT = { check_variable = { which = First_Secondary_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				FROM = { NOT = { check_variable = { which = Dismantle_Released value = 0.99 } } }
+			}
+			country_event = 777770470
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770554
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770471
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_NonOverwrite value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770471
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770472
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Apathy value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770472
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770551
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770473
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_As_Is value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770473
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+				ai = yes
+			}
+			country_event = 777770550
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770474
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770474
+		}
+	}
+}
+
+country_event = {
     id = 777770522
     title = "Our cores are being considered?"
     desc = "Our claims are being considered by a Secondary Victor!"
@@ -19125,6 +20147,42 @@ country_event = {
             any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
         }
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					check_variable = { which = Rewritable_State value = 0.99 }
+				}
+				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+			}
+			any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
+			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
+			THIS = { set_country_flag = dont_be_weird_about_this }
+		}
+		random_owned = {
+			limit = { owner = { has_country_flag = dont_be_weird_about_this } }
+			owner = {
+				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
+				release = UTI
+				UTI = { annex_to = UTI any_owned = { limit = { is_core = CLN } add_core = THIS remove_core = CLN } all_core = { remove_core = UTI } }
+			}
+		}
+		random_country = {
+			limit = {
+				THIS = { has_country_flag = dont_be_weird_about_this }
+				check_variable = { which = Secondary_Claim value = 0.99 }
+			}
+			THIS = { clr_country_flag = dont_be_weird_about_this }
+			inherit = UTI
+		}
+		random_country = {
+			limit = {
+				THIS = { has_country_flag = dont_be_weird_about_this }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			THIS = { clr_country_flag = dont_be_weird_about_this }
+			inherit = UTI
+		}
 		random_owned = {
 			limit = { owner = { FROM = { civilized = yes } } }
 			owner = {
@@ -19218,33 +20276,33 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Damn"
-#		random_country = {
-#			limit = {
-#				check_variable = { which = Dismantlement_Chair value = 0.99 }
-#				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
-#			}
-#			create_vassal = FROM
-#			
-#		}
-#		random_country = {
-#			limit = {
-#				tag = FROM
-#				overlord = { government = proletarian_dictatorship }
-#				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-#			}
-#			government = proletarian_dictatorship
-#			
-#		}
-#		random_country = {
-#			limit = {
-#				tag = FROM
-#				overlord = { government = fascist_dictatorship }
-#				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-#			}
-#			government = fascist_dictatorship
-#			
-#		}
-#		FROM = { set_variable = { which = Outcome_Required value = 0 } }
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
+			}
+			create_vassal = FROM
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = proletarian_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = proletarian_dictatorship
+			
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				overlord = { government = fascist_dictatorship }
+				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+			}
+			government = fascist_dictatorship
+			
+		}
+		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
 country_event = {
