@@ -5302,45 +5302,7 @@ country_event = {
 #		
 #	##### Colony Events - Fixed Borders System ##### 
 #		
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = ALD }
-					AND = { ALD = { ai = yes exists = ALD } }
-				}
-			}
-			ALD = {  
-				country_event = 777770610 
-				set_variable = { which = Algeria_Colony value = 1 }
-			}
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = TUN }
-					AND = { TUN = { ai = yes exists = TUN } }
-				}
-			}
-			TUN = {
-				country_event = 777770610 
-				set_variable = { which = Tunisia_Colony value = 1 }
-			}
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = MOR }
-					AND = { MOR = { ai = yes exists = MOR} }
-				}
-			}
-			MOR = { 
-				set_variable = { which = Morocco_Colony value = 1 } 
-				country_event = 777770610 
-			}
-		}
+
 #
 #	##### Cleanup Chain Trigger #####
 #
@@ -5454,6 +5416,36 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = ALD }
+					AND = { ALD = { ai = yes exists = ALD } }
+				}
+			}
+			set_variable = { which = Outcome_Required value = 1 }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = TUN }
+					AND = { TUN = { ai = yes exists = TUN } }
+				}
+			}
+			set_variable = { which = Outcome_Required value = 1 }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = MOR }
+					AND = { MOR = { ai = yes exists = MOR} }
+				}
+			}
+			set_variable = { which = Outcome_Required value = 1 }
+		}
 	}
 	
 	option = {
@@ -5500,6 +5492,16 @@ country_event = {
 				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
+				NOT = {
+					OR = {
+						tag = YAK
+						tag = BRY
+						tag = KAM
+						tag = ALD
+						tag = TUN
+						tag = MOR
+					}
+				}
 			}
 			country_event = 777770412
 			set_country_flag = mail_delivery_opened
@@ -5573,6 +5575,9 @@ country_event = {
 						tag = YAK
 						tag = BRY
 						tag = KAM
+						tag = ALD
+						tag = TUN
+						tag = MOR
 					}
 				}
 			}
@@ -5607,6 +5612,54 @@ country_event = {
 			set_country_flag = mail_delivery_opened
 			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#
+#		The Colonies
+#
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = ALD }
+					AND = { ALD = { ai = yes exists = ALD } }
+				}
+			}
+			ALD = {  
+				country_event = 777770610 
+				set_country_flag = mail_delivery_opened
+				set_variable = { which = Algeria_Colony value = 1 }
+				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+			}
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = TUN }
+					AND = { TUN = { ai = yes exists = TUN } }
+				}
+			}
+			TUN = {
+				country_event = 777770610 
+				set_country_flag = mail_delivery_opened
+				set_variable = { which = Tunisia_Colony value = 1 }
+				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+			}
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = MOR }
+					AND = { MOR = { ai = yes exists = MOR} }
+				}
+			}
+			MOR = { 
+				country_event = 777770610 
+				set_country_flag = mail_delivery_opened
+				set_variable = { which = Morocco_Colony value = 1 } 
+				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+			}
 		}
 		#cleans up after the conference is over
 		random_owned = {
@@ -5701,6 +5754,9 @@ country_event = {
 					set_variable = { which = Natural_Secondary_Sixth value = 0 }
 					set_variable = { which = Natural_Secondary_Seventh value = 0 }
 					set_variable = { which = Natural_Secondary_Eighth value = 0 }
+					set_variable = { which = Tunisia_Colony value = 0 }
+					set_variable = { which = Tunisia_Colony value = 0 }
+					set_variable = { which = Morocco_Colony value = 0 } 
 				}
 			}
 		}
