@@ -41,6 +41,7 @@ country_event = {
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
     is_triggered_only = yes
+	allow_multiple_instances = yes
     option = {
         name = "We shall take them for ourselves."
         any_country = {
