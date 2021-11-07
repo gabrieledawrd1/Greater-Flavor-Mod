@@ -5306,15 +5306,40 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				OR = {
+					NOT = { exists = ALD }
+					AND = { ALD = { ai = yes exists = ALD } }
+				}
+			}
+			ALD = {  
+				country_event = 777770610 
+				set_variable = { which = Algeria_Colony value = 1 }
+			}
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
 					NOT = { exists = TUN }
 					AND = { TUN = { ai = yes exists = TUN } }
 				}
-#				OR = {
-#					1729 = { owner = { tag = THIS } }
-#					1730 = { owner = { tag = THIS } }
-#				}
 			}
-			TUN = { set_variable = { which = Tunisia_Colony value = 1 } country_event = 777770610 }
+			TUN = {
+				country_event = 777770610 
+				set_variable = { which = Tunisia_Colony value = 1 }
+			}
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				OR = {
+					NOT = { exists = MOR }
+					AND = { MOR = { ai = yes exists = MOR} }
+				}
+			}
+			MOR = { 
+				set_variable = { which = Morocco_Colony value = 1 } 
+				country_event = 777770610 
+			}
 		}
 #
 #	##### Cleanup Chain Trigger #####
