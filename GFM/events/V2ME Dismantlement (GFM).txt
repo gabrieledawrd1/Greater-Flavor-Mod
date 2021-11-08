@@ -5418,30 +5418,22 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = ALD }
-					AND = { ALD = { ai = yes exists = ALD } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
 				}
-			}
-			set_variable = { which = Outcome_Required value = 1 }
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				OR = {
-					NOT = { exists = TUN }
-					AND = { TUN = { ai = yes exists = TUN } }
+					tag = ALD
+					tag = TUN
+					tag = MOR
 				}
-			}
-			set_variable = { which = Outcome_Required value = 1 }
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				OR = {
-					NOT = { exists = MOR }
-					AND = { MOR = { ai = yes exists = MOR} }
+					exists = no
+					AND = { exists = yes ai = yes }
 				}
 			}
 			set_variable = { which = Outcome_Required value = 1 }
@@ -5583,7 +5575,6 @@ country_event = {
 			}
 			country_event = 777770410
 			set_country_flag = mail_delivery_opened
-			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		FAR EASTERN REPUBLIC CORE EVENT
@@ -5610,7 +5601,6 @@ country_event = {
 			}
 			country_event = 777771100
 			set_country_flag = mail_delivery_opened
-			set_variable = { which = Freedom_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #
@@ -5618,48 +5608,31 @@ country_event = {
 #
 		any_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				OR = {
-					NOT = { exists = ALD }
-					AND = { ALD = { ai = yes exists = ALD } }
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
 				}
-			}
-			ALD = {  
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				set_variable = { which = Algeria_Colony value = 1 }
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
-			}
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				OR = {
-					NOT = { exists = TUN }
-					AND = { TUN = { ai = yes exists = TUN } }
+					tag = ALD
+					tag = TUN
+					tag = MOR
 				}
-			}
-			TUN = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				set_variable = { which = Tunisia_Colony value = 1 }
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
-			}
-		}
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				OR = {
-					NOT = { exists = MOR }
-					AND = { MOR = { ai = yes exists = MOR} }
+					exists = no
+					AND = { ai = yes exists = yes }
 				}
+				check_variable = { which = Outcome_Required value = 0.99 }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 			}
-			MOR = { 
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				set_variable = { which = Morocco_Colony value = 1 } 
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
-			}
+			country_event = 777770610
+			set_country_flag = mail_delivery_opened
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 		#cleans up after the conference is over
 		random_owned = {
@@ -5783,6 +5756,7 @@ country_event = {
 				NOT = { has_global_flag = Total_One_Victor }
 			}
 			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
 			country_event = 777770420
 		}
 		any_country = {
@@ -5792,6 +5766,7 @@ country_event = {
 				has_global_flag = Total_One_Victor
 			}
 			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
 			country_event = 777770423
 		}
     }
@@ -20819,8 +20794,11 @@ country_event = {
 		set_variable = { which = Non_Rewritable_State value = 0 }
 		any_country = {
 			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
 			country_event = 777771300
 		}
     }

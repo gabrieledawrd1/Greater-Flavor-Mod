@@ -27,8 +27,25 @@ country_event = {
         name = "Very Well"
 		any_country = {
 			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ALD } } }
+					owner = { THIS = { set_variable = { which = Algeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TUN } } }
+					owner = { THIS = { set_variable = { which = Tunisia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOR } } }
+					owner = { THIS = { set_variable = { which = Morocco_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777770620
 		}
     }
