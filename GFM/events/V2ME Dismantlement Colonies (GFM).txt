@@ -1543,11 +1543,11 @@ country_event = {
 #		Universal Effects		
 #
 		random_owned = {
-			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } } }
+			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } FROM = { check_variable = { which = Annex_Colony value = 0.99 } } } }
 			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
 		}
 		random_owned = {
-			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } } }
+			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } FROM = { check_variable = { which = Annex_Colony value = 0.99 } } } }
 			owner = {
 				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
 				release = UTI
