@@ -5728,7 +5728,7 @@ country_event = {
 					set_variable = { which = Natural_Secondary_Seventh value = 0 }
 					set_variable = { which = Natural_Secondary_Eighth value = 0 }
 					set_variable = { which = Tunisia_Colony value = 0 }
-					set_variable = { which = Tunisia_Colony value = 0 }
+					set_variable = { which = Algeria_Colony value = 0 }
 					set_variable = { which = Morocco_Colony value = 0 } 
 				}
 			}

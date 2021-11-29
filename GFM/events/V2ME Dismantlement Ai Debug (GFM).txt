@@ -11,7 +11,7 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "USA as Victor, RUS as Defeated"
-		USA = { set_variable = { Simulation_Dismantlement_Chair = 1 } }
+		USA = { set_variable = { which = Simulation_Dismantlement_Chair value = 1 } }
 		set_global_flag = Total_One_Victor
 		RUS = { country_event = 777770351 }
     }
@@ -26,7 +26,7 @@ country_event = {
 	
     option = {
         name = "Very Well"
-		set_variable = { Simulation_Major_Defeated = 1 }
+		set_variable = { which = Simulation_Major_Defeated value = 1 }
 		any_country = {
 			limit = {
 				any_core = {

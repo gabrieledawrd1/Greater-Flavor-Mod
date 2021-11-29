@@ -120,7 +120,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -128,7 +127,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -136,7 +134,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -144,7 +141,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -152,7 +148,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -160,7 +155,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -168,7 +162,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -176,7 +169,6 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
-				ai = yes
 			}
 			FROM = { country_event = 777770750 }
 		}
@@ -289,73 +281,57 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		any_country = {
 			limit = {
@@ -466,73 +442,57 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770751
+			FROM = { country_event = 777770751 }
 		}
 		any_country = {
 			limit = {
@@ -643,73 +603,57 @@ country_event = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
 				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
-				ai = yes
-				tag = FROM
 			}
-			country_event = 777770750
+			FROM = { country_event = 777770750 }
 		}
 		any_country = {
 			limit = {
@@ -1460,10 +1404,6 @@ country_event = {
     option = {
         name = "Huh"
 #
-#		Annexation of Colony
-#
-
-#
 #		Tunisia 
 #
 		any_country = {
@@ -1473,7 +1413,6 @@ country_event = {
 					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				}
 				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
 			any_owned = {
 				limit = {
@@ -1500,7 +1439,6 @@ country_event = {
 					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				}
 				FROM = { check_variable = { which = Algeria_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
 			any_owned = {
 				limit = {
@@ -1539,117 +1477,7 @@ country_event = {
 				add_core = UTI
 			}
 		}
-#		
-#		Universal Effects		
-#
-		random_owned = {
-			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } FROM = { check_variable = { which = Annex_Colony value = 0.99 } } } }
-			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
-		}
-		random_owned = {
-			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } FROM = { check_variable = { which = Annex_Colony value = 0.99 } } } }
-			owner = {
-				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
-				release = UTI
-				UTI = { annex_to = UTI any_owned = { limit = { is_core = CLN } add_core = THIS remove_core = CLN } all_core = { remove_core = UTI } }
-			}
-		}
-		random_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { NOT = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  } }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
-			}
-			inherit = UTI
-		}
-		random_country = {
-			limit = {
-				FROM = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  }
-				check_variable = { which = Secondary_Colonial value = 0.99 }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
-			}
-			set_variable = { which = Secondary_Colonial value = 0 }
-			inherit = UTI
-		}	
-#		
-#		Indepdence of Colony
-#
-
-#
-#		Tunisia 
-#
-		any_country = {
-			limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-				}
-				FROM = { check_variable = { which = Tunisia_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
-			}
-			any_owned = {
-				limit = {
-					OR = {
-						province_id = 1725
-						province_id = 1726
-						province_id = 1727
-						province_id = 1728
-						province_id = 1729
-						province_id = 1730
-					}
-				}
-				secede_province = THIS
-			}
-		}
-#
-#		Algeria
-#
-		any_country = {
-			limit = {
-				OR = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-				}
-				FROM = { check_variable = { which = Algeria_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
-			}
-			any_owned = {
-				limit = {
-					OR = {
-						province_id = 1694
-						province_id = 1699
-						province_id = 1698
-						province_id = 1695
-						province_id = 1700
-						province_id = 1706
-						province_id = 1703
-						province_id = 1813
-						province_id = 1704
-						province_id = 1705
-						province_id = 1707
-						province_id = 1708
-						province_id = 1702
-						province_id = 1701
-						province_id = 1709
-						province_id = 1721
-						province_id = 1717
-						province_id = 1713
-						province_id = 1715
-						province_id = 1712
-						province_id = 1710
-						province_id = 1720
-						province_id = 1718
-						province_id = 1719
-						province_id = 1716
-						province_id = 1711
-						province_id = 1722
-						province_id = 3430
-					}
-				}
-				secede_province = THIS
-			}
-		}
-#
+		#
 #		Morocco
 #
 		any_country = {
@@ -1659,7 +1487,6 @@ country_event = {
 					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				}
 				FROM = { check_variable = { which = Morocco_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
 			}
 			any_owned = {
 				limit = {
@@ -1684,6 +1511,7 @@ country_event = {
 					}
 				}
 				secede_province = THIS
+				add_core = UTI
 			}
 		}
 #
@@ -1696,7 +1524,6 @@ country_event = {
 					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				}
 				FROM = { check_variable = { which = Morocco_Colony value = 0.99 } }
-				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
 			}
 			any_owned = {
 				limit = {
@@ -1707,9 +1534,46 @@ country_event = {
 					}
 				}
 				secede_province = THIS
+				add_core = UTI
 			}
 		}
+#		
+#		Universal Effects		
 #
+		random_owned = {
+			limit = { owner = { check_variable = { which = Independent_Colony value = 0.99 } } }
+			owner = { UTI = { all_core = { remove_core = UTI } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } check_variable = { which = Annex_Colony value = 0.99 } } }
+			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
+		}
+		random_owned = {
+			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } check_variable = { which = Annex_Colony value = 0.99 } } }
+			owner = {
+				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
+				release = UTI
+				UTI = { annex_to = UTI any_owned = { limit = { is_core = CLN } add_core = THIS remove_core = CLN } all_core = { remove_core = UTI } }
+			}
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  } }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
+			}
+			inherit = UTI
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  }
+				check_variable = { which = Secondary_Colonial value = 0.99 }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
+			}
+			set_variable = { which = Secondary_Colonial value = 0 }
+			inherit = UTI
+		}
+		
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
