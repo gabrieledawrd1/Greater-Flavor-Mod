@@ -5637,13 +5637,9 @@ country_event = {
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				any_owned = {
-					owner = {
-						OR = {
-							check_variable = { which = Major_Defeated value = 0.99 }
-							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-						}
-					}
+				check_variable = { which = Major_Defeated value = 0.99 }
+				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				any_owned_province = {
 					OR = {
 						province_id = 1725
 						province_id = 1726
@@ -5654,29 +5650,23 @@ country_event = {
 					}
 				}
 				TUN = {
-					exists = no
-					AND = { ai = yes exists = yes }
+					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 				}
 			}
-			TUN = { 
+			TUN = {
 				country_event = 777770610 
 				set_country_flag = mail_delivery_opened
-				check_variable = { which = Outcome_Required value = 0.99 }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 			}
 		}
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				any_owned = {
-					owner = {
-						OR = {
-							check_variable = { which = Major_Defeated value = 0.99 }
-							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-						}
-					}
+				check_variable = { which = Major_Defeated value = 0.99 }
+				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				any_owned_province = {
 					OR = {
 						province_id = 1725
 						province_id = 1726
@@ -5687,16 +5677,14 @@ country_event = {
 					}
 				}
 				MOR = {
-					exists = no
-					AND = { ai = yes exists = yes }
+					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 				}
 			}
 			MOR = {
 				country_event = 777770610 
 				set_country_flag = mail_delivery_opened
-				check_variable = { which = Outcome_Required value = 0.99 }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 			}
 		}
