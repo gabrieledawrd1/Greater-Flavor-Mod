@@ -15167,7 +15167,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15176,7 +15176,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15185,7 +15185,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15194,7 +15194,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15203,7 +15203,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15212,7 +15212,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15221,7 +15221,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		random_country = {
 			limit = {
@@ -15230,7 +15230,7 @@ country_event = {
 				ai = yes
 			}
 			FROM = { set_variable = { which = Dismantle_Released value = 1 } }
-			country_event = 777770551
+			country_event = 777770556
 		}
 		any_country = {
 			limit = {
