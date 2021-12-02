@@ -4403,7 +4403,7 @@
     farmers = {
         culture = han_chinese
         religion = confucian
-        size = 416425
+        size = 416275
     }
 
     serfs = {
@@ -4440,6 +4440,12 @@
         culture = hanhui
         religion = sunni
         size = 35500
+    }
+	
+	artisans = {
+        culture = sephardic
+        religion = jewish
+        size = 150
     }
 }
 #Huaiqing (4524000/1131000 POPS)
@@ -8883,7 +8889,13 @@
     farmers = {
         culture = mongol
         religion = gelugpa
-        size = 75000
+        size = 74300
+    }
+	
+	farmers = {
+        culture = russian
+        religion = orthodox
+        size = 700
     }
 
     farmers = {

@@ -1271,7 +1271,13 @@
     farmers = {
         culture = finnish
         religion = orthodox
-        size = 300
+        size = 250
+    }
+	
+    farmers = {
+        culture = norwegian
+        religion = orthodox
+        size = 50
     }
 }
 #Onega (22000/5500 POPS)
@@ -2387,7 +2393,7 @@
     artisans = {
         culture = russian
         religion = orthodox
-        size = 4500
+        size = 500
     }
 
     soldiers = {
@@ -2399,13 +2405,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 38850
+        size = 19950
     }
 
     serfs = {
         culture = russian
         religion = orthodox
-        size = 50000
+        size = 42000
     }
 
     clergymen = {
@@ -2429,7 +2435,7 @@
     farmers = {
         culture = ugrian
         religion = orthodox
-        size = 10250
+        size = 4250
     }
 }
 3419 = {
@@ -2448,7 +2454,7 @@
     artisans = {
         culture = russian
         religion = orthodox
-        size = 4500
+        size = 1500
     }
 
     soldiers = {
@@ -2460,13 +2466,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 38850
+        size = 15350
     }
 
     serfs = {
         culture = russian
         religion = orthodox
-        size = 50000
+        size = 24600
     }
 
     clergymen = {
@@ -2490,7 +2496,7 @@
     farmers = {
         culture = ugrian
         religion = orthodox
-        size = 10250
+        size = 5250
     }
 }
 #Staritsa (244000/61000 POPS)
@@ -9210,31 +9216,31 @@
 #Aldan (1000/250 POPS)
 2696 = {
     aristocrats = {
-        culture = siberian
+        culture = yakut
         religion = tengri
         size = 2
     }
 
     clergymen = {
-        culture = siberian
+        culture = yakut
         religion = tengri
         size = 5
     }
 
     artisans = {
-        culture = siberian
+        culture = yakut
         religion = tengri
         size = 10
     }
 
     soldiers = {
-        culture = siberian
+        culture = yakut
         religion = tengri
         size = 3
     }
 
     farmers = {
-        culture = siberian
+        culture = yakut
         religion = tengri
         size = 230
     }
@@ -9244,36 +9250,37 @@
     aristocrats = {
         culture = manchu
         religion = mahayana
-        size = 2
+        size = 20
     }
 
     clergymen = {
         culture = manchu
         religion = mahayana
-        size = 5
+        size = 50
     }
 
     artisans = {
         culture = manchu
         religion = mahayana
-        size = 10
+        size = 80
     }
 
     soldiers = {
         culture = manchu
         religion = mahayana
-        size = 3
+        size = 90
     }
 
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 230
+        size = 9630
     }
+	
     slaves = {
         culture = siberian
         religion = tengri
-        size = 30
+        size = 9300
     }
 }
 
@@ -9470,7 +9477,7 @@
     farmers = {
         culture = siberian
         religion = tengri
-        size = 450
+        size = 1250
     }
 
     artisans = {
@@ -9488,7 +9495,7 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 235
+        size = 935
     }
 }
 #Ola (2000/500 POPS)
@@ -11017,13 +11024,13 @@
     aristocrats = {
         culture = ainu
         religion = tengri
-        size = 15
+        size = 25
     }
 
     clergymen = {
         culture = ainu
         religion = tengri
-        size = 5
+        size = 23
     }
 
     artisans = {
@@ -11041,13 +11048,13 @@
     farmers = {
         culture = ainu
         religion = tengri
-        size = 440
+        size = 1100
     }
 
     farmers = {
         culture = japanese
         religion = mahayana
-        size = 20
+        size = 120
     }
 }
 #Otomari (4100/1025 POPS)
@@ -11055,13 +11062,13 @@
     aristocrats = {
         culture = ainu
         religion = tengri
-        size = 7
+        size = 14
     }
 
     clergymen = {
         culture = ainu
         religion = tengri
-        size = 3
+        size = 9
     }
 
     artisans = {
@@ -11073,19 +11080,19 @@
     soldiers = {
         culture = ainu
         religion = tengri
-        size = 10
+        size = 30
     }
 
     farmers = {
         culture = ainu
         religion = tengri
-        size = 550
+        size = 1300
     }
 
     farmers = {
         culture = japanese
         religion = shinto
-        size = 20
+        size = 200
     }
 }
 #Shumshu (4000/1000 POPS)
@@ -11186,25 +11193,25 @@
     }
 	
 	clergymen = {
-        culture = abkhaz
+        culture = circassian
         religion = sunni
         size = 25
     }
 
     artisans = {
-        culture = abkhaz
+        culture = circassian
         religion = sunni
         size = 200
     }
 
     soldiers = {
-        culture = abkhaz
+        culture = circassian
         religion = sunni
         size = 25
     }
 	
     farmers = {
-        culture = abkhaz
+        culture = circassian
         religion = sunni
         size = 2750
     }

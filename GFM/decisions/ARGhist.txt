@@ -367,6 +367,7 @@ political_decisions = {
             ENT = { exists = no }
             CRT = { exists = no }
             SBA = { exists = no }
+			NOT = { has_global_flag = corrientes_led_argentina }
         }
 
         allow = {
@@ -1257,5 +1258,53 @@ political_decisions = {
             }
         }
         ai_will_do = { factor = 1 }
+    }
+
+    argie_university = {
+		picture = arguni
+        potential = {
+			OR = {
+			    tag = ARC
+				tag = ARG
+				tag = LPL
+			}
+			OR = {
+			    mass_politics = 1
+				year = 1910
+			}
+			NOT = { has_country_flag = arg_reform_uni }
+        }
+
+        allow = {
+            OR = {
+			    year = 1918
+				invention = the_decline_of_the_west_and_the_lost_generation 
+			}
+        }
+	
+        effect = {
+		    prestige = 3
+	        years_of_research = 0.3
+            add_country_modifier = { name = argie_college duration = 3650 }
+            any_pop = {
+		        limit = {
+				    location = { province_id = 2379 }
+				    type = clergymen
+				}
+			    consciousness = -1
+			    militancy = -1
+			}
+		    any_pop = {
+		        limit = {
+				    NOT = {
+				        location = { province_id = 2379 }
+						type = clergymen
+					}
+				}
+			    consciousness = -0.5
+			    militancy = -0.5
+			}
+            set_country_flag = arg_reform_uni
+        }
     }
 }

@@ -102,7 +102,7 @@ political_decisions = {
 
         effect = {
             set_global_flag = misiones_orientales_claimed
-            badboy = 1.5
+            badboy = 2
             2466 = { add_core = THIS }
             2467 = { add_core = THIS }
         }
@@ -162,8 +162,20 @@ political_decisions = {
                     move_pop = 2467
                 }
             }
-            2466 = { change_province_name = "San Nicolas" }
-            2467 = { change_province_name = "San Borja" }
+            2466 = {
+			    change_province_name = "San Nicolás"
+                add_province_modifier = {
+		            name = cultural_resurgence
+				    duration = 1825
+		        }
+			}
+            2467 = { 
+			    change_province_name = "San Borja"
+                add_province_modifier = {
+		            name = cultural_resurgence
+				    duration = 1825
+		        }
+			}
         }
         ai_will_do = { factor = 1 }
     }
@@ -399,6 +411,7 @@ political_decisions = {
         potential = {
             tag = LPL
             invention = the_dark_continent
+			NOT = { has_country_flag = platine_guinea }
         }
 
         allow = {
@@ -410,6 +423,7 @@ political_decisions = {
         }
 
         effect = {
+			set_country_flag = platine_guinea
 		    prestige = 10
 		    badboy = 3
 		    1955 = {
@@ -441,10 +455,6 @@ political_decisions = {
 	organize_platine_guinea = {
 		picture = fernando_po
 		potential = {
-			OR = {
-				has_country_flag = organize_colony_decisions
-				ai = yes
-			}
 			tag = LPL
 			owns = 1973
 			owns = 1955
@@ -569,7 +579,7 @@ political_decisions = {
                 add_core = THIS
 				add_core = EQG
 				owner = { 
-				    relation = { who = THIS value = -50 }
+				    relation = { who = THIS value = -60 }
 					casus_belli = { target = THIS type = cut_down_to_size months = 36 }
 				}
             }

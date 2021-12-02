@@ -564,6 +564,31 @@ country_event = {
     }
 }
 
+country_event = {
+	id = 992022
+	title = "Persia Victorious!"
+	desc = "EVTDESC992022"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PER
+		has_global_flag = anglo_persian_war
+		NOT = { war_with = ENG }
+		is_disarmed = no
+	}
+	
+	option = {
+		name = "Our might is unmatched!"
+		set_global_flag = british_got_rekt
+		prestige = 25
+		treasury = 100000
+		ENG = {
+			diplomatic_influence = { who = THIS value = -400 }
+		}
+	}
+}
+
 #Persia Refuses - Russian Response
 country_event = {
     id = 992021
@@ -943,7 +968,7 @@ country_event = {
     id = 123690
 	picture = "kalat_collapse"
     title = "The collapse of Kalat"
-    desc = "The British puppet Shah Nawaz Khan has been deposed by Mir Nasir Khan II, but the country has fallen into turmoil."
+    desc = "KALATCOLLAPSE"
 	major = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1044,7 +1069,10 @@ country_event = {
 		relation = { who = AFG value = -100 }
 		relation = { who = FROM value = 100 }
 		ai_chance = { factor = 100 }
-		KND = { war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes } }
+		KND = { 
+			# Audax Validator "." Ignore_NEXT
+			war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes } 
+		}
     }
 	option = {
         name = "They must fend for themselves."
@@ -2014,7 +2042,6 @@ country_event = {
 }
 country_event = {
     id = 123719
-    fire_only_once = yes
     title = "Persia refuses"
     desc = "Our offer of Herat and Kandahar in return for several concessions to us that we sent to the Persians has been coldly refused."
     picture = "herat_kandahar_offer" 
@@ -2059,7 +2086,6 @@ country_event = {
 }
 country_event = {
     id = 123722
-    fire_only_once = yes
     title = "Britain has relented"
     desc = "Upon our demand of an unconditional handover of Herat and Kandahar, Britain was open to compromise."
     picture = "herat_kandahar_offer" 
@@ -2310,7 +2336,6 @@ country_event = {
 }
 country_event = {
     id = 123730
-    fire_only_once = yes
     title = "The Panjdeh Incident"
     desc = "Sire! The Russians are attacking Panjdeh North of Herat! If we do not intervene, they will be occupying Herat by the end of the week! We must act now!"
     picture = "panjdeh"
@@ -2513,7 +2538,6 @@ country_event = {
 }
 country_event = {
     id = 123738
-    fire_only_once = yes
     title = "Handing over Pishukan"
     desc = "As per the Goldsmid Arbitration, we must relinquish our ownership of Pishukan to Makran."
     picture = "goldsmid"
@@ -2528,7 +2552,6 @@ country_event = {
 }
 country_event = {
     id = 123739
-    fire_only_once = yes
     title = "The Edict of Gulhane"
     desc = "The Ottomans have issued an edict concerning their administration of vassals. Our continued existance is in danger!"
     picture = "treaty_of_tientsin"

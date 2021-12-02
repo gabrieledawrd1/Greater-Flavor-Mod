@@ -1,6 +1,5 @@
 capital = 1095
-primary_culture = abkhaz
-culture = circassian
+primary_culture = circassian
 religion = orthodox
 government = absolute_monarchy
 plurality = 0.0
@@ -59,7 +58,6 @@ upper_house = {
     communist = 0
 }
 
-decision = abkhazia_1836_setup
 set_country_flag = is_orthodox
 
 # Technologies

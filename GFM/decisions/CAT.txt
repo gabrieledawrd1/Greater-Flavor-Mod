@@ -23,11 +23,11 @@ political_decisions = {
         }
     }
     
-    become_aragon = { 
+    become_aragon = {
 		picture = aragon_map
-		ai = no
 	    potential = {
 			tag = CAT
+			ai = no
 			NOT = { has_country_flag = become_aragon }
 	    }
 		
@@ -43,15 +43,13 @@ political_decisions = {
 			CAT = {
                 all_core = {
                     OR = {
-                        OR = {
-                            owned_by = THIS
-                            owner = {
-							    OR = {
-								    in_sphere = THIS
-								    vassal_of = THIS
-							    }
-							}
-                        }
+                        owned_by = THIS
+                        owner = {
+						    OR = {
+							    in_sphere = THIS
+							    vassal_of = THIS
+						    }
+						}
                     }
 				}
 			}
@@ -247,7 +245,7 @@ political_decisions = {
 			}
 			496 = { 
 				change_province_name = "Osca" 
-				state_scope = { change_region_name = "Aragò" }
+				state_scope = { change_region_name = "Aragó" }
 			}
 			753 = { change_province_name = "L'Aquila" }
             755 = { change_province_name = "Salern" }
@@ -302,7 +300,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {
-						is_pop_culture = catalan
+						has_pop_culture = catalan
 					}
 					consciousness = 7
 					militancy = 6
@@ -318,4 +316,64 @@ political_decisions = {
 			}
 		}
 	}
+	
+	build_the_eiffel_tower_barcelona = {
+        picture = build_the_eiffel_tower
+        potential = {
+            498 = { is_core = THIS }
+            owns = 498
+            NOT = {
+                has_global_flag = the_eiffel_tower_was_built
+            }
+            OR = {
+                has_country_flag = world_fair_planner
+                AND = {
+					year = 1887
+					ai = no
+				}
+            }
+        }
+
+        allow = {
+            war = no
+            regenerative_furnaces = 1
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+            OR = {
+				money = 30000
+				ai = yes
+			}
+        }
+
+        effect = {
+            country_event = 31716
+            set_global_flag = the_eiffel_tower_was_built
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+	
+	build_the_urgell_channels = {
+        picture = urgell_channel
+        potential = {
+            500 = { is_core = THIS }
+            owns = 500
+            NOT = { has_global_flag = urgell_channel_built }
+        }
+
+        allow = {
+            war = no
+            stiff_plastic_brickmaking_machine = 1
+            money = 20000
+        }
+
+        effect = {
+            country_event = 31718
+            set_global_flag = urgell_channel_built
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }

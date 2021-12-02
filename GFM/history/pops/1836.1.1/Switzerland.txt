@@ -88,7 +88,13 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 45720
+        size = 45380
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 340
     }
 
     ######Jews
@@ -400,13 +406,19 @@
     farmers = {
         culture = arpitan
         religion = catholic
-        size = 21230
+        size = 21110
     }
 	
 	farmers = {
         culture = french
         religion = catholic
         size = 10000
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 120
     }
 }
 3317 = {
@@ -501,6 +513,7 @@
         religion = reformed
         size = 100
     }
+	
     aristocrats = {
         culture = arpitan
         religion = reformed
@@ -531,7 +544,7 @@
         size = 10625
     }
 }
-#Sitten (72000/18000) POPS
+#Sitten (72000/18000 POPS)
 609 = {
     aristocrats = {
         culture = arpitan
@@ -818,7 +831,49 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 14550
+        size = 11550
+    }
+
+    aristocrats = {
+        culture = arpitan
+        religion = catholic
+        size = 30
+    }
+
+    bureaucrats = {
+        culture = arpitan
+        religion = catholic
+        size = 8
+    }
+
+    officers = {
+        culture = arpitan
+        religion = catholic
+        size = 5
+    }
+
+    clergymen = {
+        culture = arpitan
+        religion = catholic
+        size = 35
+    }
+
+    artisans = {
+        culture = arpitan
+        religion = catholic
+        size = 300
+    }
+
+    soldiers = {
+        culture = arpitan
+        religion = catholic
+        size = 110
+    }
+
+    farmers = {
+        culture = arpitan
+        religion = catholic
+        size = 2530
     }
 }
 
@@ -851,6 +906,49 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 11135
+        size = 9835
     }
+	
+	aristocrats = {
+        culture = north_italian
+        religion = catholic
+        size = 25
+    }
+
+    bureaucrats = {
+        culture = north_italian
+        religion = catholic
+        size = 10
+    }
+
+    officers = {
+        culture = north_italian
+        religion = catholic
+        size = 5
+    }
+
+    clergymen = {
+        culture = north_italian
+        religion = catholic
+        size = 27
+    }
+
+    artisans = {
+        culture = north_italian
+        religion = catholic
+        size = 20
+    }
+
+    soldiers = {
+        culture = north_italian
+        religion = catholic
+        size = 10
+    }
+
+    farmers = {
+        culture = north_italian
+        religion = catholic
+        size = 1375
+    }
+
 }

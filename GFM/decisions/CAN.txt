@@ -133,8 +133,6 @@ political_decisions = {
                 add_core = CAN
                 remove_core = RPL
             }
-			17 = { remove_core = STK }
-			14 = { remove_core = VAN }
             #Remove RPL & USA Cores, if owned
             RPL = {
                 any_owned = {
@@ -804,5 +802,28 @@ political_decisions = {
             24 = { add_core = ULA }
             30 = { add_core = ULA }
         }
+    }
+	
+	victoria_bridge_construction = {
+        picture = victoria_bridge
+        potential = {
+            owns = 58
+			NOT = { has_global_flag = victoria_bridge_built }
+        }
+
+        allow = {
+            war = no
+            money = 50000
+			iron_railroad = 1
+        }
+
+        effect = {
+            set_global_flag = victoria_bridge_built
+			money = -50000
+			prestige = 5
+			58 = { infrastructure = 1 }
+        }
+
+        ai_will_do = { factor = 1 }
     }
 }

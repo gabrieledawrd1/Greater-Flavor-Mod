@@ -44,7 +44,6 @@ colonial_policy = no_colonies
 set_country_flag = catholic_country
 set_country_flag = serfdom_not_abolished
 
-decision = AUS_setup_1836
 decision = slovene_rename_aus
 decision = banat_rename_aus
 decision = vojvodina_rename_aus
@@ -68,8 +67,6 @@ decision = german_veneto
 decision = bukovina_rename_aus
 decision = burgenland_rename
 
-govt_flag = { government = hms_government flag = theocracy }
-govt_flag = { government = prussian_constitutionalism flag = theocracy }
 govt_flag = { government = absolute_monarchy flag = theocracy }
 
 ruling_party = AUS_conservative

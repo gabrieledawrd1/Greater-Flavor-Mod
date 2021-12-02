@@ -725,7 +725,7 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					province_id = 3363
+					province_id = 2194
 					NOT = { trade_goods = coffee }
 				}
 				trade_goods = coffee
@@ -858,9 +858,24 @@ political_decisions = {
         effect = {
             set_country_flag = treaty_of_petropolis
             random_owned = { limit = { owner = { ai = no } } owner = { treasury = -2000000 } }
-            any_country = { limit = { OR = { is_core = 2549 is_core = 3382 is_core = 3381 } NOT = { tag = AMZ tag = THIS } } country_event = 46610101 }
+            any_country = { limit = { OR = { is_core = 2549 is_core = 3382 is_core = 3381 is_core = 2321 } NOT = { tag = AMZ tag = THIS } } country_event = 46610101 }
 			2549 = { add_core = BRZ }
-			2549 = { add_core = AMZ }
+			random_owned = {
+				limit = {
+					owner = {
+						has_global_flag = amz_created
+					}
+				}
+				owner = { 2549 = { add_core = AMZ } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_global_flag = amz_created }
+					}
+				}
+				owner = { 2549 = { add_core = PAA } }
+			}
         }
 
         ai_will_do = {
@@ -1100,5 +1115,96 @@ political_decisions = {
             }
 
         ai_will_do = { factor = 0 }
+    }
+
+    parana_development = {
+        picture = parana_river
+        potential = {
+            tag = ARG
+			OR = {
+                has_global_flag = corrientes_led_argentina
+				capital = 2356
+			}
+			NOT = { has_country_flag = parana_developed }
+			owns = 2360
+			owns = 2359 
+			owns = 2357 
+			owns = 2358 
+			owns = 2554 
+			owns = 2356
+			owns = 2348
+        }
+
+        allow = {
+            war = no
+            money = 200000
+		}
+
+        effect = {
+            set_country_flag = parana_developed
+			treasury = -200000
+			2348 = {
+			    any_pop = { consciousness = 9 militancy = 7 }
+				life_rating = -2
+			}
+            2360 = { 
+			    any_pop = { militancy = -5 }
+                add_province_modifier = { name = parana_development_forever duration = -1 }
+                naval_base = 2
+			}
+            2356 = { 
+			    any_pop = { militancy = -5 }
+                add_province_modifier = { name = parana_development_forever duration = -1 }
+                life_rating = 5	
+			}
+            2554 = {
+ 				any_pop = { militancy = -5 }
+                add_province_modifier = { name = parana_development duration = 3650 }
+			}
+            2357 = { 
+			    any_pop = { militancy = -5 }
+			    add_province_modifier = { name = parana_development duration = 3650 }
+			}
+            2359 = { 
+			    any_pop = { militancy = -5 }
+			    add_province_modifier = { name = parana_development duration = 3650 }
+			}
+            2358 = { 
+			    any_pop = { militancy = -5 }
+			    add_province_modifier = { name = parana_development duration = 3650 }
+			}
+            random_owned = {
+                limit = { province_id = 2462 }
+                add_province_modifier = { name = parana_development duration = 3650 }
+            }
+            random_owned = {
+                limit = { province_id = 2340 }
+                add_province_modifier = { name = parana_development duration = 3650 }
+            }
+        }
+        ai_will_do = { factor = 1 }
+	}
+
+    alliance_with_rgs = {
+        picture = military_aid
+        potential = {
+			tag = CRT
+			exists = RGS
+			RGS = { war = yes }
+			NOT = { has_country_flag = alliance_rgs }
+        }
+
+        allow = {
+		    NOT = { alliance_with = RGS }
+			relation = { who = RGS value = 0 }
+        }
+
+        effect = {
+            set_country_flag = alliance_rgs
+			RGS = {
+			    country_event = { id = 97133 days = 10 } 
+			}
+        }
+        ai_will_do = { factor = 1 }
     }
 }

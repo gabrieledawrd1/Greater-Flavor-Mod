@@ -1548,6 +1548,7 @@ country_event = {
             part_of_sphere = no
             is_greater_power = no
         }
+		NOT = { has_country_flag = no_more_witwatersrand }
     }
 
     mean_time_to_happen = {
@@ -1606,6 +1607,11 @@ country_event = {
             }
             remove_country_modifier = witwatersrand_gold_rush
         }
+    }
+	option = {
+        name = "Never bother me with this again."
+        set_country_flag = no_more_witwatersrand
+		ai_chance = { factor = 0 }
     }
 }
 
@@ -2019,8 +2025,9 @@ country_event = { #Rally to the Boer Cause?
         }
         create_alliance = TRN
         TRN = {
-           war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
-       }
+			# Audax Validator "." Ignore_NEXT
+			war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+		}
         ai_chance = { factor = 10}
     }
 

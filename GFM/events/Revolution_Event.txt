@@ -1609,10 +1609,6 @@ country_event = {
                     months = 250
                 }
             }
-            ENG_2513 = {
-                remove_core = NZL
-                add_core = SNZ
-            }
         }
         random_owned = {
             limit = {
@@ -1821,8 +1817,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = { civilized = no tag = TPG }
-				owner = { set_country_flag = betrayed_by_the_people }
 			}
+			owner = { set_country_flag = betrayed_by_the_people }
 		}
         random_owned = {
             limit = {

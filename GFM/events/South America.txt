@@ -154,6 +154,11 @@ country_event = {
                     }
                 call_ally = yes
                 }
+				define_general = {
+                    name = "Alejandro Heredia"
+                    personality = competent
+                    background = natural_born_leader
+				}
             }
         }
         ai_chance = {
@@ -813,6 +818,12 @@ country_event = {
         2549 = { remove_core = THIS }
 		3381 = { remove_core = THIS }
 		3382 = { remove_core = THIS }
+		any_owned = { 
+			limit = {
+				province_id = 2321
+			}
+			remove_core = PEU
+		}
 		any_country = {
 			limit = {
 				tag = FROM
@@ -841,9 +852,36 @@ country_event = {
     option = {
         name = "EVT46610101OPTB" #No
         badboy = 1
+		random_country = {
+			limit = {
+				owner = {
+					tag = PEU
+				}
+			}
+			owner = {
+				2321 = { add_core = PEU }
+				3381 = { add_core = PEU }
+				3382 = { add_core = PEU }
+				2549 = { add_core = PEU }
+			}
+		}
         relation = { who = BRZ value = -200 }
-		2321 = { add_core = BRZ }
-		2321 = { add_core = AMZ }
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = amz_created
+				}
+			}
+			owner = { 2321 = { add_core = AMZ } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = amz_created }
+				}
+			}
+			owner = { 2321 = { add_core = PAA } }
+		}
         ai_chance = {
             factor = 20
             modifier = { factor = 1.5 is_greater_power = yes }

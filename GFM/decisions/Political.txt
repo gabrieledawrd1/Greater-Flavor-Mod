@@ -796,6 +796,7 @@ political_decisions = {
         picture = budapest_city
         potential = {
             exists = yes
+			NOT = { has_global_flag = corrientes_led_argentina }
             OR = {
                 AND = { tag = GLM owns = 702 NOT = { capital = 702 } }
                 AND = { tag = NET owns = 375 NOT = { capital = 375 } }
@@ -1080,7 +1081,6 @@ political_decisions = {
             modifier = { factor = 0 has_country_modifier = totalitarian_system }
             modifier = { factor = 0 NOT = { year = 1850 } }
             modifier = { factor = 0 NOT = { state_n_government = 1 } }
-            modifier = { factor = 0 has_country_flag = ghost_country }
             modifier = {
                 factor = 0
                 OR = {
@@ -1198,7 +1198,7 @@ political_decisions = {
                     is_capital = yes
                     NOT = { life_rating = 38 }
                 }
-                625 = { #Prague
+                3483 = { #Prague
                     owned_by = THIS
                     is_capital = yes
                     NOT = { life_rating = 38 }
@@ -1318,7 +1318,7 @@ political_decisions = {
                         province_id = 771
                         province_id = 768
                         province_id = 633
-                        province_id = 625
+                        province_id = 3483
                         province_id = 372
                         province_id = 375
                         province_id = 387

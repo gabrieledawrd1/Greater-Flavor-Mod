@@ -13,7 +13,7 @@ political_decisions = {
         }
         allow = {
             money = 25000
-            owns = 625
+            owns = 3483
         }
         effect = {
             set_global_flag = build_the_northern_railway
@@ -23,11 +23,11 @@ political_decisions = {
             689 = { infrastructure = 1 }
             631 = { infrastructure = 1 }
             619 = { infrastructure = 1 }
-            625 = { infrastructure = 1 }
             3285 = { infrastructure = 1 }
             3335 = { infrastructure = 1 }
             3334 = { infrastructure = 1 }
             3426 = { infrastructure = 1 }
+			3483 = { infrastructure = 1 }
         }
 
         ai_will_do = {
@@ -299,10 +299,18 @@ political_decisions = {
         effect = {
             badboy = 5
             CRO = { all_core = { add_core = HUN } }
+			any_country = {
+				limit = {
+					tag = HUR
+					exists = yes
+				}
+				CRO = { all_core = { add_core = HUN } }
+			}
             any_owned = {
                 limit = {
                     OR = {
                         is_core = HUN
+						is_core = HUR
                         is_core = CRO
                     }
                     NOT = { is_core = DLM }

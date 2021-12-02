@@ -127,8 +127,10 @@ political_decisions = {
             NOT = {
                 has_global_flag = bulgaria_romania_formed
                 tag = BGR
+				tag = HUR
                 tag = URP
                 exists = BGR
+				exists = HUR
                 exists = URP
                 exists = ROM
                 is_culture_group = pan_romanian
@@ -282,7 +284,6 @@ political_decisions = {
             is_culture_group = pan_romanian
             exists = ROM
             NOT = {
-                has_country_flag = ghost_country
                 has_country_flag = unite_with_romania
                 tag = ROM
                 tag = MDV
@@ -365,7 +366,7 @@ political_decisions = {
 
         allow = {
             war = no
-            owns = 625
+            owns = 3483
             nationalism_n_imperialism = 1
             BOH = {
                 OR = {
@@ -474,7 +475,7 @@ political_decisions = {
 
         allow = {
             war = no
-            owns = 625
+            owns = 3483
             NOT = {
                 any_owned_province = { is_core = BOH }
             }
@@ -491,6 +492,40 @@ political_decisions = {
                 limit = { has_pop_culture = czech }
                 militancy = -4
             }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	cause_ottoman_revolt = {
+        picture = vukalovic
+        potential = {
+            tag = MON
+            NOT = {
+                exists = BOS
+				has_country_flag = ottoman_revolt_caused
+            }
+			TUR = {
+				owns = 788
+				owns = 783
+				owns = 2569
+				NOT = { has_country_flag = enacted_ottomanism }
+			}
+        }
+
+        allow = {
+            war = no
+            NOT = { alliance_with = TUR }
+			year = 1852
+			money = 20000
+        }
+
+        effect = {
+			set_country_flag = ottoman_revolt_caused
+			TUR = { country_event = 123473 }
+			treasury = -20000
         }
 
         ai_will_do = {
@@ -2107,7 +2142,7 @@ political_decisions = {
                     months = 6
                 }
             }
-            CRO = { all_core = { limit = { NOT = { province_id = 3289 } } remove_core = HUN } }
+            CRO = { all_core = { limit = { NOT = { province_id = 3289 } } remove_core = HUN remove_core = HUR } }
             CRO = { all_core = { remove_core = AUS } }
             CRO = { all_core = { remove_core = KUK } }
         }
@@ -2170,10 +2205,15 @@ political_decisions = {
     claim_fiume = {
         picture = fiume_port
         potential = {
-            tag = HUN
+            OR = {
+				tag = HUN
+				tag = HUR
+			}
             owns = 773
             778 = { NOT = { is_core = HUN } }
+            778 = { NOT = { is_core = HUR } }
             773 = { is_core = HUN }
+            773 = { is_core = HUR }
         }
 
         allow = {
@@ -2183,6 +2223,13 @@ political_decisions = {
 
         effect = {
             778 = { add_core = HUN }
+			any_country = {
+				limit = {
+					tag = HUR
+					exists = yes
+				}
+				778 = { add_core = HUR }
+			}
             badboy = 1
         }
         ai_will_do = { factor = 1 }
@@ -2412,6 +2459,7 @@ political_decisions = {
                 tag = BUL
                 tag = SLO
                 tag = ROM
+				tag = HUR
                 tag = CRO
                 tag = BOS
                 tag = MON
@@ -2538,6 +2586,7 @@ political_decisions = {
                 tag = BUL
                 tag = SLO
                 tag = ROM
+				tag = HUR
                 tag = CRO
                 tag = BOS
                 tag = MON

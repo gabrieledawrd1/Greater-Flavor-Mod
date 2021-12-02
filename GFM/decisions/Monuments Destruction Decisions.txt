@@ -27,7 +27,7 @@ political_decisions = {
             }
         }
         allow = {
-            425 = { country_units_in_province = THIS controlled_by = THIS owner = { war_with = THIS } }
+            425 = { controlled_by = THIS owner = { war_with = THIS } }
             OR = {
                 government = fascist_dictatorship
                 government = proletarian_dictatorship
@@ -93,7 +93,6 @@ political_decisions = {
 
         allow = {
             300 = {
-                country_units_in_province = THIS
                 controlled_by = THIS
                 owner = { war_with = THIS }
             }
@@ -120,6 +119,7 @@ political_decisions = {
             set_global_flag = bigben_destroyed
             badboy = 5
             prestige = -5
+			# Audax Validator "." Ignore_NEXT
             300 = { owner = { country_event = 152009875 } clr_province_flag = big_ben_built }
         }
         ai_will_do = {

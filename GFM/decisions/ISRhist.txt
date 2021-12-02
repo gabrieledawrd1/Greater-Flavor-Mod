@@ -191,6 +191,13 @@ political_decisions = {
         potential = {
 			ai = no
             civilized = yes
+			NOT = {
+			    OR = {
+				    primary_culture = platinean
+					primary_culture = south_andean
+					primary_culture = patagonian
+				}
+			}
             NOT = { has_country_flag = sunni_country }
             NOT = { has_country_flag = shiite_country }
             NOT = { has_country_flag = ibadi_country }
@@ -783,9 +790,9 @@ political_decisions = {
         }
     }
 
-     law_of_return = {
-     picture = law_of_return
-         potential = {
+    law_of_return = {
+        picture = law_of_return
+        potential = {
             OR = {
                 AND = {
                     tag = ISR

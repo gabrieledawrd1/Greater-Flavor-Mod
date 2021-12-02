@@ -15,7 +15,6 @@ ULA        ="countries/Louisiana.txt"
 EIC        ="countries/East India Company.txt"
 OCC        ="countries/Occitania.txt"
 ACA        ="countries/Acadia.txt"
-VIC     ="countries/Nationalist France.txt"
 BOR        ="countries/The Kingdom of France.txt"
 
 
@@ -91,7 +90,6 @@ PRO        = "countries/Provence.txt"
 OSS        = "countries/Ossetia.txt"
 AVR        = "countries/Avaristan.txt"
 CLT        = "countries/Celtic Union.txt"
-ABB        = "countries/Abbasid.txt"
 KNI     = "countries/Knights.txt"
 VOJ        = "countries/Vojvodina.txt"
 GLP        = "countries/Guadeloupe.txt"
@@ -117,7 +115,6 @@ MAG     = "countries/Magdeburg.txt"
 THU     = "countries/Thuringia.txt"
 PAL     = "countries/Palatinate.txt"
 POM     = "countries/Pommerania.txt"
-AOM     = "countries/Aromania.txt"
 PLR        = "countries/Poland-Lithuania-Ruthenia.txt"
 MEE     = "countries/Habsburg Mexico.txt"
 UBH     = "countries/Buha.txt"
@@ -125,11 +122,10 @@ KRW     = "countries/Karagwe.txt"
 BNY		= "countries/Bunyoro.txt"
 ANN     = "countries/Annam.txt"
 AMA        = "countries/Amazonie.txt"
-SKA     = "countries/Sakalava.txt"
-MFY     = "countries/Mahafaly.txt"
 DNN     = "countries/Denmark-Norway.txt"
 LUS        = "countries/Lusatia.txt"
 BGR        = "countries/Bulgaria-Romania.txt"
+HUR        = "countries/Romania-Hungary.txt"
 IOM     = "countries/IsleofMan.txt"
 HAZ        = "countries/Hazaristan.txt"
 LUR        = "countries/Luristan.txt"
@@ -231,14 +227,10 @@ BAH        = "countries/Bahia.txt" #Done
 AMZ        = "countries/Amazonas.txt" #Done
 PAA        = "countries/Para.txt" #Done
 MGO        = "countries/Mato Grosso.txt" #Done
-GOI        = "countries/Goias.txt" #Done
 MAR        = "countries/Maranhao.txt" #Done
-PIA        = "countries/Piaui.txt" #Done
-CEA        = "countries/Ceara.txt" #Done
 PNB        = "countries/Pernambuco.txt" #Done
 MGR        = "countries/Minas Gerais.txt" #Done
 SAP        = "countries/Sao Paulo.txt" #Done
-PNA        = "countries/Parana.txt" #Done
 SAC        = "countries/Santa Catarina.txt" #Done
 
 
@@ -254,7 +246,6 @@ PBC        = "countries/Peru-Bolivia Confederation.txt"
 PTG        = "countries/Patagonia.txt"
 RGR        = "countries/Rio Grande.txt"
 SON        = "countries/Sonora.txt"
-STK        = "countries/Stickeen.txt"
 TBS        = "countries/Tabasco.txt"
 SPU        = "countries/South Peru.txt"
 YUC        = "countries/Yucatan.txt"
@@ -321,6 +312,8 @@ TAR     = "countries/Tatarstan.txt"
 TNT        = "countries/Tannu Tuva.txt"
 URA     = "countries/Ural Republic.txt"
 YAK     = "countries/Yakutia.txt"
+GUK     = "countries/Green Ukraine.txt"
+FER     = "countries/Far Eastern Republic.txt"
 
 #Middle East
 ARU        = "countries/Arab Union.txt"
@@ -444,6 +437,17 @@ XHO        = "countries/Xhosa.txt"
 ZAM        = "countries/Zambia.txt"
 ADW        = "countries/Adamawa.txt"
 BRM        = "countries/Baguirmi.txt"
+BAR        = "countries/Bara.txt"
+BOI		   = "countries/Boina.txt"
+AKR        = "countries/Antankarana.txt"
+
+#Africa-Dismantlement
+WSA        = "countries/Western Sahara.txt" 
+GNB        = "countries/Guinea-Bissau.txt"
+STP        = "countries/Sao Tome and Principe.txt"
+ERT        = "countries/Eritrea.txt"
+DJI        = "countries/Djibouti.txt"
+CPV        = "countries/Cabo Verde.txt"
 
 # Eastern Asia
 DJA        = "countries/Jambi.txt"
@@ -468,6 +472,7 @@ SUL        = "countries/Sulu.txt"
 SWK        = "countries/Sarawak.txt"
 SZC        = "countries/Sichuan.txt"
 TAI        = "countries/Taiwan.txt"
+RCH        = "countries/Reorganised China.txt"
 
 # Japan
 CHO        = "countries/Choshu.txt"
@@ -482,7 +487,6 @@ YZW        = "countries/Yonezawa.txt"
 # Australasia & the Pacific
 AOT         = "countries/Aotearoa.txt"
 FIJ        = "countries/Fiji.txt"
-SNZ     = "countries/South Island.txt"
 TGA        = "countries/Tonga.txt"
 TMT        = "countries/Tuamotu.txt"
 
@@ -593,6 +597,7 @@ SLO        ="countries/Slovenia.txt"
 TUR        ="countries/Ottoman Empire.txt"
 WAL        ="countries/Wallachia.txt"
 YUG        ="countries/Yugoslavia.txt"
+BFR        ="countries/Balkan Federation.txt"
 
 # Africa
 ALD        ="countries/Aldjazair.txt"
@@ -606,7 +611,6 @@ NAL        ="countries/Natalia.txt"
 ORA        ="countries/Oranje.txt"
 SAF        ="countries/South Africa.txt"
 SOK        ="countries/Sokoto.txt"
-FLC        ="countries/Fulani.txt"
 RHO        ="countries/Southern Rhodesia.txt"
 TRI        ="countries/Tripoli.txt"
 TRN        ="countries/Transvaal.txt"
@@ -654,8 +658,6 @@ KHA = "countries/Kochgiri.txt"
 DJK = "countries/Dojhik.txt"
 BZD = "countries/Bayazid.txt"
 MLN = "countries/Milan.txt"
-SMD = "countries/Samanids.txt"
-ILK = "countries/Ilkhanate.txt"
 
 # India
 HND     ="countries/India.txt"
@@ -716,10 +718,6 @@ XIN        ="countries/Xinjiang.txt"
 BJC        ="countries/Southern California.txt"
 CAL        ="countries/Californian Republic.txt"
 CAN        ="countries/Canada.txt"
-VAN        = "countries/Vancouver Island.txt"
-NBR        = "countries/New Brunswick.txt"
-NSC        = "countries/Nova Scotia.txt"
-PEI        = "countries/Prince Edward Island.txt"
 CHE        ="countries/Cherokee.txt"
 COL        ="countries/Columbia.txt"
 COS        ="countries/Costa Rica.txt"
@@ -743,6 +741,7 @@ PNM        ="countries/Panama.txt"
 QUE        ="countries/Quebec.txt"
 TEX        ="countries/Texas.txt"
 UCA        ="countries/United States of Central America.txt"
+WUS        ="countries/Western United States.txt"
 
 # South America
 ARG        ="countries/Argentina.txt"
@@ -788,3 +787,7 @@ JAN     = "countries/JanMayen.txt"
 ##HoD Dominions
 dynamic_tags  = yes # any tags after this is considered dynamic dominions
 D01        = "countries/D01.txt"
+D02        = "countries/D02.txt"
+D03        = "countries/D03.txt"
+D04        = "countries/D04.txt"
+D05        = "countries/D05.txt"

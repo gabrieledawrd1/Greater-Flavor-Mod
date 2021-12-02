@@ -2119,7 +2119,7 @@
 2118;176;182;74;Tolanaro;x
 2119;16;50;223;Toamasina;x
 2120;224;197;48;Antsiranana;x
-2121;223;96;176;Mahajanga;x
+2121;223;96;176;Anbanja;x
 2122;6;156;13;Toliara;x
 2123;96;108;224;Comoros;x
 2124;224;96;223;Mayotte;x
@@ -3484,10 +3484,10 @@
 3483;167;154;148;Praha;x
 3484;42;45;79;Novaya Zemlya;x
 3485;133;183;123;Kolguyev Island;x
-3486;1;129;178;Vahitahi;x
-3487;1;129;179;Vairaatea;x
-3488;1;129;180;Nukutavake;x
-3489;1;129;181;Pinaki;x
+3486;6;6;6;Lake Xolotlan;x
+3487;6;6;7;Lake Rukwa;x
+3488;6;7;7;Dead Sea;x
+3489;7;7;7;Lake Tuz;x
 3490;1;129;182;Stavanger;x
 3491;170;128;190;San Carlos;x
 3492;170;128;51;Juigalpa;x
@@ -3540,6 +3540,9 @@
 3539;255;43;255;Mar chiquita;x
 3540;255;203;1;Menukung;x
 3541;33;151;158;Mahajanga;x
+3542;5;5;5;Lake Okeechobee;x
+3543;5;5;6;Lake Tahoe;x
+3544;5;6;6;Lake Izabal;x
 ;111;17;245;Lake of the Woods;x
 ;111;17;246;Lake Nipissing;x
 ;111;17;247;Lake Simcoe;x

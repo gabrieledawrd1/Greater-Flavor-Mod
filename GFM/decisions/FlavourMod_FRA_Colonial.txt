@@ -779,40 +779,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    become_the_fsa_french_lousiana = {
-        potential = {
-			OR = {
-				tag = USA
-				tag = US2
-			}
-            ai = yes
-            NOT = { owns = 139 }
-            has_global_flag = treaty_of_new_york
-            exists = CSA
-            NOT = { has_country_modifier = no_more_war }
-            has_global_flag = american_civil_war_has_happened
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            release_vassal = CAL
-            release_vassal = DES
-            release_vassal = TEX
-            any_owned = {
-                limit = {
-					is_core = THIS
-                }
-                add_core = FSA
-            }
-            change_tag = FSA
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     organize_louisiana    = {
         picture = "new_france_louisiana"
         potential = {
@@ -1031,8 +997,11 @@ political_decisions = {
                 }
                 secede_province = D01
             }
+			# Audax Validator "." Ignore_NEXT
             D01 = {
+				# Audax Validator "." Ignore_NEXT
                 146 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 143 = { assimilate = yes }
             }
             THIS = { inherit = D01 }
@@ -1188,7 +1157,6 @@ political_decisions = {
             2513 = { change_province_name = "Michel" }
             2515 = { change_province_name = "Jeanne" }
             2516 = { change_province_name = "Akaroa" }
-            2571 = { change_province_name = "Jeanne" }
             any_pop = {
                 limit = { culture = maori }
                 consciousness = 7
@@ -1263,10 +1231,15 @@ political_decisions = {
                 limit = { is_core = NZF }
                 secede_province = UTI
             }
+			# Audax Validator "." Ignore_NEXT
             UTI = {
+				# Audax Validator "." Ignore_NEXT
                 ENG_2513 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2510 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2511 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2512 = { assimilate = yes }
             }
             inherit = UTI
@@ -1512,6 +1485,7 @@ political_decisions = {
                 limit = { is_core = FAS }
                 secede_province = UTI
             }
+			# Audax Validator "." Ignore_NEXT
             ENG_2468 = { assimilate = yes }
             THIS = { inherit = UTI }
             any_owned = {

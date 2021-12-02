@@ -6,6 +6,7 @@ political_decisions = {
             ai = no
             tag = FRA
             NOT = { has_country_flag = french_crusade }
+			has_global_flag = fantasy_countries_enabled
         }
         allow = {
             has_country_flag = claimed_authority_over_holy_land
@@ -19,7 +20,7 @@ political_decisions = {
             THIS = {
                 war = {
                     target = TUR
-                    attacker_goal = { casus_belli = cut_down_to_size }
+                    attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
                     defender_goal = { casus_belli = status_quo }
                 }
             }
@@ -179,6 +180,7 @@ political_decisions = {
             ai = no
             tag = RUS
             NOT = { has_country_flag = greek_plan }
+			has_global_flag = fantasy_countries_enabled
         }
         allow = {
             war = no
@@ -206,6 +208,8 @@ political_decisions = {
                 }
             }
 			818 = { add_core = BYZ }
+			3346 = { add_core = BYZ }
+			798 = { add_core = BYZ }
             GRE = {
                 all_core = {
                     add_core = BYZ
@@ -238,29 +242,7 @@ political_decisions = {
         effect = {
             set_country_flag = treaty_of_kiev
             TUR = {
-                capital = 876
-                release = BYZ
-                country_event = 96057
-            }
-            RUS = {
-                create_vassal = BYZ
-            }
-            BYZ = {
-                inherit = GRE
-				inherit = SAM
-                any_pop = {
-                    limit = {
-                        has_pop_culture = greek
-                    }
-                reduce_pop = 1.15
-                literacy = 0.25
-                }
-            }
-            860 = {
-                add_province_modifier = {
-                    name = baby_boom
-                    duration = 1095
-                }
+				country_event = 96058
             }
         }
     }

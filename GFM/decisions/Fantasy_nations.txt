@@ -115,115 +115,13 @@ political_decisions = {
             set_country_flag = byzantine_revival
         }
     }
-    #Abbasids for Wadai
-    form_abbasids = {
-        picture = the_holy_city
-        potential = {
-            tag = WAD
-            has_global_flag = fantasy_countries_enabled
-        }
-        allow = {
-            owns = 926
-        }
-        effect = {
-            prestige = 20
-            change_tag = ABB
-            release =  WAD
-            capital = 926
-            878 = { add_core = ABB}
-            3345 = { add_core = ABB}
-            895 = { add_core = ABB}
-            AZB = {
-                all_core = { add_core = ABB }
-            }
-            ARM = {
-                all_core = { add_core = ABB }
-            }
-            882 = { remove_core = ABB}
-            886 = { remove_core = ABB}
-            CLC = {
-                all_core = { add_core = ABB }
-            }
-            KDS = {
-                all_core = { add_core = ABB }
-            }
-            JOR = {
-                all_core = { add_core = ABB }
-            }
-            PLS = {
-                all_core = { add_core = ABB }
-            }
-            SYR = {
-                all_core = { add_core = ABB }
-            }
-            IRQ = {
-                all_core = { add_core = ABB }
-            }
-            TUN = {
-                all_core = { add_core = ABB }
-            }
-            TRI = {
-                all_core = { add_core = ABB }
-            }
-            CYR = {
-                all_core = { add_core = ABB }
-            }
-            EGY = {
-                all_core = { limit = { NOT = { is_core = SUD } } add_core = ABB }
-            }
-            PER = {
-                all_core = { add_core = ABB }
-            }
-            AZH = {
-                all_core = { add_core = ABB }
-            }
-            NYE = {
-                all_core = { add_core = ABB }
-            }
-            BHR = {
-                all_core = { add_core = ABB }
-            }
-            KWT = {
-                all_core = { add_core = ABB }
-            }
-            LBN = {
-                all_core = { add_core = ABB }
-            }
-            OMA = {
-                all_core = { add_core = ABB }
-            }
-            KTH = {
-                all_core = { add_core = ABB }
-            }
-            HAL = {
-                all_core = { add_core = ABB }
-            }
-            NEJ = {
-                all_core = { add_core = ABB }
-            }
-            HDJ = {
-                all_core = { add_core = ABB }
-            }
-            ABU = {
-                all_core = { add_core = ABB }
-            }
-            ZFN = {
-                all_core = { add_core = ABB }
-            }
-            add_accepted_culture = mashriqi
-            add_accepted_culture = maghrebi
-            add_accepted_culture = misri
-            add_accepted_culture = bedouin
-            add_accepted_culture = persian
-            add_accepted_culture = tajik
-            add_accepted_culture = lurish
-            add_accepted_culture = talysh
-        }
-    }
 
     louis_hungarian = {
         potential = {
-            tag = HUN
+            OR = {
+				primary_culture = hungarian
+				primary_culture = polish
+			}
             has_global_flag = fantasy_countries_enabled
             NOT = {
                 tag = PHC
@@ -277,9 +175,6 @@ political_decisions = {
             }
             PRU_701 = { add_core = PHC }
             PRU_690 = { add_core = PHC }
-            696 = { add_core = PHC }
-            3326 = { add_core = PHC }
-            693 = { add_core = PHC }
             change_tag = PHC
 			add_accepted_culture = hungarian
 			add_accepted_culture = polish
@@ -380,137 +275,6 @@ political_decisions = {
             THIS = {
                 release = KNI
                 remove_core = 854
-            }
-        }
-    }
-	
-	#Tajiks can reform Samanid Empire
-	restore_samanids  = {
-        picture = claim_greater_persia
-        potential = {
-            primary_culture = tajik
-			SMD = { exists = no }
-            has_global_flag = fantasy_countries_enabled
-			owns = 1198
-        }
-        allow = {
-            owns = 1198
-        }
-        effect = {
-		    change_tag = SMD
-            RUS_1196 = { add_core = THIS }
-            PER_1148 = { add_core = THIS }
-			PER_1130 = { add_core = THIS }
-            PER_1142 = { add_core = THIS }
-			PER_1140 = { add_core = THIS }
-            AFG_1215 = { add_core = THIS }
-			PER_3350 = { add_core = THIS }
-            AFG_1212 = { add_core = THIS }
-			AFG_1213 = { add_core = THIS }
-            AFG_1209 = { add_core = THIS }
-			AFG_1214 = { add_core = THIS }
-			TAJ_1208 = { add_core = THIS }
-            3501 = { add_core = THIS }
-			3507 = { add_core = THIS }
-			3509 = { add_core = THIS }
-			1220 = { add_core = THIS }
-			1223 = { add_core = THIS }
-			1116 = { add_core = THIS }
-			1127 = { add_core = THIS }
-			1129 = { add_core = THIS }
-			1134 = { add_core = THIS }
-			1135 = { add_core = THIS }
-			1137 = { add_core = THIS }
-			1189 = { add_core = THIS }
-			1191 = { add_core = THIS }
-			1192 = { add_core = THIS }
-			1195 = { add_core = THIS }
-			1198 = { add_core = THIS }
-			1199 = { add_core = THIS }
-			1200 = { add_core = THIS }
-			1202 = { add_core = THIS }
-			1203 = { add_core = THIS }
-			3323 = { add_core = THIS }
-			3527 = { add_core = THIS }
-			3520 = { add_core = THIS }
-			3441 = { add_core = THIS }
-            add_accepted_culture = pamiri
-			add_accepted_culture = persian
-			add_accepted_culture = lurish
-			add_accepted_culture = talysh
-			add_accepted_culture = mazanderani
-			#1198 = { add_province_modifier = rebuilding_city duration = 1800 }
-			capital = 1198
-			1198 = { life_rating = 5 }
-			BUK = { all_core = { remove_core = BUK } }
-        }
-    }
-	
-	#Qashqai > Ilkhanate
-	restore_ilkhanate  = {
-        picture = claim_greater_persia
-        potential = {
-            tag = QAS
-            has_global_flag = fantasy_countries_enabled
-        }
-        allow = {
-            civilized = yes
-			owns = 873
-			owns = 926
-			owns = 1123
-			owns = 1147
-        }
-        effect = {
-		    change_tag = ILK
-            TUR_873 = { add_core = THIS }
-            TUR_876 = { add_core = THIS }
-			TUR_879 = { add_core = THIS }
-            TUR_894 = { add_core = THIS }
-			TUR_893 = { add_core = THIS }
-            TUR_890 = { add_core = THIS }
-			TUR_885 = { add_core = THIS }
-            TUR_882 = { add_core = THIS }
-			TUR_887 = { add_core = THIS }
-            EGY_897 = { add_core = THIS }
-			TUR_923 = { add_core = THIS }
-			TUR_931 = { add_core = THIS }
-			TUR_935 = { add_core = THIS }
-            RUS_1090 = { add_core = THIS }
-			RUS_1098 = { add_core = THIS }
-            RUS_1102 = { add_core = THIS }
-			AZB_1105 = { add_core = THIS }
-            PER_1112 = { add_core = THIS }
-			PER_3353 = { add_core = THIS }
-            PER_1116 = { add_core = THIS }
-			PER_1121 = { add_core = THIS }
-            PER_3350 = { add_core = THIS }
-			PER_1122 = { add_core = THIS }
-			PER_1127 = { add_core = THIS }
-			PER_1130 = { add_core = THIS }
-			PER_1132 = { add_core = THIS }
-            PER_1136 = { add_core = THIS }
-			PER_1142 = { add_core = THIS }
-            PER_1140 = { add_core = THIS }
-			PER_1148 = { add_core = THIS }
-            RUS_1196 = { add_core = THIS }
-			KAL_1221 = { add_core = THIS }
-            AFG_1215 = { add_core = THIS }
-			AFG_1212 = { add_core = THIS }
-			AFG_1213 = { add_core = THIS }
-            880 = { add_core = THIS }
-			883 = { add_core = THIS }
-			901 = { add_core = THIS }
-			3300 = { add_core = THIS }
-			3389 = { add_core = THIS }
-			1052 = { add_core = THIS }
-			3516 = { add_core = THIS }
-            add_accepted_culture = turkish
-			add_accepted_culture = turkmen
-			primary_culture = mongol
-			capital = 1123
-			1123 = { life_rating = 5 }
-			1123 = {
-                change_province_name = "Soltaniyeh"
             }
         }
     }

@@ -124,6 +124,7 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
+				tag = HUR
             }
             owns = 2538
             owns = 791
@@ -841,6 +842,9 @@ political_decisions = {
                 change_province_name = "Bratislava"
                 state_scope = { change_region_name = "Slovensko" }
             }
+            635 = {
+                state_scope = { change_region_name = "Komárno" }
+            }
             634 = { change_province_name = "Trencín" }
             635 = { change_province_name = "Nitra" }
             636 = { change_province_name = "Banská Bystrica" }
@@ -860,6 +864,7 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
+				tag = HUR
             }
             owns = 633
             owns = 634
@@ -880,6 +885,9 @@ political_decisions = {
             633 = {
                 change_province_name = "Pozsony"
                 state_scope = { change_region_name = "Pozsony" }
+            }
+            635 = {
+                state_scope = { change_region_name = "Komárom" }
             }
             634 = { change_province_name = "Trencsén" }
             635 = { change_province_name = "Nyitra" }
@@ -923,6 +931,9 @@ political_decisions = {
             633 = {
                 change_province_name = "Preßburg"
                 state_scope = { change_region_name = "Preßburg" }
+            }
+            635 = {
+                state_scope = { change_region_name = "Komorn" }
             }
             634 = { change_province_name = "Trentschin" }
             635 = { change_province_name = "Neutra" }
@@ -979,7 +990,13 @@ political_decisions = {
         picture = gtfo
         potential = {
             is_culture_group = germanic
-            NOT = { tag = DNB }
+            NOT = { 
+                is_culture_group = czecho_slovak_culture_group
+                tag = SLV
+                tag = CZH
+                accepted_culture = czech
+				tag = DNB 
+			}
             owns = 625 #Prague
             owns = 626 #Hradec Kralove
             owns = 631 #Brno
@@ -1054,7 +1071,14 @@ political_decisions = {
         picture = gtfo
         potential = {
             is_culture_group = germanic
-            NOT = { tag = DNB tag = AUB }
+            NOT = { 
+				tag = DNB 
+				tag = AUB
+                is_culture_group = czecho_slovak_culture_group
+                tag = SLV
+                tag = CZH
+                accepted_culture = czech
+			}
             owns = 627 #Karlsbad
             owns = 628 #Aussig
             owns = 629 #Plzen
@@ -1386,6 +1410,13 @@ political_decisions = {
             NOT = {
                 tag = DNB
                 accepted_culture = polish
+                primary_culture = polish
+                AND = {
+                    tag = DNB
+                    accepted_culture = polish
+                }
+                tag = WSF
+				tag = HAI
             }
             OR = {
                 AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_german } }
@@ -1446,6 +1477,7 @@ political_decisions = {
                 tag = WSF
 				tag = HAI
             }
+			NOT = { is_culture_group = germanic }
             OR = {
                 AND = { owns = 682 NOT = { has_global_flag = prussian_silesia_rename_polish } }
                 AND = { owns = 689 NOT = { has_global_flag = austrian_silesia_rename_polish } }
@@ -1498,7 +1530,17 @@ political_decisions = {
         potential = {
             is_culture_group = czecho_slovak_culture_group
             owns = 689
-            NOT = { has_global_flag = austrian_silesia_rename_czech }
+            NOT = { 
+				has_global_flag = austrian_silesia_rename_czech 
+				is_culture_group = germanic
+                primary_culture = polish
+                AND = {
+                    tag = DNB
+                    accepted_culture = polish
+                }
+                tag = WSF
+				tag = HAI
+			}
         }
 
         allow = {
@@ -1884,6 +1926,7 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
+				tag = HUR
             }
             owns = 642
             NOT = { has_global_flag = transdanubia_rename_hun }
@@ -1941,6 +1984,7 @@ political_decisions = {
             OR = {
                 primary_culture = hungarian
                 tag = KUK
+				tag = HUR
             }
             owns = 641
             NOT = { has_global_flag = central_hungary_rename_hun }
@@ -2113,6 +2157,7 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
+				tag = HUR
             }
             owns = 771
             owns = 772
@@ -2250,6 +2295,7 @@ political_decisions = {
                 primary_culture = hungarian
                 tag = KUK
                 tag = DNB
+				tag = HUR
             }
             owns = 777
             owns = 779
@@ -2857,6 +2903,183 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	ostpreussen_rename = {
+        picture = gtfo
+        potential = {
+            OR = {
+                AND = {
+                    is_culture_group = germanic
+                    owns = 695 
+					NOT = { has_global_flag = german_renamed_ostpreussen }
+                }
+                AND = {
+                    is_culture_group = east_slavic
+                    owns = 695 
+					NOT = { has_global_flag = russian_renamed_ostpreussen }
+                }
+                AND = {
+                    is_culture_group = polish_culture_group
+                    owns = 695 
+					NOT = { has_global_flag = polish_renamed_ostpreussen }
+                }
+                AND = {
+                    is_culture_group = baltic
+                    owns = 695 
+					NOT = { has_global_flag = baltic_renamed_ostpreussen }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            ###German###
+            random_owned = {
+                limit = {
+                    province_id = 695
+                    owner = {
+                        is_culture_group = germanic
+                    }
+                }
+                695 = {
+                    change_province_name = "Königsberg"
+                    state_scope = {
+                        change_region_name = "Ostpreußen"
+                    }
+                }
+                697 = { change_province_name = "Gumbinnen" }
+                698 = { change_province_name = "Memel" }
+				3329 = { change_province_name = "Allenstein" }
+				3328 = { change_province_name = "Elbing" }
+				3326 = { change_province_name = "Osterode" }
+				3327 = { change_province_name = "Ortelsburg" }
+                owner = {
+                    set_global_flag = german_renamed_ostpreussen
+                    clr_global_flag = russian_renamed_ostpreussen
+					clr_global_flag = polish_renamed_ostpreussen
+					clr_global_flag = baltic_renamed_ostpreussen
+                }
+            }
+            ###Slavic###
+            random_owned = {
+                limit = {
+                    province_id = 695
+                    owner = {
+                        is_culture_group = east_slavic
+                    }
+                }
+                695 = {
+                    state_scope = {
+                        change_region_name = "Vostóchnaya Prússiya"
+                    }
+                }
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = socialist
+								government = proletarian_dictatorship
+								tag = RSF
+								tag = SOV
+							}
+						}
+					}
+					owner = {
+						695 = { change_province_name = "Kaliningrad" }
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+									ruling_party_ideology = communist
+									ruling_party_ideology = socialist
+									government = proletarian_dictatorship
+									tag = SOV
+									tag = RSF
+								}
+							}
+						}
+					}
+					owner = {
+						695 = { change_province_name = "Kantgrad" }
+					}
+				}
+                697 = { change_province_name = "Gusev" }
+                698 = { change_province_name = "Klaipeda" }
+				3329 = { change_province_name = "Olsztyn" }
+				3328 = { change_province_name = "Elblag" }
+				3326 = { change_province_name = "Ostroda" }
+				3327 = { change_province_name = "Szczytno" }
+                owner = {
+                    clr_global_flag = german_renamed_ostpreussen
+                    set_global_flag = russian_renamed_ostpreussen
+					clr_global_flag = polish_renamed_ostpreussen
+					clr_global_flag = baltic_renamed_ostpreussen
+                }
+            }
+            ###Polish###
+            random_owned = {
+                limit = {
+                    province_id = 695
+                    owner = {
+                        is_culture_group = polish_culture_group
+                    }
+                }
+                695 = {
+                    change_province_name = "Królewiec"
+                    state_scope = {
+                        change_region_name = "Prusy Wschodnie"
+                    }
+                }
+                697 = { change_province_name = "Gabin" }
+                698 = { change_province_name = "Klajpeda" }
+				3329 = { change_province_name = "Olsztyn" }
+				3328 = { change_province_name = "Elblag" }
+				3326 = { change_province_name = "Ostróda" }
+				3327 = { change_province_name = "Szczytno" }
+                owner = {
+                    clr_global_flag = german_renamed_ostpreussen
+                    clr_global_flag = russian_renamed_ostpreussen
+					set_global_flag = polish_renamed_ostpreussen
+					clr_global_flag = baltic_renamed_ostpreussen
+                }
+            }
+            ###Baltic###
+            random_owned = {
+                limit = {
+                    province_id = 695
+                    owner = {
+                        is_culture_group = baltic
+                    }
+                }
+                695 = {
+                    change_province_name = "Karaliaucius"
+                    state_scope = {
+                        change_region_name = "Rytu Prusija"
+                    }
+                }
+                697 = { change_province_name = "Gumbine" }
+                698 = { change_province_name = "Klaipeda" }
+				3329 = { change_province_name = "Olštynas" }
+				3328 = { change_province_name = "Elbingas" }
+				3326 = { change_province_name = "Ostruda" }
+				3327 = { change_province_name = "Šcytnas" }
+                owner = {
+                    clr_global_flag = german_renamed_ostpreussen
+                    clr_global_flag = russian_renamed_ostpreussen
+					clr_global_flag = polish_renamed_ostpreussen
+					set_global_flag = baltic_renamed_ostpreussen
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
 
     lorraine_rename = {
         picture = gtfo
@@ -3073,6 +3296,7 @@ political_decisions = {
             OR = {
 				primary_culture = romanian
 				tag = BGR
+                tag = HUR
 			}
             owns = 676
             owns = 677
@@ -3137,6 +3361,7 @@ political_decisions = {
             OR = {
 				primary_culture = romanian
 				tag = BGR
+                tag = HUR
 			}
             owns = 662
             owns = 663
@@ -3219,6 +3444,12 @@ political_decisions = {
                 }
                 AND = {
                     primary_culture = hungarian
+                    owns = 623
+                    NOT = { has_global_flag = burgenland_rename_hun }
+
+                }
+                AND = {
+                    tag = HUR
                     owns = 623
                     NOT = { has_global_flag = burgenland_rename_hun }
 
@@ -3412,6 +3643,7 @@ political_decisions = {
         #alert = yes
         potential = {
             OR = {
+                tag = HUR
                 is_culture_group = pan_albanian
                 is_culture_group = pan_romanian
                 is_culture_group = south_slavic
@@ -3473,6 +3705,7 @@ political_decisions = {
         #alert = yes
         potential = {
             OR = {
+                tag = HUR
                 is_culture_group = pan_albanian
                 is_culture_group = pan_romanian
                 is_culture_group = south_slavic
@@ -3592,6 +3825,7 @@ political_decisions = {
                 tag = AUS
                 tag = DNB
                 tag = HUN
+				tag = HUR
                 tag = GCF
                 tag = GER
             }
@@ -6024,10 +6258,12 @@ political_decisions = {
         effect = {
             prestige = 5
             set_global_flag = jemtland_renamed
+			# Audax Validator "." Ignore_NEXT
             319 = {
 				change_province_name = "Østersund"
 				assimilate = yes
 			}
+			# Audax Validator "." Ignore_NEXT
             329 = {
 				change_province_name = "Oddevald"
 				assimilate = yes
@@ -6051,10 +6287,12 @@ political_decisions = {
         effect = {
             prestige = 5
             clr_global_flag = jemtland_renamed
+			# Audax Validator "." Ignore_NEXT
             319 = {
 				change_province_name = "Östersund"
 				assimilate = yes
 			}
+			# Audax Validator "." Ignore_NEXT
             329 = {
 				change_province_name = "Göteborg"
 				assimilate = yes
@@ -6188,10 +6426,12 @@ political_decisions = {
 
         effect = {
             set_global_flag = scania_renamed
+			# Audax Validator "." Ignore_NEXT
             334 = {
 				change_province_name = "Malmø"
 				assimilate = yes
 			}
+			# Audax Validator "." Ignore_NEXT
             335 = {
 				change_province_name = "Bleking"
 				assimilate = yes
@@ -6217,10 +6457,12 @@ political_decisions = {
 
         effect = {
             clr_global_flag = scania_renamed
+			# Audax Validator "." Ignore_NEXT
             334 = {
 				change_province_name = "Malmö"
 				assimilate = yes
 			}
+			# Audax Validator "." Ignore_NEXT
             335 = {
 				change_province_name = "Karlskrona"
 				assimilate = yes

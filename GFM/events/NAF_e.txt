@@ -233,7 +233,7 @@ country_event = {
         any_pop = {
             limit = {
                 has_pop_culture = afro_american
-                ideology = fascist
+                pop_majority_ideology = fascist
             }
             consciousness = 5
             militancy = 5
@@ -260,7 +260,7 @@ country_event = {
         any_pop = {
             limit = {
                 has_pop_culture = afro_american
-                ideology = fascist
+                pop_majority_ideology = fascist
             }
             consciousness = 5
             militancy = 5
@@ -794,11 +794,11 @@ country_event = {
         ai_chance = {
             factor = 25
             modifier = {
-                factor = 1
+                factor = 2
                 war_policy = pacifism
             }
             modifier = {
-                factor = 1
+                factor = 1.5
                 war_policy = anti_military
             }
         }
@@ -822,11 +822,11 @@ country_event = {
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
+                factor = 2
                 war_policy = jingoism
             }
             modifier = {
-                factor = 1
+                factor = 1.5
                 war_policy = pro_military
             }
         }
@@ -906,8 +906,8 @@ country_event = { ##### slavery ended
     trigger = {
         tag = FSA
         OR = {
-			USA = { AND = { slavery = no_slavery exists = yes } }
-			US2 = { AND = { slavery = no_slavery exists = yes } }
+			USA = { slavery = no_slavery exists = yes }
+			US2 = { slavery = no_slavery exists = yes }
 		}
         has_country_flag = FSA_NAF_revolt_at_USA
         NOT = { has_global_flag = FSA_NAF_revolt_fire }
@@ -964,10 +964,6 @@ country_event = { ##### slavery revolt failed
     option = {
         name = "Damn those northern instigators."
         set_global_flag = FSA_NAF_revolt_fail
-        dominant_issue = {
-            factor = 0.10
-            value = yes_slavery
-        }
         any_pop = {
             limit = {
                 has_pop_culture = afro_american

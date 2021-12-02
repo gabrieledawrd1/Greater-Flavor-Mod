@@ -1453,12 +1453,17 @@ nationalist_rebels = {
             culture = british
             country = { primary_culture = boer }
         }
+		modifier = {
+			factor = 0.17
+			culture = catalan
+         
+		}
+		modifier = {
+			factor = 0.1
+			culture = basque
+		}
         modifier = {
             factor = 0
-            OR = {
-                culture = catalan
-                culture = basque
-            }
             OR = {
                 pop_majority_ideology = reactionary
                 pop_majority_ideology = conservative
@@ -1590,6 +1595,10 @@ nationalist_rebels = {
             tag = REB
             relation = -150
         }
+		random_owned = {
+			limit = { owner = { REB = { exists = no } } }
+			owner = { REB = { annex_to = REB } }
+		}
         prestige_factor = -0.3
     }
 }
@@ -1715,6 +1724,11 @@ pan_nationalist_rebels = {
                 }
             }
         }
+		modifier = {
+			factor = 0
+			culture = romanian
+			country = { tag = BGR }
+		}
         modifier = {
             factor = 0
             OR = {
@@ -2182,11 +2196,11 @@ carlist_rebels = {
             pop_majority_ideology = conservative
         }
         modifier = {
-            factor = 1.15
+            factor = 1.25
             culture = basque
         }
         modifier = {
-            factor = 1.25
+            factor = 1.35
             culture = catalan
         }
         modifier = {

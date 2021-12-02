@@ -451,17 +451,15 @@ country_event = {
 			    has_global_flag = patagonia_liferating
 			}
 		}
-        AND = {
-            2392 = { empty = no }
-			2396 = { empty = no }
-			2397 = { empty = no }
-			2398 = { empty = no }
-			2399 = { empty = no }
-			2400 = { empty = no }
-			2335 = { empty = no }
-			2334 = { empty = no }
-			2333 = { empty = no }
-		}
+        2392 = { empty = no }
+		2396 = { empty = no }
+		2397 = { empty = no }
+		2398 = { empty = no }
+		2399 = { empty = no }
+		2400 = { empty = no }
+		2335 = { empty = no }
+		2334 = { empty = no }
+		2333 = { empty = no }
 		OR = {
             tag = ARG
             tag = ARC
@@ -477,7 +475,7 @@ country_event = {
         months = 18
         modifier = {
             factor = 0.7
-            owner = { machine_guns = 1 }
+            machine_guns = 1
         }
     }
 
@@ -760,19 +758,19 @@ country_event = {
 		    }
 		}
         ai_chance = {
-            factor = 95
+            factor = 99
 		}
     }
     option = {
         name = "EVTOPT97092B" #Ahistorical
         set_global_flag = juan_godeken_helped
-        treasury = -55000
+        treasury = -120000
         2381 = {
             life_rating = 2
             change_province_name = "Bismarck" 
             add_province_modifier = {
                 name = godeken_colonies
-                duration = 730
+                duration = 3650
             }
         }
         2363 = {
@@ -780,11 +778,11 @@ country_event = {
             change_province_name = "Chañar Ladeado" 
             add_province_modifier = {
                 name = godeken_colonies
-                duration = 730
+                duration = 3650
             }
         }
         ai_chance = {
-            factor = 5
+            factor = 1
 		}
     }
 }
@@ -802,12 +800,12 @@ country_event = {
 		year = 1920
 		NOT = {
 			OR = {
-			government = proletarian_dictatorship
-			ideology = socialist
-			ideology = communist
+				government = proletarian_dictatorship
+				ideology = socialist
+				ideology = communist
+			}
 		}
-	}	
-}
+	}
 	
 	mean_time_to_happen = {
 		months = 1
@@ -818,41 +816,48 @@ country_event = {
 		badboy = 0.1
         any_pop = {
             consciousness = 0.5
-            ideology = {
-                value = socialist
-                factor = 0.05
-            }
         }
 		2399 = {
 			any_pop = {
-				limit = {
-					ideology = socialist
-				}
 				reduce_pop = 0.99
-			}
-			any_pop = {
-				limit = {
-					ideology = communist
+				scaled_militancy = {
+                    ideology = socialist
+                    factor = 7
 				}
-				reduce_pop = 0.99
+				scaled_militancy = {
+                    ideology = communist
+                    factor = 9
+				}
+				scaled_consciousness = {
+                    ideology = socialist
+                    factor = 7
+				}
+				scaled_consciousness = {
+                    ideology = communist
+                    factor = 9
+				}
 			}
 		}
-			any_pop = {
-				ideology = {
-					value = socialist
-				}
-				consciousness = 3
-				militancy = 2
-			}
-			any_pop = {
-				ideology = {
-					value = communist
-				}
-				consciousness = 4
-				militancy = 3
+		any_pop = {
+		    scaled_militancy = {
+                ideology = socialist
+                factor = 2
+		    }
+		    scaled_militancy = {
+                ideology = communist
+                factor = 3
+		    }
+		    scaled_consciousness = {
+                ideology = socialist
+                factor = 3
+		    }
+		    scaled_consciousness = {
+                ideology = communist
+                factor = 4
 			}
 		}
 	}
+}
 
 country_event = {
     id = 97099
@@ -903,7 +908,7 @@ country_event = {
     option = {
         name = "EVTOPTA97101"
         plurality = 5
-        prestige = 5
+        prestige = 10
     }
 }
 
@@ -956,9 +961,7 @@ country_event = {
     option = {
         name = "EVTOPTA97103"
 		any_pop = {
-           limit = {
-               location = { province_id = 2389 }
-           }
+           limit = { location = { province_id = 2389 } }
            militancy = -3
 		   consciousness = -3
        }
@@ -998,7 +1001,7 @@ country_event = {
 		poor_strata = { consciousness = 3 }
         any_pop = {
             limit = { is_primary_culture = no }
-            dominant_issue = { factor = 0.20 value = all_voting_pops }
+            dominant_issue = { factor = 0.3 value = all_voting_pops }
 			consciousness = 3
 			}
 	    }
@@ -1125,10 +1128,21 @@ country_event = {
         }
     }
     option = {
-        name = "The balance of power shifts once more." 
-		ruling_party_ideology = liberal
+        name = "Tragic!" 
+		add_country_modifier = {
+            name = national_confusion
+            duration = 365
+        }
+		2348 = {
+		    any_pop = {
+			    consciousness = 2
+				militancy = 1
+			}
+		}
 		any_pop = {
+		    limit = { NOT = { location = { province_id = 2348 } } }
 			consciousness = 1
+			militancy = 0.5
         }
     }
 }

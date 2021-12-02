@@ -1285,15 +1285,15 @@ country_event = {
         ai_chance = {
             factor = 60
                 modifier = {
-                    factor = 0.8
+                    factor = 1.5
                     is_greater_power = no
                 }
                 modifier = {
-                    factor = 0.7
+                    factor = 1.3
                     alliance_with = FROM
                 }
                 modifier = {
-                    factor = 0.7
+                    factor = 1.2
                     relation = { who = FROM value = 150 }
                 }
             }
@@ -1310,11 +1310,11 @@ country_event = {
                 }
 
                 modifier = {
-                    factor = 0.6
+                    factor = 1.2
                     FROM = { is_greater_power = no }
                 }
                 modifier = {
-                    factor = 0.1
+                    factor = 1.3
                     NOT = { relation = { who = FROM value = 0 } }
                 }
             }
@@ -1523,7 +1523,7 @@ country_event = {
             limit = { tag = LOS number_of_states = 2 }
             war = {
                 target = GUA
-                attacker_goal = { casus_belli = humiliate }
+                attacker_goal = { casus_belli = humiliate_no_infamy }
                 defender_goal = { casus_belli = acquire_core_state state_province_id = 2187 }
             }
         }
