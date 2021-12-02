@@ -44,6 +44,30 @@ country_event = {
 					limit = { owner = { THIS = { tag = MOR } } }
 					owner = { THIS = { set_variable = { which = Morocco_Colony value = 1 } } }
 				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRI } } }
+					owner = { THIS = { set_variable = { which = Tripolitania_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CYR } } }
+					owner = { THIS = { set_variable = { which = Cyrenaica_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EGY } } }
+					owner = { THIS = { set_variable = { which = Egypt_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777770620
@@ -70,7 +94,7 @@ country_event = {
         }
     }
     option = {
-        name = "We shall offer Tunisia to other victors."
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
         any_country = {
 			limit = {
 				tag = FROM
@@ -1443,10 +1467,6 @@ country_event = {
 			any_owned = {
 				limit = {
 					OR = {
-						province_id = 1694
-						province_id = 1699
-						province_id = 1698
-						province_id = 1695
 						province_id = 1700
 						province_id = 1706
 						province_id = 1703
@@ -1508,6 +1528,11 @@ country_event = {
 						province_id = 1683
 						province_id = 1684
 						province_id = 1697
+						province_id = 1694
+						province_id = 1699
+						province_id = 1698
+						province_id = 1695
+						province_id = 1696
 					}
 				}
 				secede_province = THIS
@@ -1523,14 +1548,181 @@ country_event = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
 				}
-				FROM = { check_variable = { which = Morocco_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Western_Sahara_Colony value = 0.99 } }
 			}
 			any_owned = {
 				limit = {
 					OR = {
-						province_id = 1696
 						province_id = 1773
 						province_id = 1774
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Tripolotania Colony
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Tripolitania_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1731
+						province_id = 1732
+						province_id = 1733
+						province_id = 1734
+						province_id = 1740
+						province_id = 1744
+						province_id = 3394
+						province_id = 1741
+						province_id = 1742
+						province_id = 3395
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Cyrenaica Colony
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Cyrenaica_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1735
+						province_id = 1736
+						province_id = 1737
+						province_id = 1738
+						province_id = 2585
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Egypt Colony - Sans Suez
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Egypt_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1745
+						province_id = 1748
+						province_id = 1749
+						province_id = 1747
+						province_id = 1750
+						province_id = 1751
+						province_id = 1746
+						province_id = 1756
+						province_id = 1757
+						province_id = 1752
+						province_id = 1753
+						province_id = 1754
+						province_id = 1759
+						province_id = 1765
+						province_id = 1760
+						province_id = 1761
+						province_id = 1758
+						province_id = 1763
+						province_id = 1764
+						province_id = 1762
+						province_id = 2559
+						province_id = 1772
+						province_id = 1770
+						province_id = 1769
+						province_id = 1767
+						province_id = 1768
+						province_id = 1766
+						province_id = 1771
+						province_id = 1834
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Sudan Colony
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Sudan_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 2564
+						province_id = 1835
+						province_id = 1836
+						province_id = 1833
+						province_id = 1837
+						province_id = 1806
+						province_id = 1838
+						province_id = 1827
+						province_id = 1828
+						province_id = 1829
+						province_id = 1831
+						province_id = 1830
+						province_id = 1840
+						province_id = 1832
+						province_id = 1844
+						province_id = 1845
+						province_id = 1846
+						province_id = 1847
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Darfur Colony
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Sudan_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1817
+						province_id = 1739
+						province_id = 1842
+						province_id = 1839
+						province_id = 1841
+						province_id = 1843
 					}
 				}
 				secede_province = THIS
