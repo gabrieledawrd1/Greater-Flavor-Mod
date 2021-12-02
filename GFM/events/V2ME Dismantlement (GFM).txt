@@ -9681,7 +9681,10 @@ country_event = {
     option = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
 		badboy = 0.1
-		FROM = { set_variable = { which = Secondary_Claim_NonExisting value = 1 } }
+		FROM = {
+			set_variable = { which = Secondary_Claim_NonExisting value = 1 }
+			set_variable = { which = Freedom_Apathy value = 0 }
+		}
 		set_variable = { which = Secondary_NonExisting value = 1 }
 		create_alliance = FROM
 		any_country = {
@@ -10754,7 +10757,10 @@ country_event = {
 				value = -50
 			}
 		}
-		FROM = { set_variable = { which = Secondary_Claim_Puppet value = 1 } }
+		FROM = {
+			set_variable = { which = Secondary_Claim_Puppet value = 1 }
+			set_variable = { which = Puppet_Apathy value = 0 }
+		}
 		set_variable = { which = Secondary_Puppet value = 1 }
 		badboy = 0.1
 		any_country = {
@@ -11671,7 +11677,9 @@ country_event = {
     }
     option = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
-		FROM = { set_variable = { which = Secondary_Claim_Existing value = 1 } }
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 0 }
+		}
 		set_variable = { which = Secondary_Existing value = 1 }
 		random_country = {
 			limit = {
@@ -17395,6 +17403,9 @@ country_event = {
     }
     option = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 0 }
+		}
 		badboy = 0.1
 		create_alliance = FROM
 		any_country = {
@@ -18301,6 +18312,10 @@ country_event = {
     }
     option = {
         name = "We have our own plans for $FROMCOUNTRY$!"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 0 }
+			set_variable = { which = Secondary_Claim_Puppet value = 1 }
+		}
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
