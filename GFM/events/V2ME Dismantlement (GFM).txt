@@ -5637,8 +5637,10 @@ country_event = {
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				check_variable = { which = Major_Defeated value = 0.99 }
-				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
 				any_owned_province = {
 					OR = {
 						province_id = 1725
@@ -5664,8 +5666,10 @@ country_event = {
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				check_variable = { which = Major_Defeated value = 0.99 }
-				overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
 				any_owned_province = {
 					OR = {
 						province_id = 1725
@@ -19044,14 +19048,14 @@ country_event = {
 		random_country = {
 			limit = {
 				check_variable = { which = Secondary_NonExisting value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } }
+				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } }
 			}
 			inherit = FROM
 		}
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } NOT = { check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } } }
+				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } NOT = { check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } } }
 			}
 			inherit = FROM
 		}
