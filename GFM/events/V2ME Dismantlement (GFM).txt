@@ -5320,6 +5320,135 @@ country_event = {
 	immediate = {
 		any_country = {
 			limit = {
+				AND = {
+					OR = {
+						tag = ALD
+						tag = TUN
+						tag = MOR
+						tag = WSA
+						tag = TRI
+						tag = CYR
+						tag = EGY
+						tag = SUD
+						tag = DAR
+						tag = GHN
+						tag = NMB
+						tag = HBY
+						tag = BKF
+						tag = ZBW
+						tag = CMS
+						tag = EQG
+						tag = AGC
+						tag = ANG
+						tag = ARO
+						tag = ASH
+						tag = AWS
+						tag = AZA
+						tag = BEN
+						tag = BRD
+						tag = BSH
+						tag = BUG
+						tag = NKO
+						tag = CAR
+						tag = CGO
+						tag = CHD
+						tag = CLA
+						tag = CMR
+						tag = DAM
+						tag = DND
+						tag = GAB
+						tag = GAZ
+						tag = GBU
+						tag = GEL
+						tag = GMB
+						tag = GNE
+						tag = GON
+						tag = HAR
+						tag = IVC
+						tag = JAL
+						tag = KAF
+						tag = KBO
+						tag = KNG
+						tag = KNY
+						tag = KON
+						tag = KUB
+						tag = KZB
+						tag = LBA
+						tag = LBY
+						tag = LOA
+						tag = LUN
+						tag = MAJ
+						tag = MAS
+						tag = MAT
+						tag = MLI
+						tag = MLW
+						tag = MNG
+						tag = MOS
+						tag = MOZ
+						tag = NGR
+						tag = NIG
+						tag = OYO
+						tag = RWA
+						tag = SEG
+						tag = SHO
+						tag = SHW
+						tag = SID
+						tag = SLE
+						tag = SNG
+						tag = SOM
+						tag = SUA
+						tag = TIG
+						tag = TNZ
+						tag = TOG
+						tag = TOO
+						tag = TOU
+						tag = TRZ
+						tag = TSW
+						tag = WAD
+						tag = WRI
+						tag = WOL
+						tag = XHO
+						tag = ZAM
+						tag = ADW
+						tag = BRM
+						tag = BAR
+						tag = BOI
+						tag = AKR
+						tag = GNB
+						tag = STP
+						tag = ERT
+						tag = DJI
+						tag = CPV
+						tag = CNG
+						tag = ETH
+						tag = MAD
+						tag = LIB
+						tag = SAF
+						tag = SOK
+						tag = RHO
+						tag = ZAN
+						tag = ZUL
+						tag = MAU
+						tag = SEY
+						tag = YEK
+						tag = RGA
+						tag = TUG
+						tag = ABA
+						tag = UBH
+						tag = KRW
+						tag = BNY
+						tag = SHK
+						tag = WRL
+						tag = DAH
+						tag = WRL
+					}
+					civilized = no
+				}
+			}
+			set_country_flag = colonial_zone_exclusion
+		}
+		any_country = {
+			limit = {
 				any_core = {
 					owner = {
 						OR = {
@@ -5486,135 +5615,10 @@ country_event = {
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
-					OR = {
-						tag = YAK
-						tag = BRY
-						tag = KAM
-						AND = {
-							OR = {
-								tag = ALD
-								tag = TUN
-								tag = MOR
-								tag = WSA
-								tag = TRI
-								tag = CYR
-								tag = EGY
-								tag = SUD
-								tag = DAR
-								tag = GHN
-								tag = NMB
-								tag = HBY
-								tag = BKF
-								tag = ZBW
-								tag = CMS
-								tag = EQG
-								tag = AGC
-								tag = ANG
-								tag = ARO
-								tag = ASH
-								tag = AWS
-								tag = AZA
-								tag = BEN
-								tag = BRD
-								tag = BSH
-								tag = BUG
-								tag = NKO
-								tag = CAR
-								tag = CGO
-								tag = CHD
-								tag = CLA
-								tag = CMR
-								tag = DAM
-								tag = DND
-								tag = GAB
-								tag = GAZ
-								tag = GBU
-								tag = GEL
-								tag = GMB
-								tag = GNE
-								tag = GON
-								tag = HAR
-								tag = IVC
-								tag = JAL
-								tag = KAF
-								tag = KBO
-								tag = KNG
-								tag = KNY
-								tag = KON
-								tag = KUB
-								tag = KZB
-								tag = LBA
-								tag = LBY
-								tag = LOA
-								tag = LUN
-								tag = MAJ
-								tag = MAS
-								tag = MAT
-								tag = MLI
-								tag = MLW
-								tag = MNG
-								tag = MOS
-								tag = MOZ
-								tag = NGR
-								tag = NIG
-								tag = OYO
-								tag = RWA
-								tag = SEG
-								tag = SHO
-								tag = SHW
-								tag = SID
-								tag = SLE
-								tag = SNG
-								tag = SOM
-								tag = SUA
-								tag = TIG
-								tag = TNZ
-								tag = TOG
-								tag = TOO
-								tag = TOU
-								tag = TRZ
-								tag = TSW
-								tag = WAD
-								tag = WRI
-								tag = WOL
-								tag = XHO
-								tag = ZAM
-								tag = ADW
-								tag = BRM
-								tag = BAR
-								tag = BOI
-								tag = AKR
-								tag = GNB
-								tag = STP
-								tag = ERT
-								tag = DJI
-								tag = CPV
-								tag = CNG
-								tag = ETH
-								tag = MAD
-								tag = LIB
-								tag = SAF
-								tag = SOK
-								tag = RHO
-								tag = ZAN
-								tag = ZUL
-								tag = MAU
-								tag = SEY
-								tag = YEK
-								tag = RGA
-								tag = TUG
-								tag = ABA
-								tag = UBH
-								tag = KRW
-								tag = BNY
-								tag = SHK
-								tag = WRL
-								tag = DAH
-								tag = WRL
-							}
-							civilized = no
-						}
-					}
+					tag = YAK
+					tag = BRY
+					tag = KAM
+					has_country_flag = colonial_zone_exclusion
 				}
 			}
 			country_event = 777770412
@@ -5688,135 +5692,10 @@ country_event = {
 				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
-					OR = {
-						tag = YAK
-						tag = BRY
-						tag = KAM
-						AND = {
-							OR = {
-								tag = ALD
-								tag = TUN
-								tag = MOR
-								tag = WSA
-								tag = TRI
-								tag = CYR
-								tag = EGY
-								tag = SUD
-								tag = DAR
-								tag = GHN
-								tag = NMB
-								tag = HBY
-								tag = BKF
-								tag = ZBW
-								tag = CMS
-								tag = EQG
-								tag = AGC
-								tag = ANG
-								tag = ARO
-								tag = ASH
-								tag = AWS
-								tag = AZA
-								tag = BEN
-								tag = BRD
-								tag = BSH
-								tag = BUG
-								tag = NKO
-								tag = CAR
-								tag = CGO
-								tag = CHD
-								tag = CLA
-								tag = CMR
-								tag = DAM
-								tag = DND
-								tag = GAB
-								tag = GAZ
-								tag = GBU
-								tag = GEL
-								tag = GMB
-								tag = GNE
-								tag = GON
-								tag = HAR
-								tag = IVC
-								tag = JAL
-								tag = KAF
-								tag = KBO
-								tag = KNG
-								tag = KNY
-								tag = KON
-								tag = KUB
-								tag = KZB
-								tag = LBA
-								tag = LBY
-								tag = LOA
-								tag = LUN
-								tag = MAJ
-								tag = MAS
-								tag = MAT
-								tag = MLI
-								tag = MLW
-								tag = MNG
-								tag = MOS
-								tag = MOZ
-								tag = NGR
-								tag = NIG
-								tag = OYO
-								tag = RWA
-								tag = SEG
-								tag = SHO
-								tag = SHW
-								tag = SID
-								tag = SLE
-								tag = SNG
-								tag = SOM
-								tag = SUA
-								tag = TIG
-								tag = TNZ
-								tag = TOG
-								tag = TOO
-								tag = TOU
-								tag = TRZ
-								tag = TSW
-								tag = WAD
-								tag = WRI
-								tag = WOL
-								tag = XHO
-								tag = ZAM
-								tag = ADW
-								tag = BRM
-								tag = BAR
-								tag = BOI
-								tag = AKR
-								tag = GNB
-								tag = STP
-								tag = ERT
-								tag = DJI
-								tag = CPV
-								tag = CNG
-								tag = ETH
-								tag = MAD
-								tag = LIB
-								tag = SAF
-								tag = SOK
-								tag = RHO
-								tag = ZAN
-								tag = ZUL
-								tag = MAU
-								tag = SEY
-								tag = YEK
-								tag = RGA
-								tag = TUG
-								tag = ABA
-								tag = UBH
-								tag = KRW
-								tag = BNY
-								tag = SHK
-								tag = WRL
-								tag = DAH
-								tag = WRL
-							}
-							civilized = no
-						}
-					}
+					tag = YAK
+					tag = BRY
+					tag = KAM
+					has_country_flag = colonial_zone_exclusion
 				}
 			}
 			country_event = 777770410
@@ -5868,17 +5747,28 @@ country_event = {
 					}
 				}
 				TUN = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
-			TUN = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+			TUN = { set_variable = { which = Outcome_Required value = 1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					TUN = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
 			}
+			owner = {
+				TUN = {
+					set_country_flag = check_complete
+					country_event = 777770610
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}			}
 		}
 		any_country = {
 			limit = {
@@ -5914,16 +5804,30 @@ country_event = {
 					}
 				}
 				MOR = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			MOR = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					MOR = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				MOR = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -5940,16 +5844,30 @@ country_event = {
 					}
 				}
 				WSA = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			WSA = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					WSA = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				WSA = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -5988,16 +5906,30 @@ country_event = {
 					}
 				}
 				ALD = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			ALD = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					ALD = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				ALD = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -6022,16 +5954,30 @@ country_event = {
 					}
 				}
 				TRI = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			TRI = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					TRI = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				TRI = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -6051,16 +5997,30 @@ country_event = {
 					}
 				}
 				CYR = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			CYR = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					CYR = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				CYR = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -6104,16 +6064,30 @@ country_event = {
 					}
 				}
 				EGY = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			EGY = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					EGY = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				EGY = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -6146,16 +6120,30 @@ country_event = {
 					}
 				}
 				SUD = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			SUD = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					SUD = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				SUD = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
 			}
 		}
 		any_country = {
@@ -6176,18 +6164,35 @@ country_event = {
 					}
 				}
 				DAR = {
-					check_variable = { which = Outcome_Required value = 0.99 }
+					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
 					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
 				}
 			}
 			DAR = {
-				country_event = 777770610 
-				set_country_flag = mail_delivery_opened
-				CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				set_variable = { which = Outcome_Required value = 1 }
 			}
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					DAR = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				DAR = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+		
+		
+		
 		#cleans up after the conference is over
 		random_owned = {
 			limit = { owner = { has_country_flag = mail_delivery_ready_for_pickup } }

@@ -187,7 +187,7 @@ country_event = {
         }
     }
     option = {
-        name = "They shall exist as an independent state."
+        name = "morrocco thing"
         any_country = {
 			limit = {
 				tag = FROM
@@ -1958,6 +1958,27 @@ country_event = {
 				}
 				secede_province = THIS
 				add_core = UTI
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Western_Sahara_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1773
+							province_id = 1774
+						}
+					}
+					secede_province = MOR
+					remove_core = UTI
+				}
 			}
 		}
 #
