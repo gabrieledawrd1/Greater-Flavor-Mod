@@ -13,6 +13,18 @@ political_decisions = {
 
         effect = {
             set_country_flag = country_looking_through_options
+			any_land_province = {
+				limit = {
+					OR = {
+						continent = africa
+						continent = central_africa
+						continent = west_africa
+						continent = south_west_africa
+						continent = east_africa
+					}
+				}
+				secede_province = THIS
+			}
         }
     }
 
