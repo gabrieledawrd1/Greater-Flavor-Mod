@@ -29,6 +29,16 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = {
+					THIS = {
+						OR = {
+							tag = WSA
+							tag = TRI
+							tag = DAR
+							tag = CYR
+						}
+					}
+				}
 			}
 			FROM = {
 				set_country_flag = too_many_deliveries
