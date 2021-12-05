@@ -88,6 +88,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = WSA }
 			}
 			FROM = {
 				set_country_flag = too_many_deliveries
@@ -95,6 +96,18 @@ country_event = {
 					limit = { owner = { THIS = { tag = WSA } } }
 					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
 				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771500
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { OR = { tag = TRI tag = CYR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
 				random_owned = {
 					limit = { owner = { THIS = { tag = TRI } } }
 					owner = { THIS = { set_variable = { which = Tripolitania_Colony value = 1 } } }
@@ -103,6 +116,18 @@ country_event = {
 					limit = { owner = { THIS = { tag = CYR } } }
 					owner = { THIS = { set_variable = { which = Cyrenaica_Colony value = 1 } } }
 				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771502
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { OR = { tag = SUD tag = DAR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
 				random_owned = {
 					limit = { owner = { THIS = { tag = SUD } } }
 					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
@@ -113,7 +138,7 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777770621
+			country_event = 777771504
 		}
     }
 }
@@ -167,7 +192,6 @@ country_event = {
         }
     }
 }
-
 country_event = {
     id = 777770621
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
@@ -181,16 +205,6 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Annex_Colony value = 1 }
-			country_event = 777770630
-        }
-    }
-    option = {
-        name = "We shall offer $FROMCOUNTRY$ to other victors."
-        any_country = {
-			limit = {
-				tag = FROM
-			}
-			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -211,16 +225,6 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Independent_Colony value = 1 }
-			country_event = 777770630
-        }
-    }
-    option = {
-        name = "morrocco thing"
-        any_country = {
-			limit = {
-				tag = FROM
-			}
-			set_variable = { which = Intergrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -2364,3 +2368,468 @@ country_event = {
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
+
+country_event = {
+    id = 777771500
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771501
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771502
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Libya"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771503
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Libya"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771504
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Intergrate $FROMCOUNTRY$ into Egypt"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771505
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Egypt"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771506
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Dafur Placeholder"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771507
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Darfur Placeholder"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
