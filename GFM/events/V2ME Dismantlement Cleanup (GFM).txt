@@ -550,8 +550,6 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { days = 7 }
-	
 	immediate = {
 		set_global_flag = waiting_for_victor_update
 	}
