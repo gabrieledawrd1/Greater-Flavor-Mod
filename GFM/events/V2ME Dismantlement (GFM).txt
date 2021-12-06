@@ -5608,7 +5608,8 @@ country_event = {
 						}
 					}
 				}
-				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				NOT = { overlord = { check_variable = { which = Major_Defeated value = 0.99 } } }
 				exists = yes
 				NOT = { check_variable = { which = Core_Event_Sent value = 0.99 } }
@@ -5640,7 +5641,8 @@ country_event = {
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 				}
-				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
@@ -5662,7 +5664,8 @@ country_event = {
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 				}
-				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
@@ -5689,7 +5692,8 @@ country_event = {
 				exists = no
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
 					tag = YAK
@@ -5717,7 +5721,8 @@ country_event = {
 				exists = no
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				OR = {
 					tag = YAK
@@ -5750,7 +5755,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			TUN = { set_variable = { which = Outcome_Required value = 1 } }
@@ -5807,7 +5813,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			MOR = {
@@ -5847,7 +5854,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			WSA = {
@@ -5909,7 +5917,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			ALD = {
@@ -5957,7 +5966,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			TRI = {
@@ -6000,7 +6010,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			CYR = {
@@ -6067,7 +6078,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			EGY = {
@@ -6123,7 +6135,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			SUD = {
@@ -6167,7 +6180,8 @@ country_event = {
 					NOT = { has_country_flag = check_complete }
 					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
-					NOT = { check_variable = { which = dismantlement_leader value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				}
 			}
 			DAR = {
