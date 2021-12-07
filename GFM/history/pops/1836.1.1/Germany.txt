@@ -1761,6 +1761,79 @@
         size = 890
     }
 }
+3548 = {
+    aristocrats = {
+        culture = north_german
+        religion = protestant
+        size = 750
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = protestant
+        size = 400
+    }
+
+    clergymen = {
+        culture = western_slavic
+        religion = protestant
+        size = 300
+    }
+
+    artisans = {
+        culture = north_german
+        religion = protestant
+        size = 3000
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 1300
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = protestant
+        size = 2000
+    }
+
+    farmers = {
+        culture = north_german
+        religion = protestant
+        size = 1920
+    }
+
+    farmers = {
+        culture = western_slavic
+        religion = protestant
+        size = 4991
+    }
+
+    clergymen = {
+        culture = western_slavic
+        religion = catholic
+        size = 100
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 50
+    }
+
+    farmers = {
+        culture = western_slavic
+        religion = catholic
+        size = 710
+    }
+    
+    farmers = {
+        culture = gypsy
+        religion = protestant
+        size = 890
+    }
+}
 #Anhalt Region (1527000)
 #under the rule of Prussia 1836
 #Magdeburg (577200/144300 POPS)
@@ -1808,6 +1881,111 @@
     }
 	
 	farmers = {
+        culture = gypsy
+        religion = protestant
+        size = 1200
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 250
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 1750
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 250
+    }
+
+    farmers = {
+        culture = north_german
+        religion = catholic
+        size = 22750
+    }
+
+    ######Jews
+    aristocrats = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+    ########
+}
+3547 = {
+    aristocrats = {
+        culture = north_german
+        religion = protestant
+        size = 1200
+    }
+
+    bureaucrats = {
+        culture = north_german
+        religion = protestant
+        size = 1400
+    }
+
+    officers = {
+        culture = north_german
+        religion = protestant
+        size = 350
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = protestant
+        size = 1125
+    }
+
+    artisans = {
+        culture = north_german
+        religion = protestant
+        size = 10000
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = protestant
+        size = 2000
+    }
+
+    farmers = {
+        culture = north_german
+        religion = protestant
+        size = 101825
+    }
+    
+    farmers = {
         culture = gypsy
         religion = protestant
         size = 1200

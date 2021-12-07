@@ -184,6 +184,85 @@
         size = 500
     }
 }
+3551 = {
+    aristocrats = {
+        culture = mashriqi
+        religion = sunni
+        size = 35
+    }
+
+    clergymen = {
+        culture = mashriqi
+        religion = sunni
+        size = 75
+    }
+
+    artisans = {
+        culture = mashriqi
+        religion = sunni
+        size = 100
+    }
+
+    soldiers = {
+        culture = mashriqi
+        religion = sunni
+        size = 25
+    }
+
+    farmers = {
+        culture = mashriqi
+        religion = sunni
+        size = 2215
+    }
+
+    aristocrats = {
+        culture = bedouin
+        religion = sunni
+        size = 15
+    }
+
+    clergymen = {
+        culture = bedouin
+        religion = sunni
+        size = 15
+    }
+
+    artisans = {
+        culture = bedouin
+        religion = sunni
+        size = 35
+    }
+
+    soldiers = {
+        culture = bedouin
+        religion = sunni
+        size = 25
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 910
+    }
+
+    clergymen = {
+        culture = syriac
+        religion = orthodox
+        size = 100
+    }
+
+    artisans = {
+        culture = syriac
+        religion = orthodox
+        size = 100
+    }
+
+    farmers = {
+        culture = syriac
+        religion = orthodox
+        size = 500
+    }
+}
 #Badiyat al-Sham Region (40000)  #see Syria.txt, Iraq.txt & Saudi Arabia.txt for balance of region
 #under the "rule" of Egypt in 1836
 #Azraq (12000/3000 POPS) #now part of Jordan

@@ -88,6 +88,13 @@
     }
     ########
 }
+3550 = {
+    serfs = {
+        culture = byelorussian
+        religion = orthodox
+        size = 40000
+    }
+}
 #Vyazma (416000/104000 POPS)
 1014 = {
     aristocrats = {

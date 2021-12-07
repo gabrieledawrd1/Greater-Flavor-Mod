@@ -71,13 +71,13 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 26736
+        size = 28736
     }
 	
 	farmers = {
         culture = haitian_creole
         religion = catholic
-        size = 17984
+        size = 19984
     }
 
     farmers = {
@@ -173,7 +173,84 @@
     }
 
 }
+3545 = {
+    aristocrats = {
+        culture = mulatto
+        religion = catholic
+        size = 550
+    }
 
+    clergymen = {
+        culture = mulatto
+        religion = catholic
+        size = 75
+    }
+
+    artisans = {
+        culture = afro_french
+        religion = catholic
+        size = 1350
+    }
+    
+    artisans = {
+        culture = haitian_creole
+        religion = catholic
+        size = 900
+    }
+
+    soldiers = {
+        culture = mulatto
+        religion = catholic
+        size = 700
+    }
+    
+    soldiers = {
+        culture = afro_french
+        religion = catholic
+        size = 300
+    }
+    
+    soldiers = {
+        culture = haitian_creole
+        religion = catholic
+        size = 120
+    }
+
+    farmers = {
+        culture = afro_french
+        religion = catholic
+        size = 2039
+    }
+    
+    farmers = {
+        culture = haitian_creole
+        religion = catholic
+        size = 3626
+    }
+    farmers = {
+        culture = afro_american
+        religion = protestant
+        size = 5003
+    }
+    farmers = {
+        culture = kongo
+        religion = animist
+        size = 380
+    }
+
+    farmers = {
+        culture = maroon
+        religion = animist
+        size = 305
+    }
+    
+    farmers = {
+        culture = maroon
+        religion = catholic
+        size = 75
+    }
+
+}
 #Môle St-Nicolas
 3284 = {
     clergymen = {

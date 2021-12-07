@@ -122,6 +122,25 @@
         size = 550
     }
 }
+3545 = {
+    clergymen = {
+        culture = mulatto
+        religion = catholic
+        size = 75
+    }
+
+    farmers = {
+        culture = afro_french
+        religion = catholic
+        size = 4300
+    }
+
+    artisans = {
+        culture = mulatto
+        religion = catholic
+        size = 550
+    }
+}
 3309 = {
     clergymen = {
         culture = mulatto

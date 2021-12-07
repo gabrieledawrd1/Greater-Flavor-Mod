@@ -1869,6 +1869,111 @@
     }
     ########
 }
+3547 = {
+    aristocrats = {
+        culture = north_german
+        religion = protestant
+        size = 1200
+    }
+
+    bureaucrats = {
+        culture = north_german
+        religion = protestant
+        size = 1400
+    }
+
+    officers = {
+        culture = north_german
+        religion = protestant
+        size = 350
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = protestant
+        size = 1125
+    }
+
+    artisans = {
+        culture = north_german
+        religion = protestant
+        size = 10000
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = protestant
+        size = 2000
+    }
+
+    farmers = {
+        culture = north_german
+        religion = protestant
+        size = 101825
+    }
+    
+    farmers = {
+        culture = gypsy
+        religion = protestant
+        size = 1200
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 250
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 1750
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 250
+    }
+
+    farmers = {
+        culture = north_german
+        religion = catholic
+        size = 22750
+    }
+
+    ######Jews
+    aristocrats = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+    ########
+}
 #Erfurt (220800/55200 POPS)
 554 = {
     aristocrats = {
@@ -6847,6 +6952,61 @@
 
     farmers = {
         culture = north_german
+        religion = catholic
+        size = 4006
+    }
+}
+3548 = {
+    aristocrats = {
+        culture = north_german
+        religion = protestant
+        size = 75
+    }
+
+    bureaucrats = {
+        culture = north_german
+        religion = protestant
+        size = 75
+    }
+
+    officers = {
+        culture = north_german
+        religion = protestant
+        size = 100
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = protestant
+        size = 25
+    }
+
+    artisans = {
+        culture = north_german
+        religion = protestant
+        size = 300
+    }
+
+    farmers = {
+        culture = sorbian
+        religion = protestant
+        size = 1500
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 650
+    }
+
+    farmers = {
+        culture = sorbian
         religion = catholic
         size = 4006
     }
