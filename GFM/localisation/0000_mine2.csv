@@ -1,0 +1,328 @@
+;;;;;;;;;;;;;x,,
+hide_army_stacks_title;§CHide the armies§!;x
+hide_army_stacks_desc;Hide all the decisions that allow army stack creation. NOTE: To use the built armies, group the new units together and they will function as usual.;x
+show_army_stacks_title;§CShow the armies§!;x
+show_army_stacks_desc;Show all the decisions that allow army stack creation. NOTE: To use the built armies, group the new units together and they will function as usual.;x
+early_4_1_5_stack_title;§CEarly 4/1/5 Army§!;x
+early_4_1_5_stack_desc;Construct an army of 4 infantry, 1 hussar, and 5 artillery in the capital. Will consume the same amount of goods as if built manually.;x
+early_1_5_mob_title;§CEarly 1/5 Mob Army§!;x
+early_1_5_mob_desc;Construct an army of 1 hussar and 5 artillery in the capital. Will consume the same amount of goods as if built manually.;x
+late_1_4_mob_title;§CLate 1/4 Mob Army§!;x
+late_1_4_mob_desc;Construct an army of 1 plane and 4 artillery in the capital. Will consume the same amount of goods as if built manually.;x
+OCE;Oceania;x
+OCE_democracy;Oceania;x
+OCE_absolute_monarchy;Empire of Oceania;x
+OCE_prussian_constitutionalism;Empire of Oceania;x
+OCE_hms_government;Oceania;x
+OCE_presidential_dictatorship;Oceania;x
+OCE_bourgeois_dictatorship;Free Oceania;x
+OCE_proletarian_dictatorship;The People of Oceania;x
+OCE_fascist_dictatorship;The Oceanic State;x
+OCE_ADJ;Oceanian;x
+form_oceania_title;Found Oceania;x
+form_oceania_desc;Our hegemony over the Oceanic region allows us to establish the new Oceanic Union. We will prosper together!;x
+request_australasian_independence_title;Request Independence;x
+request_australasian_independence_desc;We have been granted Dominion status by the British, and now we are permitted to go the full way and establish our own Republic.;x
+claim_papua_new_guinea_title;Claim New Guinea;x
+claim_papua_new_guinea_desc;Situated just to our north the empty lands in the East of New Guinea can be claimed by our government as our rightful domain.;x
+claim_java_title;Claim Java;x
+claim_java_desc;Although Java is already claimed by others, that does not stop us asserting our rightful control over the Island. They are part of Oceania like us.;x
+claim_oceanic_islands_title;Claim Oceanic Islands;x
+claim_oceanic_islands_desc;To ensure our areas of economic and military power projection, we must have control over the surrounding islands and chains.;x
+accept_melanesian_title;Acceptance of the New Guinea People;x
+accept_melanesian_desc;One of our earliest colonies, they should be citizens like the rest, not subjects.;x
+accept_moluccan_title;Reconcile with the Moluccans;x
+accept_moluccan_desc;The people of the islands are recognized with full civic rights like mainlanders.;x
+accept_javan_title;Integrate the Javanese;x
+accept_javan_desc;Our largest and most prosperous colony, let them be citzens of Oceania, any Javanese could be the Presdident!;x
+CEU;The Celtic Union;x
+CEU_democracy;The Celtic Union;x
+CEU_absolute_monarchy;The Celtic Empire;x
+CEU_prussian_constitutionalism;The Celtic Empire;x
+CEU_hms_government;The Celtic Union;x
+CEU_presidential_dictatorship;The Celtic Union;x
+CEU_bourgeois_dictatorship;Celtic Free State;x
+CEU_proletarian_dictatorship;Celtic Soviet State;x
+CEU_fascist_dictatorship;The Celtic Brotherhood;x
+CEU_ADJ;Celtic;x
+form_celtic_union_title;Found the Celtic Union;x
+form_celtic_union_desc;We are in a dominant position to found the Celtic Union, where we unite the disparate brother groups of our culture into one whole!;x
+claim_wales_title;Liberate Wales;x
+claim_wales_desc;Long has Wales suffered under foreign rule, we will seek to free them of this great injustice and welcome them into our Union.x
+claim_brittany_title;On to Brittany;x
+claim_brittany_desc;Across the Channel, our Breton brothers seek cultural autonomy that the French cannot provide. We shall provide it.;x
+claim_spanish_galicia_title;To Iberian Galicia;x
+claim_spanish_galicia_desc;Free the people of Galicia! Let them live in peace!;x
+IRE_liberal_2;Labour;x
+IRE_liberal_3;Labour;x
+IRE_conservative;Fianna Fáil;x
+IRE_reactionary;Cumann na nGaedheal;x
+IRE_anarcho_liberal;a;x
+IRE_socialist;Sinn Fein;x
+EAF;The Efrican Federation;x
+EAF_democracy;The Efrican Federation;x
+EAF_absolute_monarchy;The Coptic Empire;x
+EAF_prussian_constitutionalism;The Coptic Empire;x
+EAF_hms_government;The Coptic Empire;x
+EAF_presidential_dictatorship;The Efrican Union;x
+EAF_bourgeois_dictatorship;The Free State of Efirca;x
+EAF_proletarian_dictatorship;The Socialist Efrican Union;x
+EAF_fascist_dictatorship;The Efican State;x
+EAF_ADJ;Efrican;x
+COP;The Coptic Kingdom;x
+COP_democracy;The Coptic Republic;x
+COP_absolute_monarchy;The Coptic Empire;x
+COP_prussian_constitutionalism;The Coptic Empire;x
+COP_hms_government;The Kingdom of Copts;x
+COP_presidential_dictatorship;The Coptic State;x
+COP_bourgeois_dictatorship;The Coptic Free State;x
+COP_proletarian_dictatorship;The Socialist Coptic Union;x
+COP_fascist_dictatorship;The Coptic State;x
+COP_ADJ;Coptic;x
+indian_iron_production_title;Restore our Iron Production;x
+indian_iron_production_desc;India used to be the manufacturing heart of the world, but colonial exploitation has destroyed our manufacturing base. We must seek to use our rich deposits of iron ore for our new industrialising economy.;x
+indian_coal_production_title;Restore our Coal Production;x
+indian_coal_production_desc;Like with iron, coal is needed for a strong manufacturing base and to recover our economy from decades of colonial exploitation. Let us strike the earth for new veins of coal!;x
+form_coptic_empire_title;Proclaim the Coptic Empire;x
+form_coptic_empire_desc;We have unified out Coptic lands, with our new domain we may now proclaim the reborn Coptic Empire!;x
+eaf_claim_sudan_title;Demand Sudan;x
+eaf_claim_sudan_desc;We demand a route back to the Coptic Orthodox Church of Alexandria and our fellow breatheren in the region. We now demand Sudan!;x
+eaf_accept_sudan_title;Integrate Sudan;x
+eaf_accept_sudan_desc;Since the people of these regions are under our rule and have learned to accept our government, it is time we accept them in turn.;x
+eaf_accept_east_africa_title;Federal Rights for East Africa;x
+eaf_accept_east_africa_desc;The Federal Republic guarantees rights to all, afforded by our Constitution. All of the people within our borders are citizens in same!;x
+EVTNAME7777911;Our Destiny;x
+EVTDESC7777911;Two factions within our new nation are pulling at the government, demanding we expand either to the north coast (Myaphisite Faction) or to the southern lakes (Representative Faction). We could reaffirm our status as the Gods Empire on Earth, or move away from a religious justification of unity to one more republican and anti-colonial in nature. We must decide which factions ideas to follow:;x
+EVT7777911PTA;To the North Coast and the Church of Alexandria!;x
+EVT7777911PTB;To the Southern Lakes of East Africa!;x
+EVT7777911PTC;We will not abandon our roots so easily;x
+EVTNAME7777912;The Church of Alexandria;x
+EVTDESC7777912;We have reclaimed our birthright and Copts are in control of the Church of Alexandria once more. A large number of Sunni muslims now live inside our borders, should we seek to convert them to our christian ways, or leave them be?;x
+coptic_conversions;Coptic Conversions;x
+EVT7777912PTA;They will know the way of God;x
+EVT7777912PTB;It is not for us to show their way to God;x
+eaf_resources_title;New Industrial Mining;x
+eaf_resources_desc;We must strike the earth to take advantage of our natural resources, many of which can be used in our flourishing new industrial economy.;x
+nge_resources_title;New Industrial Mining;x
+option_disable_colonial_railroading_title;§POption: Disable Colonial Railroading§!;x
+option_disable_colonial_railroading_desc;Remove the AIs preference for historical colonising;x
+option_initiate_mp_setup_title;§POption: Multiplayer Setup§!;x
+option_initiate_mp_setup_desc;Set the mp_setup global flag to unlock features excelusive to mp, and block op sp effects.;x
+nge_resources_desc;We must strike the earth to take advantage of our natural resources, many of which can be used in our flourishing new industrial economy.;x
+commerce_raider;Submarine;x
+commerce_raider_short;SR;x
+commerce_raiders;Submarines;x
+commerce_raiders_desc;A submarine (or sub) is a watercraft capable of independent operation underwater.;x
+first_combat_subs;First Combat Submarines;x
+first_combat_subs_desc;The submarine became a potentially viable weapon with the development of the Whitehead torpedo, designed in 1866 by British engineer Robert Whitehead, the first practical self-propelled or 'locomotive' torpedo. The spar torpedo that had been developed earlier by the Confederate States Navy was considered to be impracticable, as it was believed to have sunk both its intended target, and probably H. L. Hunley, the submarine that deployed it.;x
+new_carriers;Aircraft Carriers;x
+new_carriers_desc;An aircraft carrier is a warship that serves as a seagoing airbase, equipped with a full-length flight deck and facilities for carrying, arming, deploying, and recovering aircraft.;x
+2nd_combat_subs;Great War Subs;x
+2nd_combat_subs_desc;The first time military submarines had significant impact on a war was in World War I. Forces such as the U-boats of Germany operated against Allied commerce (Handelskrieg); the submarine's ability to function as a practical war machine relied on new tactics, their numbers, and submarine technologies such as combination diesel/electric power system that had been developed in the preceding years.;x
+interwar_carriers;Interwar Carriers;x
+interwar_carriers_desc;As a result of the Washington Naval Treaty of 1922, which limited the construction of new heavy surface combat ships, most early aircraft carriers were conversions of ships that were laid down (or had served) as different ship types: cargo ships, cruisers, battlecruisers, or battleships.;x
+advanced_carrier_hull;Carrier Hull Advancements;x
+advanced_carrier_hull_desc;Specialist carrier evolution was well underway in the 1920s, with several navies ordering and building warships that were purposefully designed to function as aircraft carriers by the mid-1920s.;x
+quantative_easing;Quantitative Easing;x
+quantative_easing_desc;QE is a monetary policy whereby a central bank purchases at scale government bonds or other financial assets in order to inject money into the economy to expand economic activity. Quantitative easing is considered to be an "unconventional" form of monetary policy, which is usually used when inflation is very low or negative, and when standard monetary policy instruments have become ineffective.;x
+unitary_vs_federal;Government Devolution & Centralisation;x
+unitary_vs_federal_desc;In a unitary system the only level of government besides the central is the local or municipal government. Within a federal system the state or provincial governments share sovereignty with the central government and have final jurisdiction over a broad range of policy areas. Empire / Republic wide powers can be devolved to the provines / states.;x
+EVTNAME7777913;Zheltorossiya;x
+EVTDESC7777913;We can seek to expand our domain into manchuria, accomplishing a dream of many Russians to straddle Eurasia. We must now decide whether to push fully for this, or whether to stick to outer Manchuria, or Priamurye, as it shall be known. If we demand all of Manchuria, we will also be able to annex Mongolia (if we puppet it, in the future).;x
+EVT7777913OPTA;No, Priamurye is enough;x
+EVT7777913OPTB;Yes, we shall have it all;x
+angry_chinese_reform;Chinese Nationalist Reform;x
+angry_chinese_reform_desc;Enraged by demands on Manchuria, many more people of China will accept neccesary reforms, and even push full heartedly for them;x
+russia_annex_mongolia_title;Annex Mongolia;x
+russia_annex_mongolia_desc;As we carry on the path of Zheltorossiya, we will fully integrate our Mongolian puppet. Their people we be best served under our administration.;x
+POLITICS_DECISIONS;Decisions:;x
+POLITICS_DECISIONS_2;§PInitial Options§!, Alt/Historical, §CQoL Management§!, §EGeneral§!, §YMP§!;Décisions;Entscheidungen;;Decisiones;;;;;;;;;x;;;;
+switch_to_traditional_academic_title;§ERestore The Academia§!;Rétablir l'académie;Akademische Ausrichtung wiederherstellen;;Restauración de la academia;;;;;;;;;x
+switch_to_army_tech_title;§EMilitary-Industrial Complex§!;Complexe militaro-industriel;Militärisch-industrieller Komplex;;Complejo industrial militar;;;;;;;;;x
+switch_to_navy_tech_title;§ESea power & The Merchant Marine§!;Puissance maritime & marine marchande;Seemacht & die Handelsmarine;;El Poder marítimo y la Marina Mercante;;;;;;;;;x
+switch_to_culture_tech_title;§EAvantgarde Intelligentsia§!;Intelligentsia d'avant-garde;Avantgardistische Intelligentsia;;Intelectualidad de vanguardia;;;;;;;;;x
+switch_to_trade_tech_title;§ETycoon Capitalism & Business Schools§!;Capitalisme poussé et écoles commerciales;Magnats-Kapitalismus & Kaufmannsschulen;;Escuelas de negocios y magnates del Capitalismo;;;;;;;;;x
+switch_to_industry_tech_title;§ECorporative Industrialism§!;Industrialisme corporatif;Kooperativer Industrialismus;;Industrialismo corporativo;;;;;;;;;x
+greater_naval_bases;Interwar Naval Bases;x
+greater_naval_bases_desc;New cranes and tools to assist with construction and maintenance of ships allows more to be maintaned with the same shipyard crew;x
+advanced_roads;Prewar Roads;x
+advanced_roads_desc;-;x
+advanced_roads_2;Interwar Roads I;x
+advanced_roads_2_desc;-;x
+advanced_roads_3;Interwar Roads II;x
+advanced_roads_3_desc;-;x
+leave_soi_title;§ELeave Sphere of Influence§!;Quitter la sphère d’influence;Einflusssphäre verlassen;;Abandonar esfera de influencia;;;;;;;;;x
+EVTNAME77779071;A More Marxist Approach;x
+EVTDESC77779071;With the arrival of a new marxist government, UBI is back on the table for the upperhouse to consider.;x
+EVT77779071A;We will share the fruits of our labour amoungst us all;x
+upper_house_no_ubi;UBI Vetoed;x
+EVTNAME7777914;Capital Supply Depot;x
+EVTDESC7777914;We have built large surplus barracks and supply storage for our incoming mobilised armies to be organised and sent to the front.;x
+EVT7777914OPTA;Good planning Generals;x
+capital_mobilisation;Capital Supply Depot;x
+westernize_nation_desc;Our country is under intellectual assault by modernity and the Western World. In the fields of modern technology, industry and military theory, the old traditions and institutions no longer serve us as they used to. Everywhere we turn, western influences spread like wildfire through our nation, our population, and our souls. If we are to remain what we always have been, and not become something else entirely, now is the time to assume control of our own destiny. It has become apparent to the leading members of our intellectual elite, that the only way to turn the tide on the Western Leviathan is to swim with it, for, as Sun Tzu says: The reed that bends before the wind, also offers a form of resistance. §YReload the save (after techs have been returned via events post westernisaion) to reactivate inventions§!;x
+reclaim_greece_title;Reclaim Greece;x
+reclaim_greece_desc;Greece became independent from our Sultan in 1821, and never have we been able to re-establish control and undo the final borders imposed on us by the 1832 Conference of London. Now we shall.;x
+retake_algeria_title;Retake Algeria;x
+retake_algeria_desc;The Regency of Algiers was a state in North Africa lasting from 1516 to 1830, when it was conquered by the French. It had been semi-autonomous from 1710 due to the coup of Baba Ali Chaouche. We will now reassert our longstanding claims to Algeria.;x
+integrate_algeria_title;Integrate Algeria;x
+integrate_algeria_desc;After our victories over the European powers we can now formally annex Algeria under the Porte's control, although some local forces may resist once more.;x
+integrate_tatar_crimea_title;Establish Crimea;x
+integrate_tatar_crimea_desc;With our control over Crimea secured once more, let us embrace our fellow islamic bretheren of the peninsula.;x
+EVTDESC90900;We are now sufficently advanced for the European barbarians to regard us as "Civilised", and so they must respect our right to centralise and reject foreign influence throughout China. §YReload the save (after techs have been returned via events post westernisaion) to reactivate inventions§!;x
+annex_black_flag_title;Annex Heiqi Jun;x
+annex_black_flag_desc;In light of the French annexation of Indochina, and our historic links with Vietam and the people of the region, we have deemed it appropriate to formally integrate Heiqi Jun into the Empire. This will protect them, and ensure our southern border.;x
+perma_disable_the_crises_title;§PPermanently Disable Crises§!;x
+perma_disable_the_crises_desc;Prevent any crises from occuring this campaign.;x
+post_colonial_westernise_title;Post-Colonial Future;x
+post_colonial_westernise_desc;Although we are free of our colonial overlords, our lands and people are foreverchanged. We must work with what we've got to build a brighter future.;x
+EVTNAME7777915;A New Republic;x
+EVTDESC7777915;The Ottoman Empire is dead, and so are the claims that went with it. We shall focus on building a Turkish Republic, free from foreign domination.;x
+EVTOPTA7777915;Lets begin;x
+TRK;Turkey;;;;;;;;;;;;x
+TRK_democracy;The Republic of Turkey;x
+TRK_absolute_monarchy;The Grand Turkish Soverienty;x
+TRK_prussian_constitutionalism;The Grand Turkish Soverienty;x
+TRK_hms_government;Turkey;x
+TRK_presidential_dictatorship;Turkey;x
+TRK_bourgeois_dictatorship;Turkey;x
+TRK_proletarian_dictatorship;Turkish Socialist Republic;x
+TRK_fascist_dictatorship;Turkish Empire;x
+TRK_ADJ;Turkish;;;;;;;;;;;;x
+TRK_reactionary;Restorationists;x
+TRK_conservative;CHP;x
+TRK_liberal;CHP;x
+TRK_socialist;Socialist Workers' Party;x
+TRK_communist;Communist Party;x
+TRK_anarcho_liberal;Turkish Liberty;x
+TRK_fascist;Tigir:Er;x
+mechanical_cotton;Mechanical Cotton Production;x
+mechanical_cotton_desc;Egypt under Muhammad Ali in the early 19th century had the fifth most productive cotton industry in the world, in terms of the number of spindles per capita. The industry was initially driven by machinery that relied on traditional energy sources, such as animal power, water wheels, and windmills, which were also the principal energy sources in Western Europe up until around 1870. It was under Muhammad Ali in the early 19th century that steam engines were introduced to the Egyptian cotton industry.;x
+interwar_hull;Interwar Hull;x
+interwar_hull_shipyard;Interwar Shipyard;x
+interwar_hull_shipyard_desc;Shipbuilding has always been a ‘boom and bust’ industry, and the years between the wars were more bust than boom.;x
+bronze;Bronze;x
+bronze_factory;Bronze Factory;x
+bronze_factory_desc;Bronze is an alloy consisting primarily of copper, commonly with about 12–12.5% tin and often with the addition of other metals (such as aluminium, manganese, nickel or zinc) and sometimes non-metals or metalloids such as arsenic, phosphorus or silicon. These additions produce a range of alloys that may be harder than copper alone, or have other useful properties, such as strength, ductility, or machinability.;x
+shoes;Boots;x
+shoe_factory;Shoe Factory;x
+shoe_factory_desc;The shoemaking trade flourished in the eighteenth and early nineteenth centuries but began to be affected by industrialization in the later nineteenth century. Traditional handicraft shoemaking has now been largely superseded in volume of shoes produced by industrial mass production of footwear, but not necessarily in quality, attention to detail, or craftsmanship.;x
+pharma_factory;Pharmaceuticals Plant;x
+pharma_factory_desc;Pharmacuetical manufacturing is the process of industrial-scale synthesis of pharmaceutical drugs as part of the pharmaceutical industry. The process of drug manufacturing can be broken down into a series of unit operations, such as milling, granulation, coating, tablet pressing, and others.;x
+industrial_bronze_production;Industrial Bronze;x
+industrial_bronze_production_desc;Bronze, or bronze-like alloys and mixtures, were used for coins over a longer period. Bronze was especially suitable for use in boat and ship fittings prior to the wide employment of stainless steel owing to its combination of toughness and resistance to salt water corrosion. Bronze is still commonly used in ship propellers and submerged bearings.;x
+industrial_boots_production;Mass Shoe Production;x
+industrial_boots_production_desc;Until the 19th century, shoemaking was a traditional handicraft, but by the century's end, the process had been almost completely mechanized, with production occurring in large factories. Despite the obvious economic gains of mass-production, the factory system produced shoes without the individual differentiation that the traditional shoemaker was able to provide.;x
+interwar_hulls;Interwar Hull Construction;x
+interwar_hulls_desc;During World War One, many ships sank, so after the war there were a few years when there was high demand for building new ships. However, by the mid 1920s, enough ships had been built to meet demand. This was partly a result of the peace terms, under which Germany was expected to build ships to be distributed among the Allies.;x
+medical_equipment;Drug Manufacturing;x
+medical_equipment_desc;In the pharmaceutical industry, a wide range of excipients may be blended together with the active pharmaceutical ingredient to create the final blend used to manufacture the solid dosage form. The range of materials that may be blended, presents a number of variables which must be addressed to achieve target product quality attributes.;x
+EVTNAME7777916;Capital Supply Removal;x
+EVTDESC7777916;Remove the supply increase in the capital for AI nations;x
+EVTNAME77779161;Non-Capital Supply Removal;x
+EVTDESC77779161;Remove the supply increase in the former capital;x
+EVT7777916OPTA;Do it;x
+bolivian_tin_production_title;New Industrial RGOs;x
+bolivian_tin_production_desc;Advancements in technology allow us to mine previous unobtainable goods, bolstering supply for our industrial base.;x
+romanian_copper_production_title;New Industrial RGOs;x
+romanian_copper_production_desc;Advancements in technology allow us to mine previous unobtainable goods, bolstering supply for our industrial base.;x
+serbian_copper_production_title;New Industrial RGOs;x
+serbian_copper_production_desc;Advancements in technology allow us to mine previous unobtainable goods, bolstering supply for our industrial base.;x
+alaskan_copper_production_title;New Industrial RGOs;x
+alaskan_copper_production_desc;Advancements in technology allow us to mine previous unobtainable goods, bolstering supply for our industrial base.;x
+brazilian_coal_title;New Industrial RGOs;x
+brazilian_coal_desc;Advancements in technology allow us to mine previous unobtainable goods, bolstering supply for our industrial base.;x
+EVTDESC5329627;We must decide who will lead our new Italian ally.;x
+berlin_conference;Berlin Conference;x
+hasmanifestdestiny;Manifest Destiny;x
+EVTNAME7777917;New England requests unification;x
+EVTDESC7777917;The government of New England, with the consent of its legislature, has requested unification with Canada. In return they ask for equal standing as full citizens. How shall we respond?;x
+EVTOPTA7777917;Yes! We shall be united;x
+EVTOPTB7777917;No, we seek to return to our homeland;x
+EVTNAME7777918;The Exiling;x
+EVTDESC7777918;We have lost. The Chartists are victorious and so we shall look across the seas, the shores and lands of Canada shall be our home. Maybe one day we will return, maybe not.;x
+EVTOPTA7777918;So it is.;x
+eng_to_canada_title;O Canada!;x
+eng_to_canada_desc;It is time to make ourselves and our governmnet more reflective of the new political reality, we will forge ourselves anew!;x
+accept_quebec_now_title;Coast to Coast;x
+accept_quebec_now_desc;We must work with the french speakers of our land, and take Hudson Bay Company land under Crown control;x
+releast_and_puppet_nen_title;New England, New Canada;x
+releast_and_puppet_nen_desc;We request, no we DEMAND the freedom of the people of New England. We will go to Washington and enforce our demands like its 1812.;x
+north_east_corridor_cores_title;The South East Corridor;x
+north_east_corridor_cores_desc;Since integration of the New Englanders and acceptance of their culture, we can now assert control over these lands, and future rightful control, to the international community.;x
+can_to_uk_title;Restore our United Kingdom;x
+can_to_uk_desc;After our victory over the republicans, we can proclaim once more the United Kingdom of Great Britain and Ireland.;x
+EVTNAME7777919;Our Common Values;x
+EVTDESC7777919;With the reorganisation into the Republic, we will now set out the ideals and character of our nation in the new constitution and subsequent laws. We are restricted by the views of our citizens, and technology. How shall we focus ourselves?;x
+EVTOPTA7777919;Liberty is paramount;x
+EVTOPTB7777919;Equality is whats fair;x
+EVTOPTC7777919;Order will reign;x
+EVTOPTD7777919;Productivity enriches;x
+EVTNAME7777920;Second French intervention in Mexico;x
+EVTDESC7777920;Mexico has refused to repay debts owed to us, we can use this pretext (and whilst the USA is preoccupied with the Civil War) to invade an make a client out of Mexico.;x
+EVT7777920OPTA;Yes, we shall install Maximilian I as Emperor;x
+EVT7777920OPTB;No, Franco-American relations would suffer too greatly;x
+EVTNAME7777921;Second French intervention in Mexico;x
+EVTDESC7777921;We are attacked once more! Our second indpendence war is apon us! We must try to call on aid from the United States. As preoccupied as they are, it is our only hope for aid.;x
+EVT7777921OPTA;Let us hope the Americans respond kindly in turn.;x
+EVT7777921OPTB;No, we will not call on outside aid and intervention, this is our fight;x
+EVTNAME7777922;Second French intervention in Mexico;x
+EVTDESC7777922;European imperialism is back in the Americas, France seeks to impose their monarchichal ways on Mexico and control it once more, how shall we respond?;x
+EVT7777922OPTA;We shall aid the Mexican Republic;x
+EVT7777922OPTB;This does not concern us;x
+start_mass_literacy_campaign_title;§EStart Mass Literacy Campaign§!;x
+start_mass_literacy_campaign_desc;We can begin a mass education campaign to target the most illiterate citizens and raise their literacy. It will cost administrative effort, and other nations will be wary of the fast rise in the ability of populace.;x
+EVTNAME7777923;The Literacy Campaign of $YEAR$;x
+EVTDESC7777923;We have complied a list of areas most in need of targeted education to increase our literacy. Lower literacy citizens will gain more effect from the campaign, with higher literacy citizens seeing little to no effect, shall we proceed?;x
+EVT7777923OPTA;Yes, our people must have the oppertunity education affords them;x
+EVT7777923OPTB;No, the literacy of our populace is now sufficent;x
+mass_literacy_in_progress;Mass Literacy Campaign;x
+mass_literacy_in_progress_desc;There is currently a nationwide effort to educate the most needing of our populace.;x
+EVTNAME7777924;Removing European Pops;x
+EVTDESC7777924;They aren't needed in MP setup;x
+EVTOPTA7777924;Restore the usual cultures;x
+option_disable_euro_pops_title;§POption: Remove European pops§!;x
+option_disable_euro_pops_desc;Remove specifically European culture pops (they are used as feeder pops for other pops to assimilate to when the USE exists).;x
+bomber;Bomber;x
+bomber_desc;A bomber is a combat aircraft designed to attack ground and naval targets by dropping air-to-ground weaponry (such as bombs), launching torpedoes, or deploying air-launched cruise missiles.;x
+plane;Fighter;x
+pan_european_group;Pan-European;x
+civilize_ai_countries_title;Auto Westernise;x
+civilize_ai_countries_desc;Westernise the slow ai countries - cleanup;x
+ITA_annex_ITS_title;Unite the Peninsula;
+ITA_annex_ITS_desc;Merge our two union states;x
+global_1836_setup_title;World Bank Neutrality;x
+global_1836_setup_desc;Prevent CB justification on the World Bank;x
+changing_executive;Changing Executive;x
+UK_NAME;UK Puppet Dominions;x
+UK_DESC;Canada and Australia are released as puppets to pick at the start. The UK can then go on to release them from puppet status via generic release vassal decision if they so want to.;x
+SUPPLY_LOAD_STATUS_DESC_BASIC;The total §Ysupply throughput§! of all our §Ynaval ports§! will always be sufficient for any navy we maintain.;x
+french_can_primary_title;Our French Legacy;x
+french_can_primary_desc;The core of our nation stems from the initial French landings in Quebec, whilst the English Canadians are a key part of our nation, it is the French Canadians that laid its foundations.;x
+accept_hatians_title;Francais Brothers;x
+accept_hatians_desc;Now Haiti is under our control we should reconcile with the inhabitants of the island, led by our common language.;x
+OCE;Oceania;x
+IDO_democracy;Indochina;x
+IDO_absolute_monarchy;Empire of Indochina;x
+IDO_prussian_constitutionalism;Empire of Indochina;x
+IDO_hms_government;Indochina;x
+IDO_presidential_dictatorship;Indochina;x
+IDO_bourgeois_dictatorship;Free Indochina;x
+IDO_proletarian_dictatorship;The Peoples Republic of Indochina;x
+IDO_fascist_dictatorship;The Indochinese State;x
+IDO_ADJ;Indochinese;x
+unite_indochina_title;Form Indochina;x
+unite_indochina_desc;We have established control over the indochinese region and can now proclaim a new union!;x
+accept_ido_title;Accept Our People;
+accept_ido_desc;We must work with the people of our lands, so that we prosper together.;x
+expand_ido_title;The Western Border;x
+expand_ido_desc;We must shorten our border to the west, let us claim the lands to the Bankok border to secure our western flank.;x
+request_canadian_lands_title;Complete East Canada;x
+request_canadian_lands_desc;We will formally request at the British Embassy for all our lands to be returned unto us.;x
+EVTNAME7777925;Canada Requests Land Grant;x
+EVTDESC7777925;The government of Canada has formally requested of us to hand over our directly administered territories in the north of the Americas. They are far better situated to administer it, and in light of our alliance we should consider this request seriously.;x
+EVT7777925OPTA;We accept;x
+EVT7777925OPTB;No, not this time;x
+liberal_revolution_in_progress;Liberal Revolution in Progress;x
+cop_onto_egypt_title;Home of the Great Church of Antioch;x
+cop_onto_egypt_desc;Egypt is our right to claim, we will establish Coptic control over it once more!;x

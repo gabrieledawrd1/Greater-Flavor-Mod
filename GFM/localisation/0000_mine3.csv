@@ -1,0 +1,106 @@
+;;;;;;;;;;;;;x,,
+interwar_warfare;Early Interwar Warfare;x
+interwar_warfare_desc;New doctrines of concentrated armies and firepower to punch breaks in enemy lines are being theorised and tested.;x
+interwar_warfare_2;Late Interwar Warfare;x
+interwar_warfare_2_desc;New doctrines of concentrated armies and firepower to punch breaks in enemy lines are being theorised and tested.;x
+professional_training;Professional Training;x
+professional_training_desc;A professional army is composed of full-time soldiers who may be either career soldiers or conscripts. They are of higher quality, but require longer to train effectively;x
+professional_training_2;Advanced Training;x
+professional_training_2_desc;In order to use our increasing advanced weaponry and to learn the tacits of the day, training times must be increased.;x
+rank_1;Rank 1;x
+rank_2;Rank 2;x
+rank_3;Rank 3;x
+rank_4;Rank 4;x
+rank_5;Rank 5;x
+rank_6;Rank 6;x
+rank_7;Rank 7;x
+rank_8;Rank 8;x
+radical_uh;Radicals want to enact further political reforms, and have a low support for social reform but will become more supportive under conditions of intermediate militancy.;x
+radical_rebels_name;Radicals;x
+radical_rebels_army;Radicals;x
+radical_rebels_desc;Radicals will seek to found a Republic if successful. They will advance all political reforms they can, and are supportive of some social reforms.;x
+radical_rebels_title;Radicals;x
+anarcho_liberal;Anarchist;x
+anarcho_liberal_uh;Anarchists will advance all social and political reforms, and will revoke none.;x
+anarcho_liberal_name;Anarchists;x
+anarcho_liberal_army;Anarchists;x
+anarcho_liberal_desc;Anarchists want the people free of state corceion, and for all to realise the value of their labour. They will seek to advance politial and social reforms.;x
+EVTDESC60020;In the interests of the workers, a serious of confederated communes have been founded across the nation, combining local direct democracy and the principles of free assosication. Resources will be shared as agreed upon, and all workers will enjoy the value of their labour.;x
+EVTOPTA60020;I love anarchism;x
+queppe_gov_type;Anarchist Governance;x
+med_tolls_title;§EToll the Mediterranean Strait§!;x
+med_tolls_desc;Due to our dominance across the strait, we can exact a toll on any foreign ships that pass through the waters. Doing so will increase our income and prestige, but give just cause for war to the affected nations.;x
+revoke_the_tolls_title;§ERevoke our Mediterranean Tolls§!;x
+revoke_the_tolls_desc;The outrage caused by our actions has caused a national security risk. To make ammends we will remove our tolls on ships passing through the strait.;x
+EVTNAME7777926;The New Mediterranean Tolls;x
+EVTDESC7777926;Outrageous! We must now submit to the taxation of our goods transported through the Mediterranean Strait. We can seek to rectify the situation via war, and force the offending nation to back down from their tolls permanently.;x
+EVT7777926OPTA;We will not stand for this affront;x
+EVTNAME7777927;Control lost over the strait;x
+EVTDESC7777927;Since we no longer control key land on either side of the strait, we have been forced to effectively rescind our taxation of goods passing through.;x
+EVT7777927OPTA;Our coffers may now suffer;x
+EVTNAME7777928;Mediterranean Tolls Rescinded;x
+EVTDESC7777928;Through either war or diplomacy (or mayhaps both), the nation that so outrageously taxed our goods passing through the Mediterranean strait has been forced to revoke their charges permanently. Our merchants shall rejoice.;x
+EVT7777928OPTA;As is right;x
+trolling_the_med;Mediterranean Tolls;x
+trolling_the_med_desc;We tax the goods passing through the strait, boosting our coffers and prestige;x
+med_getting_trolled;Mediterranean Tolls;x
+med_getting_trolled_desc;We are being taxed on the value of our goods passing through the strait. This harms our traders and prestige.;x
+un_focus_at_home_title;§ERemove Domestic Focus§!;x
+un_focus_at_home_desc;During the 70 day trial period our domestic focus can be removed, beyond that it can't.;x
+home_focus_trial;§EDomestic Focus Trial§!;x
+home_focus_trial_desc;Can remove Domestic Focus modifier during the first 70 days;x
+changing_militarisation;Changing Militarisation;x
+EVTNAME7777929;Militarisation;x
+EVTDESC7777929;Instutions take time to have change affected in them, and the policies of the parties in power is what initiates these gradual shifts. Jingoism is locked to the two highest levels, pro-military to the top three, anti-military to the bottom three, and pacifism to the bottom two. The level can be raised or lowered by the executive anyway to a certain degree, as long as it doesnt violate these war policies.;x
+EVT7777929OPTA;Raise militarisation;x
+EVT7777929OPTB;Maintain militarisation;x
+EVT7777929OPTC;Lower militarisation;x
+conscription;Militarisation;x
+jingoism_desc;The military is the centrepiece of the state and military spending is prioritised.\n§YLocks militarisation levels to Mandatory and Partial§!;;;;;;;;;;x;;;;
+pro_military_desc;The government is a strong supporter of the armed services.\n§YLocks militarisation levels to Mandatory, Partial and Volunteer§!;;;;;;;;;;x;;;;
+anti_military_desc;The armed forces are a drain on the state coffers and the government feels money is better spent elsewhere.\n§YLocks militarisation levels to Partial, Volunteer and Disarmed§!;;;;;;;;;;x;;;;
+pacifism_desc;The government is actively hostile to the interests of the military, feeling they are opposed to the government policies.\n§YLocks militarisation levels to Volunteer and Pacifism§!;;;;;;;;;;x;;;;
+form_south_german_confederation_desc;While Germany was not united until the proclamation of the German Empire, following the Franco-Prussian war, rising nationalism in the 19th century had meant that unification had been on the cards long before that, with the Frankfurt assembly of 1848 being an important forerunner. By achieving a dominant position among the South German states, we can form the South German Confederation.\n§YAustrian formed SGF will lose all non-german land with the exception of a puppet Hungary§!;x
+austrian_diplomatic_staff_title;Austrian Diplomatic Staff;x
+austrian_diplomatic_staff_desc;Austrian diplomats are renowned for their smooth talking and effectiveness. They will greatly aid the German diplomatic effort on the world stage.;x
+austrian_diplomatic_corps;Austrian Diploatic Corps;x
+austrian_diplomatic_corps_desc;Austrian diplomats are renowned for their smooth talking and effectiveness;x
+appoint_von_beust_title;Appoint Von Beust;x
+appoint_von_beust_desc;Count Friedrich Ferdinand von Beust was a German and Austrian statesman. As an opponent of Otto von Bismarck, he attempted to conclude a common policy of the German middle states between Austria and Prussia.;x
+von_beust;Von Beust;x
+von_beust_desc;Count Friedrich Ferdinand von Beust was a German and Austrian statesman.;x
+EVTNAME7777930;The California Boom;x
+EVTDESC7777930;The California Gold Rush (1848–1855) was a gold rush that began on January 24, 1848, when gold was found by James W. Marshall at Sutter's Mill in Coloma, California. The news of gold brought approximately 300,000 people to California from the rest of the United States and abroad. The sudden influx of gold into the money supply reinvigorated the American economy, and the sudden population increase allowed California to go rapidly to statehood, in the Compromise of 1850. The Gold Rush had severe effects on Native Californians and accelerated the Native American population's decline from disease, starvation and the California genocide. The population of the state grew faster than any other state in the US at its peak.;x
+EVTOPTA7777930;California shall boom!;x
+california_population_boom;California Population Boom;x
+california_population_boom_desc;The population of the state is growing rapidly due to immigration from across the USA and the world;x
+EVTNAME7777931;The End of California's Boom;x
+EVTDESC7777931;With the collapse of the Republic, the immigration wave that California once experienced is no more.;x
+EVTOPTA7777931;California's golden days are behind it;x
+establish_danube_federation_title;Found the Danubian Federation;x
+establish_danube_federation_desc;The time has come for the new government to be implemented. Long live the Danubian Federation!/n§YMust accept the cultures via decisions§!;x
+embrace_slovak_minority;Embrace the Slovak Minority;x
+embrace_slovak_minority;We shall embrace our Slovak citizens, and elevate them to the status shared by that of the Hungarians.;x
+embrace_romanian_minority;Embrace the Romanian Minority;x
+embrace_romanian_minority;We shall embrace our Romanian citizens, and elevate them to the status shared by that of the Hungarians.;x
+usa_claim_canada_title;Revenge for 1812;x
+usa_claim_canada_desc;Now we control all of Canada East of the Great Lakes, we can claim it all for ourselves completing the tale of 1812.;x
+liberal_group;Liberal & Radical parties;x
+anarchist_group;Anarchists;x
+phat_zombie_eic_title;Annex the EIC;x
+phat_zombie_eic_desc;We can annex the EIC, as it is under the laws of our government and protected by our ships. Other nations will take slight at such a huge massing of land and people with minimal justification, and our upper class will not take kindly to such a move.;x
+nat_frat_invented;National Fraternity Invented;x
+EVTNAME7777932;Change in Citizenship Policy;x
+EVTDESC7777932;Full citizenship will no longer be available to all equally. We shall limit enfranchisment once more.;x
+residency_party;Residency Policy;x
+rev_n_counter_researched;Revolution and Counterrevolution;x
+remove_csa_cores_title;Solidifying the South;x
+remove_csa_cores_desc;After the years or regional differences, Dixies and Texans have accepted the USA as their home country, letting the memories of the CSA fade into history.;x
+debate_me_title;The Great Debate;x
+debate_me_desc;An ongoing debate is occuring in the Republic about the cultural direction and political principles of the government. The citizens are reconsidering their political priorities.;x
+nv_cooldown;§CNational Value Cooldown§!;x
+nv_cooldown_desc;We have recently concluded the great debate.;x
+partial_ubi_fully_funded;Fully Funded Standard UBI;x
+full_ubi_fully_funded;Fully Funded Advanced UBI;x
+remove_dead_overlords_title;§EAbolish Dead Overlordship§!;x
+remove_dead_overlords_desc;Remove the last legal vestiges of our former, now defunct, overlord.

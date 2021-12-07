@@ -1,0 +1,304 @@
+;;;;;;;;;;;;;x,,
+immigration_focus;Population;;;;;;;;;;;;;x,,
+gendarmerie;Gendarmerie;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+gendarmerie_desc;A gendarmerie is a military force with law enforcement duties among the civilian population.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+proclaim_republic_title;§EFound the Republic§!;;;;;;;;;;;;;x,,
+proclaim_republic_desc;We have become the masters of our political destiny, the power of the monarchy has been ceded to the parliament and chancellor, and by extension to ourselves. Now we have within our grasp the ability to finish the job peacefully, and to make We The People the formal basis of our sovereignty!;;;;;;;;;;;;;x
+all_of_mexico_title;All of Mexico!;;;;;;;;;;;;;x,,,
+all_of_mexico_desc;It is not enough to have empty lands, all Mexicans are Americans! §YNOTE: Not an option once the civil war starts.§!;;;;;;;;;;;;;x,,
+cultural_expansion_title;Expand the Federation!;;;;;;;;;;;;;x,,,
+cultural_expansion_desc;Whilst we have made excellent progress regardless of our cultures, some are still left out. It is time to bring them as full citizens into the Federation.;;;;;;;;;;;;;x,,
+EVT90056OPTB;They have their sphere, we have ours;;;;;;;;;;;;;x,,
+EVTNAME777789;New Republican Constitution;;;;;;;;;;;;;x,,
+EVTDESC777789;Discussions are ongoing in our new republic as to how centeralised we should be:;;;;;;;;;;;;;x,,
+EVTOPTA777789;Confederalism;;;;;;;;;;;;;x,,
+EVTOPTB777789;Regionalism;;;;;;;;;;;;;x,,
+EVTOPTC777789;Federalism;;;;;;;;;;;;;x,,
+EVTOPTD777789;Unitary;;;;;;;;;;;;;x,,
+contraception;Contraception;;;;;;;;;;;;;x,,
+contraception_desc;The recent proliferation of conttraception amoung out populace is having a negative effect on our growth rate.;;;;;;;;;;;;;x,,
+popular_prophylactic;Popular Prophylactics;;;;;;;;;;;;;x,,
+popular_prophylactic_desc;Prophylactics and the like are become widespread in the population, reducing the fertility rate.;;;;;;;;;;;;;x,,
+women_workforce;Women in the Workforce;;;;;;;;;;;;;x,,
+women_workforce_desc;Women are increasingly being employed in greater numbers, upsetting the more traditional order of family life. Decreasing stay at home wifes results in a reduced interest in having children.;;;;;;;;;;;;;x,,
+late_marriage;Late Marriage;;;;;;;;;;;;;x,,
+late_marriage_desc;As traditional early marriages become less common, the window for having children is reduced, decreasing the birthrate.;;;;;;;;;;;;;x,,
+very_low_literacy;Very Low Literacy;;;;;;;;;;;;;x,,
+low_literacy;Low Literacy;;;;;;;;;;;;;x,,
+medium_literacy;Medium Literacy;;;;;;;;;;;;;x,,
+high_literacy;High Literacy;;;;;;;;;;;;;x,,
+very_high_literacy;Very High Literacy;;;;;;;;;;;;;x,,
+extremely_high_literacy;Extremely High Literacy;;;;;;;;;;;;;x,,
+mines_and_fields_shiftwork;Mines and Fields Shiftwork;;;;;;;;;;;;;x,,
+mines_and_fields_shiftwork_desc;The advent of electricity and on the clock shifts can be applied to our mines fields to increase the resource turnover.;;;;;;;;;;;;;x,,
+fascist_cartels;Fascist Cartels;;;;;;;;;;;;;x,,
+fascist_cartels_title;Fascist Cartels;;;;;;;;;;;;;x,,
+fascist_cartels_desc;We can now seize effective control over the industrial production of our great nation. The people will be less likely to question the legitimate rule of our Supreme Leader when their needs are met.;;;;;;;;;;;;;x,,
+break_the_cartels_title;Break the Cartels;;;;;;;;;;;;;x,,
+break_the_cartels_desc;With the collapse of the previous fascist regime, it is time to also force the collapse of the cartels that helped sustain it.;;;;;;;;;;;;;x,,
+EVTNAME670001;The New Economy;;;;;;;;;;;;;x,,,
+EVTDESC670001;With the advent of new work oppertunities given by our Supreme Leader, let us force the undesirables to earn their keep in our great nation!;;;;;;;;;;;;;x,,,
+EVT670001OPTA;Get to work!;;;;;;;;;;;;;x,,,
+EVT670001OPTB;Not now, let us bide out time.;;;;;;;;;;;;;x,,,
+i_promise_title;§EI Promise§!;;;;;;;;;;;;;x,,,
+i_promise_desc;Our rapid growth has alarmed the other great powers. We can now make a promise to them and the international community that we seek no more significant expansion for the next 10 years. We may only make this promise once.;;;;;;;;;;;;;x,,,
+promise_against_expansion;Our Promise;;;;;;;;;;;;;x,,,
+promise_against_expansion_desc;We have promised that for the next 10 years, we will not undertake any siginifant expansion.;;;;;;;;;;;;;x,,,
+EVTNAME777790;Initial Industrialisation & Population Boom;;;;;;;;;;;;;x,,
+EVTDESC777790;Living conditions are starting to increase and infant mortality is dropping, this is having a noticeable effect on our population growth.;;;;;;;;;;;;;x,,
+EVTOPTA777790;We look forward to continued improvements;;;;;;;;;;;;;x,,
+claim_mongolia_title;Claim Mongolia;;;;;;;;;;;;;x,,
+claim_mongolia_desc;Long have the Mongolian lands to the north been considered part of China, but they have broken away in the chaos. Now we shall restore them to China!;;;;;;;;;;;;;x,,
+become_democratic_china_title;Restore the Republic!;;;;;;;;;;;;;x,,
+become_democratic_china_desc;Long has the military controlled the government, but now they are reluctantly willing to surrender up the majority of their power to the civiliian administration. This is a new dawn for a free and prosperous China!;;;;;;;;;;;;;x,,
+begin_land_transfer;Begin Land Transfer;;;;;;;;;;;;;x,,
+hide_the_decisions_title;§PHide Extra Decisions§!;;;;;;;;;;;;;x,,
+hide_the_decisions_desc;Remove decisions clutter by hiding the extra decisions modded in by Townes. NOTE: Hides key decisions like advancing research reforms, transfer decisions, or powerful alt-history options.;;;;;;;;;;;;;x,,
+show_the_decisions_title;§PShow Extra Decisions§!;;;;;;;;;;;;;x,,
+show_the_decisions_desc;Show the extra decisions modded in by Townes. NOTE: Currently hidden key decisions like advancing research reforms, transfer decisions, or powerful alt-history options.;;;;;;;;;;;;;x,,
+land_transfer_title;§YAllow Land Transfer§!;;;;;;;;;;;;;x,,
+land_transfer_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
+land_transfer_unciv_title;§YAllow Land Transfer§!;;;;;;;;;;;;;x,,
+land_transfer_unciv_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
+end_land_transfer_title;§YDisallow Land Transfer§!;;;;;;;;;;;;;x,,
+end_land_transfer_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
+end_land_transfer_unciv_title;§YDisallow Land Transfer§!;;;;;;;;;;;;;x,,
+end_land_transfer_unciv_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).§Y RP FROM CONQUEST DEBUFF IS CURRENTLY ACTIVE§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
+socialist_uh;Socialists want to see the enactment of further political and social reforms.;;;;;;;;;;;;;x,,
+liberal_uh;Liberals want to enact some political reforms, but will also support greater political reform and social reform under conditions of high militancy.;;;;;;;;;;;;;x,,
+EVTNAME777791;Concede to Lower Tarrifs;;;;;;;;;;;;;x,,
+EVTDESC777791;As the loser of the war we have been forced to lower our tarrifs for 5 years.;;;;;;;;;;;;;x,,
+EVT777791OPTA;Lower the tarrifs;;;;;;;;;;;;;x,,
+lost_the_tarrif_war;Forced to lower tarrifs;;;;;;;;;;;;;x,,
+lost_the_tarrif_war_desc;We have lost the war and been forced to lower our tarrifs as a result;;;;;;;;;;;;;x,,
+violate_the_tarrif_treaty_title;Violate the Tarrif Treaty;;;;;;;;;;;;;x,,
+violate_the_tarrif_treaty_desc;We have been forced into a humiliating treaty that imposes foreign control over our trade tarrifs. We will regain control, prestige be damned!;;;;;;;;;;;;;x,,
+form_iberia_peacefully_title;Form Iberia Diplomatically;;;;;;;;;;;;;x,,
+form_iberia_peacefully_desc;Establishing good terms with our Portugese breatheren we have opened up for the possibility to unite our peninsula into one Union. Let us seize this oppertunity!;;;;;;;;;;;;;x,,
+accept_the_portuguese_title;Accept the Portugese;;;;;;;;;;;;;x,,
+accept_the_portuguese_desc;Now we have united our peoples, we should also seek to treat the Portuguese as full citizens and equals.;;;;;;;;;;;;;x,,
+accept_the_basque_title;Accept the Basque People;;;;;;;;;;;;;x,,
+accept_the_basque_desc;We should reconcile our differences with the Basque people and integrate them as full members in our nation. They are our Iberian brothers!;;;;;;;;;;;;;x,,
+LEDGER_COUNTRY_NAME;Country;Pays;Land;;Pa?;;;;;;;;;x;;;;
+allow_no_cb_wars_title;§EAllow No CB Wars§!;;;;;;;;;x;;;;
+allow_no_cb_wars_desc;Our government has managed to convince the populace that we have the right to war for any reason, although the international community is not convinved. Must have jingoism to use this cb.;;;;;;;;;x;;;;
+disallow_no_cb_wars_title;§EDisallow No CB Wars§!;;;;;;;;;x;;;;
+disallow_no_cb_wars_desc;Times have changed, we no longer seek to justify our right to war to our populace.;;;;;;;;;x;;;;
+EVTNAME777792;Our Republic;;;;;;;;;x;;;;
+EVTDESC777792;The ideals we have in common, the values we share. These allow us to work together like no other government can. The constitution is our instrument, the instrument of We The People.;;;;;;;;;x;;;;
+EVTNAME777793;Collapse of our Republic;;;;;;;;;x;;;;
+EVTDESC777793;Our great Republic has fallen. What once held us together does no longer. Maybe those days will return, but for now they are lost.;;;;;;;;;x;;;;
+CHI_accept_mongols_title;Our Citizens of Mongolia;;;;;;;;;x;;;;
+CHI_accept_mongols_desc;The Federation seeks to treat all who live in it as equal citizens. We are one Republic. The Mongos have accepted their membership of the federation, and in turn we should accept them. Birth or culture should stop a Mongolian from being the President!;;;;;;;;;x;;;;
+CHI_accept_tibetans_title;Our Citizens of Tibet;;;;;;;;;x;;;;
+CHI_accept_tibetans_desc;The Federation seeks to treat all who live in it as equal citizens. We are one Republic. The Tibetans have accepted their membership of the federation, and in turn we should accept them. Birth or culture should stop a Tibetan from being the President!;;;;;;;;;x;;;;
+CHI_accept_uighurs_title;Uighur Reconciliation & To a United China at last;;;;;;;;;x;;;;
+CHI_accept_uighurs_desc;The Uighur's are a core part of China, their religion is as Chinese as any other. Together we prosper, the Uighurs shall be full citizens. China is reborn as we move into the new era a united and free people.;;;;;;;;;x;;;;
+EVTNAME777794;Koreans Petition for Annexation;;;;;;;;;x;;;;
+EVTDESC777794;Korea has always been our brother. We have shared history, although our language and cultures diverge. That does not mean our politics must though, and Korean citizens have noticed the advancements in our Federation. While protests occur in Korea, a group of influential Korean political leaders have approached the President asking for Korea to be admitted to the Federation, by force if frustrated by foreign powers. Japan and Russia would be angered by this move, but can we really abandon our Korean brothers crying out for liberty?;;;;;;;;;x;;;;
+CHI_accept_vietnamese_title;Integrate the Vietnamese;;;;;;;;;x;;;;
+CHI_accept_vietnamese_desc;Vietnam was once a part of the Chinese Dynasties of old, and now that they are a part of the Federation they are citizens of the new Chinese Republic. Let us treat them as such.;;;;;;;;;x;;;;
+EVTNAME777795;Massive Industrialisation & Population Boom;;;;;;;;;;;;;x,,
+EVTDESC777795;Living conditions are greatly increasing and infant mortality plummeting, this is having a large effect on our population growth.;;;;;;;;;;;;;x,,
+EVTOPTA777795;Bring on the new Era!;;;;;;;;;;;;;x,,
+eic_become_india_title;To the Indian Union;;;;;;;;;;;;;x,,
+eic_become_india_desc;Now that we accept the people of India, perhaps it is time to become one Union with them. Together we rise, free from overseas rule!;;;;;;;;;;;;;x,,
+EVTNAME777796;Presidential Decree;;;;;;;;;;;;;x,,
+EVTDESC777796;The President has the ability to issue executive orders, but the legislature will be outraged if the President consistently bypasses them. Hence this power can only be used a limited number of times per term. NOTE: This ability is active for on average 2 months.;;;;;;;;;;;;;x,,
+EVTNAME777797;Presidential Decree;;;;;;;;;;;;;x,,
+EVTDESC777797;The time for executive decree has passed.;;;;;;;;;;;;;x,,
+EVTNAME777798;Republican Executive;;;;;;;;;;;;;x,,
+EVTDESC777798;The executive system and separation of powers (or lack of) must be decided on in our Constitution.;;;;;;;;;;;;;x,,
+EVTNAME777799;Dictatorial Executive;;;;;;;;;;;;;x,,
+EVTDESC777799;Our leader and inner circle have no practical restraints on their power from the constitution.;;;;;;;;;;;;;x,,
+EVTNAME777800;Decline of Absolutism;;;;;;;;;;;;;x,,
+EVTDESC777800;The parliament is gaining power at the expense of the monarchy, our system of government is changing.;;;;;;;;;;;;;x,,
+to_limited_funding_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_limited_funding_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
+to_funded_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_funded_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
+to_priority_funded_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_priority_funded_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
+secret_police;Secret Police;;;;;;;;;;;;;x,,
+encourage_assimilation;Encourage Assimilation;;;;;;;;;;;;;x,,
+EUR;The United States of Europe;;;;;;;;;;;;;x,,
+EUR_democracy;The United States of Europe;;;;;;;;;;;;x
+EUR_absolute_monarchy;The Empire;;;;;;;;;;;;x
+EUR_prussian_constitutionalism;The European Empire;;;;;;;;;;;;x
+EUR_hms_government;The European Empire;;;;;;;;;;;;x
+EUR_presidential_dictatorship;The Regime;;;;;;;;;;;;x
+EUR_bourgeois_dictatorship;The Free State of Europe;;;;;;;;;;;;x
+EUR_proletarian_dictatorship;The Socialist Republic of Europe;;;;;;;;;;;;x
+EUR_fascist_dictatorship;The Union of Europe;;;;;;;;;;;;x
+EUR_ADJ;European;;;;;;;;;;;;;x,,
+pan_european;European;;;;;;;;;;;;;x,,
+EVTNAME7777901;The United States Of Europe;;;;;;;;;;;;;x,,
+EVTDESC7777901;During a speech in 1849 in the wake of the French revolution, prominent novelist and politician Victor Hugo called for the United States of Europe. France did not follow through on this, but the potential is there to take. It could lead to the uniting of Europe, but will cause all the Old Powers to unite against us.;;;;;;;;;;;;;x,,
+claim_europe_title;For Europe!;x
+claim_europe_desc;We have laid claim to all of Europe, now we shall act on our claim. Europe shall be united, with liberty for all!;x
+our_europe_title;Our Europe;;;;;;;;;;;;;x,,
+our_europe_desc;We must seek to promote our values and our liberties. Our continental identity will shine!;;;;;;;;;;;;;x,,
+european_culture;European Culture;;;;;;;;;;;;;x,,
+european_culture_desc;Our continental identity will shine!;;;;;;;;;;;;;x,,
+form_the_EU_title;To a United Europe!;;;;;;;;;;;;;x,,
+form_the_EU_desc;As a great power, we can claim the right to establish a free, united, Europe.;;;;;;;;;;;;;x,,
+infamy_for_immigration_selector_title;§ECommence a Pro-immigration Campaign§!;;;;;;;;;;;;;x,,
+infamy_for_immigration_selector_desc;Strongly encourage immigrants to choose us as their destination, this is accomplished via a heavy propaganda campaign, and finanacial incentives such as a free journey.;;;;;;;;;;;;;x,,
+infamy_for_immigration_modifier_removal_title;§EEnd the Pro-immigration Campaign§!;;;;;;;;;;;;;x,,
+infamy_for_immigration_modifier_removal_desc;End the ongoing campaign to increase the number of immigrants to our lands.;;;;;;;;;;;;;x,,
+EVTNAME1998002;Proposed Immigration Campaign;;;;;;;;;;;;;x,,
+EVTDESC1998002;We can select the level of campaign we desire, or none at all.;;;;;;;;;;;;;x,,
+immigration_pull_low;Low Immigration Boost;;;;;;;;;;;;;x,,
+immigration_pull_low_desc;We are encouraging emmigrants to choose us as their destination.;;;;;;;;;;;;;x,,
+immigration_pull_high;High Immigration Boost;;;;;;;;;;;;;x,,
+immigration_pull_high_desc;We are strongly encouraging emmigrants to choose us as their destination.;;;;;;;;;;;;;x,,
+recently_selected_immigration;Recent immigration campaign.;;;;;;;;;;;;;x,,
+recently_selected_immigration_desc;We have recently started an immigration campaign and cannot cancel its effects for a while.;;;;;;;;;;;;;x,,
+EVTNAME7777902;Birthrate Decrease;;;;;;;;;;;;;x,,
+EVTDESC7777902;We are experiencing a delcine in the overall birth rate, no doubt encouraged by the low infant mortality and changing economy.;;;;;;;;;;;;;x,,
+minor_bad_planning;Minor Administrative Failure;;;;;;;;;;;;;x,,
+bad_planning;Administrative Failure;;;;;;;;;;;;;x,,
+extreme_bad_planning;Major Administrative Failure;;;;;;;;;;;;;x,,
+EVTOPTA7777902;And so we develop.;;;;;;;;;;;;;x,,
+to_warsaw_title;To Warsaw;;;;;;;;;;;;;x,,
+to_warsaw_desc;The polish will be Germans.;;;;;;;;;;;;;x,,
+to_the_carpathians_title;Over the Carpathians;;;;;;;;;;;;;x,,
+to_the_carpathians_desc;Hungary has many Germans and German brother cultured-people residing in it. We must ensure it is made a full part of the new Reich!;;;;;;;;;;;;;x,,
+claim_venezia_title;Reclaim Venezia;;;;;;;;;;;;;x,,
+claim_venezia_desc;Restore south German control over Venice.;;;;;;;;;;;;;x,,
+german_culture_promotion_title;Promote German Culture;;;;;;;;;;;;;x,,
+german_culture_promotion_desc;We will begin a campaign to encourage German culture with german classes for non-german speakers, german festivals, and integration of locals into german politics.;;;;;;;;;;;;;x,,
+german_culture;German Cultural Promotion;;;;;;;;;;;;;x,,
+german_culture_desc;We are carrying out campaigns to promote our culture;;;;;;;;;;;;;x,,
+EVTNAME7777903;Victor Hugo & the Oak of the USE;;;;;;;;;;;;;x,,
+EVTDESC7777903;On 14 July 1870 Hugo planted the "oak of the United States of Europe" in the garden of Hauteville House where he stayed during his exile on Guernsey from 1856 to 1870.;;;;;;;;;;;;;x,,
+EVTNAME7777904;A day will come,;;;;;;;;;;;;;x,,
+EVTDESC7777904;When all nations on our continent will form a European brotherhood. A day will come when we shall see the United States of America and the United States of Europe face to face,;;;;;;;;;;;;;x,,
+european_unity;Unity;;;;;;;;;;;;;x,,
+european_unity_desc;We are more unified, and willing to stand together.;;;;;;;;;;;;;x,,
+burst_of_european_unity;Rush of European Unity;;;;;;;;;;;;;x,,
+burst_of_european_unity_desc;We are experiencing a massive rise in European solidarity.;;;;;;;;;;;;;x,,
+EVTNAME7777905;To be European;;;;;;;;;;;;;x,,
+EVTDESC7777905;We are experiencing a massive rise in European solidarity, people are feeling more European than ever before!;;;;;;;;;;;;;x,,
+promoted_european_culture;European Cultural Unity;;;;;;;;;;;;;x,,
+african_unciv;African Primitive;;;;;;;;;;;;;x,,
+african_unciv_1;African Primitive;;;;;;;;;;;;;x,,
+african_unciv_2;African Primitive;;;;;;;;;;;;;x,,
+african_unciv_3;African Primitive;;;;;;;;;;;;;x,,
+african_unciv_4;African Partially Westernised;;;;;;;;;;;;;x,,
+unciv_infamy;Uncivilised;x
+unciv_infamy_1;Uncivilised;x
+unciv_infamy_2;Uncivilised;x
+unciv_infamy_3;Uncivilised;x
+unciv_infamy_4;Uncivilised;x
+NGE;The Union of Niger;;;;;;;;;;;;;x,,
+NGE_ADJ;Nigerian;;;;;;;;;;;;;x,,
+NGE_democracy;The Niger Federation;;;;;;;;;;;;;x,,
+NGE_absolute_monarchy;The Nigerian Empire;;;;;;;;;;;;x
+NGE_prussian_constitutionalism;The Nigerian Empire;;;;;;;;;;;;x
+NGE_hms_government;The Nigerian Empire;;;;;;;;;;;;x
+NGE_presidential_dictatorship;The Nigerian Regency;;;;;;;;;;;;x
+NGE_bourgeois_dictatorship;New Nigerian State;;;;;;;;;;;;x
+NGE_proletarian_dictatorship;The Socialist Federation of Niger;;;;;;;;;;;;x
+NGE_fascist_dictatorship;The Nigerian State;;;;;;;;;;;;x
+niger_research;Rapid Catchup;;;;;;;;;;;;x
+niger_research_desc;We are rapidly catching up and advancing our scientifc and technological understanding;;;;;;;;;;;;x
+form_niger_federation_title;The People of the Niger River United;;;;;;;;;;;;x
+form_niger_federation_desc;We must seek to unify ourselves so that we can stand strong in this new world.;;;;;;;;;;;;x
+accept_nigeria_title;People of the East;;;;;;;;;;;;x
+accept_nigeria_desc;We have estabilished control over the east of our nation, let us now integrate the people of our new federation.;;;;;;;;;;;;x
+accept_ghana_title;People of the Center;;;;;;;;;;;;x
+accept_ghana_desc;We have estabilished control over the center of our nation, let us now integrate the people of our new federation.;;;;;;;;;;;;x
+accept_gambia_title;People of the West;;;;;;;;;;;;x
+accept_gambia_desc;We have estabilished control over the west of our nation, let us now integrate the people of our new federation.;;;;;;;;;;;;x
+central_west_coast_accept_title;South Coast Expansion;;;;;;;;;;;;x
+central_west_coast_accept_desc;We control these lands and can accept their people into the federation as equals.;;;;;;;;;;;;x
+accept_kongo_title;Into Kongo;;;;;;;;;;;;x
+accept_kongo_desc;Kongo is under federal control, their people will be granted federation citizenship.;;;;;;;;;;;;x
+EVTNAME7777906;Nigerian Population Boom;;;;;;;;;;;;x
+EVTDESC7777906;Our new medicical knowledge and technology is reapidly decreasing the infant mortality rate, resulting in a population boom.;;;;;;;;;;;;x
+old_world_war;At War;;;;;;;;;;;;x
+barrage_fire;Barrage Fire;;;;;;;;;;;;x
+barrage_fire_desc;A barrage is massed sustained artillery fire aimed at a series of points along a line. As well as attacking any enemy in that line, a barrage intends to suppress enemy movement and actions through that line.;;;;;;;;;;;;x
+grant_cooldown;§CGrant Cooldown§!;;;;;;;;;;;;x
+grant_cooldown_desc;We have recently requested aid;;;;;;;;;;;;x
+dutch_accept_walloon_title;Our Walloon Brothers;;;;;;;;;;;;x
+dutch_accept_walloon_desc;Our relationship with the Walloon people has always been close, although fraught with tension. It is time we set aside our quarrels and work together on the major challenges facing us, as one.;;;;;;;;;;;;x
+recently_requested_trade;Recently requested trade;;;;;;;;;;;;x
+recently_requested_trade_desc;We must wait for our negotating team to return;;;;;;;;;;;;x
+infamy_grant_cooldown;§CInfamy grant cooldown§!;;;;;;;;;;;;x
+infamy_grant_cooldown_desc;We must wait for our diplomatic mission to return;;;;;;;;;;;;x
+will_receive_infamy_transfer_title;§YRequest Infamy Transfer§!;;;;;;;;;;;;x
+will_receive_infamy_transfer_desc;We are in need of diplomatic aid, let us ask our ally for their public support and stated justifcation on the matter. NOTE: Nations with more than 25 infamy will not recieve the request.;;;;;;;;;;;;x
+will_give_infamy_title;§YPermit Infamy Transfers;;;;;;;;;;;;x
+will_give_infamy_desc;We will consider the use of our diplomatic abilities to justify the expansions of our allies.;;;;;;;;;;;;x
+will_not_give_infamy_title;§YDeny Infamy Transfers§!;;;;;;;;;;;;x
+will_not_give_infamy_desc;We will not allow our diplomats to waste their time justifiying the conquests of others.;;;;;;;;;;;;x
+prevent_trade_deals_title;§YPrevent recieving trade deals§!;;;;;;;;;;;;x
+prevent_trade_deals_desc;We will not recieve any trade deal offers.;;;;;;;;;;;;x
+enable_trade_deals_title;§YAllow trade deal proposals§!;;;;;;;;;;;;x
+enable_trade_deals_desc;We will recieve trade deal offers.;;;;;;;;;;;;x
+unemployment_subsidies;Welfare;;;;;;;;;;;;x
+trinket_subsidies;Low Subsidies;;;;;;;;;;;;x
+trinket_subsidies_desc;Basic jobseekers allowances are provided by a government agency.;;;;;;;;;;;;x
+low_subsidies;Generous Subsidies;;;;;;;;;;;;x
+low_subsidies_desc;Standard jobseekers allowances are provided by a government agency.;;;;;;;;;;;;x
+acceptable_subsidies;Standard UBI;;;;;;;;;;;;x
+acceptable_subsidies_desc;The government provides a small monthly income to all citizens, regardless of their economic situation. This income is guarantteed and paid from the government budget. §YMust have admin spending at 75% minimum to gain the full effects. This reform will be rescinded if a non socialist/communist government is in power!§!;;;;;;;;;;;;x
+good_subsidies;Advanced UBI;;;;;;;;;;;;x
+good_subsidies_desc;A large sum of money is provided to each citizen monthly. This is an unconditional payment and funded by the government budget. §YMust have admin spending at 100% to gain the full effects. This reform will be rescinded if a non socialist/communist government is in power!§!;;;;;;;;;;;;x
+EVTNAME7777907;Change in Welfare Policy;;;;;;;;;;;;x
+EVTDESC7777907;The party of large tax and large spend is no longer in power, we will now readjust our social spending levels.;;;;;;;;;;;;x
+eic_trigger_the_decision_title;Our Future;;;;;;;;;;;;x
+eic_trigger_the_decision_desc;We have long been under control from London, and since they seem unwilling to decide our long term future we should seize the oppertunity ourselves to make this choice.;;;;;;;;;;;;x
+transfer_rp_debuff;RP Debuff;;;;;;;;;;;;x
+transfer_rp_debuff_desc;Active as can currently take land from civs as an unciv.;;;;;;;;;;;;x
+WBA;World Bank;x
+WBA_ADJ;Bankers;x
+war_exhaustion_10_decay;War Exhaustion Decay: 0-10;x
+war_exhaustion_20_decay;War Exhaustion Decay: 10-20;x
+war_exhaustion_30_decay;War Exhaustion Decay: 20-30;x
+war_exhaustion_40_decay;War Exhaustion Decay: 30-40;x
+war_exhaustion_50_decay;War Exhaustion Decay: 40-50;x
+war_exhaustion_60_decay;War Exhaustion Decay: 50-60;x
+war_exhaustion_70_decay;War Exhaustion Decay: 60-70;x
+war_exhaustion_80_decay;War Exhaustion Decay: 70-80;x
+war_exhaustion_90_decay;War Exhaustion Decay: 80-90;x
+war_exhaustion_100_decay;War Exhaustion Decay: 90-100;x
+taxation_increased;Total War Taxation;x
+EVTNAME970701;A New Prince?;x
+EVTDESC970701;Our president is a monarchist, and whilst he has agreed to the status quo, we could take the initiative and request for a prince of spanish decent to take our throne.;x
+EVTOPT970701A;No. The status quo suits us well. We will not suffer the rule of a Spanish king once more.;x
+EVTOPT970701B;Yes. Let us reach out to Spain and get oursleves a new King!;x
+relax_colonial_immigration_restrictions_title;§ERelax Colonial Immigration Restrictions§!;x
+relax_colonial_immigration_restrictions_desc;We can relax our laws regarding immigration from the colonies, this will provide us with more workers and future citizens, althouth the more conservative and reactionary elements of our nation will not be happy. NOTE: This allows migration from colonies to states, limited to half the base rate of migration. This modifier will be removed if the conditions required to take it are no longer met.;x
+increased_migration_to_states;Relaxed Colonial Immigration Laws;x
+EVTNAME7777908;Colonial Immigration Restricted;x
+EVTDESC7777908;The government has deemed it appropriate to restrict immigration from the colonies. Colonial pops will not migrate to states.;x
+EVTOPTA7777908;Have we chosen correctly?;x
+base_strike;Base Strike;x
+base_strike_desc;An aircraft carrier is a warship that serves as a seagoing airbase, equipped with a full-length flight deck and facilities for carrying, arming, deploying, and recovering aircraft.;x
+mountain_warfare;Mountain Warfare;x
+mountain_warfare_desc;Mountain ranges are of strategic importance since they often act as a natural border, and may also be the origin of a water source. Attacking a prepared enemy position in mountain terrain requires a greater ratio of attacking soldiers to defending soldiers than a war conducted on level ground.;x
+bankruptcy_events_disabled;Disables Bankruptcy Events;x
+stop_bankrupt_events_title;§CStop Bankruptcy Events§!;x
+stop_bankrupt_events_desc;Prevent bankruptcy events from appearing. (Can re-enable);x
+allow_bankrupt_events_title;§CAllow Bankruptcy Events§!;x
+allow_bankrupt_events_desc;Allow bankruptcy events to appear.;x
+the_white_tzar_title;The White Tzar;x
+the_white_tzar_desc;Due to our influence over Tibet we can now free them from the clasp of the Qing, although this will reinforce Chinese claims to the region and anger the British who may respond.;x
+EVTNAME7777909;The Bear in Tibet;x
+EVTDESC7777909;Russia has snaked its way into the government of Tibet, we cannot allow this to stand! Force of arms will be considered.;x
+EVT7777909OPTA;To arms it is;x
+EVT7777909OPTB;We cannot act this time;x
+GC_DESC;The world is entering a new era: new politcs, new industry, new weapons of war, and new Unions. Notable Union tags: Germany, United States of America, United States of Europe, Union of South American Republics, Niger Federation, Chinese Federal Republic, Indian Union, Arab Union, and Coptic Empire/Efircan Federation.;x
+MILITARY_PERSONALITY;-;x
+MILITARY_BACKGROUND;-;x
+UV_PERSONALITY;$VAL$;Personnalité : $VAL$;Persönlichkeit: $VAL$;;Personalidad: $VAL$;;;;;;;;;x;;;;
+UV_BACKGROUND;$VAL$;Caractéristique : $VAL$;Hintergrund: $VAL$;;Historial: $VAL$;;;;;;;;;x;;;;
+UV_PERSONALITY_LABEL;Defence;Personnalité;Persönlichkeit;;Personalidad;;;;;;;;;x;;;;
+UV_BACKGROUND_LABEL;Attack;Caractéristique;Hintergrund;;Marco histórico;;;;;;;;;x;;;;
+EVTNAME7777910;Campaign Setup;x
+EVTDESC7777910;Choosing multiplayer will allow the multiplayer only decisions and events;x
+EVTOPTA7777910;Singleplayer;x
+EVTOPTB7777910;Multiplayer;x
