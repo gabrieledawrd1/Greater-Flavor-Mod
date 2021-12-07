@@ -75,7 +75,6 @@ hot_blast = 1
 
 # Inventions
 dragoon_activation = yes
-bottling_process = yes
 modern_winemaking = yes
 
 

@@ -4,7 +4,7 @@ leader = {
     date = 1818.1.1
     type = land
     personality = unit_personality
-    background = implacablexschool_of_firepower
+    background = school_of_firepower
     prestige = 0.5
 }
 
