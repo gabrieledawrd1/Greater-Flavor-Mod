@@ -4,12 +4,12 @@ culture = afro_french
 culture = polish
 religion = catholic
 government = presidential_dictatorship
-plurality = 10
+plurality = 25.0
 nationalvalue = nv_equality
-literacy = 0.02
+literacy = 0.04
 non_state_culture_literacy = 0.05
 civilized = yes
-prestige = 0
+prestige = 5
 
 # Political reforms
 slavery = no_slavery
@@ -31,8 +31,8 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = no_draft
-debt_law = peonage
+conscription = mandatory_service
+debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
@@ -44,14 +44,14 @@ set_country_flag = catholic_country
 set_country_flag = new_world_nation
 set_country_flag = slave_revolution
 
-ruling_party = HAI_reactionary
+ruling_party = HAI_conservative
 upper_house = {
     fascist = 0
-    liberal = 0
-    conservative = 0
-    reactionary = 100
+    liberal = 30
+    conservative = 40
+    reactionary = 20
     radical = 0
-    socialist = 0
+    socialist = 10
     communist = 0
 }
 
@@ -70,10 +70,12 @@ enlightenment_thought = 1
 piston_steam_engine = 1
 mechanical_production = 1
 clipper_design = 1
+early_classical_theory_and_critique = 1
+hot_blast = 1
 
 # Inventions
-
-#bottling_process = yes
+dragoon_activation = yes
+bottling_process = yes
 modern_winemaking = yes
 
 

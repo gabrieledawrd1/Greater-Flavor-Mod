@@ -1,5 +1,95 @@
 objectTypes = {
 	
+	###Jman's Haiti###
+
+	EMFXActorType = {
+		name = "HaitianInfantry"
+		actorfile = "gfx\anims\Revolutionaryfrench_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 6.2 #5.9
+
+		attach = {
+			name = "InfantryShadowblob"
+			node = "Root"
+			attachId = 2
+		}
+	}
+
+	EMFXActorType = {
+		name = "HaitianInfantry2"
+		actorfile = "gfx\anims\FrenchInf_Interwar.xac"
+		
+		idle   = "gfx\anims\InterwarInfantryIdle.xsm"
+		move   = "gfx\anims\InterwarInfantryMove.xsm"
+		attack = "gfx\anims\InterwarInfantryAttack.xsm"
+		scale = 5.9 #5.9
+		
+		attach = {
+			name = "InfantryShadowblob"
+			node = "Root"
+			attachId = 2
+		}	
+	}
+
+	#EMFXActorType = {
+	#	name = "NativeGCInfantry"
+	#	actorfile = "gfx\anims\Native_infantry.xac"
+	#	
+	#	idle   = "gfx\anims\Generic_SA_2_Idle.xsm"
+	#	move   = "gfx\anims\Generic_SA_2_Moving.xsm"
+	#	attack = "gfx\anims\Generic_SA_2_Attack.xsm"
+	#	scale = 1.3
+	#}
+	#
+	#EMFXActorType = {
+	#	name = "NewAfrikanGCInfantry"
+	#	actorfile = "gfx\anims\NewAfrikan_Infantry.xac"
+	#	
+	#	idle   = "gfx\anims\infantry_idle_3.xsm"
+	#	move   = "gfx\anims\infantry_moving.xsm"
+	#	attack = "gfx\anims\infantry_attack.xsm"
+	#	scale = 1.5
+	#	
+	#	attach = {
+	#		name = "InfantryShadowblob"
+	#		node = "Root"
+	#		attachId = 2
+	#	}
+	#	
+	#}
+	#
+	##EMFXActorType = {
+	##	name = "NewAfrikanGCHelmet1"
+	##	actorfile = "gfx\anims\NewAfrikan_Helmet1.xac"
+	##	scale = 1.00
+	##}
+	#
+	#EMFXActorType = {
+	#	name = "NewAfrikanGCInfantry2"
+	#	actorfile = "gfx\anims\NewAfrikan_Infantry2.xac"
+	#	
+	#	idle   = "gfx\anims\infantry_idle_3.xsm"
+	#	move   = "gfx\anims\infantry_moving.xsm"
+	#	attack = "gfx\anims\infantry_attack.xsm"
+	#	scale = 1.5
+	#	
+	#	attach = {
+	#		name = "InfantryShadowblob"
+	#		node = "Root"
+	#		attachId = 2
+	#	}
+	#	
+	#}
+	#
+	##EMFXActorType = {
+	##	name = "NewAfrikanGCHelmet2"
+	##	actorfile = "gfx\anims\NewAfrikan_Helmet21.xac"
+	##	scale = 1.00
+	##}
+
 	EMFXActorType = {
 		name = "GenericMount"
 		actorfile = "gfx\anims\Horse.xac"

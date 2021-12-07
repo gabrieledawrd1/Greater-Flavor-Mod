@@ -20,3 +20,6 @@ AsianGC
 AfricanGC
 MoroccoGC
 Generic
+Haitian
+#NewAfrikanGC
+#NativeGC

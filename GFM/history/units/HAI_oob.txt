@@ -1,10 +1,11 @@
 leader = {
     name = "Jean-Pierre Boyer"
-    date = 1820.1.1
+    picture = jean_boyer
+    date = 1818.1.1
     type = land
-    personality = lackluster
-    background = corrupt
-    prestige = 0.2
+    personality = unit_personality
+    background = implacablexschool_of_firepower
+    prestige = 0.5
 }
 
 army = {
@@ -12,7 +13,52 @@ army = {
     location = 2215
     regiment = {
         name= "1. Infanterie"
-        type = irregular
+        type = infantry
+        home = 2213
+    }
+    regiment = {
+        name= "2. Infanterie"
+        type = infantry
+        home = 2213
+    }
+    regiment = {
+        name= "3. Infanterie"
+        type = infantry
+        home = 2213
+    }
+    regiment = {
+        name= "4. Infanterie"
+        type = infantry
+        home = 2213
+    }
+    regiment = {
+        name= "1. Dragoon"
+        type = dragoon
+        home = 2213
+    }
+    regiment = {
+        name= "2. Dragoon"
+        type = dragoon
+        home = 2213
+    }
+    regiment = {
+        name= "1. Artillery"
+        type = artillery
+        home = 2213
+    }
+    regiment = {
+        name= "2. Artillery"
+        type = artillery
+        home = 2213
+    }
+    regiment = {
+        name= "3. Artillery"
+        type = artillery
+        home = 2213
+    }
+    regiment = {
+        name= "4. Artillery"
+        type = artillery
         home = 2213
     }
 }
@@ -21,6 +67,45 @@ navy = {
 
     name = "Navy of Haiti"
     location = 2213
+    ship = {
+        name= "1st Clipper Transport"
+        type = clipper_transport
+    }
+    
+    ship = {
+        name= "2nd Clipper Transport"
+        type = clipper_transport
+    }
+    
+    ship = {
+        name= "1st Steam Transport"
+        type = steam_transport
+    }
+    
+    ship = {
+        name= "2nd Steam Transport"
+        type = steam_transport
+    }
+    
+    ship = {
+        name= "Haiti"
+        type = frigate
+    }
+    
+    ship = {
+        name= "Oge"
+        type = frigate
+    }
+    
+    ship = {
+        name= "Petion"
+        type = frigate
+    }
+    
+    ship = {
+        name= "Toussaint"
+        type = frigate
+    }
     ship = {
 
         name= "Alexandre Pétion"
