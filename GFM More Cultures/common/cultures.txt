@@ -294,9 +294,9 @@ beneluxian = {
     }
 }
 
-pan_swiss = {
-    leader = european
-    unit = EuropeanGC
+#pan_swiss = {
+#    leader = european
+#    unit = EuropeanGC
     #swiss_french = {
     #    color = { 159 143 234 }
     #    first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
@@ -339,22 +339,22 @@ pan_swiss = {
     #    Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
     #    Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
     #}
-    romansh = {
-        color = { 120 140 110 }
-        first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
-        Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
-        Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
-        Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
-        Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
-
-        last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
-        Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
-        "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti
-        Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
-        Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
-    }
-    #union = SWI
-}
+#    romansh = {
+#        color = { 120 140 110 }
+#        first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+#        Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+#        Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+#        Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+#        Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
+#
+#        last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+#        Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
+#        "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti
+#        Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
+#        Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+#    }
+#    #union = SWI
+#}
 
 scandinavian = {
     leader = european
@@ -627,6 +627,17 @@ finnougric = {
         color = {84 75 240}
         first_names = { Aleksandr Dmitri Ivan Jukka Santeri Vladimir }
         last_names = { Kokko Likhachev Mamin Minin Sibiriak  Tikhanov Zubov }
+    }
+	votian = {
+        color = { 112 193 112 }
+        first_names = { Aatto Akseli Aleksanteri Anders Aukusti Edvard Eemil Erkki Erno Fabian
+        Fredrik Fridolf Georg Gösta Harald Hjalmar Hugo Johannes Juho Kaarlo
+        Kurt Lars Martti Mikko Paavo Petteri Rudolf Väinö Viktor Vilho }
+	
+        last_names = { Airo Alopaeus Aspara Cajander Ehrnrooth Heinrichs Heiskanen Holsti Ignatius Järnefält
+        Linder Mannerheim Multamäki Nenonen Oesch Öquist Österman Paasikivi Raappana Ramsay
+        Sihvo Siilasvuo Talvela Thesleff Tujulin Tuompo "von Hesse-Kassel" Walden Wallenius Wetzer }
+        radicalism = 5
     }
 }
 
@@ -1203,6 +1214,23 @@ south_slavic = {
     }
     serb = {
         color = {140 0 0}
+        first_names = { Alaksandar Blagoje Bozidar Branko Danilo Dejan Djordje Dragan Dragisa Dragoljub
+        Dragutin Draza Dusan Gavrilo Goran Janko Jovan Koca Kosta Krsto
+        Ljubisa Mihailo Milan Miliutin Milivoje Milojko Milos Miodrag Mirko Miroslav
+        Momcilo Nebojsa Nikola Pavle Peko Petar Radomir Ratko Sava Slobodan
+        Stepa Stojan Veljko Vaselien Vladimir Vojislav Zivojin Zivota Zoran Zvezdan
+        }
+
+        last_names = { Adzic Arandelovic Belimarkovic Blaznacac Bojovic Bozanovic Bozinovic Brankovic Damjanic Dapcevic
+        Dragutinovic Grujic Hadzilic Horvatovic Isakovic Jankovic Jokic Jovanovic Kadijevic Karadjordjevic
+        Lesjanin Ljubicic Maric Mihailovic Miliutinovic Miloradovic Misic Nad Nedic Novak
+        Obrenovic Ojdanic Panic Paskas Pavkovic Pesic Petrovic Popovic Putnik Radulovic
+        Rasic Sijan Simovic Sokolovic Stepanovic Vasiljevic Veric Vojvodic Vukotic Zivkovic
+        }
+        radicalism = 15
+    }
+	montenegrin = {
+        color = {140 140 0}
         first_names = { Alaksandar Blagoje Bozidar Branko Danilo Dejan Djordje Dragan Dragisa Dragoljub
         Dragutin Draza Dusan Gavrilo Goran Janko Jovan Koca Kosta Krsto
         Ljubisa Mihailo Milan Miliutin Milivoje Milojko Milos Miodrag Mirko Miroslav
@@ -2467,6 +2495,17 @@ arab = {
             }
         radicalism = 10
     }
+	kara = {
+        color = {45 247 76}
+        first_names = {
+            Ahmed "Abd al-Karim" Khalid Muhammad Mustafa
+            }
+
+        last_names = {
+            "al-Jazuli" Belkadi Mukrani "al-Rifi" "al-Sahrawi" "al-Shawiyyati" "al-Shiluhi" "al-Zanatawi"
+            }
+        radicalism = 10
+    }
 	mzab_wargia = {
         color = {255 247 76}
         first_names = {
@@ -2568,6 +2607,28 @@ arab = {
     }
 	sokna = {
         color = {20 145 141}
+        first_names = {
+            Ahmed "Abd al-Karim" Khalid Muhammad Mustafa
+            }
+
+        last_names = {
+            "al-Jazuli" Belkadi Mukrani "al-Rifi" "al-Sahrawi" "al-Shawiyyati" "al-Shiluhi" "al-Zanatawi"
+            }
+        radicalism = 10
+    }
+	foqaha = {
+        color = {20 213 141}
+        first_names = {
+            Ahmed "Abd al-Karim" Khalid Muhammad Mustafa
+            }
+
+        last_names = {
+            "al-Jazuli" Belkadi Mukrani "al-Rifi" "al-Sahrawi" "al-Shawiyyati" "al-Shiluhi" "al-Zanatawi"
+            }
+        radicalism = 10
+    }
+	tmessa = {
+        color = {20 145 1}
         first_names = {
             Ahmed "Abd al-Karim" Khalid Muhammad Mustafa
             }
@@ -7612,3 +7673,50 @@ southern_african = {
 #    }
 #    union = SCA
 #}
+
+rhaeto_romance = {
+	leader = romansh
+	unit = EuropeanGC
+	romansh = {
+        color = { 120 140 110 }
+        first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+        Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+        Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+        Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+        Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
+
+        last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+        Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
+        "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti
+        Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
+        Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+    }
+	ladin = {
+        color = { 120 200 110 }
+        first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+        Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+        Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+        Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+        Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
+
+        last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+        Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
+        "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti
+        Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
+        Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+    }
+	friulian = {
+        color = { 120 140 200 }
+        first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+        Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+        Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+        Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+        Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
+
+        last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+        Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia"
+        "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti
+        Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
+        Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+    }
+}

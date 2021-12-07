@@ -1,12 +1,15 @@
-capital = 860
-primary_culture = greek
+capital = 2583
+primary_culture = montenegrin
+culture = serb
 religion = orthodox
-government = absolute_empire
-plurality = 0.0
-nationalvalue = nv_order
-literacy = 0.22
+government = theocracy
+plurality = 25.0
+nationalvalue = nv_autocracy
+literacy = 0.04
+non_state_culture_literacy = 0.01
 civilized = yes
-prestige = 0
+prestige = 4
+
 
 # Political reforms
 slavery = no_slavery
@@ -27,9 +30,8 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
-#New Reforms
-conscription = four_year_draft
+# New Reforms
+conscription = one_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
@@ -39,19 +41,41 @@ centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = orthodox_country
+set_country_flag = theocratic_government
 
-govt_flag = {
-    government = absolute_monarchy
-    flag = theocracy
-}
-
-ruling_party = BYZ_conservative
+ruling_party = MON_conservative
 upper_house = {
     fascist = 0
-    liberal = 35
-    conservative = 55
-    reactionary = 10
+    liberal = 30
+    conservative = 58
+    reactionary = 12
     radical = 0
     socialist = 0
     communist = 0
 }
+
+
+# Technologies
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+army_command_principle = 1
+post_nelsonian_thought = 1
+the_command_principle = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+piston_steam_engine = 1
+mechanical_production = 1
+
+# Inventions
+
+#Starting Consciousness
+consciousness = 2
+nonstate_consciousness = 0
+
+
+oob = "MON_oob.txt"
