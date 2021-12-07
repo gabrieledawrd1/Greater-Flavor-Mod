@@ -124,7 +124,7 @@ economy = {
 	TRADE_CAP_LOW_LIMIT_LAND = 0.1, 				-- the lowest % the slider can go for land units
 	TRADE_CAP_LOW_LIMIT_NAVAL = 0.2, 			-- the lowest % the slider can go for naval units
 	TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 0.15, 		-- the lowest % the slider can go for constructions
-	FACTORY_PURCHASE_MIN_FACTOR = 0.50,			-- the lowest % of its daily needs a factory will purchase
+	FACTORY_PURCHASE_MIN_FACTOR = 1,			-- the lowest % of its daily needs a factory will purchase
 	FACTORY_PURCHASE_DRAWDOWN_FACTOR = 0.01		-- the % a factory will reduce its input purchases each day if it did not sell all its goods (also used for scaling up production if all goods are sold)
 },
 
@@ -135,7 +135,7 @@ military = {
 	BASE_COMBAT_WIDTH = 30,
 	POP_MIN_SIZE_FOR_REGIMENT = 1000,
 	POP_SIZE_PER_REGIMENT = 3000,
-	SOLDIER_TO_POP_DAMAGE = 0.2,
+	SOLDIER_TO_POP_DAMAGE = 0.35,
 	LAND_SPEED_MODIFIER = 1,
 	NAVAL_SPEED_MODIFIER = 2,
 	EXP_GAIN_DIV = 0.05,

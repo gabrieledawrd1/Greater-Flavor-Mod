@@ -18,7 +18,7 @@ rebel = {
 
 
 life_needs = {
-    #timber = 2
+    grain = 2
 }
 
 everyday_needs = {
@@ -30,6 +30,9 @@ luxury_needs = {
 }
 
 ideologies = {
+    socialist = {
+        factor = 5
+    }
     liberal = {
         factor = 3
     }

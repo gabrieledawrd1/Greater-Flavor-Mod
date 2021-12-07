@@ -1458,3 +1458,461 @@ DVG_badboy_2 = {
     icon = 1
 
 }
+money_hoarder_1 = {
+    trigger = {
+        money = 2000000
+        not = { money = 5000000 }
+    }
+    tax_efficiency = -0.05
+    tariff_efficiency_modifier = -0.20
+    icon = 1
+}
+
+money_hoarder_2 = {
+    trigger = {
+        money = 5000000
+        not = { money = 10000000 }
+    }
+    tax_efficiency = -0.10
+    tariff_efficiency_modifier = -0.40
+    icon = 1
+}
+
+money_hoarder_3 = {
+    trigger = {
+        money = 10000000
+        not = { money = 15000000 }
+    }
+    tax_efficiency = -0.20
+    tariff_efficiency_modifier = -0.60
+    icon = 1
+}
+
+money_hoarder_4 = {
+    trigger = {
+        money = 15000000
+        not = { money = 20000000 }
+    }
+    tax_efficiency = -0.25
+    tariff_efficiency_modifier = -0.80
+    icon = 1
+}
+
+money_hoarder_5 = {
+    trigger = {
+        money = 20000000
+        not = { money = 25000000 }
+    }
+    tax_efficiency = -0.40
+    tariff_efficiency_modifier = -1.0
+    icon = 1
+}
+
+money_hoarder_6 = {
+    trigger = {
+        money = 25000000
+    }
+    tax_efficiency = -0.75
+    tariff_efficiency_modifier = -1.25
+    icon = 1
+}
+
+populationsize_below_1M = {
+    trigger = {
+        NOT = {
+            total_pops = 250000
+
+        }
+    }
+    icon = 17
+    mobilisation_size = 0.1
+    tax_efficiency = 0.05
+}
+
+populationsize_1M_to_3M = {
+    trigger = {
+        total_pops = 250000
+        NOT = {
+            total_pops = 750000
+        }
+    }
+    icon = 17
+    mobilisation_size = 0.05
+    tax_efficiency = 0.025
+}
+
+populationsize_5M = {
+    trigger = {
+        total_pops = 1250000
+        NOT = {
+            total_pops = 2500000
+        }
+    }
+    icon = 17
+    research_points = 0.15
+}
+
+populationsize_10M = {
+    trigger = {
+        total_pops = 2500000
+        NOT = {
+            total_pops = 6250000
+        }
+    }
+    icon = 17
+    research_points = 0.25
+}
+
+populationsize_25M = {
+    trigger = {
+        total_pops = 6250000
+        NOT = {
+            total_pops = 12500000
+        }
+    }
+    icon = 17
+    research_points = 0.33
+    tax_efficiency = -0.01
+}
+
+populationsize_50M = {
+    trigger = {
+        total_pops = 12500000
+        NOT = {
+            total_pops = 25000000
+        }
+    }
+    icon = 17
+    research_points = 0.5
+    tax_efficiency = -0.02
+}
+
+populationsize_100M = {
+    trigger = {
+        total_pops = 25000000
+        NOT = {
+            total_pops = 50000000
+        }
+    }
+    icon = 17
+    research_points = 0.66
+    tax_efficiency = -0.03
+}
+
+populationsize_200M = {
+    trigger = {
+        total_pops = 50000000
+        NOT = {
+            total_pops = 75000000
+        }
+    }
+    icon = 17
+    research_points = 0.75
+    tax_efficiency = -0.04
+    war_exhaustion = -0.1
+}
+
+populationsize_300M = {
+    trigger = {
+        total_pops = 75000000
+        NOT = {
+            total_pops = 125000000
+        }
+    }
+    icon = 17
+    research_points = 1
+    tax_efficiency = -0.05
+    war_exhaustion = -0.2
+}
+
+populationsize_500M = {
+    trigger = {
+        total_pops = 125000000
+    }
+    icon = 17
+    research_points = 1.25
+    tax_efficiency = -0.05
+    administrative_efficiency_modifier = -0.05
+    war_exhaustion = -0.3
+}
+
+very_low_literacy = {
+    trigger = {
+        exists = yes
+        NOT = { literacy = 0.35 }
+    }
+    global_population_growth = 0.001
+    issue_change_speed = -0.1
+    global_assimilation_rate = -0.1
+    icon = 19
+}
+
+low_literacy = {
+    trigger = {
+        exists = yes
+        NOT = { literacy = 0.50 }
+    }
+    global_population_growth = 0.001
+    issue_change_speed = -0.1
+    global_assimilation_rate = -0.05
+    icon = 19
+}
+
+#medium_literacy = {
+#   trigger = {
+#       exists = yes
+#       literacy = 0.60
+#   }
+#   global_population_growth = -0.001
+#   issue_change_speed = 0.1
+#   global_assimilation_rate = 0.1
+#   icon = 19
+#}
+high_literacy = {
+    trigger = {
+        exists = yes
+        literacy = 0.70
+    }
+    global_population_growth = -0.001
+    issue_change_speed = 0.1
+    leadership_modifier = 0.1
+    global_assimilation_rate = 0.1
+    icon = 19
+}
+
+#very_high_literacy = {
+#   trigger = {
+#       exists = yes
+#       literacy = 0.80
+#   }
+#   global_population_growth = -0.001
+#   leadership_modifier = 0.1
+#   factory_owner_cost = -0.1
+#   global_assimilation_rate = 0.1
+#   icon = 19
+#}
+
+war_exhaustion_10_decay = {
+    trigger = {
+        NOT = { war_exhaustion = 10 }
+        war_exhaustion = 0.01
+    }
+    war_exhaustion = -0.2
+}
+
+war_exhaustion_20_decay = {
+    trigger = {
+        war_exhaustion = 10
+        NOT = { war_exhaustion = 20 }
+    }
+    war_exhaustion = -0.4
+}
+
+war_exhaustion_30_decay = {
+    trigger = {
+        war_exhaustion = 20
+        NOT = { war_exhaustion = 30 }
+    }
+    war_exhaustion = -0.6
+}
+
+war_exhaustion_40_decay = {
+    trigger = {
+        war_exhaustion = 30
+        NOT = { war_exhaustion = 40 }
+    }
+    war_exhaustion = -0.8
+}
+
+war_exhaustion_50_decay = {
+    trigger = {
+        war_exhaustion = 40
+        NOT = { war_exhaustion = 50 }
+    }
+    war_exhaustion = -1
+}
+
+war_exhaustion_60_decay = {
+    trigger = {
+        war_exhaustion = 50
+        NOT = { war_exhaustion = 60 }
+    }
+    war_exhaustion = -1.2
+}
+
+war_exhaustion_70_decay = {
+    trigger = {
+        war_exhaustion = 60
+        NOT = { war_exhaustion = 70 }
+    }
+    war_exhaustion = -1.4
+}
+
+war_exhaustion_80_decay = {
+    trigger = {
+        war_exhaustion = 70
+        NOT = { war_exhaustion = 80 }
+    }
+    war_exhaustion = -1.6
+}
+
+war_exhaustion_90_decay = {
+    trigger = {
+        war_exhaustion = 80
+        NOT = { war_exhaustion = 90 }
+    }
+    war_exhaustion = -1.8
+}
+
+war_exhaustion_100_decay = {
+    trigger = {
+        war_exhaustion = 90
+    }
+    war_exhaustion = -2
+}
+
+minor_bad_planning = {
+    trigger = {
+        exists = yes
+        NOT = { administration_spending = 0.6 }
+        administration_spending = 0.4
+        economic_policy = planned_economy 
+        ai = no
+    }
+    factory_throughput = -0.15
+    RGO_throughput = -0.15
+    icon = 19
+}
+
+bad_planning = {
+    trigger = {
+        exists = yes
+        NOT = { administration_spending = 0.4 }
+        administration_spending = 0.2
+        economic_policy = planned_economy 
+        ai = no
+    }
+    factory_throughput = -0.3
+    RGO_throughput = -0.3
+    icon = 19
+}
+
+taxation_increased = {
+    trigger = {
+        ai = no
+        has_country_flag = in_great_war
+        war = yes
+    }
+    max_tax = 1
+    max_tariff = 1
+    icon = 2
+}
+
+unciv_infamy = {
+    trigger = {
+        civilized = no
+        NOT = { civilization_progress = 0.1 }
+    }
+    badboy = -0.2
+}
+
+unciv_infamy_2 = {
+    trigger = {
+        civilized = no
+        civilization_progress = 0.1
+        NOT = { civilization_progress = 0.25 }
+    }
+    badboy = -0.15
+}
+
+unciv_infamy_3 = {
+    trigger = {
+        civilized = no
+        civilization_progress = 0.25
+        NOT = { civilization_progress = 0.45 }
+    }
+    badboy = -0.12
+}
+
+unciv_infamy_4 = {
+    trigger = {
+        civilized = no
+        civilization_progress = 0.45
+    }
+    badboy = -0.1
+}
+
+african_unciv = {
+    trigger = {
+        OR = {
+            continent = africa
+            continent = central_africa 
+            continent = west_africa 
+            continent = east_africa 
+            continent = south_west_africa 
+        }
+        civilized = no
+        NOT = { civilization_progress = 0.1 }
+    }
+    badboy = -0.2
+}
+
+african_unciv_2 = {
+    trigger = {
+        OR = {
+            continent = africa
+            continent = central_africa 
+            continent = west_africa 
+            continent = east_africa 
+            continent = south_west_africa 
+        }
+        civilized = no
+        civilization_progress = 0.1
+        NOT = { civilization_progress = 0.25 }
+    }
+    badboy = -0.15
+}
+
+african_unciv_3 = {
+    trigger = {
+        OR = {
+            continent = africa
+            continent = central_africa 
+            continent = west_africa 
+            continent = east_africa 
+            continent = south_west_africa 
+        }
+        civilized = no
+        civilization_progress = 0.25
+        NOT = { civilization_progress = 0.45 }
+    }
+    badboy = -0.1
+}
+
+african_unciv_4 = {
+    trigger = {
+        OR = {
+            continent = africa
+            continent = central_africa 
+            continent = west_africa 
+            continent = east_africa 
+            continent = south_west_africa 
+        }
+        civilized = no
+        civilization_progress = 0.45
+        NOT = { civilization_progress = 0.7 }
+    }
+    badboy = -0.05
+}
+
+extreme_bad_planning = {
+    trigger = {
+        exists = yes
+        NOT = { administration_spending = 0.2 }
+        economic_policy = planned_economy 
+        ai = no
+    }
+    factory_throughput = -0.5
+    RGO_throughput = -0.5
+    icon = 19
+}

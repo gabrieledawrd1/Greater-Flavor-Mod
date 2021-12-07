@@ -1,0 +1,404 @@
+#phenomenology_n_hermeneutic
+transition_1 = {
+	limit = { phenomenology_n_hermeneutic = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}			
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 150
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 300
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.7
+				ai = yes 
+			}
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				electricity = 1
+				combustion_engine = 1
+			}	
+		}
+		modifier = { 
+			factor = 1
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 600
+		}	
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
+transition_2 = {
+	limit = { phenomenology_n_hermeneutic = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}	
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 200
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 400
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.75
+				ai = yes 
+			}
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				electricity = 1
+				combustion_engine = 1
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 800
+		}
+		modifier = {
+			factor = -5
+			NOT = { invention = transition_1 }
+		}	
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
+#anti__rationalism
+transition_3 = {
+	limit = { anti__rationalism = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}	
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 300
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 600
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.8
+				ai = yes 
+			}
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+			combustion_engine = 1
+			mass_politics = 1
+		}
+		modifier = { 
+			factor = 1
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = -5
+			NOT = { invention = transition_2 }
+		}		
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
+transition_4 = {
+	limit = { anti__rationalism = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}	
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 400
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 800
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.85
+				ai = yes 
+			}
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+			combustion_engine = 1
+			mass_politics = 1
+		}
+		modifier = { 
+			factor = 1
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = -5
+			NOT = { invention = transition_3 }
+		}			
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
+transition_5 = {
+	limit = { anti__rationalism = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}	
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 500
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 1000
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.9
+				ai = yes 
+			}
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+			combustion_engine = 1
+			mass_politics = 1
+		}
+		modifier = { 
+			factor = -2
+			NOT = {	health_care = acceptable_health_care }
+			NOT = { health_care = good_health_care }
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 2500
+		}
+		modifier = {
+			factor = -5
+			NOT = { invention = transition_4 }
+		}			
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
+transition_6 = {
+	limit = { anti__rationalism = 1 }
+	news = no
+	chance = {
+		base = -3
+		modifier = { 
+			factor = -1
+			NOT = { total_pops = 1000000 }
+		}
+		modifier = { 
+			factor = 1
+			has_country_modifier = female_suffrage
+		}	
+		modifier = {
+			factor = 1
+			OR = { 
+				AND = { 
+					total_pops = 1000000
+					NOT = { total_pops = 10000000 }
+					industrial_score = 600
+				}
+				AND = {
+					total_pops = 10000000
+					industrial_score = 1200
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			OR = { 
+				literacy = 0.95
+				ai = yes 
+			}	
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = -3
+			NOT = { capital_scope = { continent = europe } }
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+			combustion_engine = 1
+			mass_politics = 1
+		}
+		modifier = { 
+			factor = -2
+			NOT = {	health_care = acceptable_health_care }
+			NOT = { health_care = good_health_care }
+		}
+		modifier = {
+			factor = 1
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = -5
+			NOT = { invention = transition_5 }
+		}			
+	}
+	effect = {
+		pop_growth = -0.0002		
+	}
+}
