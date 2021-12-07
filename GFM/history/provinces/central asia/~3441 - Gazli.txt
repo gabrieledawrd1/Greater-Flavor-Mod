@@ -1,4 +1,5 @@
-
+owner = KHI
+controller = KHI
 add_core = KHI
 add_core = BUK
 trade_goods = wool

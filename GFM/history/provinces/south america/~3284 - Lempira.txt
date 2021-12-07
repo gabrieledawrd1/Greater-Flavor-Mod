@@ -1,7 +1,5 @@
 owner = HAI
 controller = HAI
 add_core = HAI
-trade_goods = tobacco
-terrain = cap_haitien
-fort = 4
+trade_goods = coffee
 life_rating = 35

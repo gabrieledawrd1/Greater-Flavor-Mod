@@ -1,4 +1,5 @@
-
+owner = TUR
+controller = TUR
 add_core = IRQ
 add_core = KWT
 trade_goods = fish

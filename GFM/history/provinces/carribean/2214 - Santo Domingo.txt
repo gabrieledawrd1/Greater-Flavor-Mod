@@ -4,4 +4,6 @@ add_core = HAI
 add_core = DOM
 trade_goods = tobacco
 terrain = santo_domingo
+naval_base = 1
+fort = 1
 life_rating = 35

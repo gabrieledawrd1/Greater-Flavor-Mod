@@ -2,4 +2,5 @@ owner = HAI
 controller = HAI
 add_core = HAI
 trade_goods = coffee
+fort = 2
 life_rating = 35
