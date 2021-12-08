@@ -2,6 +2,7 @@ color = { 20 50 210 }
 proletarian_dictatorship = { 0 0 153 }
 fascist_dictatorship = { 0 0 153 }
 presidential_dictatorship = { 0 0 153 }
+french_consulate = {  0 51 153 }
 graphical_culture = FrenchGC
 
 party = {

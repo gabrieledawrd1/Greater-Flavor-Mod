@@ -235,3 +235,15 @@ viceroyalty = {
     appoint_ruling_party = yes
 	#flagtype = none, i.e. default TAG.tga 
 }
+french_consulate = {
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+
+
+    election = yes
+    duration = 1200
+    appoint_ruling_party = yes
+    flagType = republic
+}

@@ -131,7 +131,100 @@ country_event = {
     }
 
     option = {
+        name = "Remove RUS Cores"
+        any_owned = {
+            limit = {
+                is_core = THIS
+            }
+            remove_core = RUS
+        }
+        ai_chance = { factor = 1 }
+    }
+
+    option = {
+        name = "Remove GER Cores"
+        any_owned = {
+            limit = {
+                is_core = THIS
+            }
+            remove_core = PRU
+            remove_core = GER
+            remove_core = AUS
+        }
+        ai_chance = { factor = 1 }
+    }
+
+    option = {
         name = "Nevermind"
 		
+    }
+}
+country_event = {
+    id = 888880100
+    title = "French Consul"
+    desc = "WTF!! The Republic is back"
+    picture = "election"
+
+    trigger = {
+        has_country_flag = jman_is_cheating
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "French Consulate"
+         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
+        clr_country_flag = wants_to_unify
+        clr_country_flag = does_not_want_to_unify
+        clr_country_flag = liberal_revolution_fired
+        clr_country_flag = liberal_revolution_in_progress
+        set_country_flag = had_liberal_revolution
+        clr_country_flag = rebels_in_capital
+        remove_country_modifier = fight_the_power
+        capital_scope = {
+            any_pop = {
+                limit = { literacy = 0.2 }
+                ideology = { factor = 0.1 value = liberal }
+            }
+        }
+        any_pop = {
+            limit = {
+                literacy = 0.2
+                pop_majority_ideology = liberal
+            }
+            ideology = { factor = 0.1 value = liberal }
+        }
+        any_pop = {
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -2
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = radical
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = -2
+            }
+        }
+        any_owned = {
+            remove_province_modifier = liberal_agitation
+        }
+        remove_country_modifier = springtime_of_nations
+        remove_country_modifier = global_liberal_agitation
+    }
+    option = {
+        name = " NOPE "
     }
 }
