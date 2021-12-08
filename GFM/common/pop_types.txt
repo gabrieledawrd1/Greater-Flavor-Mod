@@ -1018,13 +1018,6 @@ assimilation_chance = {
         factor = -20
         has_culture_core = yes
 		NOT = {
-            OR = {
-                country = { citizens_rights = primary_culture_only }
-                AND = {
-                    country = { citizens_rights = culture_voting_only }
-                    is_accepted_culture = no
-                }
-            }
 		    AND = {
 		        country = { has_country_flag = can_ignore_cultural_core }
 			    OR = {
