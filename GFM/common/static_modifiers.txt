@@ -124,9 +124,10 @@ core = {
 
 
 has_siege = {
-    population_growth = -0.0001
+    population_growth = -0.001
     farm_rgo_eff = -0.5
     mine_rgo_eff = -0.5
+    immigrant_push = 0.25
 }
 
 occupied = {
@@ -135,8 +136,8 @@ occupied = {
     local_factory_output = -0.25
     local_rgo_output = -0.25
     immigrant_attract = -0.25
-    immigrant_push = 0.25
-    population_growth = -0.001
+    immigrant_push = 0.5
+    population_growth = -0.01
 }
 
 nationalism = {
@@ -256,14 +257,15 @@ generalised_debt_default = {
 
 total_occupation = {
     war_exhaustion = 0.5                #increased by war exhaustion.
-    global_population_growth = -0.0001
+    global_population_growth = -0.001
     prestige = -0.1
 }
 
 total_blockaded = {
     war_exhaustion = 0.5    #increased by war exhaustion.
-    global_population_growth = -0.0001
+    global_population_growth = -0.001
     prestige = -0.1
+    import_cost = 2.5
 }
 
 in_bankrupcy = {

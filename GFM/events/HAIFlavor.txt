@@ -33,6 +33,12 @@ country_event = {
     option = {
         name = "EVTOPTA45100"
         set_country_flag = PAP_concordat
+        any_owned = {
+			add_province_modifier = {
+				name = reading
+				duration = -1
+			}
+		}
         prestige = 5
         relation = { who = PAP value = 50 }
         any_pop = { limit = { is_state_religion = yes } scaled_militancy = { factor = -3 issue = moralism } }
@@ -163,6 +169,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
+        has_country_flag = recognize_dr
         tag = DOM
         exists = yes
         2214 = { is_core = HAI owned_by = THIS }
@@ -203,119 +210,207 @@ country_event = {
 
     id = 45104
 
-    title = "EVTNAME45104"
-    desc = "EVTDESC45104"
-    picture = "dominican_revolution"
+    title = "Revolts of 1843 against Boyer"
+	desc = "The Haitian Revolution had a succes but French debt and division has plagued the young nation, now it is civil war."
+	picture = "1843_revolts"
 
     fire_only_once = yes
 
     trigger = {
-        tag = HAI
-        owns = 2214
-        owns = 2216
-        exists = yes
-        2214 = { is_core = HAI }
-        2216 = { is_core = HAI }
-        year = 1844
-        any_owned_province = { is_core = DOM average_militancy = 6 }
-        NOT = { year = 1870 }
+        NOT = { has_country_flag = french_defeated }
+		tag = HAI
+		owns = 2214
+		owns = 2216
+		exists = yes
+		2214 = { is_core = HAI }
+		2216 = { is_core = HAI }
+		year = 1843
+		any_owned_province = { is_core = DOM average_militancy = 6 }
+		NOT = { year = 1870 }
     }
 
-    mean_time_to_happen = { months = 8 }
+    mean_time_to_happen = { months = 4 }
 
-    option = {
-        name = "EVT45104OPTA"
-        set_country_flag = DOM_revolt
+    immediate = {
         set_country_flag = dominican_revolution
-        remove_accepted_culture = caribeno
-        remove_accepted_culture = afro_latino
         any_owned = {
-            limit = { is_core = DOM }
-            any_pop = { militancy = -9 consciousness = -9 }
-            remove_province_modifier = nationalist_agitation
-            secede_province = DOM
-        }
-        3309 = { secede_province = HAI }
-        DOM = {
-            define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
-            add_country_modifier = { name = unrecognized_country duration = 3650 }
-        }
-        relation = { who = DOM value = -400 }
-        random_owned = {
 			limit = {
-				owner = { USA = { exists = yes } }
-			}
-			owner = {
-				USA = {
-					diplomatic_influence = {
-						who = DOM
-						value = 400
-					}
-					relation = { who = DOM value = 200 }
+				is_core = HAI 
+				NOT = {
+					is_core = DOM
 				}
 			}
+			add_core = DMG
 		}
-		random_owned = {
-			limit = {
-				owner = { US2 = { exists = yes } }
-			}
-			owner = {
-				US2 = {
-					diplomatic_influence = {
-						who = DOM
-						value = 400
-					}
-					relation = { who = DOM value = 200 }
+        add_country_modifier = { name = rally_tribesmen duration = 3650 }
+		add_country_modifier = { name = corrupt_army duration = 3650 }
+		set_country_flag = DOM_revolt
+		remove_accepted_culture = caribeno
+		remove_accepted_culture = afro_caribeno
+        any_owned = {
+			limit = { 
+				is_core = HAI
+				NOT = {
+					is_core = DOM
 				}
 			}
+			add_core = KHT
 		}
-        DOM = {
-            capital_scope = {
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = cavalry value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-            }
+        2215 = { secede_province = KHT }
+        3284 = { secede_province = KHT }
+        3545 = { secede_province = KHT }
+        KHT = {
+			government = absolute_monarchy
+			ruling_party_ideology = reactionary
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = no_meeting
+			political_reform = state_press
+			political_reform = state_controlled
+			political_reform = underground_parties
+			country_event = 800050
+			add_country_modifier = { name = corrupt_army duration = 3650 }
+			add_country_modifier = { name = rally_tribesmen duration = 3650 }
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+        FRA = {
+        	diplomatic_influence = { who = DMG value = 400 }
         }
-		casus_belli = { target = DOM type = conquest months = 36 }
-        war = {
-            target = DOM
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
+		DMG = {
+			government = colonial_company
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = no_meeting
+			political_reform = state_press
+			political_reform = state_controlled
+			political_reform = underground_parties
+			add_country_modifier = { name = rally_tribesmen duration = 3650 }
+			add_country_modifier = { name = corrupt_army duration = 3650 }
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+        3320 = { secede_province = DMG }
+        any_owned = {
+			limit = { is_core = DOM }
+			any_pop = { militancy = -9 consciousness = -9 }
+			remove_province_modifier = nationalist_agitation
+			secede_province = DOM
+		}
+		USA = {
+        	diplomatic_influence = { who = DOM value = 400 }
         }
-        ai_chance = { factor = 100 }
+		DOM = {
+			money = 250000
+			leadership = 100
+			ammunition = 100
+			small_arms = 100
+			artillery = 20
+			canned_food = 100
+			wine = 100
+			luxury_clothes = 30
+			machine_parts = 500
+			clipper_convoy = 50
+			wool = 50
+			define_general = {
+				name = "Pedro Santana"
+				personality = unit_personality
+				background = implacablexnationalist
+			}
+			any_pop = {
+				limit  = {
+					OR = {
+						has_pop_culture = afro_caribeno
+						has_pop_culture = caribeno
+					}
+					pop_type = soldiers
+				}
+				reduce_pop = 2.0
+			}
+			add_country_modifier = { name = unrecognized_country duration = 3650 }
+			add_country_modifier = { name = rally_tribesmen duration = 3650 }
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+		relation = { who = DOM value = -400 }
+		relation = { who = KHT value = -400 }
+		relation = { who = DMG value = -400 }
+		war = {
+			target = DOM
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+		}
+		war = {
+			target = KHT
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		war = {
+			target = DMG
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
     }
 
     option = {
-        name = "EVT45104OPTB"
-        remove_accepted_culture = caribeno
-        remove_accepted_culture = afro_latino
-        any_owned = {
-            limit = { is_core = DOM }
-            any_pop = { militancy = -9 consciousness = -9 }
-            remove_province_modifier = nationalist_agitation
-            secede_province = DOM
-        }
-        DOM = {
-            define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
-            add_accepted_culture = afro_latino
-        }
-        relation = { who = DOM value = -400 }
-		casus_belli = { target = DOM type = conquest months = 36 }
-        war = {
-            target = DOM
-            attacker_goal = { casus_belli = conquest }
-            defender_goal = { casus_belli = status_quo }
-        }
-        change_tag_no_core_switch = DOM
-        ai_chance = { factor = 0 }
-    }
+		name = "EVT45104OPTA"
+		ammunition = 100
+		small_arms = 100
+		artillery = 20
+		canned_food = 100
+		wine = 100
+		luxury_clothes = 30
+		machine_parts = 500
+		clipper_convoy = 50
+		wool = 50
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = "EVT45104OPTB"
+		change_tag_no_core_switch = DOM
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Kingdom of Haiti"
+		change_tag_no_core_switch = KHT
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Colony of Saint-Domingue"
+		change_tag_no_core_switch = DMG
+		ai_chance = { factor = 0 }
+	}
 }
 
 country_event = {
@@ -383,7 +478,8 @@ country_event = {
 
     option = {
         name = "EVT45106OPTA"
-        prestige = -10
+        prestige = -5
+        militancy = 2.5
         set_country_flag = agreed_to_pay_debt
         random_owned = {
             limit = {
@@ -404,10 +500,22 @@ country_event = {
             owner = { set_variable = { which = owed_cash_money value = 500 } }
         }
 
-        FRA = { treasury = 500000 }
+        FRA = {
+            treasury = 500000 
+            add_country_modifier = {
+                name = HAI_debts 
+                duration = 1825
+            }
+            any_pop = {
+                limit = {
+                    strata = rich
+                }
+                money = 50000
+            }
+        }
 
         ai_chance = {
-            factor = 67
+            factor = 95
         }
     }
 
@@ -416,7 +524,7 @@ country_event = {
         prestige = 10
         FRA = { country_event = 45107 }
         ai_chance = {
-            factor = 33
+            factor = 5
         }
     }
 }
@@ -558,7 +666,7 @@ country_event = {
         any_owned = {
             add_province_modifier = {
                 name = colonial_recruitment
-                duration = 365
+                duration = 1825
             }
         }
     }
@@ -581,11 +689,17 @@ country_event = {
         months = 2
     }
     option = {
-        name = "Expell the Domincans. §RGain 5 infamy§W"
+        name = "Expell the Domincans. ï¿½RGain 5 infamyï¿½W"
         badboy = 5
         any_pop = {
             limit = {
                 has_pop_culture = caribeno
+            }
+            move_pop = 2208
+        }
+        any_pop = {
+            limit = {
+                has_pop_culture = afro_latino
             }
             move_pop = 2208
         }

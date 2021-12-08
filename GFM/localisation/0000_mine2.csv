@@ -354,3 +354,12 @@ ATQ;Antarctique;;;;;;;;;;;;;
 ARU_theocracy;The Islamic Imamate;;;;;;;;;;;;;x
 NFR;Nouvelle-France;;;;;;;;;;;;;x
 NFR_ADJ;Nouveau Français;;;;;;;;;;;;;x
+HAI_debts;Gaining Haitian Debt;;;;;;;;;;;;;
+collect_HAI_debt_title;Demand Haitian Reparations;;;;;;;;;;;;;;;;;;;;;;;;x
+collect_HAI_debt_desc;Haiti has long agreed to paying the french government reparations for their Revolution. It is once again time to demand money from them.;;;;;;;;;;;;;;;;;;;;;;;;x
+french_defeated_again_title;Force French Unilateral recognition of Haiti;;;;;;;;;;;;;;;;;;;;;;;;x
+french_defeated_again_desc;After Defeating the French after they wrongfully demanded money for us being free, we went to war and once again we have won and the French are fleeing to Paris, thus we are regonized and does not have to pay money for existing.;;;;;;;;;;;;;;;;;;;;;;;;x
+end_rural_code_title;End the Code Rural;;;;;;;;;;;;;
+end_rural_code_desc;The Rural code was inacted in order to pay French Debts but since then it has failed to force the people back onto the plantations and are alieanating them we must reform our economic system.;;;;;;;;;;;;;
+recognize_dr_title;Recognize the Dominican State;;;;;;;;;;;;;
+recognize_dr_desc;We have lost countrol of the Eastern half of Hayti, it is time we recoginze Dominican independence in order to move on from the past.;;;;;;;;;;;;;
