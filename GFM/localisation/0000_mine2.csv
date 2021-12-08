@@ -326,3 +326,31 @@ EVT7777925OPTB;No, not this time;x
 liberal_revolution_in_progress;Liberal Revolution in Progress;x
 cop_onto_egypt_title;Home of the Great Church of Antioch;x
 cop_onto_egypt_desc;Egypt is our right to claim, we will establish Coptic control over it once more!;x
+KNI;The Knights Hospitaller;;;;;;;;;;;;;;;;;;;;;;;;x
+KNI_ADJ;Hospitaller;;;;;;;;;;;;;;;;;;;;;;;;x
+KHT_ADJ;Haïtian;;;;;;;;;;;;x
+KHT;Royaume d'Haïti;;;;;;;;;;;;x
+DMG_ADJ;Colonial French;;;;;;;;;;;;x
+DMG;Saint-Domingue;;;;;;;;;;;;x
+AFS;Afsharid Empire;;;;;;;;;;;;;;;;;;;;;;x
+AFS_ADJ;Afshar;;;;;;;;;;;;;;;;;;;;;;x
+AFS_absolute_monarchy;Afsharid Empire;;;;;;;;;;;;;;;;;;;;;;x
+AFS_prussian_constitutionalism;Afsharid Empire;;;;;;;;;;;;;;;;;;;;;;x
+AFS_hms_government;Afsharid Iran;;;;;;;;;;;;;;;;;;;;;;x
+AFS_democracy;Afsharid Republic;;;;;;;;;;;;;;;;;;;;;;x
+AFS_fascist_dictatorship;Afshar State;;;;;;;;;;;;;;;;;;;;;;x
+AFS_proletarian_dictatorship;Commune of Afshar Iran;;;;;;;;;;;;;;;;;;;;;;x
+SVD_ADJ;Safavid;;;;;;;;;;;;x
+SVD;Safavid Empire;;;;;;;;;;;;x
+ADU_ADJ;Anglo-Dutch;;;;;;;;;;;;;
+ADU_absolute_monarchy;Anglo-Dutch Commonwealth;;;;;;;;;;;;;
+ADU_prussian_constitutionalism;Anglo-Dutch Union;;;;;;;;;;;;;
+ADU_hms_government;Anglo-Dutch Union;;;;;;;;;;;;;
+ADU_democracy;Anglo-Dutch Republics;;;;;;;;;;;;;
+ADU_proletarian_dictatorship;United Socialist Republics;;;;;;;;;;;;;
+ADU_fascist_dictatorship;United Provinces;;;;;;;;;;;;;
+ATQ_ADJ;French Antarctiquan;;;;;;;;;;;;;
+ATQ;Antarctique;;;;;;;;;;;;;
+ARU_theocracy;The Islamic Imamate;;;;;;;;;;;;;x
+NFR;Nouvelle-France;;;;;;;;;;;;;x
+NFR_ADJ;Nouveau Français;;;;;;;;;;;;;x

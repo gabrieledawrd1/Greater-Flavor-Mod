@@ -7,6 +7,20 @@ CLN        ="countries/Cleanup.txt"
 
 ### NEW NATIONS MOD ###
 
+#Fantasy Rebooted
+LTN     = "countries/LatinEmpire.txt"
+COP     = "countries/CopticEgypt.txt"
+ADU		= "countries/Anglo-Dutch Union.txt" 
+NFR		= "countries/New France.txt"
+ATQ		= "countries/Antarctique.txt"
+PGR 	= "countries/Colombeia.txt"
+#Atlas don't kill me
+SVD		= "countries/Safavids.txt" 
+AFS		= "countries/Afsharid.txt" 
+#Haitian Civil war
+DMG 	= "countries/Saint-Domingue.txt"
+KHT		= "countries/Kingdom of Haiti.txt" 
+
 ###France Mod###
 NZF        ="countries/French New Zealand.txt"
 FAS        ="countries/French Australia.txt"
@@ -96,7 +110,7 @@ SMI        = "countries/Sapmi.txt"
 BRG     = "countries/Burgundy.txt"
 FRI     = "countries/Friesland.txt"
 MRV     = "countries/Moravia.txt"
-FRC     = "countries/Francia.txt"
+FRC     = "countries/Francia.txt"#Abe wtf yeeted everything but this 
 AUB        = "countries/Austria-Bohemia.txt"
 UPB        = "countries/Portugal-Brazil.txt"
 TBA        = "countries/Tabarestan.txt"
