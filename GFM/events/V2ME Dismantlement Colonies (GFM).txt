@@ -80,6 +80,22 @@ country_event = {
 					limit = { owner = { THIS = { tag = DAR } } }
 					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
 				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNR } } }
+					owner = { THIS = { set_variable = { which = Canary_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CPV } } }
+					owner = { THIS = { set_variable = { which = Cabo_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRZ } } }
+					owner = { THIS = { set_variable = { which = Tranza_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLI } } }
+					owner = { THIS = { set_variable = { which = Mali_Colony value = 1 } } }
+				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777770620
@@ -1998,6 +2014,7 @@ country_event = {
 				owner = {
 					check_variable = { which = Western_Sahara_Colony value = 0.99 }
 					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Morocoo_Colony_Choice value = 0.99 }
 				}
 			}
 			owner = {
@@ -2009,6 +2026,27 @@ country_event = {
 						}
 					}
 					secede_province = MOR
+					remove_core = UTI
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Western_Sahara_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Tranza_Colony_Choice value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1773
+							province_id = 1774
+						}
+					}
+					secede_province = TRZ
 					remove_core = UTI
 				}
 			}
@@ -2317,6 +2355,96 @@ country_event = {
 				}
 			}
 		}
+#
+#		Canary Islands
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Canary_Islands_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 2136
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Cabo Verde Islands
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Cabo_Islands_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1876
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Tranza
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Tranza_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1775
+						province_id = 1779
+						province_id = 1782
+						province_id = 1781
+						province_id = 1778
+						province_id = 1777
+						province_id = 1776
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Mali
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Mali_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 3431
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
 #		
 #		Universal Effects		
 #
@@ -2422,6 +2550,18 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Morocoo_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Mauretania"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Tranza_Colony_Choice value = 1 }
 			country_event = 777770630
         }
     }
