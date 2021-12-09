@@ -292,8 +292,9 @@ political_decisions = {
             prestige = 20
             war = no
             OR = {
-                nationalism_n_imperialism = 1
-                is_greater_power = yes
+                state_n_government = 1
+		empiricism = 1
+                is_secondary_power = yes
             }
         }
 
@@ -529,13 +530,10 @@ political_decisions = {
 		allow = {
 			war = no
 			prestige = 50
-			nationalism_n_imperialism = 1
-			is_greater_power = yes
-			#has_country_flag = pbc_freedom
-			OR = {
-				government = democracy
-				has_country_flag = democracy_gov
-			}
+               		state_n_government = 1
+			empiricism = 1
+			is_secondary_power = yes
+			has_global_flag = pbc_freedom
 			CHL = {
 				OR = {
 					AND = {
@@ -561,4 +559,5 @@ political_decisions = {
 		}
 	}
 	
+}
 }

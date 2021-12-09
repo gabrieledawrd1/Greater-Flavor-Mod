@@ -1,0 +1,90 @@
+country_event = { 
+	id = 61003
+	title = "GCO_Rejects_PBC"
+	desc = "GCO_Rejects_PBC"
+	is_triggered_only = yes
+	
+	option = { 
+	name = "Can you believe this mierda? How dare the Colombians!"
+	prestige = -15
+	badboy = -2
+	relation = { who = CLM value = -100 }
+	relation = { who = VNZ value = -100 }
+	relation = { who = ECU value = -100 }
+	influence = { who = CLM value = -400 }
+	influence = { who = VNZ value = -400 }
+	influence = { who = ECU value = -400 }
+	set_country_flag = PBC_backs_down
+	
+	}
+	
+	option = { 
+	name = "We will unite the Andes by force!"
+		PBC = { 
+			add_country_flag = andean_civil_war
+		CLM = {
+			all_core = { add_core = GCO }
+			add_country_flag = andean_civil_war
+			war = {
+				target = PBC
+				attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+				defender_goal = { casus_belli = cut_down_to_size_no_infamy }
+				call_ally = yes
+			}
+				create_alliance = ECU
+				create_alliance = VNZ
+			war = { 
+				attacker_goal = { casus_belli = call_allies_cb } 
+				call_ally = yes } 
+			}
+		VNZ = {
+			add_country_flag = andean_civil_war
+			all_core = { add_core = PBC }
+			}
+		ECU = {
+			add_country_flag = andean_civil_war
+			all_core = { add_core = PBC }
+			}
+		badboy = 15 
+		}
+	}
+}
+
+country_event = { 
+	id = 61004
+	title = "North_Andean_submission"
+	desc = "North_andean_submissiondesc"
+	fire_only_once =  yes
+	
+	trigger = {
+		tag = PBC
+	AND = { 
+		CLM = { exist = no }
+		VNZ = { exist = no }
+		ECU = { exist = no }
+		has_country_flag = andean_civil_war
+		}
+	mean_time_to_happen = {
+        months = 1
+			}
+		}
+	
+	option = { 
+	name = "The Andes are secured--for now."
+	prestige = 20
+		relation = { who = BRZ value = 200 }
+		relation = { who = ARG value = -200 }
+		relation = { who = USA value = -50 }
+		relation = { who = FRA value = -50 }
+		relation = { who = ENG value = -50 }
+		relation = { who = URG value = -50 }
+		relation = { who = PRG value = -50 }
+		PBC = {
+		add_country_flag = greater_colombia
+		remove_country_flag = Andean_civil_war
+        add_country_modifer = { name = { nationalist_agitation = 360 } }
+		}
+		BRZ = {
+			create_alliance = ARG }
+			}
+		}
