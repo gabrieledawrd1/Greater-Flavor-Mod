@@ -34,6 +34,9 @@ country_event = {
 						OR = {
 							tag = WSA
 							tag = TRI
+							tag = GMB
+							tag = ERT
+							tag = DJI
 							AND = {
 								tag = DAR
 								OR = {
@@ -96,6 +99,94 @@ country_event = {
 					limit = { owner = { THIS = { tag = MLI } } }
 					owner = { THIS = { set_variable = { which = Mali_Colony value = 1 } } }
 				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SNG } } }
+					owner = { THIS = { set_variable = { which = Senegal_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NIG } } }
+					owner = { THIS = { set_variable = { which = Niger_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CHD } } }
+					owner = { THIS = { set_variable = { which = Chad_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BKF } } }
+					owner = { THIS = { set_variable = { which = Upper_Volta_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNB } } }
+					owner = { THIS = { set_variable = { which = Guinea_Bissau_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNE } } }
+					owner = { THIS = { set_variable = { which = Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SLE } } }
+					owner = { THIS = { set_variable = { which = Sierra_Leone_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = LIB } } }
+					owner = { THIS = { set_variable = { which = Liberia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = IVC } } }
+					owner = { THIS = { set_variable = { which = Ivory_Coast_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GHN } } }
+					owner = { THIS = { set_variable = { which = Ghana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TOG } } }
+					owner = { THIS = { set_variable = { which = Togo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAH } } }
+					owner = { THIS = { set_variable = { which = Dahomey_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ETH } } }
+					owner = { THIS = { set_variable = { which = Ethiopia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SOM } } }
+					owner = { THIS = { set_variable = { which = Somalia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NGR } } }
+					owner = { THIS = { set_variable = { which = Nigeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMR } } }
+					owner = { THIS = { set_variable = { which = Cameroon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EQG } } }
+					owner = { THIS = { set_variable = { which = Equatorial_Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = STP } } }
+					owner = { THIS = { set_variable = { which = Sao_Tome_and_Principe_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CAR } } }
+					owner = { THIS = { set_variable = { which = Central_African_Republic_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GAB } } }
+					owner = { THIS = { set_variable = { which = Gabon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNG } } }
+					owner = { THIS = { set_variable = { which = DR_Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ANG } } }
+					owner = { THIS = { set_variable = { which = Angola_Colony value = 1 } } }
+				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777770620
@@ -155,6 +246,70 @@ country_event = {
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777771504
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = GMB }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = GMB } } }
+					owner = { THIS = { set_variable = { which = The_Gambia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771508
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = ERT }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ERT } } }
+					owner = { THIS = { set_variable = { which = Eritrea_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771510
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = DJI }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = DJI } } }
+					owner = { THIS = { set_variable = { which = Djibouti_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771512
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = CGO }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = CGO } } }
+					owner = { THIS = { set_variable = { which = Congo_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771514
 		}
     }
 }
@@ -2439,12 +2594,858 @@ country_event = {
 				limit = {
 					OR = {
 						province_id = 3431
+						province_id = 2609
+						province_id = 1807
+						province_id = 1803
+						province_id = 1805
+						province_id = 1801
+						province_id = 1802
+						province_id = 1804
+						province_id = 1800
+						province_id = 1799
+						province_id = 1798
+						province_id = 1794
+						province_id = 1797
+						province_id = 1796
+						province_id = 1795
 					}
 				}
 				secede_province = THIS
 				add_core = UTI
 			}
 		}
+#
+#		Senegal
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Senegal_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1783
+						province_id = 2573
+						province_id = 1784
+						province_id = 1787
+						province_id = 1786
+						province_id = 1789
+						province_id = 1790
+						province_id = 1788
+						province_id = 1791
+						province_id = 1793
+						province_id = 1792
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		The Gambia
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = The_Gambia_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1785
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = The_Gambia_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					remove_core = UTI
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1785
+						}
+					}
+					secede_province = SNG
+				}
+			}
+		}
+#
+#		Niger
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Niger_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1814
+						province_id = 1812
+						province_id = 1811
+						province_id = 1816
+						province_id = 1815
+						province_id = 1810
+						province_id = 1808
+						province_id = 1809
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Chad
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Chad_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1826
+						province_id = 1821
+						province_id = 1824
+						province_id = 1825
+						province_id = 1823
+						province_id = 1818
+						province_id = 1822
+						province_id = 1820
+						province_id = 1819
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Upper Volta
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Upper_Volta_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1902
+						province_id = 1903
+						province_id = 1904
+						province_id = 1901
+						province_id = 1905
+						province_id = 1906
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Guinea-Bissau
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Guinea_Bissau_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1878
+						province_id = 1877
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Guinea
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Guinea_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1879
+						province_id = 1880
+						province_id = 1881
+						province_id = 1882
+						province_id = 1883
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Sierra Leone
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Sierra_Leone_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1884
+						province_id = 1885
+						province_id = 1886
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Liberia
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Liberia_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1889
+						province_id = 1890
+						province_id = 1887
+						province_id = 1891
+						province_id = 1888
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Ivory Coast
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Ivory_Coast_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1900
+						province_id = 1896
+						province_id = 1893
+						province_id = 1898
+						province_id = 1899
+						province_id = 1897
+						province_id = 1892
+						province_id = 1894
+						province_id = 1895
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Ghana
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Ghana_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1912
+						province_id = 1913
+						province_id = 1915
+						province_id = 1911
+						province_id = 1915
+						province_id = 1910
+						province_id = 1907
+						province_id = 1908
+						province_id = 1909
+						province_id = 1916
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Togo
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Togo_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1918
+						province_id = 1917
+						province_id = 1914
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Dahomey
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Dahomey_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1922
+						province_id = 1921
+						province_id = 1920
+						province_id = 1919
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Ethiopia
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Ethiopia_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1852
+						province_id = 1856
+						province_id = 1857
+						province_id = 1858
+						province_id = 1854
+						province_id = 1853
+						province_id = 1855
+						province_id = 1863
+						province_id = 1862
+						province_id = 1859
+						province_id = 1865
+						province_id = 1861
+						province_id = 1864
+						province_id = 1866
+						province_id = 1867
+						province_id = 1860
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Eritrea
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Eritrea_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1850
+						province_id = 1848
+						province_id = 1849
+						province_id = 1851
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Eritrea_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					remove_core = UTI
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1850
+							province_id = 1848
+							province_id = 1849
+							province_id = 1851
+						}
+					}
+					secede_province = ETH
+				}
+			}
+		}
+#
+#		Somalia
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Somalia_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1874
+						province_id = 1873
+						province_id = 1872
+						province_id = 1871
+						province_id = 1869
+						province_id = 1870
+						province_id = 1868
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Djibouti Colony
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Djibouti_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1875
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Djibouti_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Ethiopia_Colony_Choice value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1875
+						}
+					}
+					secede_province = ETH
+					remove_core = UTI
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Djibouti_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Somalia_Colony_Choice value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1875
+						}
+					}
+					secede_province = SOM
+					remove_core = UTI
+				}
+			}
+		}
+#
+#		Nigeria
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Nigeria_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1948
+						province_id = 1946
+						province_id = 1947
+						province_id = 1945
+						province_id = 1949
+						province_id = 1952
+						province_id = 1951
+						province_id = 1953
+						province_id = 1938
+						province_id = 1940
+						province_id = 1939
+						province_id = 1941
+						province_id = 1942
+						province_id = 1943
+						province_id = 1944
+						province_id = 1959
+						province_id = 1937
+						province_id = 1961
+						province_id = 1927
+						province_id = 1927
+						province_id = 1924
+						province_id = 1923
+						province_id = 1929
+						province_id = 1939
+						province_id = 1928
+						province_id = 1931
+						province_id = 1932
+						province_id = 1933
+						province_id = 1935
+						province_id = 1936
+						province_id = 1934
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Cameroon
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Cameroon_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1957
+						province_id = 1956
+						province_id = 1960
+						province_id = 1963
+						province_id = 1964
+						province_id = 1959
+						province_id = 1962
+						province_id = 1958
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Equatorial Guinea
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Equatorial_Guinea_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1955
+						province_id = 1973
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Sao Tome and Principe
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Sao_Tome_and_Principe_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1954
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Central African Republic
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Central_African_Republic_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1971
+						province_id = 1968
+						province_id = 1967
+						province_id = 1966
+						province_id = 1965
+						province_id = 1970
+						province_id = 1969
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Gabon
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Gabon_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1976
+						province_id = 1972
+						province_id = 1975
+						province_id = 1974
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Regular Congo
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Congo_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1981
+						province_id = 1980
+						province_id = 1978
+						province_id = 1977
+						province_id = 2624
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = Congo_Colony value = 0.99 }
+					check_variable = { which = Intergrate_Colony value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					remove_core = UTI
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1850
+							province_id = 1848
+							province_id = 1849
+							province_id = 1851
+						}
+					}
+					secede_province = CNG
+				}
+			}
+		}
+#
+#		DR Congo
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = DR_Congo_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1998
+						province_id = 1997
+						province_id = 1996
+						province_id = 1995
+						province_id = 1993
+						province_id = 1992
+						province_id = 1991
+						province_id = 3296
+						province_id = 1987
+						province_id = 1988
+						province_id = 1989
+						province_id = 1986
+						province_id = 1984
+						province_id = 1994
+						province_id = 1985
+						province_id = 1982
+						province_id = 1983
+						province_id = 1990
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+#
+#		Angola
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Angola_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1998
+						province_id = 1997
+						province_id = 1996
+						province_id = 1995
+						province_id = 1993
+						province_id = 1992
+						province_id = 1991
+						province_id = 1999
+						province_id = 3296
+						province_id = 1987
+						province_id = 1988
+						province_id = 1989
+						province_id = 1986
+						province_id = 1984
+						province_id = 1994
+						province_id = 1985
+						province_id = 1982
+						province_id = 1983
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		
 #		
 #		Universal Effects		
 #
@@ -2973,3 +3974,477 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 777771508
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771509
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771510
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771511
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771512
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Ethiopia_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Somalia"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Somalia_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771513
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+country_event = {
+    id = 777771514
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Greater Congo."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
+
+country_event = {
+    id = 777771515
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Greater Congo."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Intergrate_Colony value = 1 }
+			country_event = 777770630
+        }
+    }
+}
