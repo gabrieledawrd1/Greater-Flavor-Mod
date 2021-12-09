@@ -181,7 +181,7 @@ country_event = {
 		NOT = { has_global_flag = waiting_for_victor_update }
 	}
 	
-	mean_time_to_happen = { days = 7 }
+	mean_time_to_happen = { days = 0 }
 	
 	option = {
 		name = "Cool beans."
