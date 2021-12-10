@@ -1,4 +1,40 @@
 political_decisions = {
+    HAI_setup_trolled = {
+        picture = starting_options
+        potential = {
+            tag = HAI
+            always = no
+        }
+        allow = {
+            tag = HAI
+        }
+        effect = {
+            set_global_flag = HAI_setup_complete
+            HAI = {
+                any_owned = {
+                    limit = { is_core = HAI }
+                    add_province_modifier = { name = baby_boom duration = 1825 }
+                }
+                any_owned = {
+                    limit = { is_core = DOM }
+                    add_province_modifier = { name = colonial_exploitation duration = 3650 }
+                }
+                any_owned = { add_province_modifier = { name = baby_boom duration = 365 } }
+                add_country_modifier = {
+                    name = american_blockade
+                    duration = -1
+                }
+                add_country_modifier = {
+                    name = hai_rev_vets
+                    duration = 2190
+                }
+                add_country_modifier = {
+                    name = code_rural
+                    duration = -1
+                }
+            }
+        }
+    }
     #### Haiti 2.0 ####
     collect_HAI_debt = {
         picture = golden_haiti
@@ -6,8 +42,8 @@ political_decisions = {
             primary_culture = french
             is_greater_power = yes
             capital = 425
+            war = no
             NOT = {
-                war = no
                 OR = {
                     has_country_flag = haitian_victory
                     has_country_modifier = HAI_debts
@@ -21,7 +57,7 @@ political_decisions = {
         }
         effect = {
             HAI = {
-                country_event = 45107
+                country_event = 45106
             }
         }
     }

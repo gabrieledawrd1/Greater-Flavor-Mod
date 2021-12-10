@@ -3,8 +3,8 @@ leader = {
     picture = jean_boyer
     date = 1818.1.1
     type = land
-    personality = unit_personality
     background = school_of_firepower
+    personality = implacable
     prestige = 0.5
 }
 
