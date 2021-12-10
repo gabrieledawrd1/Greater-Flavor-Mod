@@ -7,8 +7,8 @@ engineer = {
     unit_type = special
     #Core Abilities
     priority = 15
-    max_strength = 3
-    default_organisation = 30
+    max_strength = 1
+    default_organisation = 10
     maximum_speed = 5.00
     weighted_value = 3.0
     floating_flag = no
@@ -17,15 +17,15 @@ engineer = {
     select_sound = army_selected
 
     #Building Costs
-    build_time = 120
+    build_time = 40
     build_cost = {
-        small_arms = 10
-        canned_food = 10
-        explosives = 10
-        regular_clothes = 10
+        small_arms = 3.5
+        canned_food = 3.5
+        explosives = 3.5
+        regular_clothes = 3.5
     }
 
-    supply_consumption = 1.0
+    supply_consumption = 0.35
     supply_cost = {
         small_arms = 0.012 #0.01
         ammunition = 0.1 # 0

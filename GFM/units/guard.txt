@@ -10,22 +10,22 @@ guard = {
 
     #Core Abilities
     priority = 18
-    max_strength = 3
-    default_organisation = 30
+    max_strength = 1
+    default_organisation = 10
     maximum_speed = 4.00
     weighted_value = 9.0
 
 
     #Building Costs
-    build_time = 90
+    build_time = 30
     build_cost = {
-        small_arms = 10
-        canned_food = 10
-        liquor = 10
-        luxury_clothes = 5
+        small_arms = 3.5
+        canned_food = 3.5
+        liquor = 3.5
+        luxury_clothes = 1.25
     }
 
-    supply_consumption = 1.0
+    supply_consumption = 0.35
     supply_cost = {
         small_arms = 0.02 #0.015
         canned_food = 0.07 # 0.08

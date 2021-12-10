@@ -14,21 +14,21 @@ dragoon = {
 
     #Core Abilities
     priority = 5
-    max_strength = 3
-    default_organisation = 30
+    max_strength = 1
+    default_organisation = 10
     maximum_speed = 5.00
     weighted_value = 6.0
 
 
     #Building Costs
-    build_time = 150
+    build_time = 50
     build_cost = {
-        small_arms = 10
-        canned_food = 10
-        wine = 10
+        small_arms = 3.5
+        canned_food = 3.5
+        wine = 3.5
     }
 
-    supply_consumption = 1.0
+    supply_consumption = 0.35
     supply_cost = {
         small_arms = 0.012 #0.008
         ammunition = 0.075 # 0
