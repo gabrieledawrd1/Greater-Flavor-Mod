@@ -623,61 +623,31 @@
 	aristocrats = {
 		culture = turkmen
 		religion = sunni
-		size = 100
+		size = 50
 	}
 
 	clergymen = {
-		culture = turkmen
-		religion = sunni
-		size = 200
-	}
-
-	artisans = {
-		culture = turkmen
-		religion = sunni
-		size = 200
-	}
-
-	soldiers = {
 		culture = turkmen
 		religion = sunni
 		size = 250
 	}
 
-	farmers = {
+	artisans = {
 		culture = turkmen
 		religion = sunni
-		size = 11000
-	}
-	
-	aristocrats = {
-		culture = persian
-		religion = shiite
-		size = 50
-	}
-
-	clergymen = {
-		culture = persian
-		religion = shiite
-		size = 50
-	}
-
-	artisans = {
-		culture = persian
-		religion = shiite
-		size = 400
+		size = 3200
 	}
 
 	soldiers = {
-		culture = persian
-		religion = shiite
+		culture = turkmen
+		religion = sunni
 		size = 75
 	}
 
 	farmers = {
-		culture = persian
-		religion = shiite
-		size = 7425
+		culture = turkmen
+		religion = sunni
+		size = 3425
 	}
 }
 #Sarakhs (?/? POPS)

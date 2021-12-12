@@ -515,7 +515,7 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 95
+            factor = 100
         }
     }
 
@@ -524,7 +524,7 @@ country_event = {
         prestige = 10
         FRA = { country_event = 45107 }
         ai_chance = {
-            factor = 5
+            factor = 0
         }
     }
 }

@@ -11907,6 +11907,7 @@ take_capital = {
     good_relation_militancy_factor = 1
 
     can_use = {
+        THIS = { ai = no }
         THIS = {
             NOT = {
                 has_country_flag = in_great_war
@@ -13181,14 +13182,12 @@ place_in_the_sun_late_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13267,14 +13266,12 @@ acquire_state_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13382,14 +13379,11 @@ acquire_state_midgame_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
-            }
+               has_country_modifier = neutrality_modifier
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13487,14 +13481,12 @@ acquire_state_late_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+               has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13731,14 +13723,12 @@ take_capital_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13850,14 +13840,12 @@ take_capital_midgame_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13968,14 +13956,12 @@ take_capital_late_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
