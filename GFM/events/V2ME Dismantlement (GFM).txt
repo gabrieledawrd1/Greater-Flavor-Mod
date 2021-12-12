@@ -5774,7 +5774,8 @@ country_event = {
 					country_event = 777770610
 					set_country_flag = mail_delivery_opened
 					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
-				}			}
+				}
+			}
 		}
 		any_country = {
 			limit = {
@@ -19379,4 +19380,2473 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 777771301
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Arab Union (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+}
 
+country_event = {
+    id = 777771401
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join the Arab Union"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777771302
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Maghreb (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+}
+
+country_event = {
+    id = 777771402
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join the Maghreb"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777771303
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Romania (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Bulgaria-Romania (Overwrite new states)"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Two value = 1 }
+            country_event = 777770430
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Three value = 1 }
+            country_event = 777770430
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Interfrate_Union_Four value = 1 }
+			country_event = 777770430
+		}
+	}
+}
+
+country_event = {
+    id = 777771403
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join Romania"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Two value = 1 }
+            country_event = 777770431
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Three value = 1 }
+            country_event = 777770431
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
+		FROM = {
+			set_variable = { which = Interfrate_Union_Four value = 1 }
+			country_event = 777770431
+		}
+	}
+}
+
+country_event = {
+    id = 777771304
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Czechoslovakia (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Two value = 1 }
+            country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771404
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join Czechoslovakia"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania"
+        FROM = {
+            set_variable = { which = Intergrate_Union_Two value = 1 }
+            country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771305
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Czechoslovakia (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+}
+
+country_event = {
+    id = 777771405
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join Czechoslovakia"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777771306
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The United Baltic Provinces (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_One value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Intermarium (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_Two value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771406
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall join The United Baltic Provinces"
+		FROM = {
+			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Intermarium"
+        FROM = {
+           set_variable = { which = Intergrate_Union_Two value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771307
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Intermarium (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771407
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Intermarium"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771308
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Bulgaria-Romania (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Interfrate_Union_Two value = 1 }
+			country_event = 777770430
+		}
+	}
+}
+
+country_event = {
+    id = 777771408
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
+		FROM = {
+			set_variable = { which = Interfrate_Union_Two value = 1 }
+			country_event = 777770431
+		}
+	}
+}
+
+country_event = {
+    id = 777771309
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771409
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Hungary-Romania"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771311
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Pacifica (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Western United States (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Intergrate_Union_Two value = 1 }
+			country_event = 777770430
+		}
+	}
+}
+
+country_event = {
+    id = 777771411
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Pacifica"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Western United States"
+		FROM = {
+			set_variable = { which = Intergrate_Union_Two value = 1 }
+			country_event = 777770431
+		}
+	}
+}
+
+country_event = {
+    id = 777771312
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Pacifica (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771412
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Pacifica"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771313
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771413
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771314
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The North German Confederation (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771414
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The North German Confederation"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771315
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The South German Confederation (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771415
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The South German Confederation"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771316
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Italy (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771416
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Italy"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771317
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Transcaucasia (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771417
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Transcaucasia"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771318
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The United States of Central America (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771418
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The United States of Central America"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771319
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Reorganised China (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771419
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join Reorganised China"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771320
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Western United States (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771420
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Western United States"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771321
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Volkstaat (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771421
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Volkstaat"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
+
+country_event = {
+    id = 777771322
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Freedom_OurFreedom value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770430
+        }
+    }
+}
+
+country_event = {
+    id = 777771422
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall join The Balkan Federation"
+        FROM = {
+           set_variable = { which = Intergrate_Union_One value = 1 }
+           country_event = 777770431
+        }
+    }
+}
