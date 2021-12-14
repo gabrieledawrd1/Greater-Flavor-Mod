@@ -22623,7 +22623,7 @@ country_event = {
     }
 }
 
-##### Custom Formables Bounce Events 1100-1199, Puppet Custom Formables Bounce Events 1200-1299, Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 ####
+##### Custom Formables Bounce Events 1100-1199, Puppet Custom Formables Bounce Events 1200-1299 #####
 
 country_event = {
     id = 777771100
@@ -22661,6 +22661,821 @@ country_event = {
 		}
     }
 }
+
+country_event = {
+    id = 777771101
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771301
+		}
+    }
+}
+
+country_event = {
+    id = 777771201
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771401
+		}
+    }
+}
+
+country_event = {
+    id = 777771102
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771302
+		}
+    }
+}
+
+country_event = {
+    id = 777771202
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771402
+		}
+    }
+}
+
+country_event = {
+    id = 777771103
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771303
+		}
+    }
+}
+
+country_event = {
+    id = 777771203
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771403
+		}
+    }
+}
+country_event = {
+    id = 777771104
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771304
+		}
+    }
+}
+
+country_event = {
+    id = 777771204
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771404
+		}
+    }
+}
+
+country_event = {
+    id = 777771105
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771305
+		}
+    }
+}
+
+country_event = {
+    id = 777771205
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771405
+		}
+    }
+}
+
+country_event = {
+    id = 777771106
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771306
+		}
+    }
+}
+
+country_event = {
+    id = 777771206
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771406
+		}
+    }
+}
+
+country_event = {
+    id = 777771107
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771307
+		}
+    }
+}
+
+country_event = {
+    id = 777771207
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771407
+		}
+    }
+}
+
+country_event = {
+    id = 777771108
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771308
+		}
+    }
+}
+
+country_event = {
+    id = 777771208
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771408
+		}
+    }
+}
+
+country_event = {
+    id = 777771109
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771309
+		}
+    }
+}
+
+country_event = {
+    id = 777771209
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771409
+		}
+    }
+}
+
+country_event = {
+    id = 777771110
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771310
+		}
+    }
+}
+
+country_event = {
+    id = 777771210
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771410
+		}
+    }
+}
+
+country_event = {
+    id = 777771111
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771311
+		}
+    }
+}
+
+country_event = {
+    id = 777771211
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771411
+		}
+    }
+}
+
+country_event = {
+    id = 777771112
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771312
+		}
+    }
+}
+
+country_event = {
+    id = 777771212
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771412
+		}
+    }
+}
+
+country_event = {
+    id = 777771113
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771313
+		}
+    }
+}
+
+country_event = {
+    id = 777771213
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771413
+		}
+    }
+}
+
+country_event = {
+    id = 777771114
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771314
+		}
+    }
+}
+
+country_event = {
+    id = 777771214
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771414
+		}
+    }
+}
+
+country_event = {
+    id = 777771115
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771315
+		}
+    }
+}
+
+country_event = {
+    id = 777771215
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771415
+		}
+    }
+}
+
+country_event = {
+    id = 777771116
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771316
+		}
+    }
+}
+
+country_event = {
+    id = 777771216
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771416
+		}
+    }
+}
+
+country_event = {
+    id = 777771117
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771317
+		}
+    }
+}
+
+country_event = {
+    id = 777771217
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771417
+		}
+    }
+}
+
+country_event = {
+    id = 777771118
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771318
+		}
+    }
+}
+
+country_event = {
+    id = 777771218
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771418
+		}
+    }
+}
+
+country_event = {
+    id = 777771119
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771319
+		}
+    }
+}
+
+country_event = {
+    id = 777771219
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771419
+		}
+    }
+}
+
+country_event = {
+    id = 777771120
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771320
+		}
+    }
+}
+
+country_event = {
+    id = 777771220
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771420
+		}
+    }
+}
+
+country_event = {
+    id = 777771121
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771321
+		}
+    }
+}
+
+country_event = {
+    id = 777771221
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771421
+		}
+    }
+}
+
+country_event = {
+    id = 777771118
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777771318
+		}
+    }
+}
+
+country_event = {
+    id = 777771222
+    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		set_variable = { which = Non_Rewritable_State value = 0 }
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			country_event = 777771422
+		}
+    }
+}
+
+##### Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 #####
 
 country_event = {
     id = 777771300
