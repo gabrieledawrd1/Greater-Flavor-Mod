@@ -5590,17 +5590,19 @@ country_event = {
 				has_country_flag = mail_delivery_opened
 				NOT = { check_variable = { which = Outcome_Required value = 0.99 } }
 			}
-			THIS = { clr_country_flag = mail_delivery_ready_for_pickup }
+			THIS = { clr_country_flag = mail_delivery_ready_for_pickup set_country_flag = clear_secondaries }
 			clr_country_flag = mail_delivery_opened
-			set_country_flag = clear_secondaries
 		}
-		any_country = {
-			limit = {
-				THIS = { has_country_flag = clear_secondaries }
-				check_variable = { which = Secondary_Claim value = 0.99 }
+		random_owned = {
+			limit = { owner = { has_country_flag = clear_secondaries } }
+			owner = {
+				any_country = {
+					limit = {
+						check_variable = { which = Secondary_Claim value = 0.99 }
+					}
+					set_variable = { which = Secondary_Claim value = 0 }
+				}
 			}
-			THIS = { clr_country_flag = clear_secondaries }
-			set_variable = { which = Secondary_Claim value = 0 }
 		}
 		clr_country_flag = too_many_deliveries
 #
@@ -21591,15 +21593,17 @@ country_event = {
 				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
 			}
 			create_vassal = FROM
+			set_global_flag = stop_right_there_criminal_scum
 		}
 		random_country = {
 			limit = {
+				NOT = { has_global_flag = stop_right_there_criminal_scum }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
-				NOT = { overlord = { check_variable = { which = Secondary_Claim value = 0.99 } } }
 			}
 			create_vassal = FROM
 		}
+		clr_global_flag = stop_right_there_criminal_scum
 		random_country = {
 			limit = {
 				tag = FROM
