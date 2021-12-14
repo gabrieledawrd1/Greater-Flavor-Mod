@@ -5590,8 +5590,22 @@ country_event = {
 				has_country_flag = mail_delivery_opened
 				NOT = { check_variable = { which = Outcome_Required value = 0.99 } }
 			}
-			THIS = { clr_country_flag = mail_delivery_ready_for_pickup set_country_flag = clear_secondaries }
+			THIS = { clr_country_flag = mail_delivery_ready_for_pickup set_country_flag = clear_secondaries set_country_flag = clear_modifiers }
 			clr_country_flag = mail_delivery_opened
+		}
+		random_owned = {
+			limit = { owner = { has_country_flag = clear_modifiers } }
+			owner = {
+				any_country = {
+					clr_country_flag = common_government_bonus
+					clr_country_flag = conflicting_government_penalty
+					clr_country_flag = infamous_penalty
+					clr_country_flag = we_control_core_penalty
+					clr_country_flag = recent_state_bonus
+					clr_country_flag = holdout_slavery_bonus
+					clr_country_flag = truce_with_this_penalty
+				}
+			}
 		}
 		random_owned = {
 			limit = { owner = { has_country_flag = clear_secondaries } }
@@ -8550,7 +8564,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -8610,7 +8624,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8634,7 +8648,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8657,7 +8671,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 1
-			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
 			modifier = { factor = 15 badboy = 23 }
 			modifier = { factor = 1 badboy = 17 }
@@ -8727,7 +8741,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -8787,7 +8801,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8811,7 +8825,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8834,7 +8848,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 1
-			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
 			modifier = { factor = 15 badboy = 23 }
 			modifier = { factor = 1 badboy = 17 }
@@ -8888,7 +8902,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -8948,7 +8962,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8973,7 +8987,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 3
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -8997,7 +9011,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 1
-			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
 			modifier = { factor = 0 war_with = FROM }
 			modifier = { factor = 15 badboy = 23 }
@@ -9053,7 +9067,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -9113,7 +9127,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -9137,7 +9151,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 3
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -9213,7 +9227,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -9272,7 +9286,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -9296,7 +9310,7 @@ country_event = {
 		create_alliance = FROM
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -9319,7 +9333,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 1
-			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
 			modifier = { factor = 15 badboy = 23 }
 			modifier = { factor = 1 badboy = 17 }
@@ -9362,7 +9376,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -12581,7 +12595,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -12703,7 +12717,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -12819,7 +12833,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -12941,7 +12955,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -13057,7 +13071,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -13259,7 +13273,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -13288,7 +13302,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -13489,7 +13503,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -13518,7 +13532,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -13719,7 +13733,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -13748,7 +13762,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -13949,7 +13963,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -13978,7 +13992,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -14100,7 +14114,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 4
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -14208,7 +14222,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -14330,7 +14344,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -14446,7 +14460,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -14655,7 +14669,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -14684,7 +14698,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -14897,7 +14911,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -14926,7 +14940,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -15135,7 +15149,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -15164,7 +15178,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -15373,7 +15387,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -15402,7 +15416,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -15524,7 +15538,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 5
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -15640,7 +15654,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -15762,7 +15776,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -15880,7 +15894,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -16002,7 +16016,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 3
-			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
 			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -16267,7 +16281,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -16297,7 +16311,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -16499,7 +16513,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
@@ -16529,7 +16543,7 @@ country_event = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
 			}
-			THIS = { set_country_flag = commom_government_bonus }
+			THIS = { set_country_flag = common_government_bonus }
 		}
 		any_country = {
 			limit = { 
@@ -16731,7 +16745,7 @@ country_event = {
 		}
         ai_chance = {
             factor = 3
-			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
