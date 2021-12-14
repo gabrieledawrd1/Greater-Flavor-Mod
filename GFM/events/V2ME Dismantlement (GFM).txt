@@ -22329,11 +22329,295 @@ country_event = {
 						tag = YAK
 						tag = BRY
 						tag = KAM
+						tag = GUK
 					}
 				}
 			}
-			FSA = { set_variable = { which = Rewritable_State value = 1 } }
-			FSA = { inherit = FROM }
+			FER = { set_variable = { which = Rewritable_State value = 1 } }
+			FER = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = ORA
+						tag = TRN
+						tag = ZOU
+						tag = NAL
+					}
+				}
+			}
+			VLK = { set_variable = { which = Rewritable_State value = 1 } }
+			VLK = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = CAL
+						tag = SON
+						tag = UOR
+						tag = UNM
+						tag = UNB
+						tag = BJC
+						tag = DES
+						AND = { tag = HAW check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						tag = LSK
+					}
+				}
+			}
+			WUS = { set_variable = { which = Rewritable_State value = 1 } }
+			WUS = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = TAI
+						tag = SZC
+						tag = HUI
+						tag = HNN
+						tag = GNG
+						tag = GMJ
+						tag = FJN
+						tag = TIB
+						tag = MGL
+						tag = GXI
+						tag = SXI
+						tag = YNN
+						tag = XBI
+						tag = XIN
+						tag = MCK
+						tag = SSS
+						tag = TPJ
+						tag = IMG
+						tag = GUI
+						tag = LEG
+						tag = NIA
+						tag = HQJ
+					}
+				}
+			}
+			RCH = { set_variable = { which = Rewritable_State value = 1 } }
+			RCH = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = NIC
+						tag = NCC
+						tag = PNM
+						tag = HON
+						tag = GUA
+						tag = ELS
+						tag = COS
+						tag = TRS
+						tag = BLZ
+						tag = YUC
+						tag = TBS
+						tag = ZAC
+						tag = OAX
+						tag = LOS
+						tag = CHP
+						tag = MSK
+					}
+				}
+			}
+			UCA = { set_variable = { which = Rewritable_State value = 1 } }
+			UCA = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = CIR
+						tag = DAG
+						tag = GEO
+						tag = ARM
+						tag = AZB
+						tag = SVA			
+						tag = MIG
+						tag = OSS
+						tag = AVR
+						tag = CHY
+					}
+				}
+			}
+			TCA = { set_variable = { which = Rewritable_State value = 1 } }
+			TCA = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = SMR
+						tag = GEN
+						tag = ITS
+						tag = LOM
+						tag = LUC
+						tag = MOD			
+						tag = PAP
+						tag = SAR
+						tag = SIC
+						tag = TRE
+						tag = TUS
+						tag = VEN
+						tag = NAP
+						tag = AOS
+						tag = MLT
+						tag = KNI
+						tag = CRS
+						tag = SRD
+						tag = SVY
+						tag = DLM
+					}
+				}
+			}
+			ITA = { set_variable = { which = Rewritable_State value = 1 } }
+			ITA = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = WUR
+						tag = BAD
+						tag = SGM
+						tag = ALS
+						tag = BAV
+					}
+				}
+			}
+			SGF = { set_variable = { which = Rewritable_State value = 1 } }
+			SGF = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = AHH
+						tag = BRA
+						tag = BRE
+						tag = COB
+						tag = FRA
+						tag = HAM
+						tag = HAN
+						tag = HES
+						tag = HEK
+						tag = HOL
+						tag = LIP
+						tag = LUB
+						tag = LUX
+						tag = MEC
+						tag = MEI
+						tag = NAS
+						tag = OLD
+						tag = SCH
+						tag = LIM
+						tag = FRK
+						tag = MAG
+						tag = POM
+					}
+				}
+			}
+			NGF = { set_variable = { which = Rewritable_State value = 1 } }
+			NGF = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = SPU
+						tag = VOP
+						tag = PEU
+						tag = PRR
+						tag = BOL
+					}
+				}
+			}
+			PBC = { set_variable = { which = Rewritable_State value = 1 } }
+			PBC = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						AND = { tag = HAW check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						tag = TGA
+						tag = AOT
+						tag = SMO
+						tag = TMT
+					}
+				}
+			}
+			PAC = { set_variable = { which = Rewritable_State value = 1 } }
+			PAC = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						AND = { tag = ROM check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						tag = HUN
+					}
+				}
+			}
+			HUR = { set_variable = { which = Rewritable_State value = 1 } }
+			HUR = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						AND = { tag = ROM check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						tag = BUL
+					}
+				}
+			}
+			BGR = { set_variable = { which = Rewritable_State value = 1 } }
+			BGR = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						AND = { tag = LIT check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						tag = UKR
+						tag = CRI
+						tag = POL
+						tag = RUT
+					}
+				}
+			}
+			PLR = { set_variable = { which = Rewritable_State value = 1 } }
+			PLR = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						AND = { tag = LIT check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						tag = EST
+						tag = LAT
+					}
+				}
+			}
+			UBD = { set_variable = { which = Rewritable_State value = 1 } }
+			UBD = { inherit = FROM }
+		}
+		random_country = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = MRV
+						tag = BOH
+						tag = SLV
+					}
+				}
+			}
+			CZH = { set_variable = { which = Rewritable_State value = 1 } }
+			CZH = { inherit = FROM }
 		}
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
@@ -22769,33 +23053,26 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall join Romania (Overwrite new states)"
-		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
-			country_event = 777770430	
-		}
-    }
-    option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania (Overwrite new states)"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Intergrate_Union_One value = 1 }
             country_event = 777770430
         }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
         FROM = {
-            set_variable = { which = Intergrate_Union_Three value = 1 }
+            set_variable = { which = Intergrate_Union_Two value = 1 }
             country_event = 777770430
         }
     }
-	option = {
-		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
-		FROM = {
-			set_variable = { which = Interfrate_Union_Four value = 1 }
-			country_event = 777770430
-		}
-	}
+#	option = {
+#		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+#		FROM = {
+#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			country_event = 777770430
+#		}
+#	}
 }
 
 country_event = {
@@ -22843,33 +23120,26 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall join Romania"
-		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
-			country_event = 777770431
-		}
-    }
-    option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Intergrate_Union_One value = 1 }
             country_event = 777770431
         }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-            set_variable = { which = Intergrate_Union_Three value = 1 }
+            set_variable = { which = Intergrate_Union_Two value = 1 }
             country_event = 777770431
         }
     }
-	option = {
-		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
-		FROM = {
-			set_variable = { which = Interfrate_Union_Four value = 1 }
-			country_event = 777770431
-		}
-	}
+#	option = {
+#		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
+#		FROM = {
+#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			country_event = 777770431
+#		}
+#	}
 }
 
 country_event = {
@@ -23410,13 +23680,13 @@ country_event = {
            country_event = 777770430
         }
     }
-	option = {
-		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
-		FROM = {
-			set_variable = { which = Interfrate_Union_Two value = 1 }
-			country_event = 777770430
-		}
-	}
+#	option = {
+#		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+#		FROM = {
+#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			country_event = 777770430
+#		}
+#	}
 }
 
 country_event = {
@@ -23470,13 +23740,13 @@ country_event = {
            country_event = 777770431
         }
     }
-	option = {
-		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
-		FROM = {
-			set_variable = { which = Interfrate_Union_Two value = 1 }
-			country_event = 777770431
-		}
-	}
+#	option = {
+#		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
+#		FROM = {
+#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			country_event = 777770431
+#		}
+#	}
 }
 
 country_event = {
@@ -23533,7 +23803,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Intergrate_Union_Two value = 1 }
            country_event = 777770430
         }
     }
@@ -23586,7 +23856,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Intergrate_Union_Two value = 1 }
            country_event = 777770431
         }
     }
