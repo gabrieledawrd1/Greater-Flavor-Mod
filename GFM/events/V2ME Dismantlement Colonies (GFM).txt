@@ -1504,7 +1504,10 @@ country_event = {
 			}
 		}
 		badboy = 0.1
-		FROM = { set_variable = { which = Annex_Colony value = 1 } }
+		FROM = {
+			set_variable = { which = Give_Away_Colony value = 0 }
+			set_variable = { which = Annex_Colony value = 1 }
+		}
 		set_variable = { which = Secondary_Claim value = 1 }
 		any_country = {
 			limit = {
@@ -1512,7 +1515,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Eighth_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1520,7 +1523,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Seventh_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1528,7 +1531,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Sixth_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1536,7 +1539,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fifth_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1544,7 +1547,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Fourth_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1552,7 +1555,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Third_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		any_country = {
 			limit = {
@@ -1560,7 +1563,7 @@ country_event = {
 				tag = FROM
 			}
 			set_variable = { which = Second_Victor_Complete value = 1 }
-			country_event = 777770750
+			country_event = 777770630
 		}
 		ai_chance = { factor = 1 }
     }
@@ -4145,7 +4148,7 @@ country_event = {
 		random_country = {
 			limit = {
 				check_variable = { which = Secondary_Claim value = 0.99 }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
 			inherit = UTI
 			set_global_flag = stop_right_there_criminal_scum
@@ -4154,7 +4157,7 @@ country_event = {
 			limit = {
 				NOT = { has_global_flag = stop_right_there_criminal_scum }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
 			}
 			inherit = UTI
 		}
