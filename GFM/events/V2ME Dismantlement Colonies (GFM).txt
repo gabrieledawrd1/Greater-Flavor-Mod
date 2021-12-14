@@ -4162,6 +4162,7 @@ country_event = {
 			inherit = UTI
 		}
 		clr_global_flag = stop_right_there_criminal_scum
+		UTI = { all_core = { remove_core = UTI } }
 		
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }
