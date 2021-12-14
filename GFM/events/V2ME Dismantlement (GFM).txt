@@ -7184,7 +7184,6 @@ country_event = {
 						province_id = 1953
 						province_id = 1938
 						province_id = 1940
-						province_id = 1939
 						province_id = 1941
 						province_id = 1942
 						province_id = 1943
@@ -7192,11 +7191,9 @@ country_event = {
 						province_id = 1937
 						province_id = 1961
 						province_id = 1927
-						province_id = 1927
 						province_id = 1924
 						province_id = 1923
 						province_id = 1929
-						province_id = 1939
 						province_id = 1928
 						province_id = 1931
 						province_id = 1932
@@ -7208,6 +7205,7 @@ country_event = {
 						province_id = 1939
 						province_id = 1926
 						province_id = 1925
+						province_id = 1930
 					}
 				}
 				NGR  = {
@@ -7584,6 +7582,7 @@ country_event = {
 						province_id = 2005
 						province_id = 2003
 						province_id = 2004
+						province_id = 2000
 					}
 				}
 				ANG  = {
@@ -7614,6 +7613,738 @@ country_event = {
 				}
 			}
 		}
+#       UGANDA
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+					    province_id = 2023
+					    province_id = 2022
+					    province_id = 2020
+					    province_id = 2021
+						province_id = 2019
+					}
+				}
+				BUG = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			BUG = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					BUG = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				BUG = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       KENYA
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2029
+						province_id = 2033
+						province_id = 2032
+						province_id = 2030
+						province_id = 2027
+						province_id = 2024
+						province_id = 2025
+						province_id = 2031
+						province_id = 2028
+						province_id = 2026
+					}
+				}
+				KNY = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			KNY = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					KNY = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				KNY = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       TANGANYIKA
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2037
+						province_id = 2048
+						province_id = 2036
+						province_id = 2038
+						province_id = 2039
+						province_id = 2041
+						province_id = 2040
+						province_id = 2042
+						province_id = 2046
+						province_id = 2043
+						province_id = 2045
+						province_id = 2047
+						province_id = 2044
+					}
+				}
+				TNZ = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			TNZ = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					TNZ = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				TNZ = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       RWANDA
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2034
+					}
+				}
+				RWA = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			RWA = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					RWA = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				RWA = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       BURUNDI
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2035
+					}
+				}
+				BRD = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			BRD = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					BRD = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				BRD = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       ZAMBIA
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2014
+						province_id = 2013
+						province_id = 2015
+						province_id = 2012
+						province_id = 790
+						province_id = 2016
+						province_id = 2017
+						province_id = 2018
+					}
+				}
+				ZAM = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			ZAM = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					ZAM = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				ZAM = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       MALAWI
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2067
+						province_id = 2066
+					}
+				}
+				MLW = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			MLW = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					MLW = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				MLW = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       MOZAMBIQUE
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2049
+						province_id = 2050
+						province_id = 2051
+						province_id = 2057
+						province_id = 2052
+						province_id = 2058
+						province_id = 2053
+						province_id = 2055
+						province_id = 2056
+						province_id = 2054
+						province_id = 2065
+						province_id = 2059
+						province_id = 2064
+						province_id = 2061
+						province_id = 2060
+						province_id = 2063
+						province_id = 2581
+					}
+				}
+				MOZ = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			MOZ = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					MOZ = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				MOZ = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       MADAGASCAR
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2120
+					    province_id = 2121
+					    province_id = 3541
+					    province_id = 2119
+					    province_id = 2122
+					    province_id = 2115
+					    province_id = 2118
+					    province_id = 2116
+					    province_id = 2117
+					}
+				}
+				MAD = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			MAD = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					MAD = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				MAD = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       COMOROS
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2123
+						province_id = 2124
+					}
+				}
+				CMS = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			CMS = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					CMS = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				CMS = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       NAMIBIA
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2086
+						province_id = 2084
+						province_id = 2085
+						province_id = 2078
+						province_id = 2079
+						province_id = 2083
+						province_id = 2082
+						province_id = 2080
+						province_id = 2081
+					}
+				}
+				NMB = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			NMB = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					NMB = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				NMB = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       BOTSWANA
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2076
+						province_id = 2077
+						province_id = 2074
+						province_id = 2574
+						province_id = 2075
+					}
+				}
+				TSW = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			TSW = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					TSW = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				TSW = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       RHODESIA
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2071
+						province_id = 2072
+						province_id = 2635
+						province_id = 2070
+						province_id = 2073
+						province_id = 2069
+						province_id = 2068
+					}
+				}
+				RHO = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			RHO = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					RHO = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				RHO = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       LESOTHO
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2104
+					}
+				}
+				BSH = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			BSH = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					BSH = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				BSH = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       SWAZILAND
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2114
+					}
+				}
+				SUA = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			SUA = {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					SUA = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				SUA = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}
+#       SEYCHELLES
+        any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2127
+					}
+				}
+				SEY = {
+					NOT = { has_country_flag = check_complete }
+					NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+					NOT = { check_variable = { which = Colony_Event_Sent value = 0.99 } }
+					NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+					NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				}
+			}
+			SEY= {
+				set_variable = { which = Outcome_Required value = 1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+					SEY = { check_variable = { which = Outcome_Required value = 0.99 } }
+				}
+			}
+			owner = {
+				SEY = {
+					set_country_flag = check_complete
+					country_event = 777770610 
+					set_country_flag = mail_delivery_opened
+					CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+				}
+			}
+		}             
 		
 		#cleans up after the conference is over
 		random_owned = {
