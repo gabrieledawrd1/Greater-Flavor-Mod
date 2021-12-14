@@ -5838,6 +5838,559 @@ country_event = {
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
+#		ROMANIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = ROM
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771203
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		CZECHOSLOVAKIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = MRV
+					tag = BOH
+					tag = SLV
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771205
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		LITHUANIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = LIT
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771206
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		INTERMARIUM PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = UKR
+					tag = CRI
+					tag = POL
+					tag = RUT
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771207
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		BULGARIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = BUL
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771208
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		HUNGARY PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = HUN
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771209
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		HAWAII PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = HAW
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771211
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		PACIFICA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = TGA
+					tag = AOT
+					tag = SMO
+					tag = TMT
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771212
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		PERU BOLIVIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = SPU
+					tag = VOP
+					tag = PEU
+					tag = PRR
+					tag = BOL
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771213
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		NORTH GERMAN PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = AHH
+					tag = BRA
+					tag = BRE
+					tag = COB
+					tag = FRA
+					tag = HAM
+					tag = HAN
+					tag = HES
+					tag = HEK
+					tag = HOL
+					tag = LIP
+					tag = LUB
+					tag = LUX
+					tag = MEC
+					tag = MEI
+					tag = NAS
+					tag = OLD
+					tag = SCH
+					tag = LIM
+					tag = FRK
+					tag = MAG
+					tag = POM
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771214
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		SOUTH GERMAN PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = WUR
+					tag = BAD
+					tag = SGM
+					tag = ALS
+					tag = BAV
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771215
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		ITALY PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = SMR
+					tag = GEN
+					tag = ITS
+					tag = LOM
+					tag = LUC
+					tag = MOD			
+					tag = PAP
+					tag = SAR
+					tag = SIC
+					tag = TRE
+					tag = TUS
+					tag = VEN
+					tag = NAP
+					tag = AOS
+					tag = MLT
+					tag = KNI
+					tag = CRS
+					tag = SRD
+					tag = SVY
+					tag = DLM
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771216
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		TRANSCAUCASIA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = CIR
+					tag = DAG
+					tag = GEO
+					tag = ARM
+					tag = AZB
+					tag = SVA			
+					tag = MIG
+					tag = OSS
+					tag = AVR
+					tag = CHY
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771217
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		CENTRAL AMERICA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = NIC
+					tag = NCC
+					tag = PNM
+					tag = HON
+					tag = GUA
+					tag = ELS
+					tag = COS
+					tag = TRS
+					tag = BLZ
+					tag = YUC
+					tag = TBS
+					tag = ZAC
+					tag = OAX
+					tag = LOS
+					tag = CHP
+					tag = MSK
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771218
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		REORG CHINA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = TAI
+					tag = SZC
+					tag = HUI
+					tag = HNN
+					tag = GNG
+					tag = GMJ
+					tag = FJN
+					tag = TIB
+					tag = MGL
+					tag = GXI
+					tag = SXI
+					tag = YNN
+					tag = XBI
+					tag = XIN
+					tag = MCK
+					tag = SSS
+					tag = TPJ
+					tag = IMG
+					tag = GUI
+					tag = LEG
+					tag = NIA
+					tag = HQJ
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771219
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		WEST USA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = CAL
+					tag = SON
+					tag = UOR
+					tag = UNM
+					tag = UNB
+					tag = BJC
+					tag = DES
+					tag = LSK
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771220
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+#		WEST USA PUPPET EVENT
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
+				}
+				OR = {
+					tag = ORA
+					tag = TRN
+					tag = ZOU
+					tag = NAL
+				}
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+			}
+			country_event = 777771221
+			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
 #
 #		Base Event for non-existing cores	
 #
@@ -6029,7 +6582,7 @@ country_event = {
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
-#		ROMANIAN CORE EVENT
+#		ROMANIA CORE EVENT
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
@@ -6186,7 +6739,7 @@ country_event = {
 					tag = HUN
 				}
 			}
-			country_event = 777771108
+			country_event = 777771109
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -6318,7 +6871,7 @@ country_event = {
 					tag = POM
 				}
 			}
-			country_event = 777771115
+			country_event = 777771114
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
@@ -6348,7 +6901,7 @@ country_event = {
 					tag = BAV
 				}
 			}
-			country_event = 777771114
+			country_event = 777771115
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
