@@ -1504,10 +1504,8 @@ country_event = {
 			}
 		}
 		badboy = 0.1
-		create_alliance = FROM
 		FROM = { set_variable = { which = Annex_Colony value = 1 } }
-		FROM = { set_variable = { which = Secondary_Claim_Colony value = 1 } }
-		set_variable = { which = Secondary_Colonial value = 1 }
+		set_variable = { which = Secondary_Claim value = 1 }
 		any_country = {
 			limit = {
 				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
@@ -4146,21 +4144,21 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { NOT = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  } }
+				check_variable = { which = Secondary_Claim value = 0.99 }
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
 			}
 			inherit = UTI
+			set_global_flag = stop_right_there_criminal_scum
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Secondary_Claim_Colony value = 0.99 }  }
-				check_variable = { which = Secondary_Colonial value = 0.99 }
+				NOT = { has_global_flag = stop_right_there_criminal_scum }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				FROM = { check_variable = { which = Annex_Colony value = 0.99 }  }
 			}
-			set_variable = { which = Secondary_Colonial value = 0 }
 			inherit = UTI
 		}
+		clr_global_flag = stop_right_there_criminal_scum
 		
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }

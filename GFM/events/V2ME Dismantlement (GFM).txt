@@ -5592,6 +5592,15 @@ country_event = {
 			}
 			THIS = { clr_country_flag = mail_delivery_ready_for_pickup }
 			clr_country_flag = mail_delivery_opened
+			set_country_flag = clear_secondaries
+		}
+		any_country = {
+			limit = {
+				THIS = { has_country_flag = clear_secondaries }
+				check_variable = { which = Secondary_Claim value = 0.99 }
+			}
+			THIS = { clr_country_flag = clear_secondaries }
+			set_variable = { which = Secondary_Claim value = 0 }
 		}
 		clr_country_flag = too_many_deliveries
 #
@@ -13179,10 +13188,8 @@ country_event = {
 		name = "We suggest our own plans for $FROMCOUNTRY$!"
 		badboy = 0.1
 		FROM = {
-			set_variable = { which = Secondary_Claim_NonExisting value = 1 }
 			set_variable = { which = Freedom_Apathy value = 0 }
 		}
-		set_variable = { which = Secondary_NonExisting value = 1 }
 		create_alliance = FROM
 		any_country = {
 			limit = {
@@ -14825,10 +14832,9 @@ country_event = {
 			}
 		}
 		FROM = {
-			set_variable = { which = Secondary_Claim_Puppet value = 1 }
 			set_variable = { which = Puppet_Apathy value = 0 }
 		}
-		set_variable = { which = Secondary_Puppet value = 1 }
+		set_variable = { which = Secondary_Claim value = 1 }
 		badboy = 0.1
 		any_country = {
 			limit = {
@@ -16182,7 +16188,6 @@ country_event = {
 		FROM = {
 			set_variable = { which = Existing_Apathy value = 0 }
 		}
-		set_variable = { which = Secondary_Existing value = 1 }
 		random_country = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
@@ -21004,7 +21009,6 @@ country_event = {
         name = "We have our own plans for $FROMCOUNTRY$!"
 		FROM = {
 			set_variable = { which = Puppet_Apathy value = 0 }
-			set_variable = { which = Secondary_Claim_Puppet value = 1 }
 		}
 		random_country = {
 			limit = {
@@ -21476,7 +21480,10 @@ country_event = {
 					check_variable = { which = Major_Defeated value = 0.99 }
 					check_variable = { which = Rewritable_State value = 0.99 }
 				}
-				FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+				OR = {
+					FROM = { check_variable = { which = Existing_Chomp value = 0.99 } }
+					FROM = { check_variable = { which = Freedom_OurFreedom value = 0.99 } }
+				}
 			}
 			any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
 			THIS = { set_country_flag = dont_be_weird_about_this }
@@ -21531,12 +21538,6 @@ country_event = {
 				FROM = { civilized = no }
 			}
 		}
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
-			}
-			set_variable = { which = Secondary_Claim value = 0 }
-        }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
@@ -21548,12 +21549,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "whoop whoop not chungus"
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
-			}
-			set_variable = { which = Secondary_Claim value = 0 }
-        }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
@@ -21592,17 +21587,27 @@ country_event = {
         name = "Damn"
 		random_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = Secondary_Claim value = 0.99 }
 				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
 			}
 			create_vassal = FROM
-			
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Puppet_Puppet value = 0.99 } }
+				NOT = { overlord = { check_variable = { which = Secondary_Claim value = 0.99 } } }
+			}
+			create_vassal = FROM
 		}
 		random_country = {
 			limit = {
 				tag = FROM
 				overlord = { government = proletarian_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				OR = {
+					overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+					overlord = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				}
 			}
 			government = proletarian_dictatorship
 			
@@ -21611,7 +21616,10 @@ country_event = {
 			limit = {
 				tag = FROM
 				overlord = { government = fascist_dictatorship }
-				overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				OR = {
+					overlord = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+					overlord = { check_variable = { which = Secondary_Claim value = 0.99 } }
+				}
 			}
 			government = fascist_dictatorship
 			
@@ -21724,12 +21732,6 @@ country_event = {
 				FROM = { civilized = no }
 			}
 		}
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
-			}
-			set_variable = { which = Secondary_Claim value = 0 }
-        }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
@@ -21783,18 +21785,21 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } NOT = { check_variable = { which = Secondary_Claim_Puppet value = 0.99 } } }
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
 			}
 			create_vassal = FROM
+			set_global_flag = stop_right_there_criminal_scum
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = Secondary_NonExisting value = 0.99 }
-				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } check_variable = { which = Secondary_Claim_Puppet value = 0.99 } }
+				NOT = { has_global_flag = stop_right_there_criminal_scum }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Freedom_OurVassal value = 0.99 } }
 			}
 			create_vassal = FROM
 		}
+		clr_global_flag = stop_right_there_criminal_scum
 		random_owned = {
 			limit = { owner = { FROM = { civilized = no } } }
 			owner = {
@@ -21808,19 +21813,6 @@ country_event = {
 				FROM = { civilized = no }
 			}
 		}
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_Puppet value = 0.99 }
-			}
-			set_variable = { which = Secondary_Puppet value = 0 }
-        }
-        random_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim_Puppet value = 0.99 }
-				tag = THIS
-			}
-			set_variable = { which = Secondary_Claim_Puppet value = 0 }
-        }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
@@ -21887,31 +21879,21 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				check_variable = { which = Secondary_NonExisting value = 0.99 }
-				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } }
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } }
 			}
 			inherit = FROM
+			set_global_flag = stop_right_there_criminal_scum
 		}
 		random_country = {
 			limit = {
+				NOT = { has_global_flag = stop_right_there_criminal_scum }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } NOT = { check_variable = { which = Secondary_Claim_NonExisting value = 0.99 } } }
+				FROM = { OR = { check_variable = { which = Puppet_Chomp value = 0.99 } check_variable = { which = Freedom_OurFreedom value = 0.99 } } }
 			}
 			inherit = FROM
 		}
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_NonExisting value = 0.99 }
-			}
-			set_variable = { which = Secondary_NonExisting value = 0 }
-        }
-        random_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim_NonExisting value = 0.99 }
-				tag = THIS
-			}
-			set_variable = { which = Secondary_Claim_NonExisting value = 0 }
-        }
+		clr_global_flag = stop_right_there_criminal_scum
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
@@ -21996,12 +21978,6 @@ country_event = {
 			FSA = { set_variable = { which = Rewritable_State value = 1 } }
 			FSA = { inherit = FROM }
 		}
-        any_country = {
-			limit = {
-				check_variable = { which = Secondary_Claim value = 0.99 }
-			}
-			set_variable = { which = Secondary_Claim value = 0 }
-        }
 		FROM = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
