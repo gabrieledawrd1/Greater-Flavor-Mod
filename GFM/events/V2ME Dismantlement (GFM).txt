@@ -5482,22 +5482,6 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
 		}
-		any_country = {
-			limit = {
-				exists = yes
-				OR = {
-					is_vassal = yes
-					is_substate = yes
-				}
-				overlord = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-				}
-				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-			}
-			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Rewritable_State value = 1 }
-		}
 
 		any_country = {
 			limit = {
@@ -5512,60 +5496,9 @@ country_event = {
 				exists = no
 				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				NOT = {
-					OR = {
-						tag = YAK
-						tag = BRY
-						tag = KAM
-					}
-				}
 			}
 			set_variable = { which = Outcome_Required value = 1 }
 			set_variable = { which = Rewritable_State value = 1 }
-		}
-		any_country = {
-			limit = {
-				any_core = {
-					owner = {
-						OR = {
-							check_variable = { which = Major_Defeated value = 0.99 }
-							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-						}
-					}
-				}
-				exists = no
-				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				OR = {
-					tag = YAK
-					tag = BRY
-					tag = KAM
-				}
-			}
-			set_variable = { which = Outcome_Required value = 1 }
-			set_variable = { which = Rewritable_State value = 1 }
-		}
-		any_country = {
-			limit = {
-				any_core = {
-					owner = {
-						OR = {
-							check_variable = { which = Major_Defeated value = 0.99 }
-							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-						}
-					}
-				}
-				OR = {
-					tag = ALD
-					tag = TUN
-					tag = MOR
-				}
-				OR = {
-					exists = no
-					AND = { exists = yes ai = yes }
-				}
-			}
-			set_variable = { which = Outcome_Required value = 1 }
 		}
 	}
 	
