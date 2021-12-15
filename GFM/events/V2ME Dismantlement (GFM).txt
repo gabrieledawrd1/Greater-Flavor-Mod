@@ -5717,33 +5717,11 @@ country_event = {
 			set_variable = { which = Core_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
-#
-#		Base Event for puppets
-#
-		random_country = {
-			limit = {
-				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				exists = yes
-				OR = {
-					is_vassal = yes
-					is_substate = yes
-				}
-				overlord = {
-					check_variable = { which = Major_Defeated value = 0.99 }
-				}
-				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
-				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
-				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
-				check_variable = { which = Outcome_Required value = 0.99 }
-			}
-			country_event = 777770411
-			set_country_flag = mail_delivery_opened
-			set_variable = { which = Puppet_Event_Sent value = 1 }
-			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
-		}
+
+#		puppet union events
+
 #		FAR EASTERN REPUBLIC PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5772,7 +5750,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		ROMANIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5798,7 +5776,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		CZECHOSLOVAKIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5826,7 +5804,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		LITHUANIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5852,7 +5830,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		INTERMARIUM PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5881,7 +5859,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		BULGARIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5907,7 +5885,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		HUNGARY PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5933,7 +5911,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		HAWAII PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5959,7 +5937,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		PACIFICA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -5988,7 +5966,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		PERU BOLIVIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6018,7 +5996,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		NORTH GERMAN PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6065,7 +6043,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		SOUTH GERMAN PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6095,7 +6073,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		ITALY PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6140,7 +6118,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		TRANSCAUCASIA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6175,7 +6153,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		CENTRAL AMERICA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6216,7 +6194,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		REORG CHINA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6263,7 +6241,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		WEST USA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6296,7 +6274,7 @@ country_event = {
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
 #		WEST USA PUPPET EVENT
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
 				exists = yes
@@ -6324,168 +6302,35 @@ country_event = {
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
+		
 #
-#		Base Event for non-existing cores	
+#		Base Event for puppets - MUST COME AFTER PUPPET UNION EVENTS
 #
-		any_country = {
+		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
-				any_core = {
-					owner = {
-						OR = {
-							check_variable = { which = Major_Defeated value = 0.99 }
-							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
-						}
-					}
+				exists = yes
+				OR = {
+					is_vassal = yes
+					is_substate = yes
 				}
-				exists = no
-				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
-				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				overlord = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
 				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
 				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				NOT = { check_variable = { which = Puppet_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
-				NOT = {
-					tag = YAK
-					tag = BRY
-					tag = KAM
-					tag = GUK
-					tag = ORA
-					tag = TRN
-					tag = ZOU
-					tag = NAL
-					tag = CAL
-					tag = SON
-					tag = UOR
-					tag = UNM
-					tag = UNB
-					tag = BJC
-					tag = DES
-					tag = HAW
-					tag = LSK
-					tag = TAI
-					tag = SZC
-					tag = HUI
-					tag = HNN
-					tag = GNG
-					tag = GMJ
-					tag = FJN
-					tag = TIB
-					tag = MGL
-					tag = GXI
-					tag = SXI
-					tag = YNN
-					tag = XBI
-					tag = XIN
-					tag = MCK
-					tag = SSS
-					tag = TPJ
-					tag = IMG
-					tag = GUI
-					tag = LEG
-					tag = NIA
-					tag = HQJ
-					tag = NIC
-					tag = NCC
-					tag = PNM
-					tag = HON
-					tag = GUA
-					tag = ELS
-					tag = COS
-					tag = TRS
-					tag = BLZ
-					tag = YUC
-					tag = TBS
-					tag = ZAC
-					tag = OAX
-					tag = LOS
-					tag = CHP
-					tag = MSK
-					tag = CIR
-					tag = DAG
-					tag = GEO
-					tag = ARM
-					tag = AZB
-					tag = SVA			
-					tag = MIG
-					tag = OSS
-					tag = AVR
-					tag = CHY
-					tag = SMR
-					tag = GEN
-					tag = ITS
-					tag = LOM
-					tag = LUC
-					tag = MOD			
-					tag = PAP
-					tag = SAR
-					tag = SIC
-					tag = TRE
-					tag = TUS
-					tag = VEN
-					tag = NAP
-					tag = AOS
-					tag = MLT
-					tag = KNI
-					tag = CRS
-					tag = SRD
-					tag = SVY
-					tag = DLM
-					tag = WUR
-					tag = BAD
-					tag = SGM
-					tag = ALS
-					tag = BAV
-					tag = AHH
-					tag = BRA
-					tag = BRE
-					tag = COB
-					tag = FRA
-					tag = HAM
-					tag = HAN
-					tag = HES
-					tag = HEK
-					tag = HOL
-					tag = LIP
-					tag = LUB
-					tag = LUX
-					tag = MEC
-					tag = MEI
-					tag = NAS
-					tag = OLD
-					tag = SCH
-					tag = LIM
-					tag = FRK
-					tag = MAG
-					tag = POM
-					tag = SPU
-					tag = VOP
-					tag = PEU
-					tag = PRR
-					tag = BOL
-					tag = TGA
-					tag = AOT
-					tag = SMO
-					tag = TMT
-					tag = HUN
-					tag = ROM
-					tag = BUL
-					tag = UKR
-					tag = CRI
-					tag = POL
-					tag = RUT
-					tag = LIT
-					tag = EST
-					tag = LAT
-					tag = MRV
-					tag = BOH
-					tag = SLV
-					has_country_flag = colonial_zone_exclusion
-				}
 			}
-			country_event = 777770410
+			country_event = 777770411
 			set_country_flag = mail_delivery_opened
+			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
+
+#		non-existing union events
+
 #		FAR EASTERN REPUBLIC CORE EVENT
 		any_country = {
 			limit = {
@@ -7068,6 +6913,171 @@ country_event = {
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
+		
+#
+#		Base Event for non-existing cores - MUST COME AFTER NON-EXISTING UNION EVENTS
+#
+		any_country = {
+			limit = {
+				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
+				any_core = {
+					owner = {
+						OR = {
+							check_variable = { which = Major_Defeated value = 0.99 }
+							overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+						}
+					}
+				}
+				exists = no
+				NOT = { check_variable = { which = Freedom_Event_Sent value = 0.99 } }
+				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
+				NOT = { check_variable = { which = part_of_conference value = 0.99 } }
+				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
+				check_variable = { which = Outcome_Required value = 0.99 }
+				NOT = {
+					tag = YAK
+					tag = BRY
+					tag = KAM
+					tag = GUK
+					tag = ORA
+					tag = TRN
+					tag = ZOU
+					tag = NAL
+					tag = CAL
+					tag = SON
+					tag = UOR
+					tag = UNM
+					tag = UNB
+					tag = BJC
+					tag = DES
+					tag = HAW
+					tag = LSK
+					tag = TAI
+					tag = SZC
+					tag = HUI
+					tag = HNN
+					tag = GNG
+					tag = GMJ
+					tag = FJN
+					tag = TIB
+					tag = MGL
+					tag = GXI
+					tag = SXI
+					tag = YNN
+					tag = XBI
+					tag = XIN
+					tag = MCK
+					tag = SSS
+					tag = TPJ
+					tag = IMG
+					tag = GUI
+					tag = LEG
+					tag = NIA
+					tag = HQJ
+					tag = NIC
+					tag = NCC
+					tag = PNM
+					tag = HON
+					tag = GUA
+					tag = ELS
+					tag = COS
+					tag = TRS
+					tag = BLZ
+					tag = YUC
+					tag = TBS
+					tag = ZAC
+					tag = OAX
+					tag = LOS
+					tag = CHP
+					tag = MSK
+					tag = CIR
+					tag = DAG
+					tag = GEO
+					tag = ARM
+					tag = AZB
+					tag = SVA			
+					tag = MIG
+					tag = OSS
+					tag = AVR
+					tag = CHY
+					tag = SMR
+					tag = GEN
+					tag = ITS
+					tag = LOM
+					tag = LUC
+					tag = MOD			
+					tag = PAP
+					tag = SAR
+					tag = SIC
+					tag = TRE
+					tag = TUS
+					tag = VEN
+					tag = NAP
+					tag = AOS
+					tag = MLT
+					tag = KNI
+					tag = CRS
+					tag = SRD
+					tag = SVY
+					tag = DLM
+					tag = WUR
+					tag = BAD
+					tag = SGM
+					tag = ALS
+					tag = BAV
+					tag = AHH
+					tag = BRA
+					tag = BRE
+					tag = COB
+					tag = FRA
+					tag = HAM
+					tag = HAN
+					tag = HES
+					tag = HEK
+					tag = HOL
+					tag = LIP
+					tag = LUB
+					tag = LUX
+					tag = MEC
+					tag = MEI
+					tag = NAS
+					tag = OLD
+					tag = SCH
+					tag = LIM
+					tag = FRK
+					tag = MAG
+					tag = POM
+					tag = SPU
+					tag = VOP
+					tag = PEU
+					tag = PRR
+					tag = BOL
+					tag = TGA
+					tag = AOT
+					tag = SMO
+					tag = TMT
+					tag = HUN
+					tag = ROM
+					tag = BUL
+					tag = UKR
+					tag = CRI
+					tag = POL
+					tag = RUT
+					tag = LIT
+					tag = EST
+					tag = LAT
+					tag = MRV
+					tag = BOH
+					tag = SLV
+					has_country_flag = colonial_zone_exclusion
+				}
+			}
+			country_event = 777770410
+			set_country_flag = mail_delivery_opened
+			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
+		}
+
+
 #
 #		Colonial Targeting
 #
