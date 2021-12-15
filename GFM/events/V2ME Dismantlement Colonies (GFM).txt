@@ -1165,63 +1165,63 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 			}
 			FROM = { country_event = 777770750 }
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Second_Victor value = 0.99 }
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
@@ -1230,7 +1230,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Third_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
@@ -1241,7 +1241,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Fourth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -1254,7 +1254,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Fifth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -1269,7 +1269,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Sixth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -1286,7 +1286,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Seventh_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -1305,7 +1305,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Colony value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
 				check_variable = { which = Eighth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -2265,7 +2265,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Western_Sahara_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 					check_variable = { which = Morocoo_Colony_Choice value = 0.99 }
 				}
 			}
@@ -2286,7 +2286,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Western_Sahara_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 					check_variable = { which = Tranza_Colony_Choice value = 0.99 }
 				}
 			}
@@ -2338,7 +2338,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Tripolitania_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -2392,7 +2392,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Cyrenaica_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -2503,7 +2503,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Sudan_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -2569,7 +2569,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Darfur_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -2768,7 +2768,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = The_Gambia_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3134,7 +3134,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Eritrea_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3207,7 +3207,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Djibouti_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 					check_variable = { which = Ethiopia_Colony_Choice value = 0.99 }
 				}
 			}
@@ -3227,7 +3227,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Djibouti_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 					check_variable = { which = Somalia_Colony_Choice value = 0.99 }
 				}
 			}
@@ -3447,7 +3447,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Congo_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3652,7 +3652,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Rwanda_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3695,7 +3695,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Burundi_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3745,7 +3745,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Zambia_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3796,7 +3796,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Malawi_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -3936,7 +3936,7 @@ country_event = {
             limit = {
                 owner = {
                     check_variable = { which = Namibia_Colony value = 0.99 }
-                    check_variable = { which = Intergrate_Colony value = 0.99 }
+                    check_variable = { which = Integrate_Colony value = 0.99 }
                 }
             }
             owner = {
@@ -4018,7 +4018,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Rhodesia_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -4067,7 +4067,7 @@ country_event = {
 			limit = {
 				owner = {
 					check_variable = { which = Lesotho_Colony value = 0.99 }
-					check_variable = { which = Intergrate_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
 				}
 			}
 			owner = {
@@ -4231,7 +4231,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Morocoo_Colony_Choice value = 1 }
 			country_event = 777770630
         }
@@ -4242,7 +4242,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Tranza_Colony_Choice value = 1 }
 			country_event = 777770630
         }
@@ -4301,7 +4301,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4359,7 +4359,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4417,7 +4417,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4475,7 +4475,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4533,7 +4533,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4591,7 +4591,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4649,7 +4649,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4707,7 +4707,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4765,7 +4765,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4823,7 +4823,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4881,7 +4881,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -4939,7 +4939,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Ethiopia_Colony_Choice value = 1 }
 			country_event = 777770630
         }
@@ -4950,7 +4950,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Somalia_Colony_Choice value = 1 }
 			country_event = 777770630
         }
@@ -5009,7 +5009,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -5066,7 +5066,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -5124,7 +5124,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -5182,7 +5182,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }
@@ -5240,7 +5240,7 @@ country_event = {
 			limit = {
 				tag = FROM
 			}
-			set_variable = { which = Intergrate_Colony value = 1 }
+			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
         }
     }

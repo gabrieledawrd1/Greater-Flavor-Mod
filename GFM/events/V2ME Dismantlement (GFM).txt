@@ -11908,7 +11908,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
@@ -11916,7 +11916,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
@@ -11924,7 +11924,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
@@ -11932,7 +11932,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
@@ -11940,7 +11940,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -11948,7 +11948,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -11956,7 +11956,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
@@ -11964,7 +11964,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
@@ -11972,7 +11972,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Second_Victor value = 0.99 }
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
@@ -11981,7 +11981,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Third_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
@@ -11992,7 +11992,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Fourth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12005,7 +12005,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Fifth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12020,7 +12020,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Sixth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12037,7 +12037,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Seventh_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12056,7 +12056,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 				check_variable = { which = Eighth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12077,7 +12077,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
@@ -12085,7 +12085,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
@@ -12093,7 +12093,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
@@ -12101,7 +12101,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
@@ -12109,7 +12109,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -12117,7 +12117,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -12125,7 +12125,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
@@ -12133,7 +12133,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
@@ -12141,7 +12141,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Second_Victor value = 0.99 }
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
@@ -12150,7 +12150,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Third_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
@@ -12161,7 +12161,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Fourth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12174,7 +12174,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Fifth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12189,7 +12189,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Sixth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12206,7 +12206,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Seventh_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -12225,7 +12225,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_Two value = 0.99 } }
 				check_variable = { which = Eighth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13102,7 +13102,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
@@ -13110,7 +13110,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
@@ -13118,7 +13118,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
@@ -13126,7 +13126,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
@@ -13134,7 +13134,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -13142,7 +13142,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -13150,7 +13150,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
@@ -13158,7 +13158,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
@@ -13166,7 +13166,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Second_Victor value = 0.99 }
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
@@ -13175,7 +13175,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Third_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
@@ -13186,7 +13186,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Fourth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13199,7 +13199,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Fifth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13214,7 +13214,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Sixth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13231,7 +13231,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Seventh_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13250,7 +13250,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_One value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_One value = 0.99 } }
 				check_variable = { which = Eighth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13271,7 +13271,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } } 
 				has_global_flag = Total_One_Victor
 				ai = yes
 			}
@@ -13279,7 +13279,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Two_Victor
 				ai = yes
 			}
@@ -13287,7 +13287,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Three_Victor
 				ai = yes
 			}
@@ -13295,7 +13295,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Four_Victor	
 				ai = yes
 			}
@@ -13303,7 +13303,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Five_Victor
 				ai = yes
 			}
@@ -13311,7 +13311,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Six_Victor
 				ai = yes
 			}
@@ -13319,7 +13319,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Seven_Victor
 				ai = yes
 			}
@@ -13327,7 +13327,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
 				has_global_flag = Total_Eight_Victor
 				ai = yes
 			}
@@ -13335,7 +13335,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Second_Victor value = 0.99 }
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
@@ -13344,7 +13344,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Third_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
@@ -13355,7 +13355,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Fourth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13368,7 +13368,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Fifth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13383,7 +13383,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Sixth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13400,7 +13400,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Seventh_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -13419,7 +13419,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				FROM = { check_variable = { which = Puppet_Intergrate_Two value = 0.99 } }
+				FROM = { check_variable = { which = Puppet_Integrate_Two value = 0.99 } }
 				check_variable = { which = Eighth_Victor value = 0.99 }
 				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
 				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
@@ -23649,7 +23649,7 @@ country_event = {
 				}
                 exists = yes
                 FROM = { exists = no civilized = yes }
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
             }
             release = FROM
 			FROM = { civilized = yes }
@@ -23659,7 +23659,7 @@ country_event = {
 				check_variable = { which = Major_Defeated value = 0.99 }
                 exists = yes
                 FROM = { exists = no civilized = no }
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
             }
             release = FROM
 			FROM = { civilized = no }
@@ -23670,7 +23670,7 @@ country_event = {
 					check_variable = { which = Major_Defeated value = 0.99 }	
 					check_variable = { which = Rewritable_State value = 0.99 }					
 				}
-				FROM = { check_variable = { which = Intergrate_Union_One value = 0.99 } }
+				FROM = { check_variable = { which = Integrate_Union_One value = 0.99 } }
 			}
             any_owned = { limit = { is_core = FROM } secede_province = THIS add_core = UTI }
         }
@@ -23739,7 +23739,7 @@ country_event = {
 						tag = UNB
 						tag = BJC
 						tag = DES
-						AND = { tag = HAW check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						AND = { tag = HAW check_variable = { which = Integrate_Union_Two value = 0.99 } }
 						tag = LSK
 					}
 				}
@@ -23921,7 +23921,7 @@ country_event = {
 			limit = {
 				FROM = {
 					OR = {
-						AND = { tag = HAW check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						AND = { tag = HAW check_variable = { which = Integrate_Union_One value = 0.99 } }
 						tag = TGA
 						tag = AOT
 						tag = SMO
@@ -23936,7 +23936,7 @@ country_event = {
 			limit = {
 				FROM = {
 					OR = {
-						AND = { tag = ROM check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						AND = { tag = ROM check_variable = { which = Integrate_Union_Two value = 0.99 } }
 						tag = HUN
 					}
 				}
@@ -23948,7 +23948,7 @@ country_event = {
 			limit = {
 				FROM = {
 					OR = {
-						AND = { tag = ROM check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						AND = { tag = ROM check_variable = { which = Integrate_Union_One value = 0.99 } }
 						tag = BUL
 					}
 				}
@@ -23960,7 +23960,7 @@ country_event = {
 			limit = {
 				FROM = {
 					OR = {
-						AND = { tag = LIT check_variable = { which = Intergrate_Union_Two value = 0.99 } }
+						AND = { tag = LIT check_variable = { which = Integrate_Union_Two value = 0.99 } }
 						tag = UKR
 						tag = CRI
 						tag = POL
@@ -23975,7 +23975,7 @@ country_event = {
 			limit = {
 				FROM = {
 					OR = {
-						AND = { tag = LIT check_variable = { which = Intergrate_Union_One value = 0.99 } }
+						AND = { tag = LIT check_variable = { which = Integrate_Union_One value = 0.99 } }
 						tag = EST
 						tag = LAT
 					}
@@ -25030,7 +25030,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join the Far Eastern Republic (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -25155,7 +25155,7 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join the Far Eastern Republic"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
@@ -25336,7 +25336,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Arab Union (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -25461,7 +25461,7 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join the Arab Union"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
@@ -25642,7 +25642,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Maghreb (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -25767,7 +25767,7 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join the Maghreb"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
@@ -25948,7 +25948,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania (Overwrite new states)"
         FROM = {
-            set_variable = { which = Intergrate_Union_One value = 1 }
+            set_variable = { which = Integrate_Union_One value = 1 }
             country_event = 777770430
         }
         ai_chance = {
@@ -25971,7 +25971,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770430
         }
         ai_chance = {
@@ -25994,7 +25994,7 @@ country_event = {
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
 #		FROM = {
-#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			set_variable = { which = Integrate_Union_Four value = 1 }
 #			country_event = 777770430
 #		}
 #	}
@@ -26104,21 +26104,21 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
         FROM = {
-            set_variable = { which = Intergrate_Union_One value = 1 }
+            set_variable = { which = Integrate_Union_One value = 1 }
             country_event = 777770431
         }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770431
         }
     }
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
 #		FROM = {
-#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			set_variable = { which = Integrate_Union_Four value = 1 }
 #			country_event = 777770431
 #		}
 #	}
@@ -26299,7 +26299,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Czechoslovakia (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -26323,7 +26323,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770430
         }
         ai_chance = {
@@ -26449,14 +26449,14 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join Czechoslovakia"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-            set_variable = { which = Intergrate_Union_Two value = 1 }
+            set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770431
         }
     }
@@ -26637,7 +26637,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Czechoslovakia (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -26763,7 +26763,7 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join Czechoslovakia"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
@@ -26944,7 +26944,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The United Baltic Provinces (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_One value = 1 }
+			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
         ai_chance = {
@@ -26967,7 +26967,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_Two value = 1 }
+           set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770430
         }
         ai_chance = {
@@ -27093,14 +27093,14 @@ country_event = {
     option = {
         name = "The lands of $FROMCOUNTRY$ shall join The United Baltic Provinces"
 		FROM = {
-			set_variable = { which = Puppet_Intergrate_One value = 1 }
+			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium"
         FROM = {
-           set_variable = { which = Intergrate_Union_Two value = 1 }
+           set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770431
         }
     }
@@ -27281,7 +27281,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
         ai_chance = {
@@ -27407,7 +27407,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -27588,7 +27588,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
         ai_chance = {
@@ -27611,7 +27611,7 @@ country_event = {
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
 #		FROM = {
-#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			set_variable = { which = Integrate_Union_Four value = 1 }
 #			country_event = 777770430
 #		}
 #	}
@@ -27721,14 +27721,14 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
 #		FROM = {
-#			set_variable = { which = Interfrate_Union_Four value = 1 }
+#			set_variable = { which = Integrate_Union_Four value = 1 }
 #			country_event = 777770431
 #		}
 #	}
@@ -27909,7 +27909,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_Two value = 1 }
+           set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770430
         }
         ai_chance = {
@@ -28035,7 +28035,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-           set_variable = { which = Intergrate_Union_Two value = 1 }
+           set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770431
         }
     }
@@ -28216,7 +28216,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
         ai_chance = {
@@ -28239,7 +28239,7 @@ country_event = {
 	option = {
 		name = "$FROMCOUNTRY$ shall join The Western United States (Overwrite new states)"
 		FROM = {
-			set_variable = { which = Intergrate_Union_Two value = 1 }
+			set_variable = { which = Integrate_Union_Two value = 1 }
 			country_event = 777770430
 		}
         ai_chance = {
@@ -28365,14 +28365,14 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
 	option = {
 		name = "$FROMCOUNTRY$ shall join The Western United States"
 		FROM = {
-			set_variable = { which = Intergrate_Union_Two value = 1 }
+			set_variable = { which = Integrate_Union_Two value = 1 }
 			country_event = 777770431
 		}
 	}
@@ -28489,7 +28489,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -28599,7 +28599,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -28716,7 +28716,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -28826,7 +28826,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -28943,7 +28943,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The North German Confederation (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -29053,7 +29053,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The North German Confederation"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29170,7 +29170,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The South German Confederation (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -29280,7 +29280,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The South German Confederation"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29397,7 +29397,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Italy (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -29507,7 +29507,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Italy"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29624,7 +29624,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Transcaucasia (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -29734,7 +29734,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Transcaucasia"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29851,7 +29851,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The United States of Central America (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -29961,7 +29961,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The United States of Central America"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30078,7 +30078,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Reorganised China (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -30188,7 +30188,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Reorganised China"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30305,7 +30305,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Western United States (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -30415,7 +30415,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Western United States"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30532,7 +30532,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Volkstaat (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -30642,7 +30642,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Volkstaat"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30759,7 +30759,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
     }
@@ -30869,7 +30869,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Balkan Federation"
         FROM = {
-           set_variable = { which = Intergrate_Union_One value = 1 }
+           set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770431
         }
     }
