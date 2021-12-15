@@ -26047,21 +26047,21 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
         FROM = {
-            set_variable = { which = Integrate_Union_One value = 1 }
+            set_variable = { which = Puppet_Integrate_One value = 1 }
             country_event = 777770431
         }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-            set_variable = { which = Integrate_Union_Two value = 1 }
+            set_variable = { which = Puppet_Integrate_Two value = 1 }
             country_event = 777770431
         }
     }
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
 #		FROM = {
-#			set_variable = { which = Integrate_Union_Four value = 1 }
+#			set_variable = { which = Puppet_Integrate_Four value = 1 }
 #			country_event = 777770431
 #		}
 #	}
@@ -26399,7 +26399,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-            set_variable = { which = Integrate_Union_Two value = 1 }
+            set_variable = { which = Puppet_Integrate_Two value = 1 }
             country_event = 777770431
         }
     }
@@ -27043,7 +27043,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium"
         FROM = {
-           set_variable = { which = Integrate_Union_Two value = 1 }
+           set_variable = { which = Puppet_Integrate_Two value = 1 }
            country_event = 777770431
         }
     }
@@ -27350,7 +27350,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Intermarium"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -27664,14 +27664,14 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Bulgaria-Romania"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
 #	option = {
 #		name = "$FROMCOUNTRY$ shall join The Balkan Federation"
 #		FROM = {
-#			set_variable = { which = Integrate_Union_Four value = 1 }
+#			set_variable = { which = Puppet_Integrate_Four value = 1 }
 #			country_event = 777770431
 #		}
 #	}
@@ -27978,7 +27978,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Hungary-Romania"
         FROM = {
-           set_variable = { which = Integrate_Union_Two value = 1 }
+           set_variable = { which = Puppet_Integrate_Two value = 1 }
            country_event = 777770431
         }
     }
@@ -28308,14 +28308,14 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
 	option = {
 		name = "$FROMCOUNTRY$ shall join The Western United States"
 		FROM = {
-			set_variable = { which = Integrate_Union_Two value = 1 }
+			set_variable = { which = Puppet_Integrate_Two value = 1 }
 			country_event = 777770431
 		}
 	}
@@ -28542,7 +28542,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -28769,7 +28769,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -28996,7 +28996,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The North German Confederation"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29223,7 +29223,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The South German Confederation"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29450,7 +29450,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Italy"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29677,7 +29677,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Transcaucasia"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -29904,7 +29904,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The United States of Central America"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30131,7 +30131,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join Reorganised China"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30358,7 +30358,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Western United States"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30585,7 +30585,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Volkstaat"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
@@ -30812,7 +30812,7 @@ country_event = {
     option = {
         name = "$FROMCOUNTRY$ shall join The Balkan Federation"
         FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
+           set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
     }
