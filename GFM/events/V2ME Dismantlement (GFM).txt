@@ -5575,6 +5575,64 @@ country_event = {
 				NOT = { check_variable = { which = Major_Defeated value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
+#				Dumb Tags
+					AND = {
+						OR = {
+							tag = MIT
+							tag = ZAP
+							tag = CRB
+							tag = GCF
+							tag = USS
+							tag = CLT
+							tag = UPB
+							tag = AUB
+							tag = PHC
+							tag = PLR
+							tag = RSF
+							tag = SOV
+							tag = IDC
+							tag = MEE
+							tag = DNN
+							tag = BGR
+							tag = HUR
+							tag = PAC
+							tag = QAS
+							tag = PLG
+							tag = CHR
+							tag = PRR
+							tag = BNF
+							tag = HSA
+							tag = VNR
+							tag = USA
+							tag = US2
+							tag = CGC
+							tag = VNG
+							tag = VLP
+							tag = VOP
+							tag = VNS
+							tag = VLK
+							tag = ARC
+							tag = QNG
+							tag = PBC
+							tag = GCO
+							tag = FSA
+							tag = SPC
+							tag = DNB
+							tag = ARU
+							tag = TCA
+							tag = KMT
+							tag = PLC
+							tag = SUS
+							tag = BFR
+							tag = CHI
+							tag = WUS
+							tag = NCC
+							tag = KUK
+							tag = JAN
+						}
+						exists = no
+					}
+#				Union Tags
 					tag = YAK
 					tag = BRY
 					tag = KAM
@@ -6935,6 +6993,64 @@ country_event = {
 				NOT = { check_variable = { which = Dismantlement_Chair value = 0.99 } }
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
+#				Dumb Tags
+					AND = {
+						OR = {
+							tag = MIT
+							tag = ZAP
+							tag = CRB
+							tag = GCF
+							tag = USS
+							tag = CLT
+							tag = UPB
+							tag = AUB
+							tag = PHC
+							tag = PLR
+							tag = RSF
+							tag = SOV
+							tag = IDC
+							tag = MEE
+							tag = DNN
+							tag = BGR
+							tag = HUR
+							tag = PAC
+							tag = QAS
+							tag = PLG
+							tag = CHR
+							tag = PRR
+							tag = BNF
+							tag = HSA
+							tag = VNR
+							tag = USA
+							tag = US2
+							tag = CGC
+							tag = VNG
+							tag = VLP
+							tag = VOP
+							tag = VNS
+							tag = VLK
+							tag = ARC
+							tag = QNG
+							tag = PBC
+							tag = GCO
+							tag = FSA
+							tag = SPC
+							tag = DNB
+							tag = ARU
+							tag = TCA
+							tag = KMT
+							tag = PLC
+							tag = SUS
+							tag = BFR
+							tag = CHI
+							tag = WUS
+							tag = NCC
+							tag = KUK
+							tag = JAN
+						}
+						exists = no
+					}
+#				Union Tags
 					tag = YAK
 					tag = BRY
 					tag = KAM
@@ -24990,6 +25106,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 FER = { exists = yes } }
         }
     }
 }
@@ -28391,6 +28508,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -28399,6 +28532,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -28406,6 +28555,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -28414,6 +28570,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -28421,6 +28586,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -28428,12 +28601,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Pacifica (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -28618,6 +28815,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -28626,6 +28839,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -28633,6 +28862,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -28641,6 +28877,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -28648,6 +28893,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -28655,12 +28908,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The Peru-Bolivian Confederation (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 PBC = { exists = yes } }
         }
     }
 }
@@ -28845,6 +29122,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -28853,6 +29146,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -28860,6 +29169,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -28868,6 +29184,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -28875,6 +29200,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -28882,12 +29215,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The North German Confederation (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 NGF = { exists = yes } }
         }
     }
 }
@@ -29072,6 +29429,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -29080,6 +29453,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -29087,6 +29476,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -29095,6 +29491,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -29102,6 +29507,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -29109,12 +29522,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The South German Confederation (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 SGF = { exists = yes } }
         }
     }
 }
@@ -29299,6 +29736,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -29307,6 +29760,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -29314,6 +29783,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -29322,6 +29798,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -29329,6 +29814,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -29336,12 +29829,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Italy (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 ITA = { exists = yes } }
         }
     }
 }
@@ -29526,6 +30043,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -29534,6 +30067,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -29541,6 +30090,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -29549,6 +30105,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -29556,6 +30121,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -29563,12 +30136,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Transcaucasia (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+		}
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 TCA = { exists = yes } }
         }
     }
 }
@@ -29753,6 +30350,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -29761,6 +30374,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -29768,6 +30397,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -29776,6 +30412,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -29783,6 +30428,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -29790,12 +30443,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The United States of Central America (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 UCA = { exists = yes } }
         }
     }
 }
@@ -29980,6 +30657,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -29988,6 +30681,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -29995,6 +30704,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -30003,6 +30719,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -30010,6 +30735,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -30017,12 +30750,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join Reorganised China (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 30
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 RCH = { exists = yes } }
         }
     }
 }
@@ -30207,6 +30964,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -30215,6 +30988,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -30222,6 +31011,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -30230,6 +31026,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -30237,6 +31042,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -30244,12 +31057,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The Western United States (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 WUS = { exists = yes } }
         }
     }
 }
@@ -30434,6 +31271,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall exist"
@@ -30442,6 +31295,22 @@ country_event = {
 			country_event = 777770430
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = commom_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Other Victors can say on $FROMCOUNTRY$"
@@ -30449,6 +31318,13 @@ country_event = {
 			set_variable = { which = Freedom_Apathy value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = commom_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall stay as it is"
@@ -30457,6 +31333,15 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be ours"
@@ -30464,6 +31349,14 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall be our vassal"
@@ -30471,12 +31364,36 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall join The Volkstaat (Overwrite new states)"
         FROM = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
+        }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = commom_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 VLK = { exists = yes } }
         }
     }
 }
@@ -30699,13 +31616,13 @@ country_event = {
 			country_event = 777770430	
 		}
     }
-    option = {
-        name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
-        FROM = {
-           set_variable = { which = Integrate_Union_One value = 1 }
-           country_event = 777770430
-        }
-    }
+#    option = {
+#        name = "$FROMCOUNTRY$ shall join The Balkan Federation (Overwrite new states)"
+#        FROM = {
+#           set_variable = { which = Integrate_Union_One value = 1 }
+#           country_event = 777770430
+#        }
+#    }
 }
 
 country_event = {
