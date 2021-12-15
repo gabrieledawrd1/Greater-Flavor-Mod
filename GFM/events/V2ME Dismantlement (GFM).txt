@@ -26260,7 +26260,7 @@ country_event = {
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
 			modifier = { factor = 0 HUR = { exists = yes } }
-			modifier = { factor = 50 AND = { CZH = { exists = yes } HUR = { exists = no } }
+			modifier = { factor = 50 AND = { CZH = { exists = yes } HUR = { exists = no } } }
         }
     }
     option = {
