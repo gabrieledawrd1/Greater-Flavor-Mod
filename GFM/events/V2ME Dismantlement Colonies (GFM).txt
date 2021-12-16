@@ -4707,6 +4707,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -4716,6 +4723,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -4727,6 +4741,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -4736,6 +4758,16 @@ country_event = {
 			}
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
     option = {
@@ -4748,6 +4780,16 @@ country_event = {
 			set_variable = { which = Morocoo_Colony_Choice value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Mauretania"
@@ -4758,6 +4800,16 @@ country_event = {
 			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Tranza_Colony_Choice value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -4834,6 +4886,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -4843,6 +4902,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -4854,6 +4920,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -4864,6 +4938,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Morocco"
@@ -4873,6 +4957,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -4949,6 +5043,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -4958,6 +5059,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -4969,6 +5077,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -4979,6 +5095,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Libya"
@@ -4988,6 +5114,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5064,6 +5200,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5073,6 +5216,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5084,6 +5234,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5094,6 +5252,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Libya"
@@ -5103,6 +5271,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5179,6 +5357,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5188,6 +5373,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5199,6 +5391,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5209,6 +5409,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Intergrate $FROMCOUNTRY$ into Egypt"
@@ -5218,6 +5428,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5294,6 +5514,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5303,6 +5530,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5314,6 +5548,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5324,6 +5566,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Egypt"
@@ -5333,6 +5585,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5409,6 +5671,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5418,6 +5687,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5429,6 +5705,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5439,6 +5723,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Dafur Placeholder"
@@ -5448,6 +5742,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5524,6 +5828,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5533,6 +5844,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5544,6 +5862,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5554,6 +5880,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Darfur Placeholder"
@@ -5563,6 +5899,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5639,6 +5985,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5648,6 +6001,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5659,6 +6019,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5669,6 +6037,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Senegal"
@@ -5678,6 +6056,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5754,6 +6142,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5763,6 +6158,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5774,6 +6176,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5784,6 +6194,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Senegal"
@@ -5793,6 +6213,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5869,6 +6299,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5878,6 +6315,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -5889,6 +6333,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -5899,6 +6351,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Ethiopia."
@@ -5908,6 +6370,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -5984,6 +6456,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -5993,6 +6472,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6004,6 +6490,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6014,6 +6508,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Ethiopia."
@@ -6023,6 +6527,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6099,6 +6613,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6108,6 +6629,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6119,6 +6647,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6128,6 +6664,16 @@ country_event = {
 			}
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
     option = {
@@ -6140,6 +6686,16 @@ country_event = {
 			set_variable = { which = Ethiopia_Colony_Choice value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Somalia"
@@ -6150,6 +6706,16 @@ country_event = {
 			set_variable = { which = Integrate_Colony value = 1 }
 			set_variable = { which = Somalia_Colony_Choice value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6226,6 +6792,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6235,6 +6808,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6246,6 +6826,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6256,6 +6844,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Morocco"
@@ -6265,6 +6863,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6340,6 +6948,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6349,6 +6964,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6360,6 +6982,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6370,6 +7000,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Greater Congo."
@@ -6379,6 +7019,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6455,6 +7105,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6464,6 +7121,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6475,6 +7139,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6485,6 +7157,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into Greater Congo."
@@ -6494,6 +7176,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6570,6 +7262,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6579,6 +7278,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6590,6 +7296,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6600,6 +7314,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into The Federation of Rhodesia and Nyasaland."
@@ -6609,6 +7333,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
@@ -6685,6 +7419,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "We shall offer $FROMCOUNTRY$ to other victors."
@@ -6694,6 +7435,13 @@ country_event = {
 			}
 			set_variable = { which = Give_Away_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
@@ -6705,6 +7453,14 @@ country_event = {
 			set_variable = { which = As_Is_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "They shall exist as an independent state."
@@ -6715,6 +7471,16 @@ country_event = {
 			set_variable = { which = Independent_Colony value = 1 }
 			country_event = 777770630
         }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "Integrate $FROMCOUNTRY$ into South Africa."
@@ -6724,6 +7490,16 @@ country_event = {
 			}
 			set_variable = { which = Integrate_Colony value = 1 }
 			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
         }
     }
 }
