@@ -5757,6 +5757,7 @@ country_event = {
 					tag = HUN
 					tag = ROM
 					tag = BUL
+					tag = BYE
 					tag = UKR
 					tag = CRI
 					tag = POL
@@ -5901,6 +5902,7 @@ country_event = {
 					tag = CRI
 					tag = POL
 					tag = RUT
+					tag = BYE
 				}
 				overlord = {
 					check_variable = { which = Major_Defeated value = 0.99 }
@@ -6521,6 +6523,7 @@ country_event = {
 					tag = CRI
 					tag = POL
 					tag = RUT
+					tag = BYE
 				}
 			}
 			country_event = 777771107
@@ -7175,6 +7178,7 @@ country_event = {
 					tag = HUN
 					tag = ROM
 					tag = BUL
+					tag = BYE
 					tag = UKR
 					tag = CRI
 					tag = POL
@@ -24020,6 +24024,7 @@ country_event = {
 				FROM = {
 					OR = {
 						AND = { tag = LIT check_variable = { which = Integrate_Union_Two value = 0.99 } }
+						tag = BYE
 						tag = UKR
 						tag = CRI
 						tag = POL
