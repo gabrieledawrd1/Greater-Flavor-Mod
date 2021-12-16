@@ -1632,7 +1632,13 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "But I wanted $FROMCOUNTRY$!"
@@ -1711,6 +1717,15 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
     }
 }
 
@@ -1850,7 +1865,13 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ bad"
@@ -1929,7 +1950,15 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 0 }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
     }
 }
 
@@ -2065,7 +2094,14 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 1 }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
     option = {
         name = "But I wanted $FROMCOUNTRY$, WE have suffered enough!"
@@ -2144,6 +2180,13 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
 }
 
@@ -2279,7 +2322,15 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 1 }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
     }
     option = {
         name = "We could do without $FROMCOUNTRY$!"
@@ -2358,6 +2409,14 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
     }
 }
 
@@ -2493,7 +2552,15 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
-		ai_chance = { factor = 1 }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
     }
     option = {
         name = "This is not peak $FROMCOUNTRY$!"
@@ -2572,6 +2639,13 @@ country_event = {
 			set_variable = { which = Second_Victor_Complete value = 1 }
 			country_event = 777770630
 		}
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
     }
 }
 
