@@ -130,6 +130,16 @@ country_event = {
 		any_country = {
 			limit = {
 				NOT = { has_country_flag = potential_member_check }
+				NOT = {
+					has_country_flag = dismantlement_buffer_1
+					has_country_flag = dismantlement_buffer_2
+					has_country_flag = dismantlement_buffer_3
+					has_country_flag = dismantlement_buffer_4
+					has_country_flag = dismantlement_buffer_5
+					has_country_flag = dismantlement_buffer_6
+					has_country_flag = dismantlement_buffer_7
+					has_country_flag = dismantlement_buffer_8
+				}
 				check_variable = { which = potential_conference_member value = 0.99 }
 			}
 			set_variable = { which = potential_conference_member value = 0 }
@@ -313,6 +323,16 @@ country_event = {
 		any_country = {
 			limit = {
 				NOT = { has_country_flag = potential_member_check_overflow }
+				NOT = {
+					has_country_flag = dismantlement_buffer_1
+					has_country_flag = dismantlement_buffer_2
+					has_country_flag = dismantlement_buffer_3
+					has_country_flag = dismantlement_buffer_4
+					has_country_flag = dismantlement_buffer_5
+					has_country_flag = dismantlement_buffer_6
+					has_country_flag = dismantlement_buffer_7
+					has_country_flag = dismantlement_buffer_8
+				}
 				check_variable = { which = potential_conference_member_overflow value = 0.99 }
 			}
 			set_variable = { which = potential_conference_member_overflow value = 0 }
@@ -321,7 +341,10 @@ country_event = {
 			clr_country_flag = potential_member_check
 			clr_country_flag = potential_member_check_overflow
 		}
-		CLN = { country_event = { id = 4778742 days = 1 } }
+		random_owned = {
+			limit = { owner = { has_global_flag = victor_tracking_active } }
+			owner = { CLN = { country_event = { id = 4778742 days = 1 } } }
+		}
 	}
 }
 	
@@ -407,7 +430,13 @@ country_event = {
 			}
 			clr_country_flag = target_of_dismantlement
 		}
-		CLN = { country_event = 4778742 }
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = victor_tracking_active } } }
+			owner = {
+				set_global_flag = victor_tracking_active 
+				CLN = { country_event = 4778742 }
+			}
+		}
 	}
 }
 
