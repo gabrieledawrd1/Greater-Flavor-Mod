@@ -5336,10 +5336,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-#		
-#	##### Colony Events - Fixed Borders System ##### 
-#		
-
 #
 #	##### Cleanup Chain Trigger #####
 #
@@ -5355,6 +5351,218 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		#return cores to victors
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Dismantlement_Chair value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Second_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Second_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Third_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Third_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Fourth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Fourth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Fifth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Fifth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Sixth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Sixth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Seventh_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Seventh_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Eighth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Eighth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		
+		
 		any_country = {
 			limit = {
 				AND = {
