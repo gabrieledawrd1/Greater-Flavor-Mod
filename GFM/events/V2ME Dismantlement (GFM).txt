@@ -31,6 +31,9 @@ country_event = {
 	
 	immediate = {
 		#sets defeated value for newly defeated countries
+		
+		set_global_flag = waiting_for_dismantlement_setup
+		
 		any_country = {
 			limit = {
 				exists = yes
@@ -613,6 +616,8 @@ country_event = {
 	
     option = {
         name = "Very Well"
+		
+		clr_global_flag = waiting_for_dismantlement_setup
 		
 		#sets conference value for current country
 		random_owned = {
@@ -5331,10 +5336,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-#		
-#	##### Colony Events - Fixed Borders System ##### 
-#		
-
 #
 #	##### Cleanup Chain Trigger #####
 #
@@ -5350,6 +5351,218 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		#return cores to victors
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Dismantlement_Chair value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Second_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Second_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Third_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Third_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Fourth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Fourth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Fifth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Fifth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Sixth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Sixth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Seventh_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Seventh_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+			}
+			any_owned = {
+				limit = {
+					any_core = {
+						check_variable = { which = Eighth_Victor value = 0.99 }
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+		}
+		release = UTI
+		UTI = { annex_to = UTI all_core = { remove_core = UTI } }
+		random_country = {
+			limit = {
+				check_variable = { which = Eighth_Victor value = 0.99 }
+			}
+			inherit = UTI
+		}
+		
+		
+		
 		any_country = {
 			limit = {
 				AND = {
@@ -10033,6 +10246,10 @@ country_event = {
 #	Set Probability Variables	
 	
 	immediate = {
+		set_variable = {
+			which = dismantlement_dollars
+			value = 15
+		}
 		any_country = {
 			limit = { 
 				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
@@ -10168,11 +10385,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10183,11 +10406,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10296,6 +10525,12 @@ country_event = {
 			country_event = 777770431
 		}
 		create_alliance = FROM
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 4
 			modifier = { factor = 2 has_country_flag = common_government_bonus }
@@ -10350,6 +10585,12 @@ country_event = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10514,6 +10755,12 @@ country_event = {
 			set_variable = { which = Existing_Chomp value = 1 }
 			country_event = 777770432
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10662,6 +10909,12 @@ country_event = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10677,6 +10930,12 @@ country_event = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -10692,6 +10951,7 @@ country_event = {
     id = 777770424
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 17"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -10781,10 +11041,493 @@ country_event = {
 			country_event = 777770431
 		}
 		create_alliance = FROM
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 3
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
 			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Puppet_Chomp value = 1 }
+			country_event = 777770431
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770425
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "Dismantle 16"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 5 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 3 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770432
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 50 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "The lands of $FROMCOUNTRY$ shall be ours"
+		FROM = {
+			set_variable = { which = Existing_Chomp value = 1 }
+			country_event = 777770432
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770426
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "Dismantle 3"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+#	Set Probability Variables	
+	
+	immediate = {
+		set_variable = {
+			which = dismantlement_dollars
+			value = 15
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770427
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 1"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+#	Set Probability Variables	
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
 			modifier = { factor = 5 relation = { who = FROM value = 199 } }
 			modifier = { factor = 4 relation = { who = FROM value = 180 } }
 			modifier = { factor = 3 relation = { who = FROM value = 160 } }
@@ -10819,18 +11562,315 @@ country_event = {
 			set_variable = { which = Outcome_Required value = 0 }
 			country_event = 777770431
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770428
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "Dismantle 12"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 5 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
 		FROM = {
-			set_variable = { which = Puppet_Chomp value = 1 }
-			country_event = 777770431
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 3 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770432
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770432
 		}
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
-			modifier = { factor = 2 has_country_flag = we_control_core_penalty }
-			modifier = { factor = 0 ai = yes }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 50 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+#		No option to ask other victors if 1 victor
+
+country_event = {
+    id = 777770429
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "Dismantle 13"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770430	
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 0 FROM = { NOT = { has_country_flag = soft_vassal_overwrite } } }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
         }
@@ -10838,7 +11878,134 @@ country_event = {
 }
 
 country_event = {
-    id = 777770425
+    id = 777770800
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 15"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!"
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+    }
+}
+
+country_event = {
+    id = 777770801
     title = "What would you like to do with $FROMCOUNTRY$ cores?"
     desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
 	allow_multiple_instances = yes
@@ -10899,7 +12066,7 @@ country_event = {
 		}
 		set_country_flag = annex_overwrite
     }
-	
+
     option = {
         name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
 		FROM = {
@@ -10907,6 +12074,23 @@ country_event = {
 			country_event = 777770432
 		}
 		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 5 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall have cores from remaining lands"
@@ -10915,13 +12099,23 @@ country_event = {
 			country_event = 777770432
 		}
 		create_alliance = FROM
-    }
-    option = {
-        name = "We do not care about $FROMCOUNTRY$"
-		FROM = {
-			set_variable = { which = Existing_Apathy value = 1 }
-			country_event = 777770432
-		}
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 3 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
         name = "$FROMCOUNTRY$ shall not grow larger"
@@ -10929,15 +12123,804 @@ country_event = {
 			set_variable = { which = Existing_As_Is value = 1 }
 			country_event = 777770432
 		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 50 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770802
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "Dismantle 3"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+#	Set Probability Variables	
+	
+	immediate = {
+		set_variable = {
+			which = dismantlement_dollars
+			value = 15
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall exist"
 		FROM = {
-			set_variable = { which = Existing_Chomp value = 1 }
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770803
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 1"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+#	Set Probability Variables	
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770431
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770804
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "Dismantle 12"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
 			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 5 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 3 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770432
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = common_government_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770432
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 50 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+#		No option to ask other victors if 1 victor
+
+country_event = {
+    id = 777770805
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "Dismantle 13"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770430
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770430	
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770430	
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770806
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 14"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770431
+		}
+        ai_chance = {
+            factor = 5
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			set_variable = { which = Outcome_Required value = 0 }
+			country_event = 777770431
 		}
     }
 }
+
+country_event = {
+    id = 777770807
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 5 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770432
+		}
+		create_alliance = FROM
+        ai_chance = {
+            factor = 3
+			modifier = { factor = 2 has_country_flag = common_government_bonus }
+			modifier = { factor = 4 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 1 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 3 alliance_with = FROM }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0 war_with = FROM }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770432
+		}
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 1 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = conflicting_government_bonus }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 50 war_with = FROM }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+        }
+    }
+}
+
 
 
 
@@ -24912,42 +26895,42 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 777771118
-    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
-    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
-    is_triggered_only = yes
-    option = {
-        name = "Very Well"
-		set_variable = { which = Non_Rewritable_State value = 0 }
-		any_country = {
-			limit = {
-				FROM = { NOT = { has_country_flag = too_many_deliveries } }
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-			}
-			FROM = { set_country_flag = too_many_deliveries }
-			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
-			country_event = 777771318
-		}
-    }
-}
-
-country_event = {
-    id = 777771222
-    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
-    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
-    is_triggered_only = yes
-    option = {
-        name = "Very Well"
-		set_variable = { which = Non_Rewritable_State value = 0 }
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-			}
-			country_event = 777771422
-		}
-    }
-}
+#country_event = {
+#	id = 777771122
+#	title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+#	desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+#	is_triggered_only = yes
+#	option = {
+#		name = "Very Well"
+#		set_variable = { which = Non_Rewritable_State value = 0 }
+#		any_country = {
+#			limit = {
+#				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+#				check_variable = { which = Dismantlement_Chair value = 0.99 }
+#			}
+#			FROM = { set_country_flag = too_many_deliveries }
+#			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+#			country_event = 777771318
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = 777771222
+#	title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+#	desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+#	is_triggered_only = yes
+#	option = {
+#		name = "Very Well"
+#		set_variable = { which = Non_Rewritable_State value = 0 }
+#		any_country = {
+#			limit = {
+#				check_variable = { which = Dismantlement_Chair value = 0.99 }
+#			}
+#			country_event = 777771422
+#		}
+#	}
+#}
 
 ##### Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 #####
 
@@ -33073,6 +35056,7 @@ country_event = {
     id = 777771422
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 18"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
