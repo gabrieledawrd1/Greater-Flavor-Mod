@@ -3169,8 +3169,8 @@
     }
 
     serfs = {
-        culture = ukrainian
-        religion = orthodox
+        culture = polish
+        religion = catholic
         size = 17700
     }
 
