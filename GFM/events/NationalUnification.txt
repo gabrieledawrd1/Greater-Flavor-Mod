@@ -30,31 +30,31 @@ country_event = {
     option = {                # Accept inheritance
         name = "EVTOPTA11100"
         clr_country_flag = crown_from_the_gutter
-        random_owned = {
-            limit = { owner = { primary_culture = polish accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
-        }
-        random_owned = {
-            limit = { owner = { primary_culture = polish accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
-        }
-        random_owned = {
-            limit = { owner = { primary_culture = polish accepted_culture = czech } } owner = { remove_accepted_culture = czech }
-        }
-        random_owned = {
-            limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = french } }
-            owner = { remove_accepted_culture = french }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = italian accepted_culture = south_german } }
-            owner = { remove_accepted_culture = south_german }
-        }
-        random_owned = {
-            limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = british } }
-            owner = { remove_accepted_culture = british }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
-            owner = { remove_accepted_culture = polish }
-        }
+        #random_owned = {
+        #    limit = { owner = { primary_culture = polish accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
+        #}
+        #random_owned = {
+        #    limit = { owner = { primary_culture = polish accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
+        #}
+        #random_owned = {
+        #    limit = { owner = { primary_culture = polish accepted_culture = czech } } owner = { remove_accepted_culture = czech }
+        #}
+        #random_owned = {
+        #    limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = french } }
+        #    owner = { remove_accepted_culture = french }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = italian accepted_culture = south_german } }
+        #    owner = { remove_accepted_culture = south_german }
+        #}
+        #random_owned = {
+        #    limit = { owner = { OR = { is_culture_group = italian is_culture_group = germanic } accepted_culture = british } }
+        #    owner = { remove_accepted_culture = british }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
+        #    owner = { remove_accepted_culture = polish }
+        #}
         random_owned = {
             limit = { owner = { is_culture_group = scandinavian } }
             owner = {
@@ -651,34 +651,34 @@ country_event = {
         name = "EVTOPTA11100"
         clr_country_flag = crown_from_the_gutter
         set_global_flag = 3hurrahs
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
-            owner = { remove_accepted_culture = polish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = french } }
-            owner = { remove_accepted_culture = french }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
-            owner = { remove_accepted_culture = danish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
-            owner = { remove_accepted_culture = hungarian }
-        }
-        random_owned = {
-            limit = {
-                owner = { tag = NGF }
-            }
-            owner = { add_accepted_culture = south_german }
-        }
-        random_owned = {
-            limit = {
-                owner = { tag = SGF }
-            }
-            owner = { add_accepted_culture = north_german }
-        }
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
+        #    owner = { remove_accepted_culture = polish }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = french } }
+        #    owner = { remove_accepted_culture = french }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
+        #    owner = { remove_accepted_culture = danish }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
+        #    owner = { remove_accepted_culture = hungarian }
+        #}
+        #random_owned = {
+        #    limit = {
+        #        owner = { tag = NGF }
+        #    }
+        #    owner = { add_accepted_culture = south_german }
+        #}
+        #random_owned = {
+        #    limit = {
+        #        owner = { tag = SGF }
+        #    }
+        #    owner = { add_accepted_culture = north_german }
+        #}
         all_core = { remove_core = THIS }
         change_tag = GER
         FRA_412 = { add_core = GER }
@@ -961,34 +961,34 @@ country_event = {
         clr_country_flag = crown_from_the_gutter
         all_core = { add_core = NGF }
         change_tag = NGF
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
-            owner = { remove_accepted_culture = polish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = french } }
-            owner = { remove_accepted_culture = french }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
-            owner = { remove_accepted_culture = danish }
-        }
-        random_owned = {
-            limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
-            owner = { remove_accepted_culture = hungarian }
-        }
-        set_country_flag = secondary_union_formation
-        any_country = {
-            limit = {
-                primary_culture = north_german
-                NOT = {
-                    tag = THIS
-                    has_country_flag = post_colonial_country
-                    is_cultural_union = no
-                }
-            }
-            all_core = { add_core = NGF }
-        }
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = polish } }
+        #    owner = { remove_accepted_culture = polish }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = french } }
+        #    owner = { remove_accepted_culture = french }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = danish } }
+        #    owner = { remove_accepted_culture = danish }
+        #}
+        #random_owned = {
+        #    limit = { owner = { is_culture_group = germanic accepted_culture = hungarian } }
+        #    owner = { remove_accepted_culture = hungarian }
+        #}
+        #set_country_flag = secondary_union_formation
+        #any_country = {
+        #    limit = {
+        #        primary_culture = north_german
+        #        NOT = {
+        #            tag = THIS
+        #            has_country_flag = post_colonial_country
+        #            is_cultural_union = no
+        #        }
+        #    }
+        #    all_core = { add_core = NGF }
+        #}
         any_country = {
             limit = {
                 primary_culture = north_german
