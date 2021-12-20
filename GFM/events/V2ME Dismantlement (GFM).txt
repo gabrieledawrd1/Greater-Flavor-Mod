@@ -10951,6 +10951,7 @@ country_event = {
     id = 777770424
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 17"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -11098,6 +11099,7 @@ country_event = {
     id = 777770425
     title = "What would you like to do with $FROMCOUNTRY$ cores?"
     desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "Dismantle 16"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 
@@ -11879,6 +11881,7 @@ country_event = {
     id = 777770800
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 15"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -12693,6 +12696,7 @@ country_event = {
     id = 777770806
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 14"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -35052,6 +35056,7 @@ country_event = {
     id = 777771422
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "Dismantle 18"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
