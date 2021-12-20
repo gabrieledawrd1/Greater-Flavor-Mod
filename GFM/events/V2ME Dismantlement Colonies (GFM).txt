@@ -1397,7 +1397,7 @@ country_event = {
 				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
 				NOT = { has_global_flag = Total_One_Victor }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1408,7 +1408,7 @@ country_event = {
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { has_global_flag = Total_Two_Victor }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1421,7 +1421,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Two_Victor }
 				NOT = { has_global_flag = Total_Three_Victor }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1436,7 +1436,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Three_Victor }
 				NOT = { has_global_flag = Total_Four_Victor }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1453,7 +1453,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Four_Victor }
 				NOT = { has_global_flag = Total_Five_Victor }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1472,7 +1472,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Six_Victor }
 				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
 		any_country = {
 			limit = {
@@ -1493,7 +1493,7 @@ country_event = {
 				NOT = { has_global_flag = Total_Seven_Victor }
 				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
 			}
-			country_event = 777770653
+			country_event = 777770654
 		}
     }
 }
@@ -2421,7 +2421,7 @@ country_event = {
 }
 
 country_event = {
-    id = 777770653
+    id = 777770654
     title = "What is our stance on the $FROMCOUNTRY$ colony?"
     desc = "The Dismantlement Chair would like to intergrate $FROMCOUNTRY$ into a larger colony. How do we respond?"
 	allow_multiple_instances = yes

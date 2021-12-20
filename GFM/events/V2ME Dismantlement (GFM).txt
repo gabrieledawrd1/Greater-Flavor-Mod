@@ -25125,42 +25125,42 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 777771118
-    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
-    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
-    is_triggered_only = yes
-    option = {
-        name = "Very Well"
-		set_variable = { which = Non_Rewritable_State value = 0 }
-		any_country = {
-			limit = {
-				FROM = { NOT = { has_country_flag = too_many_deliveries } }
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-			}
-			FROM = { set_country_flag = too_many_deliveries }
-			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
-			country_event = 777771318
-		}
-    }
-}
-
-country_event = {
-    id = 777771222
-    title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
-    desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
-    is_triggered_only = yes
-    option = {
-        name = "Very Well"
-		set_variable = { which = Non_Rewritable_State value = 0 }
-		any_country = {
-			limit = {
-				check_variable = { which = Dismantlement_Chair value = 0.99 }
-			}
-			country_event = 777771422
-		}
-    }
-}
+#country_event = {
+#	id = 777771122
+#	title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+#	desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+#	is_triggered_only = yes
+#	option = {
+#		name = "Very Well"
+#		set_variable = { which = Non_Rewritable_State value = 0 }
+#		any_country = {
+#			limit = {
+#				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+#				check_variable = { which = Dismantlement_Chair value = 0.99 }
+#			}
+#			FROM = { set_country_flag = too_many_deliveries }
+#			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+#			country_event = 777771318
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = 777771222
+#	title = "We may have our cores returned from $FROMCOUNTRY$ by the current dismantlement!"
+#	desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
+#	is_triggered_only = yes
+#	option = {
+#		name = "Very Well"
+#		set_variable = { which = Non_Rewritable_State value = 0 }
+#		any_country = {
+#			limit = {
+#				check_variable = { which = Dismantlement_Chair value = 0.99 }
+#			}
+#			country_event = 777771422
+#		}
+#	}
+#}
 
 ##### Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 #####
 
