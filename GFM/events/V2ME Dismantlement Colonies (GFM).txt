@@ -22,6 +22,7 @@ country_event = {
     id = 777770610
     title = "Our colony may be transfered?"
     desc = "Our lands may be transfered though dismantlement."
+	picture = "dismantle 5"
     is_triggered_only = yes
     option = {
         name = "Very Well"
@@ -416,6 +417,7 @@ country_event = {
     id = 777770620
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 8"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -552,6 +554,7 @@ country_event = {
     id = 777770621
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 12"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -674,6 +677,7 @@ country_event = {
     id = 777770630
     title = "Colony transfer!"
     desc = "This event is used for the transfer of colonies!"
+	picture = "dismantle 19"
     is_triggered_only = yes
     option = {
         name = "Transfer Shall Occur."
@@ -687,6 +691,7 @@ country_event = {
     id = 777770640
     title = "Our colony is being considered?"
     desc = "Our colony is being considered by the Conference Chair!"
+	picture = "dismantle 12"
     is_triggered_only = yes
     option = {
         name = "Very Well"
@@ -1504,6 +1509,7 @@ country_event = {
     id = 777770650
     title = "What is our stance on $FROMCOUNTRY$?"
     desc = "The Dismantlement Chair would like to obtain the $FROMCOUNTRY$ Colony. How do we respond?"
+	picture = "dismantle 2"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -1733,6 +1739,7 @@ country_event = {
     id = 777770651
     title = "Do we want the $FROMCOUNTRY$ colony?"
     desc = "The Dismantlement Chair is not interested in the $FROMCOUNTRY$ Colony."
+	picture = "dismantle 8"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -1966,6 +1973,7 @@ country_event = {
     id = 777770652
     title = "What is our stance on the $FROMCOUNTRY$ colony?"
     desc = "The Dismantlement Chair would like the $FROMCOUNTRY$ colony to remain with the deafeated. How do we respond?"
+	picture = "dismantle 20"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -2194,6 +2202,7 @@ country_event = {
     id = 777770653
     title = "What is our stance on the $FROMCOUNTRY$ colony?"
     desc = "The Dismantlement Chair would like to organize $FROMCOUNTRY$ for independence. How do we respond?"
+	picture = "dismantle 21"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -2424,6 +2433,7 @@ country_event = {
     id = 777770654
     title = "What is our stance on the $FROMCOUNTRY$ colony?"
     desc = "The Dismantlement Chair would like to intergrate $FROMCOUNTRY$ into a larger colony. How do we respond?"
+	picture = "dismantle 22"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -2653,6 +2663,7 @@ country_event = {
     id = 777770750
     title = "Succesful transfer!"
     desc = "Colony Transfer Event!"
+	picture = "dismantle 11"
     is_triggered_only = yes
     option = {
         name = "Huh"
@@ -4702,6 +4713,7 @@ country_event = {
     id = 777770751
     title = "We continue to not exists!"
     desc = "Colony Transfer Event!"
+	picture = "dismantle 14"
     is_triggered_only = yes
     option = {
         name = "Wild"
@@ -4713,6 +4725,7 @@ country_event = {
     id = 777771500
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -4892,6 +4905,7 @@ country_event = {
     id = 777771501
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 2"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5049,6 +5063,7 @@ country_event = {
     id = 777771502
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 19"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5206,6 +5221,7 @@ country_event = {
     id = 777771503
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5363,6 +5379,7 @@ country_event = {
     id = 777771504
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 3"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5520,6 +5537,7 @@ country_event = {
     id = 777771505
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 6"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5677,6 +5695,7 @@ country_event = {
     id = 777771506
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 7"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5809,7 +5828,7 @@ country_event = {
         }
     }
     option = {
-        name = "Dafur Placeholder"
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
         any_country = {
 			limit = {
 				tag = FROM
@@ -5834,6 +5853,7 @@ country_event = {
     id = 777771507
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 8"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -5966,7 +5986,7 @@ country_event = {
         }
     }
     option = {
-        name = "Darfur Placeholder"
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
         any_country = {
 			limit = {
 				tag = FROM
@@ -5991,6 +6011,7 @@ country_event = {
     id = 777771508
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 9"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6148,6 +6169,7 @@ country_event = {
     id = 777771509
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 10"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6305,6 +6327,7 @@ country_event = {
     id = 777771510
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 11"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6462,6 +6485,7 @@ country_event = {
     id = 777771511
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 12"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6619,6 +6643,7 @@ country_event = {
     id = 777771512
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 13"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6798,6 +6823,7 @@ country_event = {
     id = 777771513
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 14"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -6954,6 +6980,7 @@ country_event = {
     id = 777771514
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 15"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -7111,6 +7138,7 @@ country_event = {
     id = 777771515
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 16"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -7268,6 +7296,7 @@ country_event = {
     id = 777771518
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 17"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -7425,6 +7454,7 @@ country_event = {
     id = 777771520
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 18"
     is_triggered_only = yes
 	allow_multiple_instances = yes
 	
