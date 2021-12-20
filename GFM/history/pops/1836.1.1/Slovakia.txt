@@ -768,6 +768,25 @@
         size = 4450
     }
 }
+3567 = {
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 200
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1000
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9450
+    }
+}
 #Roznava (160400/40100 POPS)
 638 = {
     clergymen = {

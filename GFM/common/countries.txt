@@ -14,6 +14,7 @@ ADU		= "countries/Anglo-Dutch Union.txt"
 NFR		= "countries/New France.txt"
 ATQ		= "countries/Antarctique.txt"
 PGR 	= "countries/Colombeia.txt"
+ABB     = "countries/Abbasid.txt"
 #Atlas don't kill me
 SVD		= "countries/Safavids.txt" 
 AFS		= "countries/Afsharid.txt" 

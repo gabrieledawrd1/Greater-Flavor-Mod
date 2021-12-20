@@ -813,6 +813,62 @@
     }
 
 }
+3554 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3555 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3556 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3557 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3558 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3559 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3560 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
+3561 = {
+     farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 4500
+    }
+}
 #Princeton (2000/500 POPS)
 3463 = {
     aristocrats = {
@@ -2658,6 +2714,37 @@
 #ruled by Mexico 1836
 #Santa Fe (32000/8000 POPS)
 103 = {
+    aristocrats = {
+        culture = native_american_minor
+        religion = animist
+        size = 10
+    }
+
+    clergymen = {
+        culture = native_american_minor
+        religion = animist
+        size = 25
+    }
+
+    artisans = {
+        culture = native_american_minor
+        religion = animist
+        size = 50
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 15
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 900
+    }
+}
+3362 = {
     aristocrats = {
         culture = native_american_minor
         religion = animist
@@ -4609,6 +4696,49 @@
         size = 900
     }
 }
+3564 = {
+    clergymen = {
+        culture = texan
+        religion = protestant
+        size = 5
+    }
+
+    artisans = {
+        culture = texan
+        religion = protestant
+        size = 5
+    }
+
+    soldiers = {
+        culture = texan
+        religion = protestant
+        size = 300
+    }
+
+    farmers = {
+        culture = texan
+        religion = protestant
+        size = 1050
+    }
+
+    slaves = {
+        culture = afro_american
+        religion = protestant
+        size = 500
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 150
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 900
+    }
+}
 #Lubbock (8000/2000 POPS)
 135 = {
 
@@ -4627,6 +4757,50 @@
     soldiers = {
         culture = texan
         religion = protestant
+        size = 400
+    }
+
+    farmers = {
+        culture = texan
+        religion = protestant
+        size = 1400
+    }
+
+    aristocrats = {
+        culture = native_american_minor
+        religion = animist
+        size = 25
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 500
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 2850
+    }
+}
+3563 = {
+
+    clergymen = {
+        culture = mexican
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = mexican
+        religion = catholic
+        size = 150
+    }
+
+    soldiers = {
+        culture = mexican
+        religion = catholic
         size = 400
     }
 
@@ -4770,7 +4944,7 @@
     farmers = {
         culture = cajun
         religion = catholic
-        size = 8550
+        size = 185500
     }
 
     artisans = {
@@ -4782,25 +4956,25 @@
     clergymen = {
         culture = afro_french
         religion = catholic
-        size = 25
+        size = 250
     }
 
     artisans = {
         culture = afro_french
         religion = catholic
-        size = 1650
+        size = 16500
     }
 
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 1325
+        size = 13250
     }
 
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 10000
+        size = 100000
     }
 }
 #Baton Rouge (72000/18000 POPS)
@@ -4915,6 +5089,85 @@
 }
 #Lake Charles (36000/9000 POPS)
 141 = {
+    aristocrats = {
+        culture = dixie
+        religion = protestant
+        size = 150
+    }
+
+    clergymen = {
+        culture = dixie
+        religion = protestant
+        size = 50
+    }
+
+    artisans = {
+        culture = dixie
+        religion = protestant
+        size = 175
+    }
+
+    soldiers = {
+        culture = dixie
+        religion = protestant
+        size = 100
+    }
+
+    farmers = {
+        culture = dixie
+        religion = protestant
+        size = 1025
+    }
+
+    clergymen = {
+        culture = cajun
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = cajun
+        religion = catholic
+        size = 55
+    }
+
+    soldiers = {
+        culture = cajun
+        religion = catholic
+        size = 100
+    }
+
+    farmers = {
+        culture = cajun
+        religion = catholic
+        size = 3525
+    }
+
+    clergymen = {
+        culture = afro_french
+        religion = catholic
+        size = 15
+    }
+
+    artisans = {
+        culture = afro_french
+        religion = catholic
+        size = 75
+    }
+
+    farmers = {
+        culture = afro_french
+        religion = catholic
+        size = 120
+    }
+
+    slaves = {
+        culture = afro_american
+        religion = protestant
+        size = 4900
+    }
+}
+3565 = {
     aristocrats = {
         culture = dixie
         religion = protestant

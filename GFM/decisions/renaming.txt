@@ -4376,7 +4376,7 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-
+}
     turkish_rename_n_macedonia = {
         picture = gtfo
         potential = {
@@ -7832,4 +7832,5 @@ political_decisions = {
 		}
         ai_will_do = { factor = 1 }
     }
+}
 }

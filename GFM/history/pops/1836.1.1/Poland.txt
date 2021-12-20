@@ -3264,6 +3264,212 @@
         size = 1325
     }
 }
+3566 = {
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 47
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 255
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 50
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 4747
+    }
+
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 500
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 42
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 210
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 45
+    }
+
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 3402
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 140
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 547
+    }
+
+    clergymen = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    artisans = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    farmers = {
+        culture = volga_german
+        religion = catholic
+        size = 92
+    }
+}
+3568 = {
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 47
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 255
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 50
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 4747
+    }
+
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 500
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 42
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 210
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 45
+    }
+
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 3402
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 140
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 547
+    }
+
+    clergymen = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    artisans = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    farmers = {
+        culture = volga_german
+        religion = catholic
+        size = 92
+    }
+}
 3324 = {
     aristocrats = {
         culture = polish

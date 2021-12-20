@@ -152,6 +152,157 @@
         size = 2325
     }
 }
+3571 = {
+    clergymen = {
+        culture = romanian
+        religion = orthodox
+        size = 75
+    }
+
+    artisans = {
+        culture = romanian
+        religion = orthodox
+        size = 400
+    }
+
+    soldiers = {
+        culture = romanian
+        religion = orthodox
+        size = 100
+    }
+
+    farmers = {
+        culture = romanian
+        religion = orthodox
+        size = 9425
+    }
+
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 200
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1100
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 200
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 19600
+    }
+
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 700
+    }
+
+    bureaucrats = {
+        culture = polish
+        religion = catholic
+        size = 30
+    }
+
+    officers = {
+        culture = polish
+        religion = catholic
+        size = 60
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 100
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 300
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 100
+    }
+
+    farmers = {
+        culture = polish
+        religion = catholic
+        size = 3810
+    }
+
+    bureaucrats = {
+        culture = south_german
+        religion = catholic
+        size = 35
+    }
+
+    officers = {
+        culture = south_german
+        religion = catholic
+        size = 40
+    }
+
+    clergymen = {
+        culture = south_german
+        religion = catholic
+        size = 100
+    }
+
+    artisans = {
+        culture = south_german
+        religion = catholic
+        size = 200
+    }
+
+    soldiers = {
+        culture = south_german
+        religion = catholic
+        size = 100
+    }
+
+    farmers = {
+        culture = south_german
+        religion = catholic
+        size = 2650
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 600
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 2325
+    }
+}
 #Bessarabia Region (332000) #see Moldova.txt for balance of Region
 #under the rule of Russia in 1836
 #Ismail (332000/83000 POPS)
@@ -498,7 +649,7 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 77050
+        size = 770
     }
 
     serfs = {
@@ -546,7 +697,7 @@
     serfs = {
         culture = polish
         religion = catholic
-        size = 54725
+        size = 74725
     }
 
     aristocrats = {
@@ -705,6 +856,147 @@
         culture = volga_german
         religion = catholic
         size = 920
+    }
+}
+3570 = {
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 47
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 255
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 50
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 4747
+    }
+
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 500
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 42
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 210
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 45
+    }
+
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 3402
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 140
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 547
+    }
+
+    clergymen = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    artisans = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = volga_german
+        religion = catholic
+        size = 10
+    }
+
+    farmers = {
+        culture = volga_german
+        religion = catholic
+        size = 92
+    }
+}
+3569 = {
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1950
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9900
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1950
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 184200
+    }
+
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 80000
+    }
+
+    serfs = {
+        culture = gypsy
+        religion = orthodox
+        size = 4200
     }
 }
 #Ternopil (1136000/284000 POPS) #now part of Ukraine

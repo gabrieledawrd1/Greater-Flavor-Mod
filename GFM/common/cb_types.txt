@@ -12826,7 +12826,7 @@ demand_concession_casus_belli_player_early_for_puppet = {
     always = no
 
     can_use = {
-        NOT = { tag = LCT }
+        ##NOT = { tag = LCT }
         #NOT = { tag = CHI }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
@@ -12837,14 +12837,12 @@ demand_concession_casus_belli_player_early_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -12915,7 +12913,7 @@ demand_concession_casus_belli_ai_early_for_puppet = {
     always = no
 
     can_use = {
-        NOT = { tag = LCT }
+        ##NOT = { tag = LCT }
         #NOT = { tag = CHI }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
@@ -12926,14 +12924,12 @@ demand_concession_casus_belli_ai_early_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13004,7 +13000,7 @@ demand_concession_casus_belli_for_puppet = {
     always = no
 
     can_use = {
-        NOT = { tag = LCT }
+        ##NOT = { tag = LCT }
         #NOT = { tag = CHI }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
@@ -13014,14 +13010,12 @@ demand_concession_casus_belli_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13089,7 +13083,7 @@ place_in_the_sun_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13098,14 +13092,12 @@ place_in_the_sun_for_puppet = {
         this = { NOT = { badboy = 1 } }
         NOT = { 
             OR = { 
-                has_country_modifier = neutrality
-                has_country_modifier = generic_neutrality
+                has_country_modifier = neutrality_modifier
             }
         }
         THIS = { NOT = {
                 OR = {
-                    has_country_modifier = neutrality
-                    has_country_modifier = generic_neutrality
+                    has_country_modifier = neutrality_modifier
                 }
              } 
         }
@@ -13173,7 +13165,7 @@ place_in_the_sun_late_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13257,7 +13249,7 @@ acquire_state_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13371,7 +13363,7 @@ acquire_state_midgame_for_puppet = {
     construction_speed = 0.5
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13407,7 +13399,7 @@ acquire_state_midgame_for_puppet = {
             }
         }
     }
-    
+}
     allowed_countries = {
         NOT = { tag = FROM }
         OR = {
@@ -13473,7 +13465,7 @@ acquire_state_late_for_puppet = {
     construction_speed = 0.5
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13576,7 +13568,7 @@ total_war_state_for_puppet = {
     construction_speed = 0.5
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = { ai = no }
         has_global_flag = total_war_cbs_enabled
     }
@@ -13646,7 +13638,7 @@ negotiated_transfer_for_puppet = {
     construction_speed = 2.0
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         number_of_states = 2 # annex if you want their last state
         ai = no
         THIS = { ai = no } 
@@ -13714,7 +13706,7 @@ take_capital_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         NOT = { year = 1870 }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
@@ -13830,7 +13822,7 @@ take_capital_midgame_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }
@@ -13947,7 +13939,7 @@ take_capital_late_for_puppet = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        NOT = { tag = LCT }
+        #NOT = { tag = LCT }
         THIS = {
             NOT = { has_country_flag = conquerable_1865 }
         }

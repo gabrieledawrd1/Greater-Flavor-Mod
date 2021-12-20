@@ -1084,7 +1084,7 @@ country_event = {
     mean_time_to_happen = { months = 5 }
 
     trigger = {
-        has_country_flag - floriano
+        has_country_flag = floriano
         has_country_flag = foriano_win
         NOT = { has_country_flag = floriano_stay }
         year = 1894
