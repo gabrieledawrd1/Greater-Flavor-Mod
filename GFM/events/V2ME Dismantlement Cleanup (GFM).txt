@@ -555,6 +555,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_1
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -601,6 +602,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_2
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -647,6 +649,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_3
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -693,6 +696,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_4
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -739,6 +743,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_5
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -785,6 +790,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_6
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -831,6 +837,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_7
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -877,6 +884,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_8
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -1022,15 +1030,36 @@ country_event = {
 
 country_event = {
 	id = 4778746
+	title = "AI: Dismantlement Buffer Trigger"
+	desc = "AI: Dismantlement Buffer Trigger"
+	picture = "greatwar"
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		set_global_flag = waiting_for_buffer_check
+	}
+	
+	option = {
+		name = "Checking..."
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = buffer_enabled } } }
+			owner = { country_event = 4778747 }
+		}
+		random_owned = {
+			limit = { owner = { has_country_flag = buffer_enabled } }
+			owner = { country_event = 4778747 set_country_flag = already_buffering }
+		}
+	}
+}
+
+country_event = {
+	id = 4778747
 	title = "AI: Dismantlement Buffer Event"
 	desc = "AI: Dismantlement Buffer Event"
 	picture = "greatwar"
 	
 	is_triggered_only = yes
-	
-	immediate = {
-		set_global_flag = waiting_for_buffer_check
-	}
 	
 	option = {
 		name = "Checking..."
@@ -1241,7 +1270,6 @@ country_event = {
 					}
 				}
 			}
-			THIS = { clr_country_flag = buffer_enabled }
 			clr_country_flag = conference_sanity_check
 			clr_country_flag = waiting_for_dismantlement
 			random_owned = {
@@ -2366,9 +2394,35 @@ country_event = {
 				set_country_flag = dismantlement_buffer_8
 			}
 		}
+		
+		set_variable = { which = check_if_buffer_need value = 0 }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = dismantlement_buffer_1
+					has_country_flag = dismantlement_buffer_2
+					has_country_flag = dismantlement_buffer_3
+					has_country_flag = dismantlement_buffer_4
+					has_country_flag = dismantlement_buffer_5
+					has_country_flag = dismantlement_buffer_6
+					has_country_flag = dismantlement_buffer_7
+					has_country_flag = dismantlement_buffer_8
+				}
+			}
+			THIS = { change_variable = { which = check_if_buffer_need value = 1 } }
+		}
 		random_owned = {
-			limit = { owner = { has_country_flag = buffer_enabled } }
+			limit = { owner = { NOT = { check_variable = { which = check_if_buffer_need value = 0.99 } } } }
+			owner = { clr_country_flag = buffer_enabled }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = buffer_enabled NOT = { has_country_flag = already_buffering } } }
 			owner = { country_event = { id = 4778746 days = 5 } }
+		}
+		random_owned = {
+			limit = { owner = { has_country_flag = already_buffering } }
+			owner = { clr_country_flag = already_buffering }
 		}
 	}
 }
