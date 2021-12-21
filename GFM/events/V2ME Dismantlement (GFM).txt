@@ -5322,6 +5322,7 @@ country_event = {
 				country_event = 777770406
 			}
 		}
+		
     }
 }
 
@@ -5352,6 +5353,162 @@ country_event = {
 	
 	immediate = {
 		#return cores to victors
+		
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Dismantlement_Chair value = 0.99 }
+					check_variable = { which = Second_Victor value = 0.99 }
+					check_variable = { which = Third_Victor value = 0.99 }
+					check_variable = { which = Fourth_Victor value = 0.99 }
+					check_variable = { which = Fifth_Victor value = 0.99 }
+					check_variable = { which = Sixth_Victor value = 0.99 }
+					check_variable = { which = Seventh_Victor value = 0.99 }
+					check_variable = { which = Eighth_Victor value = 0.99 }
+				}
+			}
+			set_variable = { which = dismantlement_dollars value = 10 }
+			random_owned = {
+				limit = {
+					owner = {
+						mass_politics = 1
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = 1 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						in_default = yes
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = -4 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { total_amount_of_ships = 10 }
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = -1 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_amount_of_ships = 100
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = 2 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						war = yes
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = -1 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { total_amount_of_brigades = 10 }
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = -4 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_amount_of_brigades = 100
+					}
+				}
+				owner = { change_variable = { which = dismantlement_dollars value = 1 } }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } } } }
+				owner = { country_event = 777771600 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 0.99 } NOT = { check_variable = { which = dismantlement_dollars value = 1.99 } } } }
+				owner = { country_event = 777771601 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 1.99 } NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } } } }
+				owner = { country_event = 777771602 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 2.99 } NOT = { check_variable = { which = dismantlement_dollars value = 3.99 } } } }
+				owner = { country_event = 777771603 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 3.99 } NOT = { check_variable = { which = dismantlement_dollars value = 4.99 } } } }
+				owner = { country_event = 777771604 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 4.99 } NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } } } }
+				owner = { country_event = 777771605 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 5.99 } NOT = { check_variable = { which = dismantlement_dollars value = 6.99 } } } }
+				owner = { country_event = 777771606 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 6.99 } NOT = { check_variable = { which = dismantlement_dollars value = 7.99 } } } }
+				owner = { country_event = 777771607 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 7.99 } NOT = { check_variable = { which = dismantlement_dollars value = 8.99 } } } }
+				owner = { country_event = 777771608 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 8.99 } NOT = { check_variable = { which = dismantlement_dollars value = 9.99 } } } }
+				owner = { country_event = 777771609 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 9.99 } NOT = { check_variable = { which = dismantlement_dollars value = 10.99 } } } }
+				owner = { country_event = 777771610 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 10.99 } NOT = { check_variable = { which = dismantlement_dollars value = 11.99 } } } }
+				owner = { country_event = 777771611 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 11.99 } NOT = { check_variable = { which = dismantlement_dollars value = 12.99 } } } }
+				owner = { country_event = 777771612 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 12.99 } NOT = { check_variable = { which = dismantlement_dollars value = 13.99 } } } }
+				owner = { country_event = 777771613 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 13.99 } NOT = { check_variable = { which = dismantlement_dollars value = 14.99 } } } }
+				owner = { country_event = 777771614 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 14.99 } NOT = { check_variable = { which = dismantlement_dollars value = 15.99 } } } }
+				owner = { country_event = 777771615 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 15.99 } NOT = { check_variable = { which = dismantlement_dollars value = 16.99 } } } }
+				owner = { country_event = 777771616 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 16.99 } NOT = { check_variable = { which = dismantlement_dollars value = 17.99 } } } }
+				owner = { country_event = 777771617 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 17.99 } NOT = { check_variable = { which = dismantlement_dollars value = 18.99 } } } }
+				owner = { country_event = 777771618 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 18.99 } NOT = { check_variable = { which = dismantlement_dollars value = 19.99 } } } }
+				owner = { country_event = 777771619 }
+			}
+			random_owned = {
+				limit = { owner = { check_variable = { which = dismantlement_dollars value = 19.99 } NOT = { check_variable = { which = dismantlement_dollars value = 20.99 } } } }
+				owner = { country_event = 777771620 }
+			}
+		}
 		
 		any_country = {
 			limit = {
