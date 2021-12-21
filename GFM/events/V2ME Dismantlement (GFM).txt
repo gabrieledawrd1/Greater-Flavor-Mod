@@ -10151,7 +10151,7 @@ country_event = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { has_global_flag = Total_One_Victor }
 				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
-				THIS = { OR = { check_variable = { which = core_count value = 20 } check_variable = { which = pop_count value = 150 }
+				THIS = { OR = { check_variable = { which = core_count value = 20 } check_variable = { which = pop_count value = 150 } } }
 			}
 			FROM = { set_country_flag = too_many_deliveries }
 			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
@@ -35456,3 +35456,4 @@ country_event = {
         }
     }
 }
+
