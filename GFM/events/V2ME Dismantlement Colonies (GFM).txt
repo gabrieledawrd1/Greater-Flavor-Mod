@@ -1724,6 +1724,12 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 4
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
@@ -1862,7 +1868,13 @@ country_event = {
 			set_variable = { which = Annex_Colony value = 1 }
 			country_event = 777770630
         }
-       ai_chance = {
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
+        ai_chance = {
             factor = 4
 			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
 			modifier = { factor = 15 badboy = 23 }
@@ -3274,6 +3286,12 @@ country_event = {
 				value = 20
 			}
 		}
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
 		badboy = 0.1
 		FROM = {
 			set_variable = { which = Give_Away_Colony value = 0 }
@@ -6253,6 +6271,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -6433,6 +6457,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -6591,6 +6621,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -6749,6 +6785,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -6907,6 +6949,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -7065,6 +7113,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -7223,6 +7277,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -7381,6 +7441,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -7539,6 +7605,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -7855,6 +7927,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8171,6 +8249,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8351,6 +8435,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8508,6 +8598,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8666,6 +8762,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8824,6 +8926,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -8982,6 +9090,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -11725,6 +11839,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -11888,6 +12008,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12029,6 +12155,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12170,6 +12302,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12311,6 +12449,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12452,6 +12596,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12593,6 +12743,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12734,6 +12890,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -12875,6 +13037,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13016,6 +13184,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13157,6 +13331,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13298,6 +13478,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13439,6 +13625,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13602,6 +13794,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13742,6 +13940,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -13883,6 +14087,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -14024,6 +14234,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
@@ -14166,6 +14382,12 @@ country_event = {
 	
     option = {
         name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target
+        CLN = { country_event = 777771700 }
         any_country = {
 			limit = {
 				tag = FROM
