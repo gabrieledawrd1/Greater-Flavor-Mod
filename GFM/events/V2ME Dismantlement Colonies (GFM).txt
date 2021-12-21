@@ -877,6 +877,7 @@ country_event = {
 #
 #		Intergrations
 #
+#		#Western Sahara
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
@@ -893,6 +894,55 @@ country_event = {
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777771500
 		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = WSA }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771500
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = WSA }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771500
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				THIS = { tag = WSA }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771500
+		}
+#		Libia
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
@@ -5587,6 +5637,8 @@ country_event = {
 		THIS = { set_variable = { which = Outcome_Required value = 0 } }
     }
 }
+
+#		Colonial Unions
 
 country_event = {
     id = 777771500
@@ -10775,7 +10827,7 @@ country_event = {
 }
 
 country_event = {
-    id = 777771916
+    id = 777771918
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
 	picture = "dismantle 17"
@@ -10916,7 +10968,7 @@ country_event = {
 }
 
 country_event = {
-    id = 777771917
+    id = 777771920
     title = "The $FROMCOUNTRY_ADJ$ Colony!"
     desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
 	picture = "dismantle 18"
@@ -10994,6 +11046,2589 @@ country_event = {
 			modifier = { factor = 15 badboy = 23 }
 			modifier = { factor = 2 badboy = 17 }
 			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into South Africa."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+#		Colonial Unions - 3000s for menus
+
+country_event = {
+    id = 777773000
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = Morocoo_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Mauretania"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = Tranza_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773001
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 2"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773002
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 19"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Libya"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773003
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Libya"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773004
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 3"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Intergrate $FROMCOUNTRY$ into Egypt"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773005
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 6"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Egypt"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773006
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 7"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Sudan"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773007
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 8"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Sudan"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773008
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 9"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773009
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 10"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Senegal"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773010
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 11"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773011
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 12"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773012
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 13"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Ethiopia"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = Ethiopia_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Somalia"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = Somalia_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773013
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 14"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Morocco"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+country_event = {
+    id = 777773014
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 15"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Greater Congo."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773015
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 16"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into Greater Congo."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773018
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 17"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into The Federation of Rhodesia and Nyasaland."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777773020
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 18"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
         }
     }
     option = {
