@@ -882,6 +882,8 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -898,6 +900,8 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -908,12 +912,14 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777771500
+			country_event = 777771900
 		}
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -924,12 +930,14 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777771500
+			country_event = 777773000
 		}
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -940,13 +948,15 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777771500
+			country_event = 777773100
 		}
 #		Libia
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = TRI tag = CYR } }
 			}
 			FROM = {
@@ -967,6 +977,75 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = TRI tag = CYR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRI } } }
+					owner = { THIS = { set_variable = { which = Tripolitania_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CYR } } }
+					owner = { THIS = { set_variable = { which = Cyrenaica_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771902
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = TRI tag = CYR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRI } } }
+					owner = { THIS = { set_variable = { which = Tripolitania_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CYR } } }
+					owner = { THIS = { set_variable = { which = Cyrenaica_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773002
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = TRI tag = CYR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRI } } }
+					owner = { THIS = { set_variable = { which = Tripolitania_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CYR } } }
+					owner = { THIS = { set_variable = { which = Cyrenaica_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773102
+		}
+#		Sudan/Dafur
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = SUD tag = DAR } }
 			}
 			FROM = {
@@ -987,6 +1066,75 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = SUD tag = DAR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771904
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = SUD tag = DAR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773004
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = SUD tag = DAR } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773104
+		}
+#		The Gambia
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = GMB }
 			}
 			FROM = {
@@ -1003,6 +1151,63 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { tag = GMB }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = GMB } } }
+					owner = { THIS = { set_variable = { which = The_Gambia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771908
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = GMB }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = GMB } } }
+					owner = { THIS = { set_variable = { which = The_Gambia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773008
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = GMB }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = GMB } } }
+					owner = { THIS = { set_variable = { which = The_Gambia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773108
+		}
+#		Eritrea
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = ERT }
 			}
 			FROM = {
@@ -1019,6 +1224,63 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { tag = ERT }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ERT } } }
+					owner = { THIS = { set_variable = { which = Eritrea_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771910
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = ERT }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ERT } } }
+					owner = { THIS = { set_variable = { which = Eritrea_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773010
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = ERT }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ERT } } }
+					owner = { THIS = { set_variable = { which = Eritrea_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773110
+		}
+#		Djibouti
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = DJI }
 			}
 			FROM = {
@@ -1035,6 +1297,63 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { tag = DJI }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = DJI } } }
+					owner = { THIS = { set_variable = { which = Djibouti_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771912
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = DJI }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = DJI } } }
+					owner = { THIS = { set_variable = { which = Djibouti_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773012
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { tag = DJI }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = DJI } } }
+					owner = { THIS = { set_variable = { which = Djibouti_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773112
+		}
+#		Zaire
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
 			}
 			FROM = {
@@ -1059,6 +1378,87 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = CGO } } }
+					owner = { THIS = { set_variable = { which = Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RWA } } }
+					owner = { THIS = { set_variable = { which = Rwanda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BRD } } }
+					owner = { THIS = { set_variable = { which = Burundi_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771914
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = CGO } } }
+					owner = { THIS = { set_variable = { which = Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RWA } } }
+					owner = { THIS = { set_variable = { which = Rwanda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BRD } } }
+					owner = { THIS = { set_variable = { which = Burundi_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773014
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = CGO } } }
+					owner = { THIS = { set_variable = { which = Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RWA } } }
+					owner = { THIS = { set_variable = { which = Rwanda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BRD } } }
+					owner = { THIS = { set_variable = { which = Burundi_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771514
+		}
+#		South Africa
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = NMB tag = BSH } }
 			}
 			FROM = {
@@ -1073,12 +1473,159 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777771520
+			country_event = 777773120
 		}
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = NMB tag = BSH } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = NMB } } }
+					owner = { THIS = { set_variable = { which = Namibia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BSH } } }
+					owner = { THIS = { set_variable = { which = Lesotho_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773120
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = NMB tag = BSH } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = NMB } } }
+					owner = { THIS = { set_variable = { which = Namibia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BSH } } }
+					owner = { THIS = { set_variable = { which = Lesotho_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773120
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = NMB tag = BSH } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = NMB } } }
+					owner = { THIS = { set_variable = { which = Namibia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BSH } } }
+					owner = { THIS = { set_variable = { which = Lesotho_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773120
+		}
+#		R&N Federation
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLW } } }
+					owner = { THIS = { set_variable = { which = Malawi_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ZAM } } }
+					owner = { THIS = { set_variable = { which = Zambia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RHO } } }
+					owner = { THIS = { set_variable = { which = Rhodesia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771518
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLW } } }
+					owner = { THIS = { set_variable = { which = Malawi_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ZAM } } }
+					owner = { THIS = { set_variable = { which = Zambia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RHO } } }
+					owner = { THIS = { set_variable = { which = Rhodesia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771518
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor }
+				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLW } } }
+					owner = { THIS = { set_variable = { which = Malawi_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ZAM } } }
+					owner = { THIS = { set_variable = { which = Zambia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = RHO } } }
+					owner = { THIS = { set_variable = { which = Rhodesia_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771518
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
 			}
 			FROM = {
@@ -13591,6 +14138,7 @@ country_event = {
 			limit = { 
 				tag = FROM
 				OR = {
+					has_recently_lost_war = yes
 					has_recently_lost_war = yes
 					is_disarmed = yes
 					military_access = THIS
