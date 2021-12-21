@@ -10119,6 +10119,29 @@ country_event = {
     desc = "Our freedom is being considered."
     is_triggered_only = yes
 	
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		set_variable = { which = Rewritable_State value = 1 }
@@ -10127,6 +10150,32 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+				THIS = { OR = { check_variable = { which = core_count value = 20 } check_variable = { which = pop_count value = 150 }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777770802
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+				THIS = { AND = { NOT = { OR = { check_variable = { which = core_count value = 20 } check_variable = { which = pop_count value = 150 } } } OR = { check_variable = { which = core_count value = 15 } check_variable = { which = pop_count value = 100 } } } }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777770426
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				check_variable = { which = dismantlement_dollars value = 5.99 }
+				THIS = { NOT = { OR = { check_variable = { which = core_count value = 15 } check_variable = { which = pop_count value = 100 } } } }
 			}
 			FROM = { set_country_flag = too_many_deliveries }
 			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
@@ -10137,6 +10186,29 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777770805
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+			}
+			FROM = { set_country_flag = too_many_deliveries }
+			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
+			country_event = 777770429
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				check_variable = { which = dismantlement_dollars value = 5.99 }
 			}
 			FROM = { set_country_flag = too_many_deliveries }
 			THIS = { set_variable = { which = Freedom_Event_Sent value = 1 } }
@@ -10151,6 +10223,30 @@ country_event = {
     desc = "Our puppethood by $FROMCOUNTRY_ADJ$ is under review."
 	picture = "Dismantle 4"
     is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		set_variable = { which = Rewritable_State value = 1 }
@@ -10158,6 +10254,23 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+			}
+			country_event = 777770803
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+			}
+			country_event = 777770427
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				check_variable = { which = dismantlement_dollars value = 5.99 }
 			}
 			country_event = 777770421
 		}
@@ -10165,6 +10278,23 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+			}
+			country_event = 777770806
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+			}
+			country_event = 777770800
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				check_variable = { which = dismantlement_dollars value = 5.99 }
 			}
 			country_event = 777770424
 		}
@@ -10177,6 +10307,30 @@ country_event = {
     desc = "Our $FROMCOUNTRY_ADJ$ cores are being considered."
 	picture = "Dismantle 6"
     is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		set_variable = { which = Non_Rewritable_State value = 0 }
@@ -10184,6 +10338,23 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+			}
+			country_event = 777770804
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+			}
+			country_event = 777770428
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				check_variable = { which = dismantlement_dollars value = 5.99 }
 			}
 			country_event = 777770422
 		}
@@ -10191,6 +10362,23 @@ country_event = {
 			limit = {
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 2.99 } }
+			}
+			country_event = 777770807
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				NOT = { check_variable = { which = dismantlement_dollars value = 5.99 } }
+			}
+			country_event = 777770801
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				has_global_flag = Total_One_Victor
+				check_variable = { which = dismantlement_dollars value = 5.99 }
 			}
 			country_event = 777770425
 		}
