@@ -10596,7 +10596,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours Â§B[-6]Â§!"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
@@ -10617,7 +10617,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal Â§B[-3]Â§!"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -10730,7 +10730,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -10791,7 +10791,7 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
@@ -10961,7 +10961,7 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
 			country_event = 777770432
@@ -11115,7 +11115,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
@@ -11136,7 +11136,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -11246,7 +11246,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -11284,7 +11284,7 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
@@ -11438,7 +11438,7 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
 			country_event = 777770432
@@ -11610,7 +11610,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal Â§B[-3]Â§!"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -11723,7 +11723,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -12066,7 +12066,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -12176,7 +12176,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -20877,14 +20877,14 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770500
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770500
@@ -20908,7 +20908,7 @@ country_event = {
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770501
@@ -20930,7 +20930,7 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770501
@@ -20976,7 +20976,7 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Existing_Chomp value = 1 }
 			country_event = 777770502
@@ -30799,11 +30799,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -30814,11 +30820,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -30942,11 +30954,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -30989,11 +31007,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31172,11 +31196,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31187,11 +31217,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31314,11 +31350,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -31361,11 +31403,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31543,11 +31591,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31558,11 +31612,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31685,11 +31745,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -31732,11 +31798,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -31915,7 +31987,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
@@ -31930,7 +32002,7 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -32088,11 +32160,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -32135,11 +32213,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32348,11 +32432,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32363,11 +32453,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32515,11 +32611,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -32562,11 +32664,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32768,11 +32876,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32783,11 +32897,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -32911,11 +33031,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -32958,11 +33084,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33141,11 +33273,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33156,11 +33294,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33307,11 +33451,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -33354,11 +33504,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33560,11 +33716,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33575,11 +33737,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33703,11 +33871,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -33750,11 +33924,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33933,11 +34113,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -33948,11 +34134,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34083,11 +34275,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -34130,11 +34328,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34320,11 +34524,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34335,11 +34545,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34463,11 +34679,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -34510,11 +34732,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34693,11 +34921,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34708,11 +34942,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -34859,11 +35099,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -34906,11 +35152,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35112,11 +35364,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35127,11 +35385,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35255,11 +35519,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -35302,11 +35572,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35485,11 +35761,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35500,11 +35782,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35628,11 +35916,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -35675,11 +35969,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35858,11 +36158,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -35873,11 +36179,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36001,11 +36313,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -36048,11 +36366,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36231,11 +36555,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36246,11 +36576,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36374,11 +36710,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -36421,11 +36763,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36604,11 +36952,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36619,11 +36973,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36747,11 +37107,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -36794,11 +37160,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36977,11 +37349,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -36992,11 +37370,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37120,11 +37504,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -37167,11 +37557,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37350,11 +37746,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37365,11 +37767,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37493,11 +37901,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -37540,11 +37954,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37723,11 +38143,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37738,11 +38164,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -37866,11 +38298,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -37913,11 +38351,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38096,11 +38540,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38111,11 +38561,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38239,11 +38695,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -38286,11 +38748,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38469,11 +38937,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38484,11 +38958,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38612,11 +39092,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -38659,11 +39145,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -38794,14 +39286,14 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -38889,7 +39381,7 @@ country_event = {
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -38912,7 +39404,7 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
@@ -39059,11 +39551,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39074,11 +39572,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39202,11 +39706,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -39235,11 +39745,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39404,11 +39920,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39419,11 +39941,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39546,11 +40074,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -39579,11 +40113,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39747,11 +40287,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39762,11 +40308,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -39889,11 +40441,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -39922,11 +40480,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40091,11 +40655,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40106,11 +40676,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40264,11 +40840,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -40297,11 +40879,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40496,11 +41084,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40511,11 +41105,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40663,11 +41263,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -40696,11 +41302,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40888,11 +41500,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -40903,11 +41521,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41031,11 +41655,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -41064,11 +41694,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41233,11 +41869,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41248,11 +41890,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41399,11 +42047,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -41432,11 +42086,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41624,11 +42284,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41639,11 +42305,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41767,11 +42439,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -41800,11 +42478,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41969,11 +42653,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -41984,11 +42674,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42119,11 +42815,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -42152,11 +42854,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42328,11 +43036,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42343,11 +43057,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42471,11 +43191,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -42504,11 +43230,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42673,11 +43405,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42688,11 +43426,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -42839,11 +43583,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -42872,11 +43622,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43064,11 +43820,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43079,11 +43841,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43207,11 +43975,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -43240,11 +44014,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43409,11 +44189,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43424,11 +44210,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43552,11 +44344,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -43585,11 +44383,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43768,11 +44572,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43783,11 +44593,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -43911,11 +44727,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -43944,11 +44766,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44113,11 +44941,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44128,11 +44962,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44256,11 +45096,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -44289,11 +45135,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44458,11 +45310,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44473,11 +45331,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44601,11 +45465,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -44634,11 +45504,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44803,11 +45679,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44818,11 +45700,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -44946,11 +45834,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -44979,11 +45873,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45148,11 +46048,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45163,11 +46069,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45291,11 +46203,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -45324,11 +46242,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45493,11 +46417,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45508,11 +46438,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45636,11 +46572,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -45669,11 +46611,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45838,11 +46786,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45853,11 +46807,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -45981,11 +46941,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -46014,11 +46980,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -46183,11 +47155,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -46198,11 +47176,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -46326,11 +47310,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -46359,11 +47349,17 @@ country_event = {
         }
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -6
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -46487,14 +47483,14 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be ours"
+        name = "$FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurFreedom value = 1 }
 			country_event = 777770430	
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -46582,7 +47578,7 @@ country_event = {
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -46598,7 +47594,7 @@ country_event = {
 		}
     }
     option = {
-        name = "The lands of $FROMCOUNTRY$ shall be ours"
+        name = "The lands of $FROMCOUNTRY$ shall be ours §B[-6]§!"
 		FROM = {
 			set_variable = { which = Puppet_Chomp value = 1 }
 			country_event = 777770431
@@ -46759,11 +47755,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -46887,11 +47889,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -47102,11 +48110,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -47229,11 +48243,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -47443,11 +48463,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -47570,11 +48596,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -47785,11 +48817,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -47943,11 +48981,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -48188,11 +49232,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -48340,11 +49390,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -48578,11 +49634,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -48706,11 +49768,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -48921,11 +49989,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -49072,11 +50146,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -49310,11 +50390,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -49438,11 +50524,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -49653,11 +50745,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -49788,11 +50886,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -50010,11 +51114,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -50138,11 +51248,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -50353,11 +51469,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -50504,11 +51626,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -50742,11 +51870,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -50870,11 +52004,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -51085,11 +52225,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -51213,11 +52359,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -51428,11 +52580,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -51556,11 +52714,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -51771,11 +52935,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -51899,11 +53069,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -52114,11 +53290,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -52242,11 +53424,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -52457,11 +53645,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -52585,11 +53779,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -52800,11 +54000,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -52928,11 +54134,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -53143,11 +54355,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -53271,11 +54489,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -53486,11 +54710,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -53614,11 +54844,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -53829,11 +55065,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -53957,11 +55199,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -54124,7 +55372,7 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -54212,7 +55460,7 @@ country_event = {
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
@@ -54375,11 +55623,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -54503,11 +55757,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -54690,11 +55950,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -54817,11 +56083,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -55003,11 +56275,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -55130,11 +56408,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -55317,11 +56601,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -55475,11 +56765,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -55692,11 +56988,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -55844,11 +57146,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -56054,11 +57362,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -56182,11 +57496,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -56369,11 +57689,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -56520,11 +57846,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -56730,11 +58062,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -56858,11 +58196,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -57045,11 +58389,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -57180,11 +58530,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -57374,11 +58730,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -57502,11 +58864,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -57689,11 +59057,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -57840,11 +59214,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -58050,11 +59430,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -58178,11 +59564,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -58365,11 +59757,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -58493,11 +59891,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -58680,11 +60084,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -58808,11 +60218,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -58995,11 +60411,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -59123,11 +60545,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -59310,11 +60738,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -59438,11 +60872,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -59625,11 +61065,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -59753,11 +61199,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -59940,11 +61392,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -60068,11 +61526,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -60255,11 +61719,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -60383,11 +61853,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -60570,11 +62046,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -60698,11 +62180,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -60885,11 +62373,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
         ai_chance = {
             factor = 1
 			modifier = { factor = 1 has_country_flag = infamous_penalty }
@@ -61013,11 +62507,17 @@ country_event = {
         }
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
 		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
 		create_alliance = FROM
         ai_chance = {
             factor = 1
@@ -61159,7 +62659,7 @@ country_event = {
 		}
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our vassal"
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
 		FROM = {
 			set_variable = { which = Freedom_OurVassal value = 1 }
 			country_event = 777770430	
@@ -61247,7 +62747,7 @@ country_event = {
 		create_alliance = FROM
     }
     option = {
-        name = "$FROMCOUNTRY$ shall be our puppet!"
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!"
 		FROM = {
 			set_variable = { which = Puppet_Puppet value = 1 }
 			country_event = 777770431
