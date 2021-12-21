@@ -138,6 +138,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\politics_upperhouse.dds"
 	}
 	spriteType = {
+		name = "GFX_politics_art"
+		texturefile = "gfx\\interface\\politics_art.dds"
+	}
+	spriteType = {
 		name = "GFX_politics_slavery"
 		texturefile = "gfx\\interface\\politics_slavery.dds"
 	}
@@ -223,6 +227,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_politics_colonial_policy"
 		texturefile = "gfx\\interface\\politics_colonial_policy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_promotion_laws"
+		texturefile = "gfx\\interface\\politics_promotion_laws.dds"
 	}
 	### unciv reforms:
 	spriteType = {
@@ -318,9 +327,6 @@ spriteTypes = {
 		name = "GFX_politics_industrial_construction"
 		texturefile = "gfx\\interface\\politics_industrial_construction.dds"
 	}
-	
-	
-	###
 	
 	spriteType = {
 		name = "GFX_politics_unciv_bg"

@@ -2,10 +2,10 @@
 immigration_focus;Population;;;;;;;;;;;;;x,,
 gendarmerie;Gendarmerie;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 gendarmerie_desc;A gendarmerie is a military force with law enforcement duties among the civilian population.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-proclaim_republic_title;§EFound the Republic§!;;;;;;;;;;;;;x,,
+proclaim_republic_title;Â§EFound the RepublicÂ§!;;;;;;;;;;;;;x,,
 proclaim_republic_desc;We have become the masters of our political destiny, the power of the monarchy has been ceded to the parliament and chancellor, and by extension to ourselves. Now we have within our grasp the ability to finish the job peacefully, and to make We The People the formal basis of our sovereignty!;;;;;;;;;;;;;x
 all_of_mexico_title;All of Mexico!;;;;;;;;;;;;;x,,,
-all_of_mexico_desc;It is not enough to have empty lands, all Mexicans are Americans! §YNOTE: Not an option once the civil war starts.§!;;;;;;;;;;;;;x,,
+all_of_mexico_desc;It is not enough to have empty lands, all Mexicans are Americans! Â§YNOTE: Not an option once the civil war starts.Â§!;;;;;;;;;;;;;x,,
 cultural_expansion_title;Expand the Federation!;;;;;;;;;;;;;x,,,
 cultural_expansion_desc;Whilst we have made excellent progress regardless of our cultures, some are still left out. It is time to bring them as full citizens into the Federation.;;;;;;;;;;;;;x,,
 EVT90056OPTB;They have their sphere, we have ours;;;;;;;;;;;;;x,,
@@ -40,7 +40,7 @@ EVTNAME670001;The New Economy;;;;;;;;;;;;;x,,,
 EVTDESC670001;With the advent of new work oppertunities given by our Supreme Leader, let us force the undesirables to earn their keep in our great nation!;;;;;;;;;;;;;x,,,
 EVT670001OPTA;Get to work!;;;;;;;;;;;;;x,,,
 EVT670001OPTB;Not now, let us bide out time.;;;;;;;;;;;;;x,,,
-i_promise_title;§EI Promise§!;;;;;;;;;;;;;x,,,
+i_promise_title;Â§EI PromiseÂ§!;;;;;;;;;;;;;x,,,
 i_promise_desc;Our rapid growth has alarmed the other great powers. We can now make a promise to them and the international community that we seek no more significant expansion for the next 10 years. We may only make this promise once.;;;;;;;;;;;;;x,,,
 promise_against_expansion;Our Promise;;;;;;;;;;;;;x,,,
 promise_against_expansion_desc;We have promised that for the next 10 years, we will not undertake any siginifant expansion.;;;;;;;;;;;;;x,,,
@@ -52,18 +52,18 @@ claim_mongolia_desc;Long have the Mongolian lands to the north been considered p
 become_democratic_china_title;Restore the Republic!;;;;;;;;;;;;;x,,
 become_democratic_china_desc;Long has the military controlled the government, but now they are reluctantly willing to surrender up the majority of their power to the civiliian administration. This is a new dawn for a free and prosperous China!;;;;;;;;;;;;;x,,
 begin_land_transfer;Begin Land Transfer;;;;;;;;;;;;;x,,
-hide_the_decisions_title;§PHide Extra Decisions§!;;;;;;;;;;;;;x,,
+hide_the_decisions_title;Â§PHide Extra DecisionsÂ§!;;;;;;;;;;;;;x,,
 hide_the_decisions_desc;Remove decisions clutter by hiding the extra decisions modded in by Townes. NOTE: Hides key decisions like advancing research reforms, transfer decisions, or powerful alt-history options.;;;;;;;;;;;;;x,,
-show_the_decisions_title;§PShow Extra Decisions§!;;;;;;;;;;;;;x,,
+show_the_decisions_title;Â§PShow Extra DecisionsÂ§!;;;;;;;;;;;;;x,,
 show_the_decisions_desc;Show the extra decisions modded in by Townes. NOTE: Currently hidden key decisions like advancing research reforms, transfer decisions, or powerful alt-history options.;;;;;;;;;;;;;x,,
-land_transfer_title;§YAllow Land Transfer§!;;;;;;;;;;;;;x,,
-land_transfer_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
-land_transfer_unciv_title;§YAllow Land Transfer§!;;;;;;;;;;;;;x,,
-land_transfer_unciv_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
-end_land_transfer_title;§YDisallow Land Transfer§!;;;;;;;;;;;;;x,,
-end_land_transfer_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
-end_land_transfer_unciv_title;§YDisallow Land Transfer§!;;;;;;;;;;;;;x,,
-end_land_transfer_unciv_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).§Y RP FROM CONQUEST DEBUFF IS CURRENTLY ACTIVE§R Cannot use whilst either is at war.§!;;;;;;;;;;;;;x,,
+land_transfer_title;Â§YAllow Land TransferÂ§!;;;;;;;;;;;;;x,,
+land_transfer_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.Â§R Cannot use whilst either is at war.Â§!;;;;;;;;;;;;;x,,
+land_transfer_unciv_title;Â§YAllow Land TransferÂ§!;;;;;;;;;;;;;x,,
+land_transfer_unciv_desc;Take this decision to enable transfer CBs to be justified on our nation and for us to justify them on others.Â§R Cannot use whilst either is at war.Â§!;;;;;;;;;;;;;x,,
+end_land_transfer_title;Â§YDisallow Land TransferÂ§!;;;;;;;;;;;;;x,,
+end_land_transfer_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).Â§R Cannot use whilst either is at war.Â§!;;;;;;;;;;;;;x,,
+end_land_transfer_unciv_title;Â§YDisallow Land TransferÂ§!;;;;;;;;;;;;;x,,
+end_land_transfer_unciv_desc;Take this decions to prevent transfer CBs being justified on our nation (and to prevent us justifying them on other nations).Â§Y RP FROM CONQUEST DEBUFF IS CURRENTLY ACTIVEÂ§R Cannot use whilst either is at war.Â§!;;;;;;;;;;;;;x,,
 socialist_uh;Socialists want to see the enactment of further political and social reforms.;;;;;;;;;;;;;x,,
 liberal_uh;Liberals want to enact some political reforms, but will also support greater political reform and social reform under conditions of high militancy.;;;;;;;;;;;;;x,,
 EVTNAME777791;Concede to Lower Tarrifs;;;;;;;;;;;;;x,,
@@ -80,9 +80,9 @@ accept_the_portuguese_desc;Now we have united our peoples, we should also seek t
 accept_the_basque_title;Accept the Basque People;;;;;;;;;;;;;x,,
 accept_the_basque_desc;We should reconcile our differences with the Basque people and integrate them as full members in our nation. They are our Iberian brothers!;;;;;;;;;;;;;x,,
 LEDGER_COUNTRY_NAME;Country;Pays;Land;;Pa?;;;;;;;;;x;;;;
-allow_no_cb_wars_title;§EAllow No CB Wars§!;;;;;;;;;x;;;;
+allow_no_cb_wars_title;Â§EAllow No CB WarsÂ§!;;;;;;;;;x;;;;
 allow_no_cb_wars_desc;Our government has managed to convince the populace that we have the right to war for any reason, although the international community is not convinved. Must have jingoism to use this cb.;;;;;;;;;x;;;;
-disallow_no_cb_wars_title;§EDisallow No CB Wars§!;;;;;;;;;x;;;;
+disallow_no_cb_wars_title;Â§EDisallow No CB WarsÂ§!;;;;;;;;;x;;;;
 disallow_no_cb_wars_desc;Times have changed, we no longer seek to justify our right to war to our populace.;;;;;;;;;x;;;;
 EVTNAME777792;Our Republic;;;;;;;;;x;;;;
 EVTDESC777792;The ideals we have in common, the values we share. These allow us to work together like no other government can. The constitution is our instrument, the instrument of We The People.;;;;;;;;;x;;;;
@@ -113,11 +113,11 @@ EVTNAME777799;Dictatorial Executive;;;;;;;;;;;;;x,,
 EVTDESC777799;Our leader and inner circle have no practical restraints on their power from the constitution.;;;;;;;;;;;;;x,,
 EVTNAME777800;Decline of Absolutism;;;;;;;;;;;;;x,,
 EVTDESC777800;The parliament is gaining power at the expense of the monarchy, our system of government is changing.;;;;;;;;;;;;;x,,
-to_limited_funding_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_limited_funding_title;Â§EAdvance Research FundingÂ§!;;;;;;;;;;;;;x,,
 to_limited_funding_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
-to_funded_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_funded_title;Â§EAdvance Research FundingÂ§!;;;;;;;;;;;;;x,,
 to_funded_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
-to_priority_funded_title;§EAdvance Research Funding§!;;;;;;;;;;;;;x,,
+to_priority_funded_title;Â§EAdvance Research FundingÂ§!;;;;;;;;;;;;;x,,
 to_priority_funded_desc;Advances in our nations education and research allow the government to increase funding for research projects, and put more political focus into R&D.;;;;;;;;;;;;;x,,
 secret_police;Secret Police;;;;;;;;;;;;;x,,
 encourage_assimilation;Encourage Assimilation;;;;;;;;;;;;;x,,
@@ -142,9 +142,9 @@ european_culture;European Culture;;;;;;;;;;;;;x,,
 european_culture_desc;Our continental identity will shine!;;;;;;;;;;;;;x,,
 form_the_EU_title;To a United Europe!;;;;;;;;;;;;;x,,
 form_the_EU_desc;As a great power, we can claim the right to establish a free, united, Europe.;;;;;;;;;;;;;x,,
-infamy_for_immigration_selector_title;§ECommence a Pro-immigration Campaign§!;;;;;;;;;;;;;x,,
+infamy_for_immigration_selector_title;Â§ECommence a Pro-immigration CampaignÂ§!;;;;;;;;;;;;;x,,
 infamy_for_immigration_selector_desc;Strongly encourage immigrants to choose us as their destination, this is accomplished via a heavy propaganda campaign, and finanacial incentives such as a free journey.;;;;;;;;;;;;;x,,
-infamy_for_immigration_modifier_removal_title;§EEnd the Pro-immigration Campaign§!;;;;;;;;;;;;;x,,
+infamy_for_immigration_modifier_removal_title;Â§EEnd the Pro-immigration CampaignÂ§!;;;;;;;;;;;;;x,,
 infamy_for_immigration_modifier_removal_desc;End the ongoing campaign to increase the number of immigrants to our lands.;;;;;;;;;;;;;x,,
 EVTNAME1998002;Proposed Immigration Campaign;;;;;;;;;;;;;x,,
 EVTDESC1998002;We can select the level of campaign we desire, or none at all.;;;;;;;;;;;;;x,,
@@ -220,33 +220,24 @@ EVTDESC7777906;Our new medicical knowledge and technology is reapidly decreasing
 old_world_war;At War;;;;;;;;;;;;x
 barrage_fire;Barrage Fire;;;;;;;;;;;;x
 barrage_fire_desc;A barrage is massed sustained artillery fire aimed at a series of points along a line. As well as attacking any enemy in that line, a barrage intends to suppress enemy movement and actions through that line.;;;;;;;;;;;;x
-grant_cooldown;§CGrant Cooldown§!;;;;;;;;;;;;x
+grant_cooldown;Â§CGrant CooldownÂ§!;;;;;;;;;;;;x
 grant_cooldown_desc;We have recently requested aid;;;;;;;;;;;;x
 dutch_accept_walloon_title;Our Walloon Brothers;;;;;;;;;;;;x
 dutch_accept_walloon_desc;Our relationship with the Walloon people has always been close, although fraught with tension. It is time we set aside our quarrels and work together on the major challenges facing us, as one.;;;;;;;;;;;;x
 recently_requested_trade;Recently requested trade;;;;;;;;;;;;x
 recently_requested_trade_desc;We must wait for our negotating team to return;;;;;;;;;;;;x
-infamy_grant_cooldown;§CInfamy grant cooldown§!;;;;;;;;;;;;x
+infamy_grant_cooldown;Â§CInfamy grant cooldownÂ§!;;;;;;;;;;;;x
 infamy_grant_cooldown_desc;We must wait for our diplomatic mission to return;;;;;;;;;;;;x
-will_receive_infamy_transfer_title;§YRequest Infamy Transfer§!;;;;;;;;;;;;x
+will_receive_infamy_transfer_title;Â§YRequest Infamy TransferÂ§!;;;;;;;;;;;;x
 will_receive_infamy_transfer_desc;We are in need of diplomatic aid, let us ask our ally for their public support and stated justifcation on the matter. NOTE: Nations with more than 25 infamy will not recieve the request.;;;;;;;;;;;;x
-will_give_infamy_title;§YPermit Infamy Transfers;;;;;;;;;;;;x
+will_give_infamy_title;Â§YPermit Infamy Transfers;;;;;;;;;;;;x
 will_give_infamy_desc;We will consider the use of our diplomatic abilities to justify the expansions of our allies.;;;;;;;;;;;;x
-will_not_give_infamy_title;§YDeny Infamy Transfers§!;;;;;;;;;;;;x
+will_not_give_infamy_title;Â§YDeny Infamy TransfersÂ§!;;;;;;;;;;;;x
 will_not_give_infamy_desc;We will not allow our diplomats to waste their time justifiying the conquests of others.;;;;;;;;;;;;x
-prevent_trade_deals_title;§YPrevent recieving trade deals§!;;;;;;;;;;;;x
+prevent_trade_deals_title;Â§YPrevent recieving trade dealsÂ§!;;;;;;;;;;;;x
 prevent_trade_deals_desc;We will not recieve any trade deal offers.;;;;;;;;;;;;x
-enable_trade_deals_title;§YAllow trade deal proposals§!;;;;;;;;;;;;x
+enable_trade_deals_title;Â§YAllow trade deal proposalsÂ§!;;;;;;;;;;;;x
 enable_trade_deals_desc;We will recieve trade deal offers.;;;;;;;;;;;;x
-unemployment_subsidies;Welfare;;;;;;;;;;;;x
-trinket_subsidies;Low Subsidies;;;;;;;;;;;;x
-trinket_subsidies_desc;Basic jobseekers allowances are provided by a government agency.;;;;;;;;;;;;x
-low_subsidies;Generous Subsidies;;;;;;;;;;;;x
-low_subsidies_desc;Standard jobseekers allowances are provided by a government agency.;;;;;;;;;;;;x
-acceptable_subsidies;Standard UBI;;;;;;;;;;;;x
-acceptable_subsidies_desc;The government provides a small monthly income to all citizens, regardless of their economic situation. This income is guarantteed and paid from the government budget. §YMust have admin spending at 75% minimum to gain the full effects. This reform will be rescinded if a non socialist/communist government is in power!§!;;;;;;;;;;;;x
-good_subsidies;Advanced UBI;;;;;;;;;;;;x
-good_subsidies_desc;A large sum of money is provided to each citizen monthly. This is an unconditional payment and funded by the government budget. §YMust have admin spending at 100% to gain the full effects. This reform will be rescinded if a non socialist/communist government is in power!§!;;;;;;;;;;;;x
 EVTNAME7777907;Change in Welfare Policy;;;;;;;;;;;;x
 EVTDESC7777907;The party of large tax and large spend is no longer in power, we will now readjust our social spending levels.;;;;;;;;;;;;x
 eic_trigger_the_decision_title;Our Future;;;;;;;;;;;;x
@@ -270,7 +261,7 @@ EVTNAME970701;A New Prince?;x
 EVTDESC970701;Our president is a monarchist, and whilst he has agreed to the status quo, we could take the initiative and request for a prince of spanish decent to take our throne.;x
 EVTOPT970701A;No. The status quo suits us well. We will not suffer the rule of a Spanish king once more.;x
 EVTOPT970701B;Yes. Let us reach out to Spain and get oursleves a new King!;x
-relax_colonial_immigration_restrictions_title;§ERelax Colonial Immigration Restrictions§!;x
+relax_colonial_immigration_restrictions_title;Â§ERelax Colonial Immigration RestrictionsÂ§!;x
 relax_colonial_immigration_restrictions_desc;We can relax our laws regarding immigration from the colonies, this will provide us with more workers and future citizens, althouth the more conservative and reactionary elements of our nation will not be happy. NOTE: This allows migration from colonies to states, limited to half the base rate of migration. This modifier will be removed if the conditions required to take it are no longer met.;x
 increased_migration_to_states;Relaxed Colonial Immigration Laws;x
 EVTNAME7777908;Colonial Immigration Restricted;x
@@ -281,9 +272,9 @@ base_strike_desc;An aircraft carrier is a warship that serves as a seagoing airb
 mountain_warfare;Mountain Warfare;x
 mountain_warfare_desc;Mountain ranges are of strategic importance since they often act as a natural border, and may also be the origin of a water source. Attacking a prepared enemy position in mountain terrain requires a greater ratio of attacking soldiers to defending soldiers than a war conducted on level ground.;x
 bankruptcy_events_disabled;Disables Bankruptcy Events;x
-stop_bankrupt_events_title;§CStop Bankruptcy Events§!;x
+stop_bankrupt_events_title;Â§CStop Bankruptcy EventsÂ§!;x
 stop_bankrupt_events_desc;Prevent bankruptcy events from appearing. (Can re-enable);x
-allow_bankrupt_events_title;§CAllow Bankruptcy Events§!;x
+allow_bankrupt_events_title;Â§CAllow Bankruptcy EventsÂ§!;x
 allow_bankrupt_events_desc;Allow bankruptcy events to appear.;x
 the_white_tzar_title;The White Tzar;x
 the_white_tzar_desc;Due to our influence over Tibet we can now free them from the clasp of the Qing, although this will reinforce Chinese claims to the region and anger the British who may respond.;x
@@ -293,10 +284,10 @@ EVT7777909OPTA;To arms it is;x
 EVT7777909OPTB;We cannot act this time;x
 MILITARY_PERSONALITY;-;x
 MILITARY_BACKGROUND;-;x
-UV_PERSONALITY;$VAL$;Personnalité : $VAL$;Persönlichkeit: $VAL$;;Personalidad: $VAL$;;;;;;;;;x;;;;
-UV_BACKGROUND;$VAL$;Caractéristique : $VAL$;Hintergrund: $VAL$;;Historial: $VAL$;;;;;;;;;x;;;;
-UV_PERSONALITY_LABEL;Defence;Personnalité;Persönlichkeit;;Personalidad;;;;;;;;;x;;;;
-UV_BACKGROUND_LABEL;Attack;Caractéristique;Hintergrund;;Marco histórico;;;;;;;;;x;;;;
+UV_PERSONALITY;$VAL$;PersonnalitÃ© : $VAL$;PersÃ¶nlichkeit: $VAL$;;Personalidad: $VAL$;;;;;;;;;x;;;;
+UV_BACKGROUND;$VAL$;CaractÃ©ristique : $VAL$;Hintergrund: $VAL$;;Historial: $VAL$;;;;;;;;;x;;;;
+UV_PERSONALITY_LABEL;Defence;PersonnalitÃ©;PersÃ¶nlichkeit;;Personalidad;;;;;;;;;x;;;;
+UV_BACKGROUND_LABEL;Attack;CaractÃ©ristique;Hintergrund;;Marco histÃ³rico;;;;;;;;;x;;;;
 EVTNAME7777910;Campaign Setup;x
 EVTDESC7777910;Choosing multiplayer will allow the multiplayer only decisions and events;x
 EVTOPTA7777910;Singleplayer;x
@@ -316,35 +307,35 @@ foreign_eco_invest;Economic Investments;;;;;;;;;;;;;
 haitian_plantations;;;;;;;;;;;;;;
 demand_concession_casus_belli_player_early_for_puppet;Demand Concession Early for Puppet;Demande de concession;Konzession verlangen;;;;;;;;;;;
 demand_concession_casus_belli_player_early_for_puppet_short;Demand $STATE$ for a puppet for 100% more warscore.;Demander $STATE$;Fordern Sie $STATE$;;;;;;;;;;;
-demand_concession_casus_belli_player_early_for_puppet_desc;Force the §Yuncivilized country§W to secede territory to your puppet for 100% more warscore.;Obligez un §Ypays non civilisé§W ?faire sécession d'un territoire pour former une concession coloniale.;Zwingen Sie ein §Yunzivilisiertes Land§W, Gebiete zur Gründung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
-demand_concession_casus_belli_player_early_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
+demand_concession_casus_belli_player_early_for_puppet_desc;Force the Â§Yuncivilized countryÂ§W to secede territory to your puppet for 100% more warscore.;Obligez un Â§Ypays non civilisÃ©Â§W ?faire sÃ©cession d'un territoire pour former une concession coloniale.;Zwingen Sie ein Â§Yunzivilisiertes LandÂ§W, Gebiete zur GrÃ¼ndung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
+demand_concession_casus_belli_player_early_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sÃ©cession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur GrÃ¼ndung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
 demand_concession_casus_belli_ai_early_for_puppet;Demand Concession Early for Puppet;Demande de concession;Konzession verlangen;;;;;;;;;;;
 demand_concession_casus_belli_ai_early_for_puppet_short;Demand $STATE$ for a puppet for 10% more warscore.;Demander $STATE$;Fordern Sie $STATE$;;;;;;;;;;;
-demand_concession_casus_belli_ai_early_for_puppet_desc;Force the §Yuncivilized country§W to secede territory to your puppet for 100% more warscore.;Obligez un §Ypays non civilisé§W ?faire sécession d'un territoire pour former une concession coloniale.;Zwingen Sie ein §Yunzivilisiertes Land§W, Gebiete zur Gründung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
-demand_concession_casus_belli_player_early_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
+demand_concession_casus_belli_ai_early_for_puppet_desc;Force the Â§Yuncivilized countryÂ§W to secede territory to your puppet for 100% more warscore.;Obligez un Â§Ypays non civilisÃ©Â§W ?faire sÃ©cession d'un territoire pour former une concession coloniale.;Zwingen Sie ein Â§Yunzivilisiertes LandÂ§W, Gebiete zur GrÃ¼ndung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
+demand_concession_casus_belli_player_early_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sÃ©cession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur GrÃ¼ndung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
 demand_concession_casus_belli_for_puppet;Demand Concession for a Puppet;Demande de concession;Konzession verlangen;;;;;;;;;;;
 demand_concession_casus_belli_for_puppet_short;Demand $STATE$ for a puppet.;Demander $STATE$;Fordern Sie $STATE$;;;;;;;;;;;
-demand_concession_casus_belli_for_puppet_desc;Force an §Yuncivilized country§W to secede territory to your puppet.;Obligez un §Ypays non civilisé§W ?faire sécession d'un territoire pour former une concession coloniale.;Zwingen Sie ein §Yunzivilisiertes Land§W, Gebiete zur Gründung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
-demand_concession_casus_belli_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet_desc;Force an Â§Yuncivilized countryÂ§W to secede territory to your puppet.;Obligez un Â§Ypays non civilisÃ©Â§W ?faire sÃ©cession d'un territoire pour former une concession coloniale.;Zwingen Sie ein Â§Yunzivilisiertes LandÂ§W, Gebiete zur GrÃ¼ndung einer Kolonialkonzession abzuspalten.;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet_setup;Demand that $RECIPIENT$ secede territory to a puppet.;Demandez ?ce que $RECIPIENT$ fasse sÃ©cession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur GrÃ¼ndung einer Kolonialkonzession abspaltet.;;;;;;;;;;;
 place_in_the_sun_for_puppet;Place in the sun for a Puppet;Une place au soleil;Ein Platz an der Sonne;;;;;;;;;;;
 place_in_the_sun_for_puppet_short;Acquire $STATE$ for a puppet.;Prendre $STATE$;$STATE$ erwerben;;;;;;;;;;;
-place_in_the_sun_for_puppet_desc;Aquire an enemy §Ycolonial state§W for a puppet.;Prendre un §YÉtat colonial§W ennemi;Erobern Sie einen feindlichen §YKolonialstaat§W.;;;;;;;;;;;
+place_in_the_sun_for_puppet_desc;Aquire an enemy Â§Ycolonial stateÂ§W for a puppet.;Prendre un Â§YÃ‰tat colonialÂ§W ennemi;Erobern Sie einen feindlichen Â§YKolonialstaatÂ§W.;;;;;;;;;;;
 place_in_the_sun_for_puppet_setup;Acquire colony $STATE$ from $RECIPIENT$ for a puppet.;Prendre colonie $STATE$ de $RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erwerben;;;;;;;;;;;
 place_in_the_sun_late_for_puppet;Place in the sun for a Puppet;Une place au soleil;Ein Platz an der Sonne;;;;;;;;;;;
 place_in_the_sun_late_for_puppet_short;Acquire $STATE$ 20% less for a puppet.;Prendre $STATE$;$STATE$ erwerben;;;;;;;;;;;
-place_in_the_sun_late_for_puppet_desc;Aquire an enemy §Ycolonial state§W 20% less for a puppet.;Prendre un §YÉtat colonial§W ennemi;Erobern Sie einen feindlichen §YKolonialstaat§W.;;;;;;;;;;;
+place_in_the_sun_late_for_puppet_desc;Aquire an enemy Â§Ycolonial stateÂ§W 20% less for a puppet.;Prendre un Â§YÃ‰tat colonialÂ§W ennemi;Erobern Sie einen feindlichen Â§YKolonialstaatÂ§W.;;;;;;;;;;;
 place_in_the_sun_late_for_puppet_setup;Acquire colony $STATE$ 20% cheaper from $RECIPIENT$ for a puppet.;Prendre colonie $STATE$ de $RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erwerben;;;;;;;;;;;
 acquire_state_for_puppet;Acquire State Earlygame for Puppet;;;;;;;;;;;;;x
-acquire_state_for_puppet_desc;Acquire the state of a §Ycountry§W for a puppet.;;;;;;;;;;;;;x
-acquire_state_for_puppet_short;Aquire an enemy §Ystate§W for a puppet.;;;;;;;;;;;;;x
+acquire_state_for_puppet_desc;Acquire the state of a Â§YcountryÂ§W for a puppet.;;;;;;;;;;;;;x
+acquire_state_for_puppet_short;Aquire an enemy Â§YstateÂ§W for a puppet.;;;;;;;;;;;;;x
 acquire_state_for_puppet_setup;Acquire $STATE$ from $RECIPIENT$ for a puppet.;;;;;;;;;;;;;x
 acquire_state_midgame_for_puppet;Acquire State Midgame for Puppet;;;;;;;;;;;;;x
 acquire_state_midgame_for_puppet_short;Acquire $STATE$ for a puppet.;;;;;;;;;;;;;x
-acquire_state_midgame_for_puppet_desc;Acquire the state of a §Ycountry§W for a puppet. using 33% less warscore;;;;;;;;;;;;;x
+acquire_state_midgame_for_puppet_desc;Acquire the state of a Â§YcountryÂ§W for a puppet. using 33% less warscore;;;;;;;;;;;;;x
 acquire_state_midgame_for_puppet_setup;Acquire $STATE$ from $RECIPIENT$;;;;;;;;;;;;;x
 acquire_state_late_for_puppet;Acquire State Lategame for Puppet;;;;;;;;;;;;;x
 acquire_state_late_for_puppet_short;Acquire $STATE$ for a puppet.;;;;;;;;;;;;;x
-acquire_state_late_for_puppet_desc;Acquire the state of a §Ycountry§W for a puppet using 55% less warscore.;;;;;;;;;;;;;x
+acquire_state_late_for_puppet_desc;Acquire the state of a Â§YcountryÂ§W for a puppet using 55% less warscore.;;;;;;;;;;;;;x
 acquire_state_late_for_puppet_setup;Acquire $STATE$ from $RECIPIENT$;;;;;;;;;;;;;x
 total_war_state_for_puppet;Total War Acquire State for Puppet;;;;;;;;;;;
 total_war_state_for_puppet_short;The time has come to wipe the very idea of $RECIPIENT$ from the annals of history;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -359,14 +350,37 @@ negotiated_transfer_for_puppet_desc;Transfer a state or colonial region to anoth
 negotiated_transfer_for_puppet_short;$RECIPIENT$ receives $STATE$ from us;;;;;;;;;;;;;x
 negotiated_transfer_for_puppet_setup;Transfer $STATE$ to $RECIPIENT$;;;;;;;;;;;;x
 take_capital_for_puppet;Take Capital for Puppet;;;;;;;;;;;;;x
-take_capital_for_puppet_desc;Take the Capital region of a §Ycountry§W for a puppet and force them to move their capital elsewhere;;;;;;;;;;;;;x
+take_capital_for_puppet_desc;Take the Capital region of a Â§YcountryÂ§W for a puppet and force them to move their capital elsewhere;;;;;;;;;;;;;x
 take_capital_for_puppet_setup;Take Capital region $STATE$ of $RECIPIENT$ for a puppet.;;;;;;;;;;;;;x
 take_capital_for_puppet_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
 take_capital_midgame_for_puppet;Take Capital Midgame for Puppet;;;;;;;;;;;;;x
-take_capital_midgame_for_puppet_desc;Take the Capital region of a §Ycountry§W for a puppet and force them to move their capital elsewhere for 33% less warscore.;;;;;;;;;;;;;x
+take_capital_midgame_for_puppet_desc;Take the Capital region of a Â§YcountryÂ§W for a puppet and force them to move their capital elsewhere for 33% less warscore.;;;;;;;;;;;;;x
 take_capital_midgame_for_puppet_setup;Take Capital region $STATE$ of $RECIPIENT$ for a puppet.;;;;;;;;;;;;;x
 take_capital_midgame_for_puppet_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
 take_capital_late_for_puppet;Take Capital Lategame for Puppet;;;;;;;;;;;;;x
-take_capital_late_for_puppet_desc;Take the Capital region of a §Ycountry§W for a puppet and force them to move their capital elsewhere for 55% less warscore.;;;;;;;;;;;;;x
+take_capital_late_for_puppet_desc;Take the Capital region of a Â§YcountryÂ§W for a puppet and force them to move their capital elsewhere for 55% less warscore.;;;;;;;;;;;;;x
 take_capital_late_for_puppet_setup;Take Capital region $STATE$ of $RECIPIENT$ for a puppet.;;;;;;;;;;;;;x
 take_capital_late_for_puppet_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
+no_endowment;No Endowment;No Endowment;No Endowment;;No Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+no_endowment_l;No Endowment;No Endowment;No Endowment;;No Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+no_endowment_desc;The arts are privately funded.;No Endowment;No Endowment;;No Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+small_endowment;Small Endowment;Small Endowment;Small Endowment;;Small Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+small_endowment_l;Small Endowment;Small Endowment;Small Endowment;;Small Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+small_endowment_desc;The government provides a trinket sum for the arts.;Small Endowment;Small Endowment;;Small Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+medium_endowment;Medium Endowment;Medium Endowment;Medium Endowment;;Medium Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+medium_endowment_l;Medium Endowment;Medium Endowment;Medium Endowment;;Medium Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+medium_endowment_desc;Artists are moderately subsidized by the government.;Medium Endowment;Medium Endowment;;Medium Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+large_endowment;Large Endowment;Large Endowment;Large Endowment;;Large Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+large_endowment_l;Large Endowment;Large Endowment;Large Endowment;;Large Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+large_endowment_desc;Artists are heavily supported by the government.;Large Endowment;Large Endowment;;Large Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+massive_endowment;Massive Endowment;Massive Endowment;Massive Endowment;;Massive Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+massive_endowment_l;Massive Endowment;Massive Endowment;Massive Endowment;;Massive Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+massive_endowment_desc;There's a museum on every street corner.;Large Endowment;Large Endowment;;Large Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+arts_endowment;Arts Endowment;Arts Endowment;Arts Endowment;;Arts Endowment;;;;;;;;;x;;;;;;;;;;;;;;,,,,,
+promotion_laws;Promotion Laws;;;;;;;;;;;;;
+privlage_benefits;Privilege Benefit Based;;;;;;;;;;;;;
+privlage_benefits_desc;The Rich Class and Prominent Families can use existing laws to justify taking over government positions over competent individuals;;;;;;;;;;;;;
+nepotism;Nepotism;;;;;;;;;;;;;
+nepotism_desc;A handfull of most influential families are in controll of our most important government positions.\nÂ§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential and Church Influence beyond Very Influential. This Process can be speed up if you're a republic.Â§W\n;;;;;;;;;;;;;
+skill_and_merit_based;Based on Skill and Merit;;;;;;;;;;;;;
+skill_and_merit_based_desc;Individuals are given government positions based on their accomplishments, not titles.\nÂ§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential, Church Influence beyond Very Influential and increase Beaurocratic Influence above Slightly Influential. This Process can be speed up if you're a republic.Â§W\n;;;;;;;;;;;;;
