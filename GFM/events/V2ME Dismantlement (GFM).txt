@@ -10082,6 +10082,23 @@ country_event = {
 					set_variable = { which = Eighth_Victor_Complete value = 0 }
 					set_variable = { which = Secondary_Claim value = 0 }
 					set_variable = { which = dismantlement_dollars value = 0 }
+					set_variable = { which = Colony_Event_Sent value = 0 }
+					set_variable = { which = Puppet_Event_Sent value = 0 }
+					set_variable = { which = core_count value = 0 }
+					set_variable = { which = pop_count value = 0 }
+					set_variable = { which = Non_Rewritable_State value = 0 }
+					set_variable = { which = Puppet_Freedom value = 0 }
+					set_variable = { which = Puppet_Puppet value = 0 }
+					set_variable = { which = Puppet_As_Is value = 0 }
+					set_variable = { which = Puppet_Apathy value = 0 }
+					set_variable = { which = Puppet_Chomp value = 0 }
+					set_variable = { which = Integrate_Union_One value = 0 }
+					set_variable = { which = Integrate_Union_Two value = 0 }
+					set_variable = { which = Integrate_Union_Four value = 0 }
+					set_variable = { which = Puppet_Integrate_One value = 0 }
+					set_variable = { which = Puppet_Integrate_Two value = 0 }
+					set_variable = { which = Puppet_Integrate_Four value = 0 }
+					
 					clr_country_flag = dismantlement_dollars_target
 					clr_country_flag = common_government_bonus
 					clr_country_flag = conflicting_government_penalty
@@ -10093,9 +10110,66 @@ country_event = {
 					clr_country_flag = annex_overwrite
 					
 					#colony var cleanup
-					set_variable = { which = Tunisia_Colony value = 0 }
 					set_variable = { which = Algeria_Colony value = 0 }
-					set_variable = { which = Morocco_Colony value = 0 } 
+					set_variable = { which = Tunisia_Colony value = 0 }
+					set_variable = { which = Morocco_Colony value = 0 }
+					set_variable = { which = Western_Sahara_Colony value = 0 }
+					set_variable = { which = Egypt_Colony value = 0 }
+					set_variable = { which = Sudan_Colony value = 0 }
+					set_variable = { which = Darfur_Colony value = 0 }
+					set_variable = { which = Canary_Islands_Colony value = 0 }
+					set_variable = { which = Cabo_Islands_Colony value = 0 }
+					set_variable = { which = Tranza_Colony value = 0 }
+					set_variable = { which = Mali_Colony value = 0 }
+					set_variable = { which = Senegal_Colony value = 0 }
+					set_variable = { which = Niger_Colony value = 0 }
+					set_variable = { which = Chad_Colony value = 0 }
+					set_variable = { which = Upper_Volta_Colony value = 0 }
+					set_variable = { which = Guinea_Bissau_Colony value = 0 }
+					set_variable = { which = Guinea_Colony value = 0 }
+					set_variable = { which = Sierra_Leone_Colony value = 0 }
+					set_variable = { which = Liberia_Colony value = 0 }
+					set_variable = { which = Ivory_Coast_Colony value = 0 }
+					set_variable = { which = Ghana_Colony value = 0 }
+					set_variable = { which = Togo_Colony value = 0 }
+					set_variable = { which = Dahomey_Colony value = 0 }
+					set_variable = { which = Ethiopia_Colony value = 0 }
+					set_variable = { which = Somalia_Colony value = 0 }
+					set_variable = { which = Nigeria_Colony value = 0 }
+					set_variable = { which = Cameroon_Colony value = 0 }
+					set_variable = { which = Equatorial_Guinea_Colony value = 0 }
+					set_variable = { which = Sao_Tome_and_Principe_Colony value = 0 }
+					set_variable = { which = Central_African_Republic_Colony value = 0 }
+					set_variable = { which = Gabon_Colony value = 0 }
+					set_variable = { which = DR_Congo_Colony value = 0 }
+					set_variable = { which = Angola_Colony value = 0 }
+					set_variable = { which = Uganda_Colony value = 0 }
+					set_variable = { which = Kenya_Colony value = 0 }
+					set_variable = { which = Tanganyika_Colony value = 0 }
+					set_variable = { which = Mozambique_Colony value = 0 }
+					set_variable = { which = Madagascar_Colony value = 0 }
+					set_variable = { which = Comoros_Colony value = 0 }
+					set_variable = { which = Botswana_Colony value = 0 }
+					set_variable = { which = Swaziland_Colony value = 0 }
+					set_variable = { which = Seychelles_Colony value = 0 }
+					set_variable = { which = Tripolitania_Colony value = 0 }
+					set_variable = { which = Cyrenaica_Colony value = 0 }
+					set_variable = { which = The_Gambia_Colony value = 0 }
+					set_variable = { which = Eritrea_Colony value = 0 }
+					set_variable = { which = Djibouti_Colony value = 0 }
+					set_variable = { which = Congo_Colony value = 0 }
+					set_variable = { which = Rwanda_Colony value = 0 }
+					set_variable = { which = Burundi_Colony value = 0 }
+					set_variable = { which = Namibia_Colony value = 0 }
+					set_variable = { which = Lesotho_Colony value = 0 }
+					set_variable = { which = Malawi_Colony value = 0 }
+					set_variable = { which = Zambia_Colony value = 0 }
+					set_variable = { which = Rhodesia_Colony value = 0 }
+					set_variable = { which = Annex_Colony value = 0 }
+					set_variable = { which = Give_Away_Colony value = 0 }
+					set_variable = { which = As_Is_Colony value = 0 }
+					set_variable = { which = Independent_Colony value = 0 }
+					set_variable = { which = Integrate_Colony value = 0 }
 				}
 			}
 		}
