@@ -9,12 +9,11 @@
 #	0630-0639	Second Wave Bounce Events (Ai)
 #	0640-0649	Primary Effect Bouncing Events
 #	0650-0679	Primary Victor Response Events
-#	0480-0489	Secondary First Wave Bounce Events (Ai)
-#	0490-0499	Secondary Victor Leading Decision Events
-#	0500-0509	Secondary Second Wave Bounce Events (Ai)
-#	0510-0519	Secondary Effect Bouncing Evenets
-#	0520-0549	Secondary Victor Response Events
-#	0550-0559	Effect Events
+#	0750-0759	Effects Events
+#	1500-1599	Additional Menu Events Colonial - Multiple Victors with Annexation
+#	1900-1999	Additional Menu Events Colonial - Multiple Victors without Annexation
+#	3000-3099	Additional Menu Events Colonial - Single Victor with Annexation
+#	3100-3199	Additional Menu Events Colonial - Single Victor without Annexation
 
 #####		Colonial First Wave Bounce Events (Ai)	610-619		#####
 
