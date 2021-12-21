@@ -10098,6 +10098,7 @@ country_event = {
 					set_variable = { which = Puppet_Integrate_One value = 0 }
 					set_variable = { which = Puppet_Integrate_Two value = 0 }
 					set_variable = { which = Puppet_Integrate_Four value = 0 }
+					set_variable = { which = Core_Event_Sent value = 0 }
 					
 					clr_country_flag = dismantlement_dollars_target
 					clr_country_flag = common_government_bonus
