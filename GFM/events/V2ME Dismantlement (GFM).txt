@@ -11310,7 +11310,7 @@ country_event = {
     id = 777770425
     title = "What would you like to do with $FROMCOUNTRY$ cores?"
     desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
-	picture = "Dismantle 16"
+	picture = "Dismantle 25"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 
@@ -17075,7 +17075,7 @@ country_event = {
     id = 777770452
     title = "What is our stance on $FROMCOUNTRY$?"
     desc = "The Conference Chair does not care about $FROMCOUNTRY$. Should we propose our own plans?"
-	picture = "dismantle 14"
+	picture = "dismantle 25"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -20562,7 +20562,7 @@ country_event = {
     id = 777770474
     title = "What is our stance on $FROMCOUNTRY$?"
     desc = "The Conference Chair wishes to annex $FROMCOUNTRY$ cores. How do we respond?"
-	picture = "dismantle 19"
+	picture = "dismantle 24"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -42910,7 +42910,7 @@ country_event = {
     id = 777772009
     title = "What would you like to do with $FROMCOUNTRY$?"
     desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
-	picture = "dismantle 17"
+	picture = "dismantle 24"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -54759,7 +54759,7 @@ country_event = {
     id = 777772320
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
-	picture = "Dismantle 22"
+	picture = "Dismantle 23"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -55391,7 +55391,7 @@ country_event = {
     id = 777772322
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
-	picture = "Dismantle 18"
+	picture = "Dismantle 24"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -67667,7 +67667,7 @@ country_event = {
     id = 777772616
     title = "What would you like to do with $FROMCOUNTRY$?"
     desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
-	picture = "dismantle 20"
+	picture = "dismantle 23"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -68147,7 +68147,7 @@ country_event = {
     id = 777772717
     title = "What should be done with the $FROMCOUNTRY$ puppet state?"
     desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
-	picture = "dismantle 15"
+	picture = "dismantle 25"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
@@ -75535,7 +75535,7 @@ country_event = {
     id = 777772921
     title = "What would you like to do with $FROMCOUNTRY$?"
     desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
-	picture = "Dismantle 21"
+	picture = "Dismantle 23"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
