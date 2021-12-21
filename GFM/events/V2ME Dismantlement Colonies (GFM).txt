@@ -659,7 +659,7 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777770622
+			country_event = 777770623
 		}
 		any_country = {
 			limit = {
@@ -871,7 +871,7 @@ country_event = {
 				}
 			}
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
-			country_event = 777770622
+			country_event = 777770623
 		}
 #
 #		Intergrations
@@ -899,7 +899,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = WSA }
 			}
@@ -918,7 +918,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -936,7 +936,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = WSA }
 			}
 			FROM = {
@@ -976,7 +976,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = TRI tag = CYR } }
 			}
@@ -999,7 +999,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = TRI tag = CYR } }
 			}
 			FROM = {
@@ -1021,7 +1021,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = TRI tag = CYR } }
 			}
 			FROM = {
@@ -1065,7 +1065,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = SUD tag = DAR } }
 			}
@@ -1088,7 +1088,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = SUD tag = DAR } }
 			}
 			FROM = {
@@ -1110,7 +1110,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = SUD tag = DAR } }
 			}
 			FROM = {
@@ -1150,7 +1150,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = GMB }
 			}
@@ -1169,7 +1169,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = GMB }
 			}
 			FROM = {
@@ -1187,7 +1187,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = GMB }
 			}
 			FROM = {
@@ -1223,7 +1223,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = ERT }
 			}
@@ -1242,7 +1242,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = ERT }
 			}
 			FROM = {
@@ -1260,7 +1260,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = ERT }
 			}
 			FROM = {
@@ -1296,7 +1296,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { tag = DJI }
 			}
@@ -1315,7 +1315,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = DJI }
 			}
 			FROM = {
@@ -1333,7 +1333,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { tag = DJI }
 			}
 			FROM = {
@@ -1377,7 +1377,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
 			}
@@ -1404,7 +1404,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
 			}
 			FROM = {
@@ -1430,7 +1430,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = CGO tag = RWA tag = BRD } }
 			}
 			FROM = {
@@ -1478,7 +1478,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = NMB tag = BSH } }
 			}
@@ -1501,7 +1501,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = NMB tag = BSH } }
 			}
 			FROM = {
@@ -1523,7 +1523,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = NMB tag = BSH } }
 			}
 			FROM = {
@@ -1571,7 +1571,7 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
-				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }}
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
 				NOT = { has_global_flag = Total_One_Victor }
 				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
 			}
@@ -1598,7 +1598,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				check_variable = { which = dismantlement_dollars value = 0.99 }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
 			}
 			FROM = {
@@ -1624,7 +1624,7 @@ country_event = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
 				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
-				has_global_flag = Total_One_Victor }
+				has_global_flag = Total_One_Victor
 				THIS = { OR = { tag = MLW tag = ZAM tag = RHO } }
 			}
 			FROM = {
