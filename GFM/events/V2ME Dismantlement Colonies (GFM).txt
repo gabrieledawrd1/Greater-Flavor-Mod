@@ -30,6 +30,8 @@ country_event = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
 				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
 				NOT = {
 					THIS = {
 						OR = {
@@ -236,6 +238,645 @@ country_event = {
 			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
 			country_event = 777770620
 		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor
+				NOT = {
+					THIS = {
+						OR = {
+							tag = WSA
+							tag = TRI
+							tag = GMB
+							tag = ERT
+							tag = DJI
+							tag = CGO
+							tag = RWA
+							tag = BRD
+							tag = NMB
+							tag = BSH
+							tag = MLW
+							tag = ZAM
+							tag = RHO
+							AND = {
+								tag = DAR
+								OR = {
+									SUD = { exists = yes }
+									EGY = { exists = yes }
+								}
+							}
+							tag = CYR
+							AND = {
+								tag = SUD
+								EGY = { exists = yes }
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ALD } } }
+					owner = { THIS = { set_variable = { which = Algeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TUN } } }
+					owner = { THIS = { set_variable = { which = Tunisia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOR } } }
+					owner = { THIS = { set_variable = { which = Morocco_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EGY } } }
+					owner = { THIS = { set_variable = { which = Egypt_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNR } } }
+					owner = { THIS = { set_variable = { which = Canary_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CPV } } }
+					owner = { THIS = { set_variable = { which = Cabo_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRZ } } }
+					owner = { THIS = { set_variable = { which = Tranza_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLI } } }
+					owner = { THIS = { set_variable = { which = Mali_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SNG } } }
+					owner = { THIS = { set_variable = { which = Senegal_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NIG } } }
+					owner = { THIS = { set_variable = { which = Niger_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CHD } } }
+					owner = { THIS = { set_variable = { which = Chad_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BKF } } }
+					owner = { THIS = { set_variable = { which = Upper_Volta_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNB } } }
+					owner = { THIS = { set_variable = { which = Guinea_Bissau_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNE } } }
+					owner = { THIS = { set_variable = { which = Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SLE } } }
+					owner = { THIS = { set_variable = { which = Sierra_Leone_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = LIB } } }
+					owner = { THIS = { set_variable = { which = Liberia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = IVC } } }
+					owner = { THIS = { set_variable = { which = Ivory_Coast_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GHN } } }
+					owner = { THIS = { set_variable = { which = Ghana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TOG } } }
+					owner = { THIS = { set_variable = { which = Togo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAH } } }
+					owner = { THIS = { set_variable = { which = Dahomey_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ETH } } }
+					owner = { THIS = { set_variable = { which = Ethiopia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SOM } } }
+					owner = { THIS = { set_variable = { which = Somalia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NGR } } }
+					owner = { THIS = { set_variable = { which = Nigeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMR } } }
+					owner = { THIS = { set_variable = { which = Cameroon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EQG } } }
+					owner = { THIS = { set_variable = { which = Equatorial_Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = STP } } }
+					owner = { THIS = { set_variable = { which = Sao_Tome_and_Principe_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CAR } } }
+					owner = { THIS = { set_variable = { which = Central_African_Republic_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GAB } } }
+					owner = { THIS = { set_variable = { which = Gabon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNG } } }
+					owner = { THIS = { set_variable = { which = DR_Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ANG } } }
+					owner = { THIS = { set_variable = { which = Angola_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BUG } } }
+					owner = { THIS = { set_variable = { which = Uganda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = KNY } } }
+					owner = { THIS = { set_variable = { which = Kenya_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TNZ } } }
+					owner = { THIS = { set_variable = { which = Tanganyika_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOZ } } }
+					owner = { THIS = { set_variable = { which = Mozambique_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MAD } } }
+					owner = { THIS = { set_variable = { which = Madagascar_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMS } } }
+					owner = { THIS = { set_variable = { which = Comoros_Colony value = 1 } } }
+				}
+				random_owned = {
+                    limit = { owner = { THIS = { tag = TSW } } }
+					owner = { THIS = { set_variable = { which = Botswana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUA } } }
+					owner = { THIS = { set_variable = { which = Swaziland_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SEY } } }
+					owner = { THIS = { set_variable = { which = Seychelles_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770621
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = {
+					THIS = {
+						OR = {
+							tag = WSA
+							tag = TRI
+							tag = GMB
+							tag = ERT
+							tag = DJI
+							tag = CGO
+							tag = RWA
+							tag = BRD
+							tag = NMB
+							tag = BSH
+							tag = MLW
+							tag = ZAM
+							tag = RHO
+							AND = {
+								tag = DAR
+								OR = {
+									SUD = { exists = yes }
+									EGY = { exists = yes }
+								}
+							}
+							tag = CYR
+							AND = {
+								tag = SUD
+								EGY = { exists = yes }
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ALD } } }
+					owner = { THIS = { set_variable = { which = Algeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TUN } } }
+					owner = { THIS = { set_variable = { which = Tunisia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOR } } }
+					owner = { THIS = { set_variable = { which = Morocco_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EGY } } }
+					owner = { THIS = { set_variable = { which = Egypt_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNR } } }
+					owner = { THIS = { set_variable = { which = Canary_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CPV } } }
+					owner = { THIS = { set_variable = { which = Cabo_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRZ } } }
+					owner = { THIS = { set_variable = { which = Tranza_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLI } } }
+					owner = { THIS = { set_variable = { which = Mali_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SNG } } }
+					owner = { THIS = { set_variable = { which = Senegal_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NIG } } }
+					owner = { THIS = { set_variable = { which = Niger_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CHD } } }
+					owner = { THIS = { set_variable = { which = Chad_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BKF } } }
+					owner = { THIS = { set_variable = { which = Upper_Volta_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNB } } }
+					owner = { THIS = { set_variable = { which = Guinea_Bissau_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNE } } }
+					owner = { THIS = { set_variable = { which = Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SLE } } }
+					owner = { THIS = { set_variable = { which = Sierra_Leone_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = LIB } } }
+					owner = { THIS = { set_variable = { which = Liberia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = IVC } } }
+					owner = { THIS = { set_variable = { which = Ivory_Coast_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GHN } } }
+					owner = { THIS = { set_variable = { which = Ghana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TOG } } }
+					owner = { THIS = { set_variable = { which = Togo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAH } } }
+					owner = { THIS = { set_variable = { which = Dahomey_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ETH } } }
+					owner = { THIS = { set_variable = { which = Ethiopia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SOM } } }
+					owner = { THIS = { set_variable = { which = Somalia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NGR } } }
+					owner = { THIS = { set_variable = { which = Nigeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMR } } }
+					owner = { THIS = { set_variable = { which = Cameroon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EQG } } }
+					owner = { THIS = { set_variable = { which = Equatorial_Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = STP } } }
+					owner = { THIS = { set_variable = { which = Sao_Tome_and_Principe_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CAR } } }
+					owner = { THIS = { set_variable = { which = Central_African_Republic_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GAB } } }
+					owner = { THIS = { set_variable = { which = Gabon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNG } } }
+					owner = { THIS = { set_variable = { which = DR_Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ANG } } }
+					owner = { THIS = { set_variable = { which = Angola_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BUG } } }
+					owner = { THIS = { set_variable = { which = Uganda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = KNY } } }
+					owner = { THIS = { set_variable = { which = Kenya_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TNZ } } }
+					owner = { THIS = { set_variable = { which = Tanganyika_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOZ } } }
+					owner = { THIS = { set_variable = { which = Mozambique_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MAD } } }
+					owner = { THIS = { set_variable = { which = Madagascar_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMS } } }
+					owner = { THIS = { set_variable = { which = Comoros_Colony value = 1 } } }
+				}
+				random_owned = {
+                    limit = { owner = { THIS = { tag = TSW } } }
+					owner = { THIS = { set_variable = { which = Botswana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUA } } }
+					owner = { THIS = { set_variable = { which = Swaziland_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SEY } } }
+					owner = { THIS = { set_variable = { which = Seychelles_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770622
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor
+				NOT = {
+					THIS = {
+						OR = {
+							tag = WSA
+							tag = TRI
+							tag = GMB
+							tag = ERT
+							tag = DJI
+							tag = CGO
+							tag = RWA
+							tag = BRD
+							tag = NMB
+							tag = BSH
+							tag = MLW
+							tag = ZAM
+							tag = RHO
+							AND = {
+								tag = DAR
+								OR = {
+									SUD = { exists = yes }
+									EGY = { exists = yes }
+								}
+							}
+							tag = CYR
+							AND = {
+								tag = SUD
+								EGY = { exists = yes }
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+					limit = { owner = { THIS = { tag = ALD } } }
+					owner = { THIS = { set_variable = { which = Algeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TUN } } }
+					owner = { THIS = { set_variable = { which = Tunisia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOR } } }
+					owner = { THIS = { set_variable = { which = Morocco_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = WSA } } }
+					owner = { THIS = { set_variable = { which = Western_Sahara_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EGY } } }
+					owner = { THIS = { set_variable = { which = Egypt_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUD } } }
+					owner = { THIS = { set_variable = { which = Sudan_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAR } } }
+					owner = { THIS = { set_variable = { which = Darfur_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNR } } }
+					owner = { THIS = { set_variable = { which = Canary_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CPV } } }
+					owner = { THIS = { set_variable = { which = Cabo_Islands_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TRZ } } }
+					owner = { THIS = { set_variable = { which = Tranza_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MLI } } }
+					owner = { THIS = { set_variable = { which = Mali_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SNG } } }
+					owner = { THIS = { set_variable = { which = Senegal_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NIG } } }
+					owner = { THIS = { set_variable = { which = Niger_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CHD } } }
+					owner = { THIS = { set_variable = { which = Chad_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BKF } } }
+					owner = { THIS = { set_variable = { which = Upper_Volta_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNB } } }
+					owner = { THIS = { set_variable = { which = Guinea_Bissau_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GNE } } }
+					owner = { THIS = { set_variable = { which = Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SLE } } }
+					owner = { THIS = { set_variable = { which = Sierra_Leone_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = LIB } } }
+					owner = { THIS = { set_variable = { which = Liberia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = IVC } } }
+					owner = { THIS = { set_variable = { which = Ivory_Coast_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GHN } } }
+					owner = { THIS = { set_variable = { which = Ghana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TOG } } }
+					owner = { THIS = { set_variable = { which = Togo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = DAH } } }
+					owner = { THIS = { set_variable = { which = Dahomey_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ETH } } }
+					owner = { THIS = { set_variable = { which = Ethiopia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SOM } } }
+					owner = { THIS = { set_variable = { which = Somalia_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = NGR } } }
+					owner = { THIS = { set_variable = { which = Nigeria_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMR } } }
+					owner = { THIS = { set_variable = { which = Cameroon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = EQG } } }
+					owner = { THIS = { set_variable = { which = Equatorial_Guinea_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = STP } } }
+					owner = { THIS = { set_variable = { which = Sao_Tome_and_Principe_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CAR } } }
+					owner = { THIS = { set_variable = { which = Central_African_Republic_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = GAB } } }
+					owner = { THIS = { set_variable = { which = Gabon_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CNG } } }
+					owner = { THIS = { set_variable = { which = DR_Congo_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = ANG } } }
+					owner = { THIS = { set_variable = { which = Angola_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = BUG } } }
+					owner = { THIS = { set_variable = { which = Uganda_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = KNY } } }
+					owner = { THIS = { set_variable = { which = Kenya_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = TNZ } } }
+					owner = { THIS = { set_variable = { which = Tanganyika_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MOZ } } }
+					owner = { THIS = { set_variable = { which = Mozambique_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = MAD } } }
+					owner = { THIS = { set_variable = { which = Madagascar_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = CMS } } }
+					owner = { THIS = { set_variable = { which = Comoros_Colony value = 1 } } }
+				}
+				random_owned = {
+                    limit = { owner = { THIS = { tag = TSW } } }
+					owner = { THIS = { set_variable = { which = Botswana_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SUA } } }
+					owner = { THIS = { set_variable = { which = Swaziland_Colony value = 1 } } }
+				}
+				random_owned = {
+					limit = { owner = { THIS = { tag = SEY } } }
+					owner = { THIS = { set_variable = { which = Seychelles_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770622
+		}
+#
+#		Intergrations
+#
 		any_country = {
 			limit = {
 				FROM = { NOT = { has_country_flag = too_many_deliveries } }
