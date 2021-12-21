@@ -555,6 +555,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_1
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -601,6 +602,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_2
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -647,6 +649,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_3
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -693,6 +696,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_4
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -739,6 +743,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_5
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -785,6 +790,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_6
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -831,6 +837,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_7
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
@@ -877,6 +884,7 @@ country_event = {
 					}
 				}
 				owner = {
+					clr_global_flag = conference_8
 					set_variable = { which = dismantlement_leader value = 0 }
 					any_country = {
 						limit = {
