@@ -109,9 +109,6 @@ option_disable_colonial_railroading_desc;Remove the AIs preference for historica
 option_initiate_mp_setup_title;§POption: Multiplayer Setup§!;x
 option_initiate_mp_setup_desc;Set the mp_setup global flag to unlock features excelusive to mp, and block op sp effects.;x
 nge_resources_desc;We must strike the earth to take advantage of our natural resources, many of which can be used in our flourishing new industrial economy.;x
-commerce_raider;Submarine;x
-commerce_raider_short;SR;x
-commerce_raiders;Submarines;x
 commerce_raiders_desc;A submarine (or sub) is a watercraft capable of independent operation underwater.;x
 first_combat_subs;First Combat Submarines;x
 first_combat_subs_desc;The submarine became a potentially viable weapon with the development of the Whitehead torpedo, designed in 1866 by British engineer Robert Whitehead, the first practical self-propelled or 'locomotive' torpedo. The spar torpedo that had been developed earlier by the Confederate States Navy was considered to be impracticable, as it was believed to have sunk both its intended target, and probably H. L. Hunley, the submarine that deployed it.;x
