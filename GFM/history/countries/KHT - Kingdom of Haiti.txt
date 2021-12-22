@@ -1,5 +1,5 @@
 capital = 2215
-primary_culture = afro_antillean
+primary_culture = afro_french
 culture = mulatto
 culture = polish
 religion = catholic
@@ -31,6 +31,9 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = mandatory_service
 debt_law = peonage
 penal_system = capital_punishment
@@ -77,7 +80,7 @@ mechanical_production = 1
 
 # Inventions
 dragoon_activation = yes
-bottling_process = yes
+#bottling_process = yes
 modern_winemaking = yes
 #HAI_unit3 = yes
 

@@ -29,6 +29,9 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = mandatory_service
 debt_law = debtors_prisons
 penal_system = incarceration

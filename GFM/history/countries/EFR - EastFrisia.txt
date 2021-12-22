@@ -27,7 +27,10 @@ press_rights=censored_press
 trade_unions=non_socialist
 political_parties=gerrymandering
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = one_year_draft
 debt_law = debtors_prisons
 penal_system = capital_punishment

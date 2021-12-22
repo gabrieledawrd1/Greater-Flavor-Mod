@@ -4973,3 +4973,48 @@ hai_rev_vets = {
 
 
 
+sending_embassy = { 
+    icon = 19
+} 
+pressuring_japan = { 
+    icon = 6 
+} 
+rheinbegradigt = {
+    local_factory_throughput = 0.5
+    local_RGO_throughput = 0.5
+    local_ruling_party_support = 0.2
+    icon = 15
+}
+aggression_against_russia = { 
+    icon = 15 
+}
+raging_russia = { 
+    global_pop_militancy_modifier = 0.2
+    icon = 2
+}
+
+paralyzed_tsardom = { 
+    icon = 6
+} 
+bushiguntai_enacted = { 
+    org_regain = -0.1
+    land_organisation = 0.1
+    land_unit_start_experience = 5
+    supply_consumption = -0.05
+    mobilisation_size = -0.2
+    icon = 15
+}
+resistance_to_new_regime = { 
+    global_pop_militancy_modifier = 0.01
+    global_pop_consciousness_modifier = 0.01
+    rgo_output = -0.2
+    cb_generation_speed_modifier = -0.3
+    icon = 4
+}
+
+shinsengumi_policing = { 
+    pop_militancy_modifier = 0.05 
+    pop_consciousness_modifier = 0.05 
+    administrative_efficiency_modifier = 0.2
+    icon = 4
+} 

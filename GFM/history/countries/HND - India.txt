@@ -57,6 +57,9 @@ colonial_policy = no_colonies
 
 
 # New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = two_year_draft
 debt_law = serfdom
 penal_system = capital_punishment

@@ -52,7 +52,10 @@ school_reforms = low_schools
 set_country_flag = protestant_country
 set_country_flag = new_world_nation
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = two_year_draft
 debt_law = peonage
 penal_system = capital_punishment

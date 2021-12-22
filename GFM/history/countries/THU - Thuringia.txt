@@ -28,7 +28,10 @@ press_rights=censored_press
 trade_unions=state_controlled
 political_parties=harassment
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = one_year_draft
 debt_law = peonage
 penal_system = capital_punishment

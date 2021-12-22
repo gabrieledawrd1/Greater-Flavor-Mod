@@ -19,7 +19,10 @@ voting_system = first_past_the_post
 political_parties = gerrymandering
 
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = two_year_draft
 debt_law = debtors_prisons
 penal_system = capital_punishment

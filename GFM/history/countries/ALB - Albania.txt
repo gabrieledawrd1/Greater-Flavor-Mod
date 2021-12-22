@@ -49,7 +49,10 @@ mechanical_production = 1
 hot_blast = 1
 basic_chemistry = 1
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = four_year_draft
 debt_law = peonage
 penal_system = capital_punishment

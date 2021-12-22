@@ -28,7 +28,10 @@ unemployment_subsidies = low_subsidies
 pensions = good_pensions
 school_reforms = no_schools
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = four_year_draft
 debt_law = debtors_prisons
 penal_system = capital_punishment

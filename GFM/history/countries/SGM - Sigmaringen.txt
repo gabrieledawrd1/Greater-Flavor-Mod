@@ -29,7 +29,10 @@ pensions = no_pensions
 school_reforms = low_schools
 
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = no_draft
 debt_law = debtors_prisons
 penal_system = capital_punishment

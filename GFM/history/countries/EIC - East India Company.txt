@@ -32,7 +32,10 @@ set_country_flag = protestant_country
 set_country_flag = exempt_from_vassal_contribution
 set_country_flag = the_east_india_company_flag
 
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment

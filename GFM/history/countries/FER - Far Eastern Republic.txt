@@ -53,6 +53,9 @@ hot_blast = 1
 basic_chemistry = 1
 
 # New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = two_year_draft
 debt_law = serfdom
 penal_system = capital_punishment

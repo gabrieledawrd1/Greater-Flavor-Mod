@@ -42,7 +42,10 @@ upper_house = { # inherit
     socialist = 0
     communist = 0
 }
-#New Reforms
+# New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = two_year_draft
 debt_law = serfdom
 penal_system = capital_punishment

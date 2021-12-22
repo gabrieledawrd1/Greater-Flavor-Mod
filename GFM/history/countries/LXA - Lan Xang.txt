@@ -28,6 +28,9 @@ school_reforms = no_schools
 
 
 # New Reforms
+promotion_laws = privlage_benefits
+arts_endowment = no_endowment
+
 conscription = one_year_draft
 debt_law = peonage
 penal_system = capital_punishment
