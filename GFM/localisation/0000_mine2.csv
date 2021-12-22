@@ -328,8 +328,8 @@ cop_onto_egypt_title;Home of the Great Church of Antioch;x
 cop_onto_egypt_desc;Egypt is our right to claim, we will establish Coptic control over it once more!;x
 KNI;The Knights Hospitaller;;;;;;;;;;;;;;;;;;;;;;;;x
 KNI_ADJ;Hospitaller;;;;;;;;;;;;;;;;;;;;;;;;x
-KHT_ADJ;Haïtian;;;;;;;;;;;;x
-KHT;Royaume d'Haïti;;;;;;;;;;;;x
+HAT_ADJ;Haïtian;;;;;;;;;;;;x
+HAT;Royaume d'Haïti;;;;;;;;;;;;x
 DMG_ADJ;Colonial French;;;;;;;;;;;;x
 DMG;Saint-Domingue;;;;;;;;;;;;x
 AFS;Afsharid Empire;;;;;;;;;;;;;;;;;;;;;;x

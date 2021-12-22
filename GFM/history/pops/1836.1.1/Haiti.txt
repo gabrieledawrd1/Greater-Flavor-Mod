@@ -37,11 +37,15 @@
         religion = catholic
         size = 50
     }
-	
+	craftsmen = {
+        culture = afro_french
+        religion = catholic
+        size = 80
+    }
 	artisans = {
         culture = mulatto
         religion = catholic
-        size = 2550
+        size = 12250
     }
 
     soldiers = {
@@ -71,13 +75,13 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 28736
+        size = 38736
     }
 	
 	farmers = {
         culture = haitian_creole
         religion = catholic
-        size = 19984
+        size = 29984
     }
 
     farmers = {

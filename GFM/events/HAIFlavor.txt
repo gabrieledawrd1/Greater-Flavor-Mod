@@ -254,12 +254,12 @@ country_event = {
 					is_core = DOM
 				}
 			}
-			add_core = KHT
+			add_core = HAT
 		}
-        2215 = { secede_province = KHT }
-        3284 = { secede_province = KHT }
-        3545 = { secede_province = KHT }
-        KHT = {
+        2215 = { secede_province = HAT }
+        3284 = { secede_province = HAT }
+        3545 = { secede_province = HAT }
+        HAT = {
 			government = absolute_monarchy
 			ruling_party_ideology = reactionary
 			political_reform = none_voting
@@ -363,7 +363,7 @@ country_event = {
 			}
 		}
 		relation = { who = DOM value = -400 }
-		relation = { who = KHT value = -400 }
+		relation = { who = HAT value = -400 }
 		relation = { who = DMG value = -400 }
 		war = {
 			target = DOM
@@ -371,7 +371,7 @@ country_event = {
 			defender_goal = { casus_belli = status_quo }
 		}
 		war = {
-			target = KHT
+			target = HAT
 			attacker_goal = { casus_belli = civil_war }
 			defender_goal = { casus_belli = civil_war }
 		}
@@ -403,7 +403,7 @@ country_event = {
 	}
 	option = {
 		name = "Kingdom of Haiti"
-		change_tag_no_core_switch = KHT
+		change_tag_no_core_switch = HAT
 		ai_chance = { factor = 0 }
 	}
 	option = {
