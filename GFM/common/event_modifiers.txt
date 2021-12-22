@@ -5018,3 +5018,44 @@ shinsengumi_policing = {
     administrative_efficiency_modifier = 0.2
     icon = 4
 } 
+urgell_channels_construction = {
+    icon = 11
+}
+ikedaya_aftermath = { 
+    pop_militancy_modifier = 0.02
+    pop_consciousness_modifier = 0.02 
+    rgo_output = -0.1
+    factory_output = -0.1
+
+} 
+tenpo_famine = { 
+    farm_RGO_eff = -0.2
+    global_population_growth = -0.01 
+    global_pop_militancy_modifier = 0.01
+    icon = 18 
+} 
+protest_dances = { 
+    global_pop_consciousness_modifier = 0.05
+    global_pop_militancy_modifier = -0.05
+    administrative_efficiency_modifier = -0.2
+    icon = 19
+} 
+
+port_opening_delayed = { 
+    pop_militancy_modifier = -0.05
+    icon = 5
+} 
+
+opened_port = { 
+    pop_consciousness_modifier = 0.02
+    local_rgo_output = 0.2 
+    icon = 6
+}
+dentoudou = { 
+    prestige = 0.03 
+    global_pop_consciousness_modifier = -0.05
+    cb_generation_speed_modifier = -0.8
+    political_reform_desire = -0.2
+    social_reform_desire = -0.2
+    icon = 5
+} 

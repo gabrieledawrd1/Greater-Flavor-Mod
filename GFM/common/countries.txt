@@ -20,7 +20,7 @@ SVD		= "countries/Safavids.txt"
 AFS		= "countries/Afsharid.txt" 
 #Haitian Civil war
 DMG 	= "countries/Saint-Domingue.txt"
-KHT		= "countries/Kingdom of Haiti.txt" 
+#KHT		= "countries/Kingdom of Haiti.txt" 
 
 ###France Mod###
 NZF        ="countries/French New Zealand.txt"
