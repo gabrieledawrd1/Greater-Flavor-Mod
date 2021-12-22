@@ -4867,3 +4867,109 @@ parana_development_forever = {
     farm_rgo_eff = 0.5
     icon = 19
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##### Birth Rate & Immigration Campaigns ######
+birthrate_push_low = {
+    global_population_growth = 0.001
+        badboy = 0.01
+    tax_efficiency = -0.05
+        icon = 17
+}
+birthrate_push_medium = {
+        global_population_growth = 0.002
+        badboy = 0.03
+    tax_efficiency = -0.15
+    global_pop_consciousness_modifier = 0.02
+        icon = 17
+}
+#birthrate_push_high = {
+#       global_population_growth = 0.003
+#       badboy = 0.03
+#   tax_efficiency = -0.2
+#   global_pop_militancy_modifier = 0.01
+#   global_pop_consciousness_modifier = 0.03
+#       icon = 17
+#}
+recently_selected_birthrate = {
+    icon = 1
+}
+immigration_pull_low = {
+    immigrant_attract = 0.5
+    badboy = 0.01
+    tax_efficiency = -0.05
+    global_pop_consciousness_modifier = 0.01
+    icon = 9
+}
+immigration_pull_high = {
+    immigrant_attract = 1
+    badboy = 0.02
+    tax_efficiency = -0.1
+    global_pop_consciousness_modifier = 0.03
+    icon = 9
+}
+recently_selected_immigration = {
+    icon = 2
+}
+#transfer_rp_debuff = { #applicable decision also currently commented out as a result of no RP from conquest update
+#   research_points_on_conquer = -2
+#   icon = 12
+#}
+mass_literacy_in_progress = {
+    administrative_efficiency_modifier = -0.15
+    badboy = 0.03
+    icon = 3
+}
+
+#Haiti 2.0#
+
+HAI_debts = {
+    icon = 3
+    rich_income_modifier = 1.5
+    tax_efficiency = 0.25
+    influence_modifier = 0.05
+}
+american_blockade = {
+    icon = 8
+    import_cost = 1.5
+    loan_interest = 1.75
+    diplomatic_points_modifier = -0.5
+}
+code_rural = {
+    icon = 12
+    core_pop_militancy_modifier = 0.025
+    pop_militancy_modifier = 0.075
+    farm_rgo_eff = -0.15
+}
+hai_rev_vets = {
+    icon = 17
+    mobilisation_size = 0.25
+    org_regain = 0.25
+    land_organisation = 0.25
+    supply_consumption = -0.95
+    pop_militancy_modifier = 0.01
+}
+
+
+
+
+
+
+
