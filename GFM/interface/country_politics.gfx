@@ -230,7 +230,7 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_promotion_laws"
+		name = "GFX_politics_promotion_laws"
 		texturefile = "gfx\\interface\\politics_promotion_laws.dds"
 	}
 	### unciv reforms:
