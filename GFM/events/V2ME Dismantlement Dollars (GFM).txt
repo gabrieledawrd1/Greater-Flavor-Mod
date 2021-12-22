@@ -1,316 +1,232 @@
 ### HMMM ###
 country_event = {
     id = 777771600
-    title = "We have §B[0]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 0 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 0
-		}
     }
 }
 
 country_event = {
     id = 777771601
-    title = "We have §B[1]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 1 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 1
-		}
     }
 }
 
 country_event = {
     id = 777771602
-    title = "We have §B[2]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 2 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 2
-		}
     }
 }
 
 country_event = {
     id = 777771603
-    title = "We have §B[3]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 3 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 3
-		}
     }
 }
 
 country_event = {
     id = 777771604
-    title = "We have §B[4]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 4 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 4
-		}
     }
 }
 
 country_event = {
     id = 777771605
-    title = "We have §B[5]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 5 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 5
-		}
     }
 }
 
 country_event = {
     id = 777771606
-    title = "We have §B[6]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 6 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 6
-		}
     }
 }
 
 country_event = {
     id = 777771607
-    title = "We have §B[7]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 7 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 7
-		}
     }
 }
 
 country_event = {
     id = 777771608
-    title = "We have §B[8]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 8 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 8
-		}
     }
 }
 
 country_event = {
     id = 777771609
-    title = "We have §B[9]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 9 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 9
-		}
     }
 }
 
 country_event = {
     id = 777771610
-    title = "We have §B[10]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 10 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 10
-		}
     }
 }
 
 country_event = {
     id = 777771611
-    title = "We have §B[11]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 11 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 11
-		}
     }
 }
 
 country_event = {
     id = 777771612
-    title = "We have §B[12]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 12 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 12
-		}
     }
 }
 
 country_event = {
     id = 777771613
-    title = "We have §B[13]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 13 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 13
-		}
     }
 }
 
 country_event = {
     id = 777771614
-    title = "We have §B[14]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 14 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 14
-		}
     }
 }
 
 country_event = {
     id = 777771615
-    title = "We have §B[15]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 15 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 15
-		}
     }
 }
 
 country_event = {
     id = 777771616
-    title = "We have §B[16]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 16 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 16
-		}
     }
 }
 
 country_event = {
     id = 777771617
-    title = "We have §B[17]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 17 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 17
-		}
     }
 }
 
 country_event = {
     id = 777771618
-    title = "We have §B[18]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 18 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 18
-		}
     }
 }
 
 country_event = {
     id = 777771619
-    title = "We have §B[19]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 19 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 19
-		}
     }
 }
 
 country_event = {
     id = 777771620
-    title = "We have §B[20]§! Dismantlement Capital!"
-    desc = "This can be used on high-stakes options during dismantlement "
+    title = "We have 20 Dismantlement Capital!"
+    desc = "EVTDESCDISMANTLEMENTDOLLARS"
 	picture = "dollar"
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 20
-		}
     }
 }
 
@@ -322,10 +238,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 0
-		}
     }
 }
 
@@ -337,10 +249,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 1
-		}
     }
 }
 
@@ -352,10 +260,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 2
-		}
     }
 }
 
@@ -368,10 +272,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 3
-		}
     }
 }
 
@@ -384,10 +284,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 4
-		}
     }
 }
 
@@ -400,10 +296,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 5
-		}
     }
 }
 
@@ -415,10 +307,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 6
-		}
     }
 }
 
@@ -430,10 +318,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 7
-		}
     }
 }
 
@@ -445,10 +329,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 8
-		}
     }
 }
 
@@ -460,10 +340,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 9
-		}
     }
 }
 
@@ -475,10 +351,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 10
-		}
     }
 }
 
@@ -490,10 +362,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 11
-		}
     }
 }
 
@@ -505,10 +373,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 12
-		}
     }
 }
 
@@ -520,10 +384,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 13
-		}
     }
 }
 
@@ -535,10 +395,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 14
-		}
     }
 }
 
@@ -550,10 +406,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 15
-		}
     }
 }
 
@@ -564,10 +416,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 16
-		}
     }
 }
 
@@ -579,10 +427,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 17
-		}
     }
 }
 
@@ -594,10 +438,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 18
-		}
     }
 }
 
@@ -609,10 +449,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 19
-		}
     }
 }
 
@@ -624,10 +460,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "Very Well"
-		set_variable = {
-			which = dismantlement_dollars
-			value = 20
-		}
     }
 }
 
