@@ -4509,6 +4509,203 @@ country_event = {
             remove_province_modifier = boxer_presence
             remove_province_modifier = boxer_agitation
         }
+        #####################################
+        # Granting techs post westernisation#
+        #####################################
+        
+        ### mil reforms ###
+        # artillery
+        random_owned = { 
+            limit = { owner = { has_country_flag = foreign_artillery_flag } NOT = { bronze_muzzle_loaded_artillery = 1 } }
+            owner = { activate_technology = bronze_muzzle_loaded_artillery  clr_country_flag = foreign_artillery_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = foreign_artillery2_flag } NOT = { iron_muzzle_loaded_artillery = 1 } }
+            owner = { activate_technology = iron_muzzle_loaded_artillery  clr_country_flag = foreign_artillery2_flag }
+        }
+        
+        # rifles
+        random_owned = { 
+            limit = { owner = { has_country_flag = foreign_weapons_flag } NOT = { flintlock_rifles = 1 } }
+            owner = { activate_technology = flintlock_rifles  clr_country_flag = foreign_weapons_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = foreign_weapons2_flag } NOT = { muzzle_loaded_rifles = 1 } }
+            owner = { activate_technology = muzzle_loaded_rifles  clr_country_flag = foreign_weapons2_flag }
+        }
+        
+        # forts
+        random_owned = { 
+            limit = { owner = { has_country_flag = mil_con_flag } NOT = { post_napoleonic_thought = 1 } }
+            owner = { activate_technology = post_napoleonic_thought  clr_country_flag = mil_con_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = mil_con2_flag } NOT = { strategic_mobility = 1 } }
+            owner = { activate_technology = strategic_mobility  clr_country_flag = mil_con2_flag }
+        }
+        
+        # officers
+        random_owned = { 
+            limit = { owner = { has_country_flag = fo_flag } NOT = { military_staff_system = 1 } }
+            owner = { activate_technology = military_staff_system  clr_country_flag = fo_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = fo2_flag } NOT = { military_plans = 1 } }
+            owner = { activate_technology = military_plans  clr_country_flag = fo2_flag }
+        }
+        
+        # army schools
+        random_owned = { 
+            limit = { owner = { has_country_flag = at_flag } NOT = { army_command_principle = 1 } }
+            owner = { activate_technology = army_command_principle  clr_country_flag = at_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = at2_flag } NOT = { army_professionalism = 1 } }
+            owner = { activate_technology = army_professionalism  clr_country_flag = at2_flag }
+        }
+        
+        # naval officers
+        random_owned = { 
+            limit = { owner = { has_country_flag = no_flag } NOT = { alphabetic_flag_signaling = 1 } }
+            owner = { activate_technology = alphabetic_flag_signaling  clr_country_flag = no_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = no2_flag } NOT = { naval_design_bureaus = 1 } }
+            owner = { activate_technology = naval_design_bureaus  clr_country_flag = no2_flag }
+        }
+        
+        # foreign ships
+        random_owned = { 
+            limit = { owner = { has_country_flag = nu_flag } NOT = { clipper_design = 1 } }
+            owner = { activate_technology = clipper_design  clr_country_flag = nu_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = nu2_flag } NOT = { steamers = 1 } }
+            owner = { activate_technology = steamers  clr_country_flag = nu2_flag }
+        }
+        
+        # shipyards
+        random_owned = { 
+            limit = { owner = { has_country_flag = shipyards_flag } NOT = { post_nelsonian_thought = 1 } }
+            owner = { activate_technology = post_nelsonian_thought  clr_country_flag = shipyards_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = shipyards2_flag } NOT = { battleship_column_doctrine = 1 } }
+            owner = { activate_technology = battleship_column_doctrine  clr_country_flag = shipyards2_flag }
+        }
+        
+        # naval training
+        random_owned = { 
+            limit = { owner = { has_country_flag = nsch_flag } NOT = { the_command_principle = 1 } }
+            owner = { activate_technology = the_command_principle  clr_country_flag = nsch_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = nsch_flag_two } NOT = { naval_professionalism = 1 } }
+            owner = { activate_technology = naval_professionalism  clr_country_flag = nsch_flag_two }
+        }
+        
+        ### econ reforms ###
+        # land reform
+        random_owned = { 
+            limit = { owner = { has_country_flag = landr_flag } NOT = { mechanized_mining = 1 } }
+            owner = { activate_technology = mechanized_mining  clr_country_flag = landr_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = landr2_flag } NOT = { freedom_of_trade = 1 } }
+            owner = { activate_technology = freedom_of_trade  clr_country_flag = landr2_flag }
+        }
+        
+        # admin
+        random_owned = { 
+            limit = { owner = { has_country_flag = adm_flag } NOT = { no_standard = 1 } }
+            owner = { activate_technology = no_standard  clr_country_flag = adm_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = adm2_flag } NOT = { ad_hoc_money_bill_printing = 1 } }
+            owner = { activate_technology = ad_hoc_money_bill_printing  clr_country_flag = adm2_flag }
+        }
+        
+        # finance
+        random_owned = { 
+            limit = { owner = { has_country_flag = fref_flag } NOT = { private_banks = 1 } }
+            owner = { activate_technology = private_banks  clr_country_flag = fref_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = fref2_flag } NOT = { stock_exchange = 1 } }
+            owner = { activate_technology = stock_exchange  clr_country_flag = fref2_flag }
+        }
+        
+        # education
+        random_owned = { 
+            limit = { owner = { has_country_flag = edu_flag } NOT = { late_enlightenment_philosophy = 1 } }
+            owner = { activate_technology = late_enlightenment_philosophy activate_technology = basic_chemistry  clr_country_flag = edu_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = edu2_flag } NOT = { medicine = 1 } }
+            owner = { activate_technology = medicine  clr_country_flag = edu2_flag }
+        }
+        
+        # transport
+        random_owned = { 
+            limit = { owner = { has_country_flag = tran_flag } NOT = { experimental_railroad = 1 } }
+            owner = { activate_technology = experimental_railroad clr_country_flag = tran_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = tran2_flag } NOT = { early_railroad = 1 } }
+            owner = { activate_technology = early_railroad  clr_country_flag = tran2_flag }
+        }
+        
+        # industrialization
+        random_owned = { 
+            limit = { owner = { has_country_flag = earlyid_flag } NOT = { guild_based_production = 1 } }
+            owner = { activate_technology = guild_based_production clr_country_flag = earlyid_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = earlyid2_flag } NOT = { organized_factories = 1 } }
+            owner = { activate_technology = organized_factories  clr_country_flag = earlyid2_flag }
+        }
+        
+        # unis
+        random_owned = { 
+            limit = { owner = { has_country_flag = indc_flag } NOT = { malthusian_thought = 1 } }
+            owner = { activate_technology = malthusian_thought clr_country_flag = indc_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = indc2_flag } NOT = { positivism = 1 } }
+            owner = { activate_technology = positivism activate_technology = enlightenment_thought  clr_country_flag = indc2_flag }
+        }
+        
+        # machinery
+        random_owned = { 
+            limit = { owner = { has_country_flag = machinery_flag } NOT = { mechanical_production = 1 } }
+            owner = { activate_technology = mechanical_production clr_country_flag = machinery_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = machinery2_flag } NOT = { interchangeable_parts = 1 } }
+            owner = { activate_technology = interchangeable_parts  clr_country_flag = machinery2_flag }
+        }
+        
+        # currency
+        random_owned = { 
+            limit = { owner = { has_country_flag = currency_flag } NOT = { early_classical_theory_and_critique = 1 } }
+            owner = { activate_technology = early_classical_theory_and_critique  clr_country_flag = currency_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = currency2_flag } NOT = { late_classical_theory = 1 } }
+            owner = { activate_technology = late_classical_theory clr_country_flag = currency2_flag }
+        }
+        
+        # steam
+        random_owned = { 
+            limit = { owner = { has_country_flag = steampower_flag } NOT = { piston_steam_engine = 1 } }
+            owner = { activate_technology = piston_steam_engine  clr_country_flag = steampower_flag }
+        }
+        random_owned = { 
+            limit = { owner = { has_country_flag = steampower2_flag } NOT = { high_pressure_steam_engine = 1 } }
+            owner = { activate_technology = high_pressure_steam_engine clr_country_flag = steampower2_flag }
+        }
+        
+        ######
     }
 }
 
