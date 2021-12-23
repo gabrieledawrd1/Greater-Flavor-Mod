@@ -1,0 +1,768 @@
+#A maintenance event that handles all kinds of game mechanics that are most conveniently handed that way
+
+country_event = {
+
+	id = 609000001
+	title = "Grand Maintenance Event"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}	
+
+	option = {
+		name = "Commence"
+	
+		#OVERPOPULATED COLONIES
+		
+		#LEVEL 1 OVERPOPULATION
+		any_country = {
+			any_owned = {
+				limit = { is_colonial = yes
+							total_pops = 500000
+							not = { total_pops = 1000000 }
+						}
+				
+				add_province_modifier = {
+     					name = "overpopulation1"
+     					duration = -1
+     					}
+				remove_province_modifier = overpopulation2		
+
+			}
+		}
+		#LEVEL 2 OVERPOPULATION
+		any_country = {
+			any_owned = {
+				limit = { is_colonial = yes
+							total_pops = 1000000 }
+				
+				remove_province_modifier = overpopulation1
+				add_province_modifier = {
+     					name = "overpopulation2"
+     					duration = -1
+     					}
+
+			}
+		}
+		#CLEAN UP NO LONGER OVERPOPULATED
+		any_country = {
+			any_owned = {
+				limit = { is_colonial = yes
+							not = { total_pops = 500000 } }
+				
+				remove_province_modifier = overpopulation1	
+				remove_province_modifier = overpopulation2	
+
+			}
+		}
+		#OVERPOPULATION NOT APPLICABLE TO CIV STATES THAT ARE NOT COLONIES
+		any_country = {
+			limit = { civilized = yes }
+			any_owned = {
+				limit = { is_colonial = no }
+				
+				remove_province_modifier = overpopulation1	
+				remove_province_modifier = overpopulation2	
+
+			}
+		}
+		
+		#OVERPOPULATED UNCIV PROVINCES
+		
+		#LEVEL 1 OVERPOPULATION
+		any_country = {
+			limit = { civilized = no }
+			any_owned = {
+				limit = { total_pops = 500000
+							not = { total_pops = 1000000 }	}
+				
+							
+				add_province_modifier = {
+     					name = "overpopulation1"
+     					duration = -1
+     					}
+				remove_province_modifier = overpopulation2	
+			}
+		}
+		
+		#LEVEL 2 OVERPOPULATION
+		any_country = {
+			limit = { civilized = no }
+			any_owned = {
+				limit = { total_pops = 1000000 }
+				
+				remove_province_modifier = overpopulation1				
+				add_province_modifier = {
+     					name = "overpopulation2"
+     					duration = -1
+     					}
+
+			}
+		}
+		
+		#CLEAN UP NO LONGER OVERPOPULATED
+		any_country = {
+			limit = { civilized = no }
+			any_owned = {
+				limit = { not = { total_pops = 500000 } }
+				
+				remove_province_modifier = overpopulation1			
+				remove_province_modifier = overpopulation2
+
+			}
+		}
+		
+		#CLERICAL POWER
+		
+		#CLEAN UP OLD LABELS
+		any_country = {			
+				remove_country_modifier = clergy_max_power
+				remove_country_modifier = clergy_high_power
+				remove_country_modifier = clergy_medium_power
+				remove_country_modifier = clergy_low_power
+		}
+		
+		#CLERGY MAX POWER
+		any_country = {
+				limit = { 	clergymen = 0.012
+							religious_policy = moralism  }
+							
+			add_country_modifier = {
+				name = "clergy_max_power"
+				duration = -1
+			}				
+		}
+		#CLERGY HIGH POWER
+		any_country = {
+				limit = { 	OR = {
+							AND = {
+								clergymen = 0.008
+								NOT = { clergymen = 0.012 }
+								religious_policy = moralism
+								}
+							AND = {
+								clergymen = 0.012
+								religious_policy = pluralism
+								}				
+								
+							}  }
+							
+			add_country_modifier = {
+				name = "clergy_high_power"
+				duration = -1
+			}				
+		}
+		#CLERGY MEDIUM POWER
+		any_country = {
+				limit = { 	OR = {
+								AND = {
+									clergymen = 0.008
+									NOT = { clergymen = 0.012 }
+									religious_policy = pluralism
+									}
+								AND = {
+									clergymen = 0.012
+									religious_policy = secularized
+									}
+								AND = {
+									clergymen = 0.004
+									NOT = { clergymen = 0.008 }
+									religious_policy = moralism
+									}				
+							}  }
+							
+			add_country_modifier = {
+				name = "clergy_medium_power"
+				duration = -1
+			}				
+		}
+		#CLERGY LOW POWER
+		any_country = {
+				limit = { 	OR = {
+							AND = {
+								clergymen = 0.004
+								NOT = { clergymen = 0.008 }
+								religious_policy = pluralism
+								}
+							AND = {
+								clergymen = 0.08
+								religious_policy = secularized
+								}
+							AND = {
+								clergymen = 0.001
+								NOT = { clergymen = 0.004 }
+								religious_policy = moralism
+								}				
+								
+							}  }
+							
+			add_country_modifier = {
+				name = "clergy_low_power"
+				duration = -1
+			}				
+		}
+		
+		#COUNTRY PROSPERITY
+		
+		#CLEAN UP OLD LABELS
+		#any_country = {			
+		#		remove_country_modifier = prosperity_poor
+		#		remove_country_modifier = prosperity_unremarkable
+		#		remove_country_modifier = prosperity_fair
+		#		remove_country_modifier = prosperity_decent
+		#		remove_country_modifier = prosperity_solid
+		#		remove_country_modifier = prosperity_affluent1
+		#		remove_country_modifier = prosperity_affluent2
+		#		remove_country_modifier = prosperity_affluent3
+		#		remove_country_modifier = prosperity_affluent4
+		#		remove_country_modifier = prosperity_affluent5
+		#}
+		#
+		#ADD COUNTRY PROSPERITY LABELS
+		#any_country = {
+		#	limit = { not = { poor_strata_everyday_needs = 0.15 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_poor"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.15
+		#				not = { poor_strata_everyday_needs = 0.4 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_unremarkable"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.4
+		#				not = { poor_strata_everyday_needs = 0.65 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_fair"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.65
+		#				not = { poor_strata_everyday_needs = 0.8 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_decent"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				not = { poor_strata_luxury_needs = 0.1 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_solid"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				poor_strata_luxury_needs = 0.1
+		#				not = { poor_strata_luxury_needs = 0.2 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_affluent1"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				poor_strata_luxury_needs = 0.2
+		#				not = { poor_strata_luxury_needs = 0.4 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_affluent2"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				poor_strata_luxury_needs = 0.4
+		#				not = { poor_strata_luxury_needs = 0.6 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_affluent3"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				poor_strata_luxury_needs = 0.6
+		#				not = { poor_strata_luxury_needs = 0.8 } }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_affluent4"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#any_country = {
+		#	limit = { 	poor_strata_everyday_needs = 0.8
+		#				poor_strata_luxury_needs = 0.8  }
+		#	
+		#	add_country_modifier = {
+		#		name = "prosperity_affluent5"
+		#		duration = -1
+		#	}	
+		#}
+		#
+		#ADD LOCAL PROSPERITY LABELS WHERE LOCAL NEEDS ARE AT LEAST TWO LEVELS ABOVE COUNTRYWIDE
+		#REMOVE OLD LABELS
+		#any_country = {
+		#	any_owned = { remove_province_modifier = local_prosperity }			
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_poor  }
+		#	
+		#	any_owned = {
+		#		limit = { poor_strata_everyday_needs = 0.4 }
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#ADD NEW LABELS
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_unremarkable  }
+		#	
+		#	any_owned = {
+		#		limit = { poor_strata_everyday_needs = 0.65 }
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_fair  }
+		#	
+		#	any_owned = {
+		#		limit = { poor_strata_everyday_needs = 0.8 }
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_decent  }
+		#	
+		#	any_owned = {
+		#		limit = { 	poor_strata_everyday_needs = 0.8 
+		#					poor_strata_luxury_needs = 0.1	}
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_solid  }
+		#	
+		#	any_owned = {
+		#		limit = { 	poor_strata_everyday_needs = 0.8 
+		#					poor_strata_luxury_needs = 0.2	}
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_affluent1  }
+		#	
+		#	any_owned = {
+		#		limit = { 	poor_strata_everyday_needs = 0.8 
+		#					poor_strata_luxury_needs = 0.4	}
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_affluent2  }
+		#	
+		#	any_owned = {
+		#		limit = { 	poor_strata_everyday_needs = 0.8 
+		#					poor_strata_luxury_needs = 0.6	}
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#any_country = {
+		#	limit = { has_country_modifier = prosperity_affluent3  }
+		#	
+		#	any_owned = {
+		#		limit = { 	poor_strata_everyday_needs = 0.8 
+		#					poor_strata_luxury_needs = 0.8	}
+		#		
+		#		add_province_modifier = {
+		#			name = "local_prosperity"
+		#			duration = -1
+		#		}
+		#	}
+		#	
+		#}
+		#
+		#NEGATION OF PLURALITY EFFECT ON NEEDS
+		
+		#REMOVE OLD LABELS
+		any_country = {
+				remove_country_modifier = negateplurality_5
+				remove_country_modifier = negateplurality_10
+				remove_country_modifier = negateplurality_15
+				remove_country_modifier = negateplurality_20
+				remove_country_modifier = negateplurality_25
+				remove_country_modifier = negateplurality_30
+				remove_country_modifier = negateplurality_35
+				remove_country_modifier = negateplurality_40
+				remove_country_modifier = negateplurality_45
+				remove_country_modifier = negateplurality_50
+				remove_country_modifier = negateplurality_55
+				remove_country_modifier = negateplurality_60
+				remove_country_modifier = negateplurality_65
+				remove_country_modifier = negateplurality_70
+				remove_country_modifier = negateplurality_75
+				remove_country_modifier = negateplurality_80
+				remove_country_modifier = negateplurality_85
+				remove_country_modifier = negateplurality_90
+				remove_country_modifier = negateplurality_95
+				remove_country_modifier = negateplurality_99
+		}
+		
+		any_country = {
+			limit = {	plurality = 5
+						NOT = { plurality = 10 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_5"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 10
+						NOT = { plurality = 15 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_10"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 15
+						NOT = { plurality = 20 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_15"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 20
+						NOT = { plurality = 25 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_20"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 25
+						NOT = { plurality = 30 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_25"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 30
+						NOT = { plurality = 35 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_30"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 35
+						NOT = { plurality = 40 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_35"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 40
+						NOT = { plurality = 45 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_40"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 45
+						NOT = { plurality = 50 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_45"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 50
+						NOT = { plurality = 55 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_50"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 55
+						NOT = { plurality = 60 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_55"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 60
+						NOT = { plurality = 65 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_60"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 65
+						NOT = { plurality = 70 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_65"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 70
+						NOT = { plurality = 75 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_70"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 75
+						NOT = { plurality = 80 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_75"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 80
+						NOT = { plurality = 85 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_80"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 85
+						NOT = { plurality = 90 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_85"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 90
+						NOT = { plurality = 95 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_90"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 95
+						NOT = { plurality = 99 } }
+						
+			add_country_modifier = {
+				name = "negateplurality_95"
+				duration = -1
+			}	
+		}
+		
+		any_country = {
+			limit = {	plurality = 99 }
+						
+			add_country_modifier = {
+				name = "negateplurality_99"
+				duration = -1
+			}	
+		}
+		
+		#RANDOMIZE IMMIGRATION IN ORDER TO SPREAD OUT IMMIGRANTS MORE
+		
+		#any_country = {
+		#	limit = { civilized = yes }
+		#	
+		#	remove_country_modifier = random_immigration_factor1
+		#	remove_country_modifier = random_immigration_factor2
+		#	remove_country_modifier = random_immigration_factor3
+		#	remove_country_modifier = random_immigration_factor4
+		#	remove_country_modifier = random_immigration_factor5
+		#	clr_country_flag = low_promotion
+		#	clr_country_flag = below_average_promotion
+		#	clr_country_flag = above_average_promotion
+		#	clr_country_flag = high_promotion
+		#	
+		#	random_list = {
+		#		10 = {
+		#			add_country_modifier = {
+		#				name = "random_immigration_factor1"
+		#				duration = -1
+		#			}
+		#			set_country_flag = low_promotion
+		#			
+		#		}
+		#		20 = {
+		#			add_country_modifier = {
+		#				name = "random_immigration_factor2"
+		#				duration = -1
+		#			}
+		#			set_country_flag = below_average_promotion
+		#		}
+		#		40 = {
+		#			add_country_modifier = {
+		#				name = "random_immigration_factor3"
+		#				duration = -1
+		#			}
+		#			
+		#		}
+		#		20 = {
+		#			add_country_modifier = {
+		#				name = "random_immigration_factor4"
+		#				duration = -1
+		#			}
+		#			set_country_flag = above_average_promotion
+		#		}
+		#		10 = {
+		#			add_country_modifier = {
+		#				name = "random_immigration_factor5"
+		#				duration = -1
+		#			}
+		#			set_country_flag = high_promotion
+		#		}
+		#	}
+		#	
+		#}
+		
+		
+		#DEMOTE ARISTOCRATS AND CAPITALISTS IN PROLETARIAN DICTATORSHIPS
+		
+		any_country = {
+			limit = { government = proletarian_dictatorship }
+				aristocrats = { pop_type = farmers }
+				capitalists = { pop_type = clerks }	
+		}
+		
+		#KICKSTART BROKE ARTISANS (disable for now as it causes money inflation)
+		#any_country = {
+		#	any_owned = {
+		#		artisans = {
+		#			limit = { not = { life_needs = 0.05 } }
+		#			money = 10
+		#		}
+		#	
+		#	}
+		#}
+		
+		#any_country = {
+		#	limit = { not = { industry_score = 4 } }
+		#	any_owned = {
+		#		capitalists = {
+		#			money = 100
+		#		}
+		#	}
+		#}
+		
+		
+	}
+
+}

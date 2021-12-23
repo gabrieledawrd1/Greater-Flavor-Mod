@@ -1,0 +1,153 @@
+country_event = {
+
+	id = 612000001
+	title = "Promotion randomization, low"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = "Commence"
+		any_country = {
+		
+		clr_country_flag = below_average_promotion
+		clr_country_flag = above_average_promotion
+		clr_country_flag = high_promotion
+		
+		set_country_flag = low_promotion
+		
+		}
+	
+	
+	}
+}
+
+country_event = {
+
+	id = 612000002
+	title = "Promotion randomization, below average"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = "Commence"
+		any_country = {
+		
+		clr_country_flag = low_promotion
+		clr_country_flag = above_average_promotion
+		clr_country_flag = high_promotion
+		
+		set_country_flag = below_average_promotion
+		
+		}
+	
+	
+	}
+}
+
+country_event = {
+
+	id = 612000003
+	title = "Promotion randomization, above average"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = "Commence"
+		any_country = {
+		
+		clr_country_flag = low_promotion
+		clr_country_flag = below_average_promotion
+		clr_country_flag = high_promotion
+		
+		set_country_flag = above_average_promotion
+		
+		}
+	
+	
+	}
+}
+
+country_event = {
+
+	id = 612000004
+	title = "Promotion randomization, high"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = "Commence"
+		any_country = {
+		
+		clr_country_flag = low_promotion
+		clr_country_flag = below_average_promotion
+		clr_country_flag = above_average_promotion
+		
+		set_country_flag = high_promotion
+		
+		}
+	
+	
+	}
+}
+
+country_event = {
+
+	id = 612000005
+	title = "Promotion randomization, average"
+	desc = "Nothing to see here, move along."
+	#major = yes
+	
+	trigger = {
+		tag = CLN
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = "Commence"
+		any_country = {
+		
+		clr_country_flag = low_promotion
+		clr_country_flag = below_average_promotion
+		clr_country_flag = above_average_promotion	
+		clr_country_flag = high_promotion
+		
+		}
+	
+	
+	}
+}

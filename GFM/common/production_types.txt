@@ -901,14 +901,14 @@ orchard = {
 precious_metal_mine = {
     template = RGO_template_labourers
     output_goods = precious_metal
-    value = 3
+    value = 1
     mine = yes
 }
 
 precious_goods_market = {
     template = RGO_template_labourers
     output_goods = precious_goods
-    value = 3
+    value = 1
     mine = yes
 }
 

@@ -43,6 +43,215 @@ luxury_needs = {
 
 country_migration_target = {
     factor = 1
+
+    modifier = {
+        factor = 0.8
+        unemployment = 0.05
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.1
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.15
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.2
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.25
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.3
+    }
+    modifier = {
+        factor = 0.8
+        unemployment = 0.35
+    }
+    modifier = {
+        factor = 0.1
+        unemployment = 0.5
+    }
+    modifier = {
+        factor = 2.0
+        has_pop_culture = THIS
+    }
+    modifier = {
+        factor = 2.0
+        primary_culture = THIS
+    }
+    modifier = {
+        factor = 1.5
+        accepted_culture = THIS
+    }
+    
+    modifier = {
+        factor = 1.2
+        religion = this
+    }
+    
+    modifier = {
+        factor = 0.6
+        not = { primary_culture = THIS }
+        not = { accepted_culture = THIS }
+        citizenship_policy = residency
+    }
+    
+    modifier = {
+        factor = 0.6
+        religious_policy = moralism
+        not = { religion = this }
+    }
+    
+    modifier = {
+        factor = 1.1
+        is_greater_power = yes
+    }
+    modifier = {
+        factor = 1.1
+        rank = 16
+    }
+    
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.1
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.2
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.3
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.4
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.5
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.6
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.7
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.8
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_everyday_needs = 0.9
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.1
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.2
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.3
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.4
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.5
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.6
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.7
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.8
+    }
+    modifier = {
+        factor = 1.1
+        poor_strata_luxury_needs = 0.9
+    }
+    
+    modifier = {
+        factor = 0.8
+        average_militancy = 3
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 4
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 5
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 6
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 7
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 8
+    }
+    modifier = {
+        factor = 0.8
+        average_militancy = 9
+    }
+    
+    modifier = {
+        factor = 1.1
+        num_of_cities = 20
+    }
+    modifier = {
+        factor = 1.1
+        num_of_cities = 40
+    }
+    modifier = {
+        factor = 1.1
+        num_of_cities = 80
+    }
+    modifier = {
+        factor = 1.1
+        num_of_cities = 160
+    }
+    
+    modifier = {
+        factor = 1.05
+        prestige = 100
+    }
+    modifier = {
+        factor = 1.05
+        prestige = 300
+    }
+    modifier = {
+        factor = 1.05
+        prestige = 1000
+    }
+    modifier = {
+        factor = 1.05
+        prestige = 3000
+    }
+    
         modifier = {
         factor = 100
         NOT = {
@@ -587,7 +796,122 @@ country_migration_target = {
 migration_target =
 {
     factor = 0.01
-	
+	modifier = {
+        factor = 0.5
+        unemployment = 0.05
+    }
+    modifier = {
+        factor = 0.5
+        unemployment = 0.1
+    }
+    modifier = {
+        factor = 0.5
+        unemployment = 0.15
+    }
+    
+    modifier = {
+        factor = 3
+        has_pop_culture = THIS
+    }
+    modifier = {
+        factor = 1.5
+        has_pop_religion = THIS
+    }
+        
+    modifier = {
+        factor = 0.25
+        has_culture_core = no
+    }
+    
+    modifier = {
+        factor = 0.25   
+        primary_culture = THIS
+        is_primary_culture = no
+    }
+    
+    modifier = {
+        factor = 0.25
+        accepted_culture = THIS
+        is_accepted_culture = no
+    }
+
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.1
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.2
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.3
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.4
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.5
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.6
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.7
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.8
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_everyday_needs = 0.9
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.1
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.2
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.3
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.4
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.5
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.6
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.7
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.8
+    }
+    modifier = {
+        factor = 1.2
+        poor_strata_luxury_needs = 0.9
+    }
+
+    modifier = {
+        factor = 2
+        state_scope = { has_factories = yes } 
+    }
 	modifier = {
 		factor = 2.0
 		NOT = { has_recent_imigration = 365 }
@@ -1756,14 +2080,835 @@ promote_to = {
             }
         }
     }
-#    labourers =
-#    {
-#        factor = 0.01
-#        modifier = {
-#            factor = 1.4
-#            not = { military_spending = 0.35 }
-#        }
-#    }
+
+    artisans =
+    {
+        factor = 0.01   
+        modifier = {
+            factor = 8
+        }
+        
+        group = {
+            modifier = {
+                factor = -1
+                craftsmen = 0.01
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.02
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.03
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.04
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.05
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.06
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.07
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.08
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.09
+            }
+            modifier = {
+                factor = -1
+                craftsmen = 0.10
+            }
+            modifier = {
+                factor = -2
+                craftsmen = 0.12
+            }
+            modifier = {
+                factor = -2
+                craftsmen = 0.14
+            }
+            modifier = {
+                factor = -6
+                craftsmen = 0.20
+            }
+        
+        }
+
+        
+    }
+    
+    bureaucrats =
+    {
+        factor = 0.01
+        modifier = {
+            factor = -100 
+            NOT = { is_accepted_culture = yes }
+            NOT = { is_primary_culture = yes }
+        }
+        
+        group = {
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.002 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.004 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.006 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.008 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.010 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.012 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.014 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.016 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.018 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.020 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.022 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.024 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.026 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.028 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.030 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.032 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.034 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.036 }
+            }
+            modifier = {
+                factor = -2
+                state_scope = { bureaucrats = 0.038 }
+            }
+            modifier = {
+                factor = -100
+                state_scope = { bureaucrats = 0.040 }
+            }
+        }
+        
+        modifier = {
+            factor = 3
+            health_care = trinket_health_care
+        }
+        modifier = {
+            factor = 6
+            health_care = low_health_care
+        }
+        modifier = {
+            factor = 9
+            health_care = acceptable_health_care
+        }
+        modifier = {
+            factor = 12
+            health_care = good_health_care  
+        }
+        modifier = {
+            factor = 4
+            school_reforms = low_schools  
+        }       
+        modifier = {
+            factor = 8
+            school_reforms = acceptable_schools
+        }   
+        modifier = {
+            factor = 12
+            school_reforms = good_schools 
+        }   
+        modifier = {
+            factor = 1
+            safety_regulations = trinket_safety
+        }
+        modifier = {
+            factor = 1
+            safety_regulations = low_safety
+        }       
+        modifier = {
+            factor = 2
+            safety_regulations = acceptable_safety
+        }
+        modifier = {
+            factor = 2
+            safety_regulations = good_safety
+        }
+        
+        modifier = {
+            factor = 1
+            work_hours = fourteen_hours
+        }
+        modifier = {
+            factor = 1
+            work_hours = twelve_hours
+        }       
+        modifier = {
+            factor = 1
+            work_hours  = ten_hours
+        }
+        modifier = {
+            factor = 1
+            work_hours = eight_hours
+        }
+        modifier = {
+            factor = 1
+            wage_reform = trinket_wage
+        }
+        modifier = {
+            factor = 1
+            wage_reform = low_minimum_wage
+        }       
+        modifier = {
+            factor = 1
+            wage_reform  = acceptable_minimum_wage
+        }
+        modifier = {
+            factor = 1
+            wage_reform = good_minimum_wage
+        }
+        
+        group = {
+            modifier = {
+                factor = 1
+                crime_fighting = 0.1
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.2
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.3
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.4
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.5
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.6
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.7
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.8
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.9
+            }
+            modifier = {
+                factor = 1
+                crime_fighting = 0.99
+            }
+        }
+    }
+    soldiers =
+    {
+        factor = 0.01
+        group = {
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.9 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.8 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.7 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.6 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.5 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.4 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.3 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.2 }
+            }
+            modifier = {
+                factor = -0.2
+                not = { recruited_percentage = 0.1 }
+            }
+        }
+    
+        group = {
+            modifier = {
+                factor = 0.2
+                military_spending = 0.10
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.20
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.30
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.40
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.5
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.6
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.7
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.8
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.9
+            }
+            modifier = {
+                factor = 0.2
+                military_spending = 0.99
+            }
+        }
+        group = {
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.003 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.006 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.009 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.012 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.015 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.018 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.021 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.024 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.027 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.030 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.033 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.036 }
+            }
+            modifier = {
+                factor = -0.2
+                state_scope = { soldiers = 0.039 }
+            }
+            modifier = {
+                factor = -100
+                state_scope = { soldiers = 0.04 }
+            }
+        }
+    }
+
+    farmers = {
+        factor = 0.01
+        
+        modifier = {
+            factor = 0.5
+        }
+        
+        #don't turn farmer or labourer if existing ones are unemployed
+        modifier = {
+            factor = -100
+            OR = {
+                unemployment_by_type = { type = farmers value = 0.05  }
+                unemployment_by_type = { type = labourers value = 0.05  }
+            }
+        }
+    }
+    
+
+
+    clergymen =
+    {
+        factor = 0.01
+
+        group = {
+            modifier = {
+                factor = 1
+                education_spending = 0.1
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.2
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.3
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.4
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.5
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.6
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.7
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.8
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.9
+            }
+            modifier = {
+                factor = 1
+                education_spending = 0.99
+            }
+        }
+        group = {       
+            modifier = {
+                factor = -0.5
+                clergymen = 0.001
+            }
+            modifier = {
+                factor = -0.5
+                clergymen = 0.002
+            }
+            modifier = {
+                factor = -0.5
+                clergymen = 0.003
+            }
+            modifier = {
+                factor = -0.5
+                clergymen = 0.004
+            }
+            modifier = {
+                factor = -0.5
+                clergymen = 0.005
+            }
+            modifier = {
+                factor = -0.5
+                clergymen = 0.006
+            }
+            modifier = {
+                factor = -1
+                clergymen = 0.008
+            }
+            modifier = {
+                factor = -1
+                clergymen = 0.01
+            }           
+            modifier = {
+                factor = -1
+                clergymen = 0.012
+            }           
+            modifier = {
+                factor = -1
+                clergymen = 0.014
+            }           
+            modifier = {
+                factor = -1
+                clergymen = 0.016
+            }           
+            modifier = {
+                factor = -1
+                clergymen = 0.018
+            }           
+            modifier = {
+                factor = -1
+                clergymen = 0.02
+            }           
+            modifier = {
+                factor = -2
+                clergymen = 0.024
+            }
+            modifier = {
+                factor = -3
+                clergymen = 0.03
+            }
+            modifier = {
+                factor = -3
+                clergymen = 0.036
+            }
+            modifier = {
+                factor = -100
+                clergymen = 0.04
+            }                       
+        }
+        group = {
+            modifier = {
+                factor = -0.5
+                clerks = 0.001
+            }
+            modifier = {
+                factor = -0.5
+                clerks = 0.002
+            }
+            modifier = {
+                factor = -0.5
+                clerks = 0.003
+            }
+            modifier = {
+                factor = -0.5
+                clerks = 0.004
+            }
+            modifier = {
+                factor = -0.5
+                clerks = 0.005
+            }
+            modifier = {
+                factor = -0.5
+                clerks = 0.006
+            }
+            modifier = {
+                factor = -1
+                clerks = 0.008
+            }
+            modifier = {
+                factor = -1
+                clerks = 0.01
+            }
+            modifier = {
+                factor = -1
+                clerks = 0.012
+            }
+            modifier = {
+                factor = -2
+                clerks = 0.016
+            }
+            modifier = {
+                factor = -2
+                clerks = 0.02
+            }
+            modifier = {
+                factor = -2
+                clerks = 0.024
+            }
+            modifier = {
+                factor = -3
+                clerks = 0.03
+            }
+            modifier = {
+                factor = -5
+                clerks = 0.04
+            }
+            modifier = {
+                factor = -5
+                clerks = 0.05
+            }
+            modifier = {
+                factor = -5
+                clerks = 0.06
+            }
+            modifier = {
+                factor = -10
+                clerks = 0.08
+            }
+            modifier = {
+                factor = -20
+                clerks = 0.1
+            }
+        }
+    }
+    
+    clerks = {
+        factor = 0.01
+        
+        group = {
+            modifier = {
+                factor = 1
+                literacy = 0.1
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.2
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.3
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.4
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.5
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.6
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.7
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.8
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.9
+            }
+            modifier = {
+                factor = 1
+                literacy = 0.99
+            }
+        }
+        
+        group = {
+            modifier = {
+                factor = 0.5
+                education_spending = 0.1
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.2
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.3
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.4
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.5
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.6
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.7
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.8
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.9
+            }
+            modifier = {
+                factor = 0.5
+                education_spending = 0.99
+            }
+        
+        }
+        
+        group = {
+        
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.001
+                    not = { craftsmen = 0.004 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.002
+                    not = { craftsmen = 0.008 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.004
+                    not = { craftsmen = 0.016 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.01
+                    not = { craftsmen = 0.04 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.02
+                    not = { craftsmen = 0.08 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.03
+                    not = { craftsmen = 0.12 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.04
+                    not = { craftsmen = 0.16 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.05
+                    not = { craftsmen = 0.2 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.06
+                    not = { craftsmen = 0.24 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.08
+                    not = { craftsmen = 0.32 }
+                }
+            }
+            modifier = {
+                factor = -100
+                state_scope = {
+                    clerks = 0.1
+                    not = { craftsmen = 0.4 }
+                }
+            }
+        }
+        
+        modifier = {
+            factor = -100
+            unemployment_by_type = { type = clerks value = 0.05  }
+            clerks = 0.0001
+        }
+        
+        modifier = {
+            factor = -100
+            AND = {
+                state_scope = {
+                    has_factories = no
+                }
+            }
+        }
+        
+        modifier = {
+            factor = -100
+                location = {
+                    is_colonial = yes
+                }
+        }
+    }
+
 }
 
 

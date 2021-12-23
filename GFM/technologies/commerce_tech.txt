@@ -577,8 +577,8 @@ freedom_of_trade = {
     cost = 3600
 
     influence = 0.1
-    farm_rgo_eff = 0.1
-    mine_rgo_eff = 0.1
+    farm_rgo_eff = 0.2
+    mine_rgo_eff = 0.2
 
     ai_chance = {
         factor = 11
@@ -620,8 +620,8 @@ market_structure = {
     cost = 7200
 
     influence = 0.1
-    farm_rgo_eff = 0.1
-    mine_rgo_eff = 0.1
+    farm_rgo_eff = 0.2
+    mine_rgo_eff = 0.2
 
     ai_chance = {
         factor = 2
@@ -678,8 +678,8 @@ business_regulations = {
     cost = 10800
 
     influence = 0.2
-    farm_rgo_eff = 0.1
-    mine_rgo_eff = 0.1
+    farm_rgo_eff = 0.2
+    mine_rgo_eff = 0.2
 
     ai_chance = {
         factor = 2

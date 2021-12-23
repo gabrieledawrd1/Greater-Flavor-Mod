@@ -2,48 +2,222 @@
 promotion_chance = {
     factor = 0.25
 
+    #corresponds to either everyday needs, literacy or schools in full
+    modifier = {
+            factor = -0.075
+    }
+    #zero-literacy artisans need 100% everyday and 50% luxury to go capi
+    modifier = {
+            factor = -0.0325
+            strata = middle
+    }
+    
+    modifier = {
+            factor = -0.03
+            country = { has_country_flag = low_promotion }
+    }
+    modifier = {
+            factor = -0.015
+            country = { has_country_flag = below_average_promotion }
+    }
+    modifier = {
+            factor = 0.015
+            country = { has_country_flag = above_average_promotion }
+    }
+    modifier = {
+            factor = 0.03
+            country = { has_country_flag = high_promotion }
+    }
+    
     group = {
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.05
         }
         modifier = {
-            factor = 0.02
-            literacy = 0.1
+            factor = 0.0075
+            literacy = 0.1      
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.2
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.3
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.4
         }
         modifier = {
-            factor = 0.02
-            literacy = 0.5
+            factor = 0.0075
+            literacy = 0.5  
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.6
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.7
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.8
         }
         modifier = {
-            factor = 0.02
+            factor = 0.0075
             literacy = 0.9
         }
     }
+
+    group = {
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.05
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.1 
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.2
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.3
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.4
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.5
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.6
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.7
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.8
+        }
+        modifier = {
+            factor = 0.0075
+            everyday_needs = 0.9
+        }
+    }
+    
+    group = {
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.05
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.1 
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.2
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.3
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.4
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.5
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.6
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.7
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.8
+        }
+        modifier = {
+            factor = 0.0075
+            luxury_needs = 0.9
+        }
+    }
+
+    modifier = {
+            factor = 0.025
+            country = { school_reforms = low_schools }
+            strata = poor
+            state_scope = { is_colonial = no }
+    }
+    modifier = {
+            factor = 0.05
+            country = { school_reforms = acceptable_schools }
+            strata = poor
+            state_scope = { is_colonial = no }
+    }
+    modifier = {
+            factor = 0.075
+            country = { school_reforms = good_schools }
+            strata = poor
+            state_scope = { is_colonial = no }
+    }
+
+    modifier = {
+        factor = -0.0125
+        not = { religion = this }
+    }
+    
+    modifier = {
+        factor = -0.0125
+        not = { religion = this }
+        country = { religious_policy = moralism }
+    }
+    
+    modifier = {
+        factor = -0.0125
+        is_primary_culture = no
+        is_accepted_culture = no
+    }
+    modifier = {
+        factor = -0.0125
+        is_primary_culture = no
+        is_accepted_culture = no
+        country = { citizenship_policy = residency }
+    }
+    
+    modifier = {
+        factor = -0.025
+        state_scope = { is_colonial = yes }
+    }
+    
+    modifier = {
+        factor = -0.025
+        OR = {
+            country = { slavery = yes_slavery }
+            country = { has_country_flag = serfdom_not_abolished }
+        }
+    }
+    
+    modifier = {
+        factor = -100
+        location = { NOT = { controlled_by = owner } }
+    }
+    
 
     modifier = {
         factor = -5
@@ -254,179 +428,210 @@ demotion_chance = {
 
     group = {
         modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.9 }
+            factor = 1.6
+            not = { life_needs = 0.85 }
         }
         modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.8 }
+            factor = 1.6
+            not = { life_needs = 0.75 }
         }
         modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.7 }
+            factor = 1.6
+            not = { life_needs = 0.65 }
         }
         modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.6 }
+            factor = 1.6
+            not = { life_needs = 0.55 }
         }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.5 }
-        }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.3 }
-        }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.2 }
-        }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.15 }
-        }
-        modifier = {
-            factor = -0.02
-            NOT = { literacy = 0.1 }
-        }
+    }
+
+    #local relative deprivation, demote if less than average poor need fulfillment
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.1 }
+        state_scope = { poor_strata_everyday_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.2 }
+        state_scope = { poor_strata_everyday_needs = 0.2 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.3 }
+        state_scope = { poor_strata_everyday_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.4 }
+        state_scope = { poor_strata_everyday_needs = 0.4 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.5 }
+        state_scope = { poor_strata_everyday_needs = 0.5 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.6 }
+        state_scope = { poor_strata_everyday_needs = 0.6 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.7 }
+        state_scope = { poor_strata_everyday_needs = 0.7 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.8 }
+        state_scope = { poor_strata_everyday_needs = 0.8 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { everyday_needs = 0.9 }
+        state_scope = { poor_strata_everyday_needs = 0.9 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { luxury_needs = 0.1 }
+        state_scope = { poor_strata_luxury_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { luxury_needs = 0.3 }
+        state_scope = { poor_strata_luxury_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.4
+        not = { luxury_needs = 0.6 }
+        state_scope = { poor_strata_luxury_needs = 0.6 }
+        strata = poor
+    }
+    
+    #extra relative deprivation, middle and rich demote unless at least 30% above poor
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.4 } #30% more than the poor get
+        state_scope = { poor_strata_everyday_needs = 0.1 }
+        not = { strata = poor } #applies to middle and rich
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.5 }
+        not = { luxury_needs = 0.1 }
+        state_scope = { poor_strata_everyday_needs = 0.2 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.6 }
+        not = { luxury_needs = 0.1 }
+        state_scope = { poor_strata_everyday_needs = 0.3 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.7 }
+        not = { luxury_needs = 0.1 } #compensate if not all everydays are on market
+        state_scope = { poor_strata_everyday_needs = 0.4 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.8 }
+        not = { luxury_needs = 0.15 }
+        state_scope = { poor_strata_everyday_needs = 0.5 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.9 }
+        not = { luxury_needs = 0.2 }
+        state_scope = { poor_strata_everyday_needs = 0.6 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.99 }
+        not = { luxury_needs = 0.25 }
+        state_scope = { poor_strata_everyday_needs = 0.7 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.3 }
+        state_scope = { poor_strata_everyday_needs = 0.8 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.35 }
+        state_scope = { poor_strata_everyday_needs = 0.9 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.4 }
+        state_scope = { poor_strata_luxury_needs = 0.1 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.6 }
+        state_scope = { poor_strata_luxury_needs = 0.3 }
+        not = { strata = poor }
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.9 }
+        state_scope = { poor_strata_luxury_needs = 0.6 }
+        not = { strata = poor }
     }
 
     group = {
         modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.9 }
+            factor = 1.0
+            unemployment = 0.05
+            #strata = poor
         }
         modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.8 }
-        }
-        modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.7 }
-        }
-    }
-
-
-    group = {
-        modifier = {
-            factor = 0.1
-            NOT = { luxury_needs = 0.9 }
-        }
-        modifier = {
-            factor = 0.1
-            NOT = { luxury_needs = 0.4 }
-        }
-    }
-
-    group = {
-        modifier = {
-            factor = -0.1
-            everyday_needs = 0.7
-            strata = middle
-            state_scope = { is_colonial = no }
-        }
-        modifier = {
-            factor = -0.1
-            everyday_needs = 0.8
-            strata = middle
-            state_scope = { is_colonial = no }
-        }
-        modifier = {
-            factor = -0.1
-            everyday_needs = 0.9
-            strata = middle
-            state_scope = { is_colonial = no }
-        }
-    }
-    group = {
-        modifier = {
-            factor = 0.5
-            NOT = { life_needs = 0.3 }
-            strata = middle
-        }
-        modifier = {
-            factor = 0.5
-            NOT = { life_needs = 0.2 }
-            strata = middle
-        }
-        modifier = {
-            factor = 0.5
-            NOT = { life_needs = 0.1 }
-            strata = middle
-        }
-    }
-
-    group = {
-        modifier = {
-            factor = 0.1
+            factor = 1.0
             unemployment = 0.1
+            #strata = poor
         }
         modifier = {
-            factor = 0.1
+            factor = 1.0
+            unemployment = 0.15
+            #strata = poor
+        }
+        modifier = {
+            factor = 1.0
             unemployment = 0.2
-        }
-        modifier = {
+            #strata = poor
+        }       
+    }
+    
+    modifier = {
             factor = 0.5
-            unemployment = 0.3
-            location = { controlled_by = owner }
-        }
+            strata = rich
+            not = { luxury_needs = 0.8 }
     }
-
-    modifier = {
-        factor = -0.05
-        state_scope = { is_slave = yes }
-    }
-
-    modifier = {
-        factor = -0.1
-        is_state_religion = no
-        strata = poor
-    }
-
-    modifier = {
-        factor = -0.1
-        NOT = { culture = this }
-        strata = poor
-    }
-
-    modifier = {
-        factor = -0.1
-        NOT = { consciousness = 4 }
-        strata = poor
-    }
-
-    modifier = {
-        factor = -0.1
-        state_scope = { is_colonial = yes }
-        strata = poor
-    }
-
-    modifier = {
-        factor = 0.5
-        strata = middle
-        state_scope = { is_colonial = yes }
-        NOT = { culture = this }
-    }
-
-    modifier = {
-        factor = 0.2
-        NOT = { life_needs = 0.1 }
-        strata = middle
-    }
-
-    modifier = {
-        factor = -0.5
-        strata = rich
-        OR = {
-            is_accepted_culture = yes
-            is_primary_culture = yes
-        }
-        state_scope = { is_colonial = yes }
-    }
+    
+    #modifier = {
+    #    factor = -100
+    #    location = { NOT = { controlled_by = owner } }
+    #}
 
     modifier = {
         factor = 0.5
@@ -513,25 +718,136 @@ migration_chance = {
 		}
     }
 
-    group = { #higher migration if needs < num, max +0.3
+    group = {
         modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.9 }
-            NOT = { everyday_needs = 0.1 }
-            NOT = { luxury_needs = 0.1 }
+            factor = 0.8
+            not = { life_needs = 0.85 }
+            strata = poor
         }
         modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.8 }
-            NOT = { everyday_needs = 0.1 }
-            NOT = { luxury_needs = 0.1 }
+            factor = 0.8
+            not = { life_needs = 0.75 }
+            strata = poor
         }
         modifier = {
-            factor = 0.1
-            NOT = { life_needs = 0.7 }
-            NOT = { everyday_needs = 0.1 }
-            NOT = { luxury_needs = 0.1 }
+            factor = 0.8
+            not = { life_needs = 0.65 }
+            strata = poor
         }
+        modifier = {
+            factor = 0.8
+            not = { life_needs = 0.55 }
+            strata = poor
+        }
+    }
+
+    #country-level relative deprivation causes poors to migrate internally
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.1 }
+        country = { poor_strata_everyday_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.2 }
+        country = { poor_strata_everyday_needs = 0.2 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.3 }
+        country = { poor_strata_everyday_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.4 }
+        country = { poor_strata_everyday_needs = 0.4 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.5 }
+        country = { poor_strata_everyday_needs = 0.5 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.6 }
+        country = { poor_strata_everyday_needs = 0.6 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.7 }
+        country = { poor_strata_everyday_needs = 0.7 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.8 }
+        country = { poor_strata_everyday_needs = 0.8 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { everyday_needs = 0.9 }
+        country = { poor_strata_everyday_needs = 0.9 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.1 }
+        country = { poor_strata_luxury_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.3 }
+        country = { poor_strata_luxury_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.1
+        not = { luxury_needs = 0.6 }
+        country = { poor_strata_luxury_needs = 0.6 }
+        strata = poor
+    }
+    
+    group = {
+        modifier = {
+            factor = 0.2
+            unemployment = 0.05
+        }
+        modifier = {
+            factor = 0.2
+            unemployment = 0.1
+        }
+        modifier = {
+            factor = 0.2
+            unemployment = 0.15
+        }
+        modifier = {
+            factor = 0.2
+            unemployment = 0.2
+        }       
+    }
+    
+    modifier = {
+        factor = -0.4
+        is_primary_culture = no
+        is_accepted_culture = no
+        state_scope = { is_colonial = yes }
+    }
+    
+    modifier = {
+            factor = -100
+            strata = middle
+    }
+    modifier = {
+            factor = -100
+            strata = rich
     }
 
     modifier = { #-0.3 if current state has factories
@@ -581,6 +897,11 @@ colonialmigration_chance = {
     factor = 0.25
 
     modifier = {
+        factor = -100
+        location = { NOT = { controlled_by = owner } }
+    }
+
+    modifier = {
         factor = -10.0
         is_primary_culture = no
         is_accepted_culture  = no
@@ -595,6 +916,133 @@ colonialmigration_chance = {
         }
     }
 
+    #prevention of tiny pop hypermobility
+    modifier = {
+        factor = -0.11
+    }
+
+    group = {
+        modifier = {
+            factor = 0.4
+            not = { life_needs = 0.85 }
+            strata = poor
+        }
+        modifier = {
+            factor = 0.4
+            not = { life_needs = 0.75 }
+            strata = poor
+        }
+        modifier = {
+            factor = 0.4
+            not = { life_needs = 0.65 }
+            strata = poor
+        }
+        modifier = {
+            factor = 0.4
+            not = { life_needs = 0.55 }
+            strata = poor
+        }
+    }
+
+    #country-level relative deprivation causes poors to migrate internally
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.1 }
+        country = { poor_strata_everyday_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.2 }
+        country = { poor_strata_everyday_needs = 0.2 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.3 }
+        country = { poor_strata_everyday_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.4 }
+        country = { poor_strata_everyday_needs = 0.4 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.5 }
+        country = { poor_strata_everyday_needs = 0.5 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.6 }
+        country = { poor_strata_everyday_needs = 0.6 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.7 }
+        country = { poor_strata_everyday_needs = 0.7 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.8 }
+        country = { poor_strata_everyday_needs = 0.8 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { everyday_needs = 0.9 }
+        country = { poor_strata_everyday_needs = 0.9 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { luxury_needs = 0.1 }
+        country = { poor_strata_luxury_needs = 0.1 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { luxury_needs = 0.3 }
+        country = { poor_strata_luxury_needs = 0.3 }
+        strata = poor
+    }
+    modifier = {
+        factor = 0.04
+        not = { luxury_needs = 0.6 }
+        country = { poor_strata_luxury_needs = 0.6 }
+        strata = poor
+    }
+    
+    group = {
+        modifier = {
+            factor = 0.1
+            unemployment = 0.05
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.1
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.15
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.2
+        }       
+    }
+    
+    modifier = {
+        factor = -0.3
+        is_primary_culture = no
+        is_accepted_culture = no
+        state_scope = { is_colonial = yes }
+    }
     modifier = {
         factor = 0.02
         country = { penal_system = colonial_transportation }
@@ -772,7 +1220,147 @@ emigration_chance = {
             }
         }
     }
+    #prevention of tiny pop hypermobility
+    modifier = {
+        factor = -0.01
+    }
 
+    group = {
+        modifier = {
+            factor = 0.2
+            militancy = 3
+            not = { agree_with_ruling_party = 0.15 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 4
+            not = { agree_with_ruling_party = 0.2 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 5
+            not = { agree_with_ruling_party = 0.25 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 6
+            not = { agree_with_ruling_party = 0.3 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 7
+            not = { agree_with_ruling_party = 0.35 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 8
+            not = { agree_with_ruling_party = 0.4 }
+        }
+        modifier = {
+            factor = 0.2
+            militancy = 9
+            not = { agree_with_ruling_party = 0.45 }
+        }
+    }
+
+
+    group = {
+        modifier = {
+            factor = 0.1
+            unemployment = 0.05
+            country = { unemployment = 0.05 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.1
+            country = { unemployment = 0.05 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.15
+            country = { unemployment = 0.05 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.2
+            country = { unemployment = 0.05 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.25
+            country = { unemployment = 0.05 }
+        }
+        
+    }
+    
+    #with high enough local unemployment, emigrate even if there is not 5% national unemployment
+    group = {
+        modifier = {
+            factor = 0.05
+            unemployment = 0.15
+        }
+        modifier = {
+            factor = 0.05
+            unemployment = 0.2
+        }
+        modifier = {
+            factor = 0.05
+            unemployment = 0.25
+        }
+        
+    }
+    
+    group = {
+        modifier = {
+            factor = 0.1
+            unemployment = 0.05
+            country = { unemployment = 0.1 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.1
+            country = { unemployment = 0.1 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.15
+            country = { unemployment = 0.1 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.2
+            country = { unemployment = 0.1 }
+        }
+        modifier = {
+            factor = 0.1
+            unemployment = 0.25
+            country = { unemployment = 0.1 }
+        }
+        
+    }
+
+    modifier = {
+        factor = 0.2
+        country = { religious_policy = moralism }
+        not = { religion = this }
+        militancy = 3
+    }
+
+    modifier = {
+        factor = 0.2
+        country = { citizenship_policy = residency }
+        is_primary_culture = no
+        is_accepted_culture = no
+        militancy = 3
+    }
+    modifier = {
+        factor = -0.2
+        OR = { 
+                continent = north_america
+                continent = south_america
+            }
+    }
+    
     modifier = {
         factor = -1
         unemployment = 1

@@ -6,14 +6,7 @@ color = { 17 17 17 }
 unemployment = yes
 
 rebel = {
-    cavalry = 0.0
-    artillery = 0.0
-    cuirassier = 0.0
-    dragoon = 0.0
-    guard = 0.0
-    hussar = 0.0
-    infantry = 0.0
-    irregular = 1
+    infantry = 1.0
 }
 
 
@@ -26,7 +19,7 @@ everyday_needs = {
 }
 
 luxury_needs = {
-    opium = 1
+    wine = 1
 }
 
 ideologies = {
@@ -41,37 +34,13 @@ ideologies = {
     }
 }
 issues = {
+    full_citizenship =  {
+        factor = 5
+    }
     no_slavery = {
-        factor = 4
-
-        modifier = {
-            factor = 0
-            OR = {
-            NOT = { is_next_reform = no_slavery }
-            country = { civilized = no }
-            }
-        }
+        factor = 25
     }
-
-    freedom_of_womb = {
-        factor = 4
-        modifier = {
-            factor = 0
-            OR = {
-                NOT = { is_next_reform = freedom_of_womb }
-                country = { civilized = no }
-            }
-        }
-    }
-
     yes_slavery = {
-        factor = 1
-        modifier = {
-        factor = 0
-        OR = {
-            slavery = no_slavery
-            country = { civilized = no }
-            }
-        }
+        factor = 10
     }
 }
