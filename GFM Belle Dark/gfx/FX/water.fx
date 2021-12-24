@@ -422,13 +422,6 @@ float4 PixelShader_HoiWater_2_0( VS_OUTPUT_WATER IN ) : COLOR
 	FOW = saturate ( FOW + 0.5 );
 	
 	OutColor.rgb = lerp(OutColor.rgb, OutColor.bbb, 0.3);
-	OutColor.r += 0.17;
-	OutColor.g += 0.15;
-	OutColor.b += 0.12;
-	OutColor.r /= 1.48;
-	OutColor.g /= 1.65;
-	OutColor.b /= 1.85;
-	OutColor.rgb /= 1.35;
 	
 	return float4( OutColor * FOW, vWaterTransparens );
 }
