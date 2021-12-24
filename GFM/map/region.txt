@@ -48,11 +48,11 @@ MEX_100 = { 100 101 102 3460 } #Arizona
 
 MEX_103 = { 105 2148 2662 3562 } #New Mexico
 
-USA_106 = { 103 106 108 109 3558 3559 3560 3561 } #Colorado
+USA_106 = { 103 106 108 109 3559 3560 3561 } #Colorado
 
-USA_111 = { 112 107 110 111 3468 3557 } #Wyoming
+USA_111 = { 112 107 110 111 3468 3555 3557 3556 } #Wyoming
 
-USA_116 = { 113 116 115 114 3467 3556 } #Montana
+USA_116 = { 113 116 115 114 3467 } #Montana
 
 USA_118 = { 117 118 119 } #North Dakota
 
@@ -94,7 +94,7 @@ USA_194 = { 194 192 193 } #Mississippi
 
 USA_196 = { 195 196 197 3310 } #Alabama
 
-USA_200 = { 200 199 198 } #Florida
+USA_200 = { 200 199 198 3558 } #Florida
 
 USA_201 = { 201 202 204 2555 3311 } #Georgia
 
@@ -417,7 +417,7 @@ TUR_803 = { 803 804 798 802 799 3346 3420 3421 } #Southern Serbia
 
 TUR_805 = { 805 819 820 821 822 3342 } #Southern Macedonia
 
-TUR_806 = { 806 807 1780 3291 858 } #Northern Macedonia
+TUR_806 = { 806 807 1780 3291 } #Northern Macedonia
 
 TUR_809 = { 815 817 808 816 3303 3373 } #Eastern Rumelia
 
@@ -437,7 +437,7 @@ TUR_853 = { 849 853 852 851 850 3307 3308 } #Albania
 
 TUR_855 = { 855 856 857 2690 } #Cyprus
 
-TUR_860 = { 860 828 859 3302 3470 } #Thrace
+TUR_860 = { 860 828 859 3302 3470 858 } #Thrace
 
 
 ### Middle East

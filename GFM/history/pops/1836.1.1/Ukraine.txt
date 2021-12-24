@@ -983,7 +983,7 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 184200
+        size = 84200
     }
 
 

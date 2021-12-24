@@ -149,13 +149,13 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 9039
+        size = 19039
     }
 	
 	farmers = {
         culture = haitian_creole
         religion = catholic
-        size = 5626
+        size = 15626
     }
 
     farmers = {
@@ -223,7 +223,7 @@
     farmers = {
         culture = afro_french
         religion = catholic
-        size = 2039
+        size = 6039
     }
     
     farmers = {

@@ -71,7 +71,7 @@
 	artisans = {
         culture = blanco_caribeno
         religion = catholic
-        size = 11000
+        size = 9000
     }
 
     soldiers = {
@@ -231,7 +231,7 @@
     farmers = {
         culture = caribeno
         religion = catholic
-        size = 6470
+        size = 64700
     }
 
     farmers = {
@@ -285,7 +285,7 @@
     farmers = {
         culture = afro_latino
         religion = catholic
-        size = 4375
+        size = 43750
     }
 
 }
