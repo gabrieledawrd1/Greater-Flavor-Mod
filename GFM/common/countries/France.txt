@@ -1,8 +1,11 @@
 color = { 20 50 210 }
-proletarian_dictatorship = { 0 0 153 }
-fascist_dictatorship = { 0 0 153 }
+proletarian_dictatorship = { 0 51 153 }
+fascist_dictatorship = { 0 35 80 }
 presidential_dictatorship = { 0 0 153 }
-french_consulate = {  0 51 153 }
+#french_consulate = {  0 51 153 }
+absolute_empire = { 0 56 116 }
+semi_constitutional_empire = { 0 56 116 }
+constitutional_empire = { 0 56 116 }
 graphical_culture = FrenchGC
 
 party = {
