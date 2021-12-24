@@ -421,20 +421,10 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "decisions_label"
-				position = { x = 68 y = 44 }
-				font = "vic_22_bold"
+				position = { x = 155 y = 44 }
+				font = "vic_22"
 				text = "POLITICS_DECISIONS"	
 				maxWidth = 300
-				maxHeight = 20
-				format = left			
-			}
-			
-			instantTextBoxType = {
-				name = "decisions_label_2"
-				position = { x = 43 y = 44 }
-				font = "vic_22"
-				text = "POLITICS_DECISIONS_2"	
-				maxWidth = 600
 				maxHeight = 20
 				format = centre			
 			}
