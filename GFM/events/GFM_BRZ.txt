@@ -781,9 +781,12 @@ country_event = {
         }
 	}                      							
 }
+
 country_event = {
     id = 47077
 	picture = nina_rodrigues
+    title = "EVTNAME47077"
+    desc = "EVTDESC47077"
     trigger = {
         tag = BRZ
         year = 1890
@@ -791,20 +794,9 @@ country_event = {
     fire_only_once = yes
     mean_time_to_happen =  {
         months = 3
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1891
-        }
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1892
-        }
+        modifier = { factor = 1.75 year = 1891 }
+        modifier = { factor = 1.95 year = 1892 }
     }
-
-    title = "EVTNAME47077"
-    desc = "EVTDESC47077"
 
     option = {
         name = "EVTOPTA47077"
@@ -815,4 +807,98 @@ country_event = {
         }
     }
 }
-							
+
+country_event = {
+    id = 47078
+    title = "Reforma urbana"
+    desc = "EVTDESC47078"
+    picture = "rio_city"
+    trigger = {
+        tag = BRZ
+        year = 1903
+		owns = 2447
+    }
+    fire_only_once = yes  
+	mean_time_to_happen = { months = 2 }
+
+    option = {
+        name = "EVTOPTA47078"
+		money = -10000
+        2447 = {
+			add_province_modifier = { name = recently_built_city duration = 730 }
+        }
+    }
+}							
+country_event = {
+    id = 47079
+    title = "Revolta da vacina"
+    desc = "EVTDESC47079"
+    picture = "riot"
+    trigger = {
+        tag = BRZ
+        2447 = { owned_by = THIS has_province_modifier = { recently_built_city } }	  
+        mean_time_to_happen = { months = 20 }
+    }
+
+    option = {
+        name = "EVTOPTA47079"
+        any_pop = { 
+            limit = { location = { province_id = 2447 } }
+            militancy = 8		   
+        }
+    }
+}
+
+country_event = {
+    id = 47080
+    title = "Machado de Assis "
+    desc = "EVTDESC47080"
+    picture = "machado_de_assis"
+
+    fire_only_once = yes
+
+    mean_time_to_happen = { months = 3 }
+
+    trigger = {
+        tag = BRZ
+        year = 1874 
+    }
+
+    option = {
+        name = "Great!"
+        prestige = 10  
+    }
+}
+
+country_event = {
+    id = 47081
+    title = "Castro Alves "
+    desc = "EVTDESC47081"
+    picture = "castro_alves"
+
+    fire_only_once = yes
+
+    mean_time_to_happen = { months = 3 }
+
+    trigger = {
+        tag = BRZ
+        year = 1865
+		slavery = yes_slavery
+    }
+
+    option = {
+        name = "EVTOPTA47081"
+        prestige = 5  
+		any_pop = {
+            limit = { has_pop_culture = afro_brazilian }
+            consciousness = 5
+			mlitancy = 3
+        }
+		any_pop = {
+            dominant_issue = { value = freedom_of_womb factor = 0.1 }
+            ideology = { value = liberal factor = 0.2 }
+            consciousness = 2
+        }
+    }
+        
+}	   
