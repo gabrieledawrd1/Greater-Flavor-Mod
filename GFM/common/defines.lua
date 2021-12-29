@@ -107,18 +107,18 @@ economy = {
 	CAPITALIST_BUILD_FACTORY_STATE_EMPLOYMENT_PERCENT = 0.7, -- Capis don't build factories if less than this percent is employed in existing factories
 	GOODS_FOCUS_SWAP_CHANCE = 0, -- Percent increased chance that artisan wants to change goods independently of how well he is doing presently
 	NUM_CLOSED_FACTORIES_PER_STATE_LASSIEZ_FAIRE = 1, -- Number of closed factories allowed per state under Lassiez Faire
-	MIN_NUM_FACTORIES_PER_STATE_BEFORE_DELETING_LASSIEZ_FAIRE = 2, -- Min number of factories per state before starting to delete under Lassiez Faire
+	MIN_NUM_FACTORIES_PER_STATE_BEFORE_DELETING_LASSIEZ_FAIRE = 1, -- Min number of factories per state before starting to delete under Lassiez Faire
 	BANKRUPCY_DURATION = 3, -- Years till a bankruptcy clears all loans
 	SECOND_RANK_BASE_SHARE_FACTOR = 0.5,
 	CIV_BASE_SHARE_FACTOR = 0.75,
 	UNCIV_BASE_SHARE_FACTOR = 1,
-	FACTORY_PAYCHECKS_LEFTOVER_FACTOR = 0.3, -- % of how much we pay to the pops and capitalists, from the leftovers.
+	FACTORY_PAYCHECKS_LEFTOVER_FACTOR = 0.5, -- % of how much we pay to the pops and capitalists, from the leftovers.
 	MAX_FACTORY_MONEY_SAVE = 3000,	-- how much money is stored maximum in a factory.
 	SMALL_DEBT_LIMIT = 20000,
 	FACTORY_UPGRADE_EMPLOYEE_FACTOR = 0.75, -- determines how close to the employee limit we need to be before "upgrade all" will upgrade/expand a given factory (1 = 100%).
-	RGO_SUPPLY_DEMAND_FACTOR_HIRE_HI = 0.2,	-- how fast pops are Hired when there is a high demand
+	RGO_SUPPLY_DEMAND_FACTOR_HIRE_HI = 0.4,	-- how fast pops are Hired when there is a high demand
 	RGO_SUPPLY_DEMAND_FACTOR_HIRE_LO = 0.02,	-- how fast pops are Hired when there is a medium demand
-	RGO_SUPPLY_DEMAND_FACTOR_FIRE = 0.2,		-- how fast pops are Fired when there is a low demand
+	RGO_SUPPLY_DEMAND_FACTOR_FIRE = 0.4,		-- how fast pops are Fired when there is a low demand
 	EMPLOYMENT_HIRE_LOWEST = 0.01,				-- we Hire pops no slower then x% of total required per day
 	EMPLOYMENT_FIRE_LOWEST = 0.01,				-- we Fire pops no slower then x% of total required per day
 	TRADE_CAP_LOW_LIMIT_LAND = 0.1, 				-- the lowest % the slider can go for land units
@@ -620,17 +620,17 @@ diplomacy = {
 pops = {
 	BASE_CLERGY_FOR_LITERACY = 0.005, 
 	MAX_CLERGY_FOR_LITERACY = 0.04, 
-	LITERACY_CHANGE_SPEED = 0.1,
+	LITERACY_CHANGE_SPEED = 0.2,
 
 
 	ASSIMILATION_SCALE = 0.008,
 	CONVERSION_SCALE = 0.02,
 	IMMIGRATION_SCALE = 0.005,
 
-	PROMOTION_SCALE = 0.002,
+	PROMOTION_SCALE = 0.010,
 	PROMOTION_ASSIMILATION_CHANCE = 0,
 	LUXURY_THRESHOLD = 500,
-	BASE_GOODS_DEMAND = 0.8,
+	BASE_GOODS_DEMAND = 1.0,
 	BASE_POPGROWTH = 0.0001,
 	MIN_LIFE_RATING_FOR_GROWTH = 30,
 	LIFE_RATING_GROWTH_BONUS = 0.0001,
@@ -660,7 +660,7 @@ pops = {
 	
 	NATIONAL_FOCUS_DIVIDER = 400000.0,
 	
-	POP_SAVINGS = 0.03,
+	POP_SAVINGS = 0.01,
 	
 	STATE_CREATION_ADMIN_LIMIT = 0.01,
 	MIL_TO_JOIN_REBEL = 8, -- Rebels over this will join a faction
@@ -695,10 +695,10 @@ pops = {
 ai =
 {
 	COLONY_WEIGHT = 4.0, -- ai weight for colonising
-	ADMINISTRATOR_WEIGHT = 15.0, -- ai weight for new bureaucrat
-	INDUSTRYWORKER_WEIGHT = 10.0, -- ai weight for new industry workers
-	EDUCATOR_WEIGHT = 25.0, -- ai weigth for new clergy
-	SOLDIER_WEIGHT = 35.0, -- ai weight for soldiers
+	ADMINISTRATOR_WEIGHT = 14.0, -- ai weight for new bureaucrat
+	INDUSTRYWORKER_WEIGHT = 32.0, -- ai weight for new industry workers
+	EDUCATOR_WEIGHT = 30.0, -- ai weigth for new clergy
+	SOLDIER_WEIGHT = 20.0, -- ai weight for soldiers
 	SOLDIER_FRACTION = 0.05, -- max amount of population AI wants to be soldiers
 	CAPITALIST_FRACTION = 0.007, -- max amount of population AI wants to be capis
 	PRODUCTION_WEIGHT = 0.05, -- ai weight for new production
@@ -711,7 +711,7 @@ ai =
 	CHANCE_BUILD_NAVAL_BASE = 1.0,
 	CHANCE_BUILD_FORT = 0.5,
 	CHANCE_INVEST_POP_PROJ = 0.25,
-	CHANCE_FOREIGN_INVEST = 0.4,
+	CHANCE_FOREIGN_INVEST = 1.0,
 	TWS_AWARENESS_SCORE_LOW_CAP = 0.2, -- AI will always add CBs if current warscore is less then that number (including TWS)
 	TWS_AWARENESS_SCORE_ASPECT = 0.5, -- AI will not add any more CBs when TWS is more then X% of total WS. (to not destroy the progress)
 	PEACE_BASE_RELUCTANCE = 25, -- AI base stubbornness to refuse peace (always applied)
