@@ -278,7 +278,38 @@ country_event = {
 
     option = {
         name = "HRE time"
-        change_tag_no_core_switch = PGR
+        inherit = MEX
+        inherit = UCA
+        inherit = GUA
+        inherit = ELS 
+        inherit = HON 
+        inherit = NIC 
+        inherit = COS 
+        inherit = VNZ
+        inherit = ECU
+        inherit = PEU
+        inherit = PBC
+        inherit = BOL 
+        inherit = CHL
+        inherit = ARC 
+        inherit = ARG
+        inherit = PRG 
+        inherit = URA
+        inherit = MEX
+        inherit = CRT
+        inherit = SBA
+        change_tag = PGR
+        any_owned = {
+            add_core = THIS
+        }
+        add_accepted_culture = south_andean
+        add_accepted_culture = platinean
+        add_accepted_culture = guarani
+        add_accepted_culture = north_andean
+        add_accepted_culture = mexican
+        add_accepted_culture = central_american
+        add_accepted_culture = caribeno
+        add_accepted_culture = afro_latino
     }
 
     option = {
