@@ -205,7 +205,7 @@ country_event = {
 			}
     }
 }
-###It would be a lie to suggest the Catholic church is weak. It may be necessary to secularize in order to progress as a nation, but it could also help our union to keep the Church in politics. This would be against Bolivar's wishes along with the liberals, but it might increase our support with the peasants. 
+
 country_event = {
     id = 62004
     title = "Church politics" 
@@ -517,5 +517,21 @@ country_event = {
         }
 		money = -20000
 		}
+	}
+}
+country_event = {
+    id = 62007
+    title = "Claiming Antofagasta"
+    desc = "62007_desc"
+    fire_only_once = yes
+    mean_time_to_happen = { months = 1 }
+    trigger = {
+		tag = CHL
+		BOL_2309 = { owned_by = THIS }
+		war = no 
+		}
+	    option = {
+        name = "They will learn to appreciate our ways."
+	CHL = { add_accepted_culture = South_Andean }
 	}
 }
