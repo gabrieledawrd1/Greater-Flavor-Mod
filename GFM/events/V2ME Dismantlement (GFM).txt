@@ -4,22 +4,23 @@
 # V2ME Dismantlement by Bob Bobington & Dr, Configured for GFM
 
 # ID Groups:
-#	0400-0409	Configuration & Trigger Events 
-#	0410-0419	First Wave Bounce Events (Ai)
-#	0420-0429	Dismantlement Leader Decision Events 
-#	0430-0439	Second Wave Bounce Events (Ai)
-#	0440-0449	Primary Effect Bouncing Events
-#	0450-0479	Primary Victor Response Events
-#	0480-0489	Secondary First Wave Bounce Events (Ai)
-#	0490-0499	Secondary Victor Leading Decision Events
-#	0500-0509	Secondary Second Wave Bounce Events (Ai)
-#	0510-0519	Secondary Effect Bouncing Evenets
-#	0520-0549	Secondary Victor Response Events
-#	0550-0559	Effect Events
-#	0560-0699	Reserved (Colonial Events)
-#	0700-0799	Reserved (Cleanup Events)
+#	0400-0409				Configuration & Trigger Events 
+#	0410-0419				First Wave Bounce Events (Ai)
+#	0420-0429 & 0800-0899 	Dismantlement Leader Decision Events
+#	0430-0439				Second Wave Bounce Events (Ai)
+#	0440-0449				Primary Effect Bouncing Events
+#	0450-0479				Primary Victor Response Events
+#	0480-0489				Secondary First Wave Bounce Events (Ai)
+#	0490-0499				Secondary Victor Leading Decision Events
+#	0500-0509				Secondary Second Wave Bounce Events (Ai)
+#	0510-0519				Secondary Effect Bouncing Evenets
+#	0520-0549				Secondary Victor Response Events
+#	0550-0559				Effect Events
+#	1100-1199 & 1200-1299	Custom Formables Bounce Events & Puppet Custom Formables Bounce Events
+#	1300-1399 & 1400-1499	Custom Formables Decision Events & Puppet Formables Decision Events
+#
 
-##### Initalizing Conference 0400-0409 #####
+##### 0400-0409	Configuration & Trigger Events #####
 
 country_event = {
     id = 777770403
@@ -5511,6 +5512,8 @@ country_event = {
 			}
 		}
 		
+		UTI = { civilized = yes }
+		
 		any_country = {
 			limit = {
 				OR = {
@@ -5719,7 +5722,7 @@ country_event = {
 			inherit = UTI
 		}
 		
-		
+		UTI = { civilized = no }
 		
 		any_country = {
 			limit = {
@@ -6204,7 +6207,7 @@ country_event = {
 			set_variable = { which = Puppet_Event_Sent value = 1 }
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
-#		PACIFICA PUPPET EVENT
+#		PCFIFICA PUPPET EVENT
 		random_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
@@ -6814,7 +6817,7 @@ country_event = {
 			set_country_flag = mail_delivery_opened
 			CLN = { set_country_flag = mail_delivery_ready_for_pickup }
 		}
-#		PACIFICA CORE EVENT
+#		PCFIFICA CORE EVENT
 		any_country = {
 			limit = {
 				NOT = { THIS = { has_country_flag = mail_delivery_ready_for_pickup } }
@@ -7203,6 +7206,7 @@ country_event = {
 				check_variable = { which = Outcome_Required value = 0.99 }
 				NOT = {
 #				Dumb Tags
+					tag = GER
 					tag = MIT
 					tag = ZAP
 					tag = CRB
@@ -7220,7 +7224,7 @@ country_event = {
 					tag = DNN
 					tag = BGR
 					tag = HUR
-					tag = PAC
+					tag = PCF
 					tag = QAS
 					tag = PLG
 					tag = CHR
@@ -7250,7 +7254,7 @@ country_event = {
 					tag = SUS
 					tag = BFR
 					tag = CHI
-					tag = WUS
+					tag = PAC
 					tag = NCC
 					tag = KUK
 					tag = JAN
@@ -10200,7 +10204,7 @@ country_event = {
 	}
 }
 
-##### First Wave Bounce Events (Ai) 0410-0419 #####
+##### 0410-0419	First Wave Bounce Events (Ai) #####
 
 
 country_event = {
@@ -10476,7 +10480,7 @@ country_event = {
     }
 }
 
-##### Dismantlement Leader Decision Events 420-429 #####
+##### 0420-0429 & 0800-0899 Dismantlement Leader Decision Events  #####
 
 country_event = {
     id = 777770420
@@ -13169,7 +13173,7 @@ country_event = {
 
 
 
-##### Second Wave Bounce Events (Ai) 0430-0439 #####
+##### 0430-0439	Second Wave Bounce Events (Ai) #####
 
 country_event = {
     id = 777770430
@@ -13208,7 +13212,7 @@ country_event = {
 }
 
 
-##### Primary Effect Bouncing Events 0440-0449 #####
+##### 0440-0449	Primary Effect Bouncing Events #####
 
 country_event = {
     id = 777770440
@@ -16623,7 +16627,7 @@ country_event = {
     }
 }
 
-##### Primary Victor Response Events 0450-0479 #####
+##### 0450-0479	Primary Victor Response Events #####
 
 country_event = {
     id = 777770450
@@ -20823,7 +20827,7 @@ country_event = {
     }
 }
 
-##### Secondary First Wave Bounce Events (Ai) 0480-0489 #####
+##### 0480-0489	Secondary First Wave Bounce Events (Ai) #####
 
 
 country_event = {
@@ -20832,6 +20836,30 @@ country_event = {
     desc = "$FROMCOUNTRY$ is deciding our fate."
 	picture = "dismantle 1"
     is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		FROM = {
@@ -20846,6 +20874,30 @@ country_event = {
     desc = "Our puppethood is under review, at the request of $FROMCOUNTRY$."
 	picture = "dismantle 2"
     is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Very Well"
 		FROM = {
@@ -20860,6 +20912,30 @@ country_event = {
     desc = "$FROMCOUNTRY$ is making a suggestion on our cores."
 	picture = "dismantle 3"
     is_triggered_only = yes
+
+	immediate = {
+		set_variable = { which = core_count value = 0 }
+		set_variable = { which = pop_count value = 0 }
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			THIS = { change_variable = { which = core_count value = 1 } }
+		}
+		all_core = {
+			limit = { 
+				owner = { 
+					check_variable = { which = Major_Defeated value = 0.99 }
+				}
+			}
+			any_pop = {
+				THIS = { change_variable = { which = pop_count value = 1 } }
+			}
+		}
+	}
+	
     option = {
         name = "Go them ... I hope!"
 		FROM = {
@@ -20869,7 +20945,7 @@ country_event = {
 }
 
 
-##### Secondary Victor Decision Events 0490-0499 #####
+##### 0490-0499	Secondary Victor Leading Decision Events #####
 
 country_event = {
     id = 777770490
@@ -21046,7 +21122,265 @@ country_event = {
     }
 }
 
-##### Secondary Second Wave Bounce Events (Ai) 0500-0509 #####
+country_event = {
+    id = 777770493
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "dismantle 1"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770500
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770500
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770500
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			country_event = 777770500
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770500
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+    }
+}
+
+country_event = {
+    id = 777770494
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "dismantle 2"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770501
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our puppet!§B[-3]§!" badboy = 2.5
+		FROM = {
+			set_variable = { which = Puppet_Puppet value = 1 }
+			country_event = 777770501
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770501
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			country_event = 777770501
+		}
+    }
+}
+
+country_event = {
+    id = 777770495
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "dismantle 3"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770502
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770502
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770502
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770502
+		}
+    }
+}
+
+country_event = {
+    id = 777770496
+    title = "What would you like to do with $FROMCOUNTRY$?"
+    desc = "The concept of $FROMCOUNTRY$ is present within the borders of the defeated, should we demand the creation of a $FROMCOUNTRY_ADJ$ state?"
+	picture = "dismantle 1"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall exist (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Freedom_Overwrite value = 1 }
+			country_event = 777770500
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall exist"
+		FROM = {
+			set_variable = { which = Freedom_NonOverwrite value = 1 }
+			country_event = 777770500
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "Other Victors can say on $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Freedom_Apathy value = 1 }
+			country_event = 777770500
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall stay as it is"
+		FROM = {
+			set_variable = { which = Freedom_NonFreedom value = 1 }
+			country_event = 777770500
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall be our vassal §B[-3]§!"
+		FROM = {
+			set_variable = { which = Freedom_OurVassal value = 1 }
+			country_event = 777770500
+		}
+		change_variable = {
+			which = dismantlement_dollars
+			value = -3
+		}
+		set_country_flag = dismantlement_dollars_target
+		CLN = { country_event = 777771700 }
+    }
+}
+
+country_event = {
+    id = 777770497
+    title = "What should be done with the $FROMCOUNTRY$ puppet state?"
+    desc = "$FROMCOUNTRY$ is a puppet regime, should we reorganize their government?"
+	picture = "dismantle 2"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ shall be independent!"
+		FROM = {
+			set_variable = { which = Puppet_Freedom value = 1 }
+			country_event = 777770501
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Puppet_Apathy value = 1 }
+			country_event = 777770501
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall remain as it is"
+		FROM = {
+			set_variable = { which = Puppet_As_Is value = 1 }
+			country_event = 777770501
+		}
+    }
+}
+
+country_event = {
+    id = 777770498
+    title = "What would you like to do with $FROMCOUNTRY$ cores?"
+    desc = "Lands claimed by $FROMCOUNTRY$ are present in the defeated state, should we demand these are returned?"
+	picture = "dismantle 3"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+    option = {
+        name = "$FROMCOUNTRY$ cores shall take priority (Overwrite new states)"
+		FROM = {
+			set_variable = { which = Existing_Overwrite value = 1 }
+			country_event = 777770502
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall have cores from remaining lands"
+		FROM = {
+			set_variable = { which = Existing_NonOverwrite value = 1 }
+			country_event = 777770502
+		}
+		create_alliance = FROM
+    }
+    option = {
+        name = "We do not care about $FROMCOUNTRY$"
+		FROM = {
+			set_variable = { which = Existing_Apathy value = 1 }
+			country_event = 777770502
+		}
+    }
+    option = {
+        name = "$FROMCOUNTRY$ shall not grow larger"
+		FROM = {
+			set_variable = { which = Existing_As_Is value = 1 }
+			country_event = 777770502
+		}
+    }
+}
+
+##### 0500-0509	Secondary Second Wave Bounce Events (Ai) #####
 
 country_event = {
     id = 777770500
@@ -21084,7 +21418,7 @@ country_event = {
     }
 }
 
-##### Secondary Effect Bouncing Evenets 0510-0519 #####
+##### 0510-0519	Secondary Effect Bouncing Evenets #####
 
 country_event = {
     id = 777770510
@@ -23823,7 +24157,7 @@ country_event = {
 	}
 }
 
-##### Secondary Victor Response Events 0520-0549 #####
+##### 0520-0549	Secondary Victor Response Events #####
 
 country_event = {
     id = 777770520
@@ -25532,7 +25866,7 @@ country_event = {
     }
 }
 
-##### Country Effects Events 0550-05990 #####
+##### 0550-0559	Effect Events #####
 
 country_event = {
     id = 777770550
@@ -26118,7 +26452,7 @@ country_event = {
 			owner = {
 				random_owned = {
 					limit = { owner = { FROM = { tag = HAW } } }
-					owner = { WUS = { inherit = FROM set_variable = { which = Rewritable_State value = 1 } } }
+					owner = { PAC = { inherit = FROM set_variable = { which = Rewritable_State value = 1 } } }
 				}
 				random_owned = {
 					limit = { owner = { FROM = { tag = ROM } } }
@@ -26173,8 +26507,8 @@ country_event = {
 					}
 				}
 			}
-			WUS = { set_variable = { which = Rewritable_State value = 1 } }
-			WUS = { inherit = FROM }
+			PAC = { set_variable = { which = Rewritable_State value = 1 } }
+			PAC = { inherit = FROM }
 		}
 		random_country = {
 			limit = {
@@ -26358,8 +26692,8 @@ country_event = {
 					}
 				}
 			}
-			PAC = { set_variable = { which = Rewritable_State value = 1 } }
-			PAC = { inherit = FROM }
+			PCF = { set_variable = { which = Rewritable_State value = 1 } }
+			PCF = { inherit = FROM }
 		}
 		random_country = {
 			limit = {
@@ -26427,7 +26761,7 @@ country_event = {
     }
 }
 
-##### Custom Formables Bounce Events 1100-1199, Puppet Custom Formables Bounce Events 1200-1299 #####
+##### 1100-1199 & 1200-1299  Custom Formables Bounce Events & Puppet Custom Formables Bounce Events #####
 
 country_event = {
     id = 777771100
@@ -30736,7 +31070,7 @@ country_event = {
 #	}
 #}
 
-##### Custom Formables Decision Events 1300-1399 & Puppet Formables Decision Events 1400-1499 #####
+##### 1300-1399 & 1400-1499	Custom Formables Decision Events & Puppet Formables Decision Events #####
 
 country_event = {
     id = 777771300
@@ -30929,6 +31263,7 @@ country_event = {
 			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
+		FER = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -31116,6 +31451,7 @@ country_event = {
 			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
+		FER = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32105,6 +32441,7 @@ country_event = {
             set_variable = { which = Integrate_Union_One value = 1 }
             country_event = 777770430
         }
+		BGR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32128,6 +32465,7 @@ country_event = {
             set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770430
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32322,6 +32660,7 @@ country_event = {
             set_variable = { which = Puppet_Integrate_One value = 1 }
             country_event = 777770431
         }
+		BGR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32345,6 +32684,7 @@ country_event = {
             set_variable = { which = Puppet_Integrate_Two value = 1 }
             country_event = 777770431
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32562,6 +32902,7 @@ country_event = {
 			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
+		CZH = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32586,6 +32927,7 @@ country_event = {
             set_variable = { which = Integrate_Union_Two value = 1 }
             country_event = 777770430
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32773,6 +33115,7 @@ country_event = {
 			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
+		CZH = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -32796,6 +33139,7 @@ country_event = {
             set_variable = { which = Puppet_Integrate_Two value = 1 }
             country_event = 777770431
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33006,6 +33350,7 @@ country_event = {
 			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
+		CZH = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33193,6 +33538,7 @@ country_event = {
 			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
+		CZH = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33403,6 +33749,7 @@ country_event = {
 			set_variable = { which = Integrate_Union_One value = 1 }
 			country_event = 777770430	
 		}
+		UBD = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33426,6 +33773,7 @@ country_event = {
            set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770430
         }
+		PLR = { create_alliance = FROM }
         ai_chance = {
             factor = 5
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33613,6 +33961,7 @@ country_event = {
 			set_variable = { which = Puppet_Integrate_One value = 1 }
 			country_event = 777770431
 		}
+		UBD = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33636,6 +33985,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_Two value = 1 }
            country_event = 777770431
         }
+		PLR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -33846,6 +34196,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		PLR = { create_alliance = FROM }
         ai_chance = {
             factor = 5
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -34033,6 +34384,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		PLR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -34243,6 +34595,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		BGR = { create_alliance = FROM }
         ai_chance = {
             factor = 5
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -34437,6 +34790,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		BGR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -34654,6 +35008,7 @@ country_event = {
            set_variable = { which = Integrate_Union_Two value = 1 }
            country_event = 777770430
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 5
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -34841,6 +35196,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_Two value = 1 }
            country_event = 777770431
         }
+		HUR = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35051,6 +35407,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		PCF = { create_alliance = FROM }
         ai_chance = {
             factor = 15
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35065,7 +35422,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -35074,6 +35431,7 @@ country_event = {
 			set_variable = { which = Integrate_Union_Two value = 1 }
 			country_event = 777770430
 		}
+		PAC = { create_alliance = FROM }
         ai_chance = {
             factor = 5
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35088,7 +35446,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -35261,6 +35619,31 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		PCF = { create_alliance = FROM }
+        ai_chance = {
+            factor = 20
+			modifier = { factor = 3 has_country_flag = common_government_bonus }
+			modifier = { factor = 5 government = democracy }
+			modifier = { factor = 5 relation = { who = FROM value = 199 } }
+			modifier = { factor = 4 relation = { who = FROM value = 180 } }
+			modifier = { factor = 3 relation = { who = FROM value = 160 } }
+			modifier = { factor = 2 relation = { who = FROM value = 140 } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			 
+			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+			modifier = { factor = 100 PCF = { exists = yes } }
+        }
+    }
+	option = {
+		name = "$FROMCOUNTRY$ shall join The Western United States"
+		FROM = {
+			set_variable = { which = Puppet_Integrate_Two value = 1 }
+			country_event = 777770431
+		}
+		PAC = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35276,29 +35659,6 @@ country_event = {
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
 			modifier = { factor = 100 PAC = { exists = yes } }
-        }
-    }
-	option = {
-		name = "$FROMCOUNTRY$ shall join The Western United States"
-		FROM = {
-			set_variable = { which = Puppet_Integrate_Two value = 1 }
-			country_event = 777770431
-		}
-        ai_chance = {
-            factor = 20
-			modifier = { factor = 3 has_country_flag = common_government_bonus }
-			modifier = { factor = 5 government = democracy }
-			modifier = { factor = 5 relation = { who = FROM value = 199 } }
-			modifier = { factor = 4 relation = { who = FROM value = 180 } }
-			modifier = { factor = 3 relation = { who = FROM value = 160 } }
-			modifier = { factor = 2 relation = { who = FROM value = 140 } }
-			modifier = { factor = 2 relation = { who = FROM value = 120 } }
-			 
-			modifier = { factor = 2 has_country_flag = holdout_slavery_bonus }
-			modifier = { factor = 2 has_country_flag = recent_state_bonus }
-			modifier = { factor = 0.05 badboy = 23 }
-			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
         }
 	}
 }
@@ -35494,6 +35854,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		PCF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35508,7 +35869,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -35681,6 +36042,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		PCF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -35695,7 +36057,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -35891,6 +36253,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		PBC = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -36078,6 +36441,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		PBC = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -36288,6 +36652,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		NGF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -36475,6 +36840,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		NGF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -36685,6 +37051,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		SGF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -36872,6 +37239,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		SGF = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -37082,6 +37450,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		ITA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -37269,6 +37638,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		ITA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -37479,6 +37849,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
 		}
+		TCA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -37666,6 +38037,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		TCA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -37876,6 +38248,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		UCA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38063,6 +38436,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		UCA = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38273,6 +38647,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		RCH = { create_alliance = FROM }
         ai_chance = {
             factor = 30
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38460,6 +38835,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		RCH = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38670,6 +39046,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		PAC = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38684,7 +39061,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -38857,6 +39234,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		PAC = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -38871,7 +39249,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -39067,6 +39445,7 @@ country_event = {
            set_variable = { which = Integrate_Union_One value = 1 }
            country_event = 777770430
         }
+		VLK = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -39254,6 +39633,7 @@ country_event = {
            set_variable = { which = Puppet_Integrate_One value = 1 }
            country_event = 777770431
         }
+		VLK = { create_alliance = FROM }
         ai_chance = {
             factor = 20
 			modifier = { factor = 3 has_country_flag = common_government_bonus }
@@ -43549,7 +43929,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -43572,7 +43952,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -43745,7 +44125,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -43768,7 +44148,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -43964,7 +44344,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -44137,7 +44517,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -46930,7 +47310,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -47103,7 +47483,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -51592,7 +51972,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -51615,7 +51995,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -51781,7 +52161,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -51804,7 +52184,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -51993,7 +52373,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -52159,7 +52539,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -54833,7 +55213,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -54999,7 +55379,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -59180,7 +59560,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -59203,7 +59583,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -59355,7 +59735,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -59378,7 +59758,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -59553,7 +59933,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -59705,7 +60085,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -62169,7 +62549,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -62321,7 +62701,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -66303,7 +66683,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -66326,7 +66706,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -66470,7 +66850,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -66493,7 +66873,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -66661,7 +67041,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -66805,7 +67185,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -69157,7 +69537,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -69301,7 +69681,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -72877,7 +73257,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -72900,7 +73280,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -73030,7 +73410,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 	option = {
@@ -73053,7 +73433,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
 	}
 }
@@ -73207,7 +73587,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -73337,7 +73717,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 PAC = { exists = yes } }
+			modifier = { factor = 100 PCF = { exists = yes } }
         }
     }
 }
@@ -75479,7 +75859,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }
@@ -75609,7 +75989,7 @@ country_event = {
 			modifier = { factor = 2 has_country_flag = recent_state_bonus }
 			modifier = { factor = 0.05 badboy = 23 }
 			modifier = { factor = 0.75 badboy = 17 }
-			modifier = { factor = 100 WUS = { exists = yes } }
+			modifier = { factor = 100 PAC = { exists = yes } }
         }
     }
 }

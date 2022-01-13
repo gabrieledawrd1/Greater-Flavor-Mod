@@ -2556,16 +2556,10 @@
         size = 10
     }
 
-    craftsmen = {
-        culture = north_german
-        religion = protestant
-        size = 300
-    }
-
     artisans = {
         culture = north_german
         religion = protestant
-        size = 1000
+        size = 1300
     }
 
     soldiers = {
@@ -2599,16 +2593,10 @@
         size = 10
     }
 
-    craftsmen = {
-        culture = north_german
-        religion = protestant
-        size = 300
-    }
-
     artisans = {
         culture = north_german
         religion = protestant
-        size = 1000
+        size = 1300
     }
 
     soldiers = {
