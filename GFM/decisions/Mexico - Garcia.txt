@@ -292,19 +292,13 @@ political_decisions = {
 		
 		allow = {
 			91  = { owned_by = MEX }
-			NOT = {
-				OR = {
-					truce_with = USA
-					truce_with = US2
-				}
-			}
 			war = no
 			muzzle_loaded_rifles = 1
 		}
 		
 		effect = {
 			set_country_flag = luisiana_has_been_claimed
-			prestige = 35
+			prestige = 15
 			badboy = 10
 			USA_106 = { add_core = MEX }#Colorado
 			USA_111 = { add_core = MEX } #Wyoming
@@ -381,7 +375,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = florida_has_been_claimed
-			prestige = 15
+			prestige = 5
 			badboy = 5
 			USA_200 = { add_core = MEX }
 			140 = { add_core = MEX }
@@ -393,6 +387,7 @@ political_decisions = {
 						has_pop_culture = native_american_minor
 						has_pop_culture = yankee
 						has_pop_culture = texan
+						has_pop_culture = dixie
 					}
 				}
 				militancy = 8
@@ -403,7 +398,7 @@ political_decisions = {
 					has_pop_culture = mexican
 				}
 				militancy = 1
-				consciousness = 6
+				consciousness = 5
 			}
 			casus_belli = {
 				target = USA
@@ -447,6 +442,18 @@ political_decisions = {
 				remove_core = USA
 				remove_core = US2
 				remove_core = CSA
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = yankee
+						has_pop_culture = dixie
+						has_pop_culture = texan
+					}
+				}
+				militancy = 8
+				consciousness = 10
+				reduce_pop = 0.9
 			}
 			USA = { remove_country_modifier = you_are_going_to_the_usa }
 			US2 = { remove_country_modifier = you_are_going_to_the_usa }
