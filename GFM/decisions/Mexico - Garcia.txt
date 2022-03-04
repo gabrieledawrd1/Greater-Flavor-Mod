@@ -365,12 +365,6 @@ political_decisions = {
 			144 = { owned_by = MEX }
 			war = no
 			state_n_government = 1
-			NOT = {
-				OR = {
-					truce_with = USA
-					truce_with = US2
-				}
-			}
 		}
 		
 		effect = {
