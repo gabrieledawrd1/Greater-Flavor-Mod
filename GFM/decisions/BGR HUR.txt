@@ -62,7 +62,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						tag = BUL
+						tag = HUN
 					}
 				}
 				owner = {
@@ -95,10 +95,9 @@ political_decisions = {
 						}
 						country_event = 98650
 					}	
-					BGR = {
-						primary_culture = bulgarian
-						add_accepted_culture = romanian		
-					}
+					
+					primary_culture = bulgarian
+					add_accepted_culture = romanian		
 					any_country = {
 						limit = {
 							OR = {
@@ -150,10 +149,9 @@ political_decisions = {
 						}
 						country_event = 98650
 					}	
-					BGR = {
-						primary_culture = romanian
-						add_accepted_culture = bulgarian
-					}
+					
+					primary_culture = romanian
+					add_accepted_culture = bulgarian	
 					any_country = {
 						limit = {
 							OR = {
@@ -205,11 +203,10 @@ political_decisions = {
 						}
 						country_event = 98650
 					}	
-					BGR = {
-						primary_culture = romanian
-						add_accepted_culture = bulgarian
-						add_accepted_culture = hungarian
-					}
+					
+					primary_culture = romanian
+					add_accepted_culture = bulgarian
+					add_accepted_culture = hungarian
 					random_owned = {
 						limit = {
 							owner = {
@@ -341,10 +338,9 @@ political_decisions = {
 						}
 						country_event = 98650
 					}
-					HUR = {
-						primary_culture = hungarian
-						add_accepted_culture = romanian
-					}
+					primary_culture = hungarian
+					add_accepted_culture = romanian
+					
 					any_country = {
 						limit = {
 							OR = {
@@ -395,10 +391,9 @@ political_decisions = {
 						}
 						country_event = 98650
 					}
-					HUR = {
-						primary_culture = romanian
-						add_accepted_culture = hungarian
-					}
+					
+					primary_culture = romanian
+					add_accepted_culture = hungarian
 					any_country = {
 						limit = {
 							OR = {
@@ -449,11 +444,10 @@ political_decisions = {
 						}
 						country_event = 98650
 					}
-					HUR = {
-						primary_culture = romanian
-						add_accepted_culture = hungarian
-						add_accepted_culture = bulgarian
-					}
+					
+					primary_culture = romanian
+					add_accepted_culture = hungarian
+					add_accepted_culture = polish
 					any_country = {
 						limit = {
 							OR = {
@@ -504,11 +498,10 @@ political_decisions = {
 						}
 						country_event = 98650
 					}
-					HUR = {
-						primary_culture = hungarian
-						add_accepted_culture = romanian
-						add_accepted_culture = polish
-					}
+					
+					primary_culture = hungarian
+					add_accepted_culture = romanian
+					add_accepted_culture = polish
 					set_global_flag = phc_formed_hur
 					any_country = {
 						limit = {

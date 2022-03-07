@@ -3,5 +3,5 @@ controller = MEX
 add_core = MEX
 add_core = CHP
 trade_goods = cotton
-terrain = tuxtla
+terrain = hills
 life_rating = 34
