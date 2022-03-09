@@ -7434,8 +7434,8 @@ political_decisions = {
             set_global_flag = texas_renamed_mexico
             prestige = 5
             43 = { change_province_name = "Rio Rojo" }
-            132 = { change_province_name = "Punto de Morgan" }
-            133 = { change_province_name = "Santa Anna" }
+            132 = { change_province_name = "Trinidad" }
+            133 = { change_province_name = "San Saba" }
             134 = { change_province_name = "San Angelo" }
 
         }
