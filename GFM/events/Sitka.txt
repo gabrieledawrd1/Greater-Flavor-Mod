@@ -10027,7 +10027,11 @@ country_event = {
         tag = FRA
         exists = MEX
         year = 1838
-        NOT = { year = 1841 }
+		exists = TEX
+        NOT = {
+			year = 1841
+			MEX = { rank = 12 }
+		}
     }
     option = {
         name = "Who cares? §GLose 1 infamy§W"
