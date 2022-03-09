@@ -9619,7 +9619,7 @@ political_decisions = {
         effect = {
             prestige = 2
 			set_global_flag = mex_utah_renamed
-            97 = { change_province_name = "Lago de Aguasalada" state_scope = { change_region_name = "Yutas" } }
+            97 = { change_province_name = "Lago de Aguasalada" state_scope = { change_region_name = "Yuta" } }
 			98 = { change_province_name = "Miera" }
 			99 = { change_province_name = "San Bernardo" }
 			3459 = { change_province_name = "Timpanogos" }
