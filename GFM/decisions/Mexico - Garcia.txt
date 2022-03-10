@@ -162,7 +162,6 @@ political_decisions = {
 			tag = MEX
 			has_country_flag = texas_recaptured
 			NOT = { exists = TEX }
-			NOT = { year = 1842 }
 			NOT = { has_country_flag = compensation_done }
 		}
 		allow = {
