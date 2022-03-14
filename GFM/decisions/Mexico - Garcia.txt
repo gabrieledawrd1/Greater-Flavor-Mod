@@ -239,9 +239,26 @@ political_decisions = {
 			set_country_flag = oregon_has_been_claimed
 			prestige = 25
 			badboy = 5
-			USA_78 = { add_core = MEX }
-			USA_81 = { add_core = MEX }
-			USA_91 = { add_core = MEX }
+			COL = {
+				all_core = {
+					add_core = MEX
+				}
+				all_core = {
+					limit = {
+						empty = yes
+					}
+					secede_province = MEX
+				}
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 3467
+						province_id = 3468
+					}
+				}
+				add_core = MEX
+			}
 			any_pop = {
 				limit = {
 					OR = {
