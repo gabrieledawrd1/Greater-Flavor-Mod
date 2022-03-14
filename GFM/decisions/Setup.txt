@@ -21,6 +21,13 @@ political_decisions = {
 				limit = { owner = { year = 1836 } }
 				owner = { ENG = { set_country_flag = beaglevoyaged } }
 			}
+			random_owned = { 
+				limit = { owner = { year = 1830 NOT = { year = 1836 } } }
+				owner = { 
+					set_global_flag = eighteenthirty_startdate 
+					country_event = { id = 6016828 days = 2190 }
+				}
+			}
             EIC = {
                 add_country_modifier = {
                     name = eic_balance
@@ -414,6 +421,7 @@ political_decisions = {
 				907 = { change_province_name = "al-Bawda" }
 				3405 = { change_province_name = "Kobajjep" }
 				864 = { change_province_name = "Karesi" }
+				870 = { change_province_name = "Usak" }
 				1717 = { change_province_name = "Bouira" }
 				1721 = { change_province_name = "El Tarf" }
 				1813 = { change_province_name = "Tizi Ouzou" }

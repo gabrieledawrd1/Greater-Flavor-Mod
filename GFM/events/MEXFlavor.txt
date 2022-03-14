@@ -1614,6 +1614,8 @@ country_event = {
 					province_id = 2174
 					province_id = 2175
 					province_id = 2172
+					province_id = 2662
+					province_id = 102
 				}
 			}
 			secede_province = MEE
@@ -1662,6 +1664,8 @@ country_event = {
 					province_id = 2174
 					province_id = 2175
 					province_id = 2172
+					province_id = 2662
+					province_id = 102
 				}
 			}
 			secede_province = MEE
