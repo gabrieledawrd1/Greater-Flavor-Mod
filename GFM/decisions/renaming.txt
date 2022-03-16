@@ -10570,18 +10570,16 @@ political_decisions = {
 
         allow = {
             war = no
-            owns = 139
-			owns = 141
-			owns = 142
         }
 
         effect = {
             prestige = 2
 			set_global_flag = mex_louisianna_renamed
 			clr_global_flag = french_renamed_louisiana
-            139 = { change_province_name = "Nueva Orleans" state_scope = { change_region_name = "Luisiana" } }
-			141 = { change_province_name = "Los Adaes" }
+            141 = { change_province_name = "Los Adaes" state_scope = { change_region_name = "Luisiana" } }
+			139 = { change_province_name = "Nueva Orleans" }
 			142 = { change_province_name = "Nogales" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 140 } } 140 = { change_province_name = "Fuerte Natchez" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -10899,29 +10897,23 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 115
 			owns = 113
 			owns = 114
-			owns = 116
 			owns = 3467
         }
 
         allow = {
-			owns = 115
-			owns = 113
-			owns = 114
-			owns = 116
-			owns = 3467
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = montana_renamed
-			113 = { change_province_name = "Manuel" state_scope = { change_region_name = "La Sierra" } }
+			113 = { change_province_name = "Manuel"  state_scope = { change_region_name = "La Sierra" } }
 			114 = { change_province_name = "Montañas Rocosas" }
 			3467 = { change_province_name = "Cornucopia" }
-			115 = { change_province_name = "Benito Vázquez" }
-			116 = { change_province_name = "Fuerte de Liza" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 115 } } 115 = { change_province_name = "Benito Vázquez" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 116 } } 116 = { change_province_name = "Fuerte de Liza" } }
         }
         ai_will_do = { factor = 1 }
     }
