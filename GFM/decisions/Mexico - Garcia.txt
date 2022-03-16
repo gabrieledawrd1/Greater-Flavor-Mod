@@ -475,10 +475,7 @@ political_decisions = {
 	picture = banque_belgique
 		potential = {
 			tag = MEX
-			OR = {
-				has_country_flag = treaty_of_guadalupe_hidalgo
-				has_country_flag = finished_expanding
-			}
+			year = 1848
 			NOT = { has_country_flag = monterrey_boom }
 		}
 		
@@ -495,7 +492,7 @@ political_decisions = {
 			2149 = {
 				add_province_modifier = {
 					name = global_province_boom
-					duration = 1825
+					duration = 1095
 				}
 				life_rating = 14
 				trade_goods = iron

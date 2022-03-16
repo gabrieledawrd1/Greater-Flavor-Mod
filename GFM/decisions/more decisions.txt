@@ -1186,7 +1186,7 @@ political_decisions = {
             war = no
 			is_vassal = no
             is_disarmed = no
-            any_core = { 
+            any_core = {
 				continent = north_america 
 				NOT = { 
 					province_id = 2190 
@@ -1199,7 +1199,7 @@ political_decisions = {
 				owned_by = THIS 
 			}
             war_policy = jingoism
-			is_greater_power = yes
+			rank = 10
 			prestige = 75
         }
         effect = {
