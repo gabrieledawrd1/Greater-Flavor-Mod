@@ -9633,8 +9633,8 @@ political_decisions = {
                         AND = { owns = 117 has_global_flag = french_renamed_north_dakota }
 						AND = { owns = 117 has_global_flag = mex_n_dakota_renamed }
                         AND = { owns = 116 has_global_flag = french_renamed_montana }
-						AND = { owns = 116 has_global_flag = montana_renamed }
-                        AND = { owns = 112 has_global_flag = french_renamed_wyoming }
+						AND = { owns = 113 has_global_flag = montana_renamed }
+                        AND = { owns = 113 has_global_flag = french_renamed_wyoming }
                         AND = { owns = 112 has_global_flag = wyoming_renamed }
                         AND = { owns = 78 has_global_flag = french_renamed_washington }
 						AND = { owns = 78 has_global_flag = w_washington_renamed }
