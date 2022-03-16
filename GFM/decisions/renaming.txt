@@ -10932,25 +10932,26 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 3468
-			owns = 111
-			owns = 112
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+			owns = 107
+			owns = 110
         }
 
         allow = {
-			owns = 3468
-			owns = 111
-			owns = 112
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = wyoming_renamed
-			107 = { change_province_name = "Sierra Nevada" }
+			107 = { change_province_name = "Sierra Nevada" state_scope = { change_region_name = "Valles Montañosos" } }
 			110 = { change_province_name = "Sierra Madre" }
-			111 = { change_province_name = "Shoshone" }
-			112 = { change_province_name = "Búfalo" state_scope = { change_region_name = "Valles Montañosos" } }
-			3468 = { change_province_name = "Meeteetse" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 111 } } 111 = { change_province_name = "Shoshone" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 112 } } 112 = { change_province_name = "Búfalo" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 3468 } } 3468 = { change_province_name = "Meeteetse" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -10961,21 +10962,19 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 127
-			owns = 126
+			owns = 128
         }
 
         allow = {
-			owns = 127
-			owns = 126
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = kansas_renamed
-			126 = { change_province_name = "Osaje" state_scope = { change_region_name = "Vientos del Sur" } }
-			127 = { change_province_name = "Kansa" }
-			128 = { change_province_name = "Ulibarrí" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 126 } } 126 = { change_province_name = "Osaje" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 127 } } 127 = { change_province_name = "Kansa" } }
+			128 = { change_province_name = "Ulibarrí" state_scope = { change_region_name = "Vientos del Sur" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -10986,21 +10985,19 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 131
-			owns = 130
+			owns = 129
         }
 
         allow = {
-			owns = 130
-			owns = 131
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = oklahoma_renamed
-			130 = { change_province_name = "Rayados" state_scope = { change_region_name = "Chacta" } }
-			131 = { change_province_name = "Fuerte Teodoro" }
-			129 = { change_province_name = "Magdalena" }
+			129 = { change_province_name = "Magdalena" state_scope = { change_region_name = "Chacta" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 130 } } 130 = { change_province_name = "Rayados" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 131 } } 131 = { change_province_name = "Fuerte Teodoro" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11035,18 +11032,29 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 106
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+			owns = 108
+			owns = 109
+			owns = 3560
         }
 
         allow = {
             war = no
-            owns = 106
         }
 
         effect = {
             prestige = 2
 			set_global_flag = denver_renamed
-            106 = { change_province_name = "San Luis" }
+			any_owned = {
+				limit = {
+					owner = MEX
+					province_id = 106
+				}
+				106 = { change_province_name = "San Luis" }
+			}
 			108 = { change_province_name = "Juan Rivera" }
 			109 = { change_province_name = "Sangre de Cristo" }
 			3560 = { change_province_name = "Las Grullas" }
