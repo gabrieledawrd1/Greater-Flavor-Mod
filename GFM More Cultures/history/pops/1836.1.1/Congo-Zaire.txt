@@ -608,13 +608,7 @@
     aristocrats = {
         culture = luba
         religion = animist
-        size = 700
-    }
-	
-	aristocrats = {
-        culture = swahili
-        religion = animist
-        size = 125
+        size = 825
     }
 
     clergymen = {

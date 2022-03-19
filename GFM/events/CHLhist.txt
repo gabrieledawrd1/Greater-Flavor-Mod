@@ -393,7 +393,7 @@ country_event = {
                     is_sphere_leader_of = THIS
                 }
             }
-            country_event = 97084
+            country_event = { id = 97084 days = 2 }
         }
         war = {
             target = FROM
@@ -405,7 +405,7 @@ country_event = {
                 casus_belli = acquire_all_cores
                 country = CHL
             }
-            call_ally = yes
+            call_ally = no
         }
         ai_chance = { factor = 90 }
     }
@@ -442,7 +442,32 @@ country_event = {
 
     option = {
         name = "EVT97084OPTA" #We will not intervene
-		leave_alliance = CHL
+        random_owned = {
+            limit = {
+                owner = { war_with = FROM }
+            }
+            owner = { end_war = FROM }
+        }
+        random_owned = {
+            limit = {
+                owner = { alliance_with = FROM }
+            }
+            owner = { leave_alliance = FROM }
+        }
+        random_owned = {
+            limit = {
+                owner = { war_with = CHL }
+            }
+            owner = { end_war = CHL }
+        }
+        random_owned = {
+            limit = {
+                owner = { alliance_with = CHL }
+            }
+            owner = { leave_alliance = CHL }
+        }
+        diplomatic_influence = { who = CHL value = -200 }
+        diplomatic_influence = { who = FROM value = -200 }
         ai_chance = {
             factor = 90
             modifier = {
@@ -461,6 +486,7 @@ country_event = {
         }
     }
 }
+
 #Baltimore Crisis
 country_event = {
     id = 5858548

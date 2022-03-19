@@ -1137,7 +1137,10 @@ political_decisions = {
             tag = MEX
             is_greater_power = yes
             NOT = { has_country_flag = mexico_caribbean }
-			has_country_flag = has_taken_oregon_or_more
+			OR = {
+				has_country_flag = has_taken_oregon_or_more
+				has_country_flag = aztecpride
+			}
         }
         allow = {
             war = no
@@ -1183,7 +1186,7 @@ political_decisions = {
             war = no
 			is_vassal = no
             is_disarmed = no
-            any_core = { 
+            any_core = {
 				continent = north_america 
 				NOT = { 
 					province_id = 2190 
@@ -1196,7 +1199,7 @@ political_decisions = {
 				owned_by = THIS 
 			}
             war_policy = jingoism
-			is_greater_power = yes
+			rank = 10
 			prestige = 75
         }
         effect = {

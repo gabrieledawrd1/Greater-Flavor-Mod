@@ -1253,6 +1253,7 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+
     chaco_boreal_conquest = {
         picture = chaco_boreal_map
         potential = {

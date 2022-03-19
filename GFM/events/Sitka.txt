@@ -10035,7 +10035,11 @@ country_event = {
         tag = FRA
         exists = MEX
         year = 1838
-        NOT = { year = 1841 }
+		exists = TEX
+        NOT = {
+			year = 1841
+			MEX = { rank = 12 }
+		}
     }
     option = {
         name = "Who cares? §GLose 1 infamy§W"
@@ -10937,12 +10941,6 @@ country_event = {
                 }
                 add_core = MEX
 			}
-        198 = { remove_core = MEX }
-        199 = { remove_core = MEX }
-        200 = { remove_core = MEX }
-        197 = { remove_core = MEX }
-        194 = { remove_core = MEX }
-        140 = { remove_core = MEX }
 		random_owned = {
 			limit = { owner = { USA = { exists = yes } } }
 			owner = { USA = { country_event = 123577 prestige = -50 } }
@@ -11087,12 +11085,6 @@ country_event = {
                 add_core = MEX
                 secede_province = MEX
         }
-        198 = { remove_core = MEX }
-        199 = { remove_core = MEX }
-        200 = { remove_core = MEX }
-        197 = { remove_core = MEX }
-        194 = { remove_core = MEX }
-        140 = { remove_core = MEX }
     }
 }
 country_event = {

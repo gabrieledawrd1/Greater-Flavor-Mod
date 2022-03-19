@@ -6,6 +6,10 @@ gov_legit_in_question = {
     icon = 4
 }
 
+removed_pm_cd = {
+	icon = 12
+}
+
 ##################################################################################################
 # scriptable and usable for event-system below.
 ##################################################################################################
@@ -5040,5 +5044,12 @@ parana_development_forever = {
 	local_repair = 0.25
     immigrant_attract = 0.3
     farm_rgo_eff = 0.5
+	icon = 19
+}
+
+global_province_boom = {
+	immigrant_attract = 0.1
+	population_growth = 0.1
+	life_rating = 0.05
 	icon = 19
 }

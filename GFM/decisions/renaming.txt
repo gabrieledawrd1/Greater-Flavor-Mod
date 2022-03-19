@@ -1328,7 +1328,7 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-	
+
     rename_rhone = {
         picture = gtfo
         potential = {
@@ -1420,7 +1420,7 @@ political_decisions = {
 					}
 					452 = { change_province_name = "Santo Stefano" }
 					453 = { change_province_name = "Privato" }
-					3313 = { change_province_name = "Gapo" }
+					3313 = { change_province_name = "Gap" }
 					454 = { change_province_name = "Granopoli" }
 				}
 			}
@@ -1447,7 +1447,7 @@ political_decisions = {
 					}
 					452 = { change_province_name = "St-Étienne" }
 					453 = { change_province_name = "Privas" }
-					3313 = { change_province_name = "Gap" }
+					3313 = { change_province_name = "Gapo" }
 					454 = { change_province_name = "Grenoble" }
 				}
 			}
@@ -1734,13 +1734,6 @@ political_decisions = {
 					owns = 763
 					owns = 764
 				}
-				AND = {
-					is_culture_group = arab
-					NOT = { has_global_flag = sicily_rename_arab }
-					owns = 762
-					owns = 763
-					owns = 764
-				}
 			}
         }
 
@@ -1761,7 +1754,6 @@ political_decisions = {
 				}
 				owner = {
 					set_global_flag = sicily_rename_greek
-					clr_global_flag = sicily_rename_arab
 					762 = {
 						change_province_name = "Pánormos"
 						state_scope = { change_region_name = "Sikelía" }
@@ -1785,38 +1777,12 @@ political_decisions = {
 				}
 				owner = {
 					clr_global_flag = sicily_rename_greek
-					clr_global_flag = sicily_rename_arab
 					762 = {
 						change_province_name = "Palermo"
 						state_scope = { change_region_name = "Sicilia" }
 					}
 					763 = { change_province_name = "Messina" }
 					764 = { change_province_name = "Catania" }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							is_culture_group = arab
-						}
-						NOT = { has_global_flag = sicily_rename_arab }
-						owns = 762
-						owns = 763
-						owns = 764
-					}
-				}
-				owner = {
-					set_global_flag = sicily_rename_arab
-					clr_global_flag = sicily_rename_greek
-					762 = {
-						change_province_name = "Bal'harm"
-						state_scope = {
-							change_region_name = "Siqiliya"
-						}
-					}
-					763 = { change_province_name = "Misina" }
-					764 = { change_province_name = "Balad al-fil" }
 				}
 			}
         }
@@ -2262,6 +2228,7 @@ political_decisions = {
 				owner = {
 					767 = { change_province_name = "Marburg" }
 					clr_global_flag = slovene_renamed_maribor
+					clr_global_flag = hungarian_renamed_maribor
 				}
 			}
 			random_owned = {
@@ -2281,8 +2248,8 @@ political_decisions = {
 						change_province_name = "Laibach"
 						state_scope = { change_region_name = "Krain" }
 					}
-					clr_global_flag = slovene_renamed_ljubljana
-					clr_global_flag = italian_renamed_ljubljana
+					clr_global_flag = slovene_renamed_muraszombat
+					clr_global_flag = hungarian_renamed_muraszombat
 				}
 			}
 			random_owned = {
@@ -7630,56 +7597,20 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    turkish_rename_epirus = {
+    greek_rename_epirus = {
         picture = gtfo
         potential = {
-			OR = {
-				AND = {
-					primary_culture = greek
-					OR = {
-						AND = {
-							owns = 824
-							NOT = { has_global_flag = greek_rename_epirus_824 }
-						}
-						AND = {
-							owns = 853
-							NOT = { has_global_flag = greek_rename_epirus_853 }
-						}
-					}
-				}
-				AND = {
-					primary_culture = albanian
-					OR = {
-						AND = {
-							owns = 824
-							NOT = { has_global_flag = albanian_rename_epirus_824 }
-						}
-						AND = {
-							owns = 853
-							NOT = { has_global_flag = albanian_rename_epirus_853 }
-						}
-					}
-				}
-				AND = {
-					primary_culture = turkish
-					OR = {
-						AND = {
-							owns = 824
-							OR = {
-								has_global_flag = albanian_rename_epirus_824
-								has_global_flag = greek_rename_epirus_824
-							}
-						}
-						AND = {
-							owns = 853
-							OR = {
-								has_global_flag = albanian_rename_epirus_853
-								has_global_flag = greek_rename_epirus_853
-							}
-						}
-					}
-				}
-			}
+            primary_culture = greek
+            OR = {
+                AND = {
+                    owns = 824
+                    NOT = { has_global_flag = greek_rename_epirus_824 }
+                }
+                AND = {
+                    owns = 853
+                    NOT = { has_global_flag = greek_rename_epirus_853 }
+                }
+            }
         }
 
         allow = {
@@ -7689,101 +7620,89 @@ political_decisions = {
         effect = {
             random_owned = {
                 limit = {
-					owner = {
-						primary_culture = greek
-						owns = 824
-						NOT = { has_global_flag = greek_rename_epirus_824 }
-					}
+                    province_id = 824
                 }
-				owner = {
-					824 = { change_province_name = "Ioannina" }
-					3306 = { change_province_name = "Metsovo" }
-					set_global_flag = greek_rename_epirus_824
-					clr_global_flag = albanian_rename_epirus_824
-				}
+                824 = { change_province_name = "Ioannina" }
+                set_global_flag = greek_rename_epirus_824
+                clr_global_flag = albanian_rename_epirus_824
             }
             random_owned = {
                 limit = {
-					owner = {
-						primary_culture = greek
-						owns = 853
-						NOT = { has_global_flag = greek_rename_epirus_853 }
-					}
+                    province_id = 853
                 }
-				owner = {
-					853 = { change_province_name = "Argyrokastro" }
-					3307 = { change_province_name = "Korytsa" }
-					set_global_flag = greek_rename_epirus_853
-					clr_global_flag = albanian_rename_epirus_853
-				}
-            }
-            random_owned = {
-                limit = {
-					owner = {
-						primary_culture = albanian
-						owns = 824
-						NOT = { has_global_flag = albanian_rename_epirus_824 }
-					}
-                }
-				owner = {
-					824 = { change_province_name = "Janina" }
-					3306 = { change_province_name = "Meçovë" }
-					set_global_flag = albanian_rename_epirus_824
-					clr_global_flag = greek_rename_epirus_824
-				}
-            }
-            random_owned = {
-                limit = {
-					owner = {
-						primary_culture = albanian
-						owns = 853
-						NOT = { has_global_flag = albanian_rename_epirus_853 }
-					}
-                }
-				owner = {
-					853 = { change_province_name = "Gjirokaster" }
-					3307 = { change_province_name = "Korçë" }
-					set_global_flag = albanian_rename_epirus_853
-					clr_global_flag = greek_rename_epirus_853
-				}
-            }
-            random_owned = {
-                limit = {
-					owner = {
-						primary_culture = turkish
-						owns = 824
-						OR = {
-							has_global_flag = albanian_rename_epirus_824
-							has_global_flag = greek_rename_epirus_824
-						}
-					}
-                }
-				owner = {
-					824 = { change_province_name = "Yanya" }
-					3306 = { change_province_name = "Miçova" }
-					clr_global_flag = albanian_rename_epirus_824
-					clr_global_flag = greek_rename_epirus_824
-				}
-            }
-            random_owned = {
-                limit = {
-					owner = {
-						primary_culture = turkish
-						owns = 853
-						OR = {
-							has_global_flag = albanian_rename_epirus_853
-							has_global_flag = greek_rename_epirus_853
-						}
-					}
-                }
-				owner = {
-					853 = { change_province_name = "Ergiri" }
-					3307 = { change_province_name = "Görice" }
-					clr_global_flag = albanian_rename_epirus_853
-					clr_global_flag = greek_rename_epirus_853
-				}
+                853 = { change_province_name = "Argyrokastro" }
+                set_global_flag = greek_rename_epirus_853
+                clr_global_flag = albanian_rename_epirus_853
             }
             prestige = 2
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    albanian_rename_epirus = {
+        picture = gtfo
+        potential = {
+            primary_culture = albanian
+            OR = {
+                AND = {
+                    owns = 824
+                    NOT = { has_global_flag = albanian_rename_epirus_824 }
+                }
+                AND = {
+                    owns = 853
+                    NOT = { has_global_flag = albanian_rename_epirus_853 }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            random_owned = {
+                limit = {
+                    province_id = 824
+                }
+                824 = { change_province_name = "Janina" }
+                set_global_flag = albanian_rename_epirus_824
+                clr_global_flag = greek_rename_epirus_824
+            }
+            random_owned = {
+                limit = {
+                    province_id = 853
+                }
+                853 = { change_province_name = "Gjirokaster" }
+                set_global_flag = albanian_rename_epirus_853
+                clr_global_flag = greek_rename_epirus_853
+            }
+            prestige = 2
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    turkish_rename_epirus = {
+        picture = gtfo #I'm lazy to change this decision, the Turks would probably never regain this area if they lost it anyway
+        potential = {
+            ai = no
+            primary_culture = turkish
+            owns = 824
+            owns = 853
+            OR = {
+                has_global_flag = albanian_rename_epirus
+                has_global_flag = greek_rename_epirus
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            clr_global_flag = albanian_rename_epirus
+            clr_global_flag = greek_rename_epirus
+            824 = { change_province_name = "Yanya" }
+            853 = { change_province_name = "Ergiri" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -9019,6 +8938,7 @@ political_decisions = {
             tag = MEX
             TEX = { all_core = { owned_by = THIS } }
             NOT = { has_global_flag = texas_renamed_mexico }
+			NOT = { has_country_flag = lugowo_papu_no }
             owns = 132
         }
 
@@ -9028,13 +8948,10 @@ political_decisions = {
 
         effect = {
             set_global_flag = texas_renamed_mexico
-            prestige = 2
+            prestige = 5
             43 = { change_province_name = "Rio Rojo" }
-            132 = { change_province_name = "Punto de Morgan" }
-            133 = {
-                change_province_name = "Santa Anna"
-                state_scope = { change_region_name = "Tejas" }
-            }
+            132 = { change_province_name = "Trinidad" }
+            133 = { change_province_name = "San Saba" }
             134 = { change_province_name = "San Angelo" }
 
         }
@@ -10401,12 +10318,12 @@ political_decisions = {
 				owner = {
 					prestige = 2
 					set_global_flag = florida_renamed
-					197 = { change_province_name = "Carlota" }
+					197 = { change_province_name = "Mauvila" }
 					198 = { change_province_name = "Panzacola" }
-					199 = { change_province_name = "Mediadura" }
-					200 = { change_province_name = "Venecia" }
-					140 = { change_province_name = "Natchez" }
-					194 = { change_province_name = "La Pointe" }
+					199 = { change_province_name = "Fernandina" }
+					200 = { change_province_name = "San Antonio de Padua" }
+					140 = { change_province_name = "Fuerte Natchez" }
+					194 = { change_province_name = "San Lorenzo" }
 				}
 			}
         }
@@ -10468,8 +10385,8 @@ political_decisions = {
                         AND = { owns = 117 has_global_flag = french_renamed_north_dakota }
 						AND = { owns = 117 has_global_flag = mex_n_dakota_renamed }
                         AND = { owns = 116 has_global_flag = french_renamed_montana }
-						AND = { owns = 116 has_global_flag = montana_renamed }
-                        AND = { owns = 112 has_global_flag = french_renamed_wyoming }
+						AND = { owns = 113 has_global_flag = montana_renamed }
+                        AND = { owns = 113 has_global_flag = french_renamed_wyoming }
                         AND = { owns = 112 has_global_flag = wyoming_renamed }
                         AND = { owns = 78 has_global_flag = french_renamed_washington }
 						AND = { owns = 78 has_global_flag = w_washington_renamed }
@@ -11179,6 +11096,189 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	rename_bcalifornia_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_bcalifornia_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 88
+			owns = 3451
+        }
+
+        allow = {
+            war = no
+            owns = 88
+			owns = 3451
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_bcalifornia_renamed
+            88 = { change_province_name = "Gabrielino" state_scope = { change_region_name = "Baja California" } }
+			3451 = { change_province_name = "Mojave" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	rename_acalifornia_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_acalifornia_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 86
+			owns = 3453
+			owns = 3454
+			owns = 3455
+        }
+
+        allow = {
+            war = no
+            owns = 86
+			owns = 3453
+			owns = 3454
+			owns = 3455
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_acalifornia_renamed
+            86 = { change_province_name = "San Leandro" state_scope = { change_region_name = "Alta California" } }
+			3453 = { change_province_name = "Cabrillo" }
+			3454 = { change_province_name = "Puerto Trinidad" }
+			3455 = { change_province_name = "Cabo Mendocino" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	rename_nmexico_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_nmexico_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 2662
+        }
+
+        allow = {
+            war = no
+            owns = 2662
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_nmexico_renamed
+            2662 = { change_province_name = "Santa Rita" state_scope = { change_region_name = "Nuevo México" } }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	rename_arizona_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_arizona_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 100
+			owns = 101
+        }
+
+        allow = {
+            war = no
+            owns = 100
+			owns = 101
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_arizona_renamed
+            100 = { change_province_name = "Padre Kino" }
+			101 = { change_province_name = "Juan de Oñate" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	rename_nevada_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_nevada_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 94
+			owns = 95
+        }
+
+        allow = {
+            war = no
+            owns = 94
+			owns = 95
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_nevada_renamed
+            94 = { change_province_name = "Mesteñeros" }
+			95 = { change_province_name = "Onís" }
+			3458 = { change_province_name = "Armijo" }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	rename_utah_mex = {
+        potential = {
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+            NOT = { has_global_flag = mex_utah_renamed }
+            OR = {
+				tag = MEX
+				tag = MEE
+			}
+			owns = 97
+			owns = 98
+			owns = 99
+        }
+
+        allow = {
+            war = no
+            owns = 97
+			owns = 98
+			owns = 99
+        }
+
+        effect = {
+            prestige = 2
+			set_global_flag = mex_utah_renamed
+            97 = { change_province_name = "Lago de Aguasalada" state_scope = { change_region_name = "Yuta" } }
+			98 = { change_province_name = "Miera" }
+			99 = { change_province_name = "San Bernardo" }
+			3459 = { change_province_name = "Timpanogos" }
+        }
+        ai_will_do = { factor = 1 }
+    }
 	rename_idaho_mex = {
         potential = {
             NOT = { has_global_flag = mex_idaho_renamed }
@@ -11202,9 +11302,9 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_idaho_renamed
 			clr_global_flag = french_renamed_idaho
-            91 = { change_province_name = "Seguridad" state_scope = { change_region_name = "Bosques" } }
+            91 = { change_province_name = "Vasconia" state_scope = { change_region_name = "Bosques" } }
 			92 = { change_province_name = "Alta" }
-			93 = { change_province_name = "Calabar" }
+			93 = { change_province_name = "Nueva Galicia" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11222,18 +11322,16 @@ political_decisions = {
 
         allow = {
             war = no
-            owns = 139
-			owns = 141
-			owns = 142
         }
 
         effect = {
             prestige = 2
 			set_global_flag = mex_louisianna_renamed
 			clr_global_flag = french_renamed_louisiana
-            139 = { change_province_name = "Nueva Orleans" state_scope = { change_region_name = "Luisiana" } }
-			141 = { change_province_name = "Los Adaes" }
+            141 = { change_province_name = "Los Adaes" state_scope = { change_region_name = "Luisiana" } }
+			139 = { change_province_name = "Nueva Orleans" }
 			142 = { change_province_name = "Nogales" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 140 } } 140 = { change_province_name = "Fuerte Natchez" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11260,9 +11358,9 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_arkansas_renamed
 			clr_global_flag = french_renamed_arkansas
-            145 = { change_province_name = "Esperanza" }
+            145 = { change_province_name = "Fuerte Esperanza" }
 			144 = { change_province_name = "San Carlos" }
-			143 = { change_province_name = "San Esteban" state_scope = { change_region_name = "Terminal" } }
+			143 = { change_province_name = "San Esteban" state_scope = { change_region_name = "Quapaw" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11293,11 +11391,11 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_missouri_renamed
 			clr_global_flag = french_renamed_missouri
-            146 = { change_province_name = "San Luis" state_scope = { change_region_name = "Liberación" } }
-			147 = { change_province_name = "Profundidades" }
+            146 = { change_province_name = "San Luis" state_scope = { change_region_name = "Misuri" } }
+			147 = { change_province_name = "Carondelet" }
 			148 = { change_province_name = "Nuevo Madrid" }
-			149 = { change_province_name = "Infiltramiento" }
-			150 = { change_province_name = "Libertad" }
+			149 = { change_province_name = "Cavagnial" }
+			150 = { change_province_name = "San Juan" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11326,10 +11424,10 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_iowa_renamed
 			clr_global_flag = french_renamed_iowa
-			151 = { change_province_name = "Montes" state_scope = { change_region_name = "Los Altos" } }
-			152 = { change_province_name = "Monte Juarez" }
-			153 = { change_province_name = "Revolución" }
-			154 = { change_province_name = "Reserva" }
+			151 = { change_province_name = "Los Otos" state_scope = { change_region_name = "Siux" } }
+			152 = { change_province_name = "Sacs" }
+			153 = { change_province_name = "Minas de España" }
+			154 = { change_province_name = "Hayuas" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11358,10 +11456,10 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_minnesota_renamed
 			clr_global_flag = french_renamed_minnesota
-			155 = { change_province_name = "Externo" state_scope = { change_region_name = "La Punta" } }
-			156 = { change_province_name = "Legítimo" }
-			157 = { change_province_name = "Puerta Norte" }
-			158 = { change_province_name = "Lagos Altos" }
+			155 = { change_province_name = "Fontainebleau" state_scope = { change_region_name = "Aguazul" } }
+			156 = { change_province_name = "Río del Monje" }
+			157 = { change_province_name = "Lago Rojo" }
+			158 = { change_province_name = "Dulut" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11388,9 +11486,9 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_n_dakota_renamed
 			clr_global_flag = french_renamed_north_dakota
-			117 = { change_province_name = "Limite Previo" state_scope = { change_region_name = "Dakota del Norte" } }
-			118 = { change_province_name = "Comienzo" }
-			119 = { change_province_name = "Terminal" }
+			117 = { change_province_name = "Mandanes" state_scope = { change_region_name = "Dakota del Norte" } }
+			118 = { change_province_name = "Juan Evans" }
+			119 = { change_province_name = "Fuerte Lisa" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11417,9 +11515,9 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_s_dakota_renamed
 			clr_global_flag = french_renamed_south_dakota
-			120 = { change_province_name = "Alamos" state_scope = { change_region_name = "Dakota del Sur" } }
-			121 = { change_province_name = "Dakotas" }
-			122 = { change_province_name = "Provincia" }
+			120 = { change_province_name = "Ricaras" state_scope = { change_region_name = "Dakota del Sur" } }
+			121 = { change_province_name = "Los Españoles" }
+			122 = { change_province_name = "Pierre Antoine Tabeau" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11446,9 +11544,9 @@ political_decisions = {
             prestige = 2
 			set_global_flag = mex_nebraska_renamed
 			clr_global_flag = french_renamed_nebraska
-			123 = { change_province_name = "Ante el Rio" state_scope = { change_region_name = "Iturbide" } }
-			124 = { change_province_name = "Secular" }
-			125 = { change_province_name = "Rampa" }
+			123 = { change_province_name = "Majas" state_scope = { change_region_name = "Agua Plana" } }
+			124 = { change_province_name = "Tramperos" }
+			125 = { change_province_name = "Pananas" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11472,8 +11570,8 @@ political_decisions = {
         effect = {
             prestige = 2
 			set_global_flag = e_washington_renamed
-			80 = { change_province_name = "Salida" }
-			3466 = { change_province_name = "Manito" }
+			80 = { change_province_name = "San Vicente" }
+			3466 = { change_province_name = "Santa Cruz" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11501,10 +11599,10 @@ political_decisions = {
         effect = {
             prestige = 2
 			set_global_flag = w_washington_renamed
-			3465 = { change_province_name = "Amoretti" }
-			3464 = { change_province_name = "Margaritas" }
-			79 = { change_province_name = "La Puerta" }
-			78 = { change_province_name = "Puerto Mar" state_scope = { change_region_name = "Colombia" } }
+			3465 = { change_province_name = "Montaña de Carmelo" }
+			3464 = { change_province_name = "Quadra" }
+			79 = { change_province_name = "Bucareli" }
+			78 = { change_province_name = "Puerto Angeles" state_scope = { change_region_name = "Guadalupe" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11535,12 +11633,12 @@ political_decisions = {
         effect = {
             prestige = 2
 			set_global_flag = oregon_renamed
-			81 = { change_province_name = "Puerto San Agustín" }
-			82 = { change_province_name = "Colón" }
-			3461 = { change_province_name = "Huasco" }
-			3462 = { change_province_name = "Rivas" }
-			3463 = { change_province_name = "Girasol" }
-			83 = { change_province_name = "Don Hidalgo" }
+			81 = { change_province_name = "Heceta" }
+			82 = { change_province_name = "Rio de Colon" }
+			3461 = { change_province_name = "San Roque" }
+			3462 = { change_province_name = "Bartolome" }
+			3463 = { change_province_name = "Valle de Jordan" }
+			83 = { change_province_name = "Cabo Blanco" }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11551,29 +11649,23 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 115
 			owns = 113
 			owns = 114
-			owns = 116
 			owns = 3467
         }
 
         allow = {
-			owns = 115
-			owns = 113
-			owns = 114
-			owns = 116
-			owns = 3467
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = montana_renamed
-			113 = { change_province_name = "Curiosidad" state_scope = { change_region_name = "Nieves" } }
-			114 = { change_province_name = "Las Flores" }
+			113 = { change_province_name = "Manuel"  state_scope = { change_region_name = "La Sierra" } }
+			114 = { change_province_name = "Montañas Rocosas" }
 			3467 = { change_province_name = "Cornucopia" }
-			115 = { change_province_name = "Terminación" }
-			116 = { change_province_name = "Rescate" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 115 } } 115 = { change_province_name = "Benito Vázquez" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 116 } } 116 = { change_province_name = "Fuerte de Liza" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11584,71 +11676,69 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 3468
-			owns = 111
-			owns = 112
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+			owns = 107
+			owns = 110
         }
 
         allow = {
-			owns = 3468
-			owns = 111
-			owns = 112
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = wyoming_renamed
-			111 = { change_province_name = "Treboles" }
-			112 = { change_province_name = "Fuente de Liberación" state_scope = { change_region_name = "Fuentes" } }
-			3468 = { change_province_name = "Bahia" }
+			107 = { change_province_name = "Sierra Nevada" state_scope = { change_region_name = "Valles Montañosos" } }
+			110 = { change_province_name = "Sierra Madre" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 111 } } 111 = { change_province_name = "Shoshone" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 112 } } 112 = { change_province_name = "Búfalo" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 3468 } } 3468 = { change_province_name = "Meeteetse" } }
         }
         ai_will_do = { factor = 1 }
     }
-	kansas_rename_mex = {
+	rename_kansas_mex = {
         potential = {
             NOT = { has_global_flag = kansas_renamed }
             OR = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 127
-			owns = 126
+			owns = 128
         }
 
         allow = {
-			owns = 127
-			owns = 126
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = kansas_renamed
-			126 = { change_province_name = "Previo" state_scope = { change_region_name = "Resurgimiento" } }
-			127 = { change_province_name = "Aztlán" }
+			any_owned = { limit = { AND = { owner = MEX province_id = 126 } } 126 = { change_province_name = "Osaje" } }
+			any_owned = { limit = { AND = { owner = MEX province_id = 127 } } 127 = { change_province_name = "Kansa" } }
+			128 = { change_province_name = "Ulibarrí" state_scope = { change_region_name = "Vientos del Sur" } }
         }
         ai_will_do = { factor = 1 }
     }
-	oklahoma_rename_mex = {
+	rename_oklahoma_mex = {
         potential = {
             NOT = { has_global_flag = oklahoma_renamed }
             OR = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 131
-			owns = 130
+			owns = 129
         }
 
         allow = {
-			owns = 130
-			owns = 131
+			war = no
         }
 
         effect = {
             prestige = 2
 			set_global_flag = oklahoma_renamed
-			130 = { change_province_name = "Liberados" state_scope = { change_region_name = "Reserva" } }
-			131 = { change_province_name = "Chichimequia" }
 			129 = { change_province_name = "Magdalena" state_scope = { change_region_name = "Chacta" } }
 			any_owned = { limit = { AND = { owner = MEX province_id = 130 } } 130 = { change_province_name = "Rayados" } }
 			any_owned = { limit = { AND = { owner = MEX province_id = 131 } } 131 = { change_province_name = "Fuerte Teodoro" } }
@@ -11662,15 +11752,32 @@ political_decisions = {
 				tag = MEX
 				tag = MEE
 			}
-			owns = 106
+			OR = {
+				has_country_flag = manifest_destiny_refuted
+				has_country_flag = aztecpride
+			}
+			owns = 108
+			owns = 109
+			owns = 3560
         }
 
         allow = {
             war = no
-            owns = 106
         }
 
         effect = {
+            prestige = 2
+			set_global_flag = denver_renamed
+			any_owned = {
+				limit = {
+					owner = MEX
+					province_id = 106
+				}
+				106 = { change_province_name = "San Luis" }
+			}
+			108 = { change_province_name = "Juan Rivera" }
+			109 = { change_province_name = "Sangre de Cristo" }
+			3560 = { change_province_name = "Las Grullas" }
 			prestige = 2
 			random_owned = {
 				limit = {

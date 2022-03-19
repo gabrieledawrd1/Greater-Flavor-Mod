@@ -1,5 +1,5 @@
 political_decisions = {
-	#This is just Pauil's decisions dump, don't mind the name
+  
 	barcelona_rail = {
 		picture = barcelona_rail
 	    potential = {
@@ -463,5 +463,6 @@ political_decisions = {
             }
         }
 
+    }
     }
 }

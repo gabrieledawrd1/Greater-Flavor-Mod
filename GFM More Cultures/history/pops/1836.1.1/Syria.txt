@@ -115,13 +115,7 @@
     farmers = {
         culture = mashriqi
         religion = sunni
-        size = 29300
-    }
-
-    farmers = {
-        culture = syriac
-        religion = catholic
-        size = 1700
+        size = 31000
     }
 
     clergymen = {

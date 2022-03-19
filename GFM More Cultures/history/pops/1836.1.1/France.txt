@@ -4469,19 +4469,19 @@
     }
 	
 	aristocrats = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 1200
     }
 
     clergymen = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 850
     }
 
     artisans = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 1000
     }
@@ -4501,13 +4501,13 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 52200
+        size = 51900
     }
 	
 	farmers = {
         culture = cagot
         religion = catholic
-        size = 1500
+        size = 1800
     }
 
     farmers = {
@@ -4517,39 +4517,33 @@
     }
 
     aristocrats = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 400
     }
 
     clergymen = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 350
     }
 
     artisans = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 2500
     }
 
     soldiers = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 450
     }
 
     farmers = {
-        culture = occitan
+        culture = basque
         religion = catholic
-        size = 21130
-    }
-	
-	farmers = {
-        culture = french
-        religion = catholic
-        size = 11130
+        size = 41130
     }
     
     farmers = {
@@ -4605,11 +4599,11 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 29300
+        size = 39300
     }
 	
 	farmers = {
-        culture = occitan
+        culture = cagot
         religion = catholic
         size = 1400
     }
@@ -4641,7 +4635,7 @@
     farmers = {
         culture = basque
         religion = catholic
-        size = 72070
+        size = 52070
     }
 	
 	farmers = {

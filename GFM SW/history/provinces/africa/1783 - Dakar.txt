@@ -3,5 +3,5 @@ controller = WOL
 add_core = WOL
 add_core = TOO
 trade_goods = grain
-terrain = darkar
+terrain = coastal_desert
 life_rating = 35
