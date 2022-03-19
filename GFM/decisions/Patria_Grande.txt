@@ -220,9 +220,8 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = capital_decided
-			random_owned= { limit = { owner = { has_country_flag = caribbean_capital } } owner = { country_event = 4206972 } }
-			random_owned= { limit = { owner = { has_country_flag = nand_capital } } owner = { country_event = 4206975 } }
-			random_owned= { limit = { owner = { has_country_flag = sand_capital } } owner = { country_event = 4206976 } }
+			random_owned= { limit = { owner = { has_country_flag = nand_capital } } owner = { country_event = 4206972 } }
+			random_owned= { limit = { owner = { has_country_flag = sand_capital } } owner = { country_event = 4206975 } }
 			random_owned= { limit = { owner = { has_country_flag = cone_capital } } owner = { country_event = 4206974 } }
 			random_owned= { limit = { owner = { has_country_flag = centralamerica_capital } } owner = { country_event = 4206973 } }
 		}
@@ -309,9 +308,9 @@ political_decisions = {
 				consciousness = 3
 			}
 			2222 = { owner = { country_event = 4206970 } }
-			SPA_2209 = { owner = {  = { country_event = 4206970 } } }
-			HAI_2213 = { owner = {  = { country_event = 4206970 } } }
-			HAI_2214 = { owner = {  = { country_event = 4206970 } } }
+			SPA_2209 = { owner = { country_event = 4206970 } } }
+			HAI_2213 = { owner = { country_event = 4206970 } } }
+			HAI_2214 = { owner = { country_event = 4206970 } }
 		}
 	}
 }
