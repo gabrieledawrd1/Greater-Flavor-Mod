@@ -290,7 +290,7 @@ country_event = {
 		NOT = { exists = TEX }
 		has_country_modifier = santa_ana_rule
 		has_country_flag = lugowo_papu_no
-		any_owned = {
+		any_owned_province = {
 			is_core = TEX
 		}
     }

@@ -11740,8 +11740,8 @@ political_decisions = {
             prestige = 2
 			set_global_flag = oklahoma_renamed
 			129 = { change_province_name = "Magdalena" state_scope = { change_region_name = "Chacta" } }
-			any_owned = { limit = { AND = { owner = MEX province_id = 130 } } 130 = { change_province_name = "Rayados" } }
-			any_owned = { limit = { AND = { owner = MEX province_id = 131 } } 131 = { change_province_name = "Fuerte Teodoro" } }
+			any_owned = { limit = { owner = MEX province_id = 130 } 130 = { change_province_name = "Rayados" } }
+			any_owned = { limit = { owner = MEX province_id = 131 } 131 = { change_province_name = "Fuerte Teodoro" } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -11768,13 +11768,7 @@ political_decisions = {
         effect = {
             prestige = 2
 			set_global_flag = denver_renamed
-			any_owned = {
-				limit = {
-					owner = MEX
-					province_id = 106
-				}
-				106 = { change_province_name = "San Luis" }
-			}
+			any_owned = { limit = { owned_by = MEX province_id = 106 } 106 = { change_province_name = "San Luis" } }
 			108 = { change_province_name = "Juan Rivera" }
 			109 = { change_province_name = "Sangre de Cristo" }
 			3560 = { change_province_name = "Las Grullas" }

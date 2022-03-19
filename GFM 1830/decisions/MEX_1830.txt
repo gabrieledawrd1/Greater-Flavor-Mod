@@ -43,9 +43,7 @@ political_decisions = {
 		picture = mex_constitution
 		potential = {
 			tag = MEX
-			OR = {
-				has_country_flag = do_1857_constitution
-			}
+			has_country_flag = do_1857_constitution
 		}
 		
 		allow = {

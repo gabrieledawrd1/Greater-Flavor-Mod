@@ -4,11 +4,16 @@ country_event = {
 	desc = "To balance the technologies of the countries, we halve the research points at the start."
 	picture = "14-bis"
 	major = yes
-	fire_only_once = yes
 	
-	immediate = {
-		has_global_flag = railroading_set
+	trigger = {
+		ai = no
+		year = 1830
 	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
 	option = {
 	    name = "Okay."
 	    add_country_modifier = {
