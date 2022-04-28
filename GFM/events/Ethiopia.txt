@@ -279,3 +279,22 @@ country_event = {
         name = "EVTOPTA111005"
     }
 }
+#Italo-Abyssinian War placeholder, revolt of Bahte Hagos
+country_event = {
+    id = 111005
+    title = "EVTNAME111004"
+    desc = "EVTDESC111004"
+    picture = "battle_of_magdala"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA111005"
+    }
+    option = {
+        name = "EVTOPTA111006"
+    }
+    option = {
+        name = "EVTOPTA111007"
+    }
+}
