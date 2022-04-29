@@ -230,6 +230,36 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+
+	madagascar_purchase = { #Boers want to purchase Alaska
+		picture = map_madagascar
+		potential = {
+			primary_culture = boer
+			AND = { owns = 2087 owns = 2105 owns = 2096 }
+			FRA = { owns = 2115 }
+			NOT = { has_global_flag = tried_madagascar_purchase }
+		}
+
+		allow = {
+			war = no
+			FRA = { war = no }
+			money = 500000
+			FRA = { relation = { who = THIS value = 50 } }
+		}
+
+        effect = {
+            set_global_flag = tried_madagascar_purchase
+            badboy = 2
+            FRA = { country_event = 1500000 }
+        }
+		
+		ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 badboy = 0.85 }
+		}
+    }
+
+
     form_south_africa_diplomatically = { #Forming Volkstaat
         picture = embrace_the_boer
         potential = {
@@ -1076,4 +1106,31 @@ political_decisions = {
 			}
 		}
 	}
+	
+    cape_qualified_franchise = {
+        picture = embrace_minority
+
+        potential = {
+		    NOT = { has_country_flag = cape_qualified_franchise }
+            primary_culture = boer
+            is_vassal = no
+        }
+
+        allow = {
+            NOT = { citizenship_policy = residency }
+			year = 1838
+			OR = {
+			    government = democracy
+	            government = hms_government
+			}
+        }
+
+        effect = {
+            prestige = 5
+            political_reform = all_voting_pops
+			nationalvalue = nv_equality
+			add_accepted_culture = afro_dutch
+			set_country_flag = cape_qualified_franchise
+        }
+    }
 }
