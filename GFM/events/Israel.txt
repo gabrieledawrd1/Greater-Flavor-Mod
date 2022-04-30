@@ -885,12 +885,12 @@ country_event = {
 	fire_only_once = yes 
 	
 	trigger = { 
-		has_global_flag = rise_of_zionism 
 		PLS = { 
 			all_core = { owned_by = THIS } 
 			exists = no 
 		}
 		NOT = { has_global_flag = israel_has_her_cores } 
+		year = 1881 
 	} 
 	
 	option = { 
@@ -954,7 +954,7 @@ country_event = {
 		set_global_flag = first_zionist_congress 
 	} 
 
-	mean_time_to_happen = { months = 108 } 
+	mean_time_to_happen = { months = 12 } 
 } 
 
 country_event = { 
@@ -1030,7 +1030,7 @@ country_event = {
 			ruling_party_ideology = socialist 
 			ruling_party_ideology = communist
 		} 
-		year = 1890 
+		year = 1905
 	}
 	
 	option = { 
@@ -1050,3 +1050,34 @@ country_event = {
 	mean_time_to_happen = { months = 5 } 
 }
 
+country_event = { 
+	id = 30097 #The 1929 Riots
+	title = "EVTNAME30097"
+	desc = "EVTDESC30097"
+	picture = "1929_riots"
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = ISR 
+		has_global_flag = israel_palestine
+		has_country_flag = palestinian_nationalism
+		year = 1929 
+	}
+	
+	option = { 
+		name = "Blood has been shed, and blood will be shed, on both sides. But the Jewish dream will not die!"
+		any_pop = { 
+			limit = { is_culture_group = arab } 
+			militancy = 9
+			consciousness = 9 
+		}
+		any_pop = { 
+			limit = { has_pop_religion = jewish } 
+			militancy = 5
+			consciousness = 5 
+		}
+	}
+
+	mean_time_to_happen = { months = 9 } 
+}

@@ -12,6 +12,7 @@ country_event = {
 
     trigger = {
         tag = BRZ
+        has_country_flag = rgs_revolt_flag
         owns = 2463
         NOT = { year = 1845 }
         OR = {
@@ -123,12 +124,12 @@ country_event = {
                 }
                 casus_belli = {
                     target = PBC
-                    type = cut_down_to_size
+                    type = cut_down_to_size_no_infamy
                     months = 24
                 }
                 war = {
                     target = PBC
-                    attacker_goal = { casus_belli = cut_down_to_size }
+                    attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
                     defender_goal = { casus_belli = war_reparations }
                     #call_ally = yes
                 }
@@ -155,8 +156,8 @@ country_event = {
                 }
 				define_general = {
                     name = "Alejandro Heredia"
-                    personality = competent
-                    background = natural_born_leader
+                    personality = no_personality
+                    background = attack_1.1
 				}
             }
         }
@@ -766,6 +767,7 @@ country_event = {
         name = "EVT46610100OPTA" #We agree
         badboy = -5
 		2401 = { remove_core = THIS }
+		3567 = { remove_core = THIS }
 		3359 = { remove_core = THIS }
 		random_owned = {
 			limit = {
@@ -788,6 +790,7 @@ country_event = {
 				OR = {
 					province_id = 2401
 					province_id = 3359
+					province_id = 3567
 				}
 			}
 			add_core = BRZ
@@ -804,11 +807,13 @@ country_event = {
 			limit = {
 				OR = {
 					province_id = 2401
+					province_id = 3567
 					province_id = 3359
 				}
 			}
 			add_core = BRZ
 		}
+        3567 = { add_core = THIS }
         relation = { who = BRZ value = -400 }
         ai_chance = {
             factor = 10

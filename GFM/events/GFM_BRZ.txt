@@ -12,19 +12,12 @@ country_event = {
     }
 
     fire_only_once = yes
-    mean_time_to_happen = {
-        months = 3
-    }
+    mean_time_to_happen = { months = 3 }
     
     option = {
         name = "Give it to Bahia."
         any_owned = {
-            limit = {
-                OR = {
-                    province_id = 2437
-                    province_id = 2438
-                }
-            }
+            limit = { OR = { province_id = 2437 province_id = 2438 } }
             remove_core = MGR
             remove_core = PNB
         }
@@ -34,12 +27,7 @@ country_event = {
     option = {
         name = "Give it to Minas Gerais."
         any_owned = {
-            limit = {
-                OR = {
-                    province_id = 2437
-                    province_id = 2438
-                }
-            }
+            limit = { OR = { province_id = 2437 province_id = 2438 } }
             remove_core = BAH
             remove_core = PNB
         }
@@ -49,12 +37,7 @@ country_event = {
     option = {
         name = "Return it to Pernambuco."
         any_owned = {
-            limit = {
-                OR = {
-                    province_id = 2437
-                    province_id = 2438
-                }
-            }
+            limit = { OR = { province_id = 2437 province_id = 2438 } }
             remove_core = MGR
             remove_core = BAH
         }
@@ -75,27 +58,13 @@ country_event = {
     }
 
     fire_only_once = yes
-    mean_time_to_happen = {
-        months = 3
-    }
+    mean_time_to_happen = { months = 3 }
 
     option = {
         name = "Great!"
 		set_country_flag = lei_eusebio
-        any_pop = {
-            limit = {
-                has_pop_culture = afro_brazilian
-            }
-            militancy = -2
-            consciousness = -2
-        }
-        any_pop = {
-            limit = {
-                has_pop_culture = brazilian
-            }
-            militancy = 2
-            consciousness = 2
-        }
+        any_pop = { limit = { has_pop_culture = afro_brazilian } militancy = -2 consciousness = -2 }
+        any_pop = { limit = { has_pop_culture = brazilian } militancy = 2 consciousness = 2 }
     }
 }
 
@@ -145,15 +114,15 @@ country_event = {
         MGR = {
             define_general = { 
                 name = "Theophilo Benedicto Ottoni" 
-                personality = skilled 
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         SAP = { 
             define_general = {
                 name = "Rafael Tobias de Aguiar"
-                personality = skilled
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         3444 = { secede_province = MGR } #Barbacena
@@ -166,37 +135,15 @@ country_event = {
         2452 = { secede_province = SAP } #Campinas
         2450 = { secede_province = SAP } #São Paulo
         2451 = { secede_province = SAP } #Santos
-        war = {
-            target = MGR
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        war = {
-            target = SAP
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
+        war = { target = MGR attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
+        war = { target = SAP attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
+        ai_chance = { factor = 100 }
     }
 
     option = {
         name = "Avante Liberais! §BPlay as Minas Gerais§!"
         set_country_flag = liberal_revolt_brz
-        any_pop = {
-            limit = {
-                has_pop_culture = brazilian
-                location = { 
-                    OR = {
-                        region = BRZ_2446_1
-                        region = BRZ_2306 
-                    }
-                }
-            }
-            consciousness = 4
-            militancy = 4
-        }
+        any_pop = { limit = { has_pop_culture = brazilian location = { OR = { region = BRZ_2446_1 region = BRZ_2306 } } } consciousness = 4 militancy = 4 } #São Paulo + Minas Gerais
         3444 = { secede_province = MGR } #Barbacena
         2441 = { secede_province = MGR } #Ouro Preto
         2446 = { secede_province = MGR } #São João D'el Rey
@@ -210,15 +157,15 @@ country_event = {
         MGR = {
             define_general = { 
                 name = "Theophilo Benedicto Ottoni" 
-                personality = skilled 
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         SAP = { 
             define_general = {
                 name = "Rafael Tobias de Aguiar"
-                personality = skilled
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         war = {
@@ -237,19 +184,7 @@ country_event = {
     option = {
         name = "Avante Liberais! §BPlay as São Paulo§!"
         set_country_flag = liberal_revolt_brz
-        any_pop = {
-            limit = {
-                has_pop_culture = brazilian
-                location = { 
-                    OR = {
-                        region = BRZ_2446_1
-                        region = BRZ_2306 
-                    }
-                }
-            }
-            consciousness = 4
-            militancy = 4
-        }
+        any_pop = { limit = { has_pop_culture = brazilian location = { OR = { region = BRZ_2446_1 region = BRZ_2306 } } } consciousness = 4 militancy = 4 } #São Paulo + Minas Gerais
         3444 = { secede_province = MGR } #Barbacena
         2441 = { secede_province = MGR } #Ouro Preto
         2446 = { secede_province = MGR } #São João D'el Rey
@@ -263,15 +198,15 @@ country_event = {
         MGR = {
             define_general = { 
                 name = "Theophilo Benedicto Ottoni" 
-                personality = skilled 
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         SAP = { 
             define_general = {
                 name = "Rafael Tobias de Aguiar"
-                personality = skilled
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         war = {
@@ -305,12 +240,10 @@ country_event = {
         }
     }
 
-    mean_time_to_happen = {
-        days = 1
-    }
+    mean_time_to_happen = { days = 1 }
 
     option = {
-        name = "Huzza!"
+        name = "Huzzah!"
         clr_country_flag = liberal_revolt_brz
     }
 }
@@ -327,25 +260,17 @@ country_event = {
         OR = {
             AND = {
                 tag = MGR
-                OR = {
-                    2447 = { controlled_by = MGR }
-                    BRZ = { truce_with = MGR }
-                }
+                OR = { 2447 = { controlled_by = MGR } BRZ = { truce_with = MGR } }
             }
             AND = {
                 tag = SAP
-                OR = {
-                    2447 = { controlled_by = SAP }
-                    BRZ = { truce_with = SAP }
-                }
+                OR = { 2447 = { controlled_by = SAP } BRZ = { truce_with = SAP } }
             }
         }
         BRZ = { has_country_flag = liberal_revolt_brz }
     }
 
-    mean_time_to_happen = {
-        days = 1
-    }
+    mean_time_to_happen = { days = 1 }
 
     option = {
         name = "Viva os Liberais!"
@@ -355,10 +280,9 @@ country_event = {
             ruling_party_ideology = liberal
             inherit = MGR
             inherit = SAP
+            capital = 2447
         }
-        ai_chance = {
-            factor = 70
-        }
+        ai_chance = { factor = 70 }
     }
 
     option = {
@@ -375,10 +299,9 @@ country_event = {
             set_country_flag = democracy_gov
             inherit = MGR
             inherit = SAP
+            capital = 2447
         }
-        ai_chance = {
-            factor = 30
-        }
+        ai_chance = { factor = 30 }
     }
 }
 
@@ -390,9 +313,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 1
-    }
+    mean_time_to_happen = { months = 1 }
 
     trigger = {
         tag = BRZ
@@ -403,13 +324,7 @@ country_event = {
 
     option = {
         name = "Unfortunate."
-        any_pop = {
-            limit = {
-                location = { province_id = 2436 }
-                has_pop_culture = afro_brazilian
-            }
-            militancy = 4
-        }
+        any_pop = { limit = { location = { province_id = 2436 } has_pop_culture = afro_brazilian } militancy = 4 }
     }
 }
 
@@ -421,9 +336,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 3
-    }
+    mean_time_to_happen = { months = 3 }
 
     trigger = {
         tag = BRZ
@@ -446,9 +359,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 3
-    }
+    mean_time_to_happen = { months = 3 }
 
     trigger = {
         has_country_flag = brz_metric
@@ -458,12 +369,7 @@ country_event = {
 
     option = {
 	    name = "Damn!"
-        any_pop = {
-            limit = {
-                location = { province_id = 2428 }
-            }
-            militancy = 5
-        }
+        any_pop = { limit = { location = { province_id = 2428 } } militancy = 5 }
     }
 }
 
@@ -475,9 +381,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 5
-    }
+    mean_time_to_happen = { months = 5 }
 
     trigger = {
         tag = BRZ
@@ -499,20 +403,14 @@ country_event = {
             set_country_flag = praieira
             define_general = {
                 name = "Pedro Ivo Veloso da Silveira"
-                personality = skilled
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         2428 = { secede_province = PNB } #Paraiba
         2432 = { secede_province = PNB } #Recife
-        war = {
-            target = PNB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
-        ai_chance = {
-            factor = 100
-        }
+        war = { target = PNB attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
+        ai_chance = { factor = 100 }
     }
 
     option = {
@@ -521,17 +419,13 @@ country_event = {
             set_country_flag = praieira
             define_general = {
                 name = "Pedro Ivo Veloso da Silveira"
-                personality = skilled
-                background = rising_star
+                personality = no_personality 
+                background = attack_1.1
             }
         }
         2428 = { secede_province = PNB } #Paraiba
         2432 = { secede_province = PNB } #Recife
-        war = {
-            target = PNB
-            attacker_goal = { casus_belli = conquest_any }
-            defender_goal = { casus_belli = status_quo }
-        }
+        war = { target = PNB attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
         change_tag_no_core_switch = PNB
     }
 }
@@ -544,18 +438,13 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        days = 1
-    }
+    mean_time_to_happen = { days = 1 }
 
     trigger = {
         tag = PNB
         year = 1848
         has_country_flag = praieira
-        OR = {
-            2447 = { controlled_by = PNB }
-            BRZ = { truce_with = PNB }
-        }
+        OR = { 2447 = { controlled_by = PNB } BRZ = { truce_with = PNB } }
     }
 
     option = {
@@ -571,6 +460,7 @@ country_event = {
             political_reform = federalism
             set_country_flag = democracy_gov
             inherit = PNB
+            capital = 2447
         }
     }
 }
@@ -583,44 +473,19 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 5
-    }
+    mean_time_to_happen = { months = 5 }
 
     trigger = {
         tag = BRZ
         owns = 2429 #Fortaleza
         year = 1877
+        NOT = { has_country_flag = northeast_seca_gone }
     }
 
     option = {
         name = "Horrible."
-        any_pop = {
-            limit = {
-                location = {
-                    OR = {
-                        region = BRZ_2410
-                        region = BRZ_2428 
-                        region = BRZ_2439
-                    }
-                }
-            }
-            reduce_pop = 0.80
-            consciousness = 2
-        }
-        any_owned = {
-            limit = {
-                OR = {
-                    region = BRZ_2410
-                    region = BRZ_2428 
-                    region = BRZ_2439 
-                }
-            }
-            add_province_modifier = {
-                name = provincial_drought
-                duration = 1825
-            }
-        }
+        any_pop = { limit = { location = { OR = { region = BRZ_2410 region = BRZ_2428 region = BRZ_2439 } } } reduce_pop = 0.80 consciousness = 2 } #Maranhão + Nordeste + Bahia
+        any_owned = { limit = { OR = { region = BRZ_2410 region = BRZ_2428 region = BRZ_2439 } } add_province_modifier = { name = provincial_drought duration = 1825 } }
     }
 }
 
@@ -632,9 +497,7 @@ country_event = {
 
     fire_only_once = yes
 
-    mean_time_to_happen = {
-        months = 5
-    }
+    mean_time_to_happen = { months = 5 }
 
     trigger = {
         year = 1873
@@ -643,17 +506,7 @@ country_event = {
 
     option = {
         name = "Insane."
-        any_pop = {
-            limit = {
-                location = { region = BRZ_2467 }
-                OR = {
-                    has_pop_culture = north_german
-                    has_pop_culture = south_german
-                }
-            }
-            consciousness = 2
-            militancy = 1
-        }
+        any_pop = { limit = { location = { region = BRZ_2467 } OR = { has_pop_culture = north_german has_pop_culture = south_german } } consciousness = 2 militancy = 1 }
     }
 }
 
@@ -661,7 +514,7 @@ country_event = {
     id = 47074
     title = "EVTNAME47074"
     desc = "EVTDESC47074"
-    picture = scramble_for_africa
+    picture = "scramble_for_africa"
 
     is_triggered_only = yes
 
@@ -683,18 +536,9 @@ country_event = {
         }
         ai_chance = {
             factor = 60
-            modifier = {
-                factor = 1.5
-                is_greater_power = no
-            }
-            modifier = {
-                factor = 1.3
-                alliance_with = FROM
-            }
-            modifier = {
-                factor = 1.2
-                relation = { who = FROM value = 150 }
-            }
+            modifier = { factor = 1.5 is_greater_power = no }
+            modifier = { factor = 1.3 alliance_with = FROM }
+            modifier = { factor = 1.2 relation = { who = FROM value = 150 } }
         }
     }
 
@@ -705,18 +549,9 @@ country_event = {
 		set_country_flag = rejected_angola_purchase
         ai_chance = {
             factor = 40
-            modifier = {
-                factor = 0.2
-                is_greater_power = no
-            }
-            modifier = {
-                factor = 1.2
-                FROM = { is_greater_power = no }
-            }
-            modifier = {
-                factor = 1.3
-                NOT = { relation = { who = FROM value = 0 } }
-            }
+            modifier = { factor = 0.2 is_greater_power = no }
+            modifier = { factor = 1.2 FROM = { is_greater_power = no } }
+            modifier = { factor = 1.3 NOT = { relation = { who = FROM value = 0 } } }
         }
     }
 }
@@ -725,7 +560,7 @@ country_event = {
     id = 47075
     title = "EVTNAME47075"
     desc = "EVTDESC47075"
-    picture = scramble_for_africa
+    picture = "scramble_for_africa"
 
     is_triggered_only = yes
 
@@ -785,11 +620,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA47077"
-        any_pop = {
-            limit = { has_pop_culture = afro_brazilian }
-            consciousness = 2
-			militancy = 2
-        }
+        any_pop = { limit = { has_pop_culture = afro_brazilian } consciousness = 2 militancy = 2 }
     }
 }
 
@@ -809,9 +640,7 @@ country_event = {
     option = {
         name = "EVTOPTA47078"
 		money = -10000
-        2447 = {
-			add_province_modifier = { name = recently_built_city duration = 730 }
-        }
+        2447 = { add_province_modifier = { name = recently_built_city duration = 730 } }
     }
 }							
 country_event = {
@@ -827,10 +656,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA47079"
-        any_pop = { 
-            limit = { location = { province_id = 2447 } }
-            militancy = 8		   
-        }
+        any_pop = { limit = { location = { province_id = 2447 } } militancy = 8 }
     }
 }
 
@@ -874,16 +700,186 @@ country_event = {
     option = {
         name = "EVTOPTA47081"
         prestige = 5  
-		any_pop = {
-            limit = { has_pop_culture = afro_brazilian }
-            consciousness = 5
-			militancy = 3
+		any_pop = { limit = { has_pop_culture = afro_brazilian } consciousness = 5 militancy = 3 }
+		any_pop = { dominant_issue = { value = freedom_of_womb factor = 0.1 } ideology = { value = liberal factor = 0.2 } consciousness = 2 }
+    }
+}
+
+country_event = {
+    id = 47082
+    title = "The Military Colony of Rio Branco"
+    desc = "rio_branco_colony_desc"
+    picture = "treaty_of_petropolis"
+    
+    fire_only_once = yes
+    trigger = {
+        OR = {
+            tag = BRZ
+            tag = UPB
         }
-		any_pop = {
-            dominant_issue = { value = freedom_of_womb factor = 0.1 }
-            ideology = { value = liberal factor = 0.2 }
-            consciousness = 2
+        owns = 2403
+        NOT = { 2532 = { owned_by = THIS } }
+        money = 100000
+        year = 1848
+    }
+
+    mean_time_to_happen = { months = 3 }
+    
+    option = { 
+        name = "But of course! §RPay 50k§W"
+        money = -50000
+        2532 = { owner = { country_event = 47083 } }
+        2532 = { secede_province = THIS }
+        2532 = { add_core = THIS }
+        relation = { who = VNZ value = -20 }
+        prestige = 5
+        set_country_flag = rio_branco_colony
+        ai_chance = { factor = 40 }
+    }
+
+    option = {
+        name = "Who cares! Just a bunch of trees anyway."
+        prestige = -1
+        ai_chance = { factor = 60 }
+    }
+}
+
+country_event = {
+    id = 47083
+    title = "Brazil sets up a Military Colony in the Rio Branco!"
+    desc = "$FROMCOUNTRY$ is proposing a navigation treaty to delimit our borders and establish river transport regulations. While this would please Brazil, we would thereby give up our claims on a lot of land." 
+    picture = "treaty_of_petropolis"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+    
+    option = { 
+        name = "Unacceptable!"
+        relation = { who = FROM value = -80 }
+		FROM = { country_event = 123673 }
+        ai_chance = { factor = 40 }
+    }
+
+    option = {
+        name = "Sign a navegational treaty."
+        relation = { who = FROM value = 80 }
+		2532 = { remove_core = THIS }
+        FROM = { country_event = 123672 }
+        ai_chance = { factor = 60 }
+    }
+}
+
+country_event = {
+    id = 47084
+    title = "A treaty with Peru"
+    desc = "peu_brz_treaty_desc"
+    picture = "treaty_of_petropolis"
+
+    fire_only_once = yes
+    mean_time_to_happen = { months = 2 }
+
+    trigger = {
+        OR = {
+            tag = BRZ
+            tag = UPB
+        }
+        owns = 2407
+        war = no
+        year = 1850
+    }
+
+    option = {
+        name = "Of course!"
+        2286 = { owner = { country_event = 47085 } }
+        prestige = 5
+    }
+}
+
+country_event = {
+    id = 47085
+    title = "Brazil proposes a treaty"
+    desc = "peu_brz_treaty_2_desc"
+    picture = "treaty_of_petropolis"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "We must give up these ludicrous claims."
+        2407 = { remove_core = THIS }
+        FROM = { country_event = 47086 }
+        relation = { who = FROM value = 100 }
+		ai_chance = { factor = 1 }
+    }
+
+    option = {
+        name = "Never!"
+        relation = { who = FROM value = -100 }
+        prestige = 5
+        FROM = { country_event = 47087 }
+		ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = 47086
+    title = "$FROMCOUNTRY$ has accepted!"
+    desc = "$FROMCOUNTRY$ has accepted our proposal and they do not claim the the east of Tabatinga anymore!"
+    picture = "treaty_of_petropolis"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Wise."
+    }
+}
+
+country_event = {
+    id = 47087
+    title = "$FROMCOUNTRY$ has refused!"
+    desc = "$FROMCOUNTRY$ has refused our proposal and continue to claim the the east of Tabatinga!"
+    picture = "treaty_of_petropolis"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "They'll pay for this..."
+		casus_belli = { target = FROM type = humiliate months = 36 }
+    }
+}
+country_event = {
+    id = 47089
+    title = "The Cabanos are victorious"
+    desc = "paa_win_desc"
+    picture = "para"
+    
+    fire_only_once = yes
+
+    trigger = {
+        tag = PAA
+        BRZ = { has_country_flag = cabanagem_revolt }
+        OR = {
+            truce_with = BRZ
+            truce_with = UPB
         }
     }
-        
-}	   
+    
+    option = {
+        name = "Huzzah!"
+        government = democracy
+        2401 = { add_core = PAA }
+        3359 = { add_core = PAA }
+        2532 = { add_core = PAA }
+        3568 = { add_core = PAA }
+        830 = { add_core = PAA }
+        BRZ = {
+            any_owned = {
+                limit = { is_core = PAA }
+                secede_province = PAA 
+            }
+            clr_country_flag = cabanagem_revolt 
+        }
+    }
+}

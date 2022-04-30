@@ -457,7 +457,7 @@ country_event = {
     immediate = {
         tag = MEX
         war = no
-        134 = { owned_by = THIS }
+        134 = { owned_by = MEX }
     }
 
     option = {
@@ -482,7 +482,7 @@ country_event = {
 		any_country = {
 			limit = {
 				is_greater_power = yes
-				political_reform = no_slavery
+				slavery = no_slavery
 			}
 			relation = {
 				who = MEX
@@ -492,8 +492,9 @@ country_event = {
 		any_country = {
 			limit = {
 				is_greater_power = yes
-				NOT = {
-					political_reform = no_slavery
+				OR = {
+					slavery = yes_slavery
+					slavery = freedom_of_womb
 				}
 			}
 			relation = {
@@ -541,6 +542,7 @@ country_event = {
 
     option = {
         name = "EVT44820OPTA"
+		prestige = -5
         any_owned = {
             limit = { is_core = RGR }
             secede_province = RGR
@@ -578,6 +580,7 @@ country_event = {
     }
     option = {
         name = "Freedom for the Riograndese!"
+		prestige = -15
         any_owned = {
             limit = { is_core = RGR }
             secede_province = RGR
@@ -610,7 +613,7 @@ country_event = {
 
     option = {
         name = "EVT44820OPTB"
-        prestige = -5
+        prestige = -15
         any_owned = {
             limit = { is_core = RGR }
             secede_province = RGR
@@ -674,6 +677,7 @@ country_event = {
 
     option = {
         name = "EVT44820OPTA"
+		prestige = -5
         any_owned = {
             limit = { is_core = YUC }
             secede_province = YUC
@@ -711,7 +715,7 @@ country_event = {
 
     option = {
         name = "EVT44820OPTB"
-        prestige = -5
+        prestige = -15
         any_owned = {
             limit = { is_core = YUC }
             secede_province = YUC
@@ -821,6 +825,7 @@ country_event = {
     option = {
         name = "EVT44825OPTA"
         set_country_flag = treaty_of_guadalupe_hidalgo
+		prestige = -50
         prestige_factor = -0.5
         treasury = 100000
         random_owned = {
@@ -1585,6 +1590,7 @@ country_event = {
     option = {
         name = "EVT110053OPTA" # He got what was coming!
         prestige = 5
+		remove_country_modifier = santa_ana_rule
 		ruling_party_ideology = liberal
 		government = democracy
 		set_country_flag = Government_Democracy
@@ -1640,7 +1646,7 @@ country_event = {
 			secede_province = MEE
 		}
 		MEE = { capital = 2172 }
-		define_general = { name = "Ignacio Zaragoza" personality = implacable background = cursed_luck }
+		define_general = { name = "Ignacio Zaragoza" personality = defence_5.1 background = attack_5.1 }
 		war = {
 			target = MEE
 			attacker_goal = { casus_belli = civil_war }
@@ -1690,7 +1696,7 @@ country_event = {
 			secede_province = MEE
 		}
 		MEE = { capital = 2172 }
-		define_general = { name = "Ignacio Zaragoza" personality = implacable background = cursed_luck }
+		define_general = { name = "Ignacio Zaragoza" personality = defence_5.1 background = attack_5.1 }
 		war = {
 			target = MEE
 			attacker_goal = { casus_belli = civil_war }
@@ -1941,7 +1947,7 @@ country_event = {
 
 country_event = {
     id = 111022
-    title = "Cinco del Mayo"
+    title = "La Batalla de Puebla"
     desc = "Our troops have recaptured Mexico City, expelling the French invaders and the government of Maximilian I. To send a warning against further interventions, he was executed by a firing squad."
     picture = "death_of_max"
 

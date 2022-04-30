@@ -2251,7 +2251,7 @@ political_decisions = {
                 tag = BOS
                 tag = MON
                 tag = GRE
-                tag = BYZ
+                has_country_flag = byzantine_revival
                 tag = ARM
                 tag = CLC
                 tag = BGR
@@ -2378,7 +2378,7 @@ political_decisions = {
                 tag = BOS
                 tag = MON
                 tag = GRE
-                tag = BYZ
+                has_country_flag = byzantine_revival
                 tag = ARM
                 tag = CLC
                 tag = BGR
@@ -2445,6 +2445,27 @@ political_decisions = {
                 NOT = { any_owned_province = { pop_majority_culture = turkish } }
             }
         }
+    }
+	
+	iasi_national_theatre = {
+        picture = iasi_theatre
+        potential = {
+			primary_culture = romanian
+			NOT = { has_global_flag = iasi_national_theatre }
+			owns = 670
+        }
+
+        allow = {
+			invention = romanticist_art
+			money = 20000
+        }
+
+        effect = {
+			set_global_flag = iasi_national_theatre
+			prestige = 5
+			treasury = -20000
+        }
+        ai_will_do = { factor = 1 }
     }
 	
 }

@@ -164,6 +164,7 @@ political_decisions = {
     sign_the_geneva_convention = {
         alert = no
         potential = {
+			NOT = { tag = CLN }
             civilized = yes
             has_global_flag = geneva_convention_held
             NOT = { has_country_modifier = signed_the_geneva_convention }
@@ -175,7 +176,7 @@ political_decisions = {
                 has_country_modifier = withdrew_from_geneva_convention
             }
             OR = {
-                NOT = {has_country_modifier = law_changed_by_force }
+                NOT = { has_country_modifier = law_changed_by_force }
                 ai = no
             }
         }

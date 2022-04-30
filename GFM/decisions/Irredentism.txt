@@ -136,37 +136,6 @@ political_decisions = {
         }
     }
 
-    claim_santa_catarina = {
-        picture = claim_santa_catarina
-        potential = {
-            tag = RGS
-            NOT = { has_country_flag = claim_santa_catarina }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            prestige = 45
-        }
-
-        effect = {
-            set_country_flag = claim_santa_catarina
-            badboy = 5
-            2461 = { #Desterro
-                add_core = RGS
-            }
-            2462 = { #Sao Miguel
-                add_core = RGS
-            }
-            2459 = { #Lajes
-                add_core = RGS
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
 
     greater_afghanistan = {
         picture = form_durrani_empire
@@ -671,7 +640,6 @@ political_decisions = {
                 tag = UPB
             }
             NOT = { has_country_flag = prata_is_ours }
-            government = fascist_dictatorship
         }
 
         allow = {
@@ -690,98 +658,6 @@ political_decisions = {
 
         ai_will_do = {
             factor = 0
-        }
-    }
-
-    rename_uruguay = {
-        picture = banda_oriental
-        potential = {
-            OR = {
-                tag = BRZ
-                tag = UPB
-            }
-            owns = 2344
-            owns = 2345
-            owns = 2346
-            owns = 2347
-            has_country_flag = cisplatina_is_ours
-            NOT = {
-                has_global_flag = brazil_has_renamed_cisplatina
-            }
-        }
-
-        allow = {
-            owns = 2344
-        }
-
-        effect = {
-            2344 = {
-                change_province_name = "Sacramento"
-                state_scope = {
-                    change_region_name = "Cisplatina"
-                }
-            }
-            2347 = {
-                change_province_name = "Mirim"
-            }
-			2345 = {
-                change_province_name = "Frederico Lecor"
-            }
-			2346 = {
-                change_province_name = "Quarahy"
-            }
-            prestige = 5
-            set_global_flag = brazil_has_renamed_cisplatina
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    restore_uruguay = {
-        picture = banda_oriental
-        potential = {
-            OR = {
-                tag = URU
-                tag = ARG
-                tag = PRG
-                tag = LPL
-            }
-            has_global_flag = brazil_has_renamed_cisplatina
-            owns = 2344
-            owns = 2345
-            owns = 2346
-            owns = 2347
-        }
-
-        allow = {
-            owns = 2344
-        }
-
-        effect = {
-            2344 = {
-                change_province_name = "Montevideo"
-                state_scope = {
-                    change_region_name = "Uruguay"
-                }
-            }
-			2347 = {
-                change_province_name = "Melo"
-            }
-			2345 = {
-                change_province_name = "Paysandu"
-            }
-			2346 = {
-                change_province_name = "Tacuarembo"
-            }
-            prestige = 5
-            BRZ = { prestige = -10 }
-            clr_global_flag = brazil_has_renamed_cisplatina
-        }
-
-        ai_will_do = {
-            factor = 1
         }
     }
 
@@ -1078,7 +954,13 @@ political_decisions = {
                 33 = { badboy = 4 }
                 33 = { badboy = 5 }
             }
-            RUS_968 = {
+            968 = {
+                add_core = THIS
+            }
+            954 = {
+                add_core = THIS
+            }
+            969 = {
                 add_core = THIS
             }
         }

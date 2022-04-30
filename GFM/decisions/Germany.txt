@@ -1307,4 +1307,27 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	german_npolarexp = {
+        picture = german_npolarexp
+        potential = {
+			NOT = { has_country_flag = german_npolarexp }
+			OR = { tag = PRU tag = NGF tag = GER }
+			year = 1868
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            years_of_research = 0.10
+			set_country_flag = german_npolarexp
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

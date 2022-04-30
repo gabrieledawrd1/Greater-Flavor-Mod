@@ -229,5 +229,5 @@ viceroyalty = {
 
     election = no
     appoint_ruling_party = yes
-	#flagtype = none, i.e. default TAG.tga 
+	flagtype = spare
 }

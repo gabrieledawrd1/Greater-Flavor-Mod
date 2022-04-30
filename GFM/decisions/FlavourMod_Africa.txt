@@ -118,12 +118,12 @@ political_decisions = {
         allow = {
             NOT = { any_greater_power = { war_with = THIS } }
             is_disarmed = no
-            OR = {
-                blue_and_brown_water_schools = 1
-                invention = colonial_negotiations
-            }
 			OR = {
-				total_amount_of_ships = 75
+				AND = {
+					blue_and_brown_water_schools = 1
+					invention = colonial_negotiations
+					total_amount_of_ships = 75
+				}
 				ai = yes
 			}
             1932 = { owner = { OR = { tag = THIS in_sphere = THIS } } }
@@ -1298,6 +1298,7 @@ political_decisions = {
             1896 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
 			1895 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
 			1897 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+			1894 = { change_province_name = "Grand-Bassam" life_rating = 10 }
             random_country = {
                 limit = { owns = 1900 ai = yes civilized = no NOT = { tag = KNG tag = ASH } NOT = { truce_with = THIS } exists = yes }
                 add_casus_belli = {
@@ -1438,35 +1439,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    cremieux_decree = {
-    picture = cremieux_decree
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            has_country_flag = organize_algeria_1848
-            year = 1870
-            ALD_1704 = { owned_by = THIS }
-            ALD_1708 = { owned_by = THIS }
-            FRA_1700 = { owned_by = THIS }
-            NOT = { has_country_flag = cremieux_decree }
-        }
-
-        allow = {
-            war = no
-            ALD_1704 = { owned_by = THIS }
-            ALD_1708 = { owned_by = THIS }
-            FRA_1700 = { owned_by = THIS }
-        }
-
-        effect = {
-            FRA = { set_country_flag = cremieux_decree }
-            BOR = { set_country_flag = cremieux_decree }
-            add_accepted_culture = sephardic
-        }
-
-        ai_will_do = { factor = 1 }
-    }
 
     integrating_french_algeria = {
         picture = french_algeria
@@ -2405,6 +2377,66 @@ political_decisions = {
 			1716 = { add_core = MOR secede_province = MOR }
 			1722 = { add_core = MOR secede_province = MOR }
 			2609 = { add_core = MOR secede_province = MOR }
+        }
+    }
+    integrate_adamawa = {
+        picture = become_hausaland
+        potential = {
+            OR = {
+                tag = SOK
+                has_country_flag = i_became_tou
+            }
+			ADW = { vassal_of = THIS }
+            NOT = { has_country_flag = integrate_adamawa }
+        }
+
+        allow = {
+            OR = {
+				AND = {
+					1937 = { owned_by = ADW }
+					1950 = { owned_by = ADW }
+					NOT = {
+						1961 = { owned_by = ADW }
+						1963 = { owned_by = ADW }
+					}
+				}
+				AND = {
+					war = no
+					prestige = 25
+					plurality = 10
+					nationalism_n_imperialism = 1
+					civilized = yes
+					ADW = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									OR = {
+										is_vassal = no
+										vassal_of = THIS
+									}
+									war = no
+									is_greater_power = no
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+
+        effect = {
+            set_country_flag = integrate_adamawa
+            inherit = ADW
+            ADW = {
+                all_core = {
+                    remove_core = ADW
+                    add_core = THIS
+                }
+            }
+            prestige = 5
+            badboy = 2
         }
     }
 }

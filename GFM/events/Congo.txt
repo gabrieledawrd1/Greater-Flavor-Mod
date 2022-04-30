@@ -165,6 +165,7 @@ country_event = {
     major = yes
 
     trigger = {
+		has_country_flag = congo_port_requested
 		OR = {
 			any_greater_power = {
 				OR = {
@@ -266,6 +267,9 @@ country_event = {
         }
         political_reform = exploitation
         release = CNG
+		CNG = { civilized = yes }
+		CNG = { annex_to = UTI }
+		UTI = { annex_to = CNG }
 		create_vassal = CNG
         CNG = {
             government = absolute_monarchy
@@ -278,9 +282,6 @@ country_event = {
             add_country_modifier = { name = western_presence duration = -1 }
             tech_school = unciv_tech_school
         }
-		CNG = { civilized = yes }
-		CNG = { annex_to = UTI }
-		UTI = { annex_to = CNG }
         random_owned = { limit = { owner = { has_country_flag = catholic_country } } CNG = { religion = catholic } }
         random_owned = { limit = { owner = { has_country_flag = protestant_country } } CNG = { religion = protestant } }
         random_owned = { limit = { owner = { has_country_flag = orthodox_country } } CNG = { religion = orthodox } }
@@ -670,9 +671,9 @@ country_event = {
                 any_owned = { any_pop = { limit = { is_primary_culture = yes type = officers } money = 50 militancy = -2 } }
             }
         random_list = {
-            30 = {change_variable = { which = exploited_congo value = 3 } }
-            55 = {change_variable = { which = exploited_congo value = 2 } }
-            15 = {change_variable = { which = exploited_congo value = 1 } }
+            30 = { change_variable = { which = exploited_congo value = 3 } }
+            55 = { change_variable = { which = exploited_congo value = 2 } }
+            15 = { change_variable = { which = exploited_congo value = 1 } }
         }
         ai_chance = { factor = 0.45    }
     }
@@ -725,9 +726,9 @@ country_event = {
             }
         }
         random_list = {
-            20 = {change_variable = { which = exploited_congo value = 3 } }
-            30 = {change_variable = { which = exploited_congo value = 2 } }
-            50 = {change_variable = { which = exploited_congo value = 1 } }
+            20 = { change_variable = { which = exploited_congo value = 3 } }
+            30 = { change_variable = { which = exploited_congo value = 2 } }
+            50 = { change_variable = { which = exploited_congo value = 1 } }
         }
         ai_chance = {
             factor = 0.50
@@ -772,9 +773,9 @@ country_event = {
             any_pop = { limit = { is_primary_culture = yes } militancy = 3 }
         }
         random_list = {
-            20 = {change_variable = { which = philantropic_congo value = 3 } }
-            30 = {change_variable = { which = philantropic_congo value = 2 } }
-            50 = {change_variable = { which = philantropic_congo value = 1 } }
+            20 = { change_variable = { which = philantropic_congo value = 3 } }
+            30 = { change_variable = { which = philantropic_congo value = 2 } }
+            50 = { change_variable = { which = philantropic_congo value = 1 } }
         }
         ai_chance = { factor = 0.05 }
     }

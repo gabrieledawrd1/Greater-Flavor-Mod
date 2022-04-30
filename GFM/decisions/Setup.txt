@@ -62,12 +62,19 @@ political_decisions = {
                     duration = 7304
                 }
 			}
+			
 			set_global_flag = global_setup_complete
 			SPA = {
 				any_pop = { limit = { has_pop_culture = filipino } literacy = -0.04 }
 				any_pop = { limit = { has_pop_culture = caribeno } literacy = -0.02 }
 				any_pop = { limit = { OR = { has_pop_culture = basque has_pop_culture = catalan } } literacy = 0.03 }
-	
+				any_pop = {
+					limit = {
+						type = capitalists
+						has_pop_culture = catalan
+					}
+					money = 500
+				}
 				any_owned = {
 					limit = {
 						OR = {
@@ -389,6 +396,31 @@ political_decisions = {
 				enable_canal = 8
 				enable_canal = 10
 				enable_canal = 14
+				enable_canal = 15
+				enable_canal = 16
+				enable_canal = 17
+				enable_canal = 18
+				enable_canal = 19
+				enable_canal = 20
+				enable_canal = 21
+				enable_canal = 22
+				enable_canal = 23
+				enable_canal = 24
+				enable_canal = 25
+				enable_canal = 26
+				enable_canal = 27
+				enable_canal = 29	
+				enable_canal = 30
+				enable_canal = 31	
+				enable_canal = 32
+				enable_canal = 33		
+				enable_canal = 34
+				enable_canal = 35		
+				enable_canal = 36	
+				enable_canal = 37	
+				enable_canal = 38	
+				enable_canal = 39	
+				enable_canal = 40
 				873 = {
 					state_scope = {
 						change_region_name = "Konya"
@@ -437,8 +469,8 @@ political_decisions = {
 				1717 = { change_province_name = "Bouira" }
 				1721 = { change_province_name = "El Tarf" }
 				1813 = { change_province_name = "Tizi Ouzou" }
-				BRE = { treasury = 10000 }
-				LUB = { treasury = 10000 }
+				BRE = { treasury = 50000 }
+				LUB = { treasury = 50000 }
 				PER = { treasury = 30000 }
 				2419 = { change_province_name = "Campo Grande" }
 				2720 = { change_province_name = "Skagerrack Approach" }
@@ -1851,7 +1883,7 @@ political_decisions = {
                 ENG_258 = { any_pop = { ideology = { factor = 0.6 value = liberal } } }
                 ENG_260 = { any_pop = { ideology = { factor = 0.6 value = liberal } } }
                 ENG_263 = { any_pop = { ideology = { factor = 0.6 value = liberal } } }
-				add_country_modifier = {name = smithian_school duration = 3650 }
+				add_country_modifier = { name = smithian_school duration = 3650 }
 				badboy = 6.04
 				any_pop = {
 					limit = {
@@ -2562,6 +2594,7 @@ political_decisions = {
 	}
 	
 	startup_growth = {
+		alert = no
 		picture = starting_options
 		potential = {
 			ai = no
@@ -2579,5 +2612,4 @@ political_decisions = {
 			country_event = 10790
 		}
 	}
-
 }

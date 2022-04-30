@@ -1,6 +1,7 @@
 owner = MEX
 controller = MEX
 add_core = MEX
-trade_goods = tropical_wood
+add_core = YUC
+trade_goods = cattle
 terrain = merida
 life_rating = 35

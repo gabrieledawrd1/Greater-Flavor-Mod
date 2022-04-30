@@ -60,16 +60,9 @@ country_event = {
 	option = {
 		name = "We shall stay independent!"
 		prestige = 25
-		FROM = {
-			casus_belli = {
-				target = THIS
-				type = annex_core_country
-				months = -1
-			}
-		}
 		relation = {
 			who = FROM
-			who = -120
+			value = -120
 		}
 		FROM = {
 			diplomatic_influence = 	{
@@ -95,7 +88,7 @@ country_event = {
 			militancy = 1
 			consciousness = 3
 		}
-		any_owned_province = { secede_province = FROM }
+		any_owned = { limit = { is_core = HSA } secede_province = FROM }
 		ai_chance = {
             factor = 1
             modifier = {
@@ -168,16 +161,9 @@ country_event = {
 	option = {
 		name = "That land is rightfully ours!"
 		prestige = 25
-		FROM = {
-			casus_belli = {
-				target = THIS
-				type = acquire_all_cores
-				months = -1
-			}
-		}
 		relation = {
 			who = FROM
-			who = -120
+			value = -120
 		}
 		FROM = {
 			diplomatic_influence = 	{
@@ -263,7 +249,22 @@ country_event = {
 	
 	trigger = {
 		tag = HSA
-		has_global_flag = HSA_formed
+		has_country_flag = HSA_formed
+		owns = 2310 #La Paz
+		owns = 2295 #Lima
+		owns = 2279 #Quito
+		owns = 2247 #Bogota
+		owns = 2264 #Caracas
+		owns = 2348 #Buenos Aires
+		owns = 2344 #Montevideo
+		owns = 2324 #Santiago
+		owns = 2172 #Mexico City
+		owns = 2186 #Guatemala City
+		owns = 2191 #San Salvador
+		owns = 2194 #San Pedro Sula
+		owns = 2197 #Managua
+		owns = 2201 #San Jose
+		owns = 2204 #Panama City
 		NOT = {
 			OR = {
 				has_country_flag = nand_capital
@@ -420,7 +421,7 @@ country_event = { #HSA capital Southern Cone
 }
 
 country_event = { #HSA capital North Andean
-	id = 4206975
+	id = 4206972
 	title = "Where shall be our North Andean capital?"
 	desc = "Which from the following should be our capital?"
 	picture = "Andes1"
@@ -496,5 +497,38 @@ country_event = { #HSA capital South Andean
 		add_accepted_culture = north_andean
 		add_accepted_culture = mexican
 		add_accepted_culture = platinean
+	}
+}
+
+country_event = {
+	id = 4206976
+	title = "Hispanic Union Proclamation"
+	desc = "$FROMCOUNTRY$ has called for a union of all hispanic american nations, but it is clear their current government would be ruling above all, even in a federation. An interesting idea indeed, but it threatens our sovereignity directly."
+	picture = "treaty"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Interesting concept, but it is our government who should dominate!"
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 4206977
+	title = "EVTNAME4206977"
+	desc = "EVTDESC4206977"
+	picture = "annexation"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Accept their demands."
+		FROM = {
+			inherit = THIS
+		}
 	}
 }
