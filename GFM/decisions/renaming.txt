@@ -14789,7 +14789,12 @@ political_decisions = {
             141 = { change_province_name = "Los Adaes" state_scope = { change_region_name = "Luisiana" } }
 			139 = { change_province_name = "Nueva Orleans" }
 			142 = { change_province_name = "Nogales" }
-			any_owned = { limit = { AND = { owner = MEX province_id = 140 } } 140 = { change_province_name = "Fuerte Natchez" } }
+			any_owned = {
+				limit = {
+					province_id = 140
+				}
+				140 = { change_province_name = "Fuerte Natchez" }
+			}
         }
         ai_will_do = { factor = 1 }
     }

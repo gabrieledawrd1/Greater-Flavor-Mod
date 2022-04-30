@@ -19,43 +19,18 @@ political_decisions = {
 			war = no
 			is_disarmed = no
 			has_recently_lost_war = no
-			AND = {
-				OR = {
-					OR = {
-						tag = ARG
-						ARG = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
-							}
-						}
-					}
-					OR = {
-						tag = ARC
-						ARC = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
-							}
 			OR = {
 				AND = {
 					tag = LPL
 					NOT = {
 						exists = ARG
-						exists = ARC
 						exists = PRG
 						exists = URU
 					}
 				}
 				OR = {
 					tag = ARG
-					ARG = {
+					ECU = {
 						OR = {
 							AND = {
 								exists = yes
@@ -66,54 +41,20 @@ political_decisions = {
 					}
 				}
 				OR = {
-					OR = {
-						tag = PBC
-						PBC = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
+					tag = URU
+					CLM = {
+						OR = {
+							AND = {
+								exists = yes
+								in_sphere = THIS
 							}
+							exists = no
 						}
 					}
-					OR = {
-						tag = SPU
-						SPU = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
-							}
-						}
-					}
-					OR = {
-						tag = PEU
-						PEU = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
-							}
-						}
-					}
-					OR = {
-						tag = BOL
-						BOL = {
-							OR = {
-								AND = {
-									exists = yes
-									in_sphere = THIS
-								}
-								exists = no
-							}
-					tag = ARC
-					ARC = {
+				}
+				OR = {
+					tag = PRG
+					VNZ = {
 						OR = {
 							AND = {
 								exists = yes
@@ -146,34 +87,8 @@ political_decisions = {
 					}
 				}
 				OR = {
-					tag = MEX
-					is_sphere_leader_of = MEX
-				}
-				OR = {
-					tag = PRG
-					is_sphere_leader_of = PRG
-				}
-				OR = {
-					tag = URU
-					is_sphere_leader_of = URU
-				}
-				OR = {
-					tag = CHL
-					is_sphere_leader_of = CHL
-				}
-				OR = {
-					tag = ECU
-					is_sphere_leader_of = ECU
-				}
-				OR = {
-					tag = CLM
-					is_sphere_leader_of = CLM
-				}
-				OR = {
-					tag = VNZ
-					is_sphere_leader_of = VNZ
-					tag = PEU
-					PEU = {
+					tag = BOL
+					BOL = {
 						OR = {
 							AND = {
 								exists = yes
@@ -184,7 +99,7 @@ political_decisions = {
 					}
 				}
 				OR = {
-					tag = BOL
+					tag = PEU
 					BOL = {
 						OR = {
 							AND = {
@@ -207,7 +122,6 @@ political_decisions = {
 				NOT = { exists = CHL }
 			}
 			OR = {
-				has_country_flag = i_am_uss
 				AND = {
 					tag = GCO
 					NOT = {
@@ -256,8 +170,6 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_global_flag = HSA_claimed
-			badboy = 5
 			set_country_flag = HSA_claimed
 			badboy = 8
 			prestige = 15
@@ -305,13 +217,6 @@ political_decisions = {
 			war = no
 			is_disarmed = no
 			has_recently_lost_war = no
-			any_province_scope = {
-				owner = {
-					is_culture_group = latin_american_cultures
-					NOT = { primary_culture = brazilian }
-					OR = { 
-						in_sphere = THIS
-						vassal_of = THIS
 			OR = {
 				AND = {
 					rank = 4
