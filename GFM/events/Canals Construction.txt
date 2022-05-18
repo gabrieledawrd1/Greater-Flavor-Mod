@@ -307,16 +307,13 @@ country_event = {
         leave_alliance = EGY
         diplomatic_influence = { who = EGY value = -200 }
         relation = { who = EGY value = -200 }
-        random_country = {
+        random_owned = {
             limit = {
-                tag = EGY
-                civilized = no
-                has_global_flag = berlin_conference
-				NOT = { vassal_of = THIS }
+                owner = { NOT = { EGY = { vassal_of = THIS } } }
             }
             add_casus_belli = {
                 target = THIS
-                type = establish_protectorate_casus_belli_no_infamy
+                type = conquest_any
                 months = 60
             }
         }

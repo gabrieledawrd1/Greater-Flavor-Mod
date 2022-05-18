@@ -120,6 +120,7 @@ country_event = {
     picture = "danishgovernment"
 
     trigger = {
+		NOT = { has_global_flag = colonial_railroading_disabled }
         OR = {
 			tag = NET
 			tag = BNF
@@ -169,14 +170,6 @@ country_event = {
 				is_vassal = no
                 NOT = { in_sphere = THIS }
             }
-            STG = {
-                neighbour = THIS
-                exists = yes
-                NOT = { civilized = yes }
-                NOT = { truce_with = THIS }
-				is_vassal = no
-                NOT = { in_sphere = THIS }
-            }
             AND = {
                 nationalism_n_imperialism = 1
                 OR = {
@@ -216,7 +209,6 @@ country_event = {
             casus_belli = LAN
             casus_belli = BGN
             casus_belli = PTK
-            casus_belli = STG
             casus_belli = SBS
         }
     }
@@ -246,7 +238,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -270,7 +261,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -297,7 +287,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -324,7 +313,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -351,7 +339,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -378,7 +365,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 neighbour = THIS
@@ -416,7 +402,6 @@ country_event = {
                     tag = BGN
                     tag = PTK
                     tag = SBS
-                    tag = STG
                 }
                 exists = yes
                 NOT = { vassal_of = THIS }
@@ -546,7 +531,23 @@ country_event = {
             who = POR
             value = 20
         }
-        money = -50000
+		random_owned = {
+			limit = {
+				owner = {
+					ai = no
+				}
+			}
+			owner = { money = -50000 }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					ai = yes
+					money = 50000
+				}
+			}
+			owner = { money = -50000 }
+		}
         POR = {
             money = 50000
             any_owned = {
@@ -560,11 +561,7 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 95
-            modifier = {
-                factor = 0
-                NOT = { money = 25000 }
-            }
+            factor = 1
         }
     }
 
@@ -576,12 +573,7 @@ country_event = {
             value = -15
         }
         ai_chance = {
-            factor = 5
-
-            modifier = {
-                factor = 0
-                money = 25000
-            }
+            factor = 0
         }
     }
 }
@@ -1126,7 +1118,7 @@ country_event = {
         tag = NET
         truce_with = ATJ
         NOT = { year = 1845 }
-        ATJ = { has_recently_lost_war = yes }
+        ATJ = { has_country_modifier = recently_lost_war }
     }
 
     fire_only_once = yes

@@ -2,7 +2,11 @@ political_decisions = {
     occupation_of_araucania = {
         picture = conquest_of_the_desert
         potential = {
-            OR = { tag = PBC tag = CHL }
+            OR = {
+				tag = PBC
+				tag = CHL
+				AND = { tag = HSA owns = 2324 }
+			}
             OR = {
                 2333 = { empty = yes }
                 2334 = { empty = yes }
@@ -37,6 +41,7 @@ political_decisions = {
                     2334 = { empty = no }
                 }
                 2333 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+				3559 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
             }
             random_owned = {
                 limit = {
@@ -80,7 +85,11 @@ political_decisions = {
             potential = {
                 NOT = { is_canal_enabled = 3 }
                 NOT = { has_country_flag = valpariasoharbor_built }
-                OR = { tag = CHL tag = PBC }
+                OR = {
+					tag = CHL
+					tag = PBC
+					AND = { tag = HSA owns = 2324 }
+				}
                 owns = 2325
         }
 
@@ -108,13 +117,13 @@ political_decisions = {
         potential = {
             tag = CHL
             truce_with = PBC
-            PBC = { exists = yes war_with = PEU has_recently_lost_war = yes }
+            PBC = { exists = yes war_with = PEU has_country_modifier = recently_lost_war }
             SPU = { vassal_of = PBC }
             NOT = { has_country_flag = treaty_of_paucarpata_repudiated }
         }
 
         allow = {
-            NOT = { has_recently_lost_war = yes }
+            NOT = { has_country_modifier = recently_lost_war }
             NOT = { PBC = { military_score = THIS } }
         }
 
@@ -138,7 +147,10 @@ political_decisions = {
     almirante_latorre = {
         picture = minas_gerais
         potential = {
-            tag = CHL
+			OR = {
+				tag = CHL
+				AND = { tag = HSA owns = 2324 }
+			}
             has_global_flag = minas_gerais_ordered
             relation = { who = ENG value = 100 }
 			NOT = { has_country_flag = almirante_latorre_ordered }
@@ -188,6 +200,80 @@ political_decisions = {
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+
+	claim_puna = {
+	    picture = puna_chl
+		potential = {
+            tag = CHL
+			owns = 2309
+			owns = 2305
+			NOT = { has_global_flag = puna_claimed }
+        }
+        allow = {
+			2309 = { is_core = THIS }
+			2305 = { is_core = THIS }
+        }
+        effect = {
+            badboy = 3
+			prestige = 1
+			set_global_flag = puna_claimed
+			1714 = { add_core = THIS }
+			2370 = { add_core = THIS }
+			2375 = { add_core = THIS }
+			3554 = { add_core = THIS }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	propose_buchanan = {
+	    picture = chile_bolivia_peru_borders
+		potential = {
+			owns = 2368
+			OR = { tag = LPL tag = ARC tag = ARG }
+			has_global_flag = puna_claimed
+			NOT = { has_country_flag = buchanan_proposed }
+        }
+        allow = {
+			war = no
+        }
+        effect = {
+			2305 = { owner = { country_event = { id = 97143 days = 10 } } }
+			set_country_flag = buchanan_proposed
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	may_pacts = {
+	    picture = gtfo
+		potential = {
+			OR = {
+			    owns = 2333
+				owns = 3559
+			}
+			OR = {
+			    tag = CHL
+				tag = PBC
+			}
+			NOT = { has_country_flag = propose_may_pacts }
+			NOT = { owns = 2397 }
+        }
+        allow = {
+			war = no
+			3559 = { empty = no }
+			3558 = { empty = no }
+        }
+        effect = {
+		    set_country_flag = propose_may_pacts
+			2397 = { owner = { country_event = { id = 97154 days = 5 } } }
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
 }

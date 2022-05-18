@@ -131,17 +131,6 @@ country_event = {
         political_reform = underground_parties
         political_reform = state_press
         government = presidential_dictatorship
-        2367 = { secede_province = THIS add_core = PRG any_pop = { literacy = -0.99 } life_rating = 20 }
-        2366 = {
-            secede_province = THIS
-            add_core = PRG
-            any_pop = { literacy = -0.99 }
-            any_pop = { limit = { has_pop_culture = platinean} literacy = 0.05 }
-            life_rating = 20
-        }
-        2338 = { secede_province = THIS add_core = PRG any_pop = { literacy = -0.99 } life_rating = 20 }
-        2337 = { secede_province = THIS add_core = PRG any_pop = { literacy = -0.99 } life_rating = 20 }
-        2337 = { change_province_name = "Villa Occidental" }
         any_pop = { ideology = { factor = -0.2 value = liberal } }
 
         any_neighbor_country = { relation = { who = THIS value = -50 } }
@@ -370,7 +359,7 @@ country_event = {
         name = "EVTOPT700006A"
         USA = { clr_country_flag = uruguay_military_access }
 		US2 = { clr_country_flag = uruguay_military_access }
-        PRG = {set_country_flag = usa_expedition }
+        PRG = { set_country_flag = usa_expedition }
             ai_chance = {
                 factor = 0.99
                 }
@@ -379,7 +368,7 @@ country_event = {
         name = "EVTOPT700006B"
         USA = { clr_country_flag = uruguay_military_access }
 		US2 = { clr_country_flag = uruguay_military_access }
-        PRG = {set_country_flag = usa_expedition }
+        PRG = { set_country_flag = usa_expedition }
         prestige = -15
         ai_chance = {
                     factor = 0.01
@@ -408,7 +397,7 @@ country_event = {
         name = "EVTOPT700007A"
         USA = { clr_country_flag = uruguay_military_access }
 		US2 = { clr_country_flag = uruguay_military_access }
-        PRG = {set_country_flag = usa_expedition }
+        PRG = { set_country_flag = usa_expedition }
             ai_chance = {
                 factor = 0.95
                 }
@@ -417,7 +406,7 @@ country_event = {
         name = "EVTOPT700007B"
         USA = { clr_country_flag = uruguay_military_access }
 		US2 = { clr_country_flag = uruguay_military_access }
-        PRG = {set_country_flag = usa_expedition }
+        PRG = { set_country_flag = usa_expedition }
         prestige = -15
             ai_chance = {
                     factor = 0.05
@@ -711,9 +700,9 @@ country_event = {
         canned_food = 40
         artillery = 10
         define_general = {
-                name = "Francisco Solano Lopez"
-                personality = audacious
-                background = unqualified
+            name = "Francisco Solano Lopez"
+            personality = defence_2.1
+            background = attack_2.1
         }
 	}
 }
@@ -751,8 +740,8 @@ country_event = {
         name = "EVTOPT700016B"
         any_neighbor_country = { relation = { who = THIS value = -400 } }
         ai_chance = { factor = 0 }
-        }
     }
+}
 
 
 #Event to normalize a small paraguay relations
@@ -793,28 +782,71 @@ country_event = {
 
     option = {
         name = "We accept their proposal"
-		FROM = {
-		    country_event = { id = 97127 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ARG
+				}
+			}
+			owner = {
+				ARG = { country_event = 97127 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ARC
+				}
+			}
+			owner = {
+				ARC = { country_event = 97127 }
+			}
 		}
 		prestige = -1
-		2554 = {
-		    remove_core = THIS
-			secede_province = FROM
-			life_rating = 1
-		}
         random_owned = {
-            limit = { owner = { owns = 2462 } }
+            limit = { owner = { owns = 2554 exists = ARG } }
+			2554 = {
+				remove_core = THIS
+				secede_province = ARG
+				life_rating = 1
+			}
+        }
+        random_owned = {
+            limit = { owner = { owns = 2554 exists = ARC } }
+			2554 = {
+				remove_core = THIS
+				secede_province = ARC
+				life_rating = 1
+			}
+        }
+        random_owned = {
+            limit = { owner = { owns = 2462 exists = ARG } }
             2462 = {
-                secede_province = FROM
+                secede_province = ARG
+				remove_core = THIS
+            }
+        }
+        random_owned = {
+            limit = { owner = { owns = 2462 exists = ARC } }
+            2462 = {
+                secede_province = ARC
 				remove_core = THIS
             }
         }
 		random_owned = {
             limit = {
-			    2340 = { is_core = FROM }
+			    owner = { 2340 = { is_core = ARC } }
 			}
             owner = {
-                2340 = { remove_core = FROM }
+                2340 = { remove_core = ARC }
+            }
+		}
+		random_owned = {
+            limit = {
+			    owner = { 2340 = { is_core = ARG } }
+			}
+            owner = {
+                2340 = { remove_core = ARG }
             }
 		}
 		random_owned = {
@@ -830,8 +862,25 @@ country_event = {
 
     option = {
         name = "Never! §RGain 1 infamy§W"
-		FROM = {
-		    country_event = { id = 97128 days = 7 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ARG
+				}
+			}
+			owner = {
+				ARG = { country_event = 97128 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ARC
+				}
+			}
+			owner = {
+				ARC = { country_event = 97128 }
+			}
 		}
 		badboy = 1
 		prestige = 2
@@ -851,6 +900,8 @@ country_event = {
         name = "Excellent!"
 		prestige = 1
         relation = { who = FROM value = 50 }
+		2554 = { secede_province = THIS }
+		2462 = { secede_province = THIS }
     }
 }
 
@@ -864,8 +915,138 @@ country_event = {
 
     option = {
         name = "They will pay for their insolence!"
-        relation = { who = FROM value = -50 }
+		relation = { who = FROM value = -50 }
 		2340 = {
+		    add_core = THIS
+		}
+    }
+}
+
+country_event = {
+    id = 97172
+    title = "New Australia"
+    desc = "NEWAUSTRALIA"
+    picture = "australia_colony"
+
+    trigger = {
+	    year = 1893
+		owns = 2341
+	}
+	
+	fire_only_once = yes
+
+    option = {
+        name = "At least they paid us to settle there..."
+		treasury = 1000
+		3539 = { any_pop = { limit = { has_pop_culture = australian } move_pop = 2341 } }
+        2341 = { any_pop = { limit = { has_pop_culture = australian } ideology = { value = communist factor = 0.99 } } }
+    }
+}
+
+
+country_event = {
+    id = 97173
+    title = "The New Germania Colony"
+    desc = "NEWGERMANIA"
+    picture = "hayes_arbitration"
+
+    trigger = {
+	    year = 1886
+		owns = 2343
+	}
+	
+	fire_only_once = yes
+
+    option = {
+        name = "As long as they don't cause any trouble..."
+		3539 = {
+		    any_pop = {
+		        limit = {
+			        has_pop_culture = north_german
+			    }
+			    move_pop = 2343
+            }
+        }
+		2343 = { 
+		    any_pop = {
+			    limit = {
+				    NOT = { has_pop_culture = north_german }
+				}
+				consciousness = 1
+			}
+		}
+    }
+}
+
+country_event = {
+    id = 46650
+    title = "The Decoud-Quijarro Treaty"
+    desc = "$FROMCOUNTRY$ are proposing a border treaty regarding our dispute in the Chaco, suggesting a compromise between both claims."
+    picture = "Administration"
+    is_triggered_only = yes
+
+    option = {
+        name = "We accept their proposal"
+		FROM = { country_event = 46651 }
+		prestige = -1
+        random_owned = {
+            limit = { owner = { owns = 3569 } }
+			3569 = {
+				remove_core = THIS
+				secede_province = FROM
+				add_core = FROM
+			}
+        }
+        random_owned = {
+            limit = { owner = { owns = 3570 } }
+			3570 = {
+				remove_core = THIS
+				secede_province = FROM
+				add_core = FROM
+			}
+        }
+        ai_chance = { factor = 70 }
+    }
+
+    option = {
+        name = "Never! §RGain 1 infamy§W"
+		badboy = 1
+		prestige = 2
+		PRG_2338 = {
+		    add_core = THIS
+		}
+		FROM = { country_event = 46652 }
+        ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+    id = 46651
+    title = "$FROMCOUNTRY$ Agrees!"
+    desc = "The government of $FROMCOUNTRY$ has agreed to sign the Decoud-Quijarro treaty, solving our border dispute in the Chaco"
+    picture = "danishgovernment"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Excellent!"
+		prestige = 1
+        relation = { who = FROM value = 50 }
+    }
+}
+
+country_event = {
+    id = 46652
+    title = "$FROMCOUNTRY$ Rejects the Treaty!"
+    desc = "$FROMCOUNTRY$ has rejected the Decoud-Quijarro treaty and maintains their claim on the Chaco!"
+    picture = "danishgovernment"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "They will pay for their insolence!"
+		relation = { who = FROM value = -50 }
+		PRG_2338 = {
 		    add_core = THIS
 		}
     }

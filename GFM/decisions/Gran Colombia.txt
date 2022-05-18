@@ -16,7 +16,7 @@ political_decisions = {
 
         allow = {
             state_n_government = 1
-            is_greater_power = yes
+            rank = 12
             war_policy = jingoism
             war = no
         }
@@ -54,10 +54,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }
@@ -68,10 +72,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }
@@ -82,10 +90,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }
@@ -106,11 +118,9 @@ political_decisions = {
             PNM = {
                 all_core = { add_core = GCO }
             }
-            COS = {
-                all_core = { add_core = GCO }
-            }
-            # some early claims we can roll with for future colombian lebensraum
+            # some early claims we can roll with for future colombian expansion
             2401 = { add_core = GCO }
+            3567 = { add_core = GCO }
 			3359 = { add_core = GCO }
             any_country = {
                 limit = {

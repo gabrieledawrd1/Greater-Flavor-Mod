@@ -198,7 +198,7 @@ country_event = {
         }
         NOT = {
             num_of_revolts = 1
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         any_neighbor_country = {
             civilized = no
@@ -959,6 +959,17 @@ country_event = {
     option = {
         name = "EVT955178OPTA"
         prestige = -5
+        any_owned = {
+            limit = {
+                OR = {
+                    is_core = SUD
+                    is_core = ETH
+					is_core = DAR
+                }
+            }
+			secede_province = SUD
+        }
+		FROM = { inherit = SUD }
         FROM = { country_event = 955179 }
         ai_chance = { factor = 0.95 }
     }
@@ -983,24 +994,11 @@ country_event = {
     option = {
         name = "EVT955179OPTA"
         prestige = 5
-        SUD = { civilized = no all_core = { remove_core = EGY remove_core = TUR any_pop = { militancy = 7 consciousness = 4 } } }
-
+        SUD = { civilized = no all_core = { remove_core = EGY remove_core = DAR remove_core = SHK remove_core = TUR any_pop = { militancy = 7 consciousness = 4 } } }
         1834 = { add_core = EGY }
-
         FROM = {
-            any_owned = {
-                limit = {
-                    OR = {
-                        is_core = SUD
-                        is_core = ETH
-                    }
-                }
-            secede_province = SUD
-            }
-        money = 50000
+			money = 50000
         }
-        SUD = { all_core = { remove_core = DAR remove_core = SHK } }
-        inherit = SUD
         relation = { who = EGY value = 100 }
     }
 }
@@ -1043,6 +1041,39 @@ country_event = {
 
 #The Gabu Exchange
 country_event = {
+    id = 9551811
+    title = "$FROMCOUNTRY$ refuses the treaty"
+    desc = "The $FROMCOUNTRY_ADJ$ foreign minister, amid much bluster and swagger, has proclaimed the proposed treaty an affront to $FROMCOUNTRY$, refusing to even consider signing it."
+    picture = "scramble_for_africa"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Darn!"
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+country_event = {
+    id = 9551812
+    title = "$FROMCOUNTRY$ agrees to the treaty"
+    desc = "The Senegal-Guinea-Bissau border treaty has been signed by our and the $FROMCOUNTRY_ADJ$ foreign ministers amid much fanfare and jubilation, formally settling the conflict in the region."
+    picture = "scramble_for_africa"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Huzzah!"
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+#The Gabu Exchange
+country_event = {
     id = 955181
     title = "EVTNAME955181"
     desc = "EVTDESC955181"
@@ -1053,24 +1084,27 @@ country_event = {
     option = {
         name = "EVT955181OPTA"
         relation = { who = FROM value = 50 }
+		FROM = { country_event = 9551812 } 
         1878 = { secede_province = THIS }
-        1792 = { secede_province = FROM }
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 1792
+					province_id = 1793
+					province_id = 1791
+				}
+			}
+			secede_province = FROM
+		}
         ai_chance = {
-            factor = 95
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-                }
-            modifier = {
-                factor = 4
-                relation = { who = FROM value = 150 }
-            }
+            factor = 1
         }
     }
 
     option = {
         name = "EVT955181OPTB"
         relation = { who = FROM value = -150 }
+		FROM = { country_event = 9551811 } 
         casus_belli = {
             target = FROM
             type = place_in_the_sun
@@ -1084,11 +1118,7 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 5
-            modifier = {
-                factor = 4
-                NOT = { relation = { who = FROM value = 0 } }
-            }
+            factor = 0
         }
     }
 }

@@ -9,22 +9,12 @@ province_event = {
         year = 1836
         NOT = { year = 1890 }
         OR = {
-            province_id = 766            # Sassari
-            province_id = 769            # Postojna
             province_id = 773            # Karlovac
             province_id = 1422            # Muraleve
             province_id = 1440            # Sumbawa
             province_id = 1884            # Freetown
-            province_id = 2153            # Durango
-            province_id = 2157            # Culiacan
-            province_id = 2179            # Acapulco
-            #province_id = 2323            # La Serena
             province_id = 2575            # Ipoh
-            #province_id = 1659            # Kobe
-            province_id = 2142            # Chihuahua
             province_id = 2252            # Medellin
-            province_id = 1187            # Semipalatinsk
-            province_id = 1070            # Yeniseysk - Russia
         }
         NOT = { trade_goods = precious_metal }
     }
@@ -63,6 +53,117 @@ province_event = {
 
 province_event = {
 
+    id = 1100111
+
+    trigger = {
+        year = 1838
+        NOT = { year = 1890 }
+		province_id = 1070            # Yeniseysk #https://www.loc.gov/collections/meeting-of-frontiers/articles-and-essays/development/siberian-mining/
+        NOT = { trade_goods = precious_metal }
+    }
+
+    mean_time_to_happen =  {
+        months = 12
+    }
+
+    title = "EVTNAME1100"
+    desc = "EVTDESC1100"
+
+    option = {
+        name = "EVTOPTA1100"
+        trade_goods = precious_metal
+        add_province_modifier = {
+            name = gold_rush
+            duration = 730
+        }
+    }
+}
+
+province_event = {
+
+    id = 1100112
+
+    trigger = {
+        year = 1844
+        NOT = { year = 1890 }
+        province_id = 2645            # Bodaybo, Russia #https://www.loc.gov/collections/meeting-of-frontiers/articles-and-essays/development/siberian-mining/ https://en.wikipedia.org/wiki/Lena_Gold_Mining_Partnership
+        NOT = { trade_goods = precious_metal }
+    }
+
+    mean_time_to_happen =  {
+        months = 12
+    }
+
+    title = "EVTNAME1100"
+    desc = "EVTDESC1100"
+
+    option = {
+        name = "EVTOPTA1100"
+        trade_goods = precious_metal
+        add_province_modifier = {
+            name = gold_rush
+            duration = 730
+        }
+    }
+}
+
+province_event = {
+
+    id = 1100113
+
+    trigger = {
+        year = 1916
+        province_id = 2620            # Kolyma, Russia #https://www.mos-test.ru/about/articles/istorii-zolotodobychi-v-rossii-200-let.html
+        NOT = { trade_goods = precious_metal }
+    }
+
+    mean_time_to_happen =  {
+        months = 12
+    }
+
+    title = "EVTNAME1100"
+    desc = "EVTDESC1100"
+
+    option = {
+        name = "EVTOPTA1100"
+        trade_goods = precious_metal
+        add_province_modifier = {
+            name = gold_rush
+            duration = 730
+        }
+    }
+}
+
+province_event = {
+
+    id = 1100114
+
+    trigger = {
+        year = 1853
+        NOT = { year = 1890 }
+        province_id = 2644            # Olekminsk, Russia #https://www.amazon.com/gold-mining-concessions-Olekminskago-zolotosoderzhashchikh-razrabatyvaemyia/dp/B011HHTCOE
+        NOT = { trade_goods = precious_metal }
+    }
+
+    mean_time_to_happen =  {
+        months = 12
+    }
+
+    title = "EVTNAME1100"
+    desc = "EVTDESC1100"
+
+    option = {
+        name = "EVTOPTA1100"
+        trade_goods = precious_metal
+        add_province_modifier = {
+            name = gold_rush
+            duration = 730
+        }
+    }
+}
+
+province_event = {
+
     id = 1101
 
     trigger = {
@@ -80,8 +181,6 @@ province_event = {
             province_id = 2480            # Beechworth Australia
             province_id = 2481            # Swan Hill Australia
             province_id = 1084            # Utchan
-            province_id = 2645            # Bodaybo, Russia
-            #province_id = 2058            # Moyo, Mozambique
         }
         NOT = { trade_goods = precious_metal }
         NOT = { trade_goods = oil }
@@ -294,7 +393,7 @@ province_event = {
             province_id = 2500        # Kalgoorlie Australia
             province_id = 2603        # Alice Springs
             province_id = 2648        # Yakutsk - Russia
-	    province_id = 3491	      # Leon - Nicaragua
+			province_id = 3491	      # Leon - Nicaragua
         }
         NOT = { trade_goods = precious_metal }
     }
@@ -334,38 +433,6 @@ province_event = {
 ################################
 #        DIAMOND EVENTS        #
 ################################
-province_event = {
-
-    id = 1105
-
-    trigger = {
-        year = 1836
-        NOT = { year = 1900 }
-        OR = {
-            province_id = 2091            # Mossel Bay
-            province_id = 1697            # Figuig
-            province_id = 2108            # Mosega
-            province_id = 2107            # Klerksdorp
-            province_id = 2068            # Salisbury
-        }
-        NOT = { trade_goods = precious_goods }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1105"
-    desc = "EVTDESC1105"
-    picture = ""
-
-    option = {
-        name = "EVTOPTA1105"
-        trade_goods = precious_goods
-        # life_rating = 5
-    }
-}
 
 province_event = {
 
@@ -379,7 +446,7 @@ province_event = {
             province_id = 1849            # Massawa
             province_id = 2084            # Luderitzbutch/Angra Pequena
         }
-        NOT = { trade_goods = precious_goods }
+        NOT = { trade_goods = gems }
     }
 
     mean_time_to_happen =  {
@@ -396,7 +463,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA1105"
-        trade_goods = precious_goods
+        trade_goods = gems
         # life_rating = 5
     }
 }
@@ -421,7 +488,11 @@ province_event = {
             province_id = 1386
             province_id = 1389
             province_id = 1402
-            province_id = 1404
+			AND = {
+				province_id = 1404
+				NOT = { year = 1900 }
+				NOT = { has_global_flag = province1404manualiron }
+			}
             province_id = 1827
             province_id = 1829
             province_id = 1833
@@ -509,10 +580,15 @@ province_event = {
             province_id = 2412
             province_id = 2411
             province_id = 2549
+            province_id = 3326
             province_id = 2550
 			province_id = 2263
             province_id = 2532
             province_id = 2403
+            province_id = 2423
+            province_id = 2426
+            province_id = 2417
+			province_id = 2413
             province_id = 2286
         }
         NOT = { trade_goods = rubber }
@@ -722,7 +798,10 @@ province_event = {
 
     trigger = {
         year = 1875
-        province_id = 132        # Houston
+		OR = {
+			province_id = 132        # Houston
+			province_id = 2627        # Bradford oil field, Pennsylvania	#https://en.wikipedia.org/wiki/History_of_the_petroleum_industry#United_States
+		}
         NOT = { trade_goods = oil }
         NOT = { has_province_modifier = switched_production }
         OR = {
@@ -921,6 +1000,7 @@ province_event = {
             province_id = 1399        # Palembang
             province_id = 1055        # Grozny
             province_id = 126        # Topeka
+			province_id = 2271			#Valera #first exploration of oil in Venezuela (Compania Nacional Minera Petrolia del Tachira)
         }
         NOT = { trade_goods = oil }
         NOT = { has_province_modifier = switched_production }
@@ -1058,7 +1138,10 @@ province_event = {
 
     trigger = {
         year = 1892
-        province_id = 1086        # Pogobi
+		OR = {
+			province_id = 1086        # Pogobi
+			province_id = 89		  # Los Angeles #https://en.wikipedia.org/wiki/Los_Angeles_City_Oil_Field
+		}
         NOT = { trade_goods = oil }
         NOT = { has_province_modifier = switched_production }
         OR = {
@@ -1460,6 +1543,7 @@ province_event = {
         OR = {
             province_id = 849        # Tirana
             province_id = 2237        # Trinidad
+            province_id = 2251        # Cucuta #https://es.wikipedia.org/wiki/Historia_del_petr%C3%B3leo_en_Colombia
         }
         NOT = { trade_goods = oil }
         NOT = { has_province_modifier = switched_production }
@@ -1520,11 +1604,110 @@ province_event = {
 
 province_event = {
 
+    id = 1141
+
+    trigger = {
+        year = 1926
+        province_id = 136        # El Paso #https://en.wikipedia.org/wiki/Yates_Oil_Field
+        NOT = { trade_goods = oil }
+        NOT = { has_province_modifier = switched_production }
+        OR = {
+            owner = { part_of_sphere = yes sphere_owner = { invention = cracking } }
+            owner = { part_of_sphere = yes sphere_owner = { any_owned_province = { has_building = fuel_refinery } } }
+            owner = { invention = cracking }
+            owner = { any_owned_province = { has_building = fuel_refinery } }
+            year = 1900
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 8
+    }
+
+    title = "EVTNAME1109"
+    desc = "EVTDESC1109"
+
+    option = {
+        name = "EVTOPTA1109"
+        trade_goods = oil
+        # life_rate = 5
+    }
+}
+
+province_event = {
+
     id = 1138
 
     trigger = {
         year = 1927
         province_id = 923        # Mosul
+        NOT = { trade_goods = oil }
+        NOT = { has_province_modifier = switched_production }
+        OR = {
+            owner = { part_of_sphere = yes sphere_owner = { invention = cracking } }
+            owner = { part_of_sphere = yes sphere_owner = { any_owned_province = { has_building = fuel_refinery } } }
+            owner = { invention = cracking }
+            owner = { any_owned_province = { has_building = fuel_refinery } }
+            year = 1900
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 8
+    }
+
+    title = "EVTNAME1109"
+    desc = "EVTDESC1109"
+
+    option = {
+        name = "EVTOPTA1109"
+        trade_goods = oil
+        # life_rate = 5
+    }
+}
+
+province_event = {
+
+    id = 1142
+
+    trigger = {
+        year = 1927
+		OR = {
+			province_id = 925        # Kirkuk #https://en.wikipedia.org/wiki/Kirkuk_Field
+			province_id = 1134        # Dehkord #https://en.wikipedia.org/wiki/Gachsaran_oil_field
+		}
+        NOT = { trade_goods = oil }
+        NOT = { has_province_modifier = switched_production }
+        OR = {
+            owner = { part_of_sphere = yes sphere_owner = { invention = cracking } }
+            owner = { part_of_sphere = yes sphere_owner = { any_owned_province = { has_building = fuel_refinery } } }
+            owner = { invention = cracking }
+            owner = { any_owned_province = { has_building = fuel_refinery } }
+            year = 1900
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 8
+    }
+
+    title = "EVTNAME1109"
+    desc = "EVTDESC1109"
+
+    option = {
+        name = "EVTOPTA1109"
+        trade_goods = oil
+        # life_rate = 5
+    }
+}
+
+province_event = {
+
+    id = 1143
+
+    trigger = {
+        year = 1930      
+		province_id = 1162		# Bahrein #https://en.wikipedia.org/wiki/Awali
         NOT = { trade_goods = oil }
         NOT = { has_province_modifier = switched_production }
         OR = {

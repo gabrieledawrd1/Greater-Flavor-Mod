@@ -5,7 +5,7 @@ political_decisions = {
             is_greater_power = yes
             steel_steamers = 1
             owns = 1384
-            1384 = { owner = { civilized = yes capital_scope = { NOT = {continent = asia } } } }
+            1384 = { owner = { civilized = yes capital_scope = { NOT = { continent = asia } } } }
             NOT = { has_country_flag = singapore_strategy }
         }
 
@@ -1113,8 +1113,13 @@ political_decisions = {
             nationalism_n_imperialism = 1
             1445 = {
                 owner = {
-                    relation = { who = POR value = 0 }
-                    money = 50000
+                    OR = {
+						AND = {
+							money = 50000
+							relation = { who = POR value = 0 }
+						}
+						ai = yes
+					}
                 }
             }
         }
@@ -1347,7 +1352,7 @@ political_decisions = {
             CHK = { exists = yes ai = yes vassal_of = SIA }
             OR = {
                 AND = {
-                    SIA = { ai = yes neighbour = THIS has_recently_lost_war = yes }
+                    SIA = { ai = yes neighbour = THIS has_country_modifier = recently_lost_war }
                     truce_with = SIA
                 }
                 ai = yes
@@ -1357,7 +1362,7 @@ political_decisions = {
 
         allow = {
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
         }
 
         effect = {

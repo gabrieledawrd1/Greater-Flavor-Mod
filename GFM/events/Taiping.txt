@@ -154,26 +154,26 @@ country_event = {
             add_country_modifier = { name = fanatic_army duration = 1825 }
             define_general = {
                 name = "Li Xiucheng"
-                personality = stout
-                background = innovative_tactician
+                personality = defence_1.1
+                background = attack_1.1
             }
 
             define_general = {
                 name = "Feng Yunshan"
-                personality = spirited
-                background = gifted_administrator
+                personality = defence_2.1
+                background = no_background
             }
 
             define_general = {
                 name = "Xiao Chaogui"
-                personality = deeply_religious
-                background = incompetent
+                personality = defence_minus_1.1
+                background = attack_minus_1.1
             }
 
             define_general = {
                 name = "Shi Dakai"
-                personality = audacious
-                background = expert_raider
+                personality = defence_2.1
+                background = attack_4.1
             }
         }
 
@@ -415,26 +415,26 @@ country_event = {
 
             define_general = {
                 name = "Li Xiucheng"
-                personality = stout
-                background = innovative_tactician
+                personality = defence_1.1
+                background = attack_1.1
             }
 
             define_general = {
                 name = "Feng Yunshan"
-                personality = spirited
-                background = gifted_administrator
+                personality = defence_2.1
+                background = no_background
             }
 
             define_general = {
                 name = "Xiao Chaogui"
-                personality = deeply_religious
-                background = incompetent
+                personality = defence_minus_1.1
+                background = attack_minus_1.1
             }
 
             define_general = {
                 name = "Shi Dakai"
-                personality = audacious
-                background = expert_raider
+                personality = defence_2.1
+                background = attack_4.1
             }
         }
 
@@ -642,7 +642,7 @@ country_event = {
 			end_war = QNG
             annex_to = QNG
         }
-		3291 = { remove_core = SSS }
+		3297 = { remove_core = SSS }
 		1538 = { remove_core = SSS }
     }
 }
@@ -2532,7 +2532,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 0.5
@@ -2549,7 +2549,10 @@ country_event = {
                 limit = {
                     OR = {
                         capital_scope = { continent = asia }
-                        tag = PGG
+						AND = {
+							tag = YNN
+							government = theocracy
+						}
                     }
                     is_culture_group = east_asian
                     civilized = no
@@ -2591,7 +2594,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.5
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 0.5
@@ -2626,7 +2629,7 @@ country_event = {
             }
             modifier = {
                 factor = 2.5
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 2.5
@@ -2660,7 +2663,10 @@ country_event = {
             modifier = {
                 factor = 2.5
                 OR = {
-                    tag = PGG
+					AND = {
+						tag = YNN
+						government = theocracy
+					}
                     tag = GUI
                     tag = UYG
                 }
@@ -2684,7 +2690,8 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                tag = PGG
+				tag = YNN
+				government = theocracy
             }
         }
     }
@@ -2774,6 +2781,7 @@ country_event = { ##rework, adapt below rebllions to fire for TPG
         name = "EVT80121OPTA"
         set_global_flag = miao_rebellion
         plurality = -1
+		GUI = { government = absolute_monarchy }
         any_country = { limit = { war_with = GUI } end_war = GUI }
         release_vassal = GUI
         GUI = {
@@ -2800,6 +2808,7 @@ country_event = { ##rework, adapt below rebllions to fire for TPG
             defender_goal = { casus_belli = status_quo }
             call_ally = no
         }
+		GUI = { government = absolute_monarchy }
         ai_chance = { factor = 100 }
     }
 }
@@ -2905,23 +2914,23 @@ country_event = {
             }
             define_general = {
                 name = "Li Zhang Lexing"
-                personality = stout
-                background = innovative_tactician
+                personality = defence_1.1
+                background = attack_1.1
             }
             define_general = {
                 name = "Lai Wenguang"
-                personality = spirited
-                background = gifted_administrator
+                personality = defence_2.1
+                background = no_background
             }
             define_general = {
                 name = "Zhang Zongyu"
-                personality = stout
-                background = incompetent
+                personality = defence_1.1
+                background = no_background
             }
             define_general = {
                 name = "Ren Zhu"
-                personality = audacious
-                background = expert_raider
+                personality = defence_2.1
+                background = attack_4.1
             }
         }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } } NIA = { economic_reform = yes_land_reform } }
@@ -2957,8 +2966,8 @@ country_event = {
         plurality = -1
         define_general = {
             name = "Sengge Rinchen"
-            personality = brilliant
-            background = expert_raider
+            personality = no_personality
+            background = attack_2.1
         }
         war = {
             target = NIA

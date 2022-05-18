@@ -52,7 +52,7 @@ country_event = {
         tag = CRT
 		war = no
 		ARC = {
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
             truce_with = THIS
         }
     }
@@ -63,7 +63,9 @@ country_event = {
         name = "A new era of prosperity for Argentina."
 		prestige = 5
         inherit = ARC
+		inherit = ENT
         change_tag = ARG
+		capital = 2348
         ARG = { nationalvalue = nv_liberty }
         government = democracy
 		set_country_flag = Government_Democracy
@@ -76,7 +78,7 @@ country_event = {
         }
         random_owned = {
             limit = { owner = { vote_franschise = none_voting } }
-            owner = { political_reform = landed_voting }
+            owner = { political_reform = wealth_weighted_voting }
         }
         random_owned = {
             limit = { NOT = { owner = { upper_house_composition = population_equal_weight } } }

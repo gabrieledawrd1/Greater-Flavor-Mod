@@ -196,7 +196,7 @@ political_decisions = {
         }
 
         allow = {
-            expressionism = 1
+            impressionism = 1
         }
 
         effect = {
@@ -278,6 +278,7 @@ political_decisions = {
             capital = 425
             NOT = {
                 has_global_flag = the_eiffel_tower_was_built
+				has_global_flag = catalan_tower
             }
 
             OR = {
@@ -351,7 +352,9 @@ political_decisions = {
             primary_culture = french
             is_greater_power = yes
             capital = 425
-            2124 = { empty = yes }
+            2123 = { empty = yes }
+			CMS = { owns = 2124 }
+			CMS = { ai = yes }
         }
 
         allow = {
@@ -361,6 +364,8 @@ political_decisions = {
 
         effect = {
             prestige = 3
+			CMS = { government = colonial_company }
+			inherit = CMS
             2124 = { add_core = THIS }
             2123 = {
                 secede_province = THIS
@@ -369,6 +374,7 @@ political_decisions = {
                 secede_province = THIS
                 change_province_name = "Mayotte"
             }
+			CMS = { government = colonial_company }
         }
 
         ai_will_do = { factor = 1 }
@@ -467,7 +473,6 @@ political_decisions = {
             BOR = { set_country_flag = claimed_aosta }
             badboy = 1
             721 = { add_core = THIS }
-            3435 = { add_core = THIS }
             3434 = { add_core = THIS }
             random_country = {
                 limit = { owns = 721 }
@@ -580,7 +585,13 @@ political_decisions = {
 
         allow = {
             war = no
-            regenerative_furnaces = 1
+			OR = {
+				advanced_metallurgy = 1
+				AND = {
+					ai = yes
+					year = 1900
+				}
+			}
             money = 30100
         }
 
@@ -589,10 +600,8 @@ political_decisions = {
             BOR = { set_country_flag = french_mines_placed }
             THIS = { set_country_flag = french_mines_placed }
             money = -30000
-            434 = { trade_goods = iron }
             418 = { trade_goods = iron }
-            428 = { trade_goods = iron }
-            411 = { trade_goods = iron }
+			417 = { trade_goods = iron }
         }
 
         ai_will_do = { factor = 1 }
@@ -605,7 +614,7 @@ political_decisions = {
 			primary_culture = french
 			is_greater_power = yes
 			capital = 425
-			GUY = { exists = no }
+			RIG = { exists = no }
 			owns = 2241 #Cayenne
 			year = 1852
 			penal_system = colonial_transportation

@@ -34,6 +34,7 @@ political_decisions = {
             983 = { add_core = THIS }
             2587 = { add_core = THIS }
             3338 = { add_core = THIS }
+            3339 = { add_core = THIS }
             319 = { add_core = THIS }
             1724 = { add_core = THIS }
             3479 = { add_core = THIS }
@@ -135,89 +136,6 @@ political_decisions = {
         }
     }
 
-    claim_santa_catarina = {
-        picture = claim_santa_catarina
-        potential = {
-            tag = RGS
-            NOT = { has_country_flag = claim_santa_catarina }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            prestige = 45
-        }
-
-        effect = {
-            set_country_flag = claim_santa_catarina
-            badboy = 5
-            2461 = { #Desterro
-                add_core = RGS
-            }
-            2462 = { #Sao Miguel
-                add_core = RGS
-            }
-            2459 = { #Lajes
-                add_core = RGS
-            }
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    claim_greater_mongolia = {
-        picture = claim_greater_mongolia
-        potential = {
-            tag = MGL
-            NOT = { has_country_flag = claim_greater_mongolia }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            OR = {
-                is_greater_power = yes
-                is_secondary_power = yes
-            }
-            prestige = 45
-        }
-
-        effect = {
-            badboy = 20
-            set_country_flag = claim_greater_mongolia
-            1075 = { add_core = MGL } #Irkutsk
-            1078 = { add_core = MGL } #Chita
-            1079 = { add_core = MGL } #Nerchinsk
-            1488 = { add_core = MGL } #Gansu
-            1490 = { add_core = MGL } #Lanzhou
-            1491 = { add_core = MGL } #Ningxia
-            1532 = { add_core = MGL } #Guihua Tumed
-            1534 = { add_core = MGL } #Ulaan Chab Chuulghan
-            1535 = { add_core = MGL } #Yeke Juu Chuulghan
-            1596 = { add_core = MGL } #Tulta
-            1002 = { add_core = MGL } #Manzhouli
-            2670 = { add_core = MGL } #Verkhneudisnk
-            2671 = { add_core = MGL } #Barguzin
-            1469 = { add_core = MGL } #Uriankhai
-            1599 = { add_core = MGL } #Kumul
-            1557 = { add_core = MGL } #Xining
-            1600 = { add_core = MGL } #Urumqi
-            1595 = { add_core = MGL } #lli
-            1068 = { add_core = MGL } #Ulala
-			add_accepted_culture = tatar
-			add_accepted_culture = uighur
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                badboy = 0.02
-            }
-        }
-    }
 
     greater_afghanistan = {
         picture = form_durrani_empire
@@ -479,7 +397,6 @@ political_decisions = {
             3304 = { add_core = MCD }
             828 = { add_core = MCD }
             829 = { add_core = MCD }
-            830 = { add_core = MCD }
             3470 = { add_core = MCD }
         }
 
@@ -500,7 +417,15 @@ political_decisions = {
             is_disarmed = no
             war_policy = jingoism
             is_greater_power = yes
-            government = fascist_dictatorship
+			OR = {
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = absolute_monarchy
+				ruling_party_ideology = fascist
+				ruling_party_ideology = radical
+				ruling_party_ideology = communist
+				ruling_party_ideology = reactionary
+			}
         }
 
         effect = {
@@ -715,7 +640,6 @@ political_decisions = {
                 tag = UPB
             }
             NOT = { has_country_flag = prata_is_ours }
-            government = fascist_dictatorship
         }
 
         allow = {
@@ -734,98 +658,6 @@ political_decisions = {
 
         ai_will_do = {
             factor = 0
-        }
-    }
-
-    rename_uruguay = {
-        picture = banda_oriental
-        potential = {
-            OR = {
-                tag = BRZ
-                tag = UPB
-            }
-            owns = 2344
-            owns = 2345
-            owns = 2346
-            owns = 2347
-            has_country_flag = cisplatina_is_ours
-            NOT = {
-                has_global_flag = brazil_has_renamed_cisplatina
-            }
-        }
-
-        allow = {
-            owns = 2344
-        }
-
-        effect = {
-            2344 = {
-                change_province_name = "Sacramento"
-                state_scope = {
-                    change_region_name = "Cisplatina"
-                }
-            }
-            2347 = {
-                change_province_name = "Mirim"
-            }
-			2345 = {
-                change_province_name = "Frederico Lecor"
-            }
-			2346 = {
-                change_province_name = "Quarahy"
-            }
-            prestige = 5
-            set_global_flag = brazil_has_renamed_cisplatina
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    restore_uruguay = {
-        picture = banda_oriental
-        potential = {
-            OR = {
-                tag = URU
-                tag = ARG
-                tag = PRG
-                tag = LPL
-            }
-            has_global_flag = brazil_has_renamed_cisplatina
-            owns = 2344
-            owns = 2345
-            owns = 2346
-            owns = 2347
-        }
-
-        allow = {
-            owns = 2344
-        }
-
-        effect = {
-            2344 = {
-                change_province_name = "Montevideo"
-                state_scope = {
-                    change_region_name = "Uruguay"
-                }
-            }
-			2347 = {
-                change_province_name = "Melo"
-            }
-			2345 = {
-                change_province_name = "Paysandu"
-            }
-			2346 = {
-                change_province_name = "Tacuarembo"
-            }
-            prestige = 5
-            BRZ = { prestige = -10 }
-            clr_global_flag = brazil_has_renamed_cisplatina
-        }
-
-        ai_will_do = {
-            factor = 1
         }
     }
 
@@ -927,6 +759,7 @@ political_decisions = {
             NOT = { is_core = 88 }
             NOT = { is_core = 87 }
             NOT = { is_core = 89 }
+            NOT = { is_core = 3566 }
             NOT = { is_core = 90 }
             NOT = { is_core = 102 }
             exists = yes
@@ -1012,10 +845,19 @@ political_decisions = {
             romanticism = 1
             invention = manifest_destiny
             war_policy = jingoism
-            OR = {
-                is_greater_power = yes
-                government = fascist_dictatorship
-            }
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			OR = {
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = absolute_monarchy
+				ruling_party_ideology = fascist
+				ruling_party_ideology = radical
+				ruling_party_ideology = communist
+				ruling_party_ideology = reactionary
+			}
         }
 
         effect = {
@@ -1112,7 +954,13 @@ political_decisions = {
                 33 = { badboy = 4 }
                 33 = { badboy = 5 }
             }
-            RUS_968 = {
+            968 = {
+                add_core = THIS
+            }
+            954 = {
+                add_core = THIS
+            }
+            969 = {
                 add_core = THIS
             }
         }
@@ -1197,6 +1045,7 @@ political_decisions = {
             set_country_flag = claimed_the_caribbean
             badboy = 5
             HAI_2213 = { add_core = ATC }
+			HAI_2214 = { add_core = ATC }
             ENG_203 = { add_core = ATC }
             ENG_2224 = { add_core = ATC }
             ENG_2228 = { add_core = ATC }
@@ -1205,6 +1054,7 @@ political_decisions = {
                     any_owned_province = {
                         OR = {
                             region = HAI_2213
+							region = HAI_2214
                             region = ENG_203
                             region = ENG_2224
                             region = ENG_2228
@@ -1642,9 +1492,12 @@ political_decisions = {
             set_country_flag = grand_duchy_lit
             badboy = 10
             BYE = { all_core = { add_core = LIT } }
-            945 = { remove_core = LIT}
-            944 = { remove_core = LIT}
-            949 = { remove_core = LIT}
+            945 = { remove_core = LIT }
+            944 = { remove_core = LIT }
+            949 = { remove_core = LIT }
+            1007 = { remove_core = LIT }
+            943 = { remove_core = LIT }
+            1015 = { remove_core = LIT }
         }
     }
 	
@@ -1661,7 +1514,7 @@ political_decisions = {
 			year = 1839
 			NOT = { year = 1844 }
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_disarmed = no
 			OR = {
 			    has_global_flag = den_provoke_swe
@@ -1695,7 +1548,7 @@ political_decisions = {
 		    year = 1839
 			NOT = { year = 1844 }
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_disarmed = no
         }
 
@@ -1707,11 +1560,20 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				NOR = { ai = yes }
+				NOT = { has_global_flag = railroaded_yes_scandinavian_war }
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_no_scandinavian_war
 			}
 			modifier = {
 				factor = 20
 				NOR = { ai = no }
 				relation = { who = NOR value = 100 }
+			}
+			modifier = {
+				factor = 1000
+				has_global_flag = railroaded_yes_scandinavian_war
 			}
 		}
     }
@@ -1769,6 +1631,10 @@ political_decisions = {
             war = no
 			is_vassal = no
 			naval_logistics = 1
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
         }
 
         effect = {
@@ -1795,7 +1661,7 @@ political_decisions = {
         }
 
         allow = {
-		    has_recently_lost_war = no
+		    NOT = { has_country_modifier = recently_lost_war }
             war = no
 			is_vassal = no
 			OR = {
@@ -1808,12 +1674,7 @@ political_decisions = {
 			set_global_flag = conquered_ireland_sca
             war = {
                 target = ENG
-                attacker_goal = { 
-					casus_belli = acquire_any_state state_province_id = 254
-					casus_belli = acquire_any_state state_province_id = 258
-					casus_belli = acquire_any_state state_province_id = 260
-					casus_belli = acquire_any_state state_province_id = 263
-				}
+                attacker_goal = { casus_belli = acquire_any_state state_province_id = 263 }
                 defender_goal = { casus_belli = humiliate_no_infamy }
             }
 			treasury = -20000
@@ -1826,4 +1687,5 @@ political_decisions = {
         }
         ai_will_do = { factor = 0.5 }
     }
+
 }

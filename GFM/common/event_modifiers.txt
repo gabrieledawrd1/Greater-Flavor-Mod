@@ -1,5 +1,26 @@
+strait_control_tile = {
+    icon = 21
+}
+
+recently_lost_war = {
+    icon = 8
+}
+
 grant_cooldown = {
     icon = 12
+}
+
+gov_legit_in_question = {
+    icon = 4
+}
+
+removed_pm_cd = {
+	icon = 12
+}
+
+half_research_startup = {
+	research_points_modifier = -0.5
+	icon = 4
 }
 
 ##################################################################################################
@@ -44,6 +65,38 @@ bushiguntai_enacted = {
     supply_consumption = -0.05
     mobilisation_size = -0.2
     icon = 15
+}
+
+japonisme = { 
+	prestige = 0.1
+	icon = 13
+}
+
+japanese_dual_monarchy = { 
+	core_pop_consciousness_modifier = -0.03
+	core_pop_militancy_modifier = -0.03
+	icon = 8
+}
+
+seifukuron = { 
+	cb_generation_speed_modifier = 0.5 
+	icon = 15
+}
+
+ceremonial_emperor = { 
+	core_pop_consciousness_modifier = 0.03
+	core_pop_militancy_modifier = 0.05
+	icon = 8 
+}
+
+zaibatsu_dominance = { 
+	max_tariff = -0.2 
+	max_tax = -0.2 
+	rgo_output = 0.2 
+	rgo_throughput = 0.2 
+	farm_rgo_eff = 0.2 
+	mine_rgo_eff = 0.2 
+	icon = 17
 }
 
 transisthmian_trade = {
@@ -121,6 +174,12 @@ ostflucht = {
     pop_consciousness_modifier = 0.1
     life_rating = -0.25
     icon = 20
+}
+
+polders = {
+    farm_rgo_size = 0.1
+    farm_rgo_eff = 0.05	
+    icon = 13
 }
 
 being_dismantled = {
@@ -214,6 +273,18 @@ whdestroyed = {
     immigrant_push = 0.5
 }
 
+greytown_shelled = {
+    prestige = -0.1
+    immigrant_attract = -0.5
+    life_rating = -0.1
+    local_RGO_output = -0.5
+    local_artisan_output = -0.5
+    local_factory_output = -0.5
+    local_ruling_party_support = -0.5
+    population_growth = -0.1
+    immigrant_push = 0.5
+}
+
 french_liberal_school = {
     max_tariff = -0.2
     administrative_efficiency_modifier = 0.2
@@ -224,6 +295,7 @@ french_liberal_school = {
     #influence_modifier = 0.1
     icon = 9
 }
+
 smithian_school = {
     max_tariff = -0.1
     tax_efficiency = 0.2
@@ -704,6 +776,11 @@ sound_dues_toll = {
     icon = 11
 }
 
+horse_railway = {
+	mine_rgo_eff = 0.5
+	icon = 11
+}
+
 silver_mine = {
     local_RGO_output = -0.25
     icon = 11
@@ -939,6 +1016,10 @@ eiffel_tower_construction = {
     icon = 11
 }
 
+eiffel_torre_construction = {
+    icon = 11
+}
+
 bigben_construction = {
     icon = 11
 }
@@ -1069,7 +1150,7 @@ academic_confusion = {
 liberal_agitation = {
     pop_consciousness_modifier = 0.2
     pop_militancy_modifier = 0.05
-	immigrant_push = 0.05
+	immigrant_push = 0.35
     icon = 4
 }
 
@@ -1166,6 +1247,13 @@ china_isolationism = {
     icon = 10
 }
 
+japanese_government_advisors = { 
+	research_points_modifier = 0.05
+	land_attack_modifier = 0.5
+    land_defense_modifier = 0.5
+	icon = 17
+}
+
 western_presence = {
     pop_consciousness_modifier = 0.1
     pop_militancy_modifier = 0.05
@@ -1207,8 +1295,8 @@ naval_school = {
 }
 
 aviation_school = {
-    army_tech_research_bonus = 0.05
-    leadership_modifier = 0.01
+    army_tech_research_bonus = 0.1
+    leadership_modifier = 0.03
     icon = 17
 }
 
@@ -1601,11 +1689,11 @@ the_slavery_debate = {
 the_bonnie_blue_flag = {
     org_regain = 0.1
     leadership = 1
-    land_organisation = 0.2
+    land_organisation = 0.1
     land_unit_start_experience = 5
     mobilisation_economy_impact = -0.3
     mobilisation_size = 0.05
-    mobilization_impact = 2
+    mobilization_impact = 1.25
     icon = 15
 }
 
@@ -1762,13 +1850,22 @@ ruhr_boom_city = {
     icon = 13
 }
 
+little_manchester = {
+    population_growth = 0.01
+    immigrant_attract = 0.3
+	local_factory_throughput = 0.3
+	local_factory_output = 0.5
+	local_ruling_party_support = 0.2
+    icon = 13
+}
+
 prussian_general_staff = {
-    org_regain = 0.2
-    land_organisation = 0.1
+    org_regain = 0.1
+    land_organisation = 0.05
     mobilisation_economy_impact = -0.25
     land_unit_start_experience = 5
     supply_consumption = -0.05
-    mobilisation_size = 0.02
+    mobilisation_size = 0.01
     icon = 15
 }
 
@@ -2357,6 +2454,9 @@ sakoku = {
     icon = 5
 }
 
+shinsengumi_revolt = { 
+	icon = 16
+} 
 tenpo_famine = { 
 	farm_RGO_eff = -0.2
 	global_population_growth = -0.01 
@@ -2624,7 +2724,7 @@ america_new_world = {
 
 california_gold_rush = {
     immigrant_attract = 3        #300%
-    population_growth = 0.01
+    population_growth = 0.05
     assimilation_rate = 1
     icon = 19
 }
@@ -3255,7 +3355,7 @@ brothers_war_aggressor = {
 }
 
 drang_nach_osten = {
-    immigrant_attract = 0.75
+    immigrant_attract = 2
     farm_rgo_size = 0.5
     mine_RGO_size = 0.5
     icon = 19
@@ -3565,7 +3665,6 @@ arab_slave_trade = {
 slaver_port = {
     mine_rgo_eff = 0.1
     immigrant_attract = 0.25
-    poor_life_needs = 0.1
     icon = 20
 }
 
@@ -3795,6 +3894,9 @@ merchant_marine = {
 craftsmen_fix_cooldown = {
     icon = 12
 }
+recruitment_cooldown = {
+    icon = 12
+}
 ###Latin Monetary Union###
 latin_monetary_union = {
     tax_efficiency = 0.05
@@ -3956,12 +4058,6 @@ gateway_to_harbor = {
     immigrant_attract = 1
     population_growth = 0.0002
     icon = 9
-}
-
-land_of_opportunity = {
-    global_population_growth = 0.002
-    global_immigrant_attract = 0.3
-    icon = 13
 }
 
 sons_of_liberty = {
@@ -4684,6 +4780,15 @@ ottoman_autonomy = {
 	icon = 15
 }
 
+querimonia = {
+	immigrant_attract = -0.5
+	local_RGO_throughput = -0.5
+	pop_militancy_modifier = -0.05
+	pop_consciousness_modifier = 0.02
+	tax_efficiency = -0.05
+	icon = 15
+}
+
 Emus = {
     immigrant_attract = -0.2
 	local_RGO_throughput = -0.25
@@ -4705,6 +4810,16 @@ panic_of_eighteenthirtyseven = {
     icon = 18
 }
 
+autonomy_conceded = {
+	assimilation_rate = -1
+	local_artisan_output = -0.2
+	local_repair = -2
+	local_RGO_throughput = -0.4
+	local_ship_build = 1.5
+	pop_consciousness_modifier = -0.1
+    icon = 18
+}
+
 cotton_boom = {
     local_RGO_output = 0.05
 	immigrant_attract = 0.02
@@ -4714,8 +4829,6 @@ cotton_boom = {
 
 mexico_city_buff = {
 	population_growth = 0.001
-	immigrant_attract = 0.1
-	prestige = 0.1
 	icon = 15
 }
 
@@ -4743,7 +4856,7 @@ texan_retribution = {
 
 forced_education = {
 	education_efficiency_modifier = 0.25
-	icon = 17
+	icon = 3
 }
 
 northern_ejido_system = {
@@ -4796,15 +4909,13 @@ indigo_dye_imp = {
 }
 
 whaling_centre = {
-    local_RGO_throughput = 0.15
-	immigrant_attract = 0.1
-	icon = 7
+    local_RGO_throughput = 0.25
+	icon = 9
 }
 
 gauchos_and_sheep = {
     farm_rgo_eff = 0.25
 	farm_rgo_size = 0.10
-	local_RGO_throughput = 0.05
 	icon = 15
 }
 
@@ -4837,9 +4948,9 @@ serfdom_emigration_cooldown = {
 }
 
 ypf_oil = {
+    immigrant_attract = 0.05
     local_RGO_output = 0.05
     mine_rgo_size = 0.5
-    immigrant_attract = 0.05
     icon = 13
 }
 
@@ -4852,21 +4963,21 @@ embalse = {
 }
 
 mar_chiquita_tourism = {
-    immigrant_attract = 0.3
+    immigrant_attract = 0.5
     farm_rgo_eff = 0.10
     icon = 11
 }
 
 radio_argentina = {
-    global_assimilation_rate = 0.015
-    suppression_points_modifier = -0.05
+    global_assimilation_rate = 0.025
+    education_efficiency_modifier = 0.005
     core_pop_consciousness_modifier = 0.01
 }
 
 opera_house = {
+    education_efficiency_modifier = 0.05
+	immigrant_attract = 0.05
     rich_income_modifier = 0.10
-    local_artisan_output = 0.10
-    immigrant_attract = 0.05
     icon = 5
 }
 
@@ -4918,6 +5029,11 @@ kisilevs_reforms = {
     tax_efficiency = 0.05
     administrative_efficiency_modifier = 0.2
     global_pop_consciousness_modifier = 0.05
+    icon = 5
+}
+
+the_peseta = {
+    tax_efficiency = 0.05
     icon = 5
 }
 
@@ -4974,4 +5090,93 @@ parana_development_forever = {
     immigrant_attract = 0.3
     farm_rgo_eff = 0.5
 	icon = 19
+}
+
+sao_francisco_transposition = {
+    farm_rgo_eff = 0.5
+    mine_rgo_eff = 0.5
+    immigrant_attract = 0.1
+    population_growth = 0.001
+    icon = 3
+}
+
+benito_juarez = {
+	education_efficiency_modifier = 0.1
+	global_pop_consciousness_modifier = 0.1
+	icon = 17
+}
+
+city_boom = {
+	immigrant_attract = 0.1
+	population_growth = 0.05
+	life_rating = 0.05
+	icon = 19
+}
+
+banamex_modifier = {
+	tariff_efficiency_modifier = 0.01
+	tax_efficiency = 0.01
+	poor_savings_modifier = 0.01
+	icon = 9
+}
+
+new_university_mex = {
+	education_efficiency_modifier = 0.05
+	icon = 5
+}
+
+london_mex_bank = {
+	tax_efficiency = 0.01
+	poor_savings_modifier = 0.01
+	loan_interest = -0.1
+	icon = 9
+}
+
+mex_hospital_prov = {
+	population_growth = 0.001
+	icon = 19
+}
+
+small_research_bonus = {
+	research_points = 2.5
+	icon = 3
+}
+
+big_research_bonus = {
+	research_points = 5
+	icon = 3
+}
+
+los_rurales = {
+	local_RGO_throughput = 0.05
+	icon = 19
+}
+
+special_administrative_zone = {
+	assimilation_rate = -0.2
+	pop_militancy_modifier = -0.1
+    local_RGO_output = -0.15
+    pop_consciousness_modifier = -0.1
+	icon = 2
+}
+
+prov_american_integration = {
+	immigrant_attract = 0.15
+	icon = 19
+}
+
+fundidora = {
+	local_RGO_output = 0.05
+	local_RGO_throughput = 0.05
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = -0.01
+	icon = 13
+}
+
+contestado_war = {
+    pop_militancy_modifier = 0.05
+    pop_consciousness_modifier = 0.05
+    local_RGO_output = -0.1
+    local_RGO_throughput = -0.1
+    icon = 18
 }

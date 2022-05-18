@@ -96,6 +96,11 @@ political_decisions = {
                 add_core = GRE
                 remove_core = ANT
             }
+			
+			TUR_870 = {
+                add_core = GRE
+                remove_core = ANT
+            }
 			866 = { remove_core = GRE }
 			870 = { remove_core = GRE }
 			868 = { remove_core = GRE }
@@ -183,7 +188,7 @@ political_decisions = {
                     THIS = { ai = yes }
                 }
                 THIS = {
-                    remove_accepted_culture = north_italian
+                    remove_accepted_culture = north_italian #technically should be converted to MC but since it's just Corfiots there who cares
                     remove_accepted_culture = british
                 }
                 inherit = THIS
@@ -350,22 +355,6 @@ political_decisions = {
                 limit = { province_id = 884 }
                 884 = { change_province_name = "Kerasous" }
                 owner = { set_country_flag = grecofication_kerasous }
-            }
-            ###THRACE###
-            random_owned = {
-                limit = { province_id = 828 }
-                828 = { change_province_name = "Adrianoupolis" }
-                owner = { set_country_flag = grecofication_edirne }
-            }
-            random_owned = {
-                limit = { province_id = 859 }
-                859 = { change_province_name = "Kallipolis" }
-                owner = { set_country_flag = grecofication_gelibolu }
-            }
-            random_owned = {
-                limit = { province_id = 858 }
-                858 = { change_province_name = "Saranta Ekklisies" }
-                owner = { set_country_flag = grecofication_gelibolu }
             }
         }
         ai_will_do = { factor = 1 }

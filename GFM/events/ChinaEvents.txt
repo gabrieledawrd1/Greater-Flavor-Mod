@@ -93,6 +93,10 @@ country_event = {
                 factor = 0.5
                 war_exhaustion = 25
             }
+            modifier = {
+                factor = 0
+                has_global_flag = you_are_playing_mp
+            }
         }
     }
 }
@@ -223,7 +227,13 @@ country_event = {
         XIN = {
             is_vassal = no
         }
+		1595 = { owned_by = XIN }
+		1188 = { owned_by = XIN }
+		1186 = { owned_by = XIN }
+		1190 = { owned_by = XIN }
         tag = RUS
+		owns = 1187
+		has_global_flag = taiping_has_happened
         NOT = { has_global_flag = sw_set }
     }
 
@@ -231,7 +241,7 @@ country_event = {
         days = 5
     }
     option = {
-        name = "Occupy Kuldscha and western Xinjiang immediately! §RGain 3 infamy§W"
+        name = "Occupy Kuldscha and western Xinjiang immediately! §RGain 2 infamy§W"
         1595 = {
             secede_province = RUS
         }
@@ -311,7 +321,7 @@ country_event = {
 
 country_event = {
     id = 123460
-    title = "The Russians have tried a compromise"
+    title = "A Compromise?"
     desc = "After we demanded to receive our rightful lands in Xinjiang back, Russia decided to return Kultscha but not the rest of the area."
     picture = "Kuldscha_district"
     fire_only_once = yes
@@ -319,6 +329,12 @@ country_event = {
     option = {
         name = "That is acceptable."
         FROM = { country_event = 123462 }
+		1188 = { remove_core = CHI }
+		1186 = { remove_core = CHI }
+		1190 = { remove_core = CHI }
+		1188 = { remove_core = XIN }
+		1186 = { remove_core = XIN }
+		1190 = { remove_core = XIN }
         ai_chance = { factor = 95 }
     }
     option = {
@@ -339,7 +355,7 @@ country_event = {
         THIS = { add_core = 3321 }
         war = {
             target = RUS
-            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1185 }
+            attacker_goal = { casus_belli = acquire_all_cores }
         }
         ai_chance = { factor = 5 }
     }
@@ -355,6 +371,13 @@ country_event = {
     option = {
         name = "We must back down. The Russians are vastly superior to us militarily."
         FROM = { country_event = 123462 }
+		1188 = { remove_core = CHI }
+		1186 = { remove_core = CHI }
+		1190 = { remove_core = CHI }
+		1595 = { remove_core = CHI }
+		1188 = { remove_core = XIN }
+		1186 = { remove_core = XIN }
+		1190 = { remove_core = XIN }
         prestige = -10
         ai_chance = { factor = 5 }
     }
@@ -375,7 +398,7 @@ country_event = {
         THIS = { add_core = 3321 }
         war = {
             target = RUS
-            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1600 }
+            attacker_goal = { casus_belli = acquire_all_cores }
         }
         ai_chance = { factor = 95 }
     }
@@ -406,7 +429,7 @@ country_event = {
 country_event = {
     id = 123464
     title = "We have regained Xinjiang!"
-	desc = "Add a desc, abe!!!"
+	desc = "After the struggle against the Russian oppressors, Xinjiang finally rests in our hands once more."
     fire_only_once = yes
     picture = "Kuldscha_district"
     mean_time_to_happen = { days = 5 }
@@ -1409,7 +1432,7 @@ country_event = {
             average_militancy = 6
             capital_scope = { controlled_by_rebels = yes }
             AND = {
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
                 war_exhaustion = 15
                 average_militancy = 2
             }
@@ -1817,7 +1840,7 @@ country_event = {
         }
         modifier = {
             factor = 0.9
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         modifier = {
             factor = 0.5
@@ -2185,7 +2208,7 @@ country_event = {
         }
         modifier = {
             factor = 0.75
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
     }
 
@@ -2658,17 +2681,14 @@ country_event = {
         owns = 1496
         NOT = { has_global_flag = kowloon_incident }
         ENG = {
-            OR = {
-                AND = { NOT = { war_with = THIS truce_with = THIS } ai = no }
-                AND = { war = no ai = yes }
-            }
+            NOT = { war_with = THIS truce_with = THIS }
             exists = yes
             is_greater_power = yes
         }
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 1
         modifier = {
             factor = 0.35
             has_country_flag = appoint_lin_zexu
@@ -2965,7 +2985,7 @@ country_event = {
             limit = {
                 tag = FROM
                 KOR = { exists = no }
-                NOT = { any_owned_province = { is_core = KOR } }
+                NOT = { owns = 1637 owns = 1632 owns = 1624 owns = 1619 owns = 1621 }
                 is_our_vassal = MCK
             }
             leave_alliance = MCK
@@ -2975,7 +2995,7 @@ country_event = {
             limit = {
                 tag = FROM
                 KOR = { exists = no }
-                NOT = { any_owned_province = { is_core = KOR } }
+                NOT = { owns = 1637 owns = 1632 owns = 1624 owns = 1619 owns = 1621 }
                 MCK = { exists = no }
                 any_owned_province = { is_core = MCK }
             }
@@ -2986,7 +3006,13 @@ country_event = {
             limit = {
                 tag = FROM
                 KOR = { exists = no }
-                any_owned_province = { is_core = KOR }
+				OR = {
+					owns = 1637 
+					owns = 1632 
+					owns = 1624 
+					owns = 1619 
+					owns = 1621
+				}
             }
             release = KOR
             THIS = { create_vassal = KOR }
@@ -4551,7 +4577,7 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         modifier = {
             factor = 1.5
@@ -4990,6 +5016,17 @@ country_event = {
             limit = { is_core = FJN }
             secede_province = FJN
         }
+		random_owned = {
+			limit = {
+				owner = {
+					TIB = { exists = no }
+					owns = 1587
+				}
+			}
+			owner = {
+				release = TIB
+			}
+		}
         any_pop = {
             militancy = -6
             dominant_issue = {
@@ -7918,7 +7955,7 @@ country_event = {
 
         ai_chance = {
             factor = 0.1
-            modifier = { factor = 0 has_recently_lost_war = yes }
+            modifier = { factor = 0 has_country_modifier = recently_lost_war }
             modifier = { factor = 0 is_disarmed = yes }
             modifier = { factor = 0 NOT = { military_score = 100 } }
         }
@@ -7942,7 +7979,7 @@ country_event = {
         prestige_factor = -0.1
         ai_chance = {
             factor = 0.2
-            modifier = { factor = 0.5 has_recently_lost_war = yes }
+            modifier = { factor = 0.5 has_country_modifier = recently_lost_war }
             modifier = { factor = 0.25 is_disarmed = yes }
             modifier = { factor = 0.25 NOT = { military_score = 100 } }
         }
@@ -8003,7 +8040,7 @@ country_event = {
             modifier = { factor = 0 vassal_of = FROM }
             modifier = { factor = 0.25 in_sphere = FROM }
             modifier = { factor = 0.8 relation = { who = FROM value = 150 } }
-            modifier = { factor = 0.4 has_recently_lost_war = yes }
+            modifier = { factor = 0.4 has_country_modifier = recently_lost_war }
             modifier = { factor = 0.1 is_disarmed = yes }
             modifier = { factor = 0.9 any_owned_province = { country_units_in_province = REB } }
             modifier = { factor = 0.8 num_of_revolts = 3 }
@@ -8169,15 +8206,14 @@ country_event = {
             limit = { war_with = YNN }
             end_war = YNN
         }
-        YNN = { change_tag = PGG }
-        PGG = { government = absolute_monarchy religion = sunni set_country_flag = sunni_country clr_country_flag = mahayana_country }
+        YNN = { government = theocracy religion = sunni set_country_flag = sunni_country clr_country_flag = mahayana_country }
         casus_belli = {
-            target = PGG
+            target = YNN
             type = make_puppet
             months = 12
         }
         war = {
-            target = PGG
+            target = YNN
             attacker_goal = { casus_belli = make_puppet }
             defender_goal = { casus_belli = status_quo }
         }
@@ -8195,9 +8231,10 @@ country_event = {
         tag = QNG
         OR = {
             has_global_flag = panthay_rebellion
-            truce_with = PGG
+				truce_with = YNN
         }
-        is_our_vassal = PGG
+        is_our_vassal = YNN
+		YNN = { government = theocracy }
     }
 
     mean_time_to_happen = {
@@ -8209,7 +8246,6 @@ country_event = {
         clr_global_flag = panthay_rebellion
         prestige = 10
         plurality = -2
-        PGG = { change_tag = YNN }
         YNN = {
             government = colonial_company
             religion = mahayana
@@ -8225,7 +8261,6 @@ country_event = {
             }
         }
         inherit = YNN
-        PGG = { all_core = { remove_core = PGG } }
     }
 }
 
@@ -8242,7 +8277,8 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        tag = PGG
+        tag = YNN
+		government = theocracy
         has_global_flag = panthay_rebellion
         is_vassal = no
         NOT = { war_with = QNG }
@@ -8257,7 +8293,6 @@ country_event = {
         prestige = 10
         QNG = { prestige = -10 plurality = -2 }
         clr_global_flag = panthay_rebellion
-        PGG = { all_core = { remove_core = YNN } }
     }
 }
 
@@ -8786,6 +8821,7 @@ country_event = {
             capital_scope = { continent = europe }
             primary_culture = japanese
         }
+		NOT = { exists = DAI }
         owns = 1369
         exists = QNG
         has_global_flag = taiping_has_been_defeated
@@ -8809,8 +8845,8 @@ country_event = {
         HQJ = {
             define_general = {
                 name = "Liu Yongfu"
-                personality = implacable
-                background = natural_born_leader
+                personality = defence_3.1
+                background = attack_4.1
             }
             small_arms = 250
             canned_food = 350
@@ -9199,3 +9235,72 @@ country_event = {
     }
 }
 
+# Japan offers alliance 
+country_event = { 
+	id = 1931001
+	title = "EVTNAME1931001"
+	desc = "EVTDESC1931001"
+	picture = "asian_administration" 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "Yes. Our realms shall prosper together!"
+		FROM = { country_event = 1931002 }
+		ai_chance =  { 
+			factor = 75
+			modifier = { 
+				relation = { who = FROM value = 120 } 
+				factor = 1.3
+			} 
+		}
+	} 
+	
+	option = { 
+		name = "China will stand alone."
+		FROM = { country_event = 1931003 }
+		ai_chance =  { 
+			factor = 25
+			modifier = { 
+				NOT = { relation = { who = FROM value = 120 } } 
+				factor = 2
+			} 
+		}
+	} 
+} 
+
+# China accepts alliance (to Japan) 
+country_event = { 
+	id = 1931002
+	title = "EVTNAME1931002"
+	desc = "EVTDESC1931002" 
+	picture = "asian_administration" 
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = "It's about time we got on good terms with the nation we owe most of our culture to."
+		FROM = { 
+			add_country_modifier = { 
+				name = japanese_government_advisors 
+				duration = 1825
+			}
+			create_alliance = THIS 
+		}	
+	} 
+} 
+
+# China rejects alliance (to Japan)
+
+country_event = { 
+	id = 1931003
+	title = "EVTNAME1931003"
+	desc = "EVTDESC1931003"
+	picture = "asian_administration" 
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = "Then we wish them the best with fending off foreign powers."
+	} 
+} 

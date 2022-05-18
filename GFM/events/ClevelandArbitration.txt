@@ -63,6 +63,26 @@ country_event = {
     option = {
         name = "They will pay for their insolence!"
         relation = { who = FROM value = -50 }
+		random_owned = {
+			limit = {
+				owner = {
+					2459 = { owned_by = BRZ }
+				}
+			}
+			owner = {
+				2462 = { add_core = BRZ }			
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					2459 = { owned_by = UPB }
+				}
+			}
+			owner = {
+				2462 = { add_core = UPB }			
+			}
+		}
     }
 }
 
@@ -79,6 +99,26 @@ country_event = {
             who = FROM
             value = 50
         }
+		random_owned = {
+			limit = {
+				owner = {
+					2459 = { owned_by = BRZ }
+				}
+			}
+			owner = {
+				2462 = { add_core = BRZ }			
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					2459 = { owned_by = UPB }
+				}
+			}
+			owner = {
+				2462 = { add_core = UPB }			
+			}
+		}
 		FROM = {
             country_event = {
 	            id = 97141
@@ -119,6 +159,30 @@ country_event = {
     option = {
 	    name = "Excellent!"
 		prestige = 3
+		random_owned = {
+			limit = {
+				owner = { tag = BRZ 2462 = { owned_by = ARC } }
+			}
+			owner = { ARC = { country_event = 97142 } }
+		}
+		random_owned = {
+			limit = {
+				owner = { tag = BRZ 2462 = { owned_by = ARG } }
+			}
+			owner = { ARG = { country_event = 97142 } }
+		}
+		random_owned = {
+			limit = {
+				owner = { tag = ARG }
+			}
+			owner = { BRZ = { country_event = 97142 } }
+		}
+		random_owned = {
+			limit = {
+				owner = { tag = ARC }
+			}
+			owner = { BRZ = { country_event = 97142 } }
+		}
 		random_country = { limit = { NOT = { tag = THIS } owns = 2462 } country_event = 97142 }
     }
 }
@@ -133,11 +197,25 @@ country_event = {
 
     option = {
         name = "Damn..."
-        2462 = { remove_core = THIS }
+        2462 = { 
+			remove_core = ARG
+			remove_core = ARC
+			remove_core = PRG
+			remove_core = LPL
+			remove_core = HSA
+		}
+		random_owned = {
+            limit = { owner = { primary_culture = brazilian } }
+            owner = {
+                2462 = { remove_core = SAP remove_core = SAC secede_province = FROM }
+            }
+        }
 		random_owned = {
             limit = { owner = { owns = 2462 } }
             2462 = {
                 secede_province = FROM
+				add_core = FROM
+                change_province_name = "Clevelândia"
             }
         }
     }

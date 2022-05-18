@@ -1012,12 +1012,39 @@ country_event = {
         }
         random_owned = {
             limit = {
+                province_id = 3371 #Constanta
+                owned_by = TUR
+                NOT = { exists = ROM }
+            }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
+                province_id = 3372 #Constanta
+                owned_by = TUR
+                NOT = { exists = ROM }
+            }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
                 province_id = 674 #Constanta
                 owned_by = TUR
-                exists = ROM
+                NOT = { exists = ROM }
             }
-            secede_province = ROM
-            ROM = { set_country_flag = received_congress_benefit }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
+                province_id = 675 #Tulcea
+                owned_by = TUR
+                NOT = { exists = ROM }
+            }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
         }
         random_owned = {
             limit = {
@@ -1031,6 +1058,15 @@ country_event = {
         random_owned = {
             limit = {
                 province_id = 3372 #Constanta
+                owned_by = TUR
+                exists = ROM
+            }
+            secede_province = ROM
+            ROM = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
+                province_id = 674 #Constanta
                 owned_by = TUR
                 exists = ROM
             }
@@ -1196,6 +1232,30 @@ country_event = {
                 secede_province = BOS
             }
         }
+		
+		#in case of Serbian revolt winning and giving Serbia snek borders
+		random_owned = {
+			limit = {
+				owner = {
+					SER = { owns = 786 }
+					SER = { owns = 788 }
+					owns = 783
+					owns = 787
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = BOS
+						NOT = { province_id = 2569 }
+						NOT = { province_id = 2577 }
+						NOT = { province_id = 804 }
+					}
+					secede_province = SER
+				}
+			}
+		}
+		
         random_owned = {
             limit = {
                 province_id = 783
@@ -1213,22 +1273,6 @@ country_event = {
                     secede_province = BOS
                 }
             }
-            BOS = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 804
-                BOS = { exists = yes }
-            }
-            secede_province = BOS
-            BOS = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 2577
-                BOS = { exists = yes }
-            }
-            secede_province = BOS
             BOS = { set_country_flag = received_congress_benefit }
         }
         random_country = {
@@ -1378,7 +1422,6 @@ country_event = {
             limit = {
                 province_id = 834 #Athens
                 owned_by = TUR
-                NOT = { exists = GRE }
             }
             state_scope = {
                 any_owned = {
@@ -1651,6 +1694,17 @@ country_event = {
         name = "EVT90067OPTA"
         set_global_flag = balkans_supported
         prestige_factor = 0.1
+		any_country = {
+			limit = {
+				OR = {
+					tag = BOS
+					tag = SRR
+				}
+				war_with = TUR
+			}
+			end_war = TUR
+			annex_to = TUR
+		}
 
         # Take temporary control of rebel-controlled provinces
         any_owned = {
@@ -1730,6 +1784,24 @@ country_event = {
             }
             set_country_flag = received_congress_benefit
             TUR = { release_vassal = WAL }
+        }
+        random_owned = {
+            limit = {
+                province_id = 3371 #Constanta
+                owned_by = TUR
+                NOT = { exists = ROM }
+            }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
+                province_id = 3372 #Constanta
+                owned_by = TUR
+                NOT = { exists = ROM }
+            }
+            secede_province = WAL
+            WAL = { set_country_flag = received_congress_benefit }
         }
         random_owned = {
             limit = {
@@ -1825,6 +1897,18 @@ country_event = {
         }
         random_owned = {
             limit = {
+                province_id = 823 #Siruz
+                owned_by = TUR
+            }
+            state_scope = {
+                any_owned = {
+                    secede_province = BUL
+                }
+            }
+            BUL = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
                 province_id = 818 #Silistre
                 owned_by = TUR
             }
@@ -1853,7 +1937,27 @@ country_event = {
             set_country_flag = received_congress_benefit
             TUR = { release_vassal = MON }
         }
-
+		
+		#in case of Serbian revolt winning and giving Serbia snek borders
+		random_owned = {
+			limit = {
+				owner = {
+					SER = { owns = 786 }
+					SER = { owns = 788 }
+					owns = 783
+					owns = 787
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = BOS
+					}
+					secede_province = SER
+				}
+			}
+		}
+		
         # Any Bosnian lands given to Bosnia, it is freed if vassaled
         random_owned = {
             limit = {
@@ -1881,22 +1985,22 @@ country_event = {
             }
             BOS = { set_country_flag = received_congress_benefit }
         }
-        random_owned = {
-            limit = {
-                province_id = 804
-                BOS = { exists = yes }
-            }
-            secede_province = BOS
-            BOS = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 2577
-                BOS = { exists = yes }
-            }
-            secede_province = BOS
-            BOS = { set_country_flag = received_congress_benefit }
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					TUR = {
+						owns = 2577
+						owns = 804
+					}
+					BOS = { exists = yes }
+				}
+			}
+			owner = {
+				2577 = { secede_province = BOS }
+				804 = { secede_province = BOS }
+				BOS = { set_country_flag = received_congress_benefit }
+			}
+		}
         random_country = {
             limit = {
                 tag = BOS
@@ -2016,9 +2120,12 @@ country_event = {
             limit = {
                 province_id = 834 #Athens
                 owned_by = TUR
-                NOT = { exists = GRE }
             }
-            owner = { release_vassal = GRE }
+            state_scope = {
+                any_owned = {
+                    secede_province = GRE
+                }
+            }
             GRE = { set_country_flag = received_congress_benefit }
         }
         random_owned = {
@@ -2032,6 +2139,20 @@ country_event = {
                 }
             }
             GRE = { set_country_flag = received_congress_benefit }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+					TUR = { owns = 832 }
+					TUR = { owns = 831 }
+					GRE = { owns = 833 }
+				}
+            }
+            owner = {
+				832 = { secede_province = GRE }
+				831 = { secede_province = GRE }
+				GRE = { set_country_flag = received_congress_benefit }
+			}
         }
         random_owned = {
             limit = {

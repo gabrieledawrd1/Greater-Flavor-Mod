@@ -367,6 +367,7 @@ country_event = {
             NOT = { is_sphere_leader_of = THIS }
             NOT = { is_our_vassal = THIS }
         }
+		NOT = { has_global_flag = you_are_playing_mp }
     }
 
     mean_time_to_happen = {
@@ -1655,7 +1656,7 @@ country_event = {
             }
             modifier = {
                 factor = 0.75
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
         }
     }
@@ -1677,7 +1678,7 @@ country_event = {
             }
             modifier = {
                 factor = 1.25
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
         }
     }
@@ -1738,19 +1739,20 @@ country_event = {
     picture = "Celebration"
 
     is_triggered_only = yes
-
-    option = {
-        name = "Good"
-
-        any_country = {
+	
+	immediate = {
+		any_country = {
             limit = {
                 exists = yes
                 NOT = { has_country_flag = existing_country }
                 is_vassal = no
-                in_sphere = THIS
             }
             country_event = 19370
         }
+	}
+
+    option = {
+        name = "Good"
     }
 }
 
@@ -1808,6 +1810,7 @@ country_event = {
                 owner = {
                     civilized = yes
                     NOT = { government = proletarian_dictatorship }
+					NOT = { tag = RUS }
                 }
             }
             owner = {
@@ -1839,6 +1842,50 @@ country_event = {
                     name = national_confusion
                     duration = 365
                 }
+            }
+        }
+        random_owned = {
+            limit = {
+                FROM = { government = proletarian_dictatorship }
+                owner = {
+                    civilized = yes
+                    NOT = { government = proletarian_dictatorship }
+					tag = RUS 
+                }
+            }
+            owner = {
+				change_tag = SOV
+				SOV = {
+					ruling_party_ideology = communist
+					government = proletarian_dictatorship
+					political_reform = none_voting
+					political_reform = party_appointed
+					political_reform = no_meeting
+					political_reform = state_press
+					political_reform = state_controlled
+					political_reform = underground_parties
+					social_reform = good_minimum_wage
+					social_reform = eight_hours
+					social_reform = good_subsidies
+					social_reform = good_pensions
+					social_reform = good_health_care
+					nationalize = yes
+
+					clr_country_flag = election_started
+					clr_country_flag = conservative_party_in_power
+					clr_country_flag = liberal_party_in_power
+					clr_country_flag = reactionary_party_in_power
+					clr_country_flag = socialist_party_in_power
+					clr_country_flag = communist_party_in_power
+					clr_country_flag = fascist_party_in_power
+					clr_country_flag = radical_party_in_power
+
+					add_country_modifier = {
+						name = national_confusion
+						duration = 365
+					}
+				}
+				RUS = { country_event = { id = 123429 days = 1 } }
             }
         }
         random_owned = {
@@ -2677,7 +2724,7 @@ country_event = {
                     in_sphere = FROM
                     vassal_of = FROM
                     is_disarmed = yes
-                    has_recently_lost_war = yes
+                    has_country_modifier = recently_lost_war
                 }
             }
         }

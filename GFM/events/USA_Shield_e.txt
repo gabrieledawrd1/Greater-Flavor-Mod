@@ -230,6 +230,7 @@ country_event = {
     option = {
         name = "We will not trade one European tyrant for another!"
         add_accepted_culture = french_canadian
+		add_accepted_culture = acadian
         relation = {
             who = FRA
             value = -100
@@ -507,6 +508,7 @@ country_event = {
     option = {
         name = "This is one nation indivisible. There will be no home rule."
         add_accepted_culture = french_canadian
+		add_accepted_culture = acadian
         set_country_flag = USA_french
 		random_owned = {
 			limit = { owner = { USA = { exists = yes } } }
@@ -558,6 +560,7 @@ country_event = {
         name = "Will the New World ever know peace from the terror of Europe?"
         set_country_flag = USA_french
         add_accepted_culture = french_canadian
+		add_accepted_culture = acadian
         ai_chance = {
             factor = 100
         }
@@ -574,6 +577,7 @@ country_event = {
     option = {
         name = "This is one nation indivisible. There will be no home rule."
         add_accepted_culture = french_canadian
+		add_accepted_culture = acadian
         set_country_flag = USA_french
         any_pop = {
             limit = {
@@ -682,6 +686,7 @@ country_event = {
             }
             country_event = {
                 id = 72747
+				days = 0
             }
         }
         ai_chance = {
@@ -1891,6 +1896,16 @@ country_event = {
             add_core = UCA
             remove_core = GCO
         }
+        3447 = {
+            secede_province = UCA
+            add_core = UCA
+            remove_core = GCO
+        }
+        3564 = {
+            secede_province = UCA
+            add_core = UCA
+            remove_core = GCO
+        }
         2206 = {
             secede_province = UCA
             add_core = UCA
@@ -2526,7 +2541,7 @@ country_event = {
     }
 
     option = {
-        name = "End the Union"
+        name = "End the Union."
         change_tag = GUA
         release = COS
         release = ELS
@@ -2534,7 +2549,7 @@ country_event = {
         release = NIC
         release = YUC
         release = PNM
-        UCA = { all_core = { remove_core = UCA}  }
+        UCA = { all_core = { remove_core = UCA }  }
         any_pop = {
             limit = {
                 OR = {
@@ -2823,7 +2838,7 @@ country_event = {
             consciousness = -5
         }
         any_owned = {
-            limit = { has_province_flag = former_cores }
+            limit = { has_province_flag = former_cores } #very sus
             add_core = THIS
         }
         ai_chance = {

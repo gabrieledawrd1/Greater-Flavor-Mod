@@ -7,7 +7,7 @@ country_event = {
     news_desc_short = "EVTDESC46400_NEWS_SHORT"
 
     trigger = {
-        tag = URU
+		tag = URU
         year = 1911
 		OR = {
 			government = democracy
@@ -940,10 +940,8 @@ country_event = {
         truce_with = URU
         NOT = { war_with = URU }
         URU = {
-            has_recently_lost_war = yes
-            has_country_flag = oribe_is_true_president
+            has_country_modifier = recently_lost_war
             has_country_flag = war_on_rosas
-            has_country_flag = garibaldi_italian_legion
             }
         }
 
@@ -1120,7 +1118,7 @@ country_event = {
         NOT = { war_with = ARC }
         ARC = {
             exists = yes
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         NOT = { year = 1860 }
     }
@@ -1235,8 +1233,8 @@ country_event = {
         }
         NOT = { war_with = ARC }
         NOT = {
-            has_recently_lost_war = yes
-            ARC = { has_recently_lost_war = yes }
+            has_country_modifier = recently_lost_war
+            ARC = { has_country_modifier = recently_lost_war }
         }
         NOT = { year = 1860 }
     }
@@ -1414,7 +1412,7 @@ country_event = {
         ruling_party_ideology = conservative
         OR = {
             AND = {
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
                 truce_with = BRZ
             }
             any_owned_province = {
@@ -1462,13 +1460,14 @@ country_event = {
 	trigger = {
         tag = URU
         year = 1870 
+		NOT = { year = 1875 }
 		ruling_party_ideology = liberal
 	}
 
 	fire_only_once = yes
 	
 	mean_time_to_happen =  {
-        months = 8
+        months = 1
 	}
 	
 	option = {

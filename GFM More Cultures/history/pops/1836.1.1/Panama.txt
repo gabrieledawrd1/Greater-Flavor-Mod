@@ -104,7 +104,13 @@
     farmers = {
         culture = central_american
         religion = catholic
-        size = 8050
+        size = 7650
+    }
+	
+	farmers = {
+        culture = kuna
+        religion = catholic
+        size = 400
     }
 
     clergymen = {
@@ -128,7 +134,7 @@
     farmers = {
         culture = afro_latino
         religion = catholic
-        size = 2675
+        size = 1675
     }
 
     slaves = {
@@ -142,61 +148,153 @@
     aristocrats = {
         culture = central_american
         religion = catholic
-        size = 150
+        size = 120
     }
 
     clergymen = {
         culture = central_american
         religion = catholic
-        size = 50
+        size = 35
     }
 
     artisans = {
         culture = central_american
         religion = catholic
-        size = 300
+        size = 250
     }
 
     soldiers = {
         culture = central_american
         religion = catholic
-        size = 75
+        size = 50
     }
 
     farmers = {
         culture = central_american
         religion = catholic
-        size = 5375
+        size = 1800
+    }
+	
+	farmers = {
+        culture = ngabe
+        religion = catholic
+        size = 700
     }
 
     clergymen = {
         culture = afro_latino
         religion = catholic
-        size = 20
+        size = 15
     }
 
     artisans = {
         culture = afro_latino
         religion = catholic
-        size = 50
+        size = 40
     }
 
     soldiers = {
         culture = afro_latino
         religion = catholic
-        size = 10
+        size = 5
     }
 
     farmers = {
         culture = afro_latino
         religion = catholic
-        size = 670
+        size = 200
     }
 
     slaves = {
         culture = afro_latino
         religion = catholic
-        size = 250
+        size = 200
+    }
+}
+#Bocas del Toro
+3564 = {
+    aristocrats = {
+        culture = central_american
+        religion = catholic
+        size = 30
+    }
+
+    clergymen = {
+        culture = central_american
+        religion = catholic
+        size = 15
+    }
+
+    artisans = {
+        culture = central_american
+        religion = catholic
+        size = 50
+    }
+
+    soldiers = {
+        culture = central_american
+        religion = catholic
+        size = 25
+    }
+
+    farmers = {
+        culture = central_american
+        religion = catholic
+        size = 200
+    }
+	
+	farmers = {
+        culture = teribe
+        religion = catholic
+        size = 600
+    }
+	
+	farmers = {
+        culture = bokota
+        religion = catholic
+        size = 800
+    }
+	
+	farmers = {
+        culture = ngabe
+        religion = catholic
+        size = 1300
+    }
+	
+	farmers = {
+        culture = bribri
+        religion = catholic
+        size = 375
+    }
+
+    clergymen = {
+        culture = afro_latino
+        religion = catholic
+        size = 5
+    }
+
+    artisans = {
+        culture = afro_latino
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = afro_latino
+        religion = catholic
+        size = 5
+    }
+
+    farmers = {
+        culture = afro_latino
+        religion = catholic
+        size = 70
+    }
+
+    slaves = {
+        culture = afro_latino
+        religion = catholic
+        size = 50
     }
 }
 #Penonome (24000/6000 POPS)
@@ -290,7 +388,7 @@
     farmers = {
         culture = central_american
         religion = catholic
-        size = 895
+        size = 695
     }
 
     aristocrats = {
@@ -320,37 +418,43 @@
     farmers = {
         culture = north_andean
         religion = catholic
-        size = 895
+        size = 595
     }
 
     aristocrats = {
-        culture = nahua #native_american_minor
+        culture = wounaan
         religion = animist
         size = 15
     }
 
     clergymen = {
-        culture = nahua #native_american_minor
+        culture = wounaan
         religion = animist
         size = 25
     }
 
     artisans = {
-        culture = nahua #native_american_minor
+        culture = wounaan
         religion = animist
         size = 50
     }
 
     soldiers = {
-        culture = nahua #native_american_minor
+        culture = wounaan
         religion = animist
         size = 10
     }
 
     farmers = {
-        culture = nahua #native_american_minor
+        culture = wounaan
         religion = animist
-        size = 900
+        size = 800
+    }
+	
+	farmers = {
+        culture = embera
+        religion = animist
+        size = 600
     }
 
 }

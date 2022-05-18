@@ -429,7 +429,7 @@ country_event = {
         NOT = {
             year = 1918
         }
-        expressionism = 1
+        impressionism = 1
     }
 
     fire_only_once = yes
@@ -438,7 +438,7 @@ country_event = {
         months = 24
         modifier = {
             factor = 0.4
-            mass_culture_n_the_avant_garde = 1
+            expressionism = 1
         }
     }
 
@@ -459,7 +459,7 @@ country_event = {
         is_culture_group = american_cultures
         capital_scope = { continent = north_america }
         year = 1912
-        mass_culture_n_the_avant_garde = 1
+        expressionism = 1
     }
 
     fire_only_once = yes
@@ -663,7 +663,7 @@ country_event = {
         months = 72
         modifier = {
             factor = 0.5
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
     }
 
@@ -1275,7 +1275,7 @@ country_event = {
         is_disarmed = yes
         war = no
         NOT = {    has_global_flag = capital_slavery_conference }
-        has_recently_lost_war = yes
+        has_country_modifier = recently_lost_war
         year = 1850
     }
 
@@ -1404,6 +1404,7 @@ country_event = {
     trigger = {
         tag = BRZ
         war = no
+		slavery = yes_slavery
         NOT = { has_global_flag = csa_brz_friendship }
         exists = CSA
         relation = {
@@ -2502,6 +2503,9 @@ country_event = {
             government = hms_government
             government = prussian_constitutionalism
             government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
         }
     }
     mean_time_to_happen = {
@@ -3585,7 +3589,7 @@ country_event = {
 			owner = {
 				USA = { country_event = 187942 }
 				relation = {
-					who = USA
+					who = ENG
 					value = -25
 				}
 			}
@@ -3595,7 +3599,7 @@ country_event = {
 			owner = {
 				US2 = { country_event = 187942 }
 				relation = {
-					who = US2
+					who = ENG
 					value = -25
 				}
 			}
@@ -3645,7 +3649,7 @@ country_event = {
             country_event = 187943
         }
         ai_chance = {
-            factor = 80
+            factor = 90
             modifier = {
                 factor = 0
                 OR = {
@@ -3692,7 +3696,7 @@ country_event = {
             country_event = 187944
         }
         ai_chance = {
-            factor = 20
+            factor = 10
             modifier = {
                 factor = 1.5
                 OR = {

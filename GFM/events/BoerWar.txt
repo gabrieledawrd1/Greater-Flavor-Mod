@@ -1193,12 +1193,6 @@ country_event = {
     option = {
         name = "EVT98216OPTA"
         prestige = -10
-        2069 = {
-            add_core = MAT
-            secede_province = MAT
-            life_rating = 25
-            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
-        }
         any_pop = {
             limit = { is_primary_culture = yes }
             dominant_issue = {
@@ -1547,6 +1541,7 @@ country_event = {
             }
             part_of_sphere = no
             is_greater_power = no
+			NOT = { war_with = THIS }
         }
 		NOT = { has_country_flag = no_more_witwatersrand }
     }
@@ -1694,6 +1689,7 @@ country_event = {
             truce_with = ENG
             truce_with = ENL
             truce_with = SAF
+			has_global_flag = sw_set
         }
     }
 
@@ -1954,7 +1950,7 @@ country_event = {
         }
         ai_chance = {
             factor = 0.05
-            modifier = { factor = 0.02 has_recently_lost_war = no NOT = { badboy = 0.87 } }
+            modifier = { factor = 0.02 NOT = { has_country_modifier = recently_lost_war } NOT = { badboy = 0.87 } }
             modifier = { factor = 0.02 war = no NOT = { badboy = 0.87 } }
             modifier = { factor = 0.02 is_disarmed = no NOT = { badboy = 0.87 } }
         }
@@ -2599,7 +2595,7 @@ country_event = {
         civilized = yes
         2094 = {
             empty = yes
-            NOT = { trade_goods = precious_metal }
+            NOT = { trade_goods = gems }
             }
         }
     fire_only_once = yes
@@ -2611,7 +2607,7 @@ country_event = {
         2094 = {
             secede_province = THIS
             change_province_name = "Kimberley"
-            trade_goods = precious_metal
+            trade_goods = gems
             add_province_modifier = { name = gold_rush duration = 1825 }
             any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
         }

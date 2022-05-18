@@ -2282,7 +2282,7 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 221600
+        size = 211200
     }
     
     farmers = {
@@ -2294,7 +2294,7 @@
     farmers = {
         culture = catalan
         religion = catholic
-        size = 1000
+        size = 6000
     }
     
     farmers = {
@@ -3619,7 +3619,13 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 51000
+        size = 30700
+    }
+	
+	farmers = {
+        culture = occitan
+        religion = catholic
+        size = 20300
     }
 	
 	farmers = {
@@ -3948,7 +3954,7 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 41100
+        size = 42100
     }
 
     farmers = {
@@ -3958,9 +3964,9 @@
     }
 
     farmers = {
-        culture = occitan
+        culture = provencal
         religion = catholic
-        size = 57100
+        size = 58100
     }
 	
 	aristocrats = {
@@ -4177,7 +4183,7 @@
     }
 
     clergymen = {
-        culture = occitan
+        culture = provencal
         religion = catholic
         size = 1050
     }
@@ -4195,7 +4201,7 @@
     }
 
     farmers = {
-        culture = occitan
+        culture = provencal
         religion = catholic
         size = 72000
     }
@@ -4335,7 +4341,7 @@
     artisans = {
         culture = french
         religion = catholic
-        size = 10000
+        size = 9500
     }
 
     artisans = {
@@ -4351,10 +4357,17 @@
     }
 
     artisans = {
-        culture = occitan
+        culture = basque
         religion = catholic
         size = 6000
     }
+	
+	artisans = {
+        culture = catalan
+        religion = catholic
+        size = 500
+    }
+	
     craftsmen = {
         culture = occitan
         religion = catholic
@@ -4463,19 +4476,19 @@
     }
 	
 	aristocrats = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 1200
     }
 
     clergymen = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 850
     }
 
     artisans = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 1000
     }
@@ -4495,13 +4508,13 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 51900
+        size = 52200
     }
 	
 	farmers = {
         culture = cagot
         religion = catholic
-        size = 1800
+        size = 1500
     }
 
     farmers = {
@@ -4511,33 +4524,39 @@
     }
 
     aristocrats = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 400
     }
 
     clergymen = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 350
     }
 
     artisans = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 2500
     }
 
     soldiers = {
-        culture = basque
+        culture = occitan
         religion = catholic
         size = 450
     }
 
     farmers = {
-        culture = basque
+        culture = occitan
         religion = catholic
-        size = 41130
+        size = 21130
+    }
+	
+	farmers = {
+        culture = french
+        religion = catholic
+        size = 11130
     }
     
     farmers = {
@@ -4593,11 +4612,11 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 39300
+        size = 29300
     }
 	
 	farmers = {
-        culture = cagot
+        culture = occitan
         religion = catholic
         size = 1400
     }
@@ -4629,7 +4648,7 @@
     farmers = {
         culture = basque
         religion = catholic
-        size = 52070
+        size = 72070
     }
 	
 	farmers = {
@@ -4673,7 +4692,7 @@
     }
 
     artisans = {
-        culture = french
+        culture = catalan
         religion = catholic
         size = 1100
     }
@@ -4681,13 +4700,19 @@
     soldiers = {
         culture = occitan
         religion = catholic
-        size= 1800
+        size = 1800
     }
 
     farmers = {
         culture = occitan
         religion = catholic
-        size = 81000
+        size = 45600
+    }
+	
+	farmers = {
+        culture = provencal
+        religion = catholic
+        size = 35400
     }
 
     farmers = {
@@ -4791,12 +4816,12 @@
         size = 210
     }
 }
-#Perpignan (164000/41000 POPS)
+#Perpignan/Perpinyà (164000/41000 POPS)
 464 = {
     aristocrats = {
         culture = occitan
         religion = catholic
-        size = 100
+        size = 50
     }
 
     clergymen = {
@@ -4808,7 +4833,13 @@
     artisans = {
         culture = occitan
         religion = catholic
-        size = 1250
+        size = 250
+    }
+	
+	artisans = {
+        culture = cagot
+        religion = catholic
+        size = 500
     }
 
     soldiers = {
@@ -4820,19 +4851,13 @@
     farmers = {
         culture = occitan
         religion = catholic
-        size = 10925
-    }
-	
-	farmers = {
-        culture = cagot
-        religion = catholic
-        size = 500
+        size = 10825
     }
 
     aristocrats = {
         culture = catalan
         religion = catholic
-        size = 200
+        size = 250
     }
 
     clergymen = {
@@ -4844,7 +4869,7 @@
     artisans = {
         culture = catalan
         religion = catholic
-        size = 2250
+        size = 2750
     }
 
     soldiers = {
@@ -4856,19 +4881,13 @@
     farmers = {
         culture = catalan
         religion = catholic
-        size = 25875
-    }
-    
-    farmers = {
-        culture = aragonese
-        religion = catholic
-        size = 900
+        size = 27975
     }
     
     farmers = {
         culture = french
         religion = catholic
-        size = 1900
+        size = 1400
     }
 	
 	farmers = {
@@ -4883,37 +4902,37 @@
 #Annecy (258400/64600 POPS)
 465 = {
     aristocrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 600
     }
 
     officers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 100
     }
 
     bureaucrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 200
     }
 
     clergymen = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 350
     }
 
     artisans = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 3250
     }
 
     soldiers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 1000
     }
@@ -4946,31 +4965,31 @@
 #Chambery (228400/57100 POPS)
 466 = {
     aristocrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 550
     }
 
     clergymen = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 375
     }
 
     artisans = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 2800
     }
 
     soldiers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 1000
     }
 
     farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 26375
     }
@@ -5161,7 +5180,7 @@
     }
     
     farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 300
     }
@@ -5313,31 +5332,31 @@
 #Nice (Sardinian until 1860) (170800/42700 POPS)
 472 = {
     aristocrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 450
     }
 
     clergymen = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 225
     }
 
     artisans = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 6000
     }
 
     soldiers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 1000
     }
 
     farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 19025
     }
@@ -5425,7 +5444,7 @@
     }
 	
 	farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 4000
     }

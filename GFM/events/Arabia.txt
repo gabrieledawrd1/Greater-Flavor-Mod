@@ -16,7 +16,7 @@ country_event = {
 		tag = TUR
         civilized = yes
 		OR = {
-			has_recently_lost_war = yes
+			has_country_modifier = recently_lost_war
 			national_provinces_occupied = 0.4
 		}
         OR = {
@@ -575,6 +575,7 @@ country_event = {
 		1170 = { remove_core = NEJ }
 		12 = { remove_core = NEJ }
         NEJ_1156 = { add_core = NEJ } #Kaf
+		3278 = { add_core = NEJ }
 		1156 = { add_core = NEJ }
 		2639 = { add_core = NEJ }
         1157 = { secede_province = NEJ }
@@ -734,7 +735,7 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         modifier = {
             factor = 1.5
@@ -808,7 +809,7 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            has_recently_lost_war = yes
+            has_country_modifier = recently_lost_war
         }
         modifier = {
             factor = 1.5

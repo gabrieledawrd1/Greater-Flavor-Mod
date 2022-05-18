@@ -2343,6 +2343,12 @@ country_event = {
         }
         civilized = no
         has_country_modifier = western_influences
+		OR = {
+			any_owned_province = { is_coastal = yes }
+			any_neighbor_country = { 
+				capital_scope = { continent = europe }
+			}
+		}
         any_owned_province = {
             NOT = { has_province_modifier = european_military_mission }
             NOT = { has_province_modifier = boxer_presence }
@@ -4119,7 +4125,7 @@ country_event = {
         }
         civilized = no
         has_country_modifier = uncivilized_isolationism
-        has_recently_lost_war = yes
+        has_country_modifier = recently_lost_war
     }
 
     mean_time_to_happen = {
@@ -4232,6 +4238,7 @@ country_event = {
 			tag = JAI
 			tag = HYD
 			tag = MAH
+			tag = KUT
 			tag = MYS
 			tag = BER
 			tag = IND
@@ -4462,6 +4469,42 @@ country_event = {
         prestige = 5
         tech_school = traditional_academic
         clr_country_flag = lacking_writing_system
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = give_advisor_tech_on_civ
+				}
+			}
+			owner = {
+				activate_technology = military_staff_system
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = give_army_tech_on_civ
+				}
+			}
+			owner = {
+				activate_technology = flintlock_rifles 
+				activate_technology = muzzle_loaded_rifles 
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = post_napoleonic_thought
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = give_navy_tech_on_civ
+				}
+			}
+			owner = {
+				activate_technology = steamers 
+				activate_technology = clipper_design 
+				activate_technology = post_nelsonian_thought
+			}
+		}
         random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
         random_owned = {
             limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
@@ -4587,7 +4630,7 @@ province_event = {
             NOT = { is_culture_group = far_east_asian }
             }
         NOT = { any_neighbor_province = { owned_by = THIS } }
-        any_neighbor_province = { owner = { capital_scope = {continent = asia } } }
+        any_neighbor_province = { owner = { capital_scope = { continent = asia } } }
     }
 
     mean_time_to_happen = { months = 8 }
@@ -4597,7 +4640,7 @@ province_event = {
         trade_goods = precious_goods
         any_pop = { limit = { is_culture_group = east_asian } reduce_pop = 1.1 }
         add_province_modifier = { name = treaty_port duration = -1 }
-        naval_base = 1
+		naval_base = 1
     }
 }
 
@@ -4656,7 +4699,7 @@ province_event = {
     trigger = {
         province_id = 1496
         1496 = { trade_goods = precious_goods }
-        1496 = { owner = { civilized = yes capital_scope = { NOT = {continent = asia } } } }
+        1496 = { owner = { civilized = yes capital_scope = { NOT = { continent = asia } } } }
     }
 
     fire_only_once = yes
@@ -4750,7 +4793,7 @@ province_event = {
             NOT = { is_culture_group = far_east_asian }
         }
         NOT = { any_neighbor_province = { owned_by = THIS } }
-        any_neighbor_province = { owner = { capital_scope = {continent = asia } } }
+        any_neighbor_province = { owner = { capital_scope = { continent = asia } } }
     }
 
     mean_time_to_happen = { months = 8 }

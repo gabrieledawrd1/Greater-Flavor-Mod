@@ -619,7 +619,7 @@ country_event = {
         }
         year = 1917
         press_rights = free_press
-        expressionism = 1
+        impressionism = 1
         NOT = {
             year = 1925
         }
@@ -1016,6 +1016,7 @@ country_event = {
         owns = 2491 #Adelaide
         NOT = {
             exists = AST
+			exists = FAS
             year = 1886
         }
     }
@@ -1442,7 +1443,7 @@ country_event = {
             tag = ENL
         }
         year = 1897
-        expressionism = 1
+        impressionism = 1
         NOT = {
             year = 1905
         }
@@ -1581,6 +1582,7 @@ country_event = {
         owns = 2491 #Adelaide
         NOT = {
             year = 1864
+			exists = FAS
         }
     }
 
@@ -2356,14 +2358,14 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        months = 1
     }
 
     option = {
         name = "EVT36965OPTA"
         set_country_flag = lagos_slave_trade
         1923 = { owner = { country_event = 36966 } }
-        1923 = { secede_province = THIS }
+        1923 = { secede_province = THIS trade_goods = fish }
         relation = { who = SOK value = -400 }
         relation = { who = OYO value = -400 }
         relation = { who = ARO value = -400 }
@@ -2832,7 +2834,7 @@ country_event = {
             relation = { who = KAS value = 400 }
             KAS = {
                 civilized = no
-                government = absolute_monarchy
+                government = colonial_company
                 any_pop = { militancy = 1 consciousness = 2 }
                 military_reform = yes_foreign_weapons
                 military_reform = yes_foreign_training
@@ -2878,8 +2880,15 @@ country_event = {
                 limit = {
                     owner = { ai = yes neighbour = RUS }
                     OR = {
-                        region = RUS_1196
-                        region = KHI_1191
+						region = RUS_1196
+						region = KHI_1191
+						province_id = 2656
+						province_id = 29
+						province_id = 1198
+						province_id = 1200
+						province_id = 1199
+						province_id = 1195
+						province_id = 1202
                         region = KOK_1190
                     }
                 }
@@ -3394,14 +3403,28 @@ country_event = {
 
     option = {
         name = "EVTOPTA315004"
-        random_owned = { limit = { owner = { tag = ENG } } owner = { prestige = 15 relation = { who = USA value = 10 } relation = { who = US2 value = 10 } } }
-        random_owned = { limit = { OR = { owner = { tag = USA } owner = { tag = US2 } } }
-            owner = {
-                prestige = 15
-                relation = { who = ENG value = 10 }
-                ENG = { country_event = 315004 }
-            }
-        }
+        prestige = 15
+        relation = { who = ENG value = 10 }
+        ENG = { country_event = 3150041 }
+    }
+}
+
+
+#David Livingstone is Found
+country_event = {
+
+    id = 3150041
+    title = "EVTNAME315004"
+    desc = "EVTDESC315004"
+    picture = "dr_livingstone"
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA315004"
+        prestige = 15 
+		relation = { who = USA value = 10 } 
+		relation = { who = US2 value = 10 }
     }
 }
 
@@ -3764,7 +3787,16 @@ country_event = {
 
     trigger = {
         tag = ENG
-        any_greater_power = { alliance_with = ENG }
+		OR = {
+			AND = {
+				any_greater_power = { alliance_with = ENG }
+				NOT = { has_country_flag = ai_splendid_isolation }
+			}
+			AND = {
+				any_greater_power = { AND = { ai = yes alliance_with = ENG } }
+				has_country_flag = ai_splendid_isolation
+			}			
+		}
         NOT = { exists = IRE }
         has_country_modifier = pax_britannica
         NOT = { exists = GER }
@@ -3787,6 +3819,10 @@ country_event = {
                 NOT = { alliance_with = THIS }
             }
             TUR = { is_greater_power = no }
+			AND = {
+				has_country_flag = ai_splendid_isolation
+				TUR = { ai = no }
+			}
         }
         OR = {
             BEL = {
@@ -3794,6 +3830,10 @@ country_event = {
                 NOT = { alliance_with = THIS }
             }
             BEL = { is_greater_power = no }
+			AND = {
+				has_country_flag = ai_splendid_isolation
+				BEL = { ai = no }
+			}
         }
         OR = {
             JAP = {
@@ -3801,6 +3841,10 @@ country_event = {
                 NOT = { alliance_with = THIS }
             }
             JAP = { is_greater_power = no }
+			AND = {
+				has_country_flag = ai_splendid_isolation
+				JAP = { ai = no }
+			}
         }
         OR = {
             POR = {
@@ -3808,6 +3852,10 @@ country_event = {
                 NOT = { alliance_with = THIS }
             }
             POR = { is_greater_power = no }
+			AND = {
+				has_country_flag = ai_splendid_isolation
+				POR = { ai = no }
+			}
         }
         OR = {
             UPB = {
@@ -3815,22 +3863,58 @@ country_event = {
                 NOT = { alliance_with = THIS }
             }
             UPB = { is_greater_power = no }
+			UPB = {
+				has_country_flag = ai_splendid_isolation
+				UPB = { ai = no }
+			}
         }
     }
 
     option = {
         name = "EVT99930OPT"
-        any_greater_power = {
-            limit = {
-                NOT = {
-                    tag = BEL
-                    tag = TUR
-                }
-                alliance_with = ENG
-            }
-            leave_alliance = THIS
-            relation = { who = THIS value = -150 }
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = ai_splendid_isolation }
+				}
+			}
+			owner = {
+				any_greater_power = {
+					limit = {
+						NOT = {
+							tag = BEL
+							tag = TUR
+							tag = JAP
+						}
+						alliance_with = ENG
+					}
+					leave_alliance = THIS
+					relation = { who = THIS value = -150 }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = ai_splendid_isolation
+				}
+			}
+			owner = {
+				any_greater_power = {
+					limit = {
+						ai = yes
+						NOT = {
+							tag = BEL
+							tag = TUR
+							tag = JAP
+						}
+						alliance_with = ENG
+					}
+					leave_alliance = THIS
+					relation = { who = THIS value = -150 }
+				}
+			}
+		}
     }
 }
 
@@ -3887,11 +3971,16 @@ country_event = {
             AND = {
                 exists = IRE
                 NOT = { year = 1905 }
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
-            NOT = { exists = BEL }
+			AND = {
+				NOT = { exists = BEL }
+				NOT = { AND = { has_global_flag = you_are_playing_mp NET = { ai = no } } }
+				NOT = { AND = { has_country_flag = ai_splendid_isolation NET = { ai = no } } }
+			}
             NOT = { rank = 1 }
             has_global_flag = EIC_independence
+			has_global_flag = prussia_lost_brothers_war
         }
     }
 
@@ -3902,7 +3991,7 @@ country_event = {
         prestige = -25
         remove_country_modifier = pax_britannica
         any_greater_power = {
-            limit = { NOT = { truce_with = ENG } }
+            limit = { NOT = { truce_with = ENG war_with = ENG } }
             relation = { who = ENG value = 100 }
         }
     }
@@ -4235,6 +4324,33 @@ province_event = {
     }
 }
 
+#Malta Sette Guigno
+country_event = {
+    id = 99108
+    title = "EVTNAME99108"
+    desc = "EVTDESC99108"
+	picture = "sette_uigno"
+    fire_only_once = yes
+
+    trigger = {
+	year = 1919
+	854 = { owned_by = THIS }
+	NOT = { year = 1921 }
+	}
+	
+    mean_time_to_happen = { months = 3 }
+
+    option = {
+        name = "EVT99108OPT"
+		854 = {
+			any_pop = {
+			militancy = 5
+			consciousness = 6
+			}
+		}
+	}
+}
+
 #####################################################
 #British Home Events#
 #####################################################
@@ -4473,7 +4589,7 @@ country_event = {
             diplomatic_influence = { who = NEW value = -400 }
             diplomatic_influence = { who = NZL value = -400 }
         }
-        set_country_flag = imperial_preference set_country_flag = Government_Dominion
+        set_country_flag = imperial_preference
     }
 
     ###Grant Dominion Status, Grant Irish Home Rule###
@@ -4744,12 +4860,12 @@ country_event = {
 country_event = {
     id = 21370001
     title = "The Commonwealth wants to buy Trinidad and Tobago"
-    desc = "Diplomats from Poland have approached our goverment today with a proposition to buy the Caribbean islands of Trinidad and Tobago for a good price to retake back their once existing colonies. What will be our answear?"
+    desc = "Diplomats from Poland have approached our goverment today with a proposition to buy the Caribbean islands of Trinidad and Tobago for a good price to retake back their once existing colonies. What will be our answer?"
 
     is_triggered_only = yes
 
     option = {
-        name = "We accept to sale the island's to the $FROMCOUNTRY$'s."
+        name = "We accept to sale the island's to $FROMCOUNTRY$."
         money = 75000
         2237 = { remove_core = THIS }
         2238 = { remove_core = THIS }
@@ -4769,7 +4885,7 @@ country_event = {
     }
 
     option = {
-        name = "We dont want to sell the island's"
+        name = "We don't want to sell the islands."
         FROM = { country_event = 21370003 }
         relation = { who = FROM value = -50 }
     }
@@ -4777,8 +4893,8 @@ country_event = {
 
 country_event = {
 id = 21370002
-title = "The british accept!"
-desc = "The british have accepted our offer to buy the island's of Trinidad and Tobago!"
+title = "The British accept!"
+desc = "The British have accepted our offer to buy the islands of Trinidad and Tobago!"
 
 is_triggered_only = yes
 
@@ -4799,8 +4915,8 @@ is_triggered_only = yes
 
 country_event = {
     id = 21370003
-    title = "The british have declined our offer..."
-    desc = "The british goverment has declined our offer to buy Trinidad and Tobago"
+    title = "The British have declined our offer..."
+    desc = "The British goverment has declined our offer to buy Trinidad and Tobago"
 
     is_triggered_only = yes
 
@@ -4812,13 +4928,13 @@ country_event = {
 
 country_event = {
     id = 21371001
-    title = "The polish want to buy The Gambia from us"
-    desc = "Polish goverment sent us an offer to buy The Gambia colony for a good price, the colony once was their's and they would like to buy it."
+    title = "The Polish want to buy The Gambia from us"
+    desc = "The Polish goverment sent us an offer to buy The Gambia colony for a good price, the colony once was theirs and they would like to buy it."
 
     is_triggered_only = yes
 
     option = {
-        name = "Sure, we will sell the colony to the polish"
+        name = "Sure, we will sell the colony to the Polish."
         money = 50000
         1785 = { remove_core = THIS }
         FROM = { country_event = 21371002 }
@@ -4837,16 +4953,16 @@ country_event = {
     }
 
     option = {
-        name = "We dont want to sell the the colony to the polish"
+        name = "We don't want to sell the the colony to the Polish."
         FROM = { country_event = 21371003 }
-        relation = {who = FROM value = -50 }
+        relation = { who = FROM value = -50 }
     }
 }
 
 country_event = {
     id = 21371002
-    title = "The british accept our offer for The Gambia!"
-    desc = "The british goverment has accepted our offer to buy The Gambia colony!"
+    title = "The British accept our offer for The Gambia!"
+    desc = "The British goverment has accepted our offer to buy The Gambia colony!"
 
     is_triggered_only = yes
 
@@ -4864,8 +4980,8 @@ country_event = {
 
 country_event = {
     id = 21371003
-    title = "The british decline the offer"
-    desc = "The british goverment has refused to sell us The gambia colony."
+    title = "The British decline the offer"
+    desc = "The British goverment has refused to sell us The Gambia colony."
 
     is_triggered_only = yes
 
@@ -4885,7 +5001,7 @@ country_event = {
 	
 	trigger = {
 		tag = ENG
-		has_recently_lost_war = yes
+		has_country_modifier = recently_lost_war
 		NOT = {
 			owns = 2087
 			2087 = {
@@ -4992,8 +5108,8 @@ country_event = {
 country_event = {
 	id = 17141715
 	picture = "leicester_baloon"
-	title = "EVTNAME999101"
-	desc = "EVTDESC999101"
+	title = "EVTNAME9991011"
+	desc = "EVTDESC9991011"
 	
 	fire_only_once = yes
 	
@@ -5031,5 +5147,166 @@ country_event = {
 		prestige = 5
 		300 = { infrastructure = 1 }
 		any_pop = { limit = { location = { province_id = 300 } } consciousness = 1 }
+	}
+}
+
+country_event = {
+	id = 16121913
+	picture = "moriori_massacres"
+	title = "Enslavement of the Moriori"
+    desc = "EVTDESC16121913"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		owns = 3494
+		year = 1862
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Make them stop this nonsense."
+		prestige = 5
+		any_pop = { limit = { location = { province_id = 3494 } } consciousness = 10 reduce_pop = 0.1 }
+	}
+}
+
+country_event = {
+	id = 16121914
+	picture = "amazonexpedit_engl"
+	title = "The Naturalist on the River Amazons"
+    desc = "EVTDESC16121914"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		exists = ENG
+		year = 1863
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "What a great book."
+		prestige = 2
+		any_pop = { limit = { location = { is_core = THIS } } consciousness = -0.1 }
+	}
+}
+
+country_event = { 
+	id = 16121915 
+	title = "Construction of the Cape Town Railway"
+	desc = "EVTDESC16121915"
+	picture = "capetown_railway"
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = ENG 
+		owns = 2087 
+		SAF = { exists = no } 
+		2087 = { 
+			NOT = { has_building = railroad } 
+		}
+		year = 1860
+		war = no 
+	} 
+
+	option = { 
+		name = "By rail, road, and sea, all the world shall be connected!" 
+		2087 = { infrastructure = 1 } 
+		prestige = 1 
+	}
+	
+	mean_time_to_happen = { 
+		months = 5
+		modifier = { 
+			factor = 0.5
+			steel_railroad = 1
+		}
+	}
+}
+country_event = {
+	id = 16121916
+	picture = "british_everest"
+	title = "The 1924 British Mount Everest Expedition"
+    desc = "EVTDESC16121916"
+
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = ENG
+		OR = {
+			owns = 1326
+			1326 = { owner = { neighbour = THIS war = no } }
+		}
+		owns = 1247
+		year = 1924
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Surely they got to the top..."
+		prestige = 5
+	}
+}
+
+country_event = {
+	id = 16121917
+	picture = "basuto_gunwar"
+	title = "The Basuto Gun War"
+    desc = "BASUTOGUNWAR"
+
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		tag = ENG
+		year = 1880
+		month = 8
+		owns = 2104
+	}
+
+	mean_time_to_happen = { days = 13 }
+
+	option = {
+		name = "Fight them!"
+		2104 = { secede_province = BSH }
+		war = {
+            target = BSH
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = humiliate_no_infamy }
+        }
+		2104 = { 
+			sub_unit = { type = infantry value = current }
+			sub_unit = { type = infantry value = current } 
+		}
+	}
+	
+	option = {
+		name = "Telele phelang Basotho! §BPlay as Basotho§W"
+		2104 = { secede_province = BSH }
+		war = {
+            target = BSH
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = humiliate_no_infamy }
+        }
+		2104 = { 
+			sub_unit = { type = infantry value = current }
+			sub_unit = { type = infantry value = current } 
+		}
+		change_tag_no_core_switch = BSH
+	}
+	
+	option = {
+		name = "Pass the disannexation act."
+		2104 = { secede_province = BSH }
+		create_vassal = BSH
+		prestige = -5
 	}
 }

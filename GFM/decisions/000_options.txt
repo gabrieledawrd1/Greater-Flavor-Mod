@@ -56,6 +56,21 @@ political_decisions = {
         }
     }
 	
+	enable_dismantlement_cb_testing = {
+		alert = no
+		picture = starting_options
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { year = 1837 }
+			NOT = { has_country_flag = literally_cheating }
+		}
+		allow = {}
+		effect = {
+			set_country_flag = literally_cheating
+		}
+	}
+	
 	option_disable_radicals = {
         picture = starting_options
         alert = no
@@ -121,7 +136,6 @@ political_decisions = {
                 secede_province = THIS
             }
             91 = { secede_province = THIS }
-            2549 = { secede_province = THIS }
             3275 = { secede_province = THIS }
             3295 = { secede_province = THIS }
             1411 = { secede_province = THIS }
@@ -196,7 +210,8 @@ political_decisions = {
             1994 = { secede_province = THIS }
             POR_2006 = { secede_province = THIS }
             POR_2003 = { secede_province = THIS }
-            RUS_2590 = { secede_province = THIS }
+            2666 = { secede_province = THIS }
+            2661 = { secede_province = THIS }
             ENG_2509 = { secede_province = THIS }
             ENG_2513 = { secede_province = THIS }
             ENG_2491 = { secede_province = THIS }
@@ -208,6 +223,20 @@ political_decisions = {
             2133 = { secede_province = THIS }
             3414 = { secede_province = THIS }
             2018 = { secede_province = THIS }
+			2352 = { secede_province = THIS }
+			2117 = { secede_province = THIS }
+			1991 = { secede_province = THIS }
+			1990 = { secede_province = THIS }
+			3505 = { secede_province = THIS }
+			1158 = { secede_province = THIS }
+			1170 = { secede_province = THIS }
+			12 = { secede_province = THIS }
+			2117 = { secede_province = THIS }
+			1172 = { secede_province = THIS }
+			3273 = { secede_province = THIS }
+			1161 = { secede_province = THIS }
+			1180 = { secede_province = THIS }
+			3540 = { secede_province = THIS }
             ENG_2067 = { secede_province = THIS }
             ENG_1887 = { secede_province = THIS }
             FRA_1884 = { secede_province = THIS }
@@ -234,7 +263,7 @@ political_decisions = {
             CAN_13 = { secede_province = THIS }
             SPA_610 = { secede_province = THIS }
             SPA_1955 = { secede_province = THIS }
-            RUS_2618 = { secede_province = THIS }
+            RUS_1074 = { secede_province = THIS }
             1644 = { secede_province = THIS }
             2630 = { secede_province = THIS }
         }
@@ -296,24 +325,24 @@ political_decisions = {
         }
     }
 
-    option_enable_fantasy_countries = {
-        picture = starting_options
-        alert = no
-        potential = {
-            ai = no
-            has_country_flag = country_looking_through_options
-            NOT = { year = 1837 }
-            NOT = { has_global_flag = fantasy_countries_enabled }
-        }
-
-        allow = {
-        }
-
-        effect = {
-            set_global_flag = fantasy_countries_enabled
-        }
-        ai_will_do = { factor = 0 }
-    }
+    #option_enable_fantasy_countries = {
+    #    picture = starting_options
+    #    alert = no
+    #    potential = {
+    #        ai = no
+    #        has_country_flag = country_looking_through_options
+    #        NOT = { year = 1837 }
+    #        NOT = { has_global_flag = fantasy_countries_enabled }
+    #    }
+	#
+    #    allow = {
+    #    }
+	#
+    #    effect = {
+    #        set_global_flag = fantasy_countries_enabled
+    #    }
+    #    ai_will_do = { factor = 0 }
+    #}
 
     option_enable_easter_eggs = {
         picture = starting_options
@@ -1435,20 +1464,18 @@ political_decisions = {
 					OR = {
 						government = absolute_monarchy
 						government = absolute_empire
+						government = presidential_dictatorship
 					}
-					average_militancy = 1
-				}
-				AND = {
-					government = presidential_dictatorship
-					average_militancy = 1
+					average_militancy = 4
 				}
 				AND = {
 					OR = {
 						government = prussian_constitutionalism
 						government = semi_constitutional_empire
 					}
-					average_militancy = 3
+					average_militancy = 5
 				}
+				national_provinces_occupied = 0.30
 			}
         }
 
@@ -1462,8 +1489,9 @@ political_decisions = {
 				value = 1
             }
             any_pop = {
-				militancy = 3
+				militancy = 4
             }
+			plurality = -5
         }
         
     }
@@ -1518,7 +1546,7 @@ political_decisions = {
             NOT = { has_country_modifier = grant_cooldown }
         }
         effect = {
-            country_event = {id = 100000 days = 0}
+            country_event = { id = 100000 days = 0}
             add_country_modifier = {
                 name = grant_cooldown
                 duration = 30

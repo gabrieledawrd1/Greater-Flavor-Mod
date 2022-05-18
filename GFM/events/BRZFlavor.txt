@@ -109,12 +109,18 @@ country_event = { #Bahia Republic
 
     trigger = {
         owns = 2436
+		is_vassal = no
         tag = BRZ
+        OR = {
+            government = absolute_empire
+            government = semi_constitutional_empire
+            government = constitutional_empire
+        }
         year = 1837
-            OR = {
-                slavery = yes_slavery
-                slavery = freedom_of_womb
-            }
+        OR = {
+            slavery = yes_slavery
+            slavery = freedom_of_womb
+        }
         NOT = { year = 1840 }
     }
 
@@ -510,6 +516,7 @@ country_event = {
     option = {
         name = "EVTOPTA46305"
         any_pop = { limit = { location = { province_id = 2410 } } reduce_pop = 0.4 }
+		clr_country_flag = cabanagem_revolt
     }
 }
 
@@ -523,6 +530,11 @@ country_event = {
     trigger = {
         owns = 2425 #Chapada
         tag = BRZ
+        OR = {
+            government = absolute_empire
+            government = semi_constitutional_empire
+            government = constitutional_empire
+        }
         year = 1838
         any_owned_province = {
             OR = {
@@ -544,6 +556,7 @@ country_event = {
             ruling_party_ideology = reactionary
         }
         NOT = { year = 1842 }
+		is_vassal = no
     }
 
     fire_only_once = yes
@@ -589,6 +602,7 @@ country_event = {
             }
             secede_province = MAR
         }
+        MAR = { government = democracy }
         war = {
             target = MAR
             attacker_goal = { casus_belli = conquest_any }
@@ -619,8 +633,8 @@ country_event = {
         name = "This will give us the chance we need to win."
         define_general = {
             name = "Giuseppe Garibaldi"
-            personality = heroic
-            background = rising_star
+            personality = no_personality
+            background = no_background
         }
         small_arms = 5
         canned_food = 15
@@ -746,7 +760,11 @@ country_event = {
         FROM = {
             any_owned = {
                 limit = {
-                    is_core = GUY
+                    OR = {
+						is_core = GUY
+						is_core = AMA
+						is_core = RIG
+					}
                 }
                 add_core = THIS
                 secede_province = THIS

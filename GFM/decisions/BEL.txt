@@ -7,7 +7,7 @@ political_decisions = {
         }
 
         allow = {
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
 			rank = 12
 			idealism = 1
 			NET = { all_core = { owned_by = THIS } }
@@ -24,6 +24,7 @@ political_decisions = {
 			change_tag = BNF
 			add_accepted_culture = dutch
 			add_accepted_culture = frisian
+			add_accepted_culture = wallonian
 			primary_culture = flemish
 			prestige = 20
 			badboy = 7
@@ -142,7 +143,7 @@ political_decisions = {
         effect = {
             set_global_flag = called_congo_conference
             any_country = {
-                limit = { is_greater_power = yes capital_scope = {continent = europe } NOT = { tag = TUR tag = RUS tag = THIS } }
+                limit = { is_greater_power = yes capital_scope = { continent = europe } NOT = { tag = TUR tag = RUS tag = THIS } }
                 country_event = { id = 955182 days = 0 }
             }
             set_variable = { which = no_to_congo value = 0 }
@@ -610,7 +611,6 @@ political_decisions = {
             add_accepted_culture = flemish
             387 = { change_province_name = "Brussel" }
             set_global_flag = dutch_rename_brussels
-            clr_global_flag = france_rename_brussels
             any_pop = {
                 limit = {
                     has_pop_culture = flemish
@@ -618,6 +618,30 @@ political_decisions = {
                 militancy = -5
                 consciousness = -5
             }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	belgian_spolarexp = {
+        picture = belgian_spolarexp
+        potential = {
+			NOT = { has_country_flag = belgian_spolarexp }
+			tag = BEL
+			year = 1897
+			month = 8
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            prestige = 5
+            years_of_research = 0.10
+			set_country_flag = belgian_spolarexp
         }
 
         ai_will_do = {

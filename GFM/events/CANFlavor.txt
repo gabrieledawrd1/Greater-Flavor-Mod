@@ -856,6 +856,7 @@ country_event = {
     major = yes
 
     trigger = {
+		year = 1842
         OR = {
             tag = ENG
             tag = ENL
@@ -1604,6 +1605,28 @@ country_event = {
                 any_pop = { militancy = -6 }
                 secede_province = CAN
             }
+			# Audax Validator "." Ignore_NEXT
+			random_owned = {
+				# Audax Validator "." Ignore_NEXT
+				limit = {
+					# Audax Validator "." Ignore_NEXT
+					owner = {
+						ai = yes
+					}
+				}
+				# Audax Validator "." Ignore_NEXT
+				owner = {
+					# Audax Validator "." Ignore_NEXT
+					any_land_province = {
+						# Audax Validator "." Ignore_NEXT
+						limit = {
+							empty = yes
+							is_core = THIS
+						}
+						secede_province = THIS
+					}
+				}
+			}
         }
         ai_chance = {
             factor = 95
@@ -2268,5 +2291,27 @@ country_event = {
                 factor = 0.10
             }
         }
+    }
+}
+
+country_event = {
+    id = 44304
+    title = "The Halifax Explosion"
+    desc = "HALIFAXEXPLOSION"
+    picture = "halifax_explosion"
+
+    trigger = {
+        owns = 71
+        year = 1917
+		month = 11
+    }
+
+    mean_time_to_happen = {
+        days = 11
+    }
+
+    option = {
+        name = "What a tragedy!"
+        any_pop = { limit = { location = { province_id = 71 } } reduce_pop = 0.99 }
     }
 }

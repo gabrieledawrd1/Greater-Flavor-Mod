@@ -622,6 +622,7 @@ country_event = {
             relation = { who = THIS value = 100 }
             diplomatic_influence = { who = THIS value = 100 }
         }
+		government = absolute_monarchy
         random_country = {
             limit = {
                 OR = {
@@ -807,7 +808,7 @@ country_event = {
             factor = 90
             modifier = {
                 factor = 0.5
-                HUN = { national_provinces_occupied = .25 }
+                HUN = { national_provinces_occupied = 0.25 }
             }
             modifier = {
                 factor = 0.5
@@ -854,7 +855,7 @@ country_event = {
             factor = 10
             modifier = {
                 factor = 4
-                HUN = { national_provinces_occupied = .25 }
+                HUN = { national_provinces_occupied = 0.25 }
             }
             modifier = {
                 factor = 2
@@ -1062,7 +1063,7 @@ country_event = {
     id = 32521
     title = "EVTNAME32521" #Treaty of Shimoda
     desc = "EVTDESC32521"
-    picture = "kurils"
+    picture = "putiatin_mission"
 
     is_triggered_only = yes
 
@@ -1074,6 +1075,63 @@ country_event = {
                 owner = { is_greater_power = no }
             }
             FROM = { diplomatic_influence = { who = THIS value = 50 } }
+        }
+		1089 = { remove_core = RUS }
+		1089 = { add_core = THIS }
+		1088 = { remove_core = THIS }
+		1088 = { add_core = RUS }
+		1088 = { secede_province = RUS }
+		1661 = { 
+			add_province_modifier = { 
+				name = opened_port 
+				duration = 150 
+			} 
+		} 
+		1642 = { 
+			add_province_modifier = { 
+				name = opened_port 
+				duration = 150 
+			} 
+		} 
+		1676 = { 
+			add_province_modifier = { 
+				name = opened_port 
+				duration = 150 
+			} 
+		} 
+        ai_chance = {
+            factor = 99
+        }
+    }
+    option = {
+        name = "Bah! Send them away!"
+        relation = { who = FROM value = -100 }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = no }
+            }
+            FROM = { diplomatic_influence = { who = THIS value = -50 } }
+        }
+		1087 = { add_core = THIS }
+		1086 = { add_core = THIS }
+		1089 = { add_core = THIS }
+		1088 = { add_core = THIS }
+		1089 = { add_core = RUS }
+		1088 = { add_core = RUS }
+		1087 = { add_core = RUS }
+		1086 = { add_core = RUS }
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = eturofu_given
+				}
+			}
+			owner = {
+				1089 = { secede_province = RUS }
+			}
+		} 
+        ai_chance = {
+            factor = 1
         }
     }
 }
@@ -2078,6 +2136,48 @@ country_event = { ##rework
         add_province_modifier = { name = population_resettlement duration = 1460 }
         remove_province_modifier = nationalist_agitation
         }
+		
+		1080 = { poor_strata = {
+        limit = {
+            OR = {
+                has_pop_culture = manchu
+                has_pop_culture = han_chinese
+                }
+            }
+            random_list = {
+                34 = { reduce_pop = 0.9 }
+                33 = { reduce_pop = 0.8 }
+                33 = { reduce_pop = 0.7 }
+                }
+                move_pop = 1553
+            }
+            any_pop = {
+            limit = {
+            OR = {
+                has_pop_culture = manchu
+                has_pop_culture = han_chinese
+                }
+            }
+                militancy = 7
+                consciousness = 9
+            }
+            any_pop = {
+            limit = {
+            OR = {
+                has_pop_culture = manchu
+                has_pop_culture = han_chinese
+                }
+            OR = {
+                pop_type = artisans
+                pop_type = clergymen
+                pop_type = bureaucrats
+                }
+            }
+            pop_type = labourers
+            }
+        add_province_modifier = { name = population_resettlement duration = 1460 }
+        remove_province_modifier = nationalist_agitation
+        }
     }
 }
 
@@ -2701,90 +2801,87 @@ country_event = {
         }
     }
 }
-country_event = {
-    id = 188245
-    title = "EVTNAME188245" #Integrate Finland
-    desc = "EVTDESC188245"
-    picture = "treaty"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Accept our fate, there is nothing we can do..."
-        any_country = {
-            limit = {
-                is_sphere_leader_of = FIN
-                NOT = { tag = RUS }
-            }
-            relation = { who = FROM value = -50 }
-        }
-        FROM = {
-            prestige = 10
-            release_vassal = FIN
-            inherit = FIN
-            any_pop = {
-                limit = {
-                    location = { is_core = FIN }
-                    is_primary_culture = no
-                    is_accepted_culture = no
-                }
-                militancy = 6
-                consciousness = 6
-            }
-            any_owned = {
-                limit = {
-                    is_core = FIN
-                }
-                add_province_modifier = {
-                    name = nationalist_agitation
-                    duration = 1825
-                }
-            }
-        }
-        ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 0.25
-                part_of_sphere = yes
-                NOT = {
-                    in_sphere = RUS
-                }
-            }
-        }
-    }
-
-    option = {
-        name = "Never! We will fight for our freedom!"
-        FROM = {
-            release_vassal = FIN
-            diplomatic_influence = { who = FIN value = -400 }
-            relation = { who = FIN value = -400 }
-            war = {
-                target = FIN
-                attacker_goal = {
-                    casus_belli = conquest_any
-                }
-                defender_goal = {
-                    casus_belli = status_quo
-                }
-            }
-        }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 1.75
-                part_of_sphere = yes
-                NOT = {
-                    in_sphere = RUS
-                }
-            }
-            modifier = {
-                factor = 1.25
-                has_country_flag = grand_duchy_finland
-            }
-        }
-    }
-} 	
+#country_event = {  #unused event, probably from GSG
+#    id = 188245
+#    title = "EVTNAME188245" #Integrate Finland
+#    desc = "EVTDESC188245"
+#    picture = "treaty"
+#    is_triggered_only = yes
+#    option = {
+#        name = "Accept our fate, there is nothing we can do..."
+#        any_country = {
+#            limit = {
+#                is_sphere_leader_of = FIN
+#                NOT = { tag = RUS }
+#            }
+#            relation = { who = FROM value = -50 }
+#        }
+#        FROM = {
+#            prestige = 10
+#            release_vassal = FIN
+#            inherit = FIN
+#            any_pop = {
+#                limit = {
+#                    location = { is_core = FIN }
+#                    is_primary_culture = no
+#                    is_accepted_culture = no
+#                }
+#                militancy = 6
+#                consciousness = 6
+#            }
+#            any_owned = {
+#                limit = {
+#                    is_core = FIN
+#                }
+#                add_province_modifier = {
+#                    name = nationalist_agitation
+#                    duration = 1825
+#                }
+#            }
+#        }
+#        ai_chance = {
+#            factor = 75
+#            modifier = {
+#                factor = 0.25
+#                part_of_sphere = yes
+#                NOT = {
+#                    in_sphere = RUS
+#                }
+#            }
+#        }
+#    }
+#    option = {
+#        name = "Never! We will fight for our freedom!"
+#        FROM = {
+#            release_vassal = FIN
+#            diplomatic_influence = { who = FIN value = -400 }
+#            relation = { who = FIN value = -400 }
+#            war = {
+#                target = FIN
+#                attacker_goal = {
+#                    casus_belli = conquest_any
+#                }
+#                defender_goal = {
+#                    casus_belli = status_quo
+#                }
+#            }
+#        }
+#        ai_chance = {
+#            factor = 25
+#            modifier = {
+#                factor = 1.75
+#                part_of_sphere = yes
+#                NOT = {
+#                    in_sphere = RUS
+#                }
+#            }
+#            modifier = {
+#                factor = 1.25
+#                has_country_flag = grand_duchy_finland
+#            }
+#        }
+#    }
+#} 	
 	
 country_event = { 
 	id = 743340 #Bloody Sunday
@@ -2876,7 +2973,7 @@ country_event = {
 	id = 743342 #Lodz Insurrection 
 	title = "EVTNAME743342" 
 	desc = "EVTDESC743342"
-	picture = "lodz_rebellion"
+	picture = "lodz_revolt"
 	
 	fire_only_once = yes 
 	
@@ -2993,7 +3090,12 @@ country_event = {
 					factor = 10 
 				}
 			} 
+		} 	
 			set_country_flag = moscow_uprising
+			country_event = { 
+				id = 743349 
+				days = 2 
+			} 
 			country_event = { 
 				id = 743345
 				days = 5 
@@ -3006,7 +3108,10 @@ country_event = {
 				id = 743347
 				days = 4 
 			}
-		} 
+			country_event = { 
+				id = 743351
+				days = 8
+			} 
 	} 
 
 	mean_time_to_happen = { months = 2 } 
@@ -3153,4 +3258,388 @@ country_event = {
 			} 	
 		} 
 	} 
+}
+
+country_event = { 
+	id = 743348 #Starybuyan Republic
+	title = "EVTNAME743348"
+	desc = "EVTDESC743348"
+	picture = "samara_uprising" 
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = RUS 
+		OR = { 
+			government = absolute_empire 
+			government = absolute_monarchy 
+			government = semi_constitutional_empire
+			government = prussian_constitutionalism
+			government = hms_government
+		} 
+		has_global_flag = start_of_1905_revolution
+		NOT = { ruling_party_ideology = socialist } 
+		NOT = { ruling_party_ideology = communist } 
+		owns = 1034
+	} 
+
+	option = { 
+		name = "How cute, a village seceding."
+		any_pop = { 
+			consciousness = 2 
+			scaled_militancy = { 
+				ideology = communist 
+				factor = 7
+			} 
+			scaled_militancy = { 
+				ideology = socialist
+				factor = 4
+			} 
+		} 
+	} 
+
+	mean_time_to_happen = { months = 5 } 
+} 
+
+country_event = { 
+	id = 743349 #The Krasnoyarsk Uprising 
+	title = "EVTNAME743349"
+	desc = "EVTDESC743349"
+	picture = "krasnoyarsk_uprising" 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "Burn the revolution to the ground." 
+		1077 = { secede_province = SIB } 
+		SIB = { 
+			government = proletarian_dictatorship 
+			ruling_party_ideology = communist 
+		} 
+		war = { 
+			target = SIB 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+		} 
+	} 
 }   
+
+country_event = { 
+	id = 743350 #Sochi Republic 
+	title = "EVTNAME743350"
+	desc = "EVTDESC743350"
+	picture = "sochi_republic" 
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = RUS 
+		OR = { 
+			government = absolute_empire 
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		} 
+		NOT = { 
+			ruling_party_ideology = socialist 
+			ruling_party_ideology = communist 
+		}
+		has_country_flag = moscow_uprising
+		
+	} 
+	
+	option = { 
+		name = "They will not be shown mercy."
+		3392 = { secede_province = DON } 
+		3315 = { secede_province = DON } 
+		DON = { government = proletarian_dictatorship } 
+		war = { 
+			target = DON
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+		} 
+	} 
+	
+	mean_time_to_happen = { months = 1 } 
+} 
+
+country_event = { 
+	id = 743351 #Latvian Revolution 
+	title = "EVTNAME743351"
+	desc = "EVTDESC743351"
+	picture = "latvian_revolution" 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "To arms . . . hopefully for the last time this year."
+		355 = { secede_province = LAT } 
+		358 = { secede_province = LAT } 
+		LAT = { government = proletarian_dictatorship } 
+		war = { 
+			target = LAT 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+		} 
+	} 
+} 
+
+country_event = { 
+	id = 7433532 #Potemkin Mutiny 
+	title = "EVTNAME7433532"
+	desc = "EVTDESC7433532"
+	picture = "potemkin_mutiny"
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = RUS 
+		has_global_flag = start_of_1905_revolution
+		owns = 967 
+		owns = 968 
+		NOT = { owns = 674 } 
+		OR = { 
+			government = absolute_empire 
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		} 
+		NOT = { 
+			ruling_party_ideology = socialist 
+			ruling_party_ideology = communist 
+		}
+	} 
+	
+	option = { 
+		name = "Where, oh where, has the rogue ship gone?"
+		steamer_convoy = -1 
+		
+		any_country = { 
+			limit = { owns = 674 } 
+			country_event = { 
+				id = 7433533 
+				days = 11
+			}
+		} 
+		country_event = { 
+			id = 7433537
+			days = 9
+		} 	
+	} 
+	mean_time_to_happen = { months = 3 } 
+} 
+
+country_event = { 
+	id = 7433533 #Potemkin Mutiny, popup for Constanta owner
+	title = "EVTNAME7433533"
+	desc = "EVTDESC7433533"
+	picture = "battleship_potemkin" 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = "The sailors are welcome to stay as civilians here."
+		674 = { 
+			farmers = { reduce_pop = 1.001 } 
+		} 		
+		steamer_convoy = 1 
+		RUS = { country_event = 7433534 }
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				relation = { who = RUS value = 50 }
+				factor = 2 
+			}
+		}
+	}
+	option = {
+		name = "Well, more for our own navy!" 
+		674 = { 
+			soldiers = { reduce_pop = 1.001 }
+			sub_unit = {
+                type = battleship
+                value = current
+            }
+        } 
+		RUS = { country_event = 7433534 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				relation = { who = RUS value = 20 } 
+				factor = 2 
+			}
+			modifier = {
+				war_policy = pro_military
+				factor = 1.2
+			}
+			modifier = {
+				war_policy = jingoism
+				factor = 1.5 
+			}
+		}
+	}
+	
+	option = { 
+		name = "The sailors will return to Russia and pay for their crimes."
+		RUS = { country_event = 7433535 }
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				relation = { who = RUS value = 100 } 
+				factor = 2 
+			} 
+		}
+	} 	
+} 
+
+country_event = { 
+	id = 7433534 #Russia receives word on Potemkin's defection to Constanta's owner 
+	title = "EVTNAME7433534"
+	desc = "EVTDESC7433534"
+	picture = "battleship_potemkin" 
+	
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "We don't have time to go after one ship."
+		prestige = -1 
+		ai_chance = { factor = 50 } 
+	} 
+	
+	option = { 
+		name = "They will return those sailors, even if we must use force."
+		casus_belli = { 
+			target = FROM 
+			type = humiliate_no_infamy 
+			months = 12
+		}
+		ai_chance = { factor = 50 } 
+	} 
+} 
+
+country_event = { 
+	id = 7433535 #Russia receives word on Potemkin's return 
+	title = "EVTNAME7433535"
+	desc = "EVTDESC7433535" 
+	picture = "battleship_potemkin" 
+	
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "Smart choice."
+		967 = { 
+			sub_unit = {
+                type = battleship
+                value = current
+            }		
+		} 
+	} 
+} 
+
+
+country_event = { 
+	id = 7433537 #Potemkin shells Odessa 
+	title = "EVTNAME7433537"
+	desc = "EVTDESC7433537"
+	picture = "odessa_shelled"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = "What more is there to say? The chaos is overtaking this country."
+		968 = { 
+			any_pop = { 
+				consciousness = 6
+				scaled_militancy = { 
+					ideology = communist 
+					factor = 8 
+				} 
+				scaled_militancy = { 
+					ideology = socialist
+					factor = 6 
+				} 
+			} 
+		} 
+	} 
+}
+
+country_event = { 
+	id = 84205827
+	title = "Execution of the Romanov family"
+	desc = "DEADROMANOV"
+	picture = "romanov_death"
+	major = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Why are we still here? Just to suffer?"
+		prestige = -30
+	} 
+}
+
+country_event = { 
+	id = 84205828
+	title = "The Assassination of Alexander II"
+	desc = "ALEXANDERASSASSINATION"
+	picture = "alexander_death"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+        tag = RUS
+        year = 1881
+		month = 2
+		OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+            government = absolute_empire
+            government = semi_constitutional_empire
+            government = constitutional_empire
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 13
+    }
+	
+	option = { 
+		name = "Our tsar!"
+		any_pop = { consciousness = 1 }
+	} 
+}
+
+country_event = {
+    id = 84205829
+    title = "Ukrainians settle in the Far East"
+    desc = "GUK_desc"
+    picture = "green_ukraine"
+    
+    fire_only_once = yes
+    mean_time_to_happen = { months = 12 }
+
+    trigger = {
+        year = 1882
+        tag = RUS
+        has_global_flag = manchus_expelled_primorye
+        owns = 1082
+        owns = 1084
+        steel_railroad = 1
+    }
+    
+    option = { 
+        name = "Great"
+        1080 = { add_core = GUK }
+        2697 = { add_core = GUK }
+        1081 = { add_core = GUK }
+        CHI_1082 = { add_core = GUK }
+        3107 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 1082 } }
+        2831 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 1083 } }
+        2830 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 1084 } }
+        3580 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 2617 } }
+        2833 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 1085 } }
+        2842 = { any_pop = { limit = { has_pop_culture = ukrainian } move_pop = 1080 } }
+    }
+}

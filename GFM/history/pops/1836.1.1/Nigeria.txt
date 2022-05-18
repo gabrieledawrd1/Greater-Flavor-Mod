@@ -97,7 +97,7 @@
     farmers = {
         culture = yoruba
         religion = fetishist
-        size = 133000
+        size = 118000
     }
 
     slaves = {
@@ -135,12 +135,18 @@
         religion = fetishist
         size = 9100
     }
+	
+	farmers = {
+        culture = yoruba
+        religion = sunni
+        size = 15100
+    }
 }
-#Ibadan (1160000/290000 POPS)
+#Oyo Ile (1160000/290000 POPS)
 1925 = {
     aristocrats = {
         culture = yoruba
-        religion = fetishist
+        religion = sunni
         size = 5800
     }
 
@@ -158,13 +164,13 @@
 
     clergymen = {
         culture = yoruba
-        religion = fetishist
+        religion = sunni
         size = 2900
     }
 
     artisans = {
         culture = yoruba
-        religion = fetishist
+        religion = sunni
         size = 10000
     }
 
@@ -182,8 +188,14 @@
 
     farmers = {
         culture = yoruba
+        religion = sunni
+        size = 103400
+    }
+	
+	farmers = {
+        culture = yoruba
         religion = fetishist
-        size = 203400
+        size = 103400
     }
 
     slaves = {
@@ -214,7 +226,7 @@
 
     artisans = {
         culture = yoruba
-        religion = fetishist
+        religion = sunni
         size = 800
     }
 
@@ -227,7 +239,13 @@
     farmers = {
         culture = yoruba
         religion = fetishist
-        size = 158600
+        size = 140600
+    }
+	
+	farmers = {
+        culture = yoruba
+        religion = sunni
+        size = 18600
     }
 
     slaves = {
@@ -264,7 +282,7 @@
 
     farmers = {
         culture = yoruba
-        religion = fetishist
+        religion = sunni
         size = 39025
     }
 
@@ -315,49 +333,49 @@
 #Benin (1144000/286000 POPS)
 1928 = {
     aristocrats = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 4250
     }
 
     bureaucrats = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 200
     }
 
     officers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 700
     }
 
     clergymen = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 2150
     }
 
     artisans = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 8600
     }
 
     soldiers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 3000
     }
 
     soldiers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 2000
     }
 
     farmers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 173100
     }
@@ -407,37 +425,37 @@
 #Lokoja (332000/83000 POPS)
 1930 = {
     aristocrats = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 575
     }
 
     clergymen = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 300
     }
 
     artisans = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 1175
     }
 
     soldiers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 300
     }
 
     farmers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 18650
     }
 
     farmers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 8000
     }
@@ -610,31 +628,31 @@
     }
 
     aristocrats = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 200
     }
 
     clergymen = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 100
     }
 
     artisans = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 600
     }
 
     soldiers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 1150
     }
 
     farmers = {
-        culture = edo
+        culture = edo_culture
         religion = fetishist
         size = 9950
     }

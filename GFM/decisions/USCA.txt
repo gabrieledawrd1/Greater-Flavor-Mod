@@ -1,6 +1,27 @@
 political_decisions = {
+    usca_constitution  = {
+        picture = usca_constitution
+        potential = {
+          tag = UCA
+          has_country_flag = usca_wins
+          NOT = { has_country_flag = usca_constitution }
+        }
+
+        allow = {
+          money = 25000
+          war = no
+          ideological_thought = 1
+        }
+
+        effect = {
+          set_country_flag = usca_constitution
+          treasury = -20000
+          country_event = 262627
+        }
+        ai_will_do = { factor = 1 }
+	}
     become_guatemala = {
-    picture = become_guatemala
+		picture = become_guatemala
         potential = {
             tag = UCA
             NOT = { exists = GUA }
@@ -160,7 +181,6 @@ political_decisions = {
             NOT = { exists = UCA }
 			NOT = { AND = { tag = MEX has_country_flag = mexico_central_america } }
 			NOT = { AND = { tag = SPC has_country_flag = reconquista_frca } }
-			NOT = { tag = VNS }
         }
 
         allow = {
@@ -237,54 +257,6 @@ political_decisions = {
                 who = UCA
                 value = 200
             }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    belize_purchase = {
-        picture = map_central_america
-        potential = {
-            2190 = { NOT = { owned_by = THIS } owner = { NOT = { capital_scope = { continent = north_america } } } }
-            2189 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                        war = no
-                        is_greater_power = no
-                    }
-                }
-            }
-            BLZ = { exists = no }
-            OR = {
-                primary_culture = central_american
-                primary_culture = mexican
-                primary_culture = mayan
-                primary_culture = spanish
-            }
-            NOT = { has_country_flag = belize_purchase }
-        }
-
-        allow = {
-            war = no
-            money = 55000
-            OR = {
-                is_secondary_power = yes
-                is_greater_power = yes
-            }
-            2190 = {
-                owner = {
-                    war = no
-                    relation = { who = THIS value = 100 }
-                }
-            }
-        }
-
-        effect = {
-            set_country_flag = belize_purchase
-            2190 = { owner = { country_event = 32550 } }
         }
 
         ai_will_do = { factor = 1 }
@@ -373,64 +345,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    occupy_miskito = {
-        picture = moskito_coast_reserve
-        potential = {
-            has_global_flag = treaty_of_managua_success
-            2200 = { NOT = { owned_by = THIS } }
-            MSK = { exists = yes }
-            2197 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        in_sphere = THIS
-                        vassal_of = THIS
-                        war = no
-                        is_greater_power = no
-                    }
-                }
-            }
-            OR = {
-                primary_culture = central_american
-                primary_culture = mexican
-                primary_culture = mayan
-                primary_culture = spanish
-            }
-            OR = {
-                year = 1895
-                ai = no
-            }
-            NOT = { has_global_flag = miskito_crisis }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            revolution_n_counterrevolution = 1
-            MSK = {
-                OR = {
-                    vassal_of = THIS
-                    is_vassal = no
-                }
-            }
-        }
-
-        effect = {
-            set_global_flag = miskito_crisis
-            inherit = MSK
-            random_country = {
-                limit = {
-                    tag = ENG
-                    is_greater_power = yes
-                    is_disarmed = no
-                }
-                country_event = 32553
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     restore_miskito = {
         picture = moskito_coast_reserve
         potential = {
@@ -446,10 +360,45 @@ political_decisions = {
         effect = {
             clr_country_flag = bluefields_will_be_ours
             2200 = { secede_province = MSK }
+            3491 = { secede_province = MSK }
             create_vassal = MSK
             MSK = { government = absolute_monarchy }
         }
         ai_will_do = { factor = 1 }
     }
-
+	
+    claim_bocas_del_toro = {
+		picture = Panama_frontera_1898
+        potential = {
+			OR = {
+				tag = COS
+				tag = UCA	
+			}
+			3564 = { empty = yes }
+			NOT = { has_global_flag = claimed_bocas_del_toro }
+		}
+        
+		
+		allow = {
+			OR = {
+				tag = COS
+				AND = {
+					tag = UCA
+					year = 1840
+					NOT = { has_global_flag = usca_fail }
+				}
+			}		
+		}
+		
+		
+		effect = {
+			3564 = { secede_province = THIS }
+			3564 = { add_core = THIS }
+			set_global_flag = claimed_bocas_del_toro
+			CLM = { country_event = { id = 173163 days = 30 } }
+			3564 = { life_rating = 10 }
+        }
+		
+		ai_will_do = { factor = 1 }	
+	}
 }

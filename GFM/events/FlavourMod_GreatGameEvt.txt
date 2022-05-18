@@ -33,8 +33,8 @@ country_event = {
             create_alliance = ENG
             military_access = ENG
             military_access = EIC
-            ENG = { military_access = SIK }
-            EIC = { military_access = SIK }
+            ENG = { military_access = PNJ }
+            EIC = { military_access = PNJ }
             relation = { who = ENG value = 200 }
         }
         set_global_flag = afghan_1
@@ -170,7 +170,7 @@ country_event = {
             factor = 85
             modifier = {
                 factor = 5
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 5
@@ -216,7 +216,7 @@ country_event = {
 
             modifier = {
                 factor = 0
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 0
@@ -299,7 +299,7 @@ country_event = {
             vassal_of = ENG
             NOT = { truce_with = ENG }
         }
-        year = 1842
+        year = 1848
         NOT = { has_global_flag = 2_anglo_sikh_war }
     }
 
@@ -427,7 +427,13 @@ country_event = {
         name = "EVTOPTA99200" #UK intervenes
         prestige = 5
         PER = { country_event = 99201 }
-        ai_chance = { factor = 1 }
+        ai_chance = { 
+			factor = 0.9
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_no_anglo_persian_war
+			}
+		}
     }
 
     option = {
@@ -437,7 +443,13 @@ country_event = {
 		HRT = { country_event = 123700 }
         HRT = { annex_to = PER }
 		PER = { country_event = 123726 }
-        ai_chance = { factor = 0 }
+        ai_chance = { 
+			factor = 0.1 
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_yes_anglo_persian_war
+			}
+		}
     }
 }
 
@@ -485,7 +497,13 @@ country_event = {
 		HRT = { country_event = 123701 }
         ENG = { country_event = 99203 }
         RUS = { country_event = 992031 }
-        ai_chance = { factor = 30 }
+        ai_chance = { 
+			factor = 30 
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_yes_anglo_persian_war
+			}
+		}
     }
 
     option = {
@@ -494,7 +512,13 @@ country_event = {
         war_exhaustion = 2.5
         ENG = { country_event = 99202 }
         RUS = { country_event = 992021 }
-        ai_chance = { factor = 70 }
+        ai_chance = { 
+			factor = 70 
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_no_anglo_persian_war
+			}
+		}
     }
 }
 
@@ -511,10 +535,10 @@ country_event = {
         name = "Dispatch a punitive expedition. §RGain 2 infamy§W" #UK backs Herat
         set_global_flag = anglo_persian_war
         badboy = 2
-        casus_belli = { target = PER type = cut_down_to_size months = 12 }
+        casus_belli = { target = PER type = cut_down_to_size_no_infamy months = 12 }
         war = {
             target = PER
-			attacker_goal = { casus_belli = cut_down_to_size }
+			attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
             defender_goal = { casus_belli = status_quo }
             call_ally = yes
         }
@@ -743,11 +767,11 @@ country_event = {
 			limit = {
 				is_core = HRT
 			}
-			secede_province = AFG
+			secede_province = HRT
 		}
-		HRT = { all_core = { remove_core = HRT add_core = AFG remove_core = PER } }
+		HRT = { all_core = { add_core = AFG remove_core = PER } }
 		2638 = { remove_core = AFG }
-		HRT = { annex_to = AFG }
+		AFG = { create_vassal = HRT }
 		KHT = { country_event = 123725 }
 		any_owned = {
             limit = { is_core = AFG }
@@ -803,7 +827,7 @@ country_event = {
             factor = 80
             modifier = {
                 factor = 5
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 5
@@ -848,7 +872,7 @@ country_event = {
             factor = 20
             modifier = {
                 factor = 0
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
             modifier = {
                 factor = 0
@@ -1204,8 +1228,8 @@ country_event = {
 	is_triggered_only = yes
     option = {
         name = "To war!"
-		casus_belli = { target = PER type = cut_down_to_size months = 12 }
-		war = { target = PER attacker_goal = { casus_belli = cut_down_to_size } call_ally = yes }
+		casus_belli = { target = PER type = cut_down_to_size_no_infamy months = 12 }
+		war = { target = PER attacker_goal = { casus_belli = cut_down_to_size_no_infamy } call_ally = yes }
 		set_global_flag = british_intervention_in_kandahar
     }
 	option = {

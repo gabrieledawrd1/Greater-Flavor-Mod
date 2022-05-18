@@ -29,11 +29,11 @@ political_decisions = {
             OR = {
                 AND = {
                     truce_with = FRA
-                    FRA = { has_recently_lost_war = yes }
+                    FRA = { has_country_modifier = recently_lost_war }
                 }
                 AND = {
                     truce_with = BOR
-                    BOR = { has_recently_lost_war = yes }
+                    BOR = { has_country_modifier = recently_lost_war }
                 }
             }
         }
@@ -164,7 +164,7 @@ political_decisions = {
                 }
             }
             military_score = 50
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
         }
 
         effect = {
@@ -522,7 +522,7 @@ political_decisions = {
         }
         allow = {
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
         }
 
         effect = {
@@ -608,6 +608,7 @@ political_decisions = {
             }
             411 = { province_control_days = 365 }
             NOT = { has_country_flag = duchy_of_lorraine }
+            has_global_flag = lorraine_war
         }
 
         allow = {
@@ -620,7 +621,6 @@ political_decisions = {
                 411 = { OR = { culture = south_german culture = north_german } }
                 414 = { OR = { culture = south_german culture = north_german } }
             }
-            has_global_flag = lorraine_war
         }
 
         effect = {
@@ -750,7 +750,7 @@ political_decisions = {
         potential = {
             tag = PRU
             NOT = { has_country_flag = has_asked_for_jade }
-            NOT = { owns = 3259 }
+			OLD = { owns = 3259 }
         }
 
         allow = {
@@ -1044,10 +1044,27 @@ political_decisions = {
             any_owned = {
                 limit = {
                     OR = {
-                        region = PRU_682 #Lower Silesia
+                        province_id = 684
+						province_id = 685
+						province_id = 3277
                         region = PRU_701 #Posen
-                        region = PRU_690 #Westpreuﬂen
-
+						region = PRU_695 #Ostpreussen
+                        region = PRU_690 #Westpreussen
+						region = RUS_360 #Lithuania
+						region = RUS_354 #Latvia
+						region = RUS_349 #Estonia
+						region = RUS_964 #Crimea
+						region = AUS_652 #Banat
+						province_id = 707
+						province_id = 792
+						province_id = 3331
+						province_id = 692
+						province_id = 3469
+						province_id = 3281
+						province_id = 682
+						province_id = 3336
+						province_id = 708
+						province_id = 717
                     }
                 }
                 add_province_modifier = { name = drang_nach_osten duration = -1 }
@@ -1120,7 +1137,6 @@ political_decisions = {
                         owns = 381
                         owns = 395
                         owns = 398
-                        owns = 3377
                         owns = 397
                     }
                     NOT = {
@@ -1150,11 +1166,10 @@ political_decisions = {
             }
             war = {
                 target = FRA
-                attacker_goal = { casus_belli = cut_down_to_size }
-                defender_goal = { casus_belli = cut_down_to_size }
+                attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+                defender_goal = { casus_belli = cut_down_to_size_no_infamy }
                 call_ally = yes
             }
-            FRA = { badboy = -13 }
         }
 
         ai_will_do = {

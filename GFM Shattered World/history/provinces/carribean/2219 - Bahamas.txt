@@ -1,0 +1,6 @@
+owner = BHM
+controller = BHM
+add_core = BHM
+trade_goods = fruit
+life_rating = 35
+terrain = nassau

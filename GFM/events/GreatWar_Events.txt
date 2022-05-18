@@ -204,12 +204,12 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            national_provinces_occupied = .25
-            NOT = { national_provinces_occupied = .50 }
+            national_provinces_occupied = 0.25
+            NOT = { national_provinces_occupied = 0.50 }
         }
         modifier = {
             factor = 0.25
-            national_provinces_occupied = .50
+            national_provinces_occupied = 0.50
         }
         modifier = {
             factor = 0.8
@@ -284,12 +284,12 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            national_provinces_occupied = .25
-            NOT = { national_provinces_occupied = .50 }
+            national_provinces_occupied = 0.25
+            NOT = { national_provinces_occupied = 0.50 }
         }
         modifier = {
             factor = 0.25
-            national_provinces_occupied = .50
+            national_provinces_occupied = 0.50
         }
         modifier = {
             factor = 0.8
@@ -363,14 +363,14 @@ country_event = {
                     is_capital = yes
                     controlled_by = THIS
                 }
-                national_provinces_occupied = .75
+                national_provinces_occupied = 0.75
             }
             AND = {
                 any_owned_province = {
                     is_capital = yes
                     NOT = { controlled_by = THIS }
                 }
-                national_provinces_occupied = .50
+                national_provinces_occupied = 0.50
             }
         }
     }
@@ -928,7 +928,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -1005,7 +1005,7 @@ country_event = {
                     # ai = no
                     # is_greater_power = yes
                     # exists = yes
-                    # has_recently_lost_war = no
+                    # NOT = { has_country_modifier = recently_lost_war }
                     # is_vassal = no
                     # any_owned_province = { has_building = naval_base }
                     # OR = {
@@ -1029,7 +1029,7 @@ country_event = {
                     # ai = yes
                     # is_greater_power = yes
                     # exists = yes
-                    # has_recently_lost_war = no
+                    # NOT = { has_country_modifier = recently_lost_war }
                     # is_vassal = no
                     # any_owned_province = { has_building = naval_base }
                     # OR = {
@@ -1053,7 +1053,7 @@ country_event = {
                     # is_greater_power = no
                     # is_secondary_power = yes
                     # exists = yes
-                    # has_recently_lost_war = no
+                    # NOT = { has_country_modifier = recently_lost_war }
                     # is_vassal = no
                     # any_owned_province = { has_building = naval_base }
                     # OR = {
@@ -2978,7 +2978,6 @@ country_event = {
                 truce_with = THIS
             }
             693 = { add_core = POL }
-            696 = { add_core = POL }
             683 = { add_core = POL }
             682 = { add_core = POL }
             684 = { add_core = POL }
@@ -2993,7 +2992,6 @@ country_event = {
                 truce_with = THIS
             }
             693 = { add_core = PLC }
-            696 = { add_core = PLC }
             683 = { add_core = PLC }
             682 = { add_core = PLC }
             684 = { add_core = PLC }
@@ -3472,7 +3470,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -5019,7 +5017,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -5761,7 +5759,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -6498,7 +6496,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -7154,7 +7152,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -7531,10 +7529,6 @@ country_event = {
                 secede_province = ITA
             }
 			721 = {
-                add_core = ITA
-                secede_province = ITA
-            }
-			3435 = {
                 add_core = ITA
                 secede_province = ITA
             }
@@ -7992,7 +7986,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -8787,7 +8781,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -9163,6 +9157,7 @@ country_event = {
                     region = TUR_869 #Izmir
                     region = EGY_843 #Aegean Islands
                     region = TUR_863 #Bursa
+					region = TUR_870 #Eskishehir
                     region = TUR_873 #Konya
                     region = TUR_876 #Ankara
                     region = TUR_880 #Kastamonu
@@ -9186,6 +9181,7 @@ country_event = {
                         region = TUR_869 #Izmir
                         region = EGY_843 #Aegean Islands
                         region = TUR_863 #Bursa
+						region = TUR_870 #Eskishehir
                         region = TUR_873 #Konya
                         region = TUR_876 #Ankara
                         region = TUR_880 #Kastamonu
@@ -9246,7 +9242,7 @@ country_event = {
                         has_country_flag = coalition_member
                     }
                 }
-                owns = 830
+                owns = 3304
                 THIS = { owns = 828 owns = 3470 }
             }
             828 = {
@@ -9336,6 +9332,7 @@ country_event = {
                             region = TUR_860 #Thrace
                             region = TUR_869 #Izmir
                             region = TUR_863 #Bursa
+							region = TUR_870 #Eskishehir
                             region = TUR_873 #Konya
                             region = TUR_876 #Ankara
                             region = TUR_880 #Kastamonu
@@ -9397,6 +9394,7 @@ country_event = {
                         region = TUR_869 #Izmir
                         region = EGY_843 #Aegean Islands
                         region = TUR_863 #Bursa
+						region = TUR_870 #Eskishehir
                         region = TUR_873 #Konya
                         region = TUR_876 #Ankara
                         region = TUR_880 #Kastamonu
@@ -9780,7 +9778,7 @@ country_event = {
             limit = {
                 exists = yes
                 truce_with = THIS
-                has_recently_lost_war = no
+                NOT = { has_country_modifier = recently_lost_war }
                 is_vassal = no
                 any_owned_province = { has_building = naval_base }
                 OR = {
@@ -11135,97 +11133,210 @@ country_event = {
 
     option = {
         name = "EVTOPTA96085" #We welcome the new regime.
-        government = proletarian_dictatorship
-        ruling_party_ideology = communist
-        political_reform = none_voting
-        political_reform = party_appointed
-        political_reform = no_meeting
-        political_reform = state_press
-        political_reform = state_controlled
-        political_reform = underground_parties
-        social_reform = good_minimum_wage
-        social_reform = eight_hours
-        social_reform = good_subsidies
-        social_reform = good_pensions
-        social_reform = good_health_care
-        nationalize = yes
+		random_owned = {
+			limit = {
+				owner = {
+					tag = RUS 
+				}
+			}
+			owner = {
+				change_tag = SOV
+				SOV = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = communist
+					political_reform = none_voting
+					political_reform = party_appointed
+					political_reform = no_meeting
+					political_reform = state_press
+					political_reform = state_controlled
+					political_reform = underground_parties
+					social_reform = good_minimum_wage
+					social_reform = eight_hours
+					social_reform = good_subsidies
+					social_reform = good_pensions
+					social_reform = good_health_care
+					nationalize = yes
 
-        set_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = election_started
-		clr_country_flag = Government_Democracy
-        clr_country_flag = conservative_party_in_power
-        clr_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
+					set_country_flag = communist_gov
+					clr_country_flag = absolute_monarchy_gov
+					clr_country_flag = semi_constitutional_monarchy_gov
+					clr_country_flag = constitutional_monarchy_gov
+					clr_country_flag = democracy_gov
+					clr_country_flag = presidential_dictatorship_gov
+					clr_country_flag = fascist_gov
+					clr_country_flag = anarcho_liberal_gov
+					clr_country_flag = election_started
+					clr_country_flag = Government_Democracy
+					clr_country_flag = conservative_party_in_power
+					clr_country_flag = liberal_party_in_power
+					clr_country_flag = reactionary_party_in_power
+					clr_country_flag = socialist_party_in_power
+					clr_country_flag = communist_party_in_power
+					clr_country_flag = fascist_party_in_power
+					clr_country_flag = anarcho_liberal_party_in_power
 
-        random_country = {
-            limit = {
-                is_sphere_leader_of = THIS
-                NOT = { has_country_flag = friendly_communist }
-            }
-            diplomatic_influence = { who = THIS value = -100 }
-        }
-        random_country = {
-            limit = {
-                has_country_flag = friendly_communist
-                truce_with = THIS
-            }
-            relation = { who = THIS value = 400 }
-            diplomatic_influence = { who = THIS value = 200 }
-            create_alliance = THIS
-            clr_country_flag = friendly_communist
-        }
-        capital_scope = {
-            any_pop = {
-                ideology = { factor = 0.1 value = communist }
-            }
-        }
-        any_pop = {
-            scaled_militancy = {
-                ideology = reactionary
-                factor = 6
-            }
-            scaled_militancy = {
-                ideology = communist
-                factor = -8
-            }
-            scaled_militancy = {
-                ideology = socialist
-                factor = -4
-            }
-            scaled_militancy = {
-                ideology = fascist
-                factor = 8
-            }
-            scaled_militancy = {
-                ideology = liberal
-                factor = 4
-            }
-        }
-        any_owned = {
-            remove_province_modifier = labor_union
-            remove_province_modifier = militant_trade_union
-            remove_province_modifier = worker_union
-            remove_province_modifier = strike_solution
-            remove_province_modifier = province_strike
-            remove_province_modifier = may_day
-        }
-        any_country = {
-            change_variable = {
-                which = successful_communist_rebellions
-                value = 1
-            }
-        }
+					random_country = {
+						limit = {
+							is_sphere_leader_of = THIS
+							NOT = { has_country_flag = friendly_communist }
+						}
+						diplomatic_influence = { who = THIS value = -100 }
+					}
+					random_country = {
+						limit = {
+							has_country_flag = friendly_communist
+							truce_with = THIS
+						}
+						relation = { who = THIS value = 400 }
+						diplomatic_influence = { who = THIS value = 200 }
+						create_alliance = THIS
+						clr_country_flag = friendly_communist
+					}
+					capital_scope = {
+						any_pop = {
+							ideology = { factor = 0.1 value = communist }
+						}
+					}
+					any_pop = {
+						scaled_militancy = {
+							ideology = reactionary
+							factor = 6
+						}
+						scaled_militancy = {
+							ideology = communist
+							factor = -8
+						}
+						scaled_militancy = {
+							ideology = socialist
+							factor = -4
+						}
+						scaled_militancy = {
+							ideology = fascist
+							factor = 8
+						}
+						scaled_militancy = {
+							ideology = liberal
+							factor = 4
+						}
+					}
+					any_owned = {
+						remove_province_modifier = labor_union
+						remove_province_modifier = militant_trade_union
+						remove_province_modifier = worker_union
+						remove_province_modifier = strike_solution
+						remove_province_modifier = province_strike
+						remove_province_modifier = may_day
+					}
+					any_country = {
+						change_variable = {
+							which = successful_communist_rebellions
+							value = 1
+						}
+					}
+				}
+				RUS = { country_event = { id = 123429 days = 1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { tag = RUS }
+				}
+			}
+			owner = {
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				political_reform = none_voting
+				political_reform = party_appointed
+				political_reform = no_meeting
+				political_reform = state_press
+				political_reform = state_controlled
+				political_reform = underground_parties
+				social_reform = good_minimum_wage
+				social_reform = eight_hours
+				social_reform = good_subsidies
+				social_reform = good_pensions
+				social_reform = good_health_care
+				nationalize = yes
+
+				set_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				clr_country_flag = election_started
+				clr_country_flag = Government_Democracy
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+
+				random_country = {
+					limit = {
+						is_sphere_leader_of = THIS
+						NOT = { has_country_flag = friendly_communist }
+					}
+					diplomatic_influence = { who = THIS value = -100 }
+				}
+				random_country = {
+					limit = {
+						has_country_flag = friendly_communist
+						truce_with = THIS
+					}
+					relation = { who = THIS value = 400 }
+					diplomatic_influence = { who = THIS value = 200 }
+					create_alliance = THIS
+					clr_country_flag = friendly_communist
+				}
+				capital_scope = {
+					any_pop = {
+						ideology = { factor = 0.1 value = communist }
+					}
+				}
+				any_pop = {
+					scaled_militancy = {
+						ideology = reactionary
+						factor = 6
+					}
+					scaled_militancy = {
+						ideology = communist
+						factor = -8
+					}
+					scaled_militancy = {
+						ideology = socialist
+						factor = -4
+					}
+					scaled_militancy = {
+						ideology = fascist
+						factor = 8
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = 4
+					}
+				}
+				any_owned = {
+					remove_province_modifier = labor_union
+					remove_province_modifier = militant_trade_union
+					remove_province_modifier = worker_union
+					remove_province_modifier = strike_solution
+					remove_province_modifier = province_strike
+					remove_province_modifier = may_day
+				}
+				any_country = {
+					change_variable = {
+						which = successful_communist_rebellions
+						value = 1
+					}
+				}
+			}
+		}
     }
 }
 
@@ -11956,6 +12067,7 @@ country_event = {
                 remove_core = NIG
                 remove_core = SOK
                 remove_core = DND
+				remove_core = BGU
                 remove_core = TOU
                 remove_core = OYO
                 remove_core = BEN
@@ -12284,6 +12396,9 @@ country_event = {
 	option = {
 		name = "Never gonna make you cry, never gonna say goodbye, never gonna tell a lie and hurt you."
 		# Audax Validator "." Ignore_NEXT
-		add_country_modifier = { name = rick_rolled duration = -1 }
+		add_country_modifier = { 
+			# Audax Validator "." Ignore_NEXT
+			name = rick_rolled duration = -1 
+		}
 	}
 }

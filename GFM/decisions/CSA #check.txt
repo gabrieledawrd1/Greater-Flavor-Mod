@@ -48,6 +48,9 @@ political_decisions = {
 				government = democracy
 				has_country_flag = Government_Democracy
 			}
+			NOT = { has_global_flag = mexico_has_taken_oregon_or_more }
+			NOT = { MEX = { has_country_flag = manifest_destiny_refuted } }
+			NOT = { MEX = { has_country_flag = finished_expanding } }
             NOT = {
                 has_country_modifier = the_homestead_act
             }
@@ -57,6 +60,7 @@ political_decisions = {
         allow = {
             prestige = 55
 			war = no
+			has_unclaimed_cores = no
         }
 
         effect = {
@@ -158,7 +162,8 @@ political_decisions = {
             RGR = { all_core = { add_core = CSA    } }
             2143 = { add_core = CSA } #Paso del Norte
             2144 = { add_core = CSA } #Delicias
-            HAI_2213 = { add_core = CSA } #Hispanola
+            HAI_2213 = { add_core = CSA } #Haiti
+			HAI_2214 = { add_core = CSA } #Dominican Republic
             2222 = { add_core = CSA } #Puerto Rico
             any_pop = {
                 limit = {
@@ -553,6 +558,7 @@ political_decisions = {
                 is_sphere_leader_of = BEN
                 is_sphere_leader_of = CLA
                 is_sphere_leader_of = DAH
+				is_sphere_leader_of = BGU
                 is_sphere_leader_of = GBU
                 is_sphere_leader_of = MAS
                 is_sphere_leader_of = MOS

@@ -7,14 +7,11 @@ country_event = {
     trigger = {
         OR = {
 			tag = CHL
-			tag = CGC
+			AND = { tag = HSA owns = 2324 }
 			AND = {
 			    tag = PBC
 				NOT = {
-				    OR = {
-					    exists = CHL
-					    exists = CGC
-					}
+					exists = CHL
 				}
 			}
 		}
@@ -25,7 +22,7 @@ country_event = {
             2334 = { empty = yes }
             2335 = { empty = yes }
             2391 = { empty = yes }
-            2392 = { empty = yes }
+            3555 = { empty = yes }
             2394 = { empty = yes }
             2396 = { empty = yes }
             2397 = { empty = yes }
@@ -70,7 +67,7 @@ country_event = {
                 2398 = { empty = no }
                 2397 = { empty = no }
                 2396 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2394 = { empty = no }
                 2391 = { empty = yes }
                 2394 = { owned_by = THIS }
@@ -88,9 +85,9 @@ country_event = {
                 2398 = { empty = no }
                 2397 = { empty = no }
                 2396 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2394 = { empty = yes }
-                2392 = { owned_by = THIS }
+                3555 = { owned_by = THIS }
             }
             2394 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
@@ -105,10 +102,10 @@ country_event = {
                 2398 = { empty = no }
                 2397 = { empty = no }
                 2396 = { empty = no }
-                2392 = { empty = yes }
+                3555 = { empty = yes }
                 2396 = { owned_by = THIS }
             }
-            2392 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3555 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -138,6 +135,7 @@ country_event = {
                 2398 = { owned_by = THIS }
             }
             2397 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3558 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -201,6 +199,7 @@ country_event = {
                 2332 = { owned_by = THIS }
             }
             2333 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3559 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -264,7 +263,7 @@ country_event = {
     trigger = {
         tag = CHL
         is_vassal = no
-        has_recently_lost_war = no
+        NOT = { has_country_modifier = recently_lost_war }
         is_disarmed = no
         war = no
         NOT = { war_exhaustion = 20 }
@@ -395,7 +394,7 @@ country_event = {
                     is_sphere_leader_of = THIS
                 }
             }
-            country_event = { id = 97084 days = 2 }
+            country_event = 97084
         }
         war = {
             target = FROM
@@ -407,7 +406,7 @@ country_event = {
                 casus_belli = acquire_all_cores
                 country = CHL
             }
-            call_ally = no
+            call_ally = yes
         }
         ai_chance = { factor = 90 }
     }
@@ -444,32 +443,7 @@ country_event = {
 
     option = {
         name = "EVT97084OPTA" #We will not intervene
-        random_owned = {
-            limit = {
-                owner = { war_with = FROM }
-            }
-            owner = { end_war = FROM }
-        }
-        random_owned = {
-            limit = {
-                owner = { alliance_with = FROM }
-            }
-            owner = { leave_alliance = FROM }
-        }
-        random_owned = {
-            limit = {
-                owner = { war_with = CHL }
-            }
-            owner = { end_war = CHL }
-        }
-        random_owned = {
-            limit = {
-                owner = { alliance_with = CHL }
-            }
-            owner = { leave_alliance = CHL }
-        }
-        diplomatic_influence = { who = CHL value = -200 }
-        diplomatic_influence = { who = FROM value = -200 }
+		leave_alliance = CHL
         ai_chance = {
             factor = 90
             modifier = {
@@ -487,4 +461,106 @@ country_event = {
             modifier = { factor = 0 war = yes }
         }
     }
+}
+#Baltimore Crisis
+country_event = {
+    id = 5858548
+    title = "The Baltimore Crisis"
+    desc = "EVTDESC5858548"
+    picture = "uss_baltimore"
+
+    trigger = {
+        tag = USA
+		has_global_flag = 1891_civwarchi
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Don't pursue it." #We will not intervene
+		CHL = { relation = { who = THIS value = 50 } }
+		prestige = -5
+		ai_chance = { factor = 30 }
+    }
+
+    option = {
+        name = "Demand an indemnity!"
+		CHL = { relation = { who = THIS value = -50 } }
+		CHL = { country_event = 5858549 }
+        ai_chance = { factor = 70 }
+    }
+}
+country_event = {
+    id = 5858549
+    title = "The Baltimore Crisis"
+    desc = "The United States demand that we pay reparations for the death of 2 wounding of 18 sailors of the USS Baltimore in a brawl in Valparaiso."
+    picture = "uss_baltimore"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Give in."
+		treasury = -75000
+		prestige = -15
+		USA = { country_event = 5858550 }
+        ai_chance = {
+            factor = 70
+        }
+    }
+
+    option = {
+        name = "We refuse!"
+		prestige = 5
+		USA = { country_event = 5858551 }
+        ai_chance = {
+            factor = 30
+        }
+    }
+}
+
+country_event = {
+    id = 5858550
+    title = "The Baltimore Crisis"
+    desc = "Chile has agreed to pay us reparations."
+    picture = "uss_baltimore"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Great!"
+		treasury = 75000
+	}
+}
+
+country_event = {
+    id = 5858551
+    title = "The Baltimore Crisis"
+    desc = "Chile has refused to pay us reparations."
+    picture = "uss_baltimore"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "We will teach them a lesson! §RDeclare War on Chile§W"
+		war = {
+			target = CHL
+			attacker_goal = { casus_belli = war_reparations }
+			defender_goal = { casus_belli = humiliate_no_infamy }
+		}
+		ai_chance = {
+            factor = 50
+        }
+	}
+	
+	option = {
+        name = "This is not worth a war."
+		prestige = -10
+		ai_chance = {
+            factor = 50
+        }
+	}
 }

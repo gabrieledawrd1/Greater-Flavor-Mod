@@ -1,5 +1,5 @@
 #
-# V2ME Cleanup 1.0.2 by Bob Bobington and Dr, configured for GFM
+# V2ME Cleanup 1.0.3b by Bob Bobington and Dr, configured for GFM
 #
 # Features:
 #	
@@ -23,6 +23,9 @@
 #	-Permanent fix to craftsmen exploit/bug, without player interaction
 #	-Dynamically adressing the liquidity crisis, effectively
 #
+# Most Recent Version Change:
+#	-1.0.3b: GFM Version Only, Added Indochina Organization
+#
 
 
 country_event = {
@@ -34,7 +37,102 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
-		
+		random_owned = {
+			limit = {
+				owner = {
+					SOV = {
+						exists = yes
+						NOT = {
+							government = proletarian_dictatorship
+							government = prov_gov_communist
+							exists = RUS
+						}
+					}
+				}
+			}
+			owner = {
+				SOV = { change_tag = RUS }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					RUS = {
+						exists = yes
+						OR = {
+							government = proletarian_dictatorship
+							government = prov_gov_communist
+						}
+						NOT = {
+							exists = SOV
+						}
+					}
+				}
+			}
+			owner = {
+				RUS = { change_tag = SOV }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					SWI = {
+						has_country_modifier = neutrality_modifier
+						ai = no
+						OR = {
+							any_greater_power = { military_access = SWI }
+							any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
+							sphere_owner = { military_access = SWI }
+							AND = {
+								num_of_allies = 1
+								NOT = { NCT = { alliance_with = SWI } }
+							}
+							AND = {
+								num_of_allies = 2
+								NCT = { exists = yes alliance_with = SWI }
+							}
+							war = yes
+						}
+					}
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						exists = yes
+						NOT = { vassal_of = SWI }
+						OR = {
+							military_access = SWI
+							alliance_with = SWI
+						}
+					}
+					relation = { who = SWI value = -125 }
+				}
+				any_country = {
+					limit = {
+						exists = yes
+						alliance_with = SWI
+						NOT = { vassal_of = SWI }
+					}
+					leave_alliance = SWI
+				}
+				any_country = {
+					limit = {
+						exists = yes
+						war_with = SWI
+					}
+					end_war = SWI
+				}
+				any_country = {
+					limit = {
+						exists = yes
+						military_access = SWI
+						NOT = { vassal_of = SWI }
+					}
+					end_military_access = SWI
+				}
+			}
+		}
 		any_country = {
             limit = {
 				exists = yes
@@ -43,6 +141,17 @@ country_event = {
             }
             remove_country_modifier = western_presence
         }
+		
+		any_country = {
+			limit = {
+				ai = no
+				OR = {
+					has_country_flag = preparations_to_kill
+					has_country_flag = preparations_to_kill_lmao
+				}
+			}
+			country_event = 4434
+		}
 		
 		#abolishing serfdom
 		any_country = {
@@ -73,6 +182,31 @@ country_event = {
                 any_pop = { limit = { type = serfs } pop_type = farmers money = 1000 }
             }
         }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
+					OR = {
+						FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
+						BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
+					}
+					575 = { OR = { owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
+					PRU = { is_disarmed = no }
+				}
+			}
+			owner = {
+				set_global_flag = clean_up_france_lost_rhine_crisis
+				any_country = {
+					limit = {
+						primary_culture = french
+						is_greater_power = yes
+						exists = yes
+					}
+					country_event = 99993
+				}
+			}
+		}	
 		
 		#updating missing flags
 		any_country = {
@@ -208,6 +342,150 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+			1687 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			517 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			3572 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1875 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			766 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			473 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			3496 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			2664 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1083 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1086 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1643 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1087 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			860 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			859 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			966 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			372 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			759 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			763 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+			1640 = { add_province_modifier = { name = strait_control_tile duration = -1 } }
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						1162 = {
+							trade_goods = pearls
+							NOT = { has_province_modifier = pearl_season }
+						}
+						1165 = {
+							trade_goods = pearls
+							NOT = { has_province_modifier = pearl_season }
+						}
+						1167 = {
+							trade_goods = pearls
+							NOT = { has_province_modifier = pearl_season }
+						}
+						2664 = {
+							trade_goods = pearls
+							NOT = { has_province_modifier = pearl_season }
+						}
+						935 = {
+							trade_goods = pearls
+							NOT = { has_province_modifier = pearl_season }
+						}
+					}
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { owns = 1162 1162 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+					1162 = { trade_goods = fruit }
+				}
+				any_country = {
+					limit = { owns = 1165 1165 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+					1165 = { trade_goods = fish }
+				}
+				any_country = {
+					limit = { owns = 1167 1167 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+					1167 = { trade_goods = fish }
+				}
+				any_country = {
+					limit = { owns = 2664 2664 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+					2664 = { trade_goods = fish }
+				}
+				any_country = {
+					limit = { owns = 935 935 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+					935 = { trade_goods = fish }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						1162 = { #Bahrain
+							NOT = { trade_goods = pearls }
+							NOT = { has_province_modifier = pearl_season }
+						}
+						1167 = { #Abu Dhabi
+							NOT = { trade_goods = pearls }
+							NOT = { has_province_modifier = pearl_season }
+						}
+						1165 = { #Doha
+							NOT = { trade_goods = pearls }
+							NOT = { has_province_modifier = pearl_season }
+						}
+
+						2664 = { #Khasab
+							NOT = { trade_goods = pearls }
+							NOT = { has_province_modifier = pearl_season }
+						}
+						935 = { #Kuwait
+							NOT = { trade_goods = pearls }
+							NOT = { has_province_modifier = pearl_season }
+						}
+					}
+					month = 4
+					NOT = { month = 6 }
+					NOT = { year = 1909 }
+				}
+			}
+			owner = {
+				1162 = {
+					random_list = {
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					}
+				}
+				1165 = {
+					random_list = {
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					}
+				}
+				1167 = {
+					random_list = {
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					}
+				}
+				2664 = {
+					random_list = {
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					}
+				}
+				935 = {
+					random_list = {
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					}
+				}
+			}
+		}
 		
 		#clean up crisis tension
 		any_country = {
@@ -287,6 +565,7 @@ country_event = {
                     OR = {
                         is_core = SOK
                         is_core = DND
+						is_core = BGU
                         is_core = TOU
                         is_core = OYO
                         is_core = BEN
@@ -631,7 +910,10 @@ country_event = {
 						NOT = { has_country_flag = clean_up_colonial_government }
 					}
 					AND = {
-						government = dominion
+						OR = {
+						    government = dominion
+						    government = viceroyalty
+						}
 						NOT = { has_country_flag = Government_Dominion }
 					}
 					AND = {
@@ -728,7 +1010,10 @@ country_event = {
 			random_owned = {
 				limit = {
 					owner = {
-						government = dominion
+						OR = { 
+						    government = dominion
+						    government = viceroyalty
+					    }
 					}
 				}
 				owner = { set_country_flag = Government_Dominion }
@@ -825,7 +1110,7 @@ country_event = {
 		#colonial organization/african prospecting monthly checks
 		
 		#nigeria
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -899,16 +1184,6 @@ country_event = {
 				owner = {
 					set_country_flag = nigeria_master
 					set_global_flag = nigeria_organized
-					NGR = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
-					random_owned = { limit = { owner = { primary_culture = british } } NGR = { government = colonial_company } }
-					ARO = {
-						government = presidential_dictatorship
-						tech_school = unciv_tech_school
-						nationalvalue = nv_tradition
-					}
 					country_event = 199038
 				}
 			}
@@ -1022,7 +1297,7 @@ country_event = {
 		}
 		
 		#togo
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -1048,11 +1323,11 @@ country_event = {
 				owner = {
 					set_global_flag = togo_organized
 					set_country_flag = togo_master
+					country_event = 199039
 					TOG = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199039
 				}
 			}
 			random_owned = {
@@ -1103,7 +1378,7 @@ country_event = {
 		}
 		
 		#ivory coast
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -1136,13 +1411,8 @@ country_event = {
 				owner = {
 					set_global_flag = ivory_coast_organized
 					set_country_flag = ivc_master
-					1892 = { change_province_name = "Abidjan" }
-					random_owned = { limit = { owner = { primary_culture = french } } IVC = { government = colonial_company } }
-					IVC = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
 					country_event = 199040
+					1892 = { change_province_name = "Abidjan" }
 				}
 			}
 			random_owned = {
@@ -1165,6 +1435,7 @@ country_event = {
 					}
 				}
 				owner = {
+					country_event = 199040
 					any_country = {
 						limit = {
 							has_country_flag = ivc_master
@@ -1172,7 +1443,6 @@ country_event = {
 						clr_country_flag = ivc_master
 					}
 					set_country_flag = ivc_master
-					country_event = 199040
 				}
 			}
 			random_owned = {
@@ -1201,7 +1471,7 @@ country_event = {
 		}
 		
 		#sierra leone
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -1228,6 +1498,7 @@ country_event = {
 				owner = {
 					set_global_flag = sierra_leone_organized
 					set_country_flag = sierra_leone_master
+					country_event = 199041
 					1885 = { life_rating = 25 }
 					1886 = { life_rating = 25 }
 					FRA_1884 = { add_core = SLE }
@@ -1235,7 +1506,6 @@ country_event = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199041
 				}
 			}
 			random_owned = {
@@ -1286,7 +1556,7 @@ country_event = {
 		}
 		
 		#guinea
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -1319,12 +1589,12 @@ country_event = {
 				owner = {
 					set_global_flag = guinea_organized
 					set_country_flag = guinea_master
+					country_event = 199042
 					1879 = { change_province_name = "Conakry" }
 					GNE = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199042
 				}
 			}
 			random_owned = {
@@ -1381,7 +1651,7 @@ country_event = {
 		}
 		
 		#senegal
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				market_regulations = 1
@@ -1418,11 +1688,11 @@ country_event = {
 				owner = {
 					set_global_flag = senegal_organized
 					set_country_flag = senegal_master
+					country_event = 199043
 					SNG = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199043
 				}
 			}
 			random_owned = {
@@ -1484,7 +1754,7 @@ country_event = {
 			}
 		}
 		#niger
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -1514,11 +1784,11 @@ country_event = {
 				owner = {
 					set_global_flag = niger_organized
 					set_country_flag = niger_master
+					country_event = 199044
 					NIG = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199044
 				}
 			}
 			random_owned = {
@@ -1574,7 +1844,7 @@ country_event = {
 			}
 		}
 		#chad
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -1601,12 +1871,12 @@ country_event = {
 				owner = {
 					set_global_flag = chad_organized
 					set_country_flag = chad_master
+					country_event = 199045
 					1818 = { change_province_name = "N'Djamena" }
 					CHD = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199045
 				}
 			}
 			random_owned = {
@@ -1656,7 +1926,7 @@ country_event = {
 			}
 		}
 		#cameroon
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -1685,14 +1955,6 @@ country_event = {
 				owner = {
 					set_global_flag = cameroon_organized
 					set_country_flag = cameroon_master
-					random_owned = {
-						limit = { owner = { is_culture_group = germanic } }
-						CMR = { government = colonial_company }
-					}
-					CMR = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
 					country_event = 199046
 				}
 			}
@@ -1747,7 +2009,7 @@ country_event = {
 			}
 		}
 		#gabon
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -1776,6 +2038,7 @@ country_event = {
 				owner = {
 					set_global_flag = gabon_organized
 					set_country_flag = gabon_master
+					country_event = 199047
 					any_owned = {
 						limit = {
 							OR = {
@@ -1799,7 +2062,6 @@ country_event = {
 						set_country_flag = post_colonial_country
 						all_core = { remove_core = EQG }
 					}
-					country_event = 199047
 				}
 			}
 			random_owned = {
@@ -1853,7 +2115,7 @@ country_event = {
 			}
 		}
 		#congo
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -1879,7 +2141,7 @@ country_event = {
 				owner = {
 					set_global_flag = congo_organized
 					set_country_flag = congo_master
-					random_owned = { limit = { owner = { primary_culture = french } } CGO = { government = colonial_company } }
+					country_event = 199048
 					1977 = {
 						change_province_name = "Brazzaville"
 						add_core = CGO
@@ -1897,11 +2159,6 @@ country_event = {
 					2624 = {
 						add_core = CGO
 					}
-					CGO = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
-					country_event = 199048
 				}
 			}
 			random_owned = {
@@ -1951,7 +2208,7 @@ country_event = {
 			}
 		}
 		#zaire
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2014,12 +2271,11 @@ country_event = {
 				owner = {
 					set_global_flag = zaire_organized
 					set_country_flag = zaire_master
-					
+					country_event = 199049
 					CNG = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 199049
 				}
 			}
 			random_owned = {
@@ -2104,7 +2360,7 @@ country_event = {
 			}
 		}
 		#zambia
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2143,16 +2399,6 @@ country_event = {
 				owner = {
 					set_global_flag = zambia_organized
 					set_country_flag = zambia_master
-					random_owned = { limit = { owner = { primary_culture = british } } ZAM = { government = colonial_company } }
-					
-					ZAM = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-						all_core = {
-							remove_core = LUN
-							remove_core = KZB
-						}
-					}
 					country_event = 199050
 				}
 			}
@@ -2219,7 +2465,7 @@ country_event = {
 			}
 		}
 		#kenya
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2259,12 +2505,6 @@ country_event = {
 				owner = {
 					set_global_flag = kenya_organized
 					set_country_flag = kenya_master
-					random_owned = { limit = { owner = { primary_culture = british } } KNY = { civilized = yes government = colonial_company } }
-					KNY = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-						all_core = { remove_core = ZAN }
-					}
 					country_event = 199051
 				}
 			}
@@ -2335,7 +2575,7 @@ country_event = {
 			}
 		}
 		#tanzania
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2389,12 +2629,6 @@ country_event = {
 				owner = {
 					set_global_flag = tanzania_organized
 					set_country_flag = tanzania_master
-					random_owned = { limit = { owner = { is_culture_group = germanic } } TNZ = { government = colonial_company } }
-					TNZ = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-						all_core = { remove_core = ZAN }
-					}
 					country_event = 199052
 				}
 			}
@@ -2471,7 +2705,7 @@ country_event = {
 			}
 		}
 		#mali
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2526,14 +2760,6 @@ country_event = {
 				owner = {
 					set_global_flag = mali_organized
 					set_country_flag = mali_master
-					MLI = {
-						government = democracy
-						set_country_flag = Government_Democracy
-						political_reform = landed_voting
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
-					random_owned = { limit = { owner = { primary_culture = french } } MLI = { government = colonial_company } }
 					country_event = 199053
 				}
 			}
@@ -2614,7 +2840,7 @@ country_event = {
 			}
 		}
 		#libya
-		random_country = {
+		any_country = {
 			limit = {
 				OR = {
 					NOT = { tag = TUR }
@@ -2656,10 +2882,21 @@ country_event = {
 				tech_school = unciv_tech_school
 				set_country_flag = post_colonial_country
 			}
-			random_owned = { limit = { owner = { is_culture_group = italian } } LBY = { government = colonial_company } }
+			random_owned = { 
+				limit = { 
+					owner = { 
+						1731 = { 
+							owner = { 
+								is_culture_group = italian
+							}
+						}
+					} 
+				} 
+				LBY = { government = colonial_company } 
+			}
 		}
 		#ubangi shari
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2684,11 +2921,6 @@ country_event = {
 				owner = {
 					set_global_flag = ubangi_shari_organized
 					set_country_flag = ubangi_shari_master
-					CAR = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
-					random_owned = { limit = { owner = { primary_culture = french } } MLI = { government = colonial_company } }
 					country_event = 199054
 				}
 			}
@@ -2739,7 +2971,7 @@ country_event = {
 			}
 		}
 		#malawi
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2764,8 +2996,19 @@ country_event = {
 				owner = {
 					set_global_flag = malawi_organized
 					set_country_flag = malawi_master
-					random_owned = { limit = { owner = { primary_culture = british owns = 2066 } } 2066 = { change_province_name = "Blantyre" } }
-					random_owned = { limit = { owner = { primary_culture = british } } MLW = { government = colonial_company } }
+					country_event = 199055
+					random_owned = { 
+						limit = { 
+							owner = { 
+								2066 = { 
+									owner = { 
+										primary_culture = british 
+									}
+								}
+							} 
+						} 
+						2066 = { change_province_name = "Blantyre" } 
+					}
 					2067 = {
 						add_core = MLW
 						remove_core = KZB
@@ -2781,7 +3024,6 @@ country_event = {
 						set_country_flag = post_colonial_country
 						capital = 2067
 					}
-					country_event = 199055
 				}
 			}
 			random_owned = {
@@ -2831,7 +3073,7 @@ country_event = {
 			}
 		}
 		#gambia
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2856,11 +3098,11 @@ country_event = {
 				owner = {
 					set_global_flag = gambia_organized
 					set_country_flag = gambia_master
+					country_event = 477877794
 					GMB = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
 					}
-					country_event = 477877794
 				}
 			}
 			random_owned = {
@@ -2890,7 +3132,7 @@ country_event = {
 			}
 		}
 		#angola
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -2942,14 +3184,6 @@ country_event = {
 				owner = {
 					set_global_flag = angola_created
 					set_country_flag = angola_master
-					random_owned = {
-						limit = { owner = { is_culture_group = iberian } }
-						ANG = { government = colonial_company }
-					}
-					ANG = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
 					country_event = 199056
 				}
 			}
@@ -3024,7 +3258,7 @@ country_event = {
 			}
 		}
 		#mozambique
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3077,14 +3311,6 @@ country_event = {
 				owner = {
 					set_global_flag = mozambique_created
 					set_country_flag = mozambique_master
-					random_owned = {
-						limit = { owner = { is_culture_group = iberian } }
-						MOZ = { government = colonial_company }
-					}
-					MOZ = {
-						tech_school = unciv_tech_school
-						set_country_flag = post_colonial_country
-					}
 					country_event = 199057
 				}
 			}
@@ -3169,7 +3395,7 @@ country_event = {
 			}
 		}
 		#algeria
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3202,7 +3428,7 @@ country_event = {
             }
 		}
 		#uganda
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3227,6 +3453,7 @@ country_event = {
 				owner = {
 					set_global_flag = uganda_organized
 					set_country_flag = uganda_master
+					country_event = 199058
 					2019 = { change_province_name = "Kampala" }
 					2020 = { remove_core = NKO }
 					2021 = { remove_core = BNY }
@@ -3237,7 +3464,6 @@ country_event = {
 						set_country_flag = Government_Democracy
 						political_reform = landed_voting
 					}
-					country_event = 199058
 				}
 			}
 			random_owned = {
@@ -3287,7 +3513,7 @@ country_event = {
 			}
 		}
 		#botswana
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3313,6 +3539,7 @@ country_event = {
 				owner = {
 					set_global_flag = botswana_organized
 					set_country_flag = botswana_master
+					country_event = 199059
 					TSW = {
 						tech_school = unciv_tech_school
 						set_country_flag = post_colonial_country
@@ -3321,7 +3548,6 @@ country_event = {
 						political_reform = landed_voting
 						all_core = { remove_core = MAT }
 					}
-					country_event = 199059
 				}
 			}
 			random_owned = {
@@ -3371,7 +3597,7 @@ country_event = {
 			}
 		}
 		#zanzibar
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3400,7 +3626,7 @@ country_event = {
             }
 		}
 		#sudan
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3413,6 +3639,7 @@ country_event = {
 						owns = 1846
 						owns = 1847
 						owns = 1832
+						owns = 3377
 					}
 					AND = {
 						owns = 1839
@@ -3458,6 +3685,7 @@ country_event = {
 						owns = 1846
 						owns = 1847
 						owns = 1832
+						owns = 3377
 					}
 					AND = {
 						owns = 1842
@@ -3482,6 +3710,7 @@ country_event = {
 						owns = 1846
 						owns = 1847
 						owns = 1832
+						owns = 3377
 					}
 					AND = {
 						owns = 1842
@@ -3561,6 +3790,7 @@ country_event = {
 				owner = {
 					set_global_flag = sudan_organized
 					set_country_flag = sudan_master
+					country_event = 199060
 					SUD = {
 						all_core = {
 							remove_core = EGY
@@ -3574,7 +3804,6 @@ country_event = {
 						political_reform = landed_voting
 						tech_school = unciv_tech_school
 					}
-					country_event = 199060
 				}
 			}
 			random_owned = {
@@ -3585,6 +3814,7 @@ country_event = {
 						owns = 1846
 						owns = 1847
 						owns = 1832
+						owns = 3377
 						owns = 1834
 						owns = 1836
 						owns = 1833
@@ -3638,6 +3868,7 @@ country_event = {
 						owns = 1846
 						owns = 1847
 						owns = 1832
+						owns = 3377
 						owns = 1834
 						owns = 1836
 						owns = 1833
@@ -3677,7 +3908,7 @@ country_event = {
 			}
 		}
 		#ghana
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3716,6 +3947,7 @@ country_event = {
 				owner = {
 					set_global_flag = ghana_organized
 					set_country_flag = ghana_master
+					country_event = 199061
 					ASH = {
 						all_core = {
 							remove_core = MOS
@@ -3731,7 +3963,6 @@ country_event = {
 						political_reform = landed_voting
 						
 					}
-					country_event = 199061
 				}
 			}
 			random_owned = {
@@ -3795,7 +4026,7 @@ country_event = {
 			}
 		}
 		#burkina faso
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3827,6 +4058,7 @@ country_event = {
 				owner = {
 					set_global_flag = burkina_faso_organized
 					set_country_flag = burkina_master
+					country_event = 199062
 					FRA_1901 = {
 						add_core = BKF
 						remove_core = SEG
@@ -3841,7 +4073,6 @@ country_event = {
 						political_reform = landed_voting
 						tech_school = unciv_tech_school
 					}
-					country_event = 199062
 				}
 			}
 			random_owned = {
@@ -3891,7 +4122,7 @@ country_event = {
 			}
 		}
 		#mauretania
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3923,7 +4154,7 @@ country_event = {
             }
 		}
 		#dahomey
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -3950,11 +4181,13 @@ country_event = {
 				owner = {
 					set_global_flag = dahomey_organized
 					set_country_flag = dahomey_master
+					country_event = 199063
 					FRA_1919 = {
 						add_core = DAH
 						remove_core = TOU
 						remove_core = MAS
 					}
+					BGU = { all_core = { remove_core = BGU } }
 					DAH = {
 						set_country_flag = post_colonial_country
 						government = democracy
@@ -3964,7 +4197,6 @@ country_event = {
 						capital = 1919
 					}
 					1919 = { change_province_name = Porto-Novo }
-					country_event = 199063
 				}
 			}
 			random_owned = {
@@ -4014,7 +4246,7 @@ country_event = {
 			}
 		}
 		#indonesia
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				war = no
@@ -4034,9 +4266,6 @@ country_event = {
 					exists = KLM
 					exists = LAN
 					exists = KTI
-					exists = SUL
-					exists = BRU
-					exists = PPG
 					has_global_flag = indonesia_organized
 					has_global_flag = indonesia_formed
 					is_culture_group = southeast_asian
@@ -4090,9 +4319,6 @@ country_event = {
 						remove_core = KLM
 						remove_core = LAN
 						remove_core = KTI
-						remove_core = SUL
-						remove_core = BRU
-						remove_core = PPG
 					}
 		
 					INO = {
@@ -4104,7 +4330,6 @@ country_event = {
 					random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = asian_minor } } INO = { add_accepted_culture = asian_minor } }
 					random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = yue } } INO = { add_accepted_culture = yue } }
 					random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = melanesian } } INO = { add_accepted_culture = melanesian } }
-					random_owned = { limit = { owner = { primary_culture = dutch } } INO = { add_accepted_culture = dutch government = colonial_company } }
 				}
 			}
 			random_owned = {
@@ -4137,15 +4362,109 @@ country_event = {
 						remove_core = KLM
 						remove_core = LAN
 						remove_core = KTI
-						remove_core = SUL
-						remove_core = BRU
-						remove_core = PPG
+					}
+				}
+			}
+		}
+		#indochina
+		any_country = {
+			limit = {
+				exists = yes
+				war = no
+				machine_guns = 1
+				market_regulations = 1
+				owns = 1369
+				civilized = yes
+				NOT = {
+					exists = IDC
+                    exists = DAI
+                    exists = CAM
+					exists = LUA
+					exists = WIA
+					exists = CHK
+					has_global_flag = indochina_organized
+					has_global_flag = indochina_formed
+					is_culture_group = southeast_asian
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_global_flag = indochina_organized has_country_flag = indochina_master }
+					}
+				}
+				owner = {
+					set_global_flag = indochina_organized
+					set_country_flag = indochina_master
+					#country_event = 199064 - THIS EVENT IS FOR INDONESIA
+		
+					any_owned = {
+						limit = {
+							OR = {
+								region = LUA_1356 #Laos
+								region = SIA_1366 #Cambodia
+								region = DAI_1369 #Tonkin
+								region = DAI_1375 #Annam
+								region = DAI_1380 #Cochinchina
+							}
+						}
+						add_core = IDC
+					}
+		
+					any_owned = {
+						limit = {
+							is_core = IDC
+#							NOT = { province_id = 1446 province_id = 2647 }
+						}
+						remove_core = DAI
+						remove_core = CAM
+						remove_core = LUA
+						remove_core = WIA
+						remove_core = CHK
+					}
+		
+					IDC = {
+						set_country_flag = post_colonial_country
+						tech_school = unciv_tech_school # HPM 0.4.5.2 port: use old HFM tech school name
+					}
+					random_owned = { limit = { is_core = IDC any_pop = { has_pop_culture = vietnamese } } IDC = { add_accepted_culture = vietnamese } }
+					random_owned = { limit = { is_core = IDC any_pop = { has_pop_culture = thai } } IDC = { add_accepted_culture = thai } }
+					random_owned = { limit = { is_core = IDC any_pop = { has_pop_culture = asian_minor } } IDC = { add_accepted_culture = asian_minor } }
+					random_owned = { limit = { is_core = IDC any_pop = { has_pop_culture = burmese } } IDC = { add_accepted_culture = burmese } }
+					random_owned = { limit = { is_core = IDC any_pop = { has_pop_culture = khmer } } IDC = { add_accepted_culture = khmer } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_global_flag = indochina_organized
+						NOT = { has_country_flag = indochina_master }
+					}
+				}
+				owner = {
+					any_country = {
+						limit = { has_country_flag = indochina_master }
+						clr_country_flag = indochina_master
+					}
+					set_country_flag = indochina_master
+					#country_event = 199064 - THIS EVENT IS FOR INDONESIA
+		
+					any_owned = {
+						limit = {
+							is_core = IDC
+#							NOT = { province_id = 1446 province_id = 2647 }
+						}
+						remove_core = DAI
+						remove_core = CAM
+						remove_core = LUA
+						remove_core = WIA
+						remove_core = CHK
 					}
 				}
 			}
 		}
 		#somalia
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -4167,12 +4486,18 @@ country_event = {
 				NOT = { exists = MAJ }
 				NOT = { exists = WRL }
 				NOT = { exists = HBY }
+				NOT = {
+					AND = {
+						WRL = { all_core = { owned_by = ENG } }
+						has_global_flag = british_somaliland
+					}
+				}
 			}
 			set_global_flag = somalia_united
             random_owned = {
                 limit = {
                     province_id = 1870
-                    NOT = { life_rating = 6 }
+                    NOT = { life_rating = 35 }
                 }
                 1870 = { life_rating = 25 }
             }
@@ -4198,8 +4523,63 @@ country_event = {
                 nationalvalue = nv_tradition
             }
 		}
+		#somalia but British Somalia stays
+		any_country = {
+			limit = {
+				exists = yes
+				civilized = yes
+				war = no
+				market_regulations = 1
+				machine_guns = 1
+				NOT = { exists = SOM }
+				NOT = {
+					capital_scope = { continent = africa }
+					capital_scope = { continent = west_africa }
+					capital_scope = { continent = east_africa }
+					capital_scope = { continent = central_africa }
+					capital_scope = { continent = south_west_africa }
+				}
+				NOT = { has_global_flag = somalia_united }
+				owns = 1868
+				owns = 1872
+				NOT = { exists = GEL }
+				NOT = { exists = MAJ }
+				NOT = { exists = WRL }
+				NOT = { exists = HBY }
+				WRL = { all_core = { owned_by = ENG } }
+				has_global_flag = british_somaliland
+			}
+			set_global_flag = somalia_united
+            random_owned = {
+                limit = {
+                    province_id = 1870
+                    NOT = { life_rating = 35 }
+                }
+                1870 = { life_rating = 25 }
+            }
+
+            1869 = { trade_goods = fruit }
+            1870 = { trade_goods = fruit }
+            1868 = { trade_goods = cotton }
+
+            SOM_1868 = { add_core = SOM }
+            SOM_1872 = { add_core = SOM }
+            HBY = { all_core = { remove_core = HBY } }
+            GEL = { all_core = { remove_core = GEL } }
+            MAJ = { all_core = { remove_core = MAJ } }
+            1875 = { add_core = SOM }
+            1865 = { add_core = SOM }
+            1867 = { add_core = SOM }
+            2031 = { add_core = SOM }
+            2032 = { add_core = SOM }
+            SOM = {
+                set_country_flag = post_colonial_country
+                tech_school = unciv_tech_school
+                nationalvalue = nv_tradition
+            }
+		}
 		#timor
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -4218,14 +4598,13 @@ country_event = {
 				owner = {
 					set_global_flag = timor_organized
 					set_country_flag = timor_master
+					country_event = 477877795
 					TMR = {
 						tech_school = unciv_tech_school
 						nationalvalue = nv_autocracy
-						government = colonial_company
 						set_country_flag = Government_Democracy
 						set_country_flag = post_colonial_country
 					}
-					country_event = 477877795
 				}
 			}
 			random_owned = {
@@ -4248,7 +4627,7 @@ country_event = {
 			}
 		}
 		#namibia
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -4267,18 +4646,18 @@ country_event = {
 				owner = {
 					set_global_flag = namibia_organized
 					set_country_flag = namibia_master
+					2078 = { 
+						owner = {
+							country_event = 477877796
+						} 
+					}
 					2080 = { trade_goods = iron }
 					random_owned = { limit = { owner = { is_culture_group = germanic owns = 2081 } } 2081 = { change_province_name = "Schuckmannsburg" add_core = NMB } }
 					random_owned = { limit = { owner = { NOT = { is_culture_group = germanic owns = 2081 } } } 2081 = { change_province_name = "Linyati" add_core = NMB } }
 					random_owned = { limit = { province_id = 2083 } 2083 = { change_province_name = "Walvis Bay" } }
 					random_owned = { limit = { owner = { NOT = { is_culture_group = germanic } } } 2084 = { change_province_name = "Angra Pequena" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } } }
 		
-					random_owned = {
-						limit = { owner = { NOT = { has_country_flag = founding_german_namibia } } }
-						2086 = { change_province_name = "Keetmanshoop" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
-						NMB = { civilized = yes government = colonial_company }
-					}
-		
+					2086 = { change_province_name = "Keetmanshoop" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
 					2081 = { any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
 					2080 = { change_province_name = "Grootfontein" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
 					2082 = { change_province_name = "Gobabis" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
@@ -4293,7 +4672,6 @@ country_event = {
 						political_reform = landed_voting
 					}
 					
-					country_event = 477877796
 				}
 			}
 			random_owned = {
@@ -4316,7 +4694,7 @@ country_event = {
 			}
 		}
 		#lebanon
-		random_country = {
+		any_country = {
 			limit = {
 				exists = yes
 				civilized = yes
@@ -4329,6 +4707,18 @@ country_event = {
 				LBN = { exists = no }
 				year = 1870
 			}
+					random_owned = {
+						limit = { 
+							owner = { 
+								913 = { 
+									owner = { 
+										primary_culture = french
+									} 
+								} 
+							} 
+						}
+						LBN = { government = colonial_company }
+					}
 			random_owned = {
 				limit = {
 					owner = {
@@ -4396,7 +4786,6 @@ country_event = {
 							clr_country_flag = catholic_country
 						}
 					}
-					random_owned = { limit = { owner = { primary_culture = french } LBN = { government = colonial_company } } }
 				}
 			}
 			random_owned = {
@@ -4475,7 +4864,7 @@ country_event = {
 			}
 		}
 		#guine bissau
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -4502,6 +4891,7 @@ country_event = {
 				owner = {
 					set_global_flag = guine_bissau_organized
 					set_country_flag = guine_bissau_master
+					country_event = 199065
 					FRA_1878 = { add_core = GBU }
 					GBU = {
 						all_core = {
@@ -4513,7 +4903,6 @@ country_event = {
 						set_country_flag = Government_Democracy
 						political_reform = landed_voting
 					}
-					country_event = 199065
 				}
 			}
 			random_owned = {
@@ -4563,7 +4952,7 @@ country_event = {
 			}
 		}
 		#madagascar
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -4591,11 +4980,6 @@ country_event = {
 				owner = {
 					set_global_flag = madagascar_organized
 					set_country_flag = madagascar_master
-					MAD = {
-						set_country_flag = post_colonial_country
-						tech_school = unciv_tech_school
-					}
-					random_owned = { limit = { owner = { primary_culture = french } } MAD = { government = colonial_company } }
 					country_event = 199066
 				}
 			}
@@ -4646,7 +5030,7 @@ country_event = {
 			}
 		}
 		#zimbabwe
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -4673,12 +5057,12 @@ country_event = {
 				owner = {
 					set_global_flag = zimbabwe_organized
 					set_country_flag = zimbabwe_master
+					country_event = 199067
 					ZBW = {
 						all_core = { remove_core = MAT }
 						set_country_flag = post_colonial_country
 						tech_school = unciv_tech_school
 					}
-					country_event = 199067
 				}
 			}
 			random_owned = {
@@ -4728,7 +5112,7 @@ country_event = {
 			}
 		}
 		#rwanda burundi
-		random_country = {
+		any_country = {
 			limit = {
 				war = no
 				exists = yes
@@ -4759,6 +5143,7 @@ country_event = {
 				owner = {
 					set_global_flag = rwanda_burundi_organized
 					set_country_flag = rwanda_burundi_master
+					country_event = 199068
 					BRD = {
 						set_country_flag = post_colonial_country
 						tech_school = unciv_tech_school
@@ -4767,7 +5152,6 @@ country_event = {
 						set_country_flag = post_colonial_country
 						tech_school = unciv_tech_school
 					}
-					country_event = 199068
 				}
 			}
 			random_owned = {
@@ -4830,6 +5214,832 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+		#Ostdrang modifier addition cleanup
+		random_owned = {
+			limit = {
+				owner = {
+					717 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				717 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					708 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				708 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3336 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3336 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					682 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				682 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3281 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3281 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3469 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3469 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					692 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				692 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3331 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3331 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					792 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				792 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					653 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				653 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					652 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				652 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					964 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				964 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					967 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				967 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3436 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3436 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3437 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3437 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3438 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3438 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3439 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3439 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					966 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				966 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					353 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				353 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					349 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				349 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					350 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				350 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					351 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				351 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					352 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				352 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3367 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3367 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3368 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3368 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					355 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				355 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					356 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				356 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					357 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				357 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					358 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				358 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					359 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				359 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3423 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3423 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3424 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3424 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					354 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				354 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					360 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				360 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					361 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				361 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					362 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				362 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					363 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				363 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					364 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				364 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3366 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3366 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3329 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3329 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3328 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3328 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3327 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3327 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					698 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				698 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					697 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				697 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					695 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				695 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					707 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				707 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					694 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				694 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					691 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				691 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					690 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				690 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					699 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				699 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					700 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				700 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					701 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				701 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					684 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				684 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					685 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				685 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					3277 = {
+						owner = {
+							has_country_flag = prussian_settlement_commission
+						}
+						NOT = { has_province_modifier = drang_nach_osten }
+					}
+				}
+			}
+			owner = {
+				3277 = { add_province_modifier = { name = drang_nach_osten duration = -1 } }
+			}
+		}
 		
 		#updating mil gain for ottomans
 		random_country = {
@@ -5288,6 +6498,7 @@ country_event = {
 	option = {
 		name = "OK"
 		set_country_flag = interacted_with
+		FROM = { clr_country_flag = possible_interactions }
 		overlord = { country_event = 477877792 }
 	}
 }
@@ -5362,8 +6573,21 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	
 	option = {
 		name = "Excellent."
+		random_owned = {
+			limit = { 
+				owner = { 
+					1446 = { 
+						owner = { 
+							is_culture_group = iberian 
+						} 
+					} 
+				} 
+			}
+			TMR = { government = colonial_company }
+		}	
 		any_owned = {
 			limit = {
 				NOT = { is_core = INO }
@@ -5447,7 +6671,7 @@ country_event = {
 			clr_country_flag = animist_country
 		}
 
-		random_owned = { limit = { owner = { is_culture_group = germanic owns = 2081 } } NMB = { government = colonial_company } }
+		random_owned = { limit = { owner = { is_culture_group = germanic owns = 2078 } } NMB = { government = colonial_company } }
 		random_owned = { limit = { owner = { has_country_flag = catholic_country } } NMB = { religion = catholic set_country_flag = catholic_country } }
 		random_owned = { limit = { owner = { has_country_flag = protestant_country } } NMB = { religion = protestant set_country_flag = protestant_country } NMB = { add_accepted_culture = boer } }
 		random_owned = { limit = { owner = { has_country_flag = orthodox_country } } NMB = { religion = orthodox set_country_flag = orthodox_country } }

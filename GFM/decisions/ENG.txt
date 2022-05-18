@@ -1,4 +1,25 @@
 political_decisions = {
+    irish_land_reform = {
+        picture = gtfo
+        potential = {
+            tag = IRE
+            is_vassal = no
+            NOT = { has_country_flag = irish_land_reform }
+            any_owned_province = { has_province_modifier = enclosures }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_country_flag = irish_land_reform
+            all_core = {
+                remove_province_modifier = enclosures
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
     crown_empress_of_india = {
 		picture = crown_empress_of_india
 		news = yes
@@ -296,6 +317,17 @@ political_decisions = {
 					}
 				}
 			}
+			TSW = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = { is_vassal = no vassal_of = THIS }
+						}
+					}
+				}
+			}
 		}
 		
 		effect = {
@@ -306,7 +338,14 @@ political_decisions = {
 			any_owned = { limit = { is_core = RHO } secede_province = RHO }
 			create_vassal = RHO
 			create_alliance = RHO
-			diplomatic_influence = { who = RHO value = 400 }	
+			diplomatic_influence = { who = RHO value = 400 }
+			TSW = { set_country_flag = post_colonial_country civilized = yes }
+			TSW = { government = colonial_company political_reform = none_voting all_core = { remove_core = ENG } }
+			any_owned = { limit = { is_core = TSW } secede_province = TSW }
+			create_vassal = TSW
+			create_alliance = TSW
+			diplomatic_influence = { who = TSW value = 400 }
+			TSW = { government = colonial_company political_reform = none_voting }
 		}
 		
 		ai_will_do = {
@@ -382,7 +421,7 @@ political_decisions = {
 				change_province_name = "Salisbury"
 				any_pop = { limit = { type = soldiers culture = british } pop_type = farmers }
 				state_scope = {
-					change_region_name = "Southern Rhodesia"
+					change_region_name = "Mashonaland"
 					any_owned = {
 						add_core = RHO
 					}
@@ -393,7 +432,7 @@ political_decisions = {
 				change_province_name = "Fort Victoria"
 				any_pop = { limit = { type = farmers culture = british } reduce_pop = 2 }
 				state_scope = {
-					change_region_name = "Southern Rhodesia"
+					change_region_name = "Matabeleland"
 					any_owned = { add_core = RHO }
 				}
 			}
@@ -735,6 +774,7 @@ political_decisions = {
                 }
                 militancy = -5
             }
+			set_country_flag = no_more_enclosures
         }
 
         ai_will_do = {
@@ -845,6 +885,29 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+	challenger_exped = {
+        picture = challenger_exped
+        potential = {
+			NOT = { has_country_flag = challenger_exped }
+			tag = ENG
+			year = 1860
+        }
+
+        allow = {
+            war = no
+			analytic_philosophy = 1
+        }
+
+        effect = {
+            prestige = 5
+            years_of_research = 0.10
+			set_country_flag = challenger_exped
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
     }
 
 }

@@ -83,11 +83,17 @@
     artisans = {
         culture = maltese
         religion = catholic
-        size = 500
+        size = 450
+    }
+	
+	artisans = {
+        culture = catalan
+        religion = catholic
+        size = 50
     }
 
     artisans = {
-        culture = south_italian
+        culture = venetian
         religion = catholic
         size = 500
     }

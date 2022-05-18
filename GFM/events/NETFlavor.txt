@@ -788,7 +788,7 @@ country_event = {
     option = {
         name = "EVTOPTA211500"
         set_global_flag = aletta_jacobs
-        upper_house = { ideology = conservative value = 0.05 }
+        upper_house = { ideology = liberal value = 0.05 }
         any_pop = {
             limit = {
                 OR = {
@@ -806,7 +806,7 @@ country_event = {
 
     option = {
         name = "EVTOPTB211500"
-        upper_house = { ideology = liberal value = 0.05 }
+        upper_house = { ideology = conservative value = 0.05 }
         any_pop = {
             limit = {
                 OR = {
@@ -849,8 +849,8 @@ country_event = {
 
     option = {
         name = "EVTOPTA211500"
+        upper_house = { ideology = liberal value = 0.05 }
         set_global_flag = aletta_jacobs
-        upper_house = { ideology = conservative value = 0.05 }
         any_pop = {
             limit = {
                 OR = {
@@ -867,7 +867,7 @@ country_event = {
     }
     option = {
         name = "EVTOPTB211500"
-        upper_house = { ideology = liberal value = 0.05 }
+        upper_house = { ideology = conservative value = 0.05 }
         any_pop = {
             limit = {
                 OR = {
@@ -1156,6 +1156,7 @@ country_event = {
 			tag = NET
 			tag = BNF
 		}
+		owns = 1413
         has_global_flag = cultuurstelsel
         OR = {
             NOT = { ruling_party_ideology = socialist }
@@ -1203,50 +1204,6 @@ country_event = {
             }
             ideology = { factor = 0.05 value = socialist }
             consciousness = 2
-        }
-    }
-}
-
-#Socialists End the Aceh War
-country_event = {
-    id = 211486
-    title = "DIM_socialist_end_war_title"
-    desc = "DIM_socialist_end_war_desc"
-    picture = "administration"
-    fire_only_once = yes
-
-    trigger = {
-        OR = {
-			tag = NET
-			tag = BNF
-		}
-        OR = {
-            ruling_party_ideology = socialist
-            ruling_party_ideology = communist
-        }
-    }
-
-    mean_time_to_happen = { months = 12     }
-
-    option = {
-        name = "EVTOPTA211486"
-        release = ATJ
-        prestige = -50
-        any_pop = {
-            limit = {
-                OR = {
-                    is_primary_culture = yes
-                    is_accepted_culture = yes
-                }
-            }
-            scaled_militancy = { factor = -2 ideology = liberal }
-            scaled_militancy = { factor = -2 ideology = socialist }
-            scaled_militancy = { factor = -2 ideology = communist }
-        }
-        any_pop = {
-            limit = { is_culture_group = southeast_asian }
-            militancy = 5
-            consciousness = 5
         }
     }
 }
@@ -2712,6 +2669,7 @@ country_event = {
 			tag = NET
 			tag = BNF
 		}
+		owns = 1413
         has_global_flag = cultuurstelsel
         war = no
         OR = {
@@ -4689,7 +4647,6 @@ country_event = {
         }
         owns = 397
         owns = 398
-        owns = 3377
     }
 
     fire_only_once = yes
@@ -4723,9 +4680,6 @@ country_event = {
         398 = {
             remove_core = LUX
         }
-        3377 = {
-            remove_core = LUX
-        }
         397 = {
             remove_core = NET
         }
@@ -4746,10 +4700,6 @@ country_event = {
     option = {
         name = "Give them back all their former holdings."
         398 = {
-            add_core = LUX
-            remove_core = NET
-        }
-        3377 = {
             add_core = LUX
             remove_core = NET
         }
@@ -4777,10 +4727,6 @@ country_event = {
             remove_core = NET
         }
         395 = {
-            add_core = LUX
-            remove_core = NET
-        }
-        3377 = {
             add_core = LUX
             remove_core = NET
         }

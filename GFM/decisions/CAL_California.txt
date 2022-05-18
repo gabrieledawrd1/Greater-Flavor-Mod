@@ -69,9 +69,12 @@ political_decisions = {
                 tag = MEX
                 tag = CAL
                 tag = PAC
+				tag = HSA
             }
             NOT = {    has_global_flag = rancho }
             year = 1836
+			owns = 89
+			owns = 104
         }
 
         allow = {
@@ -93,6 +96,7 @@ political_decisions = {
                     province_id = 87
                     province_id = 88
                     province_id = 89
+					province_id = 3566
                     province_id = 90
                     province_id = 3448
                     province_id = 3449
@@ -124,7 +128,7 @@ political_decisions = {
 				tag = US2
 			}
             is_greater_power = yes
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             CAL = { exists = yes }
             has_global_flag = bear_flag_revolt
             has_global_flag = mexican_american_war
@@ -133,6 +137,7 @@ political_decisions = {
             neighbour = CAL
             NOT = { has_country_flag = second_velasco }
             NOT = { has_country_flag = annex_california }
+			MEX = { is_disarmed = yes }
         }
 
         allow = {
@@ -141,7 +146,7 @@ political_decisions = {
             MEX = {
                 OR = {
 					AND = {
-						has_recently_lost_war = yes
+						has_country_modifier = recently_lost_war
 						truce_with = THIS
 					}
 					exists = no
@@ -220,6 +225,7 @@ political_decisions = {
             21 = { add_core = CAL }
             107 = { add_core = CAL }
             108 = { add_core = CAL }
+            3560 = { add_core = CAL }
             109 = { add_core = CAL }
             110 = { add_core = CAL }
             111 = { add_core = CAL }

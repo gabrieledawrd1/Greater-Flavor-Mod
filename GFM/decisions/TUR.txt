@@ -235,7 +235,7 @@ political_decisions = {
         allow = {
             OR = {
                 revolution_n_counterrevolution = 1
-                has_recently_lost_war = yes
+                has_country_modifier = recently_lost_war
             }
         }
 
@@ -347,6 +347,7 @@ political_decisions = {
             owns = 879
             owns = 877
             owns = 878
+            owns = 3535
             OR = {
                 year = 1915
                 organizational_development = 1
@@ -355,7 +356,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = turkish_tea_in_turkey
-            884 = { trade_goods = tea }
+            3535 = { trade_goods = tea }
             882 = { trade_goods = tea }
             relation = { who = ENG value = -50 }
         }
@@ -473,7 +474,7 @@ political_decisions = {
                 government = semi_constitutional_empire
             }
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_greater_power = yes
             nationalism_n_imperialism = 1
             war_policy = jingoism
@@ -531,7 +532,7 @@ political_decisions = {
                 government = semi_constitutional_empire
             }
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_greater_power = yes
             nationalism_n_imperialism = 1
             war_policy = jingoism
@@ -624,7 +625,7 @@ political_decisions = {
 
         allow = {
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_greater_power = yes
             mass_politics = 1
             war_policy = jingoism
@@ -713,9 +714,11 @@ political_decisions = {
 
         allow = {
             war = no
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             is_greater_power = yes
-            mass_politics = 1
+            revolution_n_counterrevolution = 1
+			social_science = 1
+			empiricism = 1
             war_policy = jingoism
             KWT = {
                 in_sphere = THIS
@@ -769,7 +772,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = claimed_arab_coast
-            badboy = 5
+            badboy = 1
             1163 = { add_core = THIS }
             1164 = { add_core = THIS }
         }
@@ -1216,7 +1219,7 @@ political_decisions = {
 						owns = 911
 					}
 					war = no
-					has_recently_lost_war = no
+					NOT = { has_country_modifier = recently_lost_war }
 					owns = 1160
 					owns = 1158
 					owns = 3404
@@ -1236,7 +1239,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					war = no
-					has_recently_lost_war = no
+					NOT = { has_country_modifier = recently_lost_war }
 					inorganic_chemistry = 1
 				}
 				AND = {
@@ -1250,7 +1253,7 @@ political_decisions = {
 						owns = 911
 					}
 					war = no
-					has_recently_lost_war = no
+					NOT = { has_country_modifier = recently_lost_war }
 					owns = 1160
 					owns = 1158
 					owns = 3404
@@ -1291,7 +1294,7 @@ political_decisions = {
             owns = 664
             owns = 1745
             owns = 860
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             war = no
         }
         allow = {
@@ -1348,6 +1351,7 @@ political_decisions = {
             }
             is_greater_power = yes
             year = 1870
+			NOT = { owns = 967 }
             NOT = { has_global_flag = oriental_crisis_sick_man }
             owns = 670
             owns = 664
@@ -1363,7 +1367,7 @@ political_decisions = {
                     owned_by = THIS
                 }
             }
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
         }
         effect = {
 			random_owned = {
@@ -1492,7 +1496,7 @@ political_decisions = {
             owns = 664
             owns = 1745
             owns = 860
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             war = no
         }
         allow = {
@@ -1550,10 +1554,12 @@ political_decisions = {
         }
         allow = {
             prestige = 150
+			rank = 4
             nationalism_n_imperialism = 1
             war = no
+			has_unclaimed_cores = no
             NOT = { alliance_with = PER relation = { who = PER value = 20 } }
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
             TUR = {
                 all_core = {
                     owned_by = THIS
@@ -1618,7 +1624,7 @@ political_decisions = {
 			PER_1112 = { owned_by = THIS }
 			PER_1122 = { owned_by = THIS }
 			PER_3353 = { owned_by = THIS }
-            has_recently_lost_war = no
+            NOT = { has_country_modifier = recently_lost_war }
         }
     
         effect = {
@@ -1653,5 +1659,38 @@ political_decisions = {
                 badboy = 0.6
             }
         }
+    }
+	abdulaziz_expeditioneur = {
+        picture = abdulaziz_europe
+        potential = {
+            tag = TUR
+            year = 1867
+			NOT = { year = 1870 }
+            NOT = {
+                has_country_flag = abdulaziz_expeditioneur
+            }
+			OR = {
+				government = absolute_monarchy
+                government = absolute_empire
+                government = semi_constitutional_empire
+                government = constitutional_empire
+			}
+        }
+    
+        allow = {
+            war = no
+        }
+    
+        effect = {
+            prestige = 5
+            set_country_flag = abdulaziz_expeditioneur
+			relation = { who = ENG value = 50 }
+			relation = { who = FRA value = 50 }
+			relation = { who = BEL value = 50 }
+			relation = { who = PRU value = 50 }
+			relation = { who = AUS value = 50 }
+        }
+    
+        ai_will_do = { factor = 1 }
     }
 }

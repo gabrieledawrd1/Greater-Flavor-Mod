@@ -3808,7 +3808,7 @@ country_event = {
             factor = 0.5
             OR = {
                 overlord = { war = yes }
-                overlord = { has_recently_lost_war = yes }
+                overlord = { has_country_modifier = recently_lost_war }
             }
         }
     }
@@ -3897,7 +3897,7 @@ country_event = {
             modifier = {
                 factor = 0.1
                     OR = {
-                        FROM = { has_recently_lost_war = yes }
+                        FROM = { has_country_modifier = recently_lost_war }
                         FROM = { NOT = { military_score = 100 } }
                     }
                 }
@@ -4088,7 +4088,7 @@ country_event = {
             factor = 0.5
             OR = {
                 overlord = { war = yes }
-                overlord = { has_recently_lost_war = yes }
+                overlord = { has_country_modifier = recently_lost_war }
             }
         }
     }
@@ -4138,49 +4138,106 @@ country_event = {
     option = {
         name = "EVT443030OPTA"
         prestige_factor = -0.25
-        government = proletarian_dictatorship
-        ruling_party_ideology = communist
-        political_reform = none_voting
-        political_reform = party_appointed
-        political_reform = no_meeting
-        political_reform = state_press
-        political_reform = state_controlled
-        political_reform = underground_parties
-        political_reform = no_slavery
-        political_reform = debtors_prisons
-        social_reform = good_minimum_wage
-        social_reform = eight_hours
-        social_reform = good_subsidies
-        social_reform = good_pensions
-        set_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = election_started
-        clr_country_flag = conservative_party_in_power
-        clr_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
-		clr_country_flag = Government_Democracy
-        create_alliance = FROM
-        relation = { who = FROM value = 200 }
-        FROM = { diplomatic_influence = { who = THIS value = 100 } }
-        any_country = { limit = { NOT = { government = proletarian_dictatorship } } relation = { who = THIS value = -100 } }
-        any_greater_power = { limit = { NOT = { government = proletarian_dictatorship } } diplomatic_influence = { who = THIS value = -100 } }
-
+		random_owned = {
+			limit = {
+				owner = {
+					tag = RUS 
+				}
+			}
+			owner = {
+				change_tag = SOV
+				SOV = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = communist
+					political_reform = none_voting
+					political_reform = party_appointed
+					political_reform = no_meeting
+					political_reform = state_press
+					political_reform = state_controlled
+					political_reform = underground_parties
+					political_reform = no_slavery
+					political_reform = debtors_prisons
+					social_reform = good_minimum_wage
+					social_reform = eight_hours
+					social_reform = good_subsidies
+					social_reform = good_pensions
+					set_country_flag = communist_gov
+					clr_country_flag = absolute_monarchy_gov
+					clr_country_flag = semi_constitutional_monarchy_gov
+					clr_country_flag = constitutional_monarchy_gov
+					clr_country_flag = democracy_gov
+					clr_country_flag = presidential_dictatorship_gov
+					clr_country_flag = fascist_gov
+					clr_country_flag = anarcho_liberal_gov
+					clr_country_flag = election_started
+					clr_country_flag = conservative_party_in_power
+					clr_country_flag = liberal_party_in_power
+					clr_country_flag = reactionary_party_in_power
+					clr_country_flag = socialist_party_in_power
+					clr_country_flag = communist_party_in_power
+					clr_country_flag = fascist_party_in_power
+					clr_country_flag = anarcho_liberal_party_in_power
+					clr_country_flag = Government_Democracy
+					create_alliance = FROM
+					relation = { who = FROM value = 200 }
+					FROM = { diplomatic_influence = { who = THIS value = 100 } }
+					any_country = { limit = { NOT = { government = proletarian_dictatorship } } relation = { who = THIS value = -100 } }
+					any_greater_power = { limit = { NOT = { government = proletarian_dictatorship } } diplomatic_influence = { who = THIS value = -100 } }
+				}
+				RUS = { country_event = { id = 123429 days = 1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { tag = RUS }
+				}
+			}
+			owner = {
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				political_reform = none_voting
+				political_reform = party_appointed
+				political_reform = no_meeting
+				political_reform = state_press
+				political_reform = state_controlled
+				political_reform = underground_parties
+				political_reform = no_slavery
+				political_reform = debtors_prisons
+				social_reform = good_minimum_wage
+				social_reform = eight_hours
+				social_reform = good_subsidies
+				social_reform = good_pensions
+				set_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+				clr_country_flag = Government_Democracy
+				create_alliance = FROM
+				relation = { who = FROM value = 200 }
+				FROM = { diplomatic_influence = { who = THIS value = 100 } }
+				any_country = { limit = { NOT = { government = proletarian_dictatorship } } relation = { who = THIS value = -100 } }
+				any_greater_power = { limit = { NOT = { government = proletarian_dictatorship } } diplomatic_influence = { who = THIS value = -100 } }
+			}
+		}
         ai_chance = {
             factor = 30
             modifier = {
                 factor = 0.1
                     OR = {
-                        FROM = { has_recently_lost_war = yes }
+                        FROM = { has_country_modifier = recently_lost_war }
                         FROM = { NOT = { military_score = 100 } }
                     }
                 }
@@ -4369,7 +4426,7 @@ country_event = {
             factor = 0.5
             OR = {
                 overlord = { war = yes }
-                overlord = { has_recently_lost_war = yes }
+                overlord = { has_country_modifier = recently_lost_war }
             }
         }
     }
@@ -4420,6 +4477,7 @@ country_event = {
     trigger = {
         is_mobilised = yes
         war = no
+		NOT = { conscription = mandatory_service }
         NOT = { has_country_modifier = peacetime_mobilization }
         ai = no
         military_score = 5

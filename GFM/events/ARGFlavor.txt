@@ -238,7 +238,9 @@ country_event = {
         OR = {
             tag = ARG
             tag = ARC
+			AND = { tag = HSA owns = 2348 }
             tag = LPL
+			tag = SBA
         }
         OR = {
             2332 = { empty = yes }
@@ -246,7 +248,7 @@ country_event = {
             2334 = { empty = yes }
             2335 = { empty = yes }
             2391 = { empty = yes }
-            2392 = { empty = yes }
+            3555 = { empty = yes }
             2394 = { empty = yes }
             2396 = { empty = yes }
             2397 = { empty = yes }
@@ -254,7 +256,7 @@ country_event = {
             2399 = { empty = yes }
             2400 = { empty = yes }
         }
-        has_country_flag = conquest_of_the_desert
+        has_global_flag = conquest_of_the_desert
     }
 
     mean_time_to_happen = {
@@ -280,7 +282,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -298,7 +300,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -310,12 +312,13 @@ country_event = {
                 2334 = { owned_by = THIS }
             }
             2333 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3559 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -331,7 +334,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -346,7 +349,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -360,7 +363,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = no }
@@ -373,7 +376,7 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = no }
                 2398 = { empty = yes }
@@ -385,18 +388,19 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = no }
                 2397 = { empty = yes }
                 2396 = { owned_by = THIS }
             }
             2397 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3558 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = no }
+                3555 = { empty = no }
                 2396 = { empty = yes }
                 2392 = { owned_by = THIS }
             }
@@ -406,13 +410,13 @@ country_event = {
             limit = {
                 2391 = { empty = no }
                 2394 = { empty = no }
-                2392 = { empty = yes }
+                3555 = { empty = yes }
                 OR = {
                     2394 = { owned_by = THIS }
                     2355 = { owned_by = THIS }
                 }
             }
-            2392 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            3555 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -442,7 +446,7 @@ country_event = {
 
     trigger = {
         OR = {
-            has_country_flag = conquest_of_the_desert
+            has_global_flag = conquest_of_the_desert
             has_country_flag = occupation_of_araucania
         }
 	    NOT = {
@@ -463,10 +467,9 @@ country_event = {
 		OR = {
             tag = ARG
             tag = ARC
+			AND = { tag = HSA owns = 2348 }
             tag = LPL
             tag = CHL
-            tag = VLP
-            tag = CGC
             tag = SBA
 		}
     }
@@ -483,7 +486,16 @@ country_event = {
         name = "EVT97086OPTA" #Excellent!
         set_global_flag = patagonia_liferating
 		prestige = 3
-        2392 = {
+        3555 = {
+		    life_rating = 18
+            any_pop = {
+                limit = { is_culture_group = native_american }
+                    militancy = 8
+                    consciousness = 3
+                    reduce_pop = 0.97
+			}
+		}
+        2394 = {
 		    life_rating = 18
             any_pop = {
                 limit = { is_culture_group = native_american }
@@ -493,6 +505,15 @@ country_event = {
 			}
 		}
 		2396 = {
+		    life_rating = 18
+            any_pop = {
+                limit = { is_culture_group = native_american }
+                    militancy = 8
+                    consciousness = 3
+                    reduce_pop = 0.97
+			}
+		}
+		3557 = {
 		    life_rating = 18
             any_pop = {
                 limit = { is_culture_group = native_american }
@@ -556,6 +577,24 @@ country_event = {
 			}
 		}
 		2333 = {
+		    life_rating = 18
+            any_pop = {
+                limit = { is_culture_group = native_american }
+                    militancy = 8
+                    consciousness = 3
+                    reduce_pop = 0.97
+			}
+		}
+		3559 = {
+		    life_rating = 18
+            any_pop = {
+                limit = { is_culture_group = native_american }
+                    militancy = 8
+                    consciousness = 3
+                    reduce_pop = 0.97
+			}
+		}
+	    3558 = {
 		    life_rating = 18
             any_pop = {
                 limit = { is_culture_group = native_american }
@@ -724,8 +763,8 @@ country_event = {
             tag = ARG
             tag = ARC
             tag = LPL
+			AND = { tag = HSA owns = 2348 }
             tag = CHL
-            tag = VLP
             tag = SBA
 			tag = CRT
 			tag = ENT
@@ -733,15 +772,12 @@ country_event = {
         year = 1890
         owns = 2381
         owns = 2363
-        NOT = { has_global_flag = juan_godeken_helped }
-        NOT = { has_global_flag = juan_godeken_alone }
     }
     
     mean_time_to_happen = { months = 2 }
     
     option = {
         name = "EVTOPT97092A" #Historical Option
-        set_global_flag = juan_godeken_alone
         treasury = 500
         2381 = {
 		    life_rating = 1
@@ -763,11 +799,9 @@ country_event = {
     }
     option = {
         name = "EVTOPT97092B" #Ahistorical
-        set_global_flag = juan_godeken_helped
         treasury = -120000
         2381 = {
             life_rating = 2
-            change_province_name = "Bismarck" 
             add_province_modifier = {
                 name = godeken_colonies
                 duration = 3650
@@ -775,7 +809,6 @@ country_event = {
         }
         2363 = {
 		    life_rating = 2
-            change_province_name = "Chañar Ladeado" 
             add_province_modifier = {
                 name = godeken_colonies
                 duration = 3650
@@ -841,19 +874,19 @@ country_event = {
 		any_pop = {
 		    scaled_militancy = {
                 ideology = socialist
-                factor = 2
+                factor = 1
 		    }
 		    scaled_militancy = {
                 ideology = communist
-                factor = 3
+                factor = 2
 		    }
 		    scaled_consciousness = {
                 ideology = socialist
-                factor = 3
+                factor = 2
 		    }
 		    scaled_consciousness = {
                 ideology = communist
-                factor = 4
+                factor = 3
 			}
 		}
 	}
@@ -861,8 +894,8 @@ country_event = {
 
 country_event = {
     id = 97099
-    title = "Sheep Farming in the Malvinas"
-    desc = "Now that we have captured the Malvinas, and with the current sheep farming boom in Patagonia, it is time that we also help expand this boom to the islands"
+    title = "Sheep Farming in Islas Malvinas"
+    desc = "Now that we have captured Islas Malvinas, and with the current sheep farming boom in Patagonia, it is time that we also help expand this boom to the islands"
     picture = "falklands_map"
         
     fire_only_once = yes
@@ -981,6 +1014,7 @@ country_event = {
 		year = 1872
         OR = {
             tag = LPL
+			AND = { tag = HSA owns = 2348 }
             tag = ARG
             tag = ARC
 		}
@@ -1003,9 +1037,9 @@ country_event = {
             limit = { is_primary_culture = no }
             dominant_issue = { factor = 0.3 value = all_voting_pops }
 			consciousness = 3
-			}
-	    }
-	}
+		}
+    }
+}
 
 country_event = {
     id = 97106
@@ -1061,6 +1095,20 @@ country_event = {
 		}
 	}
     option = {
+        name = "The city of Córdoba's central location would be perfect for governing."
+		prestige = 10
+		capital = 2379
+		2379 = {
+		    add_province_modifier = { name = new_capital_modifier duration = 1825 }
+		    any_pop = {
+				limit = {
+					culture = platinean
+				}
+				militancy = -5
+			}
+		}
+	}
+    option = {
         name = "We should create a new city from scratch as our capital."
 		set_country_flag = la_plata_capital
 		treasury = -50000
@@ -1075,22 +1123,37 @@ country_event = {
 			militancy = -1
 		}
 	}
+    option = {
+        name = "Our current capital is fine as is, no need to change it."
+		capital_scope = {
+		    add_province_modifier = { name = new_capital_modifier duration = 1825 }
+		    any_pop = {
+				limit = {
+					culture = platinean
+				}
+				militancy = -5
+			}
+		}
+	}
 }
 
 country_event = {
     id = 97107
-    title = "La Radio Argentina"
+    title = "La Radio $COUNTRY$"
     desc = "In August 27, a group of young $COUNTRY_ADJ$ entrepreneurs began the world's first regular radio broadcasting with a live performance of Richard Wagner's opera Parsifal in downtown Buenos Aires, setting the precedent for many more radio programs to come."
-	picture = "arg_radio"
+	picture = "wireless_telegraphy"
         
     fire_only_once = yes
         
     trigger = {
         OR = {
             tag = ARG
+			AND = { tag = HSA owns = 2348 }
             tag = LPL
 			tag = ARC
+			tag = SBA
         }
+		owns = 2348
 		invention = national_radio_networks
     }
     
@@ -1114,10 +1177,7 @@ country_event = {
     picture = "parque_revolucion"
     mean_time_to_happen = { months = 4 }
     trigger = {
-		OR = {
-			ruling_party_ideology = conservative
-			ruling_party_ideology = reactionary
-		}
+		ruling_party_ideology = conservative
         year = 1890
         NOT = { year = 1891 }
 		owns = 2348
@@ -1125,6 +1185,7 @@ country_event = {
             tag = ARG
             tag = ARC
             tag = LPL
+			tag = SBA
         }
     }
     option = {
@@ -1135,14 +1196,118 @@ country_event = {
         }
 		2348 = {
 		    any_pop = {
-			    consciousness = 2
-				militancy = 1
+			    consciousness = 3
+				militancy = 2
 			}
 		}
 		any_pop = {
 		    limit = { NOT = { location = { province_id = 2348 } } }
-			consciousness = 1
-			militancy = 0.5
+			consciousness = 3
+			militancy = 2
         }
     }
+}
+
+country_event = {
+	id = 97153
+	title = "Wool boom restoration"
+	desc = "Since making a region a colony will rid it of all modifiers, this is an event to restore the patagonia wool boom. It will only happen once, so be careful."
+	picture = "coal_exhausted"
+
+    fire_only_once = yes
+        
+    is_triggered_only = yes
+
+	option = {
+		name = "Good thing that the modders added this event..."
+        2391 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+        2392 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+        2394 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+        2396 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+        2397 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+		2398 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+		2399 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            random_owned = {
+                limit = {
+                    province_id = 2131
+                }
+                2131 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+
+            random_owned = {
+                limit = {
+                    province_id = 2133
+                }
+                2133 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+		
+            random_owned = {
+                limit = {
+                    province_id = 2335
+                }
+                2335 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+
+            random_owned = {
+                limit = {
+                    province_id = 2334
+                }
+                2334 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+
+            random_owned = {
+                limit = {
+                    province_id = 2333
+                }
+                2333 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+			
+            random_owned = {
+                limit = {
+                    province_id = 3559
+                }
+                3559 = { add_province_modifier = { name = patagonia_wool_boom duration = 10220 } }
+            }
+        }
+	}
+
+
+
+country_event = {
+	id = 971541
+	title = "Introducing sheep to Viedma"
+	desc = "VIEDMASHEEP"
+	picture = "pacification_of_patagonia"
+
+    fire_only_once = yes
+        
+    trigger = {
+        primary_culture = platinean
+		owns = 2392
+		year = 1860
+    }
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Sounds like a lucrative venture..."
+		2392 = {
+		    trade_goods = wool 
+		    add_province_modifier = {
+			    name = colonial_exploitation 
+				duration = 365 
+			}
+		}
+        ai_chance = {
+            factor = 75
+		}
+	}
+
+	option = {
+		name = "We don't need this"
+        ai_chance = {
+            factor = 25
+		}
+	}
 }

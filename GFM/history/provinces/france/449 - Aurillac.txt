@@ -2,5 +2,6 @@ owner = FRA
 controller = FRA
 add_core = FRA
 add_core = OCC
-trade_goods = cotton
+terrain = nimes
+trade_goods = silk
 life_rating = 30

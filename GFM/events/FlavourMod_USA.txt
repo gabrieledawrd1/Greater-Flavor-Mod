@@ -17,11 +17,16 @@ country_event = {
     picture = "california_gold_rush"
 
     trigger = {
-        year = 1848
-        OR = {
-            has_country_flag = hasmanifestdestiny
-            has_country_flag = manifest_destiny_refuted
-        }
+		OR = {
+			AND = {
+				year = 1848
+				OR = {
+					has_country_flag = hasmanifestdestiny
+					has_country_flag = manifest_destiny_refuted
+				}
+			}
+			year = 1855
+		}
         war = no
         owns = 104
         104 = { is_colonial = no produces = precious_metal }
@@ -35,101 +40,106 @@ country_event = {
     option = {
         set_global_flag = cal_gen_ready
         name = "EVT99903OPTA"
+		87 = { naval_base = -6 }
+		3340 = { naval_base = -6 }
+		89 = { naval_base = 2 }
+		104 = { naval_base = 2 }
         any_pop = {
             limit = {
                 location = { is_core = CAL }
                 culture = native_american_minor
             }
-                reduce_pop = 0.05
-            }
-            random_owned = {
-                limit = { owner = { primary_culture = yankee } }
-                owner = {
-                    any_pop = {
-                        limit = {
-                            location = { is_core = CAL }
-                            culture = yankee
-                        }
-                        reduce_pop = 1.5
-                    }
-					# Audax Validator "." Ignore_NEXT
-                    104 = { assimilate = yes }
-					# Audax Validator "." Ignore_NEXT
-                    89 = { assimilate = yes }
-					# Audax Validator "." Ignore_NEXT
-                    90 = { assimilate = yes }
-                }
-            }
-            random_owned = {
-                limit = { owner = { primary_culture = mexican } }
-                owner = {
-                    any_pop = {
-                        limit = {
-                            location = { is_core = CAL }
-                            culture = mexican
-                        }
-                        reduce_pop = 1.5
-                    }
-                    any_pop = {
-                        limit = {
-                            location = { is_core = CAL }
-                            culture = yankee
-                        }
-                        reduce_pop = 0.2
-                    }
-                }
-            }
+			reduce_pop = 0.05
+		}
+		random_owned = {
+			limit = { owner = { primary_culture = yankee } }
+			owner = {
+				any_pop = {
+					limit = {
+						location = { is_core = CAL }
+						culture = yankee
+					}
+					reduce_pop = 1.5
+				}
+				# Audax Validator "." Ignore_NEXT
+				104 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
+				89 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
+				90 = { assimilate = yes }
+			}
+		}
+		random_owned = {
+			limit = { owner = { primary_culture = mexican } }
+			owner = {
+				any_pop = {
+					limit = {
+						location = { is_core = CAL }
+						culture = mexican
+					}
+					reduce_pop = 1.5
+				}
+				any_pop = {
+					limit = {
+						location = { is_core = CAL }
+						culture = yankee
+					}
+					reduce_pop = 0.2
+				}
+			}
+		}
 
-            84 = {
-                add_province_modifier = {
-                    name = california_gold_rush
-                    duration = 365
-                }
-            }
-            104 = {
-                add_province_modifier = {
-                    name = california_gold_rush
-                    duration = 365
-                }
-            }
-            89 = {
-                add_province_modifier = {
-                    name = california_gold_rush
-                    duration = 365
-                }
-            }
-            1723 = {
-                add_province_modifier = {
-                    name = transisthmian_trade
-                    duration = 365
-                }
-            }
-            2206 = {
-                add_province_modifier = {
-                    name = transisthmian_trade
-                    duration = 365
-                }
-            }
-            2204 = {
-                add_province_modifier = {
-                    name = transisthmian_trade
-                    duration = 365
-                }
-            }
-            2198 = {
-                add_province_modifier = {
-                    name = transisthmian_trade
-                    duration = 365
-                }
-            }
-            90 = {
-                add_province_modifier = {
-                    name = california_gold_rush
-                    duration = 365
-                }
-            }
-            set_global_flag = cali_gold_rush
-    }
+		84 = {
+			add_province_modifier = {
+				name = california_gold_rush
+				duration = 1095
+			}
+			
+		}
+		104 = {
+			add_province_modifier = {
+				name = california_gold_rush
+				duration = 365
+			}
+		}
+		89 = {
+			add_province_modifier = {
+				name = california_gold_rush
+				duration = 1095
+			}
+		}
+		1723 = {
+			add_province_modifier = {
+				name = transisthmian_trade
+				duration = 365
+			}
+		}
+		2206 = {
+			add_province_modifier = {
+				name = transisthmian_trade
+				duration = 365
+			}
+		}
+		2204 = {
+			add_province_modifier = {
+				name = transisthmian_trade
+				duration = 365
+			}
+		}
+		2198 = {
+			add_province_modifier = {
+				name = transisthmian_trade
+				duration = 365
+			}
+		}
+		90 = {
+			add_province_modifier = {
+				name = california_gold_rush
+				duration = 365
+			}
+		}
+		set_global_flag = cali_gold_rush
+	}
 }
 
 #The Texan Statehood
@@ -230,8 +240,15 @@ country_event = {
 
     option = {
         name = "EVT110060OPTA"
-        release = CAL
-        any_owned = { limit = { is_core = CAL } secede_province = CAL  }
+        any_owned = {
+			limit = {
+				OR = {
+					province_id = 85
+					province_id = 3340
+				}
+			}
+			secede_province = CAL
+		}
         war = {
             target = CAL
             attacker_goal = { casus_belli = annex_core_country }
@@ -253,7 +270,6 @@ country_event = {
             military_access = CAL
             create_alliance = CAL
         }
-
         any_country = {
             limit = {
                 OR = { tag = USA tag = US2 }
@@ -261,20 +277,24 @@ country_event = {
             }
             treasury = 20000
         }
-
+		MEX_94 = { remove_core = CAL }
+		MEX_97 = { remove_core = CAL }
+		MEX_100 = { remove_core = CAL } 
         set_global_flag = bear_flag_revolt
         ai_chance = { factor = 100 }
     }
 
     option = {
         name = "EVT110060OPTB"
-        CAL = { any_owned = {remove_core = MEX } }
+        CAL = { any_owned = { remove_core = MEX } }
         release = CAL
         prestige = -50
         set_global_flag = bear_flag_revolt
+		MEX_94 = { remove_core = CAL }
+		MEX_97 = { remove_core = CAL }
+		MEX_100 = { remove_core = CAL } 
         ai_chance = { factor = 0 }
     }
-
 }
 
 country_event = {
@@ -307,6 +327,7 @@ country_event = {
         105 = { add_core = TEX }
         110 = { add_core = DES }
         108 = { add_core = DES }
+        3560 = { add_core = DES }
         release_vassal = CAL
         release_vassal = TEX
         release_vassal = DES
@@ -2113,12 +2134,9 @@ country_event = {
     picture = "1843_GreatMigration"
 
     trigger = {
-        OR = {
-			OR = { tag = USA tag = US2 }
-			AND = {
-				has_country_flag = has_taken_oregon_or_more
-				tag = MEX
-			}
+		OR = {
+			tag = USA
+			tag = US2
 		}
         year = 1841
         81 = { empty = yes }
@@ -3566,5 +3584,211 @@ country_event = {
 		diplomatic_influence = { who = BJC value = 400}
 		military_access = BJC
 		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 600350
+	title = "The Great Train Wreck of 1856"
+	desc = "GREATTRAINWRECK"
+	picture = "Train_Wreck1856"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = USA tag = US2 }
+		year = 1856
+		month = 7
+		owns = 223
+	}
+	mean_time_to_happen = {
+        days = 17
+    }
+	
+	option = {
+		name = "How tragic."
+		any_pop = { limit = { location = { province_id = 223 } } consciousness = 1 }
+		ai_chance = { factor = 1 }
+	}
+
+}
+country_event = {
+	id = 600351
+	title = "The Great Gatsby"
+	desc = "THEGREATGATSBY"
+	picture = "Great_Gatsby"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = USA tag = US2 }
+		year = 1925
+		month = 3
+		owns = 233
+	}
+	mean_time_to_happen = {
+        days = 10
+    }
+	
+	option = {
+		name = "Return, Daisy Buchanan!"
+		any_pop = { consciousness = 0.1 }
+		prestige = 5
+		ai_chance = { factor = 1 }
+	}
+
+}
+country_event = {
+	id = 600352
+	title = "The First Solo Transatlantic Flight"
+	desc = "CHARLESLINDFLIGHT"
+	major = yes
+	picture = "Charles_Flight"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = USA tag = US2 }
+		year = 1927
+		month = 4
+	}
+	mean_time_to_happen = {
+        days = 21
+    }
+	
+	option = {
+		name = "Great view from up there."
+		any_pop = { consciousness = -0.1 }
+		prestige = 5
+		FRA = { prestige = 3 }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = 600353
+	title = "The Assassination of James A. Garfield"
+	desc = "ASSASSINATIONAGARFIELD"
+	major = yes
+	picture = "Abram_Garfield"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = USA tag = US2 }
+		year = 1881
+		month = 6
+		NOT = { year = 1883 }
+		ruling_party_ideology = liberal
+	}
+	
+	mean_time_to_happen = {
+        days = 2
+    }
+	
+	option = {
+		name = "How shocking!"
+		any_pop = { consciousness = 1 }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = 600354
+	title = "The Assassination of William McKinley"
+	desc = "ASSASSINATIONWMCKINLEY"
+	major = yes
+	picture = "William_McKinley"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = USA tag = US2 }
+		year = 1901
+		month = 8
+		NOT = { year = 1903 }
+		ruling_party_ideology = liberal
+	}
+	
+	mean_time_to_happen = {
+        days = 6
+    }
+	
+	option = {
+		name = "We hope he will recover soon."
+		any_pop = { consciousness = 1 }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { 
+	id = 600355 
+	title = "The 1860 Great Meteor" 
+	desc = "1860GREATMETEOR"
+	picture = "1860_meteor" 
+	fire_only_once = yes 
+
+	trigger = { 
+		OR = { tag = USA tag = US2 } 
+		year = 1860 
+		month = 7 
+	}
+	
+	mean_time_to_happen = { days = 20 } 
+
+	option = { 
+		name = "Year of meteors! Brooding year!"
+		any_pop = { 
+			consciousness = -0.1
+		}
+		research_points = 300 
+	}
+}
+
+country_event = { 
+	id = 600356 
+	title = "The 1913 Great Meteor Procession"
+	desc = "1913GREATMETEOR"
+	picture = "1913_meteor"
+	fire_only_once = yes 
+	
+	trigger = { 
+		OR = { tag = USA tag = US2 } 
+		year = 1913 
+		month = 2 
+	}
+	
+	mean_time_to_happend = { days = 7 } 
+	
+	option = { 
+		name = "Let God guide us to understanding these meteors."
+		any_pop = { 
+			consciousness = -0.1
+		}
+		any_country = { 
+			limit = { 
+				CAN = { 
+					any_core = { owned_by = THIS } 
+				}
+			}
+			country_event = 600357
+		}
+		research_points = 300 
+	}
+}
+
+country_event = { 
+	id = 600357 
+	title = "The 1913 Great Meteor Procession"
+	desc = "1913GREATMETEOR2"
+	picture = "1913_meteor"
+	
+	is_triggered_only = yes 
+	
+	mean_time_to_happend = { days = 7 } 
+	
+	option = { 
+		name = "Let God guide us to understanding these meteors."
+		any_pop = { 
+			consciousness = -0.1
+		}
+		research_points = 300 
 	}
 }

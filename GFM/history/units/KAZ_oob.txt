@@ -12,6 +12,6 @@ leader = {
     name = "Kenesary Khan"
     type = land
     date = 1836.1.1
-    background = aristocrat
-    personality = mediocre
-    }
+    background = defence_1.1
+    personality = attack_2.1
+}

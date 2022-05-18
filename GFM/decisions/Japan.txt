@@ -68,10 +68,6 @@ political_decisions = {
 				OR = {
 					has_country_flag = caved_to_commodore_perry
 					has_country_flag = surrendered_to_perry
-					AND = {
-						NOT = { has_country_modifier = uncivilized_isolationism }
-						NOT = { has_country_modifier = sakoku }
-					}
 				}
 			}
 			NOT = { has_country_flag = negotiate_unequal_treaty_TKG }
@@ -395,11 +391,15 @@ political_decisions = {
         picture = french_military_mission_to_japan
         potential = {
             tag = RUS
+			1089 = { empty = no }
+			1088 = { empty = no }
             owns = 1072 #Okhotsk
-            owns = 1088 #Shumshu
-            1089 = { #Etorofu
+            1644 = { #Nemuru
                 owner = {
-                    primary_culture = japanese
+                    OR = {
+						tag = TKG
+						tag = JAP
+					}
                     OR = {
                         civilized = yes
                         has_country_modifier = western_influences
@@ -419,13 +419,36 @@ political_decisions = {
         effect = {
             set_country_flag = shimoda_treaty
             prestige = 10
-            1088 = { add_core = RUS }
             random_country = {
                 limit = {
-                    owns = 1089 #Etorofu
+                    owns = 1644 #Etorofu
                 }
                 country_event = 32521
             }
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1089
+						1644 = { owned_by = TKG }
+					}
+				}
+				owner = {
+					1089 = { secede_province = TKG }
+					set_global_flag = eturofu_given
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1089
+						1644 = { owned_by = JAP }
+					}
+				}
+				owner = {
+					1089 = { secede_province = JAP }
+					set_global_flag = eturofu_given
+				}
+			}
         }
 
         ai_will_do = {
@@ -859,6 +882,7 @@ political_decisions = {
 			set_country_flag = enacted_shogunate_constitution
 			remove_country_modifier = sakoku 
 			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = ansei_purge 
 			prestige = 10 
 			government = prussian_constitutionalism 
 			    political_reform = wealth_weighted_voting
@@ -890,7 +914,13 @@ political_decisions = {
             }
 			country_event = 899094
 		} 
-		ai_will_do = { factor = 0.1 }
+		ai_will_do = { 
+			factor = 0.2
+			modifier = { 
+				factor = 0 
+				has_global_flag = railroaded_japan_empire
+			}
+		}
 	} 
 	
     meiji_constitution = {
@@ -974,7 +1004,10 @@ political_decisions = {
     begin_line_of_advantage = {
         picture = begin_line_of_advantage
         potential = {
-            tag = JAP
+            OR = {
+				tag = JAP
+				tag = TKG
+			}
             civilized = yes
             has_country_modifier = fukoku_kyohei
             NOT = {
@@ -1559,7 +1592,14 @@ political_decisions = {
     picture = become_japan
         potential = {
             tag = TKG
-            has_country_flag = made_peace_with_emperor
+			OR = { 
+				has_country_flag = made_peace_with_emperor
+				AND = { 
+					ai = yes 
+					has_global_flag = railroaded_japan_empire
+					has_global_flag = boshin_war_has_happened
+				}
+			}	
             OR = {
                 has_country_flag = daimyos_united
                 has_country_flag = han_system_abolished
@@ -1580,6 +1620,7 @@ political_decisions = {
         effect = {
             set_country_flag = peaceful_transition_to_japan
             remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = ansei_purge 
             prestige = 10
             TKG = {
                 all_core = {
@@ -1607,13 +1648,14 @@ political_decisions = {
         }
 
         ai_will_do = {
-            factor = 0.1
+            factor = 0.8
             modifier = {
+                factor = 1
+                has_global_flag = railroaded_japan_empire
+            }
+			modifier = {
                 factor = 0
-                OR = {
-                    government = absolute_monarchy
-                    government = absolute_empire
-                }
+                has_global_flag = railroaded_japan_shogunate
             }
         }
     }
@@ -1886,12 +1928,67 @@ political_decisions = {
 
         effect = {
             set_country_flag = negotiate_treaty_shimonoseki
-            1616 = {
-                owner = {
-                    set_country_flag = negotiate_unequal_treaty
-                    country_event = 1316085
-                }
-            }
+			random_owned = {
+				limit = {
+					owner = {
+						1485 = {
+							owner = {
+								owns = 1616
+								is_culture_group = east_asian
+								war_with = THIS
+								NOT = {
+									capital = 1485
+									has_country_flag = negotiate_unequal_treaty
+								}
+							}
+						}
+					}
+				}
+				owner = {
+					1616 = {
+						owner = {
+							set_country_flag = negotiate_unequal_treaty
+							country_event = 1316085
+						}
+					}
+					set_country_flag = no_self_treaty
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = no_self_treaty }
+						TPG = {
+							truce_with = THIS
+							exists = yes
+						}
+					}
+				}
+				owner = {
+					TPG = {
+						set_country_flag = negotiate_unequal_treaty
+						country_event = 1316085
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = no_self_treaty }
+						QNG = {
+							truce_with = THIS
+							exists = yes
+						}
+					}
+				}
+				owner = {
+					QNG = {
+						set_country_flag = negotiate_unequal_treaty
+						country_event = 1316085
+					}
+				}
+			}
+			clr_country_flag = no_self_treaty
         }
 
         ai_will_do = {
@@ -1962,7 +2059,6 @@ political_decisions = {
             NOT = { has_global_flag = japanese_sakhalin }
         }
         allow = {
-
             owns = 1086 #Pogobi
             owns = 1087 #Ootomari
             owns = 1088 #Shumshu
@@ -1973,12 +2069,15 @@ political_decisions = {
             2832 = { change_province_name = "Mamiya Strait" }
             2838 = { change_province_name = "Coast of Karafuto" }
             1088 = { change_province_name = "Shumushu" }
+			1089 = { change_province_name = "Etorofu" } 
             1086 = { change_province_name = "Sagaren" }
             1087 = {
                 change_province_name = "Toyohara"
                 state_scope = {
                     change_region_name = "Karafuto"
-                    any_owned = { add_core = THIS }
+                    any_owned = { 
+						add_core = THIS 
+					}
                 }
             }
             set_global_flag = japanese_sakhalin
@@ -2058,8 +2157,8 @@ political_decisions = {
             leadership = 20
             define_general = {
                 name = "Saigo Takamori"
-                personality = skilled
-                background = old_school
+                personality = defence_minus_2.1
+                background = attack_2.1
             }
             add_country_modifier = {
                 name = taiping_draft
@@ -2402,6 +2501,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			KOR = { government = colonial_company }
 			random_owned = {
 				limit = { province_id = 1632 }
 				1632 = { 
@@ -2414,6 +2514,7 @@ political_decisions = {
 				1631 = { change_province_name = "Genshu" }
 				owner = { set_global_flag = japanese_rename_busan }
 			}
+			KOR = { government = colonial_company }
 			random_owned = {
 				limit = { province_id = 1624 }
 				1624 = { 
@@ -2426,6 +2527,7 @@ political_decisions = {
 				1637 = { change_province_name = "Saishu" }
 				owner = { set_global_flag = japanese_rename_hanseong }
 			}
+			KOR = { government = colonial_company }
 			random_owned = {
 				limit = { province_id = 1621 }
 				1621 = { 
@@ -2437,6 +2539,7 @@ political_decisions = {
 				1622 = { change_province_name = "Seishin" }
 				owner = { set_global_flag = japanese_rename_sariwon }
 			}
+			KOR = { government = colonial_company }
 			random_owned = {
 				limit = { province_id = 1619 }
 				1619 = { 
@@ -2520,7 +2623,7 @@ political_decisions = {
 				owner = { clr_global_flag = japanese_rename_hanseong }
 			}
 			random_owned = {
-				limit = { province_id = 1627 }
+				limit = { province_id = 1629 }
 				1621 = { 
 					change_province_name = "Hamhung"
 					state_scope = { change_region_name = "Hamhung" }

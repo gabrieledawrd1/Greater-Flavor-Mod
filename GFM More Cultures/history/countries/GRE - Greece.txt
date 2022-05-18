@@ -1,8 +1,10 @@
 capital = 834
 primary_culture = greek
+culture = sephardic
 culture = maniot
 culture = tsakonian
 culture = arvanite
+culture = sarakatsani
 religion = orthodox
 government = absolute_monarchy
 plurality = 25.0

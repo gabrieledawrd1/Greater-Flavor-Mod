@@ -74,22 +74,25 @@ country_event = {
                     province_id = 221
                     province_id = 222
                     province_id = 2146
+                    province_id = 184
+                    province_id = 185
+                    province_id = 186
+                    province_id = 187
                 }
             }
             secede_province = CSA
         }
         diplomatic_influence = { who = CSA value = -400 }
-		define_general = { name = "Ulysses S. Grant" personality = daring background = rising_star }
-        define_general = { name = "George McClellan" personality = inept background = incompetent }
-        define_general = { name = "Winfield Scott" personality = skilled background = elderly }
-        define_general = { name = "William T. Sherman" personality = implacable background = innovative_tactician }
+		define_general = { name = "Ulysses S. Grant" personality = no_personality background = attack_3.1 }
+        define_general = { name = "George McClellan" personality = no_personality background = attack_minus_1.1 }
+        define_general = { name = "Winfield Scott" personality = no_personality background = attack_1.1 }
+        define_general = { name = "William T. Sherman" personality = defence_3.1 background = attack_4.1 }
         war = {
             target = CSA
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = status_quo }
         }
-		2424 = { add_province_modifier = { name = cotton_boom duration = 300 } }
-		2425 = { add_province_modifier = { name = cotton_boom duration = 300 } }
+		2424 = { add_province_modifier = { name = cotton_boom duration = 1460 } }
     }
 
     option = {
@@ -114,16 +117,20 @@ country_event = {
                     province_id = 221
                     province_id = 222
                     province_id = 2146
+                    province_id = 184
+                    province_id = 185
+                    province_id = 186
+                    province_id = 187
                 }
             }
             secede_province = CSA
         }
         diplomatic_influence = { who = CSA value = -400 }
         release_vassal = CSA
-		define_general = { name = "Ulysses S. Grant" personality = daring background = rising_star }
-        define_general = { name = "George McClellan" personality = inept background = incompetent }
-        define_general = { name = "Winfield Scott" personality = skilled background = elderly }
-        define_general = { name = "William T. Sherman" personality = implacable background = innovative_tactician }
+		define_general = { name = "Ulysses S. Grant" personality = no_personality background = attack_3.1 }
+        define_general = { name = "George McClellan" personality = no_personality background = attack_minus_1.1 }
+        define_general = { name = "Winfield Scott" personality = no_personality background = attack_1.1 }
+        define_general = { name = "William T. Sherman" personality = defence_3.1 background = attack_4.1 }
 		war = {
 			target = CSA
 			attacker_goal = { casus_belli = civil_war }
@@ -131,8 +138,7 @@ country_event = {
 		}
 		change_tag_no_core_switch = CSA
         set_global_flag = american_civil_war_has_happened
-		2424 = { add_province_modifier = { name = cotton_boom duration = 300 } }
-		2425 = { add_province_modifier = { name = cotton_boom duration = 300 } }
+		2424 = { add_province_modifier = { name = cotton_boom duration = 1460 } }
     }
 }
 
@@ -358,6 +364,10 @@ country_event = {
                     province_id = 221
                     province_id = 222
                     province_id = 2146
+                    province_id = 184
+                    province_id = 185
+                    province_id = 186
+                    province_id = 187
                 }
             }
             secede_province = CSA
@@ -395,7 +405,7 @@ country_event = {
             add_country_modifier = { name = no_more_war duration = 150 }
         }
         capital = 2146
-        country_event = {id = 16000 days = 150}
+        country_event = { id = 16000 days = 150}
 
         ai_chance = { factor = 100 }
     }
@@ -2696,7 +2706,7 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            NOT = {average_consciousness = 5 }
+            NOT = { average_consciousness = 5 }
         }
         modifier = {
             factor = 20
@@ -3748,7 +3758,6 @@ province_event = {
         continent = north_america
         NOT = {
             is_core = CSA
-            state_id = 184
         }
         OR = {
             is_core = USA
@@ -3777,6 +3786,8 @@ province_event = {
         OR = {
             state_scope = { is_slave = yes }
             state_id = 133
+			state_id = 184
+			state_id = 218
         }
         OR = {
             yes_slavery = 10
@@ -3988,6 +3999,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA16400"
+		release_vassal = FROM
 		random_owned = {
 			limit = { owner = { USA = { exists = yes } } }
 			owner = {
@@ -3997,6 +4009,7 @@ country_event = {
 						primary_culture = texan
 					}
 					any_owned = { add_core = USA }
+					
 				}
 				random_country = {
 					limit = {

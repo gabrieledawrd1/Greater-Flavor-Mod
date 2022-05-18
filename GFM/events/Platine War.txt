@@ -17,7 +17,7 @@ country_event = {
         OR = {
             year = 1850
             AND = {
-                ARC = { has_recently_lost_war = yes }
+                ARC = { has_country_modifier = recently_lost_war }
                 average_consciousness = 3
             }
         }
@@ -1203,7 +1203,7 @@ country_event = {
             factor = 5
             modifier = {
                 factor = 0.5
-                NOT = {total_amount_of_divisions = 1 }
+                NOT = { total_amount_of_divisions = 1 }
             }
         }
     }
@@ -1238,10 +1238,9 @@ country_event = {
 
     mean_time_to_happen = { days = 10 }
 
-    immediate = { random_owned = { limit = { owner = { ai = no } } owner = { change_tag_no_core_switch = ARC } } }
-
     option = {
         name = "EVT4661013PTA"
+        random_owned = { limit = { owner = { ai = no } } owner = { change_tag_no_core_switch = ARC } }
         2348 = { add_province_modifier = { name = gateway_to_harbor duration = 1825 } }
         ARC = {
             end_war = SBA
@@ -1251,6 +1250,19 @@ country_event = {
             change_tag = ARG
             nationalvalue = nv_liberty
         }
+		ai_chance = { factor = 98 }
+    }
+
+    option = {
+        name = "We have proven $COUNTRY$ can prosper as an independent state, keep it that way."
+		prestige = 5
+        2348 = { add_province_modifier = { name = gateway_to_harbor duration = 1825 } }
+        add_country_modifier = { name = small_immigration_boom duration = 1825 }
+        nationalvalue = nv_liberty
+		remove_country_modifier = unrecognized_country
+        2131 = { add_core = THIS }
+        2133 = { add_core = THIS }
+		ai_chance = { factor = 2 }
     }
 }
 
@@ -1431,7 +1443,7 @@ country_event = {
         set_country_flag = entre_rios_has_happened
         prestige = 2
         any_pop = { militancy = -3 }
-        ai_chance = {factor = 0 }
+        ai_chance = { factor = 0 }
         }
 
         option = {

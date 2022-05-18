@@ -60,11 +60,10 @@ jewish_cultures = {
     unit = EuropeanGC
     ashkenazi = {
         color = { 150  212  214 }
-        first_names = { Abraham Albert Benjamin Daniel David Franz Gustav Heinrich Hermann Isaak Ignatz Jakob Jeremias Josef Leonhard Michael Mose Salomon Saul Shmuel
-        Sigmund Simon Theodor }
+        first_names = { Aaron Abraham Aviv Adam Alon Amit Amir Ariel Asher Avigdor Avner Avishai Aryeh Baruch Binyamin Barak Bezalel Daniel David Dotan Chaim Eitan Efraim Ehud Elad Eli Eliot Eliezer Elijah Ezra Gideon Gil Gavriel Haim Hillel Hebel Ilan Imri Immanuel Itzhak Isaac Itamar Josef Jaakov Jossi Kalev Kadish Kfir Levi Meir Menachem Michael Moshe Mordechai Nahum Natan Nachman Nir Ofer Pinchas Rafael Reuven Ron Shimon Simeon Shlomo Samuel Shmuel Tal Tzadok Uri Uriel Yaakov Yair Yitzhak Yigal Yoshua Yosef Yossi Yoel Ze'ev }
 
-        last_names = { Abramovitch Ashkenazi Bernstein Birnbaum Bloch Cantor Cohen Frank Friedländer Ginsberg Goldstein Horowitz Israel Jacobsohn Kagan Kaplan Klein
-        Levin Luria Morgenstern Nathan Oren Rosenthal Sachs Schapiro Schwartz Weinstein Weiss }
+        last_names = { Abramovitch Abramson Amitzur Arad Arazi Arbel Arens Ashkenazi Atzmon Allon Bernstein "ben Zvi" "ben Yehuda" "ben Ami" "ben Daniel" "ben Ari" "ben Shmuel" "ben Cohen" "ben Tov" Bar-Lev Birnbaum Bloch Cantor Cohen Dikter Dizengoff Dov Eilat Eshkol Edelstein Eliyahu Etzioni Friedman Feinstein Gal Gafni Gantz Ginsberg Goldstein Halperin Hacohen Har-Even Har-Zohav Herzog Horowitz Israel Kagan Kaspi Kaplan Klein Kashan Kalai Katz Kook 
+        Landau Lapid Lavi Lieberman Livni Levi Levin Magen Maklev Meiron Melamed Nakar Netanyahu Olmert Oren Ochaion Orlev Oz Peretz Perlman Plotkin Porush Rabin Rabinowitz Raz Rosenthal Raziel Sachs Shamir Sharon Shlosberg Shapiro Shalit Schwartz Smotrich Stavi Tur-Sinai Weinstein Weizman Vilnai }
     }
     sephardic = {
         color = {50 60 10}
@@ -551,12 +550,12 @@ celtic = {
 italian = {
     leader = european
     unit = ItalianGC
-    italian = { # tag = ITA
-         #!religion = { catholic }
-         color = { 65 180 110 }
-         first_names = { Achille Adriano Agostino Alberto Alessandro Alfredo Ambrogio Amedeo Amilcare Andrea Angelo Antonio Armando Arturo Attilio Augusto Aurelio Benedetto Bernardo Bruno Calogero Carlo Carmine Cesare Claudio Clemente Corrado Daniele Davide Diego Dino Domenico Edoardo Egidio Emanuele Emiliano Enrico Ernesto Ettore Eugenio Fabio Fabrizio Fausto Federico Felice Ferdinando Filippo Francesco Franco Fulvio Gabriele Gaetano Gennaro Germano Giacomo Gianfranco Gianluigi Giordano Giorgio Giuliano Giulio Giuseppe Gregorio Guglielmo Guido Ignazio Italo Jacopo Leonardo Leone Lorenzo Luca Luciano Ludovico Luigi Manfredi Marco Mario Massimiliano Matteo Mauro Michelangelo Modesto Nicola Onorio Orlando Oscar Ottavio Palmiro Paolo Pierfrancesco Piergiorgio Piero Pierpaolo Pietro Primo Prospero Raffaele Raniero Riccardo Roberto Romano Ruggero Salvatore Sauro Saverio Sebastiano Severino Silvestro Silvio Simone Stefano Tiziano Tommaso Tullio Ulisse Umberto Valerio Vincenzo Vinicio Vittorio Walter }
-         last_names = { Acciaioli Accorsi Aiello Albanese Alemanno Altobelli Amendola Antonelli Arbore Arcuri Arena Argenti Arpino Arrigoni Balbo Balestrieri Barzaghi Basile Battaglia Bellocchio Bencivenga Bergamasco Bevilacqua Bianchi Biral Bisceglie Borghese Bruni Cacciari Cafiero Caligari Cantoni Caracciolo Castelli Catalano Coppola D'Amico "De Fabritiis" "De Sanctis" "Di Stefano" Esposito Fabris Falcone Fenoglio Ferreri Genovese Grandi Graziani Grimaldi Iacono Iodice "La Terza" Locatelli Longaro Lopez Luzzati Maggio Magris Mainardi Malatesta Manin Marchegiani Marchese Masi Mastandrea Montani Morone Nardi Nicotra Nobile Nodari Ottaviano Pacifico Padovan Palazzi Pallavicino Palmas Palmieri Palumbo Pandolfi Pardo Pavese Pellizzon Prestigiacomo Quilici Ragonese Ranieri Riccardi Rizzo Romanelli Rossi Rovere Russo Sabatini Salvemini Santoro Schiaffino Servillo Severin Sonzogno Spagnoli Spinelli Tebaldi Tedeschi Torreggiani Torrisi Trevisan Turati Urbano Venier Venturi Veronesi Vicari Volpe Zambon Zeppilli Zerbin }
-    }
+    #italian = { # tag = ITA
+    #     #!religion = { catholic }
+    #     color = { 65 180 110 }
+    #     first_names = { Achille Adriano Agostino Alberto Alessandro Alfredo Ambrogio Amedeo Amilcare Andrea Angelo Antonio Armando Arturo Attilio Augusto Aurelio Benedetto Bernardo Bruno Calogero Carlo Carmine Cesare Claudio Clemente Corrado Daniele Davide Diego Dino Domenico Edoardo Egidio Emanuele Emiliano Enrico Ernesto Ettore Eugenio Fabio Fabrizio Fausto Federico Felice Ferdinando Filippo Francesco Franco Fulvio Gabriele Gaetano Gennaro Germano Giacomo Gianfranco Gianluigi Giordano Giorgio Giuliano Giulio Giuseppe Gregorio Guglielmo Guido Ignazio Italo Jacopo Leonardo Leone Lorenzo Luca Luciano Ludovico Luigi Manfredi Marco Mario Massimiliano Matteo Mauro Michelangelo Modesto Nicola Onorio Orlando Oscar Ottavio Palmiro Paolo Pierfrancesco Piergiorgio Piero Pierpaolo Pietro Primo Prospero Raffaele Raniero Riccardo Roberto Romano Ruggero Salvatore Sauro Saverio Sebastiano Severino Silvestro Silvio Simone Stefano Tiziano Tommaso Tullio Ulisse Umberto Valerio Vincenzo Vinicio Vittorio Walter }
+    #     last_names = { Acciaioli Accorsi Aiello Albanese Alemanno Altobelli Amendola Antonelli Arbore Arcuri Arena Argenti Arpino Arrigoni Balbo Balestrieri Barzaghi Basile Battaglia Bellocchio Bencivenga Bergamasco Bevilacqua Bianchi Biral Bisceglie Borghese Bruni Cacciari Cafiero Caligari Cantoni Caracciolo Castelli Catalano Coppola D'Amico "De Fabritiis" "De Sanctis" "Di Stefano" Esposito Fabris Falcone Fenoglio Ferreri Genovese Grandi Graziani Grimaldi Iacono Iodice "La Terza" Locatelli Longaro Lopez Luzzati Maggio Magris Mainardi Malatesta Manin Marchegiani Marchese Masi Mastandrea Montani Morone Nardi Nicotra Nobile Nodari Ottaviano Pacifico Padovan Palazzi Pallavicino Palmas Palmieri Palumbo Pandolfi Pardo Pavese Pellizzon Prestigiacomo Quilici Ragonese Ranieri Riccardi Rizzo Romanelli Rossi Rovere Russo Sabatini Salvemini Santoro Schiaffino Servillo Severin Sonzogno Spagnoli Spinelli Tebaldi Tedeschi Torreggiani Torrisi Trevisan Turati Urbano Venier Venturi Veronesi Vicari Volpe Zambon Zeppilli Zerbin }
+    #}
     north_italian = {
         color = { 90 210 130}
         first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
@@ -643,15 +642,15 @@ italian = {
     #    Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro
     #    Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
     #}
-    maltese = {
-        color = {100 150 120}
-        primary = MLT
-        first_names = { Alessandru Beru Duminku Enrico Fernardu Frangisku Gabriel Ferlad Gorg Joseph
-        Karmenu Lawrenz Marju Mikiel Ninu Pawlu Rokku Saber Ugo Valent }
-
-        last_names = { Abela Adami Azzopardi Boffa Borg Buhagiar Cassar Farrugia Frendo Gonzi
-        Howard Mifsud Mintoff Mizzi Muscat Olivier Puli Pullicino Strickland Vella }
-    }
+    #maltese = {
+    #    color = {100 150 120}
+    #    primary = MLT
+    #    first_names = { Alessandru Beru Duminku Enrico Fernardu Frangisku Gabriel Ferlad Gorg Joseph
+    #    Karmenu Lawrenz Marju Mikiel Ninu Pawlu Rokku Saber Ugo Valent }
+	#
+    #    last_names = { Abela Adami Azzopardi Boffa Borg Buhagiar Cassar Farrugia Frendo Gonzi
+    #    Howard Mifsud Mintoff Mizzi Muscat Olivier Puli Pullicino Strickland Vella }
+    #}
 
     union = ITA
 }
@@ -3407,30 +3406,14 @@ neo_european_cultures = {
     }
     alaskan = {
         color = { 14 139 80 }
-            first_names = {Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses
-            Joseph Charles Russell eksandr Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
-            Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
-            }
-        last_names = {Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton
-                Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates
-                Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr Kuropatkin Lazarev
-                Makarov Menshikov Nakhimov Nebogatov Nikolaevich Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+        first_names = { Aleksandr Alexei Andrei Anton Boris Dmitry Fyodor Gennady Giorgi Grigoriy Igor Ivan Kirill Konstantin Lavr Leonid Lev Maxim
+        Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
         }
-    }
-
-    neo_zelandais = {
-        color = {115 126 178}
-        first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
-        Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
-        François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
-        Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
-        Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
-
-        last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
-        Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle"
-        "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
-        Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
-        Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
+		
+        last_names = { Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin Dragomirov Frolov Golivin Grishin Gurko Ivanov Konev Konstantinov Kornilov Kolchak
+		Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev Shuvalov Surkov Tukhachevsky Yegorov Yudenich
+		Vorontsov Voroshilov Zavoyko
+        }
     }
 
     louisianan = {
@@ -3455,7 +3438,7 @@ neo_european_cultures = {
         }
     }
 
-    french_australian = {
+    french_australasien = {
         color = {94 177 229}
         first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
         Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
@@ -3577,17 +3560,17 @@ latin_american_cultures = {
     platinean = {
         color = {199 232 151}
         first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio
-        Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano
+        Cirilo Claudio Domingo Emiliano Emilio Ernesto Esteban Eugenio Evaristo Facundo Faustino Feliciano
         Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José"
-        "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel
+        "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Lucio Luis Manuel Marcial Máximo Miguel
         Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio
         }
 
-        last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear"
+        last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cárdenas Cruz "de Alvear"
         "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos
-        Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera
+        Juárez Justo Latorre López Machaín Mansilla Maza Meza Mitre Paz Pedernera
         Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz
-        Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen
+        Santos Sarmiento Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen
         }
     }
     brazilian = {
@@ -3685,13 +3668,6 @@ african_diaspora_cultures = {
             Madiou Péralte Pierrot Planchet Price Price-Mars Riché Rigaud Rivière-Hérard Roumain
             Roy Saget Salnave Salomon Sam Simon Soulouque Théodore Vincent Zamor }
     }
-    griqua = {
-        color = {165 105 0}
-        first_names = { Sarel Rudolf Andries Hendrik Piet Racheltjie Dirkie Siener Koos Danie Christiaan Louis Petrus Paul Eugene Joubert
-        }
-        last_names = { Cilliers Botha Joubert Kruger Duquesne Potgieter "van Rensburg" "de la Rey" Theron "de Wet" Pretorius Retief "de Beer" Uys
-        }
-    }
     afro_dutch = {
         color = {135 88 20}
         first_names = { Sarel Rudolf Andries Piet Racheltjie Dirkie Siener Koos Danie Louis Petrus Eugene Joubert
@@ -3752,7 +3728,7 @@ west_african = {
         last_names = { Wattara Toure Salim-Suwari Drame Saghanughu
         }
     }
-    edo = {
+    edo_culture = {
         color = {88 99 154}
         first_names = { Odayon Ode Edegbe Osahon Igodo Erediauwa Osemwende Adolo Ovonramwen Eweka Akenzua Ezoti Esigie
         }
